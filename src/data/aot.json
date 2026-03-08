@@ -1,0 +1,339 @@
+{
+  "anime": "Attack on Titan",
+  "tagline": "A brutal deterministic closed-loop temporal matrix",
+  "malId": 16498,
+  "animeImageUrl": "https://myanimelist.net/images/anime/10/47347l.jpg",
+  "visualizationHint": "timeline",
+  "visualizationReason": "Causality itself functions as the supreme power system; the timeline is a malleable battlespace.",
+  "powerSystem": [
+    {
+      "name": "Titan Shifting",
+      "subtitle": "Biological Mech Piloting",
+      "loreDesc": "The ability of specific human hosts to transform into giant, specialized humanoid entities by drawing flesh and bone from an alternate dimension via self-inflicted injury.",
+      "systemDesc": "A virtual machine instantiation where a local user requests immense cloud computing resources to temporarily spin up an overpowered localized instance.",
+      "icon": "Hexagon",
+      "color": "amber-400",
+      "signatureMoment": "Reiner and Bertholdt reveal their true identities atop the wall, triggering a dual transformation that shatters the fragile peace of humanity."
+    },
+    {
+      "name": "ODM Gear",
+      "subtitle": "Kinetic Physics Exploitation",
+      "loreDesc": "A pressurized gas and grappling hook system that allows normal humans to move freely through the air at high velocities to sever the nape of a Titan's neck.",
+      "systemDesc": "A highly optimized, low-level execution script that maximizes hardware efficiency, allowing standard nodes to bypass heavy firewalls through sheer velocity.",
+      "icon": "Swords",
+      "color": "slate-400",
+      "signatureMoment": "Levi executes a dizzying, high-speed evasion and subsequent brutal vivisection of the Beast Titan amidst a forest of giant trees."
+    },
+    {
+      "name": "The Paths",
+      "subtitle": "Quantum Entanglement Protocol",
+      "loreDesc": "An invisible, timeless dimension connecting all Subjects of Ymir, serving as the universal conduit for transferring memories, Titan bodies, and absolute genetic commands.",
+      "systemDesc": "A ubiquitous, hard-coded intranet utilizing quantum entanglement to ensure zero-latency data transfer between a master server and all client nodes simultaneously.",
+      "icon": "Globe",
+      "color": "cyan-400",
+      "signatureMoment": "Eren addresses all Subjects of Ymir simultaneously within their own minds, declaring the initiation of the apocalyptic global Rumbling."
+    },
+    {
+      "name": "Titan Hardening",
+      "subtitle": "Structural Material Engineering",
+      "loreDesc": "The innate ability to instantly crystallize Titan flesh into indestructible diamond-like armor, capable of forming weapons, shielding, or permanent architectural structures.",
+      "systemDesc": "A dynamic encryption sequence that solidifies vulnerable code blocks into immutable, read-only data structures that cannot be easily parsed, modified, or destroyed.",
+      "icon": "Shield",
+      "color": "emerald-400",
+      "signatureMoment": "The War Hammer Titan materializes a massive, intricately crystallized broadsword directly from the ground to impale the Attack Titan."
+    }
+  ],
+  "rankings": {
+    "systemName": "Paradis Military Command Structure",
+    "topTierName": "General / Premier (S\u014dt\u014d)",
+    "topTierLore": "The ultimate commander-in-chief of all three military branches, holding absolute authority over humanity's armed forces, strategic direction, and judicial military tribunals.",
+    "topTierSystem": "The root administrator possessing read, write, and execute permissions across all system directories, user groups, and background processes.",
+    "tiers": [
+      {
+        "name": "Commander (Danch\u014d)",
+        "loreDesc": "The absolute leader of a specific military branch.",
+        "systemDesc": "A lead software architect managing the deployment and lifecycle of a specific microservice environment."
+      },
+      {
+        "name": "Section Commander",
+        "loreDesc": "High-ranking officers responsible for specialized detachments, intelligence gathering, or research divisions.",
+        "systemDesc": "A senior systems engineer managing a specialized functional pipeline or data ingestion routine."
+      },
+      {
+        "name": "Captain (Heich\u014d)",
+        "loreDesc": "Elite field commanders entrusted with highly sensitive tactical operations and the direct oversight of elite, hand-picked personnel.",
+        "systemDesc": "A high-priority, automated background daemon designed for rapid threat isolation and neutralization."
+      },
+      {
+        "name": "Squad Leader (Hanch\u014d)",
+        "loreDesc": "Mid-level officers responsible for managing small, cohesive fireteams of 4 to 10 soldiers during chaotic combat scenarios.",
+        "systemDesc": "Load balancers, dynamically distributing combat tasks and resource allocation among individual computational threads."
+      },
+      {
+        "name": "Soldier / Private",
+        "loreDesc": "The base-level recruits, cadets, and foot soldiers who form the vast bulk of the military force.",
+        "systemDesc": "Standard, low-level computational nodes performing repetitive, high-mortality execution tasks."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Eren Yeager",
+      "title": "The Usurper",
+      "rank": "Soldier",
+      "primaryAbility": "Attack Titan / Founder",
+      "loreBio": "Driven by a pathological obsession with freedom and deeply scarred by the loss of his mother, he evolves from humanity's most fervent savior into an apocalyptic global threat.",
+      "systemBio": "A standard user node that maliciously acquires root access, bypassing external firewalls to rewrite the system's core registry. Initiates an unrecoverable wipe of all external servers.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-800",
+      "accentColor": "red-500",
+      "icon": "Skull",
+      "dangerLevel": 10,
+      "signatureMoment": "Tricking his father through sophisticated future memory manipulation to slaughter the royal family.",
+      "imageUrl": "https://myanimelist.net/images/characters/10/61728.jpg",
+      "_fetchFailed": false
+    },
+    {
+      "name": "Mikasa Ackerman",
+      "title": "Humanity's Strongest Soldier",
+      "rank": "Soldier",
+      "primaryAbility": "Ackerman Awakening",
+      "loreBio": "A descendant of a genetically engineered bloodline granting her the retained combat experience of her ancestors. She possesses obsessive devotion to ensuring Eren's survival.",
+      "systemBio": "A hard-coded daemon process running continuously in the background, programmed with a singular, unbreakable directive to ensure the uptime of the primary host node.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "rose-900",
+      "accentColor": "rose-400",
+      "icon": "Shield",
+      "dangerLevel": 9,
+      "signatureMoment": "Brutally decapitating the Jaw Titan in a high-speed, mid-air maneuver to secure Eren's safe extraction during the raid on Liberio.",
+      "imageUrl": "https://myanimelist.net/images/characters/15/111315.jpg",
+      "_fetchFailed": false
+    },
+    {
+      "name": "Armin Arlert",
+      "title": "The Strategist",
+      "rank": "Commander",
+      "primaryAbility": "Colossal Titan",
+      "loreBio": "Initially frail, his intellectual capacity and tactical genius make him the most vital asset. He eventually inherits the devastating power of the Colossal Titan.",
+      "systemBio": "A highly sophisticated predictive analytics engine capable of parsing chaotic, real-time system data to generate optimal execution paths and resource allocation under extreme constraints.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-700",
+      "accentColor": "amber-400",
+      "icon": "Brain",
+      "dangerLevel": 8,
+      "signatureMoment": "Formulating a suicidal strategy to distract the Colossal Titan by enduring lethal steam burns, allowing Eren to extract the pilot.",
+      "imageUrl": "https://myanimelist.net/images/characters/8/220267.jpg",
+      "_fetchFailed": false
+    },
+    {
+      "name": "Levi Ackerman",
+      "title": "Captain",
+      "rank": "Captain",
+      "primaryAbility": "Max Output Maneuvers",
+      "loreBio": "The legendary squad captain universally recognized as humanity's strongest soldier. His masterful ODM gear movement makes him an unstoppable kinetic force.",
+      "systemBio": "An isolated, heavily overclocked processing thread that routinely bypasses standard thermal limits to deliver maximum DPS, identifying and terminating high-level malware.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-800",
+      "accentColor": "emerald-400",
+      "icon": "Zap",
+      "dangerLevel": 10,
+      "signatureMoment": "A dizzying, brutal vivisection of the Beast Titan in a forest, reducing a major, seemingly invincible threat to a mutilated husk in mere seconds.",
+      "imageUrl": "https://myanimelist.net/images/characters/2/241413.jpg",
+      "_fetchFailed": false
+    },
+    {
+      "name": "Reiner Braun",
+      "title": "The Shield Warrior",
+      "rank": "Warrior",
+      "primaryAbility": "Armored Titan",
+      "loreBio": "A Marleyan child soldier sent to infiltrate Paradis who develops a severe dissociative identity disorder from the crushing guilt of his betrayals.",
+      "systemBio": "A robust, hardware-level firewall that successfully infiltrates an enemy network but subsequently suffers critical sector corruption and logic loops due to conflicting parameters.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-700",
+      "accentColor": "yellow-500",
+      "icon": "Hexagon",
+      "dangerLevel": 8,
+      "signatureMoment": "Surviving a direct, catastrophic decapitation attempt by rapidly transferring his neurological consciousness throughout his Titan's central nervous system.",
+      "imageUrl": "https://myanimelist.net/images/characters/16/208109.jpg",
+      "_fetchFailed": false
+    },
+    {
+      "name": "Zeke Yeager",
+      "title": "Warchief",
+      "rank": "Warchief",
+      "primaryAbility": "Beast Titan / Royal Blood",
+      "loreBio": "Eren's highly intelligent half-brother, possessing royal blood that inadvertently unlocks the Founding Titan's true potential. Harbors a nihilistic plan to euthanize his own race.",
+      "systemBio": "A compromised wireless router operating with a backdoor exploit, capable of broadcasting malicious packet payloads to infected nodes seeking to wipe the entire database.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-800",
+      "accentColor": "orange-500",
+      "icon": "Wifi",
+      "dangerLevel": 9,
+      "signatureMoment": "Shredding an entire cavalry charge of Survey Corps soldiers to pieces with a supersonic barrage of crushed boulders.",
+      "imageUrl": "https://myanimelist.net/images/characters/7/318445.jpg",
+      "_fetchFailed": false
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Eren Yeager",
+      "target": "Mikasa Ackerman",
+      "type": "dependent",
+      "loreDesc": "Mikasa's identity, emotional stability, and immense combat lethality are entirely anchored to Eren's physical survival.",
+      "weight": 10
+    },
+    {
+      "source": "Eren Yeager",
+      "target": "Armin Arlert",
+      "type": "mirror",
+      "loreDesc": "They share a foundational childhood dream, but their ethical methodologies and systemic execution completely diverge as the conflict escalates.",
+      "weight": 9
+    },
+    {
+      "source": "Eren Yeager",
+      "target": "Reiner Braun",
+      "type": "mirror",
+      "loreDesc": "They represent two sides of the exact same coin: child soldiers pushed to commit horrific atrocities by systemic brainwashing.",
+      "weight": 9
+    },
+    {
+      "source": "Levi Ackerman",
+      "target": "Zeke Yeager",
+      "type": "enemy",
+      "loreDesc": "A bitter, blood-soaked rivalry defined by Levi's solemn promise to his dying commander that he would assassinate the Beast Titan at any cost.",
+      "weight": 10
+    },
+    {
+      "source": "Zeke Yeager",
+      "target": "Eren Yeager",
+      "type": "betrayal",
+      "loreDesc": "Zeke genuinely believes he is saving Eren, completely unaware that Eren intends to co-opt Zeke's royal blood to bypass the system and initiate the apocalypse.",
+      "weight": 9
+    },
+    {
+      "source": "Armin Arlert",
+      "target": "Erwin Smith",
+      "type": "successor",
+      "loreDesc": "Armin is chosen to survive over the veteran commander, forcing the young strategist to bear the impossible psychological burden of replacing him.",
+      "weight": 8
+    }
+  ],
+  "factions": [
+    {
+      "name": "Survey Corps",
+      "role": "protagonist",
+      "loreDesc": "The elite, heavily attrited branch dedicated to external exploration and direct Titan combat. They relentlessly seek the truth defined by massive casualty rates.",
+      "systemDesc": "An aggressive, highly optimized penetration-testing subroutine designed to relentlessly probe external firewalls, constantly updating based on fatal feedback loops.",
+      "icon": "Eye",
+      "color": "emerald-500",
+      "memberCount": "~300 active personnel"
+    },
+    {
+      "name": "Marley Warrior Unit",
+      "role": "antagonist",
+      "loreDesc": "Eldian child soldiers subjected to intense imperial brainwashing by the Marleyan empire, granted the power of the Nine Titans to serve as biological WMDs.",
+      "systemDesc": "A sophisticated botnet of infected sleeper nodes deployed by a hostile server to infiltrate, map, and extract administrative root keys from an isolated legacy mainframe.",
+      "icon": "Shield",
+      "color": "yellow-600",
+      "memberCount": "6 active Shifters"
+    },
+    {
+      "name": "Yeagerists",
+      "role": "chaotic",
+      "loreDesc": "A radical, heavily armed ultra-nationalist paramilitary faction viewing Eren Yeager as a messianic figure, staging a violent coup.",
+      "systemDesc": "A rapid, decentralized malware infection that executes a total hostile takeover of the host operating system from the inside out.",
+      "icon": "Flame",
+      "color": "red-500",
+      "memberCount": "~500 armed soldiers"
+    },
+    {
+      "name": "Anti-Marleyan Volunteers",
+      "role": "neutral",
+      "loreDesc": "Conscripted soldiers from conquered nations within the Marleyan military who secretly defect to assist Paradis, providing advanced technology.",
+      "systemDesc": "Third-party API developers offering essential technological integration to a legacy system, while secretly embedding undetectable backdoors into the foundational code.",
+      "icon": "Layers",
+      "color": "blue-400",
+      "memberCount": "Unknown exact count"
+    }
+  ],
+  "rules": [
+    {
+      "name": "The Curse of Ymir",
+      "subtitle": "Biological Obsolescence",
+      "loreConsequence": "Any human who inherits the power of the Nine Titans will suffer rapid cellular degradation and die exactly 13 years after acquiring the power.",
+      "systemEquivalent": "A hard-coded, unalterable cache expiration protocol; after an exact timestamp is reached, the memory block is wiped and automatically reallocated.",
+      "severity": "fatal"
+    },
+    {
+      "name": "Vow Renouncing War",
+      "subtitle": "Ideological Firmware Lock",
+      "loreConsequence": "Any royal inheriting the Founding Titan is instantly brainwashed by pacifist ideology, rendering the ultimate weapon completely useless in combat.",
+      "systemEquivalent": "A non-overridable firmware lock placed directly onto the root administrative account, permanently blocking the execution of any offensive command lines.",
+      "severity": "high"
+    },
+    {
+      "name": "Subject of Ymir Connectivity",
+      "subtitle": "Mandatory Intranet Hub",
+      "loreConsequence": "All individuals bearing Eldian blood are perpetually connected to the Founding Titan via the interdimensional Paths, unable to break the connection.",
+      "systemEquivalent": "A mandatory, persistent peer-to-peer network connection that lacks an opt-out mechanism or local firewall, allowing forced over-the-air registry updates.",
+      "severity": "high"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Thunder Spears",
+      "defender": "Armored Titan",
+      "mechanic": "Explosive Shaped-Charge Penetration",
+      "loreDesc": "A volatile, shaped-charge explosive designed specifically to crack and penetrate the localized crystalline armor, effectively obsoleting the Armored Titan's primary defensive advantage."
+    },
+    {
+      "attacker": "Jaw Titan",
+      "defender": "War Hammer Crystal",
+      "mechanic": "Biological Nutcracker",
+      "loreDesc": "Eren uses the Jaw Titan's uniquely hardened teeth and extreme bite force as a biological nutcracker, exploiting one Titan's natural offensive weapon to violently breach another Titan's ultimate defense."
+    },
+    {
+      "attacker": "Ackerman Lineage",
+      "defender": "Titan Physiology",
+      "mechanic": "Miniaturized Titan Capabilities",
+      "loreDesc": "The Ackerman bloodline packs the raw kinetic strength and combat instincts of a Titan into a compact human frame, granting the speed necessary to automatically dismantle larger, sluggish Shifters."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Attack Titan Timeline Retro-Causality",
+      "ruleViolated": "Principle of Causality / Forward-flowing Time",
+      "loreDesc": "The Attack Titan represents a massive systemic anomaly allowing its inheritor to transmit specific memories backward across time to previous holders.",
+      "systemDesc": "A process that completely shatters linear execution paths, allowing future outputs to retro-actively overwrite their prerequisite input variables and forge a bootstrap paradox loop."
+    },
+    {
+      "name": "Abnormal Titans",
+      "ruleViolated": "Instinctual Consumption Protocol",
+      "loreDesc": "Titans that occasionally bypass the hard-coded instinct to indiscriminately consume humans, demonstrating erratic behaviors like speech, mourning, or non-bipedal locomotion.",
+      "systemDesc": "Software execution deviations highlighting the chaotic nature of the processing sequence, where external noise deeply corrupts the base biological code resulting in unpredictable behavior."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Ymir's Fall",
+      "trigger": "A hunted, severely wounded slave girl falls into a subterranean pool, fusing with the Hallucigenia.",
+      "consequence": "The manifestation of the first Titan entity, initiating 2,000 years of global biological warfare.",
+      "timelinePosition": "Ancient Past (Year 1003 B1)",
+      "loreDesc": "The origin point of all systemic powers; an organic singularity that binds an entire race of people into a shared, inescapable genetic destiny."
+    },
+    {
+      "name": "The Reiss Chapel Massacre",
+      "trigger": "Future Eren transmits curated, terrifying memories to Grisha, actively coercing him to murder the pacifist royal family.",
+      "consequence": "Grisha slaughters the royals, steals the Founding Titan, and transfers both Titans to young Eren.",
+      "timelinePosition": "Pre-Narrative (Year 845)",
+      "loreDesc": "A pristine example of a bootstrap paradox, establishing that the future actively dictates the past to ensure its own localized existence."
+    },
+    {
+      "name": "The Smiling Titan Encounter",
+      "trigger": "Eren punches the open palm of the Smiling Titan, who secretly possesses latent royal blood.",
+      "consequence": "Eren temporarily bypasses the Vow Renouncing War, unlocking the Coordinate and commanding pure Titans to destroy the threat.",
+      "timelinePosition": "Mid-Narrative (Year 850)",
+      "loreDesc": "An exploitation of system loopholes; a non-royal user gains momentary root admin privileges by establishing brief contact with a dormant royal node."
+    }
+  ]
+}
