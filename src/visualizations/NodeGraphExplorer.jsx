@@ -152,7 +152,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
   const [selected, setSelected] = useState(null)
   const [dragging, setDragging] = useState(null)
   const [hoveredEdge, setHoveredEdge] = useState(null)
-  const [imgLoaded, setImgLoaded] = useState({})
+  const [imgFailed, setImgFailed] = useState({})
   const dragOffset = useRef({ x: 0, y: 0 })
 
   const resetLayout = useCallback(() => {
@@ -160,17 +160,6 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
   }, [characters, relationships])
 
   useEffect(() => { resetLayout() }, [resetLayout])
-
-  // Preload images to know which ones are available
-  useEffect(() => {
-    characters.forEach(char => {
-      if (!char.imageUrl) return
-      const img = new Image()
-      img.onload = () => setImgLoaded(prev => ({ ...prev, [char.name]: true }))
-      img.onerror = () => setImgLoaded(prev => ({ ...prev, [char.name]: false }))
-      img.src = char.imageUrl
-    })
-  }, [characters])
 
   if (characters.length === 0) {
     return <StandardCardsExplorer characters={characters} isSystemMode={isSystemMode} theme={theme} />
@@ -340,7 +329,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
             )
             const isFaded = selected && !isSelected && !isConnected
             const nodeColor = resolveColor(node.accentColor, accent)
-            const hasImage = imgLoaded[node.name] === true
+            const hasImage = node.imageUrl && !imgFailed[node.name]
 
             return (
               <g key={node.name}
@@ -373,6 +362,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                       width={PORTRAIT_R * 2} height={PORTRAIT_R * 2}
                       clipPath="url(#portrait-clip)"
                       preserveAspectRatio="xMidYMid slice"
+                      onError={() => setImgFailed(prev => ({ ...prev, [node.name]: true }))}
                       style={{ pointerEvents: 'none' }}
                     />
                   ) : (
@@ -456,11 +446,12 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
               style={{
                 background: `linear-gradient(to bottom, ${resolveColor(selectedChar.gradientFrom, '#1a1a2e')}, ${resolveColor(selectedChar.gradientTo, '#0f0f1a')})`
               }}>
-              {imgLoaded[selectedChar.name] === true ? (
+              {selectedChar.imageUrl && !imgFailed[selectedChar.name] ? (
                 <img
                   src={selectedChar.imageUrl}
                   alt={selectedChar.name}
                   className="w-full h-full object-cover object-top"
+                  onError={() => setImgFailed(prev => ({ ...prev, [selectedChar.name]: true }))}
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">

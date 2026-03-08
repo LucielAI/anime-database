@@ -3,8 +3,8 @@
   "tagline": "Negative Energy Economy & Algorithmic Combat",
   "malId": 40748,
   "visualizationHint": "counter-tree",
-  "visualizationReason": "JJK is defined by technique counters and power hierarchies \u2014 the counter-tree maps how abilities nullify, exploit, and amplify each other.",
-  "animeImageUrl": "https://myanimelist.net/images/anime/1171/109222l.jpg",
+  "visualizationReason": "JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.",
+  "animeImageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fmyanimelist.net%2Fimages%2Fanime%2F1171%2F109222l.jpg&w=460&h=650&fit=cover",
   "themeColors": {
     "primary": "#4f46e5",
     "secondary": "#0f172a",
@@ -105,7 +105,7 @@
       "icon": "Eye",
       "dangerLevel": 10,
       "signatureMoment": "Stating 'Throughout Heaven and Earth, I alone am the honored one' while floating in the sky.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/422168.jpg?s=7c1dfc26a9b3a6652da616a0fec7af01",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcdn.myanimelist.net%2Fimages%2Fcharacters%2F15%2F422168.jpg%3Fs%3D7c1dfc26a9b3a6652da616a0fec7af01&w=300&h=400&fit=cover&a=top",
       "_fetchFailed": false,
       "malId": 164471
     },
@@ -122,7 +122,7 @@
       "icon": "Skull",
       "dangerLevel": 10,
       "signatureMoment": "Activating Malevolent Shrine in Shibuya to vaporize a massive radius of the city into dust.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/431152.jpg?s=776045fc0fe9f2ecf8923f0f9c20f288",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcdn.myanimelist.net%2Fimages%2Fcharacters%2F6%2F431152.jpg%3Fs%3D776045fc0fe9f2ecf8923f0f9c20f288&w=300&h=400&fit=cover&a=top",
       "_fetchFailed": false,
       "malId": 175198
     },
@@ -139,7 +139,7 @@
       "icon": "Brain",
       "dangerLevel": 9,
       "signatureMoment": "Removing his cranial cap to reveal a terrifying, teeth-baring brain orchestrating the sealing of Satoru Gojo.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/619361.jpg?s=f44b1c92fcebfa466ee403e1d77b5d45",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcdn.myanimelist.net%2Fimages%2Fcharacters%2F7%2F619361.jpg%3Fs%3Df44b1c92fcebfa466ee403e1d77b5d45&w=300&h=400&fit=cover&a=top",
       "_fetchFailed": false,
       "malId": 175542
     },
@@ -156,7 +156,7 @@
       "icon": "Copy",
       "dangerLevel": 9,
       "signatureMoment": "Kissing the horrifying curse Rika to fully manifest her boundless power against Suguru Geto.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/461503.jpg?s=dda1109b054b3b2e6198d91527cfc7ac",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcdn.myanimelist.net%2Fimages%2Fcharacters%2F10%2F461503.jpg%3Fs%3Ddda1109b054b3b2e6198d91527cfc7ac&w=300&h=400&fit=cover&a=top",
       "_fetchFailed": false,
       "malId": 168067
     },
@@ -173,7 +173,7 @@
       "icon": "Crosshair",
       "dangerLevel": 9,
       "signatureMoment": "Bypassing the Six Eyes' perception entirely, plunging a blade through Gojo's chest.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/517123.jpg?s=7b002cb822d74411930ef33c0004fb85",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcdn.myanimelist.net%2Fimages%2Fcharacters%2F2%2F517123.jpg%3Fs%3D7b002cb822d74411930ef33c0004fb85&w=300&h=400&fit=cover&a=top",
       "_fetchFailed": false,
       "malId": 175543
     },
@@ -190,7 +190,7 @@
       "icon": "Swords",
       "dangerLevel": 9,
       "signatureMoment": "Massacring the entirety of the corrupt Zenin Clan single-handedly after unlocking her true physical potential.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/423949.jpg?s=72edfa936ac89421e8d16970762d8b5b",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcdn.myanimelist.net%2Fimages%2Fcharacters%2F15%2F423949.jpg%3Fs%3D72edfa936ac89421e8d16970762d8b5b&w=300&h=400&fit=cover&a=top",
       "_fetchFailed": false,
       "malId": 164482
     }
@@ -285,7 +285,7 @@
       "target": "Ryomen Sukuna",
       "type": "rival",
       "weight": 10,
-      "loreDesc": "The strongest sorcerer vs the King of Curses \u2014 a fated clash across millennia.",
+      "loreDesc": "The strongest sorcerer vs the King of Curses — a fated clash across millennia.",
       "systemDesc": "Two maximum-output processes competing for singular system dominance."
     },
     {
@@ -294,7 +294,7 @@
       "type": "enemy",
       "weight": 8,
       "loreDesc": "Gojo stands as the primary obstacle to Kenjaku's thousand-year plan.",
-      "systemDesc": "Firewall vs persistent rootkit \u2014 each designed specifically to counter the other."
+      "systemDesc": "Firewall vs persistent rootkit — each designed specifically to counter the other."
     },
     {
       "source": "Satoru Gojo",
@@ -309,7 +309,7 @@
       "target": "Kenjaku",
       "type": "ally",
       "weight": 6,
-      "loreDesc": "A temporary alliance of ancient evils \u2014 mutual convenience, not trust.",
+      "loreDesc": "A temporary alliance of ancient evils — mutual convenience, not trust.",
       "systemDesc": "Two legacy processes forming a runtime alliance against the modern OS."
     },
     {
@@ -317,7 +317,7 @@
       "target": "Maki Zenin",
       "type": "mirror",
       "weight": 9,
-      "loreDesc": "Both achieved zero cursed energy \u2014 Toji's path foreshadowed Maki's transformation.",
+      "loreDesc": "Both achieved zero cursed energy — Toji's path foreshadowed Maki's transformation.",
       "systemDesc": "Two instances of the same zero-dependency exploit, generations apart."
     },
     {
@@ -325,7 +325,7 @@
       "target": "Ryomen Sukuna",
       "type": "enemy",
       "weight": 7,
-      "loreDesc": "Yuta carries Gojo's will to stop Sukuna \u2014 the torch passed to the next generation.",
+      "loreDesc": "Yuta carries Gojo's will to stop Sukuna — the torch passed to the next generation.",
       "systemDesc": "Successor process inheriting the mission to terminate the rogue daemon."
     },
     {
@@ -355,7 +355,7 @@
     {
       "attacker": "Ryomen Sukuna (Malevolent Shrine)",
       "defender": "Satoru Gojo (Unlimited Void)",
-      "mechanic": "Both domains clash \u2014 Malevolent Shrine's guaranteed-hit slashes versus Unlimited Void's infinite information flood.",
+      "mechanic": "Both domains clash — Malevolent Shrine's guaranteed-hit slashes versus Unlimited Void's infinite information flood.",
       "type": "counters"
     },
     {
