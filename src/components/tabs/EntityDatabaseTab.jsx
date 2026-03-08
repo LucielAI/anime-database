@@ -10,6 +10,7 @@ const TYPE_BADGE_COLORS = {
   rival: { bg: 'rgba(245,158,11,0.15)', text: '#f59e0b' },
   dependent: { bg: 'rgba(59,130,246,0.15)', text: '#3b82f6' },
   counter: { bg: 'rgba(16,185,129,0.15)', text: '#10b981' },
+  successor: { bg: 'rgba(34,211,238,0.15)', text: '#22d3ee' },
 }
 
 export default function EntityDatabaseTab({ data, isSystemMode, theme }) {

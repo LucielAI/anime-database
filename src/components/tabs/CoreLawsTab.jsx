@@ -6,6 +6,7 @@ const TIMELINE_BADGE_COLORS = {
   'Ancient Past': { bg: 'rgba(107,114,128,0.2)', text: '#6b7280' },
   'Pre-Narrative': { bg: 'rgba(245,158,11,0.2)', text: '#f59e0b' },
   'Mid-Narrative': { bg: 'rgba(34,211,238,0.2)', text: '#22d3ee' },
+  'Modern Day': { bg: 'rgba(99,102,241,0.2)', text: '#818cf8' },
   'Final Arc': { bg: 'rgba(239,68,68,0.2)', text: '#ef4444' },
 }
 

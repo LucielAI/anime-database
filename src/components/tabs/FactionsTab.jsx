@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import * as Icons from 'lucide-react'
+import { Shield, Users, Eye, EyeOff, Flame, Layers, HelpCircle } from 'lucide-react'
+
+const ICON_MAP = { Shield, Users, Eye, EyeOff, Flame, Layers, HelpCircle }
 
 const HoverCard = ({ children, className, hoverGlow }) => {
   const [isHovered, setIsHovered] = useState(false)
@@ -16,8 +18,8 @@ const HoverCard = ({ children, className, hoverGlow }) => {
 }
 
 function getIcon(iconName) {
-  const IconComponent = Icons[iconName]
-  return IconComponent ? <IconComponent className="w-5 h-5" /> : <Icons.HelpCircle className="w-5 h-5" />
+  const IconComponent = ICON_MAP[iconName]
+  return IconComponent ? <IconComponent className="w-5 h-5" /> : <HelpCircle className="w-5 h-5" />
 }
 
 export default function FactionsTab({ data, isSystemMode, theme }) {
@@ -62,7 +64,7 @@ export default function FactionsTab({ data, isSystemMode, theme }) {
                     </div>
                     {faction.memberCount && (
                       <div className="text-[8px] md:text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase flex items-center gap-1">
-                        <Icons.Users className="w-3 h-3" />
+                        <Users className="w-3 h-3" />
                         EST: <span className="text-white">{faction.memberCount}</span>
                       </div>
                     )}

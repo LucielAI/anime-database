@@ -2,6 +2,19 @@ import { useState } from 'react';
 import ImageWithFallback from './ImageWithFallback';
 import DangerBar from './DangerBar';
 
+const TAILWIND_COLORS = {
+  'red-500': '#ef4444', 'red-400': '#f87171',
+  'orange-500': '#f97316', 'orange-400': '#fb923c',
+  'amber-400': '#fbbf24', 'yellow-500': '#eab308',
+  'emerald-400': '#34d399', 'green-500': '#22c55e',
+  'rose-400': '#fb7185',
+  'indigo-300': '#a5b4fc', 'indigo-500': '#6366f1',
+  'purple-400': '#c084fc',
+  'gray-300': '#d1d5db', 'gray-500': '#6b7280',
+  'cyan-400': '#22d3ee',
+};
+function resolveColor(name) { return TAILWIND_COLORS[name] || '#6b7280'; }
+
 const HoverLink = ({ href, children, className, hoverGlow }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -129,7 +142,10 @@ const Timeline = ({ characters, causalEvents, isSystemMode, theme }) => {
                   <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-cyan-400 transition-colors truncate">{char.name}</h3>
                   <div className="flex justify-between items-center w-full">
                     <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest truncate max-w-[60%]">{char.title}</p>
-                    <div className={`px-1.5 py-0.5 md:px-2 md:py-1 text-[8px] md:text-[10px] font-bold border border-${char.accentColor}/50 text-${char.accentColor} rounded bg-black/50 backdrop-blur-md shrink-0 ml-2`}>
+                    <div
+                      className="px-1.5 py-0.5 md:px-2 md:py-1 text-[8px] md:text-[10px] font-bold border rounded bg-black/50 backdrop-blur-md shrink-0 ml-2"
+                      style={{ borderColor: `${resolveColor(char.accentColor)}80`, color: resolveColor(char.accentColor) }}
+                    >
                       {char.rank}
                     </div>
                   </div>
@@ -148,7 +164,7 @@ const Timeline = ({ characters, causalEvents, isSystemMode, theme }) => {
                 {isSystemMode ? char.systemBio : char.loreBio}
               </p>
               <div className="mt-auto pt-4 border-t border-white/10">
-                <span className={`text-[10px] text-${char.accentColor} uppercase tracking-widest block mb-1`}>Signature Matchup / Ability</span>
+                <span className="text-[10px] uppercase tracking-widest block mb-1" style={{ color: resolveColor(char.accentColor) }}>Signature Matchup / Ability</span>
                 <p className="text-xs text-gray-400 line-clamp-2 md:line-clamp-none">{char.primaryAbility}</p>
               </div>
             </div>

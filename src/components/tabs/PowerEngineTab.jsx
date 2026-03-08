@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import SeverityBadge from '../SeverityBadge'
-import * as Icons from 'lucide-react'
+import { Zap, Cpu, Activity, Box, Hexagon, Swords, Globe, Shield, HelpCircle } from 'lucide-react'
+
+const ICON_MAP = { Zap, Cpu, Activity, Box, Hexagon, Swords, Globe, Shield, HelpCircle }
 
 const HoverCard = ({ children, className, hoverGlow }) => {
   const [isHovered, setIsHovered] = useState(false)
@@ -17,8 +19,8 @@ const HoverCard = ({ children, className, hoverGlow }) => {
 }
 
 function getIcon(iconName) {
-  const IconComponent = Icons[iconName]
-  return IconComponent ? <IconComponent className="w-5 h-5" /> : <Icons.HelpCircle className="w-5 h-5" />
+  const IconComponent = ICON_MAP[iconName]
+  return IconComponent ? <IconComponent className="w-5 h-5" /> : <HelpCircle className="w-5 h-5" />
 }
 
 export default function PowerEngineTab({ data, isSystemMode, theme }) {

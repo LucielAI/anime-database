@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import ImageWithFallback from '../components/ImageWithFallback'
 import DangerBar from '../components/DangerBar'
-import { User, Sword, Shield, Flame, Zap, Skull, Eye, Star } from 'lucide-react'
+import { User, Sword, Swords, Shield, Flame, Zap, Skull, Eye, Star, Brain, Copy, Crosshair, Hexagon, Wifi, Globe, Cpu, Activity, Box } from 'lucide-react'
 
-const ICON_MAP = { User, Sword, Shield, Flame, Zap, Skull, Eye, Star }
+const ICON_MAP = { User, Sword, Swords, Shield, Flame, Zap, Skull, Eye, Star, Brain, Copy, Crosshair, Hexagon, Wifi, Globe, Cpu, Activity, Box }
 
 function getIcon(iconName) {
   return ICON_MAP[iconName] || User
@@ -34,7 +34,7 @@ export default function StandardCardsExplorer({ characters = [], isSystemMode, t
           >
             <div className="aspect-[2/3] relative overflow-hidden">
               <ImageWithFallback
-                src={char.image}
+                src={char.imageUrl}
                 alt={char.name}
                 fallbackIcon={Icon}
                 gradientFrom={char.gradientFrom || 'gray-900'}

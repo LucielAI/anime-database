@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 
 function getCellColor(value, isDiagonal) {
   if (isDiagonal) return 'bg-cyan-500/30 text-cyan-300'
@@ -41,9 +41,8 @@ export default function AffinityMatrix({ types = [], matrix = [] }) {
 
         {/* Data rows */}
         {types.map((rowType, ri) => (
-          <>
+          <Fragment key={`row-${ri}`}>
             <div
-              key={`r-${rowType}`}
               className="text-[9px] text-gray-500 flex items-center pr-2 truncate"
               title={rowType}
             >
@@ -65,7 +64,7 @@ export default function AffinityMatrix({ types = [], matrix = [] }) {
                 </div>
               )
             })}
-          </>
+          </Fragment>
         ))}
       </div>
 
