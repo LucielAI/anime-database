@@ -31,10 +31,12 @@ export default function Dashboard({ data }) {
   const theme = data?.themeColors || DEFAULT_THEME
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
   const isAoT = data?.anime === 'Attack on Titan'
+  const isJJK = data?.anime === 'Jujutsu Kaisen'
+  const isHxH = data?.anime === 'Hunter x Hunter'
 
   return (
     <div
-      className="min-h-screen bg-[#050508] text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden"
+      className="min-h-screen bg-[#050508] text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden relative"
       style={{
         backgroundImage: `
           linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
@@ -43,34 +45,62 @@ export default function Dashboard({ data }) {
         backgroundSize: '50px 50px'
       }}
     >
+      <div className={`sys-mode-overlay ${isSystemMode ? 'active' : ''}`} />
       {/* Header */}
       <header
         className="pt-14 pb-6 px-6 relative"
         style={{ background: `radial-gradient(ellipse at center, ${theme.heroGradient} 0%, transparent 100%)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050508]/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#050508]/20 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center md:items-start text-center md:text-left gap-4 md:flex-row md:justify-between">
           <div className="flex flex-col items-center md:items-start gap-3">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/10 rounded-full text-[10px] tracking-[0.3em] font-bold text-white/50 bg-white/5 backdrop-blur-xl">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.6)]" />
+              <span className={`w-1.5 h-1.5 rounded-full ${isSystemMode ? 'bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.6)]' : 'bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.6)]'}`} />
               ARCHIVE ACTIVE <span className="text-white/20 mx-1">|</span> ID: {data?.malId}
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter uppercase bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+            <h1 
+              key={isSystemMode ? 'sys' : 'lore'} 
+              className={`text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter uppercase bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent`}
+            >
               {animeName}
             </h1>
             <p className="text-xs md:text-sm text-gray-500 tracking-[0.2em] uppercase font-bold">
               {data?.tagline}
             </p>
             {isAoT && isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-red-400/70 tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                <span>// ABSOLUTE ZERO TIME — DETERMINISTIC LOOP ACTIVE</span>
+              <div className="flex items-center gap-2 text-[10px] text-red-400/70 tracking-widest mt-2 rounded bg-red-900/10 px-3 py-1.5 border border-red-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse box-shadow-glow-red" />
+                <span>// [SYS_WARN]: DETERMINISTIC LOOP LOCKED — CAUSALITY INTACT</span>
               </div>
             )}
             {isAoT && !isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-red-400/70 tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                <span>// THE WORLD IS CRUEL — AND ALSO VERY BEAUTIFUL</span>
+              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
+                <span>"THIS WORLD IS CRUEL... AND ALSO VERY BEAUTIFUL."</span>
+              </div>
+            )}
+            {isJJK && isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-blue-400/70 tracking-widest mt-2 rounded bg-blue-900/10 px-3 py-1.5 border border-blue-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse box-shadow-glow-blue" />
+                <span>// [SYS_OP]: NEGATIVE ENERGY ECONOMY — COUNTERPLAY ACTIVE</span>
+              </div>
+            )}
+            {isJJK && !isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
+                <span>"WE AREN'T HEROES. WE'RE JUJUTSU SORCERERS."</span>
+              </div>
+            )}
+            {isHxH && isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-green-400/70 tracking-widest mt-2 rounded bg-green-900/10 px-3 py-1.5 border border-green-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse box-shadow-glow-green" />
+                <span>// [SYS_EXEC]: CONTRACTUAL ENGAGEMENT — ASYMMETRIC YIELD</span>
+              </div>
+            )}
+            {isHxH && !isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
+                <span>"YOU SHOULD ENJOY THE LITTLE DETOURS TO THE FULLEST."</span>
               </div>
             )}
           </div>

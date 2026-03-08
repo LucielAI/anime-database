@@ -1,27 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
+import { Routes, Route, useNavigate, useParams, Link } from 'react-router-dom'
 import Dashboard from './Dashboard'
 import { ANIME_LIST } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
 
-export default function App() {
-  const [activeUniverse, setActiveUniverse] = useState(null)
-
-  useEffect(() => { document.title = 'Anime Architecture Archive' }, [])
-
-  if (activeUniverse !== null) {
-    return (
-      <div className="relative">
-        <button
-          onClick={() => setActiveUniverse(null)}
-          className="fixed top-6 left-6 z-50 px-5 py-2.5 bg-black/60 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-lg font-mono text-[10px] text-gray-400 hover:text-white tracking-[0.2em] transition-all duration-300 backdrop-blur-xl uppercase cursor-pointer min-h-[44px] min-w-[44px] group"
-        >
-          <span className="group-hover:-translate-x-0.5 inline-block transition-transform duration-200">&larr;</span> ARCHIVE INDEX
-        </button>
-        <Dashboard data={ANIME_LIST[activeUniverse]} />
-      </div>
-    )
-  }
-
+function Home() {
   const totalEntities = ANIME_LIST.reduce((sum, a) => sum + (a.characters?.length || 0), 0)
   const totalPowers = ANIME_LIST.reduce((sum, a) => sum + (a.powerSystem?.length || 0), 0)
   const totalRules = ANIME_LIST.reduce((sum, a) => sum + (a.rules?.length || 0), 0)
@@ -46,12 +29,12 @@ export default function App() {
         className="w-full relative py-20 md:py-28 px-6 border-b border-white/5 flex flex-col items-center justify-center text-center z-10"
         style={{ background: 'radial-gradient(ellipse at center, #0d0d1f 0%, #050508 100%)' }}
       >
-        <div className="absolute top-6 left-6 inline-flex items-center gap-2 px-3 py-1.5 border border-white/10 rounded-full text-[10px] tracking-[0.3em] font-bold text-white/50 bg-white/5 backdrop-blur-xl">
+        <div className="absolute top-6 left-6 inline-flex items-center gap-2 px-3 py-1.5 border border-white/10 rounded-full text-[10px] tracking-[0.3em] font-bold text-white/50 bg-white/5 backdrop-blur-xl transition-all hover:bg-white/10">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.6)]" />
           SYSTEM ONLINE
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter uppercase mb-3 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter uppercase mb-3 bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent">
           Anime Architecture Archive
         </h1>
         <p className="text-sm md:text-base text-cyan-400/60 tracking-[0.3em] uppercase mt-1 font-bold">
@@ -86,10 +69,10 @@ export default function App() {
             const entityCount = data.characters?.length || 0
             const powerCount = data.powerSystem?.length || 0
             return (
-              <div
+              <Link
+                to={`/universe/${data.id}`}
                 key={data.anime}
-                onClick={() => setActiveUniverse(idx)}
-                className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500 relative flex flex-col aspect-3/4 [@media(hover:none)]:transform-none animate-fade-in"
+                className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500 relative flex flex-col aspect-3/4 animate-fade-in"
                 style={{
                   border: `1px solid ${theme.primary}`,
                   animationDelay: `${idx * 120}ms`,
@@ -109,7 +92,7 @@ export default function App() {
                   ) : (
                     <div className="w-full h-full bg-slate-900 border-b border-white/10 flex items-center justify-center text-xs tracking-widest text-gray-600">NO IMAGE ASSET</div>
                   )}
-                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#050508] to-transparent pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-[#050508] to-transparent pointer-events-none" />
                   <div className="absolute top-3 right-3 flex gap-2">
                     <div className="px-2 py-1 bg-black/60 backdrop-blur-sm border border-white/20 text-[10px] font-bold tracking-[0.15em] text-white/80 rounded uppercase">
                       {entityCount} ENTITIES
@@ -126,14 +109,14 @@ export default function App() {
                     ARCHIVE READY
                   </div>
                   <h2 className="text-xl md:text-2xl font-bold uppercase mb-1 text-white transition-colors truncate w-full" style={{ textShadow: `0 0 8px ${theme.glow}80` }}>{data.anime}</h2>
-                  <p className="text-[10px] text-white/50 tracking-widest uppercase truncate w-full mb-4 md:mb-6">
+                  <p className="text-[10px] text-white/50 tracking-widest uppercase truncate w-full mb-4 md:mb-6 leading-relaxed">
                     {data.tagline}
                   </p>
                   <div className="text-xs font-bold tracking-widest opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:translate-y-2 md:group-hover:translate-y-0 uppercase md:absolute md:bottom-5 pointer-events-none" style={{ color: theme.primary }}>
                     EXPLORE ARCHIVE &rarr;
                   </div>
                 </div>
-              </div>
+              </Link>
             )
           })}
 
@@ -180,5 +163,44 @@ export default function App() {
         </p>
       </footer>
     </div>
+  )
+}
+
+function UniverseRoute() {
+  const navigate = useNavigate()
+  const { id } = useParams()
+  
+  const data = ANIME_LIST.find(a => a.id === id)
+  
+  useEffect(() => {
+    if (!data) {
+      navigate('/', { replace: true })
+    }
+  }, [data, navigate])
+
+  if (!data) return null
+
+  return (
+    <div className="relative">
+      <Link
+        to="/"
+        className="fixed top-6 left-6 z-50 px-5 py-2.5 bg-black/60 hover:bg-white/10 border border-white/10 hover:border-white/40 shadow-lg hover:shadow-cyan-500/20 rounded-lg font-mono text-[10px] text-gray-400 hover:text-white tracking-[0.2em] transition-all duration-300 backdrop-blur-xl uppercase cursor-pointer min-h-[44px] min-w-[44px] group flex items-center justify-center"
+      >
+        <span className="group-hover:-translate-x-1 inline-block transition-transform duration-200 mr-2">&larr;</span> 
+        <span>INDEX</span>
+      </Link>
+      <Dashboard data={data} />
+    </div>
+  )
+}
+
+export default function App() {
+  useEffect(() => { document.title = 'Anime Architecture Archive' }, [])
+  
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/universe/:id" element={<UniverseRoute />} />
+    </Routes>
   )
 }

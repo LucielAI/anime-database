@@ -16,7 +16,7 @@ body {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.15) transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -25,32 +25,53 @@ body {
   background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 2px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .animate-fade-in {
   animation: fadeIn 400ms ease-out forwards;
 }
 
 @keyframes scan {
-  0%   { top: -2px; opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
+  0% {
+    top: -2px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
 
 /* Bootstrap paradox curve — AoT special */
 @keyframes paradoxPulse {
-  0%, 100% { stroke-opacity: 0.4; }
-  50%      { stroke-opacity: 0.9; }
+  0%,
+  100% {
+    stroke-opacity: 0.4;
+  }
+  50% {
+    stroke-opacity: 0.9;
+  }
 }
 .paradox-arc {
   animation: paradoxPulse 3s ease-in-out infinite;
@@ -58,8 +79,71 @@ body {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-in, .paradox-arc { animation: none; }
-  .scan-line { animation: none; }
-  .animate-pulse { animation: none; }
+  .animate-fade-in,
+  .paradox-arc {
+    animation: none;
+  }
+  .scan-line {
+    animation: none;
+  }
+  .animate-pulse {
+    animation: none;
+  }
 }
 
+/* SYS MODE STYLES - Mobile Optimized */
+.sys-mode-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 255, 255, 0.02) 3px,
+    rgba(255, 255, 255, 0.02) 4px
+  );
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.sys-mode-overlay.active {
+  opacity: 1;
+}
+
+@keyframes sysGlitch {
+  0% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  20% {
+    transform: translate(-2px, 1px);
+    text-shadow:
+      2px 0 #ef4444,
+      -2px 0 #22d3ee;
+  }
+  40% {
+    transform: translate(2px, -1px);
+    text-shadow:
+      -2px 0 #ef4444,
+      2px 0 #22d3ee;
+  }
+  60% {
+    transform: translate(-1px, 2px);
+    text-shadow: none;
+  }
+  80% {
+    transform: translate(1px, -2px);
+    text-shadow:
+      2px 0 #ef4444,
+      -2px 0 #22d3ee;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+.animate-sys-glitch {
+  animation: sysGlitch 0.5s ease-in-out;
+}

@@ -212,7 +212,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
         ))}
       </div>
 
-      <div className="relative w-full overflow-x-auto scrollbar-hide rounded-xl border border-white/10 bg-[#050508]">
+      <div className={`relative w-full overflow-x-auto scrollbar-hide rounded-xl border border-white/10 bg-[#050508] ${isSystemMode ? 'sys-mode-container shadow-[inset_0_0_100px_rgba(34,211,238,0.03)]' : ''}`}>
         <svg
           ref={svgRef}
           viewBox={`0 0 ${VB_W} ${VB_H}`}
@@ -274,8 +274,8 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                   x1={s.x} y1={s.y} x2={t.x} y2={t.y}
                   stroke={edgeColor}
                   strokeWidth={selected ? (isActive ? weight : 0.4) : weight}
-                  opacity={selected ? (isActive ? 0.85 : 0.06) : 0.4}
-                  strokeDasharray={rel.type === 'mirror' || rel.type === 'counter' ? '6 3' : undefined}
+                  opacity={isSystemMode ? (selected ? (isActive ? 1 : 0.1) : 0.8) : (selected ? (isActive ? 0.85 : 0.06) : 0.4)}
+                  strokeDasharray={isSystemMode ? "2 4" : (rel.type === 'mirror' || rel.type === 'counter' ? '6 3' : undefined)}
                 />
 
                 {/* Arrowhead */}
@@ -317,8 +317,11 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                 {/* Glow ring */}
                 {isSelected && (
                   <circle cx={node.x} cy={node.y} r={NODE_R + 6}
-                    fill="none" stroke={nodeColor} strokeWidth={2}
-                    opacity={0.5} filter="url(#node-glow)" />
+                    fill="none" stroke={nodeColor} 
+                    strokeWidth={isSystemMode ? 1.5 : 2}
+                    opacity={isSystemMode ? 0.9 : 0.5} 
+                    strokeDasharray={isSystemMode ? "4 4" : undefined}
+                    filter={isSystemMode ? undefined : "url(#node-glow)"} />
                 )}
 
                 {/* Outer ring */}
@@ -370,7 +373,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                     fontWeight={isSelected ? 'bold' : 'normal'}
                     fill={isSelected || isConnected ? '#e5e7eb' : '#9ca3af'}
                   >
-                    {node.name.split(' ')[0]}
+                    {isSystemMode ? `[ID:${node.name.substring(0,3).toUpperCase()}]` : node.name.split(' ')[0]}
                   </text>
                 </g>
 
