@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Shield, Users, Eye, EyeOff, Flame, Layers, HelpCircle } from 'lucide-react'
+import { Shield, Users, Eye, EyeOff, Flame, Layers, HelpCircle, Crown, Droplets } from 'lucide-react'
 
-const ICON_MAP = { Shield, Users, Eye, EyeOff, Flame, Layers, HelpCircle }
+const ICON_MAP = { Shield, Users, Eye, EyeOff, Flame, Layers, HelpCircle, Crown, Droplets }
 
 const HoverCard = ({ children, className, hoverGlow }) => {
   const [isHovered, setIsHovered] = useState(false)

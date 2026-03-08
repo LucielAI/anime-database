@@ -69,13 +69,11 @@ export default function CounterTreeExplorer({ characters = [], counterplay = [],
         </div>
       )}
 
-      {/* Character cards fallback when no counterplay */}
-      {!hasCounterplay && (
-        <div>
-          <h3 className="text-xs tracking-widest text-gray-500 mb-3">// ENTITY ROSTER</h3>
-          <StandardCardsExplorer characters={characters} isSystemMode={isSystemMode} theme={theme} />
-        </div>
-      )}
+      {/* Character cards */}
+      <div>
+        <h3 className="text-xs tracking-widest text-gray-500 mb-3">// ENTITY ROSTER</h3>
+        <StandardCardsExplorer characters={characters} isSystemMode={isSystemMode} theme={theme} />
+      </div>
     </div>
   )
 }

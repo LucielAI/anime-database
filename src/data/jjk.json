@@ -193,6 +193,38 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/423949.jpg?s=72edfa936ac89421e8d16970762d8b5b",
       "_fetchFailed": false,
       "malId": 164482
+    },
+    {
+      "name": "Yuji Itadori",
+      "title": "The Vessel",
+      "rank": "Grade 1",
+      "primaryAbility": "Divergent Fist / Black Flash",
+      "loreBio": "A naturally gifted athlete who swallowed Sukuna's finger to save a friend, becoming the vessel for the King of Curses. His innate physical talent and unyielding moral compass make him the rare sorcerer who fights not for power but for the right of others to die properly.",
+      "systemBio": "A clean-install runtime forcibly loaded with a catastrophic legacy virus. Rather than being corrupted by the parasitic process, the host node developed native resistance protocols and began executing independent combat subroutines that rival the virus's own output.",
+      "gradientFrom": "rose-900",
+      "gradientTo": "pink-600",
+      "accentColor": "pink-400",
+      "icon": "Flame",
+      "dangerLevel": 8,
+      "signatureMoment": "Landing his first Black Flash against Hanami — a 120% power amplification requiring nanosecond-perfect timing — proving that raw talent and will can close the gap against Special Grade threats.",
+      "imageUrl": "",
+      "malId": 163847
+    },
+    {
+      "name": "Megumi Fushiguro",
+      "title": "The Catalyst",
+      "rank": "Grade 2",
+      "primaryAbility": "Ten Shadows Technique",
+      "loreBio": "Toji Fushiguro's son and inheritor of the Zenin clan's most coveted technique — the Ten Shadows, which summons shikigami through shadow manipulation. Sukuna recognized Megumi's latent potential as a vessel and spent the entire series engineering his possession.",
+      "systemBio": "A high-potential process carrying legacy code from a zero-energy exploit (Toji) and running proprietary shadow-instantiation firmware coveted by every major system actor. The King of Curses identified this node as the optimal host for a full system migration.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "indigo-800",
+      "accentColor": "indigo-400",
+      "icon": "Box",
+      "dangerLevel": 8,
+      "signatureMoment": "Summoning the uncontrollable Mahoraga as a last resort against Sukuna — a shikigami so powerful that no Ten Shadows user in history had ever tamed it — willing to die if it meant taking his enemy down with him.",
+      "imageUrl": "",
+      "malId": 163918
     }
   ],
   "factions": [
@@ -299,22 +331,6 @@
   ],
   "causalEvents": [
     {
-      "name": "The Shibuya Incident",
-      "trigger": "Kenjaku orchestrates a massive, coordinates assault on Halloween using disaster curses.",
-      "consequence": "Satoru Gojo is sealed, plunging the world into chaos and reviving Sukuna.",
-      "timelinePosition": "Modern Day (Oct 31, 2018)",
-      "loreDesc": "Kenjaku orchestrated the sealing of Satoru Gojo, crashing the geopolitical equilibrium of the entire world.",
-      "systemDesc": "A targeted system crash removing the load-bearing pillar of global Jujutsu stability, unleashing millions of dormant malicious variables."
-    },
-    {
-      "name": "The Culling Game",
-      "trigger": "Kenjaku remotely activates thousands of modern sorcerers via mass Idle Transfiguration.",
-      "consequence": "Japan is locked into a nationwide death tournament to optimize cursed energy.",
-      "timelinePosition": "Modern Day (Nov 2018)",
-      "loreDesc": "A nationwide death game forcing the rapid evolution of humanity by optimizing cursed energy through mass slaughter.",
-      "systemDesc": "A malicious OS update disguised as a Binding Vow protocol where only the most violently optimized code will survive the sequence."
-    },
-    {
       "name": "The Hidden Inventory Incident",
       "trigger": "Toji Fushiguro is hired to assassinate the Star Plasma Vessel before she can merge with Master Tengen, destabilizing the barrier system protecting jujutsu society.",
       "consequence": "Toji kills the Vessel and fatally wounds Gojo. Gojo resurrects via Reverse Cursed Technique, awakening to his full potential. Geto witnesses the death and begins his ideological collapse toward curse-user extremism.",
@@ -329,6 +345,22 @@
       "timelinePosition": "Pre-Narrative (Dec 2017)",
       "loreDesc": "The event that handed Kenjaku his most critical asset. Geto's death wasn't the end of his technique — it was the beginning of Kenjaku's endgame, converting a fallen sorcerer's corpse into the chassis for a thousand-year plan.",
       "systemDesc": "A failed DDoS attack by a rogue process that was terminated on execution — only for a persistent background malware to scavenge the dead process's libraries and integrate them into its own runtime, massively expanding its operational capabilities."
+    },
+    {
+      "name": "The Shibuya Incident",
+      "trigger": "Kenjaku orchestrates a massive, coordinated assault on Halloween using disaster curses.",
+      "consequence": "Satoru Gojo is sealed, plunging the world into chaos and reviving Sukuna.",
+      "timelinePosition": "Modern Day (Oct 31, 2018)",
+      "loreDesc": "Kenjaku orchestrated the sealing of Satoru Gojo, crashing the geopolitical equilibrium of the entire world.",
+      "systemDesc": "A targeted system crash removing the load-bearing pillar of global Jujutsu stability, unleashing millions of dormant malicious variables."
+    },
+    {
+      "name": "The Culling Game",
+      "trigger": "Kenjaku remotely activates thousands of modern sorcerers via mass Idle Transfiguration.",
+      "consequence": "Japan is locked into a nationwide death tournament to optimize cursed energy.",
+      "timelinePosition": "Modern Day (Nov 2018)",
+      "loreDesc": "A nationwide death game forcing the rapid evolution of humanity by optimizing cursed energy through mass slaughter.",
+      "systemDesc": "A malicious OS update disguised as a Binding Vow protocol where only the most violently optimized code will survive the sequence."
     }
   ],
   "relationships": [
@@ -411,6 +443,38 @@
       "weight": 6,
       "loreDesc": "After annihilating the Zenin clan and fully realizing her Heavenly Restriction, Maki becomes one of the few combatants capable of operating inside the Culling Game as an untrackable threat to Kenjaku's orchestrated system.",
       "systemDesc": "A zero-signature process operating outside the orchestrator's monitoring framework, systematically dismantling tournament nodes without triggering detection protocols."
+    },
+    {
+      "source": "Ryomen Sukuna",
+      "target": "Megumi Fushiguro",
+      "type": "dependent",
+      "weight": 9,
+      "loreDesc": "Sukuna identified Megumi's Ten Shadows technique as the optimal vessel for his full incarnation, spending the entire series cultivating and protecting this asset — not out of sentiment, but as a calculated migration strategy to a superior host body.",
+      "systemDesc": "Legacy virus identifying a higher-spec hardware target and executing a long-term migration plan to transfer its full runtime from the current constrained host to an optimal execution environment."
+    },
+    {
+      "source": "Satoru Gojo",
+      "target": "Yuji Itadori",
+      "type": "mentor",
+      "weight": 8,
+      "loreDesc": "Gojo staked his reputation on keeping Yuji alive, arguing before the Higher-Ups that the boy could learn to control Sukuna rather than being executed as a containment failure. He saw in Yuji the potential to break the cycle of institutional rot.",
+      "systemDesc": "Senior administrator granting extended runtime to a virus-infected process on the thesis that controlled exposure will produce antibodies more valuable than immediate termination."
+    },
+    {
+      "source": "Yuji Itadori",
+      "target": "Ryomen Sukuna",
+      "type": "enemy",
+      "weight": 10,
+      "loreDesc": "Host and parasite locked in the most intimate form of warfare — sharing the same body. Yuji's entire arc is the struggle to reclaim autonomy from the entity that uses his flesh as a vehicle for atrocity.",
+      "systemDesc": "Host process and embedded virus competing for control of the same execution environment, each attempting to assert root authority over shared system resources."
+    },
+    {
+      "source": "Megumi Fushiguro",
+      "target": "Toji Fushiguro",
+      "type": "dependent",
+      "weight": 7,
+      "loreDesc": "Toji sold Megumi to the Zenin clan as a child and abandoned him — yet his final act during the Shibuya Incident was to ask about his son's welfare, revealing that the paternal bond he tried to sever never fully broke.",
+      "systemDesc": "Orphaned child process carrying inherited code from a terminated zero-energy exploit, unknowingly running legacy subroutines that mirror the parent's architecture."
     }
   ],
   "counterplay": [

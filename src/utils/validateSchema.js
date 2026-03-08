@@ -37,7 +37,7 @@ export function validateAnimePayload(data) {
   }
 
   if (Array.isArray(data.characters)) {
-    if (data.characters.length !== 6) warnings.push(`Expected 6 characters, got ${data.characters.length}`)
+    if (data.characters.length < 4) warnings.push(`Expected at least 4 characters, got ${data.characters.length}`)
     data.characters.forEach((c, i) => {
       REQUIRED_CHARACTER_FIELDS.forEach(f => {
         if (c[f] === undefined) warnings.push(`characters[${i}] (${c.name || 'unnamed'}) missing: ${f}`)

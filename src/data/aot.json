@@ -198,6 +198,40 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/489878.jpg",
       "_fetchFailed": false,
       "malId": 142314
+    },
+    {
+      "name": "Erwin Smith",
+      "title": "The Gambler",
+      "rank": "Commander",
+      "primaryAbility": "Strategic Calculus",
+      "loreBio": "The 13th Commander of the Survey Corps who built the most effective Titan-killing force in history by converting every soldier's death into actionable intelligence. Sacrificed his dream of reaching the basement to lead a suicidal cavalry charge that bought humanity its first real victory.",
+      "systemBio": "A high-throughput analytics engine that maximized system output by treating every failed process as a diagnostic input. Voluntarily terminated his own execution thread at peak operational value to ensure a dependent subroutine could complete its critical-path function.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "sky-900",
+      "accentColor": "sky-400",
+      "icon": "Brain",
+      "dangerLevel": 8,
+      "signatureMoment": "Leading a final suicidal cavalry charge directly into the Beast Titan's kill zone, screaming 'My soldiers, rage!' as boulders shred his formation — buying Levi the opening to annihilate Zeke.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/290058.jpg",
+      "_fetchFailed": false,
+      "malId": 46496
+    },
+    {
+      "name": "Annie Leonhart",
+      "title": "The Sleeper",
+      "rank": "Warrior",
+      "primaryAbility": "Female Titan / Hardening",
+      "loreBio": "A Marleyan Warrior and elite hand-to-hand combatant who infiltrated the 104th Cadet Corps as a spy. Encased herself in an impenetrable crystal cocoon for four years rather than risk exposing Marley's secrets under interrogation.",
+      "systemBio": "A deep-cover reconnaissance process embedded in the enemy environment with advanced self-encryption capability. When compromised, executed an irreversible self-quarantine protocol — suspending all operations inside an uncrackable encrypted shell rather than allowing data extraction.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-800",
+      "accentColor": "blue-400",
+      "icon": "Shield",
+      "dangerLevel": 8,
+      "signatureMoment": "Revealing herself as the Female Titan in the Stohess District, triggering a catastrophic urban battle that forced the Survey Corps to destroy an entire city district to capture her.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/337662.jpg",
+      "_fetchFailed": false,
+      "malId": 46490
     }
   ],
   "relationships": [
@@ -262,6 +296,34 @@
       "target": "Levi Ackerman",
       "type": "betrayal",
       "loreDesc": "Levi staked his career on Eren's containment, vouching for his loyalty before the tribunal. Eren repaid this by orchestrating a coup that dismantled everything Levi's squad died to protect.",
+      "weight": 8
+    },
+    {
+      "source": "Armin Arlert",
+      "target": "Erwin Smith",
+      "type": "successor",
+      "loreDesc": "Armin is chosen to survive over the veteran commander, forcing the young strategist to bear the impossible psychological burden of replacing humanity's greatest tactical mind.",
+      "weight": 8
+    },
+    {
+      "source": "Levi Ackerman",
+      "target": "Erwin Smith",
+      "type": "dependent",
+      "loreDesc": "Levi's entire military purpose was anchored to Erwin's vision. He followed the commander into certain death not out of obedience but because Erwin was the only person whose gambles Levi trusted with his life.",
+      "weight": 9
+    },
+    {
+      "source": "Annie Leonhart",
+      "target": "Reiner Braun",
+      "type": "ally",
+      "loreDesc": "Fellow Warriors from the same infiltration squad, bonded by shared guilt and mutual dependence during their years embedded in Paradis — though Annie's cold pragmatism increasingly clashed with Reiner's fracturing psyche.",
+      "weight": 7
+    },
+    {
+      "source": "Annie Leonhart",
+      "target": "Eren Yeager",
+      "type": "enemy",
+      "loreDesc": "Annie trained Eren in hand-to-hand combat as a comrade, then tried to kidnap him as the Female Titan. Their fight in Stohess was the first time Eren confronted the reality that his enemies had faces he recognized.",
       "weight": 8
     }
   ],
@@ -417,20 +479,20 @@
       "systemDesc": "A sophisticated sequence-breaking exploit where a future output node forcibly rewrote the parameter arrays of its prerequisite functions, guaranteeing its own recursive execution."
     },
     {
-      "name": "The Smiling Titan Encounter",
-      "trigger": "Eren punches the open palm of the Smiling Titan, who secretly possesses latent royal blood.",
-      "consequence": "Eren temporarily bypasses the Vow Renouncing War, unlocking the Coordinate and commanding pure Titans to destroy the threat.",
-      "timelinePosition": "Mid-Narrative (Year 850)",
-      "loreDesc": "An exploitation of system loopholes; a non-royal user gains momentary root admin privileges by establishing brief contact with a dormant royal node.",
-      "systemDesc": "A critical vulnerability exploitation allowing an unauthenticated legacy node to temporarily utilize the absolute permissions of the locked root administrator."
-    },
-    {
       "name": "The Fall of Wall Maria",
       "trigger": "The Colossal and Armored Titans breach the outermost wall, destroying Shiganshina District and killing Eren's mother.",
       "consequence": "Humanity loses one-third of its territory, triggering a refugee crisis and the chain of events that eventually unravels the truth of the world.",
       "timelinePosition": "Inciting Event (Year 845)",
       "loreDesc": "The inciting catastrophe that collapses a century of enforced peace. A Warrior infiltration operation disguised as a natural disaster, setting the entire narrative causal chain into motion.",
       "systemDesc": "A coordinated perimeter breach by two sleeper agents that crashed the outermost firewall layer, triggering a cascading resource crisis across all remaining system partitions."
+    },
+    {
+      "name": "The Smiling Titan Encounter",
+      "trigger": "Eren punches the open palm of the Smiling Titan, who secretly possesses latent royal blood.",
+      "consequence": "Eren temporarily bypasses the Vow Renouncing War, unlocking the Coordinate and commanding pure Titans to destroy the threat.",
+      "timelinePosition": "Mid-Narrative (Year 850)",
+      "loreDesc": "An exploitation of system loopholes; a non-royal user gains momentary root admin privileges by establishing brief contact with a dormant royal node.",
+      "systemDesc": "A critical vulnerability exploitation allowing an unauthenticated legacy node to temporarily utilize the absolute permissions of the locked root administrator."
     },
     {
       "name": "The Declaration of War",
