@@ -90,8 +90,9 @@
       "icon": "Skull",
       "dangerLevel": 10,
       "signatureMoment": "Tricking his father through sophisticated future memory manipulation to slaughter the royal family.",
-      "imageUrl": "https://myanimelist.net/images/characters/10/216895.jpg",
-      "_fetchFailed": false
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/216895.jpg?s=ccb6539cbfc5462df97d61a48c52af93",
+      "_fetchFailed": false,
+      "malId": 40882
     },
     {
       "name": "Mikasa Ackerman",
@@ -106,8 +107,9 @@
       "icon": "Shield",
       "dangerLevel": 9,
       "signatureMoment": "Brutally decapitating the Jaw Titan in a high-speed, mid-air maneuver to secure Eren's safe extraction during the raid on Liberio.",
-      "imageUrl": "https://myanimelist.net/images/characters/9/215563.jpg",
-      "_fetchFailed": false
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/215563.jpg?s=5b0650bb09a7e053afc6bad84ab48947",
+      "_fetchFailed": false,
+      "malId": 40881
     },
     {
       "name": "Armin Arlert",
@@ -122,8 +124,9 @@
       "icon": "Brain",
       "dangerLevel": 8,
       "signatureMoment": "Formulating a suicidal strategy to distract the Colossal Titan by enduring lethal steam burns, allowing Eren to extract the pilot.",
-      "imageUrl": "https://myanimelist.net/images/characters/8/220267.jpg",
-      "_fetchFailed": false
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/220267.jpg?s=afa2751e2201aba1f5179544e787ba1a",
+      "_fetchFailed": false,
+      "malId": 46494
     },
     {
       "name": "Levi Ackerman",
@@ -154,8 +157,9 @@
       "icon": "Hexagon",
       "dangerLevel": 8,
       "signatureMoment": "Surviving a direct, catastrophic decapitation attempt by rapidly transferring his neurological consciousness throughout his Titan's central nervous system.",
-      "imageUrl": "https://myanimelist.net/images/characters/16/206489.jpg",
-      "_fetchFailed": false
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/206489.jpg?s=e48695a419dc6e71c831d7481a5fc86f",
+      "_fetchFailed": false,
+      "malId": 46484
     },
     {
       "name": "Zeke Yeager",

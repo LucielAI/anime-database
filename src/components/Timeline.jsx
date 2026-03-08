@@ -2,9 +2,6 @@ import ImageWithFallback from './ImageWithFallback';
 import DangerBar from './DangerBar';
 
 const Timeline = ({ characters, causalEvents, isSystemMode }) => {
-  const themeColor = isSystemMode ? 'green' : 'purple';
-  const themeHex = isSystemMode ? '74,222,128' : '168,85,247'; // tailwind green-400 vs purple-500ish
-  
   return (
     <div className="w-full relative py-8 px-4 flex flex-col gap-12">
       {/* Central Timeline Line */}
@@ -55,7 +52,12 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 z-10 ml-8 md:ml-0">
         {characters.map((char, idx) => (
           <div key={idx} className={`bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 flex flex-col items-center p-0 ${isSystemMode ? 'hover:ring-1 hover:ring-green-400/50' : 'hover:ring-1 hover:ring-purple-400/50'}`}>
-            <div className="w-full aspect-[4/3] relative">
+            <a 
+              href={char.malId ? `https://myanimelist.net/character/${char.malId}` : '#'} 
+              target="_blank" 
+              rel="noreferrer"
+              className="w-full aspect-[4/3] relative block group cursor-pointer"
+            >
               <ImageWithFallback 
                 src={char.imageUrl} 
                 alt={char.name} 
@@ -65,18 +67,23 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
                 accentColor={char.accentColor} 
                 fetchFailed={char._fetchFailed} 
               />
-              <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#050508] to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+              <div className="absolute inset-0 bg-[#050508]/0 group-hover:bg-[#050508]/20 transition-colors duration-300 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs font-bold tracking-widest uppercase bg-black/80 px-4 py-2 rounded border border-white/20 text-white backdrop-blur-md">
+                  VIEW ARCHIVE FILE
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#050508] to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end pointer-events-none">
                 <div>
-                  <h3 className="text-xl font-bold text-white">{char.name}</h3>
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">{char.name}</h3>
                   <p className="text-xs text-gray-400 uppercase tracking-widest">{char.title}</p>
                 </div>
                 <div className={`px-2 py-1 text-[10px] font-bold border border-${char.accentColor}/50 text-${char.accentColor} rounded bg-black/50 backdrop-blur-md`}>
                   {char.rank}
                 </div>
               </div>
-            </div>
-            <div className="p-5 w-full flex-grow flex flex-col">
+            </a>
+            <div className="p-5 w-full grow flex flex-col">
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-[10px] text-gray-400 uppercase tracking-widest">DANGER LEVEL</span>
