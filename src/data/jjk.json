@@ -278,5 +278,91 @@
       "loreDesc": "A nationwide death game forcing the rapid evolution of humanity by optimizing cursed energy through mass slaughter.",
       "systemDesc": "A malicious OS update disguised as a Binding Vow protocol where only the most violently optimized code will survive the sequence."
     }
+  ],
+  "relationships": [
+    {
+      "source": "Satoru Gojo",
+      "target": "Ryomen Sukuna",
+      "type": "rival",
+      "weight": 10,
+      "loreDesc": "The strongest sorcerer vs the King of Curses \u2014 a fated clash across millennia.",
+      "systemDesc": "Two maximum-output processes competing for singular system dominance."
+    },
+    {
+      "source": "Satoru Gojo",
+      "target": "Kenjaku",
+      "type": "enemy",
+      "weight": 8,
+      "loreDesc": "Gojo stands as the primary obstacle to Kenjaku's thousand-year plan.",
+      "systemDesc": "Firewall vs persistent rootkit \u2014 each designed specifically to counter the other."
+    },
+    {
+      "source": "Satoru Gojo",
+      "target": "Yuta Okkotsu",
+      "type": "mentor",
+      "weight": 7,
+      "loreDesc": "Gojo vouched for Yuta's life and trained him as his successor.",
+      "systemDesc": "Senior admin provisioning root-level access to a junior node."
+    },
+    {
+      "source": "Ryomen Sukuna",
+      "target": "Kenjaku",
+      "type": "ally",
+      "weight": 6,
+      "loreDesc": "A temporary alliance of ancient evils \u2014 mutual convenience, not trust.",
+      "systemDesc": "Two legacy processes forming a runtime alliance against the modern OS."
+    },
+    {
+      "source": "Toji Fushiguro",
+      "target": "Maki Zenin",
+      "type": "mirror",
+      "weight": 9,
+      "loreDesc": "Both achieved zero cursed energy \u2014 Toji's path foreshadowed Maki's transformation.",
+      "systemDesc": "Two instances of the same zero-dependency exploit, generations apart."
+    },
+    {
+      "source": "Yuta Okkotsu",
+      "target": "Ryomen Sukuna",
+      "type": "enemy",
+      "weight": 7,
+      "loreDesc": "Yuta carries Gojo's will to stop Sukuna \u2014 the torch passed to the next generation.",
+      "systemDesc": "Successor process inheriting the mission to terminate the rogue daemon."
+    },
+    {
+      "source": "Kenjaku",
+      "target": "Ryomen Sukuna",
+      "type": "dependent",
+      "weight": 5,
+      "loreDesc": "Kenjaku's Culling Game needed Sukuna's vessel as a critical piece.",
+      "systemDesc": "Orchestrator process dependent on a specific runtime instance for execution."
+    },
+    {
+      "source": "Toji Fushiguro",
+      "target": "Satoru Gojo",
+      "type": "rival",
+      "weight": 8,
+      "loreDesc": "The man with zero cursed energy who nearly killed the strongest sorcerer alive.",
+      "systemDesc": "A hardware-only exploit that bypassed the most advanced software defense in the system."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Satoru Gojo (Infinity)",
+      "defender": "Toji Fushiguro (Inverted Spear)",
+      "mechanic": "The Inverted Spear of Heaven nullifies all cursed techniques on contact, bypassing Infinity entirely.",
+      "type": "nullifies"
+    },
+    {
+      "attacker": "Ryomen Sukuna (Malevolent Shrine)",
+      "defender": "Satoru Gojo (Unlimited Void)",
+      "mechanic": "Both domains clash \u2014 Malevolent Shrine's guaranteed-hit slashes versus Unlimited Void's infinite information flood.",
+      "type": "counters"
+    },
+    {
+      "attacker": "Kenjaku (Idle Transfiguration)",
+      "defender": "Yuta Okkotsu (Copy)",
+      "mechanic": "Yuta's ability to copy any cursed technique makes him adaptable to counter any single strategy.",
+      "type": "exploits"
+    }
   ]
 }

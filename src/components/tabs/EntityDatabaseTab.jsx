@@ -62,7 +62,7 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme }) {
             onClick={() => setShowRelationships(!showRelationships)}
             className="text-xs tracking-widest text-gray-500 hover:text-gray-300 transition-colors mb-3 flex items-center gap-2"
           >
-            <span>// RELATIONSHIP MATRIX</span>
+            <span>{isSystemMode ? '// DEPENDENCY GRAPH EDGES' : '// RELATIONSHIP MATRIX'}</span>
             <span className="text-[10px]">{showRelationships ? '▼' : '▶'}</span>
           </button>
           {showRelationships && (

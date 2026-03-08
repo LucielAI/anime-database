@@ -64,7 +64,7 @@ export default function CounterTreeExplorer({ characters = [], counterplay = [],
       {/* Counterplay tree */}
       {hasCounterplay && (
         <div>
-          <h3 className="text-xs tracking-widest text-gray-500 mb-3">// COUNTERPLAY MATRIX</h3>
+          <h3 className="text-xs tracking-widest text-gray-500 mb-3">{isSystemMode ? '// COUNTERPLAY MATRIX' : '// COMBAT MATCHUPS'}</h3>
           <CounterTree counterplay={counterplay} characters={characters} />
         </div>
       )}

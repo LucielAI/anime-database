@@ -54,10 +54,16 @@ export default function Dashboard({ data }) {
             <p className="text-xs md:text-sm text-gray-500 tracking-[0.2em] uppercase font-bold">
               {data?.tagline}
             </p>
-            {isAoT && (
+            {isAoT && isSystemMode && (
               <div className="flex items-center gap-2 text-[10px] text-red-400/70 tracking-widest">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
                 <span>// ABSOLUTE ZERO TIME — DETERMINISTIC LOOP ACTIVE</span>
+              </div>
+            )}
+            {isAoT && !isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-red-400/70 tracking-widest">
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                <span>// THE WORLD IS CRUEL — AND ALSO VERY BEAUTIFUL</span>
               </div>
             )}
           </div>
@@ -69,7 +75,7 @@ export default function Dashboard({ data }) {
       </header>
 
       {/* Navigation Tabs */}
-      <nav className="max-w-6xl mx-auto px-6 mb-8 mt-4 flex overflow-x-auto relative flex-nowrap border-b border-white/5">
+      <nav className="max-w-6xl mx-auto px-6 mb-8 mt-4 flex overflow-x-auto relative flex-nowrap border-b border-white/5 scrollbar-hide">
         {TABS.map((tab, idx) => {
           const isActive = activeTab === idx
           const activeColor = isSystemMode ? theme.secondary : theme.primary

@@ -33,23 +33,33 @@ body {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-in {
-  animation: fadeIn 150ms ease-out forwards;
+  animation: fadeIn 180ms ease-out forwards;
 }
 
 @keyframes scan {
-  0% { top: -10px; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
+  0%   { top: -2px; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
   100% { top: 100%; opacity: 0; }
+}
+
+/* Bootstrap paradox curve — AoT special */
+@keyframes paradoxPulse {
+  0%, 100% { stroke-opacity: 0.4; }
+  50%      { stroke-opacity: 0.9; }
+}
+.paradox-arc {
+  animation: paradoxPulse 3s ease-in-out infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in, .paradox-arc { animation: none; }
+  .scan-line { animation: none; }
+  .animate-pulse { animation: none; }
 }
 
