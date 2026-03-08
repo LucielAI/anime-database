@@ -207,7 +207,8 @@
       "icon": "Flame",
       "dangerLevel": 8,
       "signatureMoment": "Landing his first Black Flash against Hanami — a 120% power amplification requiring nanosecond-perfect timing — proving that raw talent and will can close the gap against Special Grade threats.",
-      "imageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true,
       "malId": 163847
     },
     {

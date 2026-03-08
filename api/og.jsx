@@ -29,6 +29,11 @@ export default async function handler(request) {
       subtitle = 'STRATEGIC INTERDEPENDENCE & CONTRACTS';
       themeColor = '#10b981'; // green
       typeLab = 'NODE GRAPH ARCHIVE';
+    } else if (id === 'vinlandsaga') {
+      title = 'VINLAND SAGA';
+      subtitle = 'SOCIAL MECHANICS & VIOLENCE ECONOMY';
+      themeColor = '#dc2626'; // red
+      typeLab = 'NODE GRAPH ARCHIVE';
     }
 
     const fontData = await fetch(new URL('./assets/RobotoMono-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer());

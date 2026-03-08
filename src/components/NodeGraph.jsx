@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from 'react'
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react'
 import { resolveColor } from '../utils/resolveColor'
 
 const EDGE_COLORS = {
@@ -18,6 +18,7 @@ export default function NodeGraph({ relationships = [], characters = [] }) {
   const [selected, setSelected] = useState(null)
   const [dragging, setDragging] = useState(null)
   const dragOffset = useRef({ x: 0, y: 0 })
+  const reqRef = useRef()
 
   useEffect(() => {
     const cx = 300
@@ -31,20 +32,28 @@ export default function NodeGraph({ relationships = [], characters = [] }) {
         y: cy + radius * Math.sin(angle),
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     setNodes(arranged)
   }, [characters])
 
-  const nodeMap = {}
-  nodes.forEach((n) => { nodeMap[n.name] = n })
+  const nodeMap = useMemo(() => {
+    const map = {}
+    nodes.forEach((n) => { map[n.name] = n })
+    return map
+  }, [nodes])
 
   const handleMouseDown = useCallback((e, name) => {
-    e.stopPropagation()
+    if (e.stopPropagation) e.stopPropagation()
     const node = nodeMap[name]
     if (!node) return
     const svg = svgRef.current
+    if (!svg) return
     const pt = svg.createSVGPoint()
-    pt.x = e.clientX
-    pt.y = e.clientY
+    
+    // Support both mouse and touch
+    pt.x = e.touches ? e.touches[0].clientX : e.clientX
+    pt.y = e.touches ? e.touches[0].clientY : e.clientY
+    
     const svgP = pt.matrixTransform(svg.getScreenCTM().inverse())
     dragOffset.current = { x: svgP.x - node.x, y: svgP.y - node.y }
     setDragging(name)
@@ -52,18 +61,28 @@ export default function NodeGraph({ relationships = [], characters = [] }) {
 
   const handleMouseMove = useCallback((e) => {
     if (!dragging) return
-    const svg = svgRef.current
-    const pt = svg.createSVGPoint()
-    pt.x = e.clientX
-    pt.y = e.clientY
-    const svgP = pt.matrixTransform(svg.getScreenCTM().inverse())
-    setNodes((prev) =>
-      prev.map((n) =>
-        n.name === dragging
-          ? { ...n, x: svgP.x - dragOffset.current.x, y: svgP.y - dragOffset.current.y }
-          : n
+    if (e.touches && e.cancelable) e.preventDefault() // Only prevent scroll when actively dragging a node
+    
+    if (reqRef.current) cancelAnimationFrame(reqRef.current)
+    
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY
+
+    reqRef.current = requestAnimationFrame(() => {
+      const svg = svgRef.current
+      if (!svg) return
+      const pt = svg.createSVGPoint()
+      pt.x = clientX
+      pt.y = clientY
+      const svgP = pt.matrixTransform(svg.getScreenCTM().inverse())
+      setNodes((prev) =>
+        prev.map((n) =>
+          n.name === dragging
+            ? { ...n, x: svgP.x - dragOffset.current.x, y: svgP.y - dragOffset.current.y }
+            : n
+        )
       )
-    )
+    })
   }, [dragging])
 
   const handleMouseUp = useCallback(() => {
@@ -89,8 +108,12 @@ export default function NodeGraph({ relationships = [], characters = [] }) {
         viewBox="0 0 600 500"
         className="w-full h-auto bg-[#0a0a14] rounded-lg border border-white/10"
         onMouseMove={handleMouseMove}
+        onTouchMove={handleMouseMove}
         onMouseUp={handleMouseUp}
+        onTouchEnd={handleMouseUp}
         onMouseLeave={handleMouseUp}
+        onTouchCancel={handleMouseUp}
+        style={{ touchAction: 'pan-y' }} // Allow vertical scrolling on the SVG background, but allow dragging horizontally/vertically if hitting a node
       >
         {relationships.map((rel, i) => {
           const s = nodeMap[rel.source]
@@ -116,8 +139,10 @@ export default function NodeGraph({ relationships = [], characters = [] }) {
           <g
             key={node.name}
             onMouseDown={(e) => handleMouseDown(e, node.name)}
+            onTouchStart={(e) => handleMouseDown(e, node.name)}
             onClick={() => handleNodeClick(node.name)}
             className="cursor-pointer"
+            style={{ touchAction: 'none' }} // Prevent scrolling when touching a node
           >
             <circle
               cx={node.x}

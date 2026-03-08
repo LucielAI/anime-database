@@ -79,7 +79,7 @@ function deriveBullets(data) {
 
 export default function SystemSummary({ data, isSystemMode, theme }) {
   const bullets = useMemo(() => deriveBullets(data), [data])
-  const accentColor = isSystemMode ? (theme?.modeGlow || '#22d3ee') : (theme?.primary || '#8b5cf6')
+  const accentColor = isSystemMode ? (theme?.secondary || '#22d3ee') : (theme?.primary || '#8b5cf6')
 
   if (!bullets || bullets.length === 0) return null
 

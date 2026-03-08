@@ -271,11 +271,6 @@ export function validateAnimePayload(data) {
     errors.forEach(e => console.error(e))
     warnings.forEach(w => console.warn(w))
     console.groupEnd()
-  } else {
-    console.log(
-      `%c[ARCHIVE SCHEMA] "${anime}" validated clean (${hint})`,
-      'color: #10b981; font-weight: bold;'
-    )
   }
 
   return { errors, warnings }

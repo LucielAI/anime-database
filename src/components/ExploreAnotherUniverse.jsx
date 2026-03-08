@@ -5,7 +5,7 @@ import { Database, Lock, ArrowRight } from 'lucide-react'
 
 
 export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme }) {
-  const accentColor = isSystemMode ? (theme?.modeGlow || '#22d3ee') : (theme?.primary || '#8b5cf6')
+  const accentColor = isSystemMode ? (theme?.secondary || '#22d3ee') : (theme?.primary || '#8b5cf6')
   
   // Filter out the current universe
   const liveUniverses = ANIME_LIST.filter(a => a.id !== currentId)
@@ -24,7 +24,8 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-2">
           {/* Live Links */}
           {liveUniverses.map(anime => {
-            const cardAccent = isSystemMode ? (anime.themeColors?.modeGlow || accentColor) : (anime.themeColors?.primary || accentColor)
+            const cardAccent = isSystemMode ? (anime.themeColors?.secondary || accentColor) : (anime.themeColors?.primary || accentColor)
+            const cardGlow = isSystemMode ? (anime.themeColors?.modeGlow || 'rgba(34,211,238,0.25)') : (anime.themeColors?.glow || 'rgba(139,92,246,0.25)')
             
             return (
               <Link 
@@ -34,7 +35,7 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
                 className="group flex flex-col items-start justify-end p-5 bg-white/5 border border-white/10 rounded-xl transition-all duration-500 w-full md:w-[260px] h-[120px] relative overflow-hidden text-left shadow-lg hover:border-white/30 hover:-translate-y-1"
                 style={{ boxShadow: `0 0 0 rgba(0,0,0,0)` }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = `0 10px 30px -10px ${cardAccent}`
+                  e.currentTarget.style.boxShadow = `0 10px 30px -10px ${cardGlow}`
                   e.currentTarget.style.borderColor = cardAccent
                 }}
                 onMouseLeave={(e) => {
