@@ -15,6 +15,7 @@ const ImageWithFallback = ({ src, alt, fallbackIcon: Icon, gradientFrom, gradien
     <img 
       src={src} 
       alt={alt} 
+      loading="lazy"
       className="w-full h-full object-cover object-top" 
       onError={() => setImgError(true)} 
     />
