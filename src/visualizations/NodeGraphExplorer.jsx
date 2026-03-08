@@ -84,6 +84,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
   const [hoveredEdge, setHoveredEdge] = useState(null)
   const [imgFailed, setImgFailed] = useState({})
   const dragOffset = useRef({ x: 0, y: 0 })
+  const rafRef = useRef(null)
 
   const resetLayout = useCallback(() => {
     if (simulationRef.current) simulationRef.current.stop()
@@ -105,13 +106,18 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
       .force('collide', d3.forceCollide().radius(NODE_R + 35).iterations(3))
       .alphaDecay(0.02)
       .on('tick', () => {
-        // Enforce boundary box
-        newNodes.forEach(n => {
-          n.x = Math.max(BOUNDS_PAD, Math.min(VB_W - BOUNDS_PAD, n.x))
-          n.y = Math.max(BOUNDS_PAD, Math.min(VB_H - BOUNDS_PAD, n.y))
-        })
-        setNodes([...newNodes])
-        setLinks([...newLinks])
+        if (!rafRef.current) {
+          rafRef.current = requestAnimationFrame(() => {
+            // Enforce boundary box safely
+            newNodes.forEach(n => {
+              n.x = Math.max(BOUNDS_PAD, Math.min(VB_W - BOUNDS_PAD, n.x))
+              n.y = Math.max(BOUNDS_PAD, Math.min(VB_H - BOUNDS_PAD, n.y))
+            })
+            setNodes([...newNodes])
+            setLinks([...newLinks])
+            rafRef.current = null
+          })
+        }
       })
 
     simulationRef.current = sim
@@ -121,6 +127,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
     resetLayout()
     return () => {
       if (simulationRef.current) simulationRef.current.stop()
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
   }, [resetLayout])
 
@@ -149,7 +156,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
     if (e.cancelable) e.preventDefault()
     if (!simulationRef.current) return
     simulationRef.current.alphaTarget(0.3).restart()
-    const node = nodeMap[name]
+    const node = simulationRef.current.nodes().find(n => n.name === name)
     if (!node) return
     const svgP = getSvgPoint(e)
     if (!svgP) return
@@ -163,7 +170,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
     if (!dragging || !simulationRef.current) return
     const svgP = getSvgPoint(e)
     if (!svgP) return
-    const node = nodeMap[dragging]
+    const node = simulationRef.current.nodes().find(n => n.name === dragging)
     if (node) {
       node.fx = svgP.x - dragOffset.current.x
       node.fy = svgP.y - dragOffset.current.y
@@ -172,7 +179,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
 
   const handleEnd = () => {
     if (!dragging || !simulationRef.current) return
-    const node = nodeMap[dragging]
+    const node = simulationRef.current.nodes().find(n => n.name === dragging)
     if (node) {
       node.fx = null
       node.fy = null

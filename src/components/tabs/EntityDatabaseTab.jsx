@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { getVisualization } from '../../visualizations/registry'
+import ErrorBoundary from '../ErrorBoundary'
 
 const TYPE_BADGE_COLORS = {
   ally: { bg: 'rgba(34,211,238,0.15)', text: '#22d3ee' },
@@ -21,20 +22,22 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme }) {
   const anomalies = data?.anomalies || []
   const accent = theme?.accent || '#22d3ee'
 
-  const EntityVisualization = getVisualization(data?.visualizationHint)
+  const VizComponent = getVisualization(data?.visualizationHint)
 
   return (
     <div className="space-y-6 font-mono">
       {/* Main visualization */}
-      <EntityVisualization
-        characters={characters}
-        causalEvents={data?.causalEvents || []}
-        relationships={relationships}
-        counterplay={data?.counterplay || []}
-        powerSystem={data?.powerSystem || []}
-        isSystemMode={isSystemMode}
-        theme={theme}
-      />
+      <ErrorBoundary data={data} isSystemMode={isSystemMode} theme={theme}>
+        <VizComponent
+          characters={characters}
+          causalEvents={data?.causalEvents || []}
+          relationships={relationships}
+          counterplay={data?.counterplay || []}
+          powerSystem={data?.powerSystem || []}
+          isSystemMode={isSystemMode}
+          theme={theme}
+        />
+      </ErrorBoundary>
 
       {/* Anomalies section */}
       {anomalies.length > 0 && (

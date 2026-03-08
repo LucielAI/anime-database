@@ -181,7 +181,18 @@ export function validateAnimePayload(data) {
     })
   }
 
-  // ── 10. Renderer-aware structural density checks ──
+  // ── 10. Renderer-specific field requirements ──
+  if (hint === 'timeline' && (!data.causalEvents || data.causalEvents.length === 0)) {
+    warnings.push(`Renderer "${hint}" requires 'causalEvents' to properly layout.`)
+  }
+  if (hint === 'node-graph' && (!data.relationships || data.relationships.length === 0)) {
+    warnings.push(`Renderer "${hint}" requires 'relationships' to wire the D3 graph.`)
+  }
+  if (hint === 'counter-tree' && (!data.counterplay || data.counterplay.length === 0)) {
+    warnings.push(`Renderer "${hint}" requires 'counterplay' for the combat economy tree.`)
+  }
+
+  // ── 11. Renderer-aware structural density checks (Soft Guidance) ──
 
   const profile = STRUCTURAL_PROFILES[hint]
   if (profile) {

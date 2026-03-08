@@ -31,8 +31,7 @@ export default async function handler(request) {
       typeLab = 'NODE GRAPH ARCHIVE';
     }
 
-    const fontUrl = 'https://raw.githubusercontent.com/google/fonts/main/ofl/robotomono/RobotoMono-Bold.ttf';
-    const fontData = await fetch(fontUrl).then((res) => res.arrayBuffer());
+    const fontData = await fetch(new URL('./assets/RobotoMono-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer());
 
     return new ImageResponse(
       (

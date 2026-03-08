@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:payload": "node scripts/validatePayload.js"
   },
   "dependencies": {
     "@vercel/og": "^0.11.1",
