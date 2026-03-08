@@ -47,7 +47,7 @@ export default function PowerEngineTab({ data, isSystemMode, theme }) {
             hoverGlow={isSystemMode ? theme.modeGlow : theme.glow}
             className="bg-white/5 backdrop-blur-sm border rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 group hover:bg-white/10 active:bg-white/15 cursor-default [@media(hover:none)]:transform-none"
           >
-            <div className="p-6 h-full flex flex-col" style={{ borderLeft: `4px solid ${isSystemMode ? theme.secondary : theme.primary}`, borderColor: 'rgba(255,255,255,0.1)' }}>
+            <div className="p-6 h-full flex flex-col border-l-4" style={{ borderLeftColor: isSystemMode ? theme.secondary : theme.primary }}>
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 rounded-lg" style={{ backgroundColor: `${isSystemMode ? theme.secondary : theme.primary}20`, color: isSystemMode ? theme.secondary : theme.primary }}>
                   {getIcon(power.icon)}

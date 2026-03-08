@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
+import { resolveColor } from '../utils/resolveColor'
 
 const EDGE_COLORS = {
   ally: '#22d3ee',
@@ -122,8 +123,8 @@ export default function NodeGraph({ relationships = [], characters = [] }) {
               cx={node.x}
               cy={node.y}
               r={20}
-              fill={selected === node.name ? (node.accentColor || '#22d3ee') : '#1a1a2e'}
-              stroke={node.accentColor || '#22d3ee'}
+              fill={selected === node.name ? resolveColor(node.accentColor, '#22d3ee') : '#1a1a2e'}
+              stroke={resolveColor(node.accentColor, '#22d3ee')}
               strokeWidth={selected === node.name ? 3 : 1.5}
               className="transition-all duration-200"
             />

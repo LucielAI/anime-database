@@ -1,19 +1,7 @@
 import { useState } from 'react';
 import ImageWithFallback from './ImageWithFallback';
 import DangerBar from './DangerBar';
-
-const TAILWIND_COLORS = {
-  'red-500': '#ef4444', 'red-400': '#f87171',
-  'orange-500': '#f97316', 'orange-400': '#fb923c',
-  'amber-400': '#fbbf24', 'yellow-500': '#eab308',
-  'emerald-400': '#34d399', 'green-500': '#22c55e',
-  'rose-400': '#fb7185',
-  'indigo-300': '#a5b4fc', 'indigo-500': '#6366f1',
-  'purple-400': '#c084fc',
-  'gray-300': '#d1d5db', 'gray-500': '#6b7280',
-  'cyan-400': '#22d3ee',
-};
-function resolveColor(name) { return TAILWIND_COLORS[name] || '#6b7280'; }
+import { resolveColor } from '../utils/resolveColor';
 
 const HoverLink = ({ href, children, className, hoverGlow }) => {
   const [isHovered, setIsHovered] = useState(false);

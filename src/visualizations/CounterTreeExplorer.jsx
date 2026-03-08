@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import CounterTree from '../components/CounterTree'
 import StandardCardsExplorer from './StandardCardsExplorer'
+import { resolveColor } from '../utils/resolveColor'
 
 export default function CounterTreeExplorer({ characters = [], counterplay = [], powerSystem = [], isSystemMode, theme }) {
   const [selectedPower, setSelectedPower] = useState(null)
@@ -48,7 +49,7 @@ export default function CounterTreeExplorer({ characters = [], counterplay = [],
                     <div className="ml-8 mt-1 pl-3 border-l border-white/10 space-y-1">
                       {charsInSystem.map(c => (
                         <div key={c.name} className="text-[10px] text-gray-400 py-1">
-                          <span style={{ color: c.accentColor || accent }}>{c.name}</span> — {c.title}
+                          <span style={{ color: resolveColor(c.accentColor, accent) }}>{c.name}</span> — {c.title}
                         </div>
                       ))}
                     </div>

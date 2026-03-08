@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import StandardCardsExplorer from './StandardCardsExplorer'
+import { resolveColor } from '../utils/resolveColor'
 
 const EDGE_COLORS = {
   ally: '#22d3ee',
@@ -172,14 +173,14 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
               className="cursor-pointer"
             >
               <circle cx={node.x} cy={node.y} r={20}
-                fill={selected === node.name ? (node.accentColor || accent) : '#1a1a2e'}
-                stroke={node.accentColor || accent}
+                fill={selected === node.name ? resolveColor(node.accentColor, accent) : '#1a1a2e'}
+                stroke={resolveColor(node.accentColor, accent)}
                 strokeWidth={selected === node.name ? 3 : 1.5}
                 className="transition-all duration-200"
               />
               <text x={node.x} y={node.y + 4} textAnchor="middle"
                 className="text-[10px] font-mono pointer-events-none"
-                fill={selected === node.name ? '#050508' : (node.accentColor || accent)}
+                fill={selected === node.name ? '#050508' : resolveColor(node.accentColor, accent)}
               >
                 {node.name.charAt(0)}
               </text>
@@ -201,7 +202,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
 
       {selectedChar && (
         <div className="bg-[#0a0a14] border border-white/10 rounded-lg p-4">
-          <h4 className="text-sm font-bold mb-1" style={{ color: selectedChar.accentColor || accent }}>{selectedChar.name}</h4>
+          <h4 className="text-sm font-bold mb-1" style={{ color: resolveColor(selectedChar.accentColor, accent) }}>{selectedChar.name}</h4>
           <p className="text-[10px] text-gray-500 mb-2">{selectedChar.title} — RANK: {selectedChar.rank}</p>
           <p className="text-xs text-gray-400 leading-relaxed">
             {isSystemMode ? selectedChar.systemBio : selectedChar.loreBio}
