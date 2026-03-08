@@ -90,7 +90,7 @@
       "icon": "Skull",
       "dangerLevel": 10,
       "signatureMoment": "Tricking his father through sophisticated future memory manipulation to slaughter the royal family.",
-      "imageUrl": "https://myanimelist.net/images/characters/10/61728.jpg",
+      "imageUrl": "https://myanimelist.net/images/characters/10/216895.jpg",
       "_fetchFailed": false
     },
     {
@@ -106,7 +106,7 @@
       "icon": "Shield",
       "dangerLevel": 9,
       "signatureMoment": "Brutally decapitating the Jaw Titan in a high-speed, mid-air maneuver to secure Eren's safe extraction during the raid on Liberio.",
-      "imageUrl": "https://myanimelist.net/images/characters/15/111315.jpg",
+      "imageUrl": "https://myanimelist.net/images/characters/9/215563.jpg",
       "_fetchFailed": false
     },
     {
@@ -138,7 +138,7 @@
       "icon": "Zap",
       "dangerLevel": 10,
       "signatureMoment": "A dizzying, brutal vivisection of the Beast Titan in a forest, reducing a major, seemingly invincible threat to a mutilated husk in mere seconds.",
-      "imageUrl": "https://myanimelist.net/images/characters/2/241413.jpg",
+      "imageUrl": "https://myanimelist.net/images/characters/12/622510.jpg",
       "_fetchFailed": false
     },
     {
@@ -154,7 +154,7 @@
       "icon": "Hexagon",
       "dangerLevel": 8,
       "signatureMoment": "Surviving a direct, catastrophic decapitation attempt by rapidly transferring his neurological consciousness throughout his Titan's central nervous system.",
-      "imageUrl": "https://myanimelist.net/images/characters/16/208109.jpg",
+      "imageUrl": "https://myanimelist.net/images/characters/16/206489.jpg",
       "_fetchFailed": false
     },
     {
@@ -170,7 +170,7 @@
       "icon": "Wifi",
       "dangerLevel": 9,
       "signatureMoment": "Shredding an entire cavalry charge of Survey Corps soldiers to pieces with a supersonic barrage of crushed boulders.",
-      "imageUrl": "https://myanimelist.net/images/characters/7/318445.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/602645.jpg",
       "_fetchFailed": false
     }
   ],
@@ -319,21 +319,24 @@
       "trigger": "A hunted, severely wounded slave girl falls into a subterranean pool, fusing with the Hallucigenia.",
       "consequence": "The manifestation of the first Titan entity, initiating 2,000 years of global biological warfare.",
       "timelinePosition": "Ancient Past (Year 1003 B1)",
-      "loreDesc": "The origin point of all systemic powers; an organic singularity that binds an entire race of people into a shared, inescapable genetic destiny."
+      "loreDesc": "The origin point of all systemic powers; an organic singularity that binds an entire race of people into a shared, inescapable genetic destiny.",
+      "systemDesc": "The initial zero-day rootkit injection that permanently corrupted the base human registry across the entire Eldian segment, establishing a permanent interdimensional cloud server (Paths)."
     },
     {
       "name": "The Reiss Chapel Massacre",
       "trigger": "Future Eren transmits curated, terrifying memories to Grisha, actively coercing him to murder the pacifist royal family.",
       "consequence": "Grisha slaughters the royals, steals the Founding Titan, and transfers both Titans to young Eren.",
       "timelinePosition": "Pre-Narrative (Year 845)",
-      "loreDesc": "A pristine example of a bootstrap paradox, establishing that the future actively dictates the past to ensure its own localized existence."
+      "loreDesc": "A pristine example of a bootstrap paradox, establishing that the future actively dictates the past to ensure its own localized existence.",
+      "systemDesc": "A sophisticated sequence-breaking exploit where a future output node forcibly rewrote the parameter arrays of its prerequisite functions, guaranteeing its own recursive execution."
     },
     {
       "name": "The Smiling Titan Encounter",
       "trigger": "Eren punches the open palm of the Smiling Titan, who secretly possesses latent royal blood.",
       "consequence": "Eren temporarily bypasses the Vow Renouncing War, unlocking the Coordinate and commanding pure Titans to destroy the threat.",
       "timelinePosition": "Mid-Narrative (Year 850)",
-      "loreDesc": "An exploitation of system loopholes; a non-royal user gains momentary root admin privileges by establishing brief contact with a dormant royal node."
+      "loreDesc": "An exploitation of system loopholes; a non-royal user gains momentary root admin privileges by establishing brief contact with a dormant royal node.",
+      "systemDesc": "A critical vulnerability exploitation allowing an unauthenticated legacy node to temporarily utilize the absolute permissions of the locked root administrator."
     }
   ]
 }

@@ -2,29 +2,32 @@ import ImageWithFallback from './ImageWithFallback';
 import DangerBar from './DangerBar';
 
 const Timeline = ({ characters, causalEvents, isSystemMode }) => {
+  const themeColor = isSystemMode ? 'green' : 'purple';
+  const themeHex = isSystemMode ? '74,222,128' : '168,85,247'; // tailwind green-400 vs purple-500ish
+  
   return (
     <div className="w-full relative py-8 px-4 flex flex-col gap-12">
       {/* Central Timeline Line */}
-      <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-500/50 to-transparent shadow-[0_0_15px_rgba(6,182,212,0.5)] z-0" />
+      <div className={`absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent transition-colors duration-500 to-transparent z-0 ${isSystemMode ? 'via-green-500/50 shadow-[0_0_15px_rgba(74,222,128,0.5)]' : 'via-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]'}`} />
       
-      <div className="text-center font-bold tracking-[0.2em] text-cyan-400 mb-8 z-10">
-        CAUSAL EVENT MATRIX : TIMELINE
+      <div className={`text-center font-bold tracking-[0.2em] mb-8 z-10 transition-colors duration-500 ${isSystemMode ? 'text-green-400' : 'text-purple-400'}`}>
+        {isSystemMode ? 'CAUSAL EVENT MATRIX : TIMELINE' : 'HISTORICAL EVENT CHRONOLOGY'}
       </div>
 
       {causalEvents.map((event, idx) => (
         <div key={idx} className={`relative flex flex-col md:flex-row items-center gap-8 z-10 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
           
           {/* Node Dot */}
-          <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-cyan-400 border-4 border-[#050508] transform -translate-x-1/2 shadow-[0_0_10px_cyan]" />
+          <div className={`absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 border-[#050508] transform -translate-x-1/2 transition-all duration-500 ${isSystemMode ? 'bg-green-400 shadow-[0_0_10px_#4ade80]' : 'bg-purple-400 shadow-[0_0_10px_#a855f7]'}`} />
           
           {/* Content Card */}
-          <div className={`ml-16 md:ml-0 w-full md:w-[45%] bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:-translate-y-1 hover:ring-1 hover:ring-cyan-400/50 transition-all duration-300 ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-            <div className={`text-xs font-bold mb-2 text-cyan-500 drop-shadow-[0_0_5px_cyan]`}>{event.timelinePosition.toUpperCase()}</div>
+          <div className={`ml-16 md:ml-0 w-full md:w-[45%] bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-all duration-300 ${isSystemMode ? 'hover:ring-1 hover:ring-green-400/50' : 'hover:ring-1 hover:ring-purple-400/50'} ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+            <div className={`text-xs font-bold mb-2 transition-colors duration-500 ${isSystemMode ? 'text-green-500' : 'text-purple-500'}`}>{event.timelinePosition.toUpperCase()}</div>
             <h3 className="text-xl font-bold text-white mb-2 tracking-wider">{event.name.toUpperCase()}</h3>
             
             <div className="mb-4">
               <span className="text-xs text-gray-500 uppercase tracking-wider block mb-1">TRIGGER</span>
-              <p className="text-sm text-gray-300 border-l-2 border-cyan-500/50 pl-3 py-1">{event.trigger}</p>
+              <p className={`text-sm text-gray-300 border-l-2 pl-3 py-1 transition-colors duration-500 ${isSystemMode ? 'border-green-500/50' : 'border-purple-500/50'}`}>{event.trigger}</p>
             </div>
             
             <div className="mb-4">
@@ -33,9 +36,11 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
             </div>
             
             <div className="mt-4 pt-4 border-t border-white/10">
-              <span className="text-xs text-cyan-500 uppercase tracking-wider block mb-2">{isSystemMode ? 'SYSTEM ARCHITECTURE LOG' : 'LORE ARCHIVE'}</span>
+              <span className={`text-xs uppercase tracking-wider block mb-2 transition-colors duration-500 ${isSystemMode ? 'text-green-500' : 'text-purple-500'}`}>
+                {isSystemMode ? 'SYSTEM ARCHITECTURE LOG' : 'LORE ARCHIVE'}
+              </span>
               <p className="text-sm text-gray-400">
-                {isSystemMode ? event.systemDesc : (event.loreDesc || event.consequence)}
+                {isSystemMode ? (event.systemDesc || 'No system parameter recorded.') : (event.loreDesc || event.consequence)}
               </p>
             </div>
           </div>
@@ -43,13 +48,13 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
       ))}
 
       {/* Characters Section (Anomalies / Entities in the Timeline) */}
-      <div className="mt-16 text-center font-bold tracking-[0.2em] text-purple-400 mb-8 z-10">
-        PRIMARY CAUSAL ENTITIES
+      <div className={`mt-16 text-center font-bold tracking-[0.2em] mb-8 z-10 transition-colors duration-500 ${isSystemMode ? 'text-green-400' : 'text-purple-400'}`}>
+        {isSystemMode ? 'PRIMARY CAUSAL ENTITIES' : 'KEY NARRATIVE FIGURES'}
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 z-10 ml-8 md:ml-0">
         {characters.map((char, idx) => (
-          <div key={idx} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 hover:ring-1 hover:ring-purple-400/50 transition-all duration-300 flex flex-col items-center p-0">
+          <div key={idx} className={`bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 flex flex-col items-center p-0 ${isSystemMode ? 'hover:ring-1 hover:ring-green-400/50' : 'hover:ring-1 hover:ring-purple-400/50'}`}>
             <div className="w-full aspect-[4/3] relative">
               <ImageWithFallback 
                 src={char.imageUrl} 
@@ -71,7 +76,7 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
                 </div>
               </div>
             </div>
-            <div className="p-5 w-full">
+            <div className="p-5 w-full flex-grow flex flex-col">
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-[10px] text-gray-400 uppercase tracking-widest">DANGER LEVEL</span>
@@ -79,10 +84,10 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
                 </div>
                 <DangerBar level={char.dangerLevel} />
               </div>
-              <p className="text-sm text-gray-300 h-20 overflow-y-auto pr-2 custom-scrollbar">
+              <p className="text-sm text-gray-300 leading-relaxed max-h-32 overflow-y-auto pr-2 custom-scrollbar">
                 {isSystemMode ? char.systemBio : char.loreBio}
               </p>
-              <div className="mt-4 pt-4 border-t border-white/10">
+              <div className="mt-auto pt-4 border-t border-white/10">
                 <span className={`text-[10px] text-${char.accentColor} uppercase tracking-widest block mb-1`}>Signature Matchup / Ability</span>
                 <p className="text-xs text-gray-400">{char.primaryAbility}</p>
               </div>
