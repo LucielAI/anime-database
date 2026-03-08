@@ -8,7 +8,7 @@ const Toggle = ({ isSystemMode, setIsSystemMode, theme }) => {
         onClick={() => setIsSystemMode(!isSystemMode)}
       >
         <div 
-          className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full transition-all duration-500 ease-in-out ${
+          className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full transition-all duration-500 ease-in-out pointer-events-none ${
             isSystemMode 
               ? 'translate-x-[100%]' 
               : 'translate-x-0'
@@ -21,7 +21,7 @@ const Toggle = ({ isSystemMode, setIsSystemMode, theme }) => {
         />
         
         <div 
-          className="px-5 py-2 w-1/2 md:w-auto z-10 flex items-center justify-center gap-2 transition-colors duration-500"
+          className="px-5 py-2 w-1/2 md:w-auto z-10 flex items-center justify-center gap-2 transition-colors duration-500 select-none pointer-events-none"
           style={{ 
             color: !isSystemMode ? theme.primary : '#6b7280', 
             textShadow: !isSystemMode ? `0 0 8px ${theme.primary}80` : 'none' 
@@ -33,7 +33,7 @@ const Toggle = ({ isSystemMode, setIsSystemMode, theme }) => {
         </div>
         
         <div 
-          className="px-5 py-2 w-1/2 md:w-auto z-10 flex items-center justify-center gap-2 transition-colors duration-500"
+          className="px-5 py-2 w-1/2 md:w-auto z-10 flex items-center justify-center gap-2 transition-colors duration-500 select-none pointer-events-none"
           style={{ 
             color: isSystemMode ? theme.secondary : '#6b7280', 
             textShadow: isSystemMode ? `0 0 8px ${theme.secondary}80` : 'none' 

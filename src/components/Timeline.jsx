@@ -105,7 +105,7 @@ const Timeline = ({ characters, causalEvents, isSystemMode, theme }) => {
           <HoverLink 
             key={idx} 
             href={char.malId ? `https://myanimelist.net/character/${char.malId}` : '#'} 
-            className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 flex flex-col items-center p-0 cursor-pointer group/card hover:bg-white/10 active:bg-white/15"
+            className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 flex flex-col items-center p-0 cursor-pointer group/card hover:bg-white/10 active:bg-white/15 [@media(hover:none)]:transform-none"
             hoverGlow={isSystemMode ? theme.modeGlow : theme.glow}
           >
             <div className="w-full aspect-3/4 md:aspect-4/3 relative block group">
@@ -123,7 +123,7 @@ const Timeline = ({ characters, causalEvents, isSystemMode, theme }) => {
                   VIEW ARCHIVE FILE
                 </div>
               </div>
-              <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#050508] to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-linear-to-t from-[#050508] to-transparent pointer-events-none" />
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end pointer-events-none">
                 <div className="w-full">
                   <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-cyan-400 transition-colors truncate">{char.name}</h3>
