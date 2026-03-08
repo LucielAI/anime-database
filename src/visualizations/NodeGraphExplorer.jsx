@@ -35,8 +35,10 @@ const LABEL_OFFSET = 46
 const TITLE_OFFSET = 58
 const BOUNDS_PAD = 60
 
-function forceLayout(characters, relationships, iterations = 120) {
-  const cx = VB_W / 2, cy = VB_H / 2, spread = 200
+const MIN_NODE_DIST = 130
+
+function forceLayout(characters, relationships, iterations = 150) {
+  const cx = VB_W / 2, cy = VB_H / 2, spread = 220
   const nodes = characters.map((char, i) => {
     const angle = (2 * Math.PI * i) / characters.length - Math.PI / 2
     return { ...char, x: cx + spread * Math.cos(angle), y: cy + spread * Math.sin(angle) }
@@ -48,13 +50,13 @@ function forceLayout(characters, relationships, iterations = 120) {
   for (let iter = 0; iter < iterations; iter++) {
     const force = nodes.map(() => ({ fx: 0, fy: 0 }))
 
-    // Strong repulsion — keeps nodes apart
+    // Very strong repulsion — prevents clustering
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i + 1; j < nodes.length; j++) {
         const dx = nodes[j].x - nodes[i].x
         const dy = nodes[j].y - nodes[i].y
         const dist = Math.max(Math.sqrt(dx * dx + dy * dy), 1)
-        const rep = 30000 / (dist * dist)
+        const rep = 55000 / (dist * dist)
         force[i].fx -= (dx / dist) * rep
         force[i].fy -= (dy / dist) * rep
         force[j].fx += (dx / dist) * rep
@@ -62,7 +64,7 @@ function forceLayout(characters, relationships, iterations = 120) {
       }
     }
 
-    // Spring attraction along edges
+    // Weak spring attraction along edges
     relationships.forEach(rel => {
       const si = nameMap[rel.source]
       const ti = nameMap[rel.target]
@@ -70,8 +72,8 @@ function forceLayout(characters, relationships, iterations = 120) {
       const dx = nodes[ti].x - nodes[si].x
       const dy = nodes[ti].y - nodes[si].y
       const dist = Math.max(Math.sqrt(dx * dx + dy * dy), 1)
-      const idealDist = 180
-      const att = 0.03 * (dist - idealDist)
+      const idealDist = 200
+      const att = 0.015 * (dist - idealDist)
       force[si].fx += (dx / dist) * att
       force[si].fy += (dy / dist) * att
       force[ti].fx -= (dx / dist) * att
@@ -80,17 +82,34 @@ function forceLayout(characters, relationships, iterations = 120) {
 
     // Gentle center gravity
     nodes.forEach((n, i) => {
-      force[i].fx += (cx - n.x) * 0.005
-      force[i].fy += (cy - n.y) * 0.005
+      force[i].fx += (cx - n.x) * 0.004
+      force[i].fy += (cy - n.y) * 0.004
     })
 
-    const damping = 0.25
+    const damping = 0.22
     nodes.forEach((n, i) => {
       n.x += force[i].fx * damping
       n.y += force[i].fy * damping
       n.x = Math.max(BOUNDS_PAD, Math.min(VB_W - BOUNDS_PAD, n.x))
       n.y = Math.max(BOUNDS_PAD, Math.min(VB_H - BOUNDS_PAD, n.y))
     })
+
+    // Hard minimum distance constraint — push apart any overlapping pair
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[j].x - nodes[i].x
+        const dy = nodes[j].y - nodes[i].y
+        const dist = Math.sqrt(dx * dx + dy * dy)
+        if (dist < MIN_NODE_DIST && dist > 0.1) {
+          const overlap = (MIN_NODE_DIST - dist) / 2
+          const ux = dx / dist, uy = dy / dist
+          nodes[i].x -= ux * overlap
+          nodes[i].y -= uy * overlap
+          nodes[j].x += ux * overlap
+          nodes[j].y += uy * overlap
+        }
+      }
+    }
   }
   return nodes
 }
@@ -276,7 +295,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
             const py = ux * arrowSize * 0.45
 
             const labelPos = getEdgeLabelPos(s.x, s.y, t.x, t.y)
-            const showLabel = hoveredEdge === i || (selected && isActive && (rel.source === selected || rel.target === selected))
+            const showLabel = hoveredEdge === i
 
             return (
               <g key={i}
@@ -329,7 +348,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                 onTouchStart={e => handleStart(e, node.name)}
                 onClick={() => setSelected(prev => prev === node.name ? null : node.name)}
                 className="cursor-pointer"
-                opacity={isFaded ? 0.3 : 1}
+                opacity={isFaded ? 0.35 : 1}
               >
                 {/* Glow ring */}
                 {isSelected && (
@@ -360,11 +379,11 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                     <>
                       {/* Colored gradient circle fallback */}
                       <circle cx="0" cy="0" r={PORTRAIT_R}
-                        fill={nodeColor} opacity={0.2} />
-                      <text x="0" y="6" textAnchor="middle"
-                        fontSize={18} fontFamily="monospace" fontWeight="bold"
+                        fill={nodeColor} opacity={0.15} />
+                      <text x="0" y="7" textAnchor="middle"
+                        fontSize={15} fontFamily="monospace" fontWeight="bold"
                         fill={nodeColor} style={{ pointerEvents: 'none' }}>
-                        {node.name.charAt(0)}
+                        {node.name.split(' ')[0].slice(0, 3)}
                       </text>
                     </>
                   )}
@@ -445,9 +464,9 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-2xl font-bold font-mono"
+                  <span className="text-lg font-bold font-mono"
                     style={{ color: resolveColor(selectedChar.accentColor, accent) }}>
-                    {selectedChar.name.charAt(0)}
+                    {selectedChar.name.split(' ')[0].slice(0, 3)}
                   </span>
                 </div>
               )}
