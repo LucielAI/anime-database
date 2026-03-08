@@ -51,13 +51,14 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 z-10 ml-8 md:ml-0">
         {characters.map((char, idx) => (
-          <div key={idx} className={`bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 flex flex-col items-center p-0 ${isSystemMode ? 'hover:ring-1 hover:ring-green-400/50' : 'hover:ring-1 hover:ring-purple-400/50'}`}>
-            <a 
-              href={char.malId ? `https://myanimelist.net/character/${char.malId}` : '#'} 
-              target="_blank" 
-              rel="noreferrer"
-              className="w-full aspect-[4/3] relative block group cursor-pointer"
-            >
+          <a 
+            key={idx} 
+            href={char.malId ? `https://myanimelist.net/character/${char.malId}` : '#'} 
+            target="_blank" 
+            rel="noreferrer"
+            className={`bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 flex flex-col items-center p-0 cursor-pointer group/card ${isSystemMode ? 'hover:ring-1 hover:ring-green-400/50' : 'hover:ring-1 hover:ring-purple-400/50'}`}
+          >
+            <div className="w-full aspect-[4/3] relative block group">
               <ImageWithFallback 
                 src={char.imageUrl} 
                 alt={char.name} 
@@ -82,7 +83,7 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
                   {char.rank}
                 </div>
               </div>
-            </a>
+            </div>
             <div className="p-5 w-full grow flex flex-col">
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-1">
@@ -99,7 +100,7 @@ const Timeline = ({ characters, causalEvents, isSystemMode }) => {
                 <p className="text-xs text-gray-400">{char.primaryAbility}</p>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

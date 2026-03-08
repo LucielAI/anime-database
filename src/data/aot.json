@@ -141,8 +141,9 @@
       "icon": "Zap",
       "dangerLevel": 10,
       "signatureMoment": "A dizzying, brutal vivisection of the Beast Titan in a forest, reducing a major, seemingly invincible threat to a mutilated husk in mere seconds.",
-      "imageUrl": "https://myanimelist.net/images/characters/12/622510.jpg",
-      "_fetchFailed": false
+      "imageUrl": "https://myanimelist.net/images/characters/2/241413.jpg",
+      "_fetchFailed": false,
+      "malId": 45627
     },
     {
       "name": "Reiner Braun",
@@ -174,8 +175,9 @@
       "icon": "Wifi",
       "dangerLevel": 9,
       "signatureMoment": "Shredding an entire cavalry charge of Survey Corps soldiers to pieces with a supersonic barrage of crushed boulders.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/602645.jpg",
-      "_fetchFailed": false
+      "imageUrl": "https://myanimelist.net/images/characters/7/318445.jpg",
+      "_fetchFailed": false,
+      "malId": 136151
     }
   ],
   "relationships": [
