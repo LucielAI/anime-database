@@ -31,24 +31,53 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
 
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-2">
           {/* Live Links */}
-          {liveUniverses.map(anime => (
-            <Link 
-              key={anime.id} 
-              to={`/universe/${anime.id}`}
-              onClick={() => window.scrollTo({ top: 0, behavior: 'auto' })}
-              className="group flex flex-col items-start px-5 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-xl transition-all duration-300 w-full md:w-[260px] relative overflow-hidden text-left"
-            >
-              <div 
-                className="absolute top-0 left-0 w-1 h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ backgroundColor: accentColor }}
-              />
-              <span className="text-xs text-gray-500 font-bold tracking-widest mb-1 group-hover:text-gray-400">STATUS: ONLINE</span>
-              <span className="text-sm text-gray-200 font-bold uppercase truncate w-full flex items-center justify-between">
-                {anime.anime}
-                <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" style={{ color: accentColor }} />
-              </span>
-            </Link>
-          ))}
+          {liveUniverses.map(anime => {
+            const cardAccent = isSystemMode ? (anime.themeColors?.modeGlow || accentColor) : (anime.themeColors?.primary || accentColor)
+            
+            return (
+              <Link 
+                key={anime.id} 
+                to={`/universe/${anime.id}`}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'auto' })}
+                className="group flex flex-col items-start justify-end p-5 bg-white/5 border border-white/10 rounded-xl transition-all duration-500 w-full md:w-[260px] h-[120px] relative overflow-hidden text-left shadow-lg hover:border-white/30 hover:-translate-y-1"
+                style={{ boxShadow: `0 0 0 rgba(0,0,0,0)` }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = `0 10px 30px -10px ${cardAccent}`
+                  e.currentTarget.style.borderColor = cardAccent
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = `none`
+                  e.currentTarget.style.borderColor = `rgba(255,255,255,0.1)`
+                }}
+              >
+                {/* Dynamic Background Image (Subtle Grayscale) */}
+                {anime.animeImageUrl && (
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5 grayscale group-hover:opacity-20 transition-opacity duration-500"
+                    style={{ backgroundImage: `url(${anime.animeImageUrl})` }}
+                  />
+                )}
+                
+                {/* Gradient Overlay for Text Readability - Always active, intensifies on hover */}
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Left Border Accent */}
+                <div 
+                  className="absolute top-0 left-0 w-1 h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ backgroundColor: cardAccent }}
+                />
+                
+                {/* Content */}
+                <div className="relative z-10 w-full flex flex-col gap-1 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                  <span className="text-[10px] text-gray-500 font-bold tracking-[0.2em] group-hover:text-white/80 transition-colors">STATUS: ONLINE</span>
+                  <span className="text-sm font-bold uppercase truncate w-full flex items-center justify-between text-gray-200 group-hover:text-white drop-shadow-md">
+                    {anime.anime}
+                    <ArrowRight className="w-4 h-4 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" style={{ color: cardAccent }} />
+                  </span>
+                </div>
+              </Link>
+            )
+          })}
 
           {/* Pending Stubs */}
           {pendingStubs.map(stub => (

@@ -78,6 +78,28 @@ try {
     console.log(`✓ Wired ${slug} deeply into src/data/index.js (Routing + Global Access Enabled)`)
   }
 
+  // 4. Auto-Remove from PENDING_UNIVERSES stubs
+  const explorePath = path.resolve(__dirname, '../src/components/ExploreAnotherUniverse.jsx')
+  if (fs.existsSync(explorePath)) {
+    let exploreContent = fs.readFileSync(explorePath, 'utf-8')
+    const startLength = exploreContent.length
+    
+    // Regex matches: { name: 'Anime Name', id: 'slug' }, or without comma
+    // Escaping payload.anime might be needed if it has special characters, but usually it doesn't.
+    // We'll safely replace by name string
+    const escapedName = payload.anime.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const pendingRegex = new RegExp(`\\s*\\{[^}]*name:\\s*['"]${escapedName}['"][^}]*\\},?`, 'g')
+    exploreContent = exploreContent.replace(pendingRegex, '')
+    
+    // Fix any trailing commas in the array
+    exploreContent = exploreContent.replace(/,\s*(?=\])/g, '\n')
+    
+    if (exploreContent.length !== startLength) {
+      fs.writeFileSync(explorePath, exploreContent)
+      console.log(`✓ Automatically removed '${payload.anime}' from PENDING_UNIVERSES stubs`)
+    }
+  }
+
   console.log(`\n[SUCCESS] ${payload.anime} is now live in the Universe Archive! Route: /universe/${slug}\n`)
 
 } catch (err) {

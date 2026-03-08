@@ -43,6 +43,16 @@ Requirements:
 ### StandardCardsExplorer
 Fallback renderer when no specific visualization fits.
 
+## Entity Image Contract
+
+All renderers are designed to handle missing images elegantly.
+
+For any character or entity where an image asset is unavailable from allowed hosts:
+- Ensure `imageUrl` is `null`.
+- Add the `"_fetchFailed": true` flag to the object.
+
+Every renderer automatically defaults to a `<ImageWithFallback />` component that will read this flag and provide a graceful UI degradation, ensuring the layout does not break with 404 image errors.
+
 ## Visualization Hint
 
 Payloads may include:

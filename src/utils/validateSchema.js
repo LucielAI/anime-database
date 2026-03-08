@@ -22,6 +22,12 @@ const VALID_REL_TYPES = ['ally', 'enemy', 'rival', 'mentor', 'betrayal', 'mirror
 const VALID_SEVERITIES = ['low', 'medium', 'high', 'fatal']
 const VALID_FACTION_ROLES = ['protagonist', 'antagonist', 'neutral', 'chaotic', 'systemic']
 
+// ─── SAFE IMAGE HOST ALLOWLIST ───────────────────────────────────────────────
+const ALLOWED_IMAGE_HOSTS = [
+  'cdn.myanimelist.net',
+  'images.myanimelist.net'
+]
+
 // ─── RENDERER-AWARE STRUCTURAL PROFILES ──────────────────────────────────────
 // Each renderer has different structural needs. A timeline engine needs dense
 // causal events; a counter-tree needs deep counterplay; a node-graph needs
@@ -123,7 +129,36 @@ export function validateAnimePayload(data) {
       REQUIRED_CHARACTER_FIELDS.forEach(f => {
         if (c[f] === undefined) errors.push(`characters[${i}] (${c.name || 'unnamed'}) missing: ${f}`)
       })
+
+      // Image URL Validation (Must be from ALLOWED_IMAGE_HOSTS or Explicit Fallback)
+      if (c.imageUrl !== undefined) {
+        if (c.imageUrl !== null) {
+          try {
+            const urlObj = new URL(c.imageUrl)
+            if (!ALLOWED_IMAGE_HOSTS.includes(urlObj.hostname)) {
+              errors.push(`characters[${i}] (${c.name}) has invalid imageUrl. MUST be from ALLOWED_IMAGE_HOSTS. Found hostname: ${urlObj.hostname}`)
+            }
+          } catch {
+            errors.push(`characters[${i}] (${c.name}) has unparseable imageUrl: ${c.imageUrl}`)
+          }
+        }
+        if (c.imageUrl === null && c._fetchFailed !== true) {
+          errors.push(`characters[${i}] (${c.name}) has null imageUrl but missing _fetchFailed: true flag.`)
+        }
+      }
     })
+  }
+
+  // ── 4b. Anime Poster validation ──
+  if (data.animeImageUrl) {
+    try {
+      const urlObj = new URL(data.animeImageUrl)
+      if (!ALLOWED_IMAGE_HOSTS.includes(urlObj.hostname)) {
+        errors.push(`animeImageUrl is invalid. MUST be from ALLOWED_IMAGE_HOSTS. Found hostname: ${urlObj.hostname}`)
+      }
+    } catch {
+      errors.push(`animeImageUrl is unparseable: ${data.animeImageUrl}`)
+    }
   }
 
   // ── 5. Relationship enum validation ──
