@@ -222,6 +222,24 @@
       "icon": "EyeOff",
       "color": "gray-500",
       "memberCount": "Unknown"
+    },
+    {
+      "name": "Disaster Curses",
+      "role": "antagonist",
+      "loreDesc": "Four self-aware Cursed Spirits born from humanity's primal fears of natural disasters — fire, forests, oceans, and the human form itself — united in a plan to overthrow sorcerer civilization and establish a world ruled by curses.",
+      "systemDesc": "Emergent hostile processes spawned from aggregate system anxiety data, achieving autonomous coordination to execute a hostile takeover of the production environment.",
+      "icon": "Flame",
+      "color": "red-600",
+      "memberCount": "4 Special Grade entities"
+    },
+    {
+      "name": "Kamo Clan",
+      "role": "systemic",
+      "loreDesc": "One of the Big Three Sorcerer Families, historically producing blood manipulation techniques. Their lineage was infiltrated centuries ago by Kenjaku, who used a Kamo heir's body to conduct the cursed womb experiments.",
+      "systemDesc": "A legacy institutional codebase carrying a dormant rootkit infection from a previous administrator — structurally sound but historically compromised at the genetic level.",
+      "icon": "Droplets",
+      "color": "rose-700",
+      "memberCount": "~60 clan members"
     }
   ],
   "rules": [
@@ -259,6 +277,24 @@
       "ruleViolated": "Energy Output Requirement",
       "loreDesc": "Toji Fushiguro and Maki Zenin, born without energy but granted apex physical prowess.",
       "systemDesc": "Untrackable physical variables entirely invisible to the universe's Cursed Energy targeting algorithms."
+    },
+    {
+      "name": "Sukuna's Barrierless Domain",
+      "ruleViolated": "Domain Expansion Barrier Requirement",
+      "loreDesc": "Malevolent Shrine manifests without enclosing its target in a barrier — an open-air domain that trades containment for massively extended range, something no other sorcerer has ever achieved.",
+      "systemDesc": "A sandboxed execution environment deployed without memory isolation, expanding its guaranteed-hit permissions across an unbounded address space — a privilege escalation that violates the fundamental architecture of domain construction."
+    },
+    {
+      "name": "Cursed Spirit Sentience",
+      "ruleViolated": "Cursed Spirit Instinct Protocol",
+      "loreDesc": "The Disaster Curses — Jogo, Hanami, Dagon, Mahito — achieved self-aware intelligence, strategic reasoning, and philosophical conviction, despite being generated from ambient human fear with no biological consciousness.",
+      "systemDesc": "Emergent AI processes spontaneously achieving general intelligence from training data they were never designed to reason about — autonomous agents evolving past their initial parameters into self-directed threat actors."
+    },
+    {
+      "name": "Binding Vow Power Economy",
+      "ruleViolated": "Fixed Cursed Energy Output Ceiling",
+      "loreDesc": "Sorcerers can exceed their natural energy limits by imposing voluntary constraints — sacrificing range for power, mobility for defense, or information secrecy for amplified output — creating a meta-system where self-imposed restriction generates surplus.",
+      "systemDesc": "A resource allocation protocol where processes voluntarily restrict their own capabilities in exchange for elevated permissions elsewhere — a contractual compiler optimization that lets constrained code outperform unconstrained code."
     }
   ],
   "causalEvents": [
@@ -277,6 +313,22 @@
       "timelinePosition": "Modern Day (Nov 2018)",
       "loreDesc": "A nationwide death game forcing the rapid evolution of humanity by optimizing cursed energy through mass slaughter.",
       "systemDesc": "A malicious OS update disguised as a Binding Vow protocol where only the most violently optimized code will survive the sequence."
+    },
+    {
+      "name": "The Hidden Inventory Incident",
+      "trigger": "Toji Fushiguro is hired to assassinate the Star Plasma Vessel before she can merge with Master Tengen, destabilizing the barrier system protecting jujutsu society.",
+      "consequence": "Toji kills the Vessel and fatally wounds Gojo. Gojo resurrects via Reverse Cursed Technique, awakening to his full potential. Geto witnesses the death and begins his ideological collapse toward curse-user extremism.",
+      "timelinePosition": "Pre-Narrative (2006)",
+      "loreDesc": "The foundational trauma that split the strongest generation in two — one sorcerer ascended to godhood, the other descended into genocide, and the assassin who catalyzed both died nameless on the floor.",
+      "systemDesc": "A targeted penetration test by a zero-energy exploit that crashed the primary defense node, triggering an emergency hot-restart that elevated the surviving process to maximum privilege — while corrupting a parallel process beyond recovery."
+    },
+    {
+      "name": "Night Parade of a Hundred Demons",
+      "trigger": "Suguru Geto, now a radical curse-user extremist, launches a mass cursed spirit assault on Shinjuku and Kyoto simultaneously.",
+      "consequence": "Geto is killed by Gojo, but Kenjaku harvests his corpse and inherits his Cursed Spirit Manipulation technique — gaining the ability to absorb and deploy thousands of curses.",
+      "timelinePosition": "Pre-Narrative (Dec 2017)",
+      "loreDesc": "The event that handed Kenjaku his most critical asset. Geto's death wasn't the end of his technique — it was the beginning of Kenjaku's endgame, converting a fallen sorcerer's corpse into the chassis for a thousand-year plan.",
+      "systemDesc": "A failed DDoS attack by a rogue process that was terminated on execution — only for a persistent background malware to scavenge the dead process's libraries and integrate them into its own runtime, massively expanding its operational capabilities."
     }
   ],
   "relationships": [
@@ -343,6 +395,22 @@
       "weight": 8,
       "loreDesc": "The man with zero cursed energy who nearly killed the strongest sorcerer alive.",
       "systemDesc": "A hardware-only exploit that bypassed the most advanced software defense in the system."
+    },
+    {
+      "source": "Satoru Gojo",
+      "target": "Maki Zenin",
+      "type": "mentor",
+      "weight": 6,
+      "loreDesc": "Gojo shielded Maki and other non-standard students from the Higher-Ups' conservatism, creating the institutional cover that allowed her to develop into the weapon the Zenin clan never wanted her to become.",
+      "systemDesc": "Senior admin provisioning protected development environment for an anomalous process that the central authority repeatedly flagged for termination."
+    },
+    {
+      "source": "Maki Zenin",
+      "target": "Kenjaku",
+      "type": "enemy",
+      "weight": 6,
+      "loreDesc": "After annihilating the Zenin clan and fully realizing her Heavenly Restriction, Maki becomes one of the few combatants capable of operating inside the Culling Game as an untrackable threat to Kenjaku's orchestrated system.",
+      "systemDesc": "A zero-signature process operating outside the orchestrator's monitoring framework, systematically dismantling tournament nodes without triggering detection protocols."
     }
   ],
   "counterplay": [
@@ -362,6 +430,30 @@
       "attacker": "Kenjaku (Idle Transfiguration)",
       "defender": "Yuta Okkotsu (Copy)",
       "mechanic": "Yuta's ability to copy any cursed technique makes him adaptable to counter any single strategy.",
+      "type": "exploits"
+    },
+    {
+      "attacker": "Simple Domain",
+      "defender": "Domain Expansion (Sure-Hit)",
+      "mechanic": "A taught anti-domain barrier that neutralizes the guaranteed-hit function within a small radius, giving non-domain users a survival window inside hostile territory.",
+      "type": "nullifies"
+    },
+    {
+      "attacker": "Mahoraga (Ten Shadows)",
+      "defender": "Satoru Gojo (Infinity)",
+      "mechanic": "The adaptation wheel rotates upon taking damage, eventually generating a counter to any phenomenon — including Infinity's conceptual barrier against physical contact.",
+      "type": "counters"
+    },
+    {
+      "attacker": "Domain Amplification",
+      "defender": "Cursed Technique (Any)",
+      "mechanic": "Wraps the user in a domain-like shell that neutralizes all cursed techniques on contact — trading offensive technique access for the ability to punch through any technique-based defense.",
+      "type": "nullifies"
+    },
+    {
+      "attacker": "Binding Vow (Revealing One's Hand)",
+      "defender": "Any Opponent",
+      "mechanic": "Voluntarily disclosing your technique's mechanics to the enemy in exchange for a significant amplification in output — trading information security for raw power within the cursed energy economy.",
       "type": "exploits"
     }
   ]

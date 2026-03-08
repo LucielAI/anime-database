@@ -237,10 +237,31 @@
       "weight": 9
     },
     {
-      "source": "Armin Arlert",
-      "target": "Erwin Smith",
-      "type": "successor",
-      "loreDesc": "Armin is chosen to survive over the veteran commander, forcing the young strategist to bear the impossible psychological burden of replacing him.",
+      "source": "Mikasa Ackerman",
+      "target": "Levi Ackerman",
+      "type": "mirror",
+      "loreDesc": "Two Ackerman-blooded soldiers inheriting the same genetically encoded combat instincts, but diverging completely in what anchors them — Mikasa to a person, Levi to a promise.",
+      "weight": 8
+    },
+    {
+      "source": "Reiner Braun",
+      "target": "Armin Arlert",
+      "type": "mirror",
+      "loreDesc": "Both inherit command they never wanted — Reiner as Warrior Vice-Captain, Armin as Survey Corps Commander — and both crack under the moral weight of sending others to die.",
+      "weight": 7
+    },
+    {
+      "source": "Reiner Braun",
+      "target": "Zeke Yeager",
+      "type": "ally",
+      "loreDesc": "Fellow Warriors from the same graduating class, bound by shared Marleyan indoctrination but holding fundamentally incompatible visions for what their service should achieve.",
+      "weight": 6
+    },
+    {
+      "source": "Eren Yeager",
+      "target": "Levi Ackerman",
+      "type": "betrayal",
+      "loreDesc": "Levi staked his career on Eren's containment, vouching for his loyalty before the tribunal. Eren repaid this by orchestrating a coup that dismantled everything Levi's squad died to protect.",
       "weight": 8
     }
   ],
@@ -280,6 +301,15 @@
       "icon": "Layers",
       "color": "blue-400",
       "memberCount": "Unknown exact count"
+    },
+    {
+      "name": "Fritz / Reiss Monarchy",
+      "role": "systemic",
+      "loreDesc": "The hidden royal bloodline that secretly governed the Walls for a century, deliberately suppressing all knowledge of the outside world and enforcing humanity's captivity through Founding Titan memory wipes.",
+      "systemDesc": "A legacy root administrator account running in stealth mode, enforcing a system-wide information quarantine while actively overwriting user memory sectors to maintain operational ignorance.",
+      "icon": "Crown",
+      "color": "purple-500",
+      "memberCount": "Royal lineage (extinct)"
     }
   ],
   "rules": [
@@ -329,6 +359,18 @@
       "defender": "Titan Physiology",
       "mechanic": "Miniaturized Titan Capabilities",
       "loreDesc": "The Ackerman bloodline packs the raw kinetic strength and combat instincts of a Titan into a compact human frame, granting the speed necessary to automatically dismantle larger, sluggish Shifters."
+    },
+    {
+      "attacker": "Founding Titan Scream",
+      "defender": "All Subjects of Ymir",
+      "mechanic": "Absolute Genetic Override",
+      "loreDesc": "The Founding Titan broadcasts commands through the Paths that rewrite Eldian biology at the cellular level — converting humans into Titans, erasing memories across entire populations, or hardening their flesh into architectural structures."
+    },
+    {
+      "attacker": "Non-Royal Holder + Royal Blood Contact",
+      "defender": "Vow Renouncing War",
+      "mechanic": "Authentication Bypass via Proxy",
+      "loreDesc": "A non-royal Founding Titan holder physically touches a royal-blooded Titan to momentarily inherit root privileges without triggering the pacifist firmware lock — the only known exploit against the Vow's absolute constraint."
     }
   ],
   "anomalies": [
@@ -343,6 +385,18 @@
       "ruleViolated": "Instinctual Consumption Protocol",
       "loreDesc": "Titans that occasionally bypass the hard-coded instinct to indiscriminately consume humans, demonstrating erratic behaviors like speech, mourning, or non-bipedal locomotion.",
       "systemDesc": "Software execution deviations highlighting the chaotic nature of the processing sequence, where external noise deeply corrupts the base biological code resulting in unpredictable behavior."
+    },
+    {
+      "name": "Ackerman Paths Independence",
+      "ruleViolated": "Subject of Ymir Connectivity",
+      "loreDesc": "The Ackerman bloodline is connected to the Paths network but completely immune to the Founding Titan's memory manipulation, making them the only Subjects of Ymir who cannot be overwritten by the root administrator.",
+      "systemDesc": "A client node hardwired into the mandatory intranet but running a local firewall kernel that blocks all incoming registry overwrites — connected to the network yet immune to its broadcast commands."
+    },
+    {
+      "name": "Hallucigenia Parasitic Autonomy",
+      "ruleViolated": "Titan Power Hierarchy / Creator–Creation Dependency",
+      "loreDesc": "The primordial organism that fused with Ymir Fritz operates as an independent entity with its own survival imperative, capable of acting autonomously to defend the Titan system even after the Founding Titan's will is contested.",
+      "systemDesc": "The original rootkit source code exhibiting autonomous self-preservation behavior independent of any user — a parasitic runtime that predates and outlives every administrator account ever instantiated on the system."
     }
   ],
   "causalEvents": [
@@ -369,6 +423,30 @@
       "timelinePosition": "Mid-Narrative (Year 850)",
       "loreDesc": "An exploitation of system loopholes; a non-royal user gains momentary root admin privileges by establishing brief contact with a dormant royal node.",
       "systemDesc": "A critical vulnerability exploitation allowing an unauthenticated legacy node to temporarily utilize the absolute permissions of the locked root administrator."
+    },
+    {
+      "name": "The Fall of Wall Maria",
+      "trigger": "The Colossal and Armored Titans breach the outermost wall, destroying Shiganshina District and killing Eren's mother.",
+      "consequence": "Humanity loses one-third of its territory, triggering a refugee crisis and the chain of events that eventually unravels the truth of the world.",
+      "timelinePosition": "Inciting Event (Year 845)",
+      "loreDesc": "The inciting catastrophe that collapses a century of enforced peace. A Warrior infiltration operation disguised as a natural disaster, setting the entire narrative causal chain into motion.",
+      "systemDesc": "A coordinated perimeter breach by two sleeper agents that crashed the outermost firewall layer, triggering a cascading resource crisis across all remaining system partitions."
+    },
+    {
+      "name": "The Declaration of War",
+      "trigger": "Eren reveals himself beneath the Liberio stage, confirming to Reiner that he has crossed the ocean to do to Marley exactly what Marley did to Paradis.",
+      "consequence": "Eren transforms inside a civilian population center, kills the War Hammer Titan holder, and triggers a global conflict that makes diplomacy permanently impossible.",
+      "timelinePosition": "Late Narrative (Year 854)",
+      "loreDesc": "The moment the cycle of violence completes its mirror rotation. The child who lost his home to an enemy attack now delivers the identical trauma to his enemy's homeland, confirming the loop.",
+      "systemDesc": "A retaliatory DDoS strike launched from inside the opposing network's civilian infrastructure, permanently escalating the conflict from containable skirmish to total system war."
+    },
+    {
+      "name": "The Rumbling",
+      "trigger": "Eren makes physical contact with Zeke in the Paths dimension, rejects the euthanasia plan, and commands Ymir Fritz to unleash the Wall Titans.",
+      "consequence": "Millions of Colossal Titans emerge from the Walls and begin a global march of extermination, flattening approximately 80% of all life outside Paradis Island.",
+      "timelinePosition": "Endgame (Year 854)",
+      "loreDesc": "The terminal consequence of every prior causal event — a planetary extinction march initiated by a single individual who concluded that absolute freedom requires absolute annihilation of all external threats.",
+      "systemDesc": "A catastrophic root-level command executing a global wipe of all external servers. The recursive causal chain reaches its terminal output: total environmental reset initiated by the very node the system was designed to contain."
     }
   ]
 }
