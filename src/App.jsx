@@ -1,14 +1,17 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Routes, Route, useNavigate, useParams, Link } from 'react-router-dom'
 import Dashboard from './Dashboard'
 import { ANIME_LIST } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
+import { deriveBullets } from './utils/deriveBullets'
+import { getClassificationLabel } from './utils/getClassificationLabel'
 
 function Home() {
   const totalEntities = ANIME_LIST.reduce((sum, a) => sum + (a.characters?.length || 0), 0)
   const totalPowers = ANIME_LIST.reduce((sum, a) => sum + (a.powerSystem?.length || 0), 0)
   const totalRules = ANIME_LIST.reduce((sum, a) => sum + (a.rules?.length || 0), 0)
-  const placeholdersCount = Math.max(0, 4 - ANIME_LIST.length)
+  const MIN_GRID_FILL = 6
+  const placeholdersCount = Math.max(0, MIN_GRID_FILL - ANIME_LIST.length)
   const placeholders = Array(placeholdersCount).fill(0)
 
   return (
@@ -56,6 +59,90 @@ function Home() {
         </div>
       </header>
 
+      {/* Featured "Today's System" Hero Card */}
+      {(() => {
+        const featured = ANIME_LIST[ANIME_LIST.length - 1]
+        if (!featured) return null
+        const ft = featured.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
+        const heroLabel = getClassificationLabel(featured.visualizationHint)
+        const heroBullets = deriveBullets(featured).slice(0, 3)
+        return (
+          <section className="max-w-6xl mx-auto px-6 -mt-6 mb-12 relative z-20 animate-fade-in">
+            <Link
+              to={`/universe/${featured.id}`}
+              className="group block rounded-xl overflow-hidden relative"
+              style={{ border: `1px solid ${ft.primary}50` }}
+            >
+              <div className="flex flex-col md:flex-row">
+                {/* Image side */}
+                <div className="relative w-full md:w-2/5 h-48 md:h-auto md:min-h-[280px] overflow-hidden shrink-0">
+                  {featured.animeImageUrl ? (
+                    <img
+                      src={featured.animeImageUrl}
+                      alt={featured.anime}
+                      className="w-full h-full object-cover object-center opacity-70 group-hover:opacity-90 transition-all duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-slate-900 flex items-center justify-center text-xs text-gray-600 tracking-widest">NO IMAGE</div>
+                  )}
+                  <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#050508] pointer-events-none hidden md:block" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#050508] to-transparent pointer-events-none md:hidden" />
+                  <div className="absolute top-3 left-3 px-2 py-1 bg-black/60 backdrop-blur-sm border border-white/20 text-[9px] font-bold tracking-[0.2em] text-cyan-400/80 rounded uppercase">
+                    FEATURED SYSTEM
+                  </div>
+                </div>
+
+                {/* Content side */}
+                <div className="relative flex-1 p-6 md:p-8 bg-[#0a0a10] flex flex-col justify-center">
+                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ background: `radial-gradient(ellipse at top right, ${ft.primary}, transparent 70%)` }} />
+                  <div className="relative z-10">
+                    <div
+                      className="inline-flex items-center px-2.5 py-1 rounded text-[9px] font-bold tracking-[0.25em] uppercase mb-3 border"
+                      style={{ color: ft.primary, borderColor: `${ft.primary}40`, backgroundColor: `${ft.primary}10` }}
+                    >
+                      {heroLabel}
+                    </div>
+                    <h2
+                      className="text-2xl md:text-4xl font-bold uppercase tracking-tighter mb-2 text-white"
+                      style={{ textShadow: `0 0 12px ${ft.glow}` }}
+                    >
+                      {featured.anime}
+                    </h2>
+                    <p className="text-[10px] text-white/40 tracking-widest uppercase mb-4">{featured.tagline}</p>
+
+                    <div className="space-y-2 mb-6">
+                      {heroBullets.map(b => (
+                        <div key={b.id} className="flex items-start gap-2.5">
+                          <span className="w-1.5 h-1.5 rounded-sm mt-1 shrink-0 opacity-60" style={{ backgroundColor: ft.primary }} />
+                          <span className="text-xs text-gray-400 leading-relaxed line-clamp-2">{b.lore}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-3">
+                      <span
+                        className="px-5 py-2.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border transition-all duration-300 group-hover:shadow-lg"
+                        style={{
+                          color: 'white',
+                          borderColor: `${ft.primary}60`,
+                          backgroundColor: `${ft.primary}20`,
+                          boxShadow: `0 0 0px ${ft.primary}00`,
+                        }}
+                      >
+                        REVEAL THE SYSTEM
+                      </span>
+                      <span className="px-5 py-2.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border border-white/10 bg-white/5 text-gray-400 group-hover:text-white transition-colors">
+                        ENTER ARCHIVE
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </section>
+        )
+      })()}
+
       {/* Main Content Area */}
       <main className="max-w-6xl mx-auto px-6 py-16 z-10 relative">
         <div className="text-sm text-cyan-400 font-mono tracking-widest mb-8 uppercase flex items-center gap-2">
@@ -68,11 +155,13 @@ function Home() {
             const theme = data.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
             const entityCount = data.characters?.length || 0
             const powerCount = data.powerSystem?.length || 0
+            const classLabel = getClassificationLabel(data.visualizationHint)
+            const bullets = deriveBullets(data).slice(0, 2)
             return (
               <Link
                 to={`/universe/${data.id}`}
                 key={data.anime}
-                className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500 relative flex flex-col aspect-3/4 animate-fade-in"
+                className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500 relative flex flex-col animate-fade-in"
                 style={{
                   border: `1px solid ${theme.primary}`,
                   animationDelay: `${idx * 120}ms`,
@@ -81,7 +170,7 @@ function Home() {
                 onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 0 30px ${theme.glow}` }}
                 onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none' }}
               >
-                <div className="h-[70%] relative w-full overflow-hidden shrink-0">
+                <div className="h-[55%] relative w-full overflow-hidden shrink-0">
                   {data.animeImageUrl ? (
                     <img
                       src={data.animeImageUrl}
@@ -93,6 +182,7 @@ function Home() {
                     <div className="w-full h-full bg-slate-900 border-b border-white/10 flex items-center justify-center text-xs tracking-widest text-gray-600">NO IMAGE ASSET</div>
                   )}
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-[#050508] to-transparent pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none" style={{ background: `linear-gradient(to top, ${theme.primary}08, transparent)` }} />
                   <div className="absolute top-3 right-3 flex gap-2">
                     <div className="px-2 py-1 bg-black/60 backdrop-blur-sm border border-white/20 text-[10px] font-bold tracking-[0.15em] text-white/80 rounded uppercase">
                       {entityCount} ENTITIES
@@ -109,10 +199,21 @@ function Home() {
                     ARCHIVE READY
                   </div>
                   <h2 className="text-xl md:text-2xl font-bold uppercase mb-1 text-white transition-colors truncate w-full" style={{ textShadow: `0 0 8px ${theme.glow}80` }}>{data.anime}</h2>
-                  <p className="text-[10px] text-white/50 tracking-widest uppercase truncate w-full mb-4 md:mb-6 leading-relaxed">
-                    {data.tagline}
-                  </p>
-                  <div className="text-xs font-bold tracking-widest opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:translate-y-2 md:group-hover:translate-y-0 uppercase md:absolute md:bottom-5 pointer-events-none" style={{ color: theme.primary }}>
+                  <div
+                    className="inline-flex items-center self-start px-2 py-0.5 rounded text-[8px] font-bold tracking-[0.2em] uppercase mb-2 border"
+                    style={{ color: theme.primary, borderColor: `${theme.primary}40`, backgroundColor: `${theme.primary}10` }}
+                  >
+                    {classLabel}
+                  </div>
+                  <div className="space-y-1 mb-3">
+                    {bullets.map(b => (
+                      <div key={b.id} className="flex items-start gap-2">
+                        <span className="w-1 h-1 rounded-full mt-1.5 shrink-0 opacity-60" style={{ backgroundColor: theme.primary }} />
+                        <span className="text-[10px] text-gray-500 leading-relaxed line-clamp-1">{b.lore}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-xs font-bold tracking-widest opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:translate-y-2 md:group-hover:translate-y-0 uppercase pointer-events-none" style={{ color: theme.primary }}>
                     EXPLORE ARCHIVE &rarr;
                   </div>
                 </div>

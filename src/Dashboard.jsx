@@ -1,12 +1,17 @@
-import { useState } from 'react'
-import { ExternalLink } from 'lucide-react'
+import { useState, useMemo } from 'react'
+import { ExternalLink, Camera, X } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
 import SystemSummary from './components/SystemSummary'
 import ExploreAnotherUniverse from './components/ExploreAnotherUniverse'
 import WhyThisRenderer from './components/WhyThisRenderer'
 import AIInsightPanel from './components/AIInsightPanel'
+import ShareButton from './components/ShareButton'
+import FeedbackBlock from './components/FeedbackBlock'
 import { useSystemReveal } from './hooks/useSystemReveal'
+import { useShareFrame } from './hooks/useShareFrame'
+import { getClassificationLabel } from './utils/getClassificationLabel'
+import { deriveBullets } from './utils/deriveBullets'
 
 const TABS = ['POWER ENGINE', 'ENTITY DATABASE', 'FACTIONS', 'CORE LAWS']
 
@@ -44,30 +49,23 @@ const getBackgroundMotif = (anime) => {
   }
 }
 
-const getClassificationLabel = (hint) => {
-  switch (hint) {
-    case 'timeline': return 'TIMELINE SYSTEM'
-    case 'counter-tree': return 'COUNTERPLAY SYSTEM'
-    case 'node-graph': return 'RELATIONAL SYSTEM'
-    case 'affinity-matrix': return 'AFFINITY SYSTEM'
-    default: return 'CLASSIFIED SYSTEM'
-  }
-}
-
 export default function Dashboard({ data }) {
   const [activeTab, setActiveTab] = useState(0)
   const [isSystemMode, setIsSystemMode] = useState(false)
   const { isRevealing, revealStep, startReveal, cancelReveal } = useSystemReveal()
+  const { isShareFrame, toggleShareFrame } = useShareFrame()
 
   const theme = data?.themeColors || DEFAULT_THEME
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
+  const classLabel = getClassificationLabel(data?.visualizationHint)
+  const shareFrameBullets = useMemo(() => deriveBullets(data).slice(0, 3), [data])
   const isAoT = data?.anime === 'Attack on Titan'
   const isJJK = data?.anime === 'Jujutsu Kaisen'
   const isHxH = data?.anime === 'Hunter x Hunter'
 
   return (
     <div
-      className="min-h-screen bg-[#050508] text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden relative"
+      className={`min-h-screen bg-[#050508] text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden relative ${isShareFrame ? 'share-frame' : ''}`}
       style={{
         backgroundImage: `
           linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
@@ -83,8 +81,53 @@ export default function Dashboard({ data }) {
           opacity: 0.04 
         }} 
       />
-      <div className={`sys-mode-overlay ${isSystemMode ? 'active' : ''}`} />
-      
+      <div className={`sys-mode-overlay ${isSystemMode ? 'active' : ''} share-frame-hide`} />
+
+      {/* Share Frame Overlay */}
+      {isShareFrame && (
+        <div className="fixed inset-0 z-[60] bg-[#050508] flex flex-col items-center justify-center p-6 overflow-y-auto">
+          <button
+            onClick={toggleShareFrame}
+            className="fixed top-6 right-6 z-[70] p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center"
+          >
+            <X className="w-5 h-5 text-white" />
+          </button>
+
+          <div className="max-w-lg w-full flex flex-col items-center text-center gap-6 py-8">
+            <div
+              className="inline-flex items-center px-3 py-1 rounded text-[9px] font-bold tracking-[0.25em] uppercase border"
+              style={{ color: theme.primary, borderColor: `${theme.primary}40`, backgroundColor: `${theme.primary}10` }}
+            >
+              {classLabel}
+            </div>
+
+            <h1
+              className="text-3xl md:text-5xl font-bold uppercase tracking-tighter bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent"
+              style={{ textShadow: `0 0 15px ${theme.glow}` }}
+            >
+              {animeName}
+            </h1>
+
+            <div className="space-y-3 text-left w-full max-w-md">
+              {shareFrameBullets.map(b => (
+                <div key={b.id} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-sm mt-1.5 shrink-0 opacity-60" style={{ backgroundColor: theme.primary }} />
+                  <span className="text-sm text-gray-400 leading-relaxed">{b.lore}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="w-full max-w-md mt-2 rounded-lg border border-white/5 overflow-hidden bg-[#0a0a10] p-4">
+              <WhyThisRenderer data={data} isSystemMode={false} theme={theme} revealStep={0} isRevealing={false} />
+            </div>
+
+            <div className="mt-4 text-[10px] text-white/20 tracking-[0.3em] uppercase font-bold">
+              animearchive.app
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* System Reveal Vignette Overlay */}
       <div 
         className="fixed inset-0 pointer-events-none z-40 transition-all duration-1000 ease-in-out" 
@@ -197,16 +240,30 @@ export default function Dashboard({ data }) {
       {/* Why This Lens? */}
       <WhyThisRenderer data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
-      {/* Reveal The System Action Button */}
-      <div className="max-w-6xl mx-auto px-6 mb-4 flex justify-end relative z-50">
-        <button 
+      {/* Action Buttons */}
+      <div className="max-w-6xl mx-auto px-6 mb-4 flex flex-wrap justify-end gap-3 relative z-50 share-frame-hide">
+        <ShareButton
+          title={animeName}
+          systemLabel={classLabel}
+          url={typeof window !== 'undefined' ? window.location.href : ''}
+          theme={theme}
+        />
+        <button
+          onClick={toggleShareFrame}
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer min-h-[44px]"
+          style={{ color: theme.primary }}
+        >
+          <Camera className="w-3.5 h-3.5" />
+          SHARE FRAME
+        </button>
+        <button
           onClick={isRevealing ? cancelReveal : startReveal}
-          className={`group flex items-center gap-3 px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.2em] transition-all duration-500 border backdrop-blur-md uppercase ${
-            isRevealing 
-              ? 'bg-red-500/10 text-red-400 border-red-500/30 hover:bg-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.2)]' 
+          className={`group flex items-center gap-3 px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.2em] transition-all duration-500 border backdrop-blur-md uppercase cursor-pointer min-h-[44px] ${
+            isRevealing
+              ? 'bg-red-500/10 text-red-400 border-red-500/30 hover:bg-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.2)]'
               : 'bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white hover:border-cyan-400/50'
           }`}
-          style={{ 
+          style={{
             boxShadow: !isRevealing ? `0 0 10px ${isSystemMode ? theme.secondary : theme.primary}20` : undefined
           }}
         >
@@ -225,10 +282,12 @@ export default function Dashboard({ data }) {
       </div>
 
       {/* AI Insight Panel */}
-      <AIInsightPanel aiInsights={data?.aiInsights} theme={theme} isSystemMode={isSystemMode} revealStep={revealStep} isRevealing={isRevealing} />
+      <div className="share-frame-hide">
+        <AIInsightPanel aiInsights={data?.aiInsights} theme={theme} isSystemMode={isSystemMode} revealStep={revealStep} isRevealing={isRevealing} />
+      </div>
 
       {/* Navigation Tabs */}
-      <nav className="max-w-6xl mx-auto px-6 mb-3 mt-4 flex overflow-x-auto relative flex-nowrap border-b border-white/5 scrollbar-hide">
+      <nav className="max-w-6xl mx-auto px-6 mb-3 mt-4 flex overflow-x-auto relative flex-nowrap border-b border-white/5 scrollbar-hide share-frame-hide">
         {TABS.map((tab, idx) => {
           const isActive = activeTab === idx
           const activeColor = isSystemMode ? theme.secondary : theme.primary
@@ -258,12 +317,12 @@ export default function Dashboard({ data }) {
       </nav>
 
       {/* Tab Description */}
-      <div className="max-w-6xl mx-auto px-6 mb-10">
+      <div className="max-w-6xl mx-auto px-6 mb-10 share-frame-hide">
         <p className="text-[10px] md:text-xs text-gray-600 tracking-wider">{TAB_DESCRIPTIONS[activeTab]}</p>
       </div>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 pb-24 relative z-40">
+      <main className="max-w-6xl mx-auto px-6 pb-24 relative z-40 share-frame-hide">
         <TabContent
           activeTab={activeTab}
           data={data}
@@ -274,10 +333,17 @@ export default function Dashboard({ data }) {
         />
       </main>
 
-      <ExploreAnotherUniverse currentId={data?.id || data?.malId} isSystemMode={isSystemMode} theme={theme} />
+      <div className="share-frame-hide">
+        <ExploreAnotherUniverse currentId={data?.id || data?.malId} isSystemMode={isSystemMode} theme={theme} />
+      </div>
+
+      {/* Community Feedback */}
+      <div className="share-frame-hide">
+        <FeedbackBlock slug={data?.id} theme={theme} />
+      </div>
 
       {/* Footer */}
-      <footer className="py-10 border-t border-white/5 relative z-10 flex flex-col items-center gap-4">
+      <footer className="py-10 border-t border-white/5 relative z-10 flex flex-col items-center gap-4 share-frame-hide">
         <div className="flex flex-wrap justify-center gap-3">
           {data?.malId && (
             <a

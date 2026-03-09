@@ -18,13 +18,22 @@ SystemSummary
 ↓
 WhyThisRenderer
 ↓
+Action Buttons (Share Button, Share Frame, Reveal The System)
+↓
+AI Insight Panel
+↓
 Tabs Navigation
 ↓
 Visualizers
 ↓
 ExploreAnotherUniverse
 ↓
+FeedbackBlock (Help Improve This Archive)
+↓
 Footer
+
+## Share Frame Mode
+When activated, an overlay displays a screenshot-optimized layout: centered title, classification label, 3 structural bullets, WhyThisRenderer, and "animearchive.app" branding. All other UI (tabs, footer, AI panel, etc.) is hidden via CSS class `share-frame-hide`.
 
 ## Tabs
 Typical tabs include:
