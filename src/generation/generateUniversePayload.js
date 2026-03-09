@@ -47,21 +47,26 @@ export function generateUniversePayload(animeName, structuredResearch, options =
   }
 
   // Keep formatting robust to partial research outputs.
-  const processCharacters = (chars = []) => chars.map(c => ({
-    name: c.name || 'Unknown Entity',
-    title: c.title || 'The Anomaly',
-    rank: c.rank || 'Unclassified',
-    primaryAbility: c.primaryAbility || 'Unknown',
-    dangerLevel: c.dangerLevel || 5,
-    loreBio: c.loreBio || 'No archival lore record exists.',
-    systemBio: c.systemBio || 'No system metrics recorded.',
-    gradientFrom: c.gradientFrom || '#1a1a2e',
-    gradientTo: c.gradientTo || '#0f0f1a',
-    accentColor: c.accentColor || '#38bdf8',
-    icon: c.icon || 'circle',
-    signatureMoment: c.signatureMoment || 'Data expunged.',
-    imageUrl: c.imageUrl || null
-  }))
+  const processCharacters = (chars = []) => chars.map(c => {
+    const imageUrl = c.imageUrl || null
+
+    return {
+      name: c.name || 'Unknown Entity',
+      title: c.title || 'The Anomaly',
+      rank: c.rank || 'Unclassified',
+      primaryAbility: c.primaryAbility || 'Unknown',
+      dangerLevel: c.dangerLevel || 5,
+      loreBio: c.loreBio || 'No archival lore record exists.',
+      systemBio: c.systemBio || 'No system metrics recorded.',
+      gradientFrom: c.gradientFrom || '#1a1a2e',
+      gradientTo: c.gradientTo || '#0f0f1a',
+      accentColor: c.accentColor || '#38bdf8',
+      icon: c.icon || 'circle',
+      signatureMoment: c.signatureMoment || 'Data expunged.',
+      imageUrl,
+      ...(imageUrl === null ? { _fetchFailed: true } : {})
+    }
+  })
 
   const processRelationships = (rels = []) => rels.map(r => ({
     source: r.source,

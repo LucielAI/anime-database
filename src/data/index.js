@@ -2,8 +2,11 @@ import { validateCorePayload } from '../utils/validateSchema'
 
 // Runtime registry loader for layered universe data.
 // Non-breaking resolution order per slug: .core.json -> legacy .json.
-// .extended.json is loaded for tooling/reference but not rendered by default.
-const dataFiles = import.meta.glob('./*.json', { eager: true })
+// Keep the runtime bundle scoped to renderer-facing payloads only.
+// Extended research datasets stay out of eager client imports.
+const dataFiles = import.meta.glob(['./*.core.json', './*.json', '!./*.extended.json'], {
+  eager: true
+})
 
 function extractSlug(filePath) {
   const fileName = filePath.split('/').pop() || ''
@@ -18,12 +21,10 @@ const groupedBySlug = Object.entries(dataFiles).reduce((acc, [filePath, mod]) =>
   const slug = extractSlug(filePath)
 
   if (!acc[slug]) {
-    acc[slug] = { slug, legacy: null, core: null, extended: null }
+    acc[slug] = { slug, legacy: null, core: null }
   }
 
-  if (filePath.endsWith('.extended.json')) {
-    acc[slug].extended = payload
-  } else if (filePath.endsWith('.core.json')) {
+  if (filePath.endsWith('.core.json')) {
     acc[slug].core = payload
   } else {
     acc[slug].legacy = payload
@@ -51,7 +52,6 @@ export const UNIVERSE_DATA_REGISTRY = slugs.reduce((acc, slug) => {
   acc[slug] = {
     slug,
     core: corePayload,
-    extended: entry.extended || null,
     source: entry.core ? 'core' : 'legacy'
   }
 
