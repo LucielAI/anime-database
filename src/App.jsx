@@ -85,7 +85,19 @@ function Home() {
                       className="w-full h-full object-cover object-center opacity-70 group-hover:opacity-90 transition-all duration-700 group-hover:scale-105"
                     />
                   ) : (
-                    <div className="w-full h-full bg-slate-900 flex items-center justify-center text-xs text-gray-600 tracking-widest">NO IMAGE</div>
+                    <div
+                      className="w-full h-full flex items-center justify-center"
+                      style={{
+                        background: `radial-gradient(ellipse at 30% 50%, ${ft.primary}18 0%, transparent 60%), linear-gradient(135deg, #0a0a14 0%, #0d0f1a 40%, ${ft.primary}08 100%)`
+                      }}
+                    >
+                      <div className="flex flex-col items-center gap-2 opacity-40">
+                        <div className="w-12 h-12 rounded-full border border-current flex items-center justify-center" style={{ color: ft.primary }}>
+                          <span className="text-lg font-bold">{featured.anime?.charAt(0)}</span>
+                        </div>
+                        <span className="text-[8px] tracking-[0.3em] uppercase" style={{ color: ft.primary }}>CLASSIFIED</span>
+                      </div>
+                    </div>
                   )}
                   <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#050508] pointer-events-none hidden md:block" />
                   <div className="absolute inset-0 bg-linear-to-t from-[#050508] to-transparent pointer-events-none md:hidden" />
@@ -172,7 +184,7 @@ function Home() {
                 onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 0 30px ${theme.glow}` }}
                 onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none' }}
               >
-                <div className="h-[55%] relative w-full overflow-hidden shrink-0">
+                <div className="h-[55%] min-h-[180px] relative w-full overflow-hidden shrink-0">
                   {data.animeImageUrl ? (
                     <img
                       src={data.animeImageUrl}
@@ -181,7 +193,19 @@ function Home() {
                       className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition-all duration-700 ease-out group-hover:scale-110"
                     />
                   ) : (
-                    <div className="w-full h-full bg-slate-900 border-b border-white/10 flex items-center justify-center text-xs tracking-widest text-gray-600">NO IMAGE ASSET</div>
+                    <div
+                      className="w-full h-full flex items-center justify-center"
+                      style={{
+                        background: `radial-gradient(ellipse at 50% 40%, ${theme.primary}15 0%, transparent 60%), linear-gradient(160deg, #0a0a14 0%, #0d0f1a 50%, ${theme.primary}0a 100%)`
+                      }}
+                    >
+                      <div className="flex flex-col items-center gap-2 opacity-30 group-hover:opacity-50 transition-opacity duration-500">
+                        <div className="w-14 h-14 rounded-full border border-current flex items-center justify-center" style={{ color: theme.primary }}>
+                          <span className="text-xl font-bold tracking-tight">{data.anime?.charAt(0)}</span>
+                        </div>
+                        <span className="text-[7px] tracking-[0.3em] uppercase" style={{ color: theme.primary }}>SIGNAL PENDING</span>
+                      </div>
+                    </div>
                   )}
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-[#050508] to-transparent pointer-events-none" />
                   <div className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none" style={{ background: `linear-gradient(to top, ${theme.primary}08, transparent)` }} />

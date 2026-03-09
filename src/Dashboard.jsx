@@ -44,6 +44,8 @@ const getBackgroundMotif = (anime) => {
       return `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='35' stroke='rgba(255,255,255,0.8)' fill='none' stroke-width='1.5'/%3E%3Ccircle cx='60' cy='60' r='55' stroke='rgba(255,255,255,0.4)' fill='none' stroke-width='0.5' stroke-dasharray='4 4'/%3E%3C/svg%3E")`
     case 'Vinland Saga':
       return `url("data:image/svg+xml,%3Csvg width='250' height='250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.05' result='noise'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.8 0' in='noise'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E")`
+    case 'Steins;Gate':
+      return `url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='80' y1='10' x2='80' y2='150' stroke='rgba(34,211,238,0.6)' stroke-width='0.5'/%3E%3Ccircle cx='80' cy='80' r='40' stroke='rgba(168,85,247,0.5)' fill='none' stroke-width='0.5' stroke-dasharray='3 5'/%3E%3Ccircle cx='80' cy='80' r='60' stroke='rgba(34,211,238,0.3)' fill='none' stroke-width='0.3' stroke-dasharray='2 8'/%3E%3Cline x1='30' y1='80' x2='130' y2='80' stroke='rgba(168,85,247,0.4)' stroke-width='0.3' stroke-dasharray='4 4'/%3E%3C/svg%3E")`
     default:
       return 'none'
   }
@@ -62,6 +64,8 @@ export default function Dashboard({ data }) {
   const isAoT = data?.anime === 'Attack on Titan'
   const isJJK = data?.anime === 'Jujutsu Kaisen'
   const isHxH = data?.anime === 'Hunter x Hunter'
+  const isVinlandSaga = data?.anime === 'Vinland Saga'
+  const isSteinsGate = data?.anime === 'Steins;Gate'
 
   return (
     <div
@@ -149,6 +153,9 @@ export default function Dashboard({ data }) {
         {isRevealing && animeName === 'Vinland Saga' && (
           <div className="absolute inset-x-0 top-0 h-96 bg-linear-to-b from-amber-700/10 to-transparent animate-pulse" />
         )}
+        {isRevealing && animeName === 'Steins;Gate' && (
+          <div className="absolute inset-0 opacity-20 shadow-[inset_0_0_100px_rgba(34,211,238,0.3)] border border-cyan-400/10 rounded-xl m-1 transition-all duration-1000" />
+        )}
       </div>
 
       {/* Header */}
@@ -224,6 +231,30 @@ export default function Dashboard({ data }) {
               <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
                 <span>"YOU SHOULD ENJOY THE LITTLE DETOURS TO THE FULLEST."</span>
+              </div>
+            )}
+            {isVinlandSaga && isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-amber-400/70 tracking-widest mt-2 rounded bg-amber-900/10 px-3 py-1.5 border border-amber-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                <span>// [SYS_STATE]: VIOLENCE LOOP ACTIVE — ESCAPE VECTOR UNRESOLVED</span>
+              </div>
+            )}
+            {isVinlandSaga && !isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
+                <span>"A TRUE WARRIOR DOESN'T NEED A SWORD."</span>
+              </div>
+            )}
+            {isSteinsGate && isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-cyan-400/70 tracking-widest mt-2 rounded bg-cyan-900/10 px-3 py-1.5 border border-cyan-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+                <span>// [SYS_LOCK]: ATTRACTOR FIELD CONVERGENCE — DIVERGENCE 1.048596%</span>
+              </div>
+            )}
+            {isSteinsGate && !isSystemMode && (
+              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
+                <span>"EL PSY KONGROO."</span>
               </div>
             )}
           </div>

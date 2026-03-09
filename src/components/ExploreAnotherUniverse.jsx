@@ -44,13 +44,18 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
                 }}
               >
                 {/* Dynamic Background Image (Subtle Grayscale) */}
-                {anime.animeImageUrl && (
-                  <div 
+                {anime.animeImageUrl ? (
+                  <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5 grayscale group-hover:opacity-20 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                     style={{ backgroundImage: `url(${anime.animeImageUrl})` }}
                   />
+                ) : (
+                  <div
+                    className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity duration-700"
+                    style={{ background: `radial-gradient(ellipse at 70% 30%, ${cardAccent}12 0%, transparent 60%)` }}
+                  />
                 )}
-                
+
                 {/* Gradient Overlay for Text Readability - Always active, intensifies on hover */}
                 <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
 
