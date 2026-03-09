@@ -1,0 +1,102 @@
+﻿{
+ "archive_metadata": {
+   "universe": "Steins;Gate",
+   "dataset_type": "extended",
+   "system_thesis": "causality escape system / attractor-field prison",
+   "best_renderer": "timeline",
+   "secondary_structural_layer": "anomalies + geopolitical competition over time tech"
+ },
+ "core_focus": {
+   "primary_agents":,
+   "primary_factions":,
+   "phenomena":,
+   "key_events":
+ },
+ "extended_layer": {
+   "full_character_roster":"
+     },
+     {
+       "designation": "Lab Mem 006",
+       "name": "Luka Urushibara",
+       "role": "Yanabayashi Shrine resident, utilizes D-Mail to alter biological sex"
+     },
+     {
+       "designation": "Lab Mem 007",
+       "name": "Faris NyanNyan",
+       "role": "Akihabara maid cafe owner, alters urban landscape via D-Mail"
+     },
+     {
+       "designation": "Lab Mem 008",
+       "name": "Suzuha Amane",
+       "role": "Temporal agent (John Titor) from the future, daughter of Itaru Hashida"
+     },
+     {
+       "designation": "Lab Mem 009",
+       "name": "Maho Hiyajo",
+       "role": "Neuroscientist, Amadeus co-creator, engineer of upgraded Time Leap Machine"
+     },
+     {
+       "designation": "Lab Mem 010",
+       "name": "Kagari Shiina",
+       "role": "WWIII orphan, brainwashed Stratfor agent K6205"
+     },
+     {
+       "designation": "Lab Mem 011",
+       "name": "Yuki Amane",
+       "role": "Future wife of Itaru Hashida, mother of Suzuha"
+     },
+     {
+       "designation": "External",
+       "name": "Shouichi Makise (Dr. Nakabachi)",
+       "role": "Kurisu's father, sparks WWIII by stealing her thesis"
+     },
+     {
+       "designation": "External",
+       "name": "Alexis Leskinen",
+       "role": "Stratfor leader, Amadeus co-developer, brainwashes Kagari"
+     },
+     {
+       "designation": "External",
+       "name": "Judy Reyes",
+       "role": "DURPA agent, Psychology Institute Research professor"
+     }
+   ],
+   "hardware_and_theories": {
+     "time_machine_theories":,
+     "phonewave": {
+       "function": "Generates naked singularities via CRT electron injection. Transmits D-Mails to the past.",
+       "limitations": "Strict bottleneck of 36 bytes of data per transmission."
+     },
+     "time_leap_machine": {
+       "function": "Digitizes neural data, compresses it via SERN's LHC, and transmits it to a past hippocampus using Visual Rebuilding electromagnetic frequencies.",
+       "limitations": "Standard biological safety limit is 48 hours. Beta variant optimized by Maho/Daru can leap up to two weeks."
+     },
+     "physical_time_machines": {
+       "FG204": "Alpha timeline. Built by Barrel Titor. Incomplete prototype limited to one-way travel.",
+       "SERN_Model": "Alpha timeline. Completed in 2034, solidifying Committee of 300's dystopia.",
+       "C203_C204": "Beta timeline. Complete two-way machines. C204 intentionally causes minor divergence shifts (e.g., to 1.130212%) to prevent paradoxical traveler coexistence.",
+       "OR204": "Steins Gate timeline. Two-way travel craft featuring gravity data displays, used to implant localized traumatic memories into Okabe."
+     }
+   },
+   "anomalies_and_systems": {
+     "amadeus": "AI utilizing human neurological data to replicate memories and personalities, based on Kurisu Makise's memory digitization thesis. Targeted by military factions.",
+     "reading_steiner": "Latent human capacity to retain contiguous memory across macro-temporal shifts. Possessed absolutely by Okabe, and widely as 'New Encephalitis' in the Beta timeline."
+   },
+   "geopolitical_competition": {
+     "committee_of_300": "Elite society executing a 360-year plan. Ultimate objective is the Human Domestication Project to cull the global population to 1 billion via the SERN dystopia.",
+     "sern": "Committee enforcement arm. Maintains the ECHELON database which intercepted the first D-Mail. Deploys Rounders to secure IBN 5100 units.",
+     "stratfor": "Private intelligence agency (Shadow CIA). Aims to reconstruct Kurisu's theory to sell globally. Responsible for capturing and brainwashing Kagari Shiina.",
+     "durpa": "US Department of Defense agency. Seeks temporal monopoly to ensure American hegemony. Frequently engages in violent operations against Stratfor.",
+     "russian_federation": "Catalyzes the temporal arms race after Dr. Nakabachi defects and gifts them Kurisu's stolen thesis."
+   },
+   "attractor_fields_and_future_war": {
+     "alpha_field": "Divergence 0.000000% to 0.999999%. Converges on Mayuri's death and the establishment of the SERN/Committee dystopia by 2036.",
+     "beta_field": "Divergence 1.000000% to 1.999999%. Converges on Kurisu's death and a global temporal arms race.",
+     "gamma_field": "Divergence 2.000000% to 2.999999%. Converges on Y2K disaster and Okabe acting as a SERN dictator.",
+     "delta_field": "Divergence 3.000000% to 3.999999%. Anomalous peaceful baseline.",
+     "omega_field": "Negative divergence. Okabe never founds the FGL; acts as a RaiNet player.",
+     "steins_gate": "Divergence 1.048596%. The absolute anomaly evading both Alpha and Beta convergences via Operation Skuld.",
+     "world_war_iii": "Global conflict spanning from 2011 to 2036 in the Beta timeline, resulting in 5.7 billion casualties. Opposed by Okabe and Daru's Valkyrie resistance."
+   }
+ }
+}
