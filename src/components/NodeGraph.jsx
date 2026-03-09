@@ -1,79 +1,32 @@
 import { useState, useCallback, useRef, useEffect, useMemo, memo } from 'react'
 import { resolveColor } from '../utils/resolveColor'
-
-const EDGE_COLORS = {
-  ally: '#22d3ee',
-  enemy: '#ef4444',
-  rival: '#f59e0b',
-  mentor: '#a855f7',
-  betrayal: '#ec4899',
-  dependent: '#6b7280',
-  counter: '#10b981',
-  mirror: '#8b5cf6',
-}
+import { RELATIONSHIP_COLORS } from '../config/relationshipColors'
+import { computeRadialPositions } from '../utils/radialLayout'
+import { useAutoHighlight } from '../hooks/useAutoHighlight'
 
 export default memo(function NodeGraph({ relationships = [], characters = [], isRevealing, revealStep }) {
   const svgRef = useRef(null)
   const [nodes, setNodes] = useState([])
   const [selected, setSelected] = useState(null)
   const [dragging, setDragging] = useState(null)
-  const [hasPulsed, setHasPulsed] = useState(false)
   const dragOffset = useRef({ x: 0, y: 0 })
   const reqRef = useRef()
 
-  // Wow Graph Moment logic
-  const triggerPulse = useCallback((delay = 600, duration = 1200) => {
-    const timer = setTimeout(() => {
-      setSelected(currentSelected => {
-        if (!currentSelected && characters.length > 0 && relationships.length > 0) {
-          const degrees = {}
-          relationships.forEach(r => {
-            degrees[r.source] = (degrees[r.source] || 0) + 1
-            degrees[r.target] = (degrees[r.target] || 0) + 1
-          })
-          const maxNode = Object.keys(degrees).reduce((a, b) => (degrees[a] || 0) > (degrees[b] || 0) ? a : b, characters[0].name)
-          
-          setTimeout(() => {
-            setSelected(prev => prev === maxNode ? null : prev)
-          }, duration)
-          
-          return maxNode
-        }
-        return currentSelected
-      })
-    }, delay)
-    return () => clearTimeout(timer)
-  }, [characters, relationships])
+  const { highlighted, markInteracted } = useAutoHighlight({
+    items: characters,
+    relationships,
+    isRevealing,
+    revealStep,
+    duration: 1200,
+  })
 
-  // Standard load pulse
+  // Sync auto-highlight into selected state (only when user hasn't manually selected)
   useEffect(() => {
-    if (!isRevealing && !hasPulsed && characters.length > 0 && relationships.length > 0) {
-      setTimeout(() => setHasPulsed(true), 0)
-      const cleanup = triggerPulse(600, 1200)
-      return cleanup
-    }
-  }, [hasPulsed, characters, relationships, isRevealing, triggerPulse])
-
-  // Cinematic sequence pulse
-  useEffect(() => {
-    if (isRevealing && revealStep === 4) {
-      const cleanup = triggerPulse(0, 2000)
-      return cleanup
-    }
-  }, [isRevealing, revealStep, triggerPulse])
+    if (highlighted && !selected) setSelected(highlighted)
+  }, [highlighted, selected])
 
   useEffect(() => {
-    const cx = 300
-    const cy = 250
-    const radius = 160
-    const arranged = characters.map((char, i) => {
-      const angle = (2 * Math.PI * i) / characters.length - Math.PI / 2
-      return {
-        ...char,
-        x: cx + radius * Math.cos(angle),
-        y: cy + radius * Math.sin(angle),
-      }
-    })
+    const arranged = computeRadialPositions(characters, 300, 250, 160)
     setTimeout(() => setNodes(arranged), 0)
   }, [characters])
 
@@ -131,8 +84,9 @@ export default memo(function NodeGraph({ relationships = [], characters = [], is
   }, [])
 
   const handleNodeClick = useCallback((name) => {
+    markInteracted()
     setSelected((prev) => (prev === name ? null : name))
-  }, [])
+  }, [markInteracted])
 
   const selectedEdges = relationships.filter(
     (r) => r.source === selected || r.target === selected
@@ -147,6 +101,8 @@ export default memo(function NodeGraph({ relationships = [], characters = [], is
       <svg
         ref={svgRef}
         viewBox="0 0 600 500"
+        role="img"
+        aria-label="Character relationship graph — click nodes to see connections"
         className="w-full h-auto bg-[#0a0a14] rounded-lg border border-white/10"
         onMouseMove={handleMouseMove}
         onTouchMove={handleMouseMove}
@@ -168,7 +124,7 @@ export default memo(function NodeGraph({ relationships = [], characters = [], is
               y1={s.y}
               x2={t.x}
               y2={t.y}
-              stroke={EDGE_COLORS[rel.type] || '#555'}
+              stroke={RELATIONSHIP_COLORS[rel.type] || '#555'}
               strokeWidth={Math.max(1, (rel.weight || 1) * 0.6)}
               opacity={selected ? (isHighlighted ? 1 : 0.15) : 0.6}
               className="transition-opacity duration-300"

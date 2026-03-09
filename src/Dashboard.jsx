@@ -12,6 +12,7 @@ import { useSystemReveal } from './hooks/useSystemReveal'
 import { useShareFrame } from './hooks/useShareFrame'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 import { deriveBullets } from './utils/deriveBullets'
+import { getBackgroundMotif, getRevealOverlay, getSysWarningColors } from './config/universePresentation'
 
 const TABS = ['POWER ENGINE', 'ENTITY DATABASE', 'FACTIONS', 'CORE LAWS']
 
@@ -34,23 +35,6 @@ const DEFAULT_THEME = {
   heroGradient: 'rgba(5,5,20,0.95)',
 }
 
-const getBackgroundMotif = (anime) => {
-  switch (anime) {
-    case 'Attack on Titan':
-      return `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10l20 30-10 40 30-20 40 30-20-40 30-20-40 10z' stroke='rgba(255,255,255,0.7)' fill='none' stroke-width='0.75'/%3E%3C/svg%3E")`
-    case 'Jujutsu Kaisen':
-      return `url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`
-    case 'Hunter x Hunter':
-      return `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='35' stroke='rgba(255,255,255,0.8)' fill='none' stroke-width='1.5'/%3E%3Ccircle cx='60' cy='60' r='55' stroke='rgba(255,255,255,0.4)' fill='none' stroke-width='0.5' stroke-dasharray='4 4'/%3E%3C/svg%3E")`
-    case 'Vinland Saga':
-      return `url("data:image/svg+xml,%3Csvg width='250' height='250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.05' result='noise'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.8 0' in='noise'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E")`
-    case 'Steins;Gate':
-      return `url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='80' y1='10' x2='80' y2='150' stroke='rgba(34,211,238,0.6)' stroke-width='0.5'/%3E%3Ccircle cx='80' cy='80' r='40' stroke='rgba(168,85,247,0.5)' fill='none' stroke-width='0.5' stroke-dasharray='3 5'/%3E%3Ccircle cx='80' cy='80' r='60' stroke='rgba(34,211,238,0.3)' fill='none' stroke-width='0.3' stroke-dasharray='2 8'/%3E%3Cline x1='30' y1='80' x2='130' y2='80' stroke='rgba(168,85,247,0.4)' stroke-width='0.3' stroke-dasharray='4 4'/%3E%3C/svg%3E")`
-    default:
-      return 'none'
-  }
-}
-
 export default function Dashboard({ data }) {
   const [activeTab, setActiveTab] = useState(0)
   const [isSystemMode, setIsSystemMode] = useState(false)
@@ -61,11 +45,8 @@ export default function Dashboard({ data }) {
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
   const classLabel = getClassificationLabel(data?.visualizationHint)
   const shareFrameBullets = useMemo(() => deriveBullets(data).slice(0, 3), [data])
-  const isAoT = data?.anime === 'Attack on Titan'
-  const isJJK = data?.anime === 'Jujutsu Kaisen'
-  const isHxH = data?.anime === 'Hunter x Hunter'
-  const isVinlandSaga = data?.anime === 'Vinland Saga'
-  const isSteinsGate = data?.anime === 'Steins;Gate'
+  const headerFlavor = data?.headerFlavor
+  const revealOverlay = getRevealOverlay(data?.revealOverlay)
 
   return (
     <div
@@ -81,7 +62,7 @@ export default function Dashboard({ data }) {
       <div 
         className="absolute inset-0 pointer-events-none z-0 mix-blend-overlay transition-opacity duration-1000" 
         style={{ 
-          backgroundImage: getBackgroundMotif(data?.anime),
+          backgroundImage: getBackgroundMotif(data?.backgroundMotif),
           opacity: 0.04 
         }} 
       />
@@ -92,7 +73,8 @@ export default function Dashboard({ data }) {
         <div className="fixed inset-0 z-[60] bg-[#050508] flex flex-col items-center justify-center px-4 py-6 md:p-6 overflow-y-auto">
           <button
             onClick={toggleShareFrame}
-            className="fixed top-4 right-4 z-[70] p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center"
+            aria-label="Close share frame"
+            className="fixed top-4 right-4 z-[70] p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
           >
             <X className="w-5 h-5 text-white" />
           </button>
@@ -159,20 +141,8 @@ export default function Dashboard({ data }) {
           backgroundColor: 'rgba(5, 5, 8, 0.5)'
         }} 
       >
-        {isRevealing && animeName === 'Attack on Titan' && (
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #ef4444 0, #ef4444 1px, transparent 1px, transparent 10px)' }} />
-        )}
-        {isRevealing && animeName === 'Jujutsu Kaisen' && (
-          <div className="absolute inset-0 opacity-40 shadow-[inset_0_0_120px_rgba(168,85,247,0.4)] animate-pulse" />
-        )}
-        {isRevealing && animeName === 'Hunter x Hunter' && (
-          <div className="absolute inset-0 opacity-30 shadow-[inset_0_0_80px_rgba(34,211,238,0.3)] border-2 border-[#22d3ee]/20 rounded-xl m-1 transition-all duration-1000" />
-        )}
-        {isRevealing && animeName === 'Vinland Saga' && (
-          <div className="absolute inset-x-0 top-0 h-96 bg-linear-to-b from-amber-700/10 to-transparent animate-pulse" />
-        )}
-        {isRevealing && animeName === 'Steins;Gate' && (
-          <div className="absolute inset-0 opacity-20 shadow-[inset_0_0_100px_rgba(34,211,238,0.3)] border border-cyan-400/10 rounded-xl m-1 transition-all duration-1000" />
+        {isRevealing && revealOverlay && (
+          <div className={revealOverlay.className} style={revealOverlay.style} />
         )}
       </div>
 
@@ -215,64 +185,19 @@ export default function Dashboard({ data }) {
               "{data?.tagline}"
             </p>
 
-            {isAoT && isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-red-400/70 tracking-widest mt-2 rounded bg-red-900/10 px-3 py-1.5 border border-red-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse box-shadow-glow-red" />
-                <span>// [SYS_WARN]: DETERMINISTIC LOOP LOCKED — CAUSALITY INTACT</span>
-              </div>
-            )}
-            {isAoT && !isSystemMode && (
+            {headerFlavor && isSystemMode && (() => {
+              const colors = getSysWarningColors(headerFlavor.sysWarningColor)
+              return (
+                <div className={`flex items-center gap-2 text-[10px] ${colors.text} tracking-widest mt-2 rounded ${colors.bg} px-3 py-1.5 border ${colors.border}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${colors.dot} animate-pulse ${colors.dotGlow}`} />
+                  <span>{headerFlavor.sysWarning}</span>
+                </div>
+              )
+            })()}
+            {headerFlavor && !isSystemMode && (
               <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
-                <span>"THIS WORLD IS CRUEL... AND ALSO VERY BEAUTIFUL."</span>
-              </div>
-            )}
-            {isJJK && isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-blue-400/70 tracking-widest mt-2 rounded bg-blue-900/10 px-3 py-1.5 border border-blue-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse box-shadow-glow-blue" />
-                <span>// [SYS_OP]: NEGATIVE ENERGY ECONOMY — COUNTERPLAY ACTIVE</span>
-              </div>
-            )}
-            {isJJK && !isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
-                <span>"WE AREN'T HEROES. WE'RE JUJUTSU SORCERERS."</span>
-              </div>
-            )}
-            {isHxH && isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-green-400/70 tracking-widest mt-2 rounded bg-green-900/10 px-3 py-1.5 border border-green-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse box-shadow-glow-green" />
-                <span>// [SYS_EXEC]: CONTRACTUAL ENGAGEMENT — ASYMMETRIC YIELD</span>
-              </div>
-            )}
-            {isHxH && !isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
-                <span>"YOU SHOULD ENJOY THE LITTLE DETOURS TO THE FULLEST."</span>
-              </div>
-            )}
-            {isVinlandSaga && isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-amber-400/70 tracking-widest mt-2 rounded bg-amber-900/10 px-3 py-1.5 border border-amber-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-                <span>// [SYS_STATE]: VIOLENCE LOOP ACTIVE — ESCAPE VECTOR UNRESOLVED</span>
-              </div>
-            )}
-            {isVinlandSaga && !isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
-                <span>"A TRUE WARRIOR DOESN'T NEED A SWORD."</span>
-              </div>
-            )}
-            {isSteinsGate && isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-cyan-400/70 tracking-widest mt-2 rounded bg-cyan-900/10 px-3 py-1.5 border border-cyan-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
-                <span>// [SYS_LOCK]: ATTRACTOR FIELD CONVERGENCE — DIVERGENCE 1.048596%</span>
-              </div>
-            )}
-            {isSteinsGate && !isSystemMode && (
-              <div className="flex items-center gap-2 text-[10px] text-gray-400/70 tracking-widest mt-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
-                <span>"EL PSY KONGROO."</span>
+                <span>"{headerFlavor.loreQuote}"</span>
               </div>
             )}
           </div>

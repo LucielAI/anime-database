@@ -73,6 +73,16 @@ The schema requires:
 
 Do NOT generate fake ChatGPT-style dialogue. Deliver deterministic, thesis-driven archive interpretations.
 
+## Presentation Fields
+
+Each payload includes optional fields that drive universe-specific visual behavior without hardcoding anime names in components:
+
+- **`headerFlavor`**: Controls the LORE/SYS header content. Contains `loreQuote`, `sysWarning`, and `sysWarningColor` (key into `SYS_WARNING_COLORS` in `src/config/universePresentation.js`).
+- **`backgroundMotif`**: Key into `BACKGROUND_MOTIFS` — SVG patterns applied to the dashboard background (e.g. `"jagged"`, `"noise"`, `"temporal"`).
+- **`revealOverlay`**: Key into `REVEAL_OVERLAYS` — visual overlay style during the reveal sequence (e.g. `"hatch-red"`, `"pulse-purple"`, `"glow-border"`).
+
+Adding a new universe requires populating these fields in the JSON payload. No component changes needed.
+
 ## Shared Utilities
 
 `deriveBullets(data)` is extracted into `src/utils/deriveBullets.js` and reused by SystemSummary, landing page snapshot cards, hero card, and Share Frame mode. No schema changes are required — bullets are derived from existing payload fields.

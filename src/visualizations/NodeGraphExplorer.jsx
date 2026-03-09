@@ -2,18 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 import StandardCardsExplorer from './StandardCardsExplorer'
 import DangerBar from '../components/DangerBar'
 import { resolveColor } from '../utils/resolveColor'
-
-const EDGE_COLORS = {
-  ally: '#22d3ee',
-  enemy: '#ef4444',
-  rival: '#f59e0b',
-  mentor: '#a855f7',
-  betrayal: '#ec4899',
-  dependent: '#6b7280',
-  counter: '#10b981',
-  mirror: '#8b5cf6',
-  successor: '#38bdf8',
-}
+import { RELATIONSHIP_COLORS } from '../config/relationshipColors'
 
 const EDGE_LABELS = {
   ally: 'ALLY',
@@ -87,38 +76,23 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
   const dragOffset = useRef({ x: 0, y: 0 })
   const rafRef = useRef(null)
 
-  // Wow Graph Moment (HxH Contract/Strategic Edge Target)
+  // Wow Graph Moment — auto-select highest-degree node
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!hasInteracted && !selected && nodes.length > 0) {
-        let target = null
-        // Thesis override
-        if (characters.some(c => c.name === 'Kurapika')) {
-          target = 'Kurapika'
-        } else if (characters.some(c => c.name === 'Satoru Gojo')) {
-          target = 'Satoru Gojo'
-        } else if (characters.some(c => c.name === 'Eren Yeager')) {
-          target = 'Eren Yeager'
-        }
-        
-        // Fallback: Highest degree node
-        if (!target || !nodes.find(n => n.name === target)) {
-          const degrees = {}
-          links.forEach(l => {
-            const sName = typeof l.source === 'object' ? l.source.name : l.source
-            const tName = typeof l.target === 'object' ? l.target.name : l.target
-            degrees[sName] = (degrees[sName] || 0) + 1
-            degrees[tName] = (degrees[tName] || 0) + 1
-          })
-          const maxNode = Object.keys(degrees).reduce((a, b) => degrees[a] > degrees[b] ? a : b, null)
-          if (maxNode) target = maxNode
-        }
-
+        const degrees = {}
+        links.forEach(l => {
+          const sName = typeof l.source === 'object' ? l.source.name : l.source
+          const tName = typeof l.target === 'object' ? l.target.name : l.target
+          degrees[sName] = (degrees[sName] || 0) + 1
+          degrees[tName] = (degrees[tName] || 0) + 1
+        })
+        const target = Object.keys(degrees).reduce((a, b) => (degrees[a] || 0) > (degrees[b] || 0) ? a : b, null)
         if (target) setSelected(target)
       }
     }, 600)
     return () => clearTimeout(timer)
-  }, [nodes, hasInteracted, selected, links, characters])
+  }, [nodes, hasInteracted, selected, links])
 
   const resetLayout = useCallback(() => {
     if (simulationRef.current) simulationRef.current.stop()
@@ -248,7 +222,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
       <div className="flex flex-wrap gap-x-3 gap-y-1">
         {[...new Set(relationships.map(r => r.type))].map(type => (
           <span key={type} className="flex items-center gap-1">
-            <span className="w-3 h-0.5 inline-block rounded" style={{ backgroundColor: EDGE_COLORS[type] || '#555' }} />
+            <span className="w-3 h-0.5 inline-block rounded" style={{ backgroundColor: RELATIONSHIP_COLORS[type] || '#555' }} />
             <span className="text-[9px] text-gray-500 uppercase tracking-wider">{type}</span>
           </span>
         ))}
@@ -285,7 +259,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
             const t = rel.target
             if (!s || !t || typeof s === 'string' || typeof t === 'string') return null
             const isActive = !selected || s.name === selected || t.name === selected
-            const edgeColor = EDGE_COLORS[rel.type] || '#555'
+            const edgeColor = RELATIONSHIP_COLORS[rel.type] || '#555'
             const weight = Math.max(1.5, (rel.weight || 5) * 0.7)
             const dx = t.x - s.x, dy = t.y - s.y
             const dist = Math.sqrt(dx * dx + dy * dy) || 1
@@ -449,21 +423,21 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
         {/* Edge hover tooltip */}
         {hoveredEdge !== null && links[hoveredEdge] && (
           <div className="absolute bottom-2 left-2 right-2 bg-black/95 border rounded-lg px-3 py-2 z-10"
-            style={{ borderColor: EDGE_COLORS[links[hoveredEdge].type] || accent }}>
+            style={{ borderColor: RELATIONSHIP_COLORS[links[hoveredEdge].type] || accent }}>
             <div className="flex items-center gap-2 mb-1">
               <span className="text-[10px] font-bold tracking-wider"
-                style={{ color: EDGE_COLORS[links[hoveredEdge].type] }}>
+                style={{ color: RELATIONSHIP_COLORS[links[hoveredEdge].type] }}>
                 {links[hoveredEdge].source.name.split(' ')[0]}
               </span>
               <span className="text-[9px] text-gray-500">&rarr;</span>
               <span className="text-[10px] font-bold tracking-wider"
-                style={{ color: EDGE_COLORS[links[hoveredEdge].type] }}>
+                style={{ color: RELATIONSHIP_COLORS[links[hoveredEdge].type] }}>
                 {links[hoveredEdge].target.name.split(' ')[0]}
               </span>
               <span className="text-[8px] px-1.5 py-0.5 rounded uppercase tracking-wider"
                 style={{
-                  color: EDGE_COLORS[links[hoveredEdge].type],
-                  backgroundColor: `${EDGE_COLORS[links[hoveredEdge].type]}20`
+                  color: RELATIONSHIP_COLORS[links[hoveredEdge].type],
+                  backgroundColor: `${RELATIONSHIP_COLORS[links[hoveredEdge].type]}20`
                 }}>
                 {links[hoveredEdge].type}
               </span>
@@ -569,7 +543,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                 {selectedRels.map((rel, i) => {
                   const isSource = rel.source.name === selected
                   const other = isSource ? rel.target.name : rel.source.name
-                  const edgeColor = EDGE_COLORS[rel.type] || '#555'
+                  const edgeColor = RELATIONSHIP_COLORS[rel.type] || '#555'
                   return (
                     <div key={i}
                       className="flex items-start gap-2 cursor-pointer hover:bg-white/5 rounded px-1.5 py-1 -mx-1.5 transition-colors"

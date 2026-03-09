@@ -1,29 +1,26 @@
-import { useState, useEffect, useCallback, memo } from 'react'
+import { useState, useEffect, useCallback, useRef, memo } from 'react'
 
 export default memo(function CounterTree({ counterplay = [], characters = [], isRevealing, revealStep }) {
   const [selectedEdge, setSelectedEdge] = useState(null)
   const [hasInteracted, setHasInteracted] = useState(false)
+  const timerRef = useRef(null)
+  const clearRef = useRef(null)
 
-  // Wow Graph Moment logic
+  // Auto-highlight: select the first counterplay entry on load
   const triggerPulse = useCallback((delay = 600) => {
-    const timer = setTimeout(() => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    if (clearRef.current) clearTimeout(clearRef.current)
+    timerRef.current = setTimeout(() => {
       if (!hasInteracted && selectedEdge === null && counterplay.length > 0) {
-        const index = counterplay.findIndex(c => 
-          (c.attacker === 'Satoru Gojo' && c.defender === 'Ryomen Sukuna') ||
-          (c.attacker === 'Ryomen Sukuna' && c.defender === 'Satoru Gojo') ||
-          c.mechanic.includes('Domain') ||
-          c.mechanic.includes('Infinity')
-        )
-        const targetIndex = index !== -1 ? index : 0
+        const targetIndex = 0
         setSelectedEdge(targetIndex)
-        
-        setTimeout(() => {
+        clearRef.current = setTimeout(() => {
           setSelectedEdge(prev => prev === targetIndex ? null : prev)
         }, 2000)
       }
     }, delay)
-    return () => clearTimeout(timer)
-  }, [counterplay, hasInteracted, selectedEdge, setSelectedEdge])
+    return () => { clearTimeout(timerRef.current); clearTimeout(clearRef.current) }
+  }, [counterplay, hasInteracted, selectedEdge])
 
   useEffect(() => {
     if (!isRevealing) return triggerPulse(600)
@@ -32,6 +29,10 @@ export default memo(function CounterTree({ counterplay = [], characters = [], is
   useEffect(() => {
     if (isRevealing && revealStep === 4) return triggerPulse(0)
   }, [isRevealing, revealStep, triggerPulse])
+
+  useEffect(() => {
+    return () => { clearTimeout(timerRef.current); clearTimeout(clearRef.current) }
+  }, [])
 
   const charMap = {}
   characters.forEach((c) => { charMap[c.name] = c })

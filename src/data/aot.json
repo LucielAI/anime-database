@@ -16,6 +16,13 @@
   "animeImageUrl": "https://cdn.myanimelist.net/images/anime/10/47347l.jpg",
   "visualizationHint": "timeline",
   "visualizationReason": "Causality itself functions as the supreme power system; the timeline is a malleable battlespace.",
+  "headerFlavor": {
+    "loreQuote": "THIS WORLD IS CRUEL... AND ALSO VERY BEAUTIFUL.",
+    "sysWarning": "// [SYS_WARN]: DETERMINISTIC LOOP LOCKED — CAUSALITY INTACT",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "jagged",
+  "revealOverlay": "hatch-red",
   "aiInsights": {
     "casual": "Attack on Titan is fundamentally a story about being trapped in a loop. Because characters can send memories back in time, the future has already happened. The 'Timeline' view shows how every single event was locked in place from the very beginning—there was never any escape.",
     "deep": "AoT operates as a deterministic, closed-loop causal matrix where the 'Attack Titan' acts as a retro-causal output node. It overwrites its own past inputs to guarantee its future execution. The system is inherently inescapable because the root administrator (Eren) weaponized the timeline itself to enforce a singular, apocalyptic outcome."

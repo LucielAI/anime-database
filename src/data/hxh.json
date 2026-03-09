@@ -4,6 +4,13 @@
   "malId": 11061,
   "visualizationHint": "node-graph",
   "visualizationReason": "HxH is defined by conditional alliances, asymmetric information, and binding contractual power — the node-graph maps the strategic web where every relationship is a potential betrayal vector.",
+  "headerFlavor": {
+    "loreQuote": "YOU SHOULD ENJOY THE LITTLE DETOURS TO THE FULLEST.",
+    "sysWarning": "// [SYS_EXEC]: CONTRACTUAL ENGAGEMENT — ASYMMETRIC YIELD",
+    "sysWarningColor": "green"
+  },
+  "backgroundMotif": "circles",
+  "revealOverlay": "glow-border",
   "aiInsights": {
     "casual": "Hunter x Hunter isn't just about punching hard; it's about complex alliances and deadly contracts. Power comes from risking your own life, and characters constantly betray, groom, or depend on each other. The 'Node Graph' shows this perfectly, revealing the hidden web of trust and hostility connecting everyone.",
     "deep": "HxH models a high-stakes, unregulated strategic economy where power is generated through extreme, collateralized contracts (Nen Vows). The Relational Node Graph is the optimal lens because systemic victories here are rarely achieved through brute force; they are won by identifying and exploiting the asymmetric dependencies, emotional liabilities, and rigid behavioral mandates of opponent nodes."

@@ -42,6 +42,13 @@ src/
 ├── data/
 │   ├── index.js               # Import, validate, export all payloads
 │   └── *.json                 # Hand-curated JSON intelligence schemas
+├── config/
+│   ├── universePresentation.js # Background motifs, reveal overlays, SYS warning colors
+│   └── relationshipColors.js  # Canonical edge colors shared across renderers
+├── hooks/
+│   ├── useAutoHighlight.js    # Shared wow-graph-moment auto-highlight
+│   ├── useSystemReveal.js     # Reveal sequence state machine
+│   └── useShareFrame.js       # Share frame capture logic
 ├── components/
 │   ├── ImageWithFallback.jsx  # Portrait with gradient fallback
 │   ├── DangerBar.jsx          # Animated threat level bar
@@ -60,9 +67,16 @@ src/
 │   ├── CounterTreeExplorer.jsx
 │   ├── AffinityMatrixExplorer.jsx
 │   └── StandardCardsExplorer.jsx
-└── utils/
-    ├── validateSchema.js      # Strict runtime payload validation
-    └── resolveColor.js        # Tailwind color name → hex
+├── utils/
+│   ├── validateSchema.js      # Strict runtime payload validation
+│   ├── resolveColor.js        # Tailwind color name → hex
+│   ├── deriveBullets.js       # Shared bullet derivation from payload
+│   └── radialLayout.js        # Circular node positioning utility
+└── __tests__/                 # Vitest test suite
+    ├── validateSchema.test.js
+    ├── utils.test.js
+    ├── universePresentation.test.js
+    └── dataIntegrity.test.js
 ```
 
 ## Data Schema
@@ -101,6 +115,7 @@ npm install
 npm run dev               # Dev server
 npm run build             # Production build
 npm run preview           # Preview production build
+npm run test              # Run test suite (Vitest)
 npm run validate:payload  # Custom CLI tool for JSON structure checking
 ```
 

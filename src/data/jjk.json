@@ -4,6 +4,13 @@
   "malId": 40748,
   "visualizationHint": "counter-tree",
   "visualizationReason": "JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.",
+  "headerFlavor": {
+    "loreQuote": "WE AREN'T HEROES. WE'RE JUJUTSU SORCERERS.",
+    "sysWarning": "// [SYS_OP]: NEGATIVE ENERGY ECONOMY — COUNTERPLAY ACTIVE",
+    "sysWarningColor": "blue"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "pulse-purple",
   "aiInsights": {
     "casual": "Jujutsu Kaisen is basically a giant, lethal game of rock-paper-scissors using negative energy. Every sorcerer has a unique power, but pure strength rarely wins alone. It's all about how abilities cleverly counter or exploit each other, which is exactly why the 'Counterplay' tree is the best way to view this universe.",
     "deep": "JJK functions as a brutal negative energy economy governed by strict, lethal smart contracts (Binding Vows). The Counter-Tree visualization perfectly maps its core structural thesis: raw power is less relevant than algorithmic advantage. Anomaly nodes (like Toji) or hyper-optimized domain expansions routinely crash the system by bypassing established physical laws or leveraging asymmetric information."

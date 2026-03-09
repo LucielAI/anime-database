@@ -2,18 +2,9 @@ import { useState, useEffect, useCallback, memo } from 'react';
 import ImageWithFallback from './ImageWithFallback';
 import DangerBar from './DangerBar';
 import { resolveColor } from '../utils/resolveColor';
-
-const RELATIONSHIP_COLORS = {
-  ally: '#22d3ee',
-  enemy: '#ef4444',
-  rival: '#f59e0b',
-  mentor: '#a855f7',
-  betrayal: '#ec4899',
-  dependent: '#6b7280',
-  counter: '#10b981',
-  mirror: '#8b5cf6',
-  successor: '#22d3ee',
-};
+import { RELATIONSHIP_COLORS } from '../config/relationshipColors';
+import { computeRadialPositions } from '../utils/radialLayout';
+import { useAutoHighlight } from '../hooks/useAutoHighlight';
 
 const HoverLink = ({ href, children, className, hoverGlow }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -85,53 +76,18 @@ function BootstrapParadoxBanner({ events, theme, isSystemMode }) {
 }
 
 function RelationshipWeb({ characters, relationships, theme, isSystemMode, isRevealing, revealStep }) {
-  const [hovered, setHovered] = useState(null);
-  const [hasInteracted, setHasInteracted] = useState(false);
-
-  // Wow Graph Moment (AoT Causal Loop Focus)
-  const triggerHighlight = useCallback((delay = 600) => {
-    const timer = setTimeout(() => {
-      setHovered(current => {
-        if (!hasInteracted && !current && characters && characters.length > 0) {
-          const eren = characters.find(c => c.name === 'Eren Yeager');
-          if (eren) return eren.name;
-          
-          const degrees = {};
-          if (relationships) {
-            relationships.forEach(r => {
-              degrees[r.source] = (degrees[r.source] || 0) + 1;
-              degrees[r.target] = (degrees[r.target] || 0) + 1;
-            });
-          }
-          const maxNode = Object.keys(degrees).reduce((a, b) => (degrees[a] || 0) > (degrees[b] || 0) ? a : b, characters[0]?.name);
-          return maxNode;
-        }
-        return current;
-      })
-    }, delay);
-    return () => clearTimeout(timer);
-  }, [characters, relationships, hasInteracted]);
-
-  useEffect(() => {
-    if (!isRevealing) return triggerHighlight(600);
-  }, [isRevealing, triggerHighlight]);
-
-  useEffect(() => {
-    if (isRevealing && revealStep === 4) return triggerHighlight(0);
-  }, [isRevealing, revealStep, triggerHighlight]);
+  const { highlighted: hovered, setHighlighted: setHovered, markInteracted } = useAutoHighlight({
+    items: characters || [],
+    relationships: relationships || [],
+    isRevealing,
+    revealStep,
+  });
 
   if (!relationships || relationships.length === 0) return null;
   const cx = 200, cy = 120, radius = 85;
   const width = 400, height = 260;
 
-  const nodes = characters.map((char, i) => {
-    const angle = (2 * Math.PI * i) / characters.length - Math.PI / 2;
-    return {
-      ...char,
-      x: cx + radius * Math.cos(angle),
-      y: cy + radius * Math.sin(angle),
-    };
-  });
+  const nodes = computeRadialPositions(characters, cx, cy, radius);
 
   const nodeMap = {};
   nodes.forEach(n => { nodeMap[n.name] = n; });
@@ -177,7 +133,7 @@ function RelationshipWeb({ characters, relationships, theme, isSystemMode, isRev
             <g
               key={node.name}
               onMouseEnter={() => {
-                setHasInteracted(true);
+                markInteracted();
                 setHovered(node.name);
               }}
               onMouseLeave={() => setHovered(null)}

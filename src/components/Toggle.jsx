@@ -4,8 +4,13 @@ const Toggle = ({ isSystemMode, setIsSystemMode, theme }) => {
   return (
     <div className="flex w-full justify-center my-6 px-4">
       <div
-        className="bg-black/40 p-1 rounded-full border border-white/10 flex items-center gap-1 cursor-pointer transition-all duration-500 relative w-full md:w-auto overflow-hidden backdrop-blur-xl hover:border-white/20"
+        role="switch"
+        aria-checked={isSystemMode}
+        aria-label={`Switch to ${isSystemMode ? 'Lore' : 'System'} mode`}
+        tabIndex={0}
+        className="bg-black/40 p-1 rounded-full border border-white/10 flex items-center gap-1 cursor-pointer transition-all duration-500 relative w-full md:w-auto overflow-hidden backdrop-blur-xl hover:border-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
         onClick={() => setIsSystemMode(!isSystemMode)}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsSystemMode(!isSystemMode) } }}
       >
         <div
           className={`absolute top-1 bottom-1 w-[calc(50%-2px)] rounded-full transition-all duration-500 ease-in-out pointer-events-none ${

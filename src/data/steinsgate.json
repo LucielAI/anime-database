@@ -16,6 +16,13 @@
   "animeImageUrl": null,
   "visualizationHint": "timeline",
   "visualizationReason": "Steins;Gate is structurally defined by worldline divergence and attractor field convergence. Every meaningful event is a causal fork — D-Mails rewrite history, time leaps overwrite memory, and the entire plot is a single actor navigating a branching temporal graph toward an escape trajectory. The timeline renderer is the only lens that captures this.",
+  "headerFlavor": {
+    "loreQuote": "EL PSY KONGROO.",
+    "sysWarning": "// [SYS_LOCK]: ATTRACTOR FIELD CONVERGENCE — DIVERGENCE 1.048596%",
+    "sysWarningColor": "cyan"
+  },
+  "backgroundMotif": "temporal",
+  "revealOverlay": "glow-border-soft",
   "aiInsights": {
     "casual": "Steins;Gate is about being trapped in a universe that keeps forcing the same tragedies no matter what you change. Okabe discovers time travel by accident — a microwave, a phone, and a CRT television accidentally create a device that sends 36-byte text messages to the past. But every fix shifts the disaster somewhere else: save one friend in one timeline, lose another in the next. The timeline view shows how every message rewrites reality, how SERN and shadow intelligence agencies wage a secret war over time itself, and how the only escape requires not preventing tragedy but perfectly faking it.",
     "deep": "Steins;Gate operates as a deterministic attractor-field system where worldline convergence enforces inevitability within bounded probability corridors. Alpha (0–1% divergence) guarantees SERN dystopia and Mayuri's death; Beta (1–2%) guarantees Kurisu's death and World War III via Stratfor/DURPA competition over her stolen thesis and the Amadeus cognitive archive. The protagonist's Reading Steiner anomaly — cross-worldline memory persistence — transforms him into the system's sole stateful debugger. The escape is divergence 1.048596%: a needle-thin corridor that satisfies both fields' convergence constraints simultaneously through observation falsification (Operation Skuld), enabled only after a motivational bootstrap from the future (Operation Arc-Light). The system is not beaten by force but by spoofing its own constraint checker."

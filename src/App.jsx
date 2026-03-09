@@ -180,7 +180,7 @@ function Home() {
               <Link
                 to={`/universe/${data.id}`}
                 key={data.anime}
-                className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500 relative flex flex-col animate-fade-in"
+                className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500 relative flex flex-col animate-fade-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
                 style={{
                   border: `1px solid ${theme.primary}`,
                   animationDelay: `${idx * 120}ms`,
@@ -188,6 +188,8 @@ function Home() {
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 0 30px ${theme.glow}` }}
                 onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none' }}
+                onFocus={(e) => { e.currentTarget.style.boxShadow = `0 0 30px ${theme.glow}` }}
+                onBlur={(e) => { e.currentTarget.style.boxShadow = 'none' }}
               >
                 <div className="relative w-full overflow-hidden shrink-0" style={{ aspectRatio: '16/10' }}>
                   {data.animeImageUrl ? (
@@ -267,7 +269,7 @@ function Home() {
                 animationFillMode: 'both',
               }}
             >
-              <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+              <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-red-500 motion-safe:animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
               <Lock className="w-8 h-8 text-white/20 mb-4" />
               <div className="text-xl md:text-2xl font-bold tracking-widest text-white/20 uppercase mb-2">CLASSIFIED</div>
               <div className="text-[8px] md:text-[10px] font-bold tracking-[0.2em] text-white/20 uppercase max-w-[80%] text-center border border-white/10 px-3 py-1.5 rounded bg-black/50">
