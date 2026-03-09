@@ -8,13 +8,20 @@ const args = process.argv.slice(2)
 
 if (args.length === 0) {
   console.log('\n[ERROR] Missing payload path.')
-  console.log('Usage: npm run add:universe <core-or-legacy-json> [slug] [extended-json]\n')
+  console.log('Usage: npm run add:universe <core-or-legacy-json> [slug] [extended-json] [--layered]\n')
   process.exit(1)
 }
 
-const sourceCorePath = path.resolve(process.cwd(), args[0])
-let slug = args[1]
-const sourceExtendedPath = args[2] ? path.resolve(process.cwd(), args[2]) : null
+const positionalArgs = args.filter(arg => !arg.startsWith('--'))
+const flags = new Set(args.filter(arg => arg.startsWith('--')))
+
+const sourceCorePath = path.resolve(process.cwd(), positionalArgs[0])
+let slug = positionalArgs[1]
+const sourceExtendedPath = positionalArgs[2] ? path.resolve(process.cwd(), positionalArgs[2]) : null
+
+const forceLayeredOutput = flags.has('--layered')
+const inferLayeredOutput = sourceCorePath.endsWith('.core.json')
+const outputMode = forceLayeredOutput || inferLayeredOutput ? 'layered' : 'legacy'
 
 try {
   const corePayload = JSON.parse(fs.readFileSync(sourceCorePath, 'utf-8'))
@@ -28,6 +35,7 @@ try {
 
   console.log(`\n======================================================`)
   console.log(`[INTEGRATION PIPELINE] Ingesting: ${corePayload.anime}`)
+  console.log(`[MODE] ${outputMode.toUpperCase()} (${outputMode === 'legacy' ? 'writes slug.json' : 'writes slug.core.json'})`)
   console.log(`======================================================\n`)
 
   const coreValidation = validateCorePayload(corePayload)
@@ -38,14 +46,19 @@ try {
 
   console.log(`✓ Core schema validation passed (Warnings: ${coreValidation.warnings.length})`)
 
-  const coreTargetPath = path.resolve(__dirname, `../src/data/${slug}.core.json`)
   const legacyTargetPath = path.resolve(__dirname, `../src/data/${slug}.json`)
+  const coreTargetPath = path.resolve(__dirname, `../src/data/${slug}.core.json`)
 
-  fs.writeFileSync(coreTargetPath, JSON.stringify(corePayload, null, 2))
-  if (fs.existsSync(legacyTargetPath)) {
-    console.log(`✓ Preserved existing legacy file src/data/${slug}.json (core file takes precedence)`) 
+  if (outputMode === 'legacy') {
+    fs.writeFileSync(legacyTargetPath, JSON.stringify(corePayload, null, 2))
+    console.log(`✓ Copied payload to src/data/${slug}.json (legacy-compatible mode)`)
+  } else {
+    fs.writeFileSync(coreTargetPath, JSON.stringify(corePayload, null, 2))
+    console.log(`✓ Copied core payload to src/data/${slug}.core.json`)
+    if (fs.existsSync(legacyTargetPath)) {
+      console.log(`✓ Preserved existing legacy file src/data/${slug}.json (core file takes precedence in runtime registry)`)
+    }
   }
-  console.log(`✓ Copied core payload to src/data/${slug}.core.json`)
 
   if (sourceExtendedPath) {
     const extendedPayload = JSON.parse(fs.readFileSync(sourceExtendedPath, 'utf-8'))
@@ -58,13 +71,13 @@ try {
 
     const extendedTargetPath = path.resolve(__dirname, `../src/data/${slug}.extended.json`)
     fs.writeFileSync(extendedTargetPath, JSON.stringify(extendedPayload, null, 2))
-    console.log(`✓ Copied extended dataset to src/data/${slug}.extended.json`) 
+    console.log(`✓ Copied extended dataset to src/data/${slug}.extended.json`)
     console.log(`✓ Extended validation passed (Warnings: ${extendedValidation.warnings.length})`)
   }
 
   const explorePath = path.resolve(__dirname, '../src/components/ExploreAnotherUniverse.jsx')
   if (fs.existsSync(explorePath)) {
-    let exploreContent = fs.readFileSync(explorePath, 'utf-8')
+    const exploreContent = fs.readFileSync(explorePath, 'utf-8')
     const escapedName = corePayload.anime.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
     const pendingRegex = new RegExp(`\\s*\\{[^}]*name:\\s*['"]${escapedName}['"][^}]*\\},?`, 'g')
     const updatedContent = exploreContent

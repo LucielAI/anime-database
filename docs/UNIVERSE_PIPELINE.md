@@ -51,7 +51,9 @@ npm run validate:payload path/to/slug.extended.json
 ### Stage 5 — Integration
 Run:
 ```bash
-npm run add:universe path/to/slug.core.json [slug] [path/to/slug.extended.json]
+npm run add:universe path/to/payload.json [slug] [path/to/slug.extended.json]
+# default: writes slug.json (legacy mode)
+# add --layered or pass a .core.json input to write slug.core.json
 ```
 
 ### Stage 6 — Deployment

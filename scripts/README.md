@@ -1,16 +1,44 @@
 # Anime Architecture Archive - Utilities Hub
 
-This directory contains standalone Python intelligence scripts designed to automate and rigorously enforce the structural data requirements of the V5 Architecture. 
+This directory contains standalone utilities for data generation and ingestion.
 
-These scripts are explicitly separated from the React codebase as they are strictly **Data Generation** tools, primarily used by the AI or the maintainer during the extraction phase of a new fictional universe.
+## Core CLI Workflows
 
-### 1. `patch_jikan_images.py` (The Jikan Image Enforcer)
+### Validate a core payload
+```bash
+npm run validate:payload path/to/slug.json
+```
 
-**Reason for Existence:** 
-The Jikan v4 API's generic `/characters/{id}` endpoint is highly vulnerable to malicious or spoiler-heavy caching by MyAnimeList users (e.g., manga panels replacing official anime portraits, such as with Toji Fushiguro or Zeke Yeager).
+### Validate an extended dataset
+```bash
+npm run validate:payload path/to/slug.extended.json
+# or
+npm run validate:payload path/to/any.json --extended
+```
+
+### Add a universe (backward-compatible default)
+```bash
+npm run add:universe path/to/payload.json [slug]
+```
+Default mode writes `src/data/slug.json` (legacy behavior).
+
+### Add a layered universe (core + optional extended)
+```bash
+npm run add:universe path/to/slug.core.json [slug] [path/to/slug.extended.json]
+# or force layered output with
+npm run add:universe path/to/payload.json [slug] [path/to/slug.extended.json] --layered
+```
+Layered mode writes `src/data/slug.core.json` and optionally `src/data/slug.extended.json`.
+
+---
+
+## `patch_jikan_images.py` (The Jikan Image Enforcer)
+
+**Reason for Existence:**
+The Jikan v4 API's generic `/characters/{id}` endpoint is vulnerable to incorrect or spoiler-heavy MAL image records.
 
 **What it does:**
-This script entirely bypasses the generic character endpoint. It queries the *animated cast list endpoint* (`/anime/{id}/characters`), correlates the characters strictly by name, extracts their `mal_id` and `image_url` from the animated season explicitly, and safely injects them back into the local `.json` payload without overwriting the hand-crafted lore bio fields.
+Uses the anime cast endpoint (`/anime/{id}/characters`), correlates characters by name, and injects clean MAL image URLs into a local payload without overwriting lore fields.
 
 **Usage:**
 ```bash
