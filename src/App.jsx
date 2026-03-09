@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Dashboard from './Dashboard'
 import { ANIME_LIST } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
@@ -313,9 +314,12 @@ export default function App() {
   }, [location.pathname])
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/universe/:id" element={<UniverseRoute />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/universe/:id" element={<UniverseRoute />} />
+      </Routes>
+      <SpeedInsights />
+    </>
   )
 }
