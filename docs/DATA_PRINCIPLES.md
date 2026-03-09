@@ -62,9 +62,14 @@ The goal is structural clarity, not lore completeness.
 All newly added universes **MUST** include an `aiInsights` object containing pregenerated analysis of the system.
 
 The schema requires:
-
-- `casual`: A short, intuitive, jargon-light explanation of the core system for normal anime fans.
-- `deep`: A sharp, analytical, systems-focused interpretation (referencing mechanics, constraints, causality, etc.) that serves as an intelligent readout.
+```json
+{
+  "casual": "string",
+  "deep": "string"
+}
+```
+- **casual**: A short, intuitive, jargon-light explanation of the core system for normal anime fans.
+- **deep**: A sharp, analytical, systems-focused interpretation (referencing mechanics, constraints, causality, etc.) that serves as an intelligent readout.
 
 Do NOT generate fake ChatGPT-style dialogue. Deliver deterministic, thesis-driven archive interpretations.
 
@@ -85,5 +90,14 @@ This data is stored minimally via serverless endpoints and does not influence th
 
 ## Image Policy
 
-Do not fabricate image URLs.
-Use approved image sources or explicit fallback fields.
+### Safety & Hosting Constraints
+To ensure performance and security, the archive enforces an `ALLOWED_IMAGE_HOSTS` policy in `validateSchema.js`. All images must be hosted on:
+- `cdn.myanimelist.net`
+- `images.myanimelist.net`
+
+### Image Fallback Contract
+If an image cannot be reliably fetched or is missing from Mal, the payload must follow the fallback contract to prevent UI breakage:
+- `imageUrl`: Set to `null`.
+- `_fetchFailed`: Set to `true`.
+
+The UI component `ImageWithFallback.jsx` will detect this state and render a theme-appropriate gradient with a character icon. Do NOT fabricate image URLs.

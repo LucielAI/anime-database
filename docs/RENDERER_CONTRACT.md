@@ -45,7 +45,32 @@ Requirements:
 - strong strategic or ideological network value
 
 ### StandardCardsExplorer
-Fallback renderer when no specific visualization fits or when a specialized renderer fails safely.
+Fallback renderer when no specific visualization fits or when a specialized renderer fails safely. Use this for archives that lack a strong system thesis or causal/relational/combat density.
+
+## Selection Logic
+Renderer choice is **NOT** based on data volume, but on the **System Thesis**.
+- If the system is defined by how A leads to B (Causality) → **TimelineExplorer**.
+- If the system is defined by who knows/allies with whom (Relations) → **NodeGraphExplorer**.
+- If the system is defined by how X beats Y (Combat Economy) → **CounterTreeExplorer**.
+
+## visualizationReason
+Every payload **MUST** include a `visualizationReason` field.
+- **Purpose**: Explains to the user why this specific renderer was chosen as the most accurate lens for the universe.
+- **Placement**: Displayed in the `WhyThisRenderer` component.
+
+## Structural Profiles
+The `validateSchema.js` utility enforces "Structural Profiles" to ensure each renderer has the necessary data density to function effectively.
+
+| Component | Timeline | Node Graph | Counter Tree | Affinity |
+|---|---|---|---|---|
+| characters | 4-12 | 5-12 | 4-12 | 4-12 |
+| relationships | 6-20 | 8-25 | 6-20 | 4-20 |
+| causalEvents | 4-10 | 2-8 | 2-8 | 1-8 |
+| counterplay | 2-8 | 2-8 | 5-12 | 1-8 |
+| anomalies | 2-8 | 2-8 | 2-8 | 1-8 |
+| factions | 3-8 | 3-8 | 3-8 | 2-8 |
+| powerSystem | 3-6 | 3-6 | 3-6 | 3-6 |
+| rules | 2-6 | 2-6 | 2-6 | 2-6 |
 
 ## visualizationHint
 Payloads may include:

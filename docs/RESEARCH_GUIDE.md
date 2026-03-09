@@ -29,15 +29,19 @@ Produce research that can later be translated into a structured payload for the 
 
 ## Output Shape Recommendation
 
-Research agents should return sections like:
+Research agents should return sections that map directly to the `validateSchema.js` requirements:
 
-- Structural Thesis
-- Core Characters
-- Rules
-- Factions
-- Counterplay
-- Causal Events
-- Anomalies
-- Key Relationships
+- **System Thesis**: The overarching "big idea" that determines the visualization strategy.
+- **visualizationReason**: A one-sentence justification for the chosen renderer.
+- **aiInsights**:
+  - `casual`: High-level fan-friendly summary.
+  - `deep`: Analytical system readout.
+- **Core Characters**: With threat levels and signature moments.
+- **Rules**: Immutable laws of the universe.
+- **Factions**: Influential groups and their roles.
+- **Counterplay**: Combat logic and exploit vectors.
+- **Causal Events**: Key triggers for system change (required for Timeline).
+- **Anomalies**: Elements that break or bypass the standard rules.
+- **Key Relationships**: Edges for the relational web.
 
 This makes payload generation dramatically easier and more reliable.

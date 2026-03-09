@@ -35,9 +35,33 @@ A deterministic execution node triggers a global catastrophic cascade.
 
 1. Immediate understanding → SystemSummary
 2. Renderer justification → WhyThisRenderer
-3. Visual hook → Wow Graph Moment
-4. Exploration → multi-tab dashboard
-5. Discovery → ExploreAnotherUniverse
+3. AI readout → AIInsightPanel
+4. Visual hook → Wow Graph Moment
+5. Exploration → multi-tab dashboard
+6. Discovery → ExploreAnotherUniverse
+
+## Core Systems
+
+### AI Insight System
+The `AIInsightPanel` provides high-level automated commentary on the universe.
+- **Payload Field**: `aiInsights` (required for new universes).
+- **Modes**: Support for `casual` (fan-friendly) vs `deep` (system-analytical) explanations.
+- **Behavior**: Simulates a real-time "system scan" with streaming text animations to enhance the "Control Room" aesthetic.
+
+### WhyThisRenderer
+Every universe explains its own visualization choice through the `WhyThisRenderer` component.
+- **Payload Field**: `visualizationReason`.
+- **Purpose**: Educates the user on *why* a specific lens (Timeline, Node Graph, etc.) was chosen to represent this specific system thesis.
+
+### Share Frame Mode
+A specialized UI state optimized for social media capture (TikTok/Reels/X).
+- **Function**: Toggles a clean, centered layout with branding, high-level bullets, and the core visualization.
+- **Optimization**: Specifically designed for 9:16 vertical video and 1:1 square screenshots.
+
+### ExploreAnotherUniverse
+A dynamic navigation system that encourages cross-archive discovery.
+- **Architecture**: Reads from the dynamic universe registry in `src/data/index.js`.
+- **States**: Handles transitions between existing archives and "pending" classified slots.
 
 ## Current Universes
 - Attack on Titan
@@ -59,10 +83,12 @@ The archive serves multiple simultaneous goals:
 ## Community Feedback
 - **Feedback Block**: A compact section on each universe page asking "Was this archive helpful?" with vote buttons and a "Needs More Data" flag.
 - **Suggest an Anime**: Input field for users to suggest new universes for the archive.
-- **Storage**: Minimal serverless endpoints (`/api/feedback`, `/api/suggest`) backed by Supabase. No personal data collected.
+- **Back-end Flow**: Minimal serverless endpoints (`/api/feedback`, `/api/suggest`) handle incoming signals.
+- **Infrastructure**: Backed by Supabase (optional infrastructure). No personal data collected.
 
 ## Analytics
-- **GoatCounter**: Lightweight, privacy-friendly page view tracking. No cookies, no personal data. Script loaded via placeholder URL in `index.html`.
+- **GoatCounter**: Lightweight, privacy-first page view tracking.
+- **Strategy**: No cookies, no personal data, ensuring the archive remains a clean intelligence tool rather than a marketing tracker. Script loaded via dynamic placeholder.
 
 ## Long-Term Direction
 The project should grow by adding new universes through a stable ingestion pipeline, not by constantly rebuilding the engine.
