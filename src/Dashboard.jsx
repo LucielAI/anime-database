@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { ExternalLink, Camera, X } from 'lucide-react'
+import { ExternalLink, Camera, X, Network } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
 import SystemSummary from './components/SystemSummary'
@@ -89,15 +89,18 @@ export default function Dashboard({ data }) {
 
       {/* Share Frame Overlay */}
       {isShareFrame && (
-        <div className="fixed inset-0 z-[60] bg-[#050508] flex flex-col items-center justify-center p-6 overflow-y-auto">
+        <div className="fixed inset-0 z-[60] bg-[#050508] flex flex-col items-center justify-center px-4 py-6 md:p-6 overflow-y-auto">
           <button
             onClick={toggleShareFrame}
-            className="fixed top-6 right-6 z-[70] p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="fixed top-4 right-4 z-[70] p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center"
           >
             <X className="w-5 h-5 text-white" />
           </button>
 
-          <div className="max-w-lg w-full flex flex-col items-center text-center gap-6 py-8">
+          <div className="max-w-lg w-full flex flex-col items-center text-center gap-5 py-6">
+            {/* Top accent line */}
+            <div className="w-12 h-0.5 rounded-full opacity-40" style={{ backgroundColor: theme.primary }} />
+
             <div
               className="inline-flex items-center px-3 py-1 rounded text-[9px] font-bold tracking-[0.25em] uppercase border"
               style={{ color: theme.primary, borderColor: `${theme.primary}40`, backgroundColor: `${theme.primary}10` }}
@@ -105,27 +108,42 @@ export default function Dashboard({ data }) {
               {classLabel}
             </div>
 
-            <h1
-              className="text-3xl md:text-5xl font-bold uppercase tracking-tighter bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent"
-              style={{ textShadow: `0 0 15px ${theme.glow}` }}
-            >
+            <h1 className="text-2xl md:text-5xl font-bold uppercase tracking-tighter text-white/90">
               {animeName}
             </h1>
 
-            <div className="space-y-3 text-left w-full max-w-md">
+            <div className="space-y-2.5 text-left w-full max-w-md px-2">
               {shareFrameBullets.map(b => (
-                <div key={b.id} className="flex items-start gap-3">
+                <div key={b.id} className="flex items-start gap-2.5">
                   <span className="w-1.5 h-1.5 rounded-sm mt-1.5 shrink-0 opacity-60" style={{ backgroundColor: theme.primary }} />
-                  <span className="text-sm text-gray-400 leading-relaxed">{b.lore}</span>
+                  <span className="text-xs md:text-sm text-gray-400 leading-relaxed">{b.lore}</span>
                 </div>
               ))}
             </div>
 
-            <div className="w-full max-w-md mt-2 rounded-lg border border-white/5 overflow-hidden bg-[#0a0a10] p-4">
-              <WhyThisRenderer data={data} isSystemMode={false} theme={theme} revealStep={0} isRevealing={false} />
+            <div className="w-full max-w-md mt-1 rounded-lg border border-white/5 overflow-hidden bg-[#0a0a10] px-4 py-3">
+              <div className="flex items-start gap-3">
+                <div className="shrink-0 p-2 rounded-lg bg-[#050508]/80 border border-white/5">
+                  <Network className="w-4 h-4" style={{ color: theme.primary }} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold tracking-[0.2em] text-white/50 uppercase mb-1">
+                    WHY {(data?.visualizationHint || '').replace(/-/g, ' ').toUpperCase()}?
+                  </p>
+                  <p className="text-xs text-gray-400 font-mono leading-relaxed">
+                    <span className="text-white/90">Because</span>{' '}
+                    {(() => {
+                      const r = data?.visualizationReason || data?.thesis || ''
+                      return r.toLowerCase().startsWith('because') ? r.substring(8).trim() : r
+                    })()}
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="mt-4 text-[10px] text-white/20 tracking-[0.3em] uppercase font-bold">
+            <div className="w-12 h-0.5 rounded-full opacity-20 mt-1" style={{ backgroundColor: theme.primary }} />
+
+            <div className="text-[10px] text-white/20 tracking-[0.3em] uppercase font-bold">
               animearchive.app
             </div>
           </div>
@@ -166,13 +184,13 @@ export default function Dashboard({ data }) {
         <div className="absolute inset-0 bg-linear-to-b from-[#050508]/20 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center md:items-start text-center md:text-left gap-4 md:flex-row md:justify-between">
           <div className="flex flex-col items-center md:items-start gap-3">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2 md:gap-3">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/10 rounded-full text-[10px] tracking-[0.3em] font-bold text-white/50 bg-white/5 backdrop-blur-xl">
                 <span className={`w-1.5 h-1.5 rounded-full ${isSystemMode ? 'bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.6)]' : 'bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.6)]'}`} />
                 ARCHIVE ACTIVE <span className="text-white/20 mx-1">|</span> ID: {data?.malId}
               </div>
-              <div 
-                className="px-2 py-1 rounded text-[9px] font-bold tracking-[0.25em] border backdrop-blur-md" 
+              <div
+                className="px-2 py-1 rounded text-[9px] font-bold tracking-[0.25em] border backdrop-blur-md"
                 style={{ color: theme.primary, borderColor: `${theme.primary}40`, backgroundColor: `${theme.primary}10` }}
               >
                 {getClassificationLabel(data?.visualizationHint)}
@@ -272,7 +290,7 @@ export default function Dashboard({ data }) {
       <WhyThisRenderer data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
       {/* Action Buttons */}
-      <div className="max-w-6xl mx-auto px-6 mb-4 flex flex-wrap justify-end gap-3 relative z-50 share-frame-hide">
+      <div className="max-w-6xl mx-auto px-6 mb-4 flex flex-wrap justify-center md:justify-end gap-3 relative z-50 share-frame-hide">
         <ShareButton
           title={animeName}
           systemLabel={classLabel}
