@@ -1,12 +1,13 @@
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation } from 'react-router-dom'
-import { SpeedInsights } from '@vercel/speed-insights/react'
-import { Analytics } from '@vercel/analytics/react'
 import Dashboard from './Dashboard'
 import { ANIME_LIST } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
 import { deriveBullets } from './utils/deriveBullets'
 import { getClassificationLabel } from './utils/getClassificationLabel'
+
+const SpeedInsights = lazy(() => import('@vercel/speed-insights/react').then(m => ({ default: m.SpeedInsights })))
+const Analytics = lazy(() => import('@vercel/analytics/react').then(m => ({ default: m.Analytics })))
 
 function Home() {
   const totalEntities = ANIME_LIST.reduce((sum, a) => sum + (a.characters?.length || 0), 0)
@@ -76,12 +77,16 @@ function Home() {
               style={{ border: `1px solid ${ft.primary}50` }}
             >
               <div className="flex flex-col md:flex-row">
-                {/* Image side */}
-                <div className="relative w-full md:w-2/5 h-48 md:h-auto md:min-h-[280px] overflow-hidden shrink-0">
+                {/* Image side — stable aspect ratio prevents CLS */}
+                <div className="relative w-full md:w-2/5 overflow-hidden shrink-0" style={{ aspectRatio: '4/3' }}>
                   {featured.animeImageUrl ? (
                     <img
                       src={featured.animeImageUrl}
                       alt={featured.anime}
+                      width={480}
+                      height={360}
+                      fetchpriority="high"
+                      decoding="async"
                       className="w-full h-full object-cover object-center opacity-70 group-hover:opacity-90 transition-all duration-700 group-hover:scale-105"
                     />
                   ) : (
@@ -184,12 +189,15 @@ function Home() {
                 onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 0 30px ${theme.glow}` }}
                 onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none' }}
               >
-                <div className="h-[55%] min-h-[180px] relative w-full overflow-hidden shrink-0">
+                <div className="relative w-full overflow-hidden shrink-0" style={{ aspectRatio: '16/10' }}>
                   {data.animeImageUrl ? (
                     <img
                       src={data.animeImageUrl}
                       alt={data.anime}
-                      loading="lazy"
+                      width={400}
+                      height={250}
+                      loading={idx < 3 ? 'eager' : 'lazy'}
+                      decoding="async"
                       className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition-all duration-700 ease-out group-hover:scale-110"
                     />
                   ) : (
@@ -344,8 +352,10 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/universe/:id" element={<UniverseRoute />} />
       </Routes>
-      <SpeedInsights />
-      <Analytics />
+      <Suspense fallback={null}>
+        <SpeedInsights />
+        <Analytics />
+      </Suspense>
     </>
   )
 }
