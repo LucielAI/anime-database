@@ -67,3 +67,31 @@ The archive is intentionally optimized for both portfolio strength and TikTok/sh
 
 Why:
 Those two goals reinforce each other instead of conflicting.
+
+## ADR-009 — Shared Utility Extraction
+Decision:
+`deriveBullets` and `getClassificationLabel` are extracted into `src/utils/` and shared across landing page, dashboard, and share surfaces.
+
+Why:
+Avoids logic duplication and ensures consistent bullet/label derivation everywhere.
+
+## ADR-010 — Serverless Feedback with Supabase
+Decision:
+Community feedback and suggestions are stored via narrowly scoped Vercel serverless endpoints (`/api/feedback`, `/api/suggest`) backed by Supabase free tier. Credentials are server-side only (`SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`). No public admin API — data is viewed via Supabase dashboard.
+
+Why:
+Lightweight, free, and avoids building a backend. Strict input validation and minimal responses reduce attack surface.
+
+## ADR-011 — GoatCounter Analytics
+Decision:
+Use GoatCounter for page view tracking. Script is loaded with a placeholder URL in `index.html` that can be swapped for a real instance.
+
+Why:
+Privacy-friendly, no cookies, no personal tracking, lightweight (~3.5KB), free tier available.
+
+## ADR-012 — Share Frame Mode
+Decision:
+A CSS-driven layout toggle that optimizes the universe page for screenshots. No image generation or export pipeline.
+
+Why:
+Enables TikTok/social sharing without infrastructure. Users screenshot the optimized layout directly.

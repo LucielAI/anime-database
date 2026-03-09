@@ -52,5 +52,17 @@ The archive serves multiple simultaneous goals:
 - an AI-assisted content and knowledge engine
 - a framework for analyzing fictional systems
 
+## Sharing
+- **Share Frame Mode**: A screenshot-optimized layout toggle on universe pages. Centers title, classification, 3 structural bullets, and graph with archive branding. Designed for 1:1 and 9:16 screenshot compositions.
+- **Share Button**: Uses `navigator.share()` with clipboard fallback. Shares anime title, system label, and route URL.
+
+## Community Feedback
+- **Feedback Block**: A compact section on each universe page asking "Was this archive helpful?" with vote buttons and a "Needs More Data" flag.
+- **Suggest an Anime**: Input field for users to suggest new universes for the archive.
+- **Storage**: Minimal serverless endpoints (`/api/feedback`, `/api/suggest`) backed by Supabase. No personal data collected.
+
+## Analytics
+- **GoatCounter**: Lightweight, privacy-friendly page view tracking. No cookies, no personal data. Script loaded via placeholder URL in `index.html`.
+
 ## Long-Term Direction
 The project should grow by adding new universes through a stable ingestion pipeline, not by constantly rebuilding the engine.
