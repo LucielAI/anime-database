@@ -21,7 +21,7 @@ Input:
 - optionally RESEARCH_GUIDE.md
 
 Output:
-- structured research file
+- structured research file → save to `research/{slug}_research.txt`
 
 ### Stage 2 — Extended Dataset (optional but recommended)
 Output:
