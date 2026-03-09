@@ -2,8 +2,11 @@ import { validateCorePayload } from '../utils/validateSchema'
 
 // Runtime registry loader for layered universe data.
 // Non-breaking resolution order per slug: .core.json -> legacy .json.
-// .extended.json is loaded for tooling/reference but not rendered by default.
-const dataFiles = import.meta.glob('./*.json', { eager: true })
+// Keep the runtime bundle scoped to renderer-facing payloads only.
+// Extended research datasets stay out of eager client imports.
+const dataFiles = import.meta.glob(['./*.json', '!./*.extended.json'], {
+  eager: true
+})
 
 function extractSlug(filePath) {
   const fileName = filePath.split('/').pop() || ''
