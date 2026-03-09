@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation } from 'react-router-dom'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Analytics } from '@vercel/analytics/react'
 import Dashboard from './Dashboard'
 import { ANIME_LIST } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
@@ -320,6 +321,7 @@ export default function App() {
         <Route path="/universe/:id" element={<UniverseRoute />} />
       </Routes>
       <SpeedInsights />
+      <Analytics />
     </>
   )
 }
