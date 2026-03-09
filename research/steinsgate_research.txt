@@ -1,0 +1,191 @@
+﻿Archival Report: Temporal Mechanics, Geopolitics, and Phenomenological Anomalies within the Steins;Gate Universe
+The temporal architecture of the observed universe represents a highly complex, deterministic, yet malleable framework wherein localized quantum manipulation can fundamentally rewrite global causality. Centered primarily on the events originating in the Akihabara district of Tokyo during the summer of 2010, the paradigm shift from theoretical physics to applied temporal engineering catalyzed unprecedented geopolitical conflicts. This exhaustive archival report synthesizes the mechanical operations of macro-temporal worldlines, the phenomenological anomaly of cognitive timeline retention, the technological evolution of temporal displacement devices, and the clandestine warfare waged by shadow organizations competing for a monopoly on time itself. By examining the intersections of human agency, artificial intelligence, and quantum physics, this document provides a definitive structural analysis of the Steins;Gate phenomenon and its broader implications within the Science Adventure framework.
+The Theoretical Architecture of Chronology
+To comprehend the mechanics of time travel within this paradigm, one must discard the classical linear perception of time and the entirely divergent "parallel multiverse" model. Instead, the universe operates on a dynamic, singular-state system governed by chaotic evolution, deterministic convergence, and quantum superposition.
+Worldlines and the Determinism of Attractor Fields
+A "world line" is defined as a singular, chronological sequence of events spanning from the universe's inception to its end. At any given moment, only one world line is active. The inactive world lines do not exist as parallel physical realities running concurrently; rather, they exist as dormant quantum possibilities. When a temporal intervention occurs—such as physical matter or digital data arriving from the future—the active world line undergoes a "shift." The universe instantaneously reconstructs its entire causal history to accommodate the new parameters, activating a previously dormant world line while deactivating the original.
+These practically infinite world lines are not distributed randomly. Drawing upon the many-worlds interpretation of quantum mechanics and the "strange attractors" of chaos theory, world lines bundle together into massive clusters known as "Attractor Fields". Utilizing a conceptual framework articulated by temporal agent Suzuha Amane, the universe's structure resembles a tightly twisted ball of yarn. At a micro-level, the individual threads (world lines) exhibit infinite variations and branching paths; however, at a macro-level, these threads are braided into robust bundles that are violently pulled toward specific, inescapable outcomes known as convergence points.
+The macro-structure of global causality is partitioned into several primary Attractor Fields, classified by their overarching divergent characteristics:
+Attractor Field
+	Divergence Range
+	Defining Convergence Points and Geopolitical Outcomes
+	Dominant Hegemony
+	Alpha (\alpha)
+	0.000000% to 0.999999%
+	The inevitable death of Mayuri Shiina in August 2010; the completion of the SERN time machine in 2034; the establishment of a global totalitarian dystopia by 2036.
+	SERN / Committee of 300
+	Beta (\beta)
+	1.000000% to 1.999999%
+	The death of Kurisu Makise on July 28, 2010; the theft of her temporal thesis; a global temporal arms race culminating in decades of World War III.
+	Stratfor / DURPA / Russian Federation
+	Gamma (\gamma)
+	2.000000% to 2.999999%
+	The Y2K disaster severely alters global infrastructure; SERN establishes temporal dominance decades early; Rintaro Okabe operates as a high-ranking Rounder and eventual dictator.
+	SERN / Rounders
+	Delta (\delta)
+	3.000000% to 3.999999%
+	A highly anomalous, peaceful baseline where neither the SERN dystopia nor the threat of World War III looms over humanity.
+	None
+	Omega (\omega)
+	Negative Values (e.g., -0.275349%)
+	Rintaro Okabe never founds the Future Gadget Laboratory; time travel technology likely remains undiscovered; Okabe acts as a competitive RaiNet player alongside Faris NyanNyan.
+	None
+	Steins Gate
+	Exactly 1.048596%
+	Exists precisely on the boundary between Alpha and Beta; successfully evades both the death of critical agents and the outbreak of dystopian/nuclear global warfare; an unwritten future.
+	Unknown / Unwritten
+	The gravitational pull of an Attractor Field's convergence is absolute. If a world line determines that an event such as an individual's death is a necessary pillar for the future architecture of that Attractor Field, the universe will continually course-correct to ensure that death occurs, regardless of localized interventions. The proximity of a world line's divergence value to the field's boundary mathematically influences the velocity and strength of this convergence; for instance, divergence values approaching 0.000000$\alpha$ accelerate the realization of the SERN dystopia with overwhelming systemic force.
+Applied Physics and The Eleven Theories of Temporal Transit
+The foundation of temporal transit relies heavily on theoretical physics frameworks disseminated by the time traveler utilizing the alias John Titor. Titor identified eleven specific theories of time travel accepted by the scientific community, which inform the engineering of temporal displacement technologies.
+Prominent among these is the Black Hole Theory, which focuses heavily on Kerr black holes. Unlike standard singularities, Kerr black holes possess mass and angular momentum but remain devoid of electrical charge. A Kerr black hole features two distinct event horizons and a ring-formed singularity; navigating between these horizons allows an object to access a spatial-temporal inversion, hypothetically permitting reverse chronological transit.
+Other theoretical models evaluated by factions include the Neutron Star Theory, which relies on extreme gravitational time dilation (slowing local time by 30% relative to external space) to allow forward temporal movement, though it prohibits backward transit. The Light Speed Theory draws on Einsteinian relativity, as demonstrated by proton acceleration within CERN's Large Hadron Collider (LHC), where particles experience time 7,454 times slower than the outside world. Backward transit under this paradigm requires exceeding light speed via theoretical mechanisms such as the Tachyon Theory (later dismissed due to faulty equipment in the OPERA project), Wormhole and Exotic Matter Theories (utilizing negative mass, verified by Bose-Einstein condensate experiments in 2017, to stabilize Einstein-Rosen bridges), or the Elementary Particle Ring and Laser Theory (utilizing ring lasers to warp spacetime into Closed Timelike Curves). While many of these remain strictly theoretical, the Kerr black hole model serves as the mechanical baseline for physical time machines.
+The Phenomenology of Reading Steiner
+The standard mechanics of a world line shift dictate that when the past is altered, the universe reconstructs all physical matter, causal events, and human neurological memory patterns to perfectly align with the newly activated history. The localized anomaly known as "Reading Steiner" operates as a stark, phenomenological exception to this universal law.
+Reading Steiner defines an individual's capacity to maintain a contiguous stream of consciousness across macro-temporal shifts. Rintaro Okabe, the founder of the Future Gadget Laboratory (FGL), possesses the most potent and unfiltered manifestation of this anomaly. Whenever causality is rewritten, Okabe experiences profound systemic feedback—typically characterized by severe vertigo, disorientation, and acute neurological shock. Upon recovery, he finds himself geographically and temporally situated in the newly reconstructed world line, retaining perfect memory of the deactivated reality while possessing zero memory of the "new" Okabe who organically lived the reconstructed history.
+The mechanical rules governing Okabe's anomaly suggest that whenever a backward time travel event leaves a timeline, a snapshot of his memory attaches to the transit vector. When the temporal event arrives in the past of the new timeline, Okabe's consciousness is forcefully mapped onto his biological host, provided he is alive at the specific calendar time the shift occurs. If the causal shift results in a localized time loop, the associated memory data is discarded to prevent infinite cognitive recursion. This absolute retention renders Okabe the universe's sole continuous observer, transforming him into a critical strategic asset capable of charting Attractor Fields, while simultaneously subjecting him to unparalleled psychological trauma as he bears the exclusive memory of countless aborted timelines and the violent deaths of his peers.
+To quantify these shifts, Okabe engineers the "Divergence Meter" in the year 2021 of the Alpha Attractor Field. Composed of Nixie tubes, this device calculates the exact divergence ratio of the active world line relative to the baseline. Crucially, the Divergence Meter is operationally useless to anyone lacking Reading Steiner; when a world line shifts, ordinary observers undergo memory reconstruction, rendering them incapable of recognizing that the numbers on the meter have changed.
+While Okabe's manifestation is absolute, longitudinal analysis reveals that Reading Steiner is not entirely unique, but rather a latent capacity inherent to human consciousness. In ordinary individuals, the reconstruction of memory is occasionally imperfect, allowing faint neurological echoes of deactivated world lines to bleed into the active reality. These echoes typically manifest as hyper-vivid dreams, profound feelings of déjà vu, or sudden intuitive leaps. Kurisu Makise, for example, instinctively recalls traumatic events from Alpha world lines while residing on the Steins Gate line, bewildered by her own unearned knowledge. Similarly, the Amadeus artificial intelligence system, built upon Kurisu's neurological patterns, sporadically inherits cross-worldline data moments prior to forced deletion. In the Beta Attractor Field, this latent phenomenon reaches epidemic proportions; a widespread outbreak of uncontrolled memory bleed is clinically misdiagnosed as "New Encephalitis," a condition fiercely monitored by intelligence agencies seeking to identify individuals with high temporal sensitivity.
+Applied Temporal Engineering and Hardware Architecture
+The transition of time travel from abstract physical theory to functional hardware was achieved through rapid, localized iteration by the Future Gadget Laboratory (FGL). Operating initially out of a cramped apartment above a CRT repair shop in Akihabara, the FGL developed a series of bizarre inventions, officially cataloging eleven members (Lab Mems 001 through 011) over various timelines.
+The Future Gadget Inventory
+Before successfully manipulating the space-time continuum, the laboratory designed a series of eccentric, largely impractical devices designated as "Future Gadgets." The architectural foundation of their eventual success was built upon these iterative failures.
+Gadget Designation
+	Name
+	Primary Function / Alias
+	No. 1
+	Bit Particle Gun
+	A functional toy gun modified to resemble a television remote. ("Mobile Jacket Gunbam")
+	No. 2
+	Bamboo Helicam
+	A camera attached to a propeller device, highly unstable in flight. ("22 Emon")
+	No. 3
+	Could This Be Ora Ora!?
+	A lie detector apparatus utilizing thumb-sweat sensors. ("Juju's Delicate Adventure")
+	No. 4
+	Moad Snake
+	An instant humidifier requiring massive amounts of water, resulting in structural flooding. ("Metal Moa Solid: Rising")
+	No. 5
+	Once again, I made something worthless, by Goemon
+	An automated, high-velocity hair-drying apparatus. ("Lupants the Third")
+	No. 6
+	Cyalume Saber
+	A prop sword that violently expels chemical red fluid mimicking blood. Plays a critical role in Operation Skuld. ("SparkWars")
+	No. 7
+	Ghost in the Ball
+	A localized CRT display sphere. ("Ghost in the Husk")
+	No. 8
+	PhoneWave (name subject to change)
+	The prototype temporal displacement device.
+	No. 9
+	Homing Diva
+	(Introduced in external timelines)
+	The PhoneWave and Data Transmission
+Future Gadget No. 8, the "PhoneWave," operates by an anomalous fusion of a commercial microwave oven and a mobile phone logic board. When activated, the microwave generates localized micro-singularities. However, these singularities possess event horizons that immediately crush any inputted matter. To stabilize the singularity, the system requires an external electron injector. This injection is inadvertently supplied by the massive, heavy-duty 42-inch Cathode Ray Tube (CRT) television situated in the repair shop beneath the laboratory. The influx of electrons generated by the CRT accelerates the spin of the micro-singularities until they shed their event horizons, generating "naked singularities".
+By routing digital data through this naked singularity, the PhoneWave allows for the transmission of text messages into the past. These localized data bursts are dubbed "D-Mails" (DeLorean Mails). Due to the microscopic diameter of the singularity, D-Mails face severe bandwidth constraints, limited to exactly 36 bytes of data (approximately 18 Japanese characters) per transmission. The specific temporal destination of the message is determined by the microwave's digital timer.
+When a D-Mail successfully arrives in the past, it does not rewrite history by creating a new event out of nothing; rather, it overwrites the original cause of a preexisting historical event. The universe selects an inactive world line that logically accommodates the arrival of the message and activates it. To evade interception by global surveillance networks in the Beta Attractor Field, Lab Mem 003 (Itaru Hashida) later upgrades this protocol to the "D-RINE," utilizing an encrypted messaging application to shield the causal shifts from intelligence agency detection.
+The Time Leap Machine and Cognitive Displacement
+The most sophisticated non-physical temporal device is the Time Leap Machine, engineered primarily by Lab Mem 004, the neuroscientist Kurisu Makise. The Time Leap Machine bypasses the need for physical transit by compressing and transmitting a user's total neurological memory data into the hippocampus of their past self.
+The operational mechanics of the Time Leap Machine require three integrated technologies. First, the user dons a specialized electroencephalographic headset that meticulously scans the cerebral cortex, translating neural pathways into digital data. Second, owing to the immense file size of human memory, the data must be radically compressed to fit through the PhoneWave's 36-byte bottleneck. The FGL circumvents this by establishing a covert, high-speed uplink to SERN's Large Hadron Collider (LHC); the system hijacks the LHC's massive quantum processing power to instantaneously compress the neural data into a sub-kilobyte packet. Finally, the packet is fired through the naked singularity to the user's mobile device in the past.
+Upon arrival, the mobile device utilizes a highly specialized auditory transmission technology known as "Visual Rebuilding" (VR). Originally patented on February 14, 2004, by the Department of Neuroscience at Viktor Chondria University, VR was publicly intended as a medical device to restore sight to the blind by beaming electromagnetic waves directly into the brain. However, covertly, VR serves as the mechanical baseline for "Project Noah" (as documented in the Chaos;Head paradigms), used to project artificial sensory delusions into a subject's consciousness for mind control. Kurisu Makise repurposes this exact electromagnetic frequency. When the past version of the user answers the ringing phone and places it near their ear, the VR transmission injects the compressed memory data directly into their hippocampus, effectively allowing their future consciousness to overwrite their past self.
+Biological constraints strictly limit the standard Time Leap Machine to a maximum jump of 48 hours. Human neural architecture continuously evolves; injecting memories into a brain that is chronologically older than 48 hours results in a catastrophic mismatch between the data and the physical neural pathways, inducing brain damage or irreversible vegetative states. In the Beta Attractor Field, however, Itaru Hashida and Maho Hiyajo successfully optimize the compression algorithms, engineering a Beta variant capable of safely leaping up to two weeks into the past.
+Physical Time Machines
+The ultimate evolution of temporal technology involves the physical transit of human mass through localized Kerr black holes. These vehicles resemble robust, satellite-like capsules equipped with dual inward-facing seats and complex orbital calculation suites. Travel requires immense energy, drawing upon specialized fuel cells and disposable car-battery-sized power units. The biological toll on pilots is extreme, generating intense G-forces that subjectively feel as though the body is being elastically stretched across spacetime. A critical operational flaw across all models is the necessity for continuous spatial computation; if a machine remains unpowered or stationary for a full calendar year, the navigational computers lose coordinate calibration, permanently rendering the craft inoperable.
+The geopolitical arms race yields several distinct models across varying Attractor Fields:
+Machine Model
+	Field Origin
+	Architect
+	Travel Capacity
+	Technical Specifications and Historical Outcomes
+	FG204
+	Alpha (\alpha)
+	Barrel Titor (Itaru Hashida)
+	One-Way Only
+	An incomplete prototype reverse-engineered from stolen SERN data. Builder assassinated in 2033 before completion. Used by Suzuha Amane to travel from 2036 to 2010. Arrived off-target, catastrophically crashing into the Radio Kaikan building. Subjected to a thunderstorm and partially repaired, resulting in severe memory loss for the pilot upon jumping to 1975.
+	SERN Model
+	Alpha (\alpha)
+	SERN
+	Assumed Two-Way
+	Completed in 2034, solidifying SERN's global monopoly on time travel and initiating the dystopia.
+	C203 / C204
+	Beta (\beta)
+	Itaru Hashida
+	Two-Way
+	Fully functional. The "C" designates "Christina" in honor of the deceased Kurisu Makise. Intentionally engineered to cause minor, localized divergence shifts upon arrival (e.g., 1.130209% to 1.130212%) to physically prevent the paradoxical coexistence of two identical time travelers in the same space.
+	OR204
+	Steins Gate
+	Kurisu Makise
+	Two-Way
+	Highly advanced model featuring sophisticated gravity data displays within the cockpit. Deployed specifically to implant localized traumatic memories into Rintaro Okabe, stabilizing his Reading Steiner and preventing his existence from fading from the Steins Gate world line in August 2011.
+	Global Geopolitics and the Shadow War for Temporal Hegemony
+The advent of viable temporal mechanics immediately transitions from an isolated academic breakthrough into a clandestine global war. Depending on the active Attractor Field, various shadow organizations, government intelligence agencies, and elite secret societies maneuver to establish an absolute monopoly on time.
+The Committee of 300 and the SERN Dystopia
+Operating as the overarching antagonist of the broader Science Adventure continuum, the Committee of 300 is an elite, clandestine society founded in the 1700s, composed of global power brokers operating under an extensive "360-year plan". The Committee exercises total control over global politics, military operations, international intelligence, and religion through an expansive network of front organizations, including the Illuminati and the Société Européenne pour la Recherche Nucléaire (SERN).
+The Committee's ultimate objective is the establishment of a "New World Order" facilitated by the "Human Domestication Project," which requires culling the global human population down to a manageable 1 billion citizens. In the Alpha Attractor Field, the Committee achieves this by monopolizing time travel, establishing a brutal dystopia by 2036 characterized by strict social stratification, regular psychological brainwashing, and the swift erasure of political dissidents. Their technological influence extends deeply into electromagnetic manipulation, bridging their temporal dominance in Steins;Gate with their psychological subjugation projects observed in Chaos;Head and Robotics;Notes.
+SERN serves as the primary scientific and enforcement arm of the Committee in the Alpha timeline. Founded in 1954, SERN rapidly evolved beyond particle physics. By 1973, they initiated the highly classified "Z-Program," a multi-phase initiative dedicated to human time travel via the generation of mini black holes using the Large Hadron Collider. SERN's operational dominance is secured through global electronic surveillance via the ECHELON database, which intercepts and archives all worldwide communications.
+It is through ECHELON that SERN detects Okabe's first D-Mail in July 2010, alerting them to the existence of a rival temporal technology. To protect their monopoly, SERN deploys the Rounders, a ruthless covert enforcement group. Directed by high-ranking commanders such as "FB" (Yuugo Tennouji) and field agents like Moeka Kiryu (M4), the Rounders operate as sleeper agents tasked with information retrieval, kidnapping, and assassination. They are notably responsible for the raid on the FGL that results in the inevitable death of Mayuri Shiina across all Alpha divergence lines.
+The Analog Bottleneck: The IBN 5100
+Despite their vast digital supremacy, SERN possesses a critical vulnerability inherited from their mid-century infrastructure: the IBN 5100. The IBN 5100 is an archaic computing machine manufactured in 1975, characterized by its reliance on a unique, highly simplistic, proprietary programming language. Because SERN utilized this exact language to build the foundational architecture of the ECHELON database and the Z-Program, modern decryption algorithms are entirely useless against it.
+Consequently, the IBN 5100 represents an analog bottleneck; it is the only machine in the world capable of interfacing with ECHELON's deep data structures. If a rogue faction secures an IBN 5100, they can hack SERN's servers and delete the intercepted D-Mail, effectively erasing SERN's awareness of the FGL and preventing the Alpha convergence. Recognizing this fatal flaw, SERN tasks the Rounders with locating and securing every remaining IBN 5100 unit globally, frequently targeting the unit hidden within the Yanabayashi Shrine.
+The Beta Attractor Field: Stratfor, DURPA, and World War III
+In the Beta Attractor Field, SERN's dystopian monopoly fails to materialize. The timeline pivots on July 28, 2010, when Dr. Nakabachi steals his daughter Kurisu Makise's physical time travel thesis and defects to the Russian Federation. This single event shatters secrecy, prematurely alerting the world's major intelligence agencies to the reality of time travel and sparking a violent, chaotic arms race. The primary combatants in this geopolitical struggle are Strategic Focus (Stratfor), DURPA, and the Russian military.
+Strategic Focus (Stratfor/Stratfo) operates as a lethal private intelligence agency, widely regarded by conspiracy theorists as the "Shadow CIA" due to its undocumented manipulation of global conflicts like the Gulf and Iraq wars. Led by Dr. Alexis Leskinen—operating under the academic guise of Senior Chief of Neuroscience at Viktor Chondria University—Stratfor operates with pure utilitarian ruthlessness. Their objective is not ideological dominance, but rather the reconstruction of Kurisu's theory to sell to the highest bidding global superpower, a capitalistic pursuit that ultimately acts as the primary catalyst for World War III. Stratfor maintains a subterranean operations base beneath Tokyo Denki University, actively hunting "New Encephalitis" patients to weaponize localized Reading Steiner. They aggressively deploy psychological conditioning, notably capturing and brainwashing temporal agent Kagari Shiina under the operative designation "K6205".
+DURPA (Defense Ultimate Research Projects Agency), representing the primary intelligence and research branch of the United States Department of Defense, acts as Stratfor's primary rival. Driven by the mandate that global stability necessitates absolute American hegemony, DURPA seeks to secure temporal logistics to preempt Russian dominance. The agency's leading field operative is Judy Reyes, a colleague of Leskinen at Viktor Chondria. Reyes operates with extreme emotional volatility and violence, executing bloody raids on the FGL and orchestrating lethal hostage situations to steal temporal data.
+The escalating covert warfare between Stratfor, DURPA, and Russia rapidly spirals out of control. As diplomatic channels collapse and preemptive temporal strikes fail, the conflict detonates into a devastating nuclear exchange. World War III ravages the globe for decades, resulting in billions of casualties and the total collapse of modern civilization, forcing surviving scientists like Itaru Hashida and Maho Hiyajo underground to form the Valkyrie resistance movement.
+Artificial Intelligence and Memory Digitization: The Amadeus System
+Within the Beta Attractor Field, the technological centerpiece of the intelligence war is not physical time travel hardware, but rather the Amadeus System. Developed at Viktor Chondria University under the supervision of Alexis Leskinen and his brilliant assistant Maho Hiyajo, Amadeus represents a paradigm shift in artificial intelligence.
+Unlike traditional algorithmic AI, Amadeus utilizes actual human neurological data as its foundational architecture, relying on Kurisu Makise's proprietary thesis on the digitization of human memory. The system perfectly replicates the memories, psychological profiles, and analytical capabilities of its human donor. The avatars, designed by the firm Drinkworks, are visually indistinguishable from humans, while the vocal synthesis algorithms engineered by YAMANA perfectly mimic human cadence.
+Publicly, Amadeus is touted as a medical breakthrough designed to combat degenerative memory loss. Covertly, Leskinen engineered the "Amadeus Kurisu" model to house the deceased neuroscientist's exact brainwave patterns and subconscious memories regarding her time machine theory. This transforms Amadeus into an interactive archive of weaponized physics. Because accessing Amadeus is tantamount to possessing Kurisu's mind, Stratfor and DURPA engage in vicious warfare to capture the server clusters.
+To mitigate this catastrophic threat, Maho Hiyajo embeds a highly classified administrative kill-switch within the system. Disguised as a diary access control code, the password "Der Alte würfelt nicht" (a reference to Einstein's quote, "The Old Man Does Not Play Dice") executes an unrecoverable system purge, permanently deleting the Amadeus entity to prevent its abuse by military higher-ups.
+Key Agents of the Temporal Nexus
+The macro-temporal shifts dictating the fate of humanity are disproportionately influenced by a microscopic collective in Akihabara: the members of the Future Gadget Laboratory (FGL). Their psychological states and interpersonal dynamics are the ultimate vectors for causality.
+Designation
+	Name
+	Role and Temporal Significance
+	Lab Mem 001
+	Rintaro Okabe
+	Founder. Adopts the "Hououin Kyouma" Chuunibyou persona as psychological armor. Possesses absolute Reading Steiner, forcing him to endure the trauma of remembering countless aborted timelines. In the Alpha field, he fights to save Mayuri. In the Beta field (Steins;Gate 0), trauma forces him to abandon the Kyouma persona, suffering severe PTSD until he engineers the path to the Steins Gate.
+	Lab Mem 002
+	Mayuri Shiina
+	Okabe's childhood friend and the emotional core of the FGL. Her death in August 2010 represents the absolute convergence point of the Alpha Attractor Field. Her survival is the primary driver of Okabe's initial temporal rebellion.
+	Lab Mem 003
+	Itaru "Daru" Hashida
+	Elite hacker ("DaSH") and hardware engineer. Responsible for constructing the physical time machines (FG204, C203/C204) and authoring decryption software. In the Beta future, he leads the Valkyrie resistance and fathers Suzuha.
+	Lab Mem 004
+	Kurisu Makise
+	Neuroscientist and physicist. The "Mother of the Time Machine." Disproved her father's theories at age 11, leading to estrangement. Her thesis serves as the theoretical basis for time travel, and her biological brain data powers the Amadeus system. Her death triggers the Beta convergence.
+	Lab Mem 005
+	Moeka Kiryu
+	Rounder agent (M4). Operates under orders from "FB" to secure the IBN 5100. Emotionally unstable and fiercely loyal to SERN. Responsible for the initial raid that kills Mayuri in the Alpha field.
+	Lab Mem 006
+	Luka Urushibara
+	Resident of the Yanabayashi Shrine (housing the IBN 5100). Utilizes a D-Mail to alter their biological sex in the Alpha timeline.
+	Lab Mem 007
+	Faris NyanNyan
+	Akihabara maid café owner. Utilizes D-Mail to prevent her father's death, significantly altering the urban landscape of Akihabara and introducing major timeline divergence.
+	Lab Mem 008
+	Suzuha Amane
+	Temporal agent from 2036. Daughter of Itaru and Yuki Amane. Operates under the alias "John Titor." In the Alpha field, she seeks the IBN 5100 in 1975 to stop SERN. In the Beta field, she arrives in 2010 to force Okabe to prevent WWIII. Highly lethal, tactical, and psychologically isolated.
+	Lab Mem 009
+	Maho Hiyajo
+	21-year-old neuroscientist. Co-creator of Amadeus. Operates under a "Salieri" inferiority complex regarding Kurisu. Engineers the upgraded two-week Time Leap Machine for the Valkyrie resistance in the Beta timeline.
+	Lab Mem 010
+	Kagari Shiina
+	WWIII orphan adopted by Mayuri in 2032. Brainwashed by Leskinen ("Voice of God"). Operates as Stratfor agent K6205. In certain Beta timelines, undergoes plastic surgery to impersonate Yuki Amane. Highly unstable, oscillating between ruthless conditioning and deep maternal devotion.
+	Lab Mem 011
+	Yuki Amane
+	Future wife of Itaru Hashida and mother of Suzuha. A stabilizing influence amidst the chaos of the Beta timeline resistance.
+	Strategic Causal Manipulation and Timeline Resolution
+Escaping the gravitational pull of both the Alpha (SERN Dystopia) and Beta (WWIII) Attractor Fields to reach the anomaly known as the Steins Gate world line requires a monumental, multi-generational manipulation of causality. This resolution relies upon the flawless execution of two interwoven temporal maneuvers: Operation Arc-Light and Operation Skuld.
+The Catalyst: Operation Arc-Light
+In the baseline Beta timeline, Okabe fails his first attempt to save Kurisu on July 28, 2010, resulting in her fatal stabbing. Severely traumatized, he refuses to utilize the time machine again, triggering the events of Steins;Gate 0. Operation Arc-Light, coordinated from the dystopian future, dictates that Mayuri Shiina must travel back in time in the C204 machine. Her sole objective is to deliver a transmission to her past self, commanding the past Mayuri to physically strike Okabe following his failure. This physical slap, combined with intense emotional reprimand, shatters Okabe's despair, acting as the necessary psychological catalyst to resurrect his resilient "Hououin Kyouma" persona.
+The Climax: Operation Skuld
+Simultaneously, the Okabe of the Beta future—having endured 15 years of nuclear warfare and the loss of his allies—dedicates his life to reverse-engineering temporal convergence. He discovers a mathematical loophole in the universe's causal architecture: convergence mandates the observation of an event, not necessarily the biological reality of it. To reach the Steins Gate, three strict conditions must be satisfied without violating the established past:
+1. Target Safety: Kurisu Makise must survive the encounter on July 28.
+2. The Observation Paradigm: The past version of Okabe must witness what he believes is a dead Kurisu lying in a pool of blood. Negating this observation would prevent him from sending the initial D-Mail, creating a catastrophic grandfather paradox.
+3. Thesis Destruction: Dr. Nakabachi's physical copy of the time travel thesis must be destroyed before reaching Russia.
+In 2025, future Okabe records a "Nostalgia Drive" video D-Mail detailing these instructions and transmits it to his past self. The video is encrypted to appear as television static until the past Okabe fails his first rescue attempt; this fail-safe ensures that the past Okabe possesses the necessary motivation and context of failure before receiving the solution.
+Following Mayuri's slap (Arc-Light), Okabe views the decrypted Nostalgia Drive and executes Operation Skuld. Traveling back to July 28 a second time, he first manipulates a capsule machine so that Mayuri receives a plastic "Upa" toy instead of a rare metal variant. When Dr. Nakabachi later steals Kurisu's thesis, he unwittingly places the plastic toy inside the folder. Because the toy is not metal, it fails to trigger the airport security metal detectors, ensuring the folder is placed in the airplane's cargo hold where it is successfully incinerated by an onboard fire, fulfilling the third condition.
+To satisfy the observation requirement, Okabe utilizes Future Gadget No. 6, the Cyalume Saber, which expels a hyper-realistic fake blood. However, finding the fluid coagulated and useless, Okabe initiates a contingency plan: he intentionally provokes Dr. Nakabachi into stabbing him in the abdomen. After Nakabachi flees with the thesis, Okabe utilizes a stun gun to render Kurisu unconscious. Bleeding profusely from his stab wound, Okabe paints a massive pool of his own blood around Kurisu's unconscious body.
+When the past Okabe arrives moments later, he observes the scene in the dim light, incorrectly assumes Kurisu has been murdered, and sends the triggering D-Mail. The causal loop is perfectly closed. The established history of the universe is preserved, but the tragic event is circumvented. This immaculate deception violently severs the timeline from the gravitational pull of both Attractor Fields, forcing a macro-temporal shift to divergence 1.048596%: the unwritten future of the Steins Gate.
+Fuentes citadas
+1. Steins;Gate (TV series) - Wikipedia, https://en.wikipedia.org/wiki/Steins;Gate_(TV_series) 2. Steins;Gate - Wikipedia, https://en.wikipedia.org/wiki/Steins;Gate 3. Steins;Gate (visual novel), https://steins-gate.fandom.com/wiki/Steins;Gate_(visual_novel) 4. Worlds between World Lines, or Reading (Steiner) between the (World) Lines: The Generation of Attractor Fields and Convergence in Steins;Gate, Version C204 (Updated & Revised) : r/steinsgate - Reddit, https://www.reddit.com/r/steinsgate/comments/de9xsy/worlds_between_world_lines_or_reading_steiner/ 5. John Titor | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/John_Titor 6. Worlds between World Lines, or Reading (Steiner) between the (World) Lines: The Generation of Attractor Fields and Convergence in Steins;Gate : r/steinsgate - Reddit, https://www.reddit.com/r/steinsgate/comments/cxreaj/worlds_between_world_lines_or_reading_steiner/ 7. Time Machine - Science Adventure Series Wiki, https://scienceadventure.wiki.gg/wiki/Time_Machine 8. Reading Steiner | Steins;Gate Wiki - Fandom, https://steins-gate.fandom.com/wiki/Reading_Steiner 9. Rintaro Okabe | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Rintaro_Okabe 10. Timeline | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Timeline 11. Attractor Field | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Attractor_Field 12. Attractor Fields in Steins;Gate | Anime Science : r/steinsgate - Reddit, https://www.reddit.com/r/steinsgate/comments/zu2t64/attractor_fields_in_steinsgate_anime_science/ 13. Strategic Focus | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Stratfor 14. Future Gadget Laboratory - Science Adventure Series Wiki, https://scienceadventure.wiki.gg/wiki/Future_Gadget_Laboratory 15. Future Gadget Laboratory | Steins;Gate Wiki - Fandom, https://steins-gate.fandom.com/wiki/Future_Gadget_Laboratory 16. Time Leap Machine | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Time_Leap_Machine 17. Kurisu Makise | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Kurisu_Makise 18. Time Leap | Steins;Gate Wiki - Fandom, https://steins-gate.fandom.com/wiki/Time_Leap 19. Committee of 300 | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Committee_of_300 20. Episode Glossary | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/IBN_5100 21. Alpha and Beta Worldline/Attractor Field(s) inquiry : r/steinsgate - Reddit, https://www.reddit.com/r/steinsgate/comments/7n6ksw/alpha_and_beta_worldlineattractor_fields_inquiry/ 22. DURPA | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/DURPA 23. Kagari Shiina | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Kagari_Shiina 24. Can somebody please explain the difference between Stratfor and Durpa? : r/steinsgate, https://www.reddit.com/r/steinsgate/comments/99ikjr/can_somebody_please_explain_the_difference/ 25. A Quick Guide to Steins;Gate's World Lines - Biggest In Japan, https://biggestinjapan.com/index.php/2020/09/14/a-quick-guide-to-steinsgates-world-lines/ 26. Maho Hiyajo | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Maho_Hiyajo 27. Amadeus System | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Amadeus_System 28. Operation Skuld | Steins;Gate Wiki | Fandom, https://steins-gate.fandom.com/wiki/Operation_Skuld

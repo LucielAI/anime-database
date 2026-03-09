@@ -1,0 +1,557 @@
+{
+  "anime": "Steins;Gate",
+  "tagline": "A deterministic attractor-field prison where convergence cannot be outrun — only rewritten",
+  "malId": 9253,
+  "themeColors": {
+    "primary": "#22d3ee",
+    "secondary": "#a855f7",
+    "accent": "#06b6d4",
+    "glow": "rgba(34,211,238,0.35)",
+    "tabActive": "#22d3ee",
+    "badgeBg": "rgba(168,85,247,0.12)",
+    "badgeText": "#a855f7",
+    "modeGlow": "rgba(168,85,247,0.25)",
+    "heroGradient": "rgba(8,12,20,0.95)"
+  },
+  "animeImageUrl": null,
+  "visualizationHint": "timeline",
+  "visualizationReason": "Steins;Gate is structurally defined by worldline divergence and attractor field convergence. Every meaningful event is a causal fork — D-Mails rewrite history, time leaps overwrite memory, and the entire plot is a single actor navigating a branching temporal graph toward an escape trajectory. The timeline renderer is the only lens that captures this.",
+  "aiInsights": {
+    "casual": "Steins;Gate is about being trapped in a universe that keeps forcing the same tragedies no matter what you change. Okabe discovers time travel by accident — a microwave, a phone, and a CRT television accidentally create a device that sends 36-byte text messages to the past. But every fix shifts the disaster somewhere else: save one friend in one timeline, lose another in the next. The timeline view shows how every message rewrites reality, how SERN and shadow intelligence agencies wage a secret war over time itself, and how the only escape requires not preventing tragedy but perfectly faking it.",
+    "deep": "Steins;Gate operates as a deterministic attractor-field system where worldline convergence enforces inevitability within bounded probability corridors. Alpha (0–1% divergence) guarantees SERN dystopia and Mayuri's death; Beta (1–2%) guarantees Kurisu's death and World War III via Stratfor/DURPA competition over her stolen thesis and the Amadeus cognitive archive. The protagonist's Reading Steiner anomaly — cross-worldline memory persistence — transforms him into the system's sole stateful debugger. The escape is divergence 1.048596%: a needle-thin corridor that satisfies both fields' convergence constraints simultaneously through observation falsification (Operation Skuld), enabled only after a motivational bootstrap from the future (Operation Arc-Light). The system is not beaten by force but by spoofing its own constraint checker."
+  },
+  "powerSystem": [
+    {
+      "name": "D-Mail",
+      "subtitle": "Retroactive State Injection",
+      "loreDesc": "A text message routed through the PhoneWave's naked singularity into the past, limited to 36 bytes (approximately 18 Japanese characters) per transmission. Despite the extreme bandwidth constraint, a single D-Mail can rewrite the entire worldline from the moment of receipt.",
+      "systemDesc": "A bandwidth-constrained retroactive write operation (36-byte payload max) that mutates the global state tree from an arbitrary past commit, forcing a full worldline rebase. The micro-singularity's event horizon limits throughput, but even minimal data is sufficient to trigger macro-scale divergence shifts.",
+      "icon": "Mail",
+      "color": "cyan-400",
+      "signatureMoment": "The first D-Mail — a garbled message about Kurisu's death — arrives before it is sent, silently shifting the entire worldline from Beta to Alpha and trapping Okabe in SERN's convergence corridor.",
+      "systemSubtitle": "Retroactive State Injection",
+      "loreSubtitle": "Message to the Past"
+    },
+    {
+      "name": "Time Leap Machine",
+      "subtitle": "Memory Overwrite Protocol",
+      "loreDesc": "Engineered by Kurisu Makise, this device scans the user's cerebral cortex via EEG headset, hijacks SERN's Large Hadron Collider to compress the immense memory data into a sub-kilobyte packet, then fires it through the PhoneWave's singularity. The past self receives the data via electromagnetic 'Visual Rebuilding' injection through their phone, overwriting their hippocampus. Hard-limited to 48 hours due to neural pathway drift.",
+      "systemDesc": "A checkpoint-restore mechanism that serializes cognitive state via external scanning hardware, compresses it using hijacked adversary compute resources (SERN's LHC), and force-pushes it onto a prior execution frame. The 48-hour constraint reflects maximum tolerable drift between serialized state and target host architecture.",
+      "icon": "Brain",
+      "color": "purple-400",
+      "signatureMoment": "Okabe leaps hundreds of times trying to save Mayuri, watching her die in every variation — crushed, shot, hit by a train — proving that convergence is inescapable within an attractor field.",
+      "systemSubtitle": "Memory Overwrite Protocol",
+      "loreSubtitle": "Consciousness Time Travel"
+    },
+    {
+      "name": "Reading Steiner",
+      "subtitle": "Cross-Worldline Memory Persistence",
+      "loreDesc": "Okabe's innate ability to retain contiguous consciousness across worldline shifts, experiencing severe vertigo and neurological shock during each transition. While latent Reading Steiner exists in others as déjà vu or vivid dreams, Okabe's manifestation is absolute — he retains perfect memory of deactivated realities while possessing zero memory of his reconstructed self.",
+      "systemDesc": "A stateful observer anomaly that attaches a memory snapshot to every temporal transit vector, forcefully mapping prior cognitive state onto the biological host in the new worldline. While other nodes exhibit faint echo artifacts (latent Reading Steiner), this observer maintains full state coherence — the diff between worldline versions is perfectly preserved.",
+      "icon": "Eye",
+      "color": "amber-400",
+      "signatureMoment": "After the first D-Mail, Okabe experiences violent disorientation as his memories of a dead Kurisu collide with a worldline where she is alive — and no one else notices anything changed.",
+      "systemSubtitle": "Cross-Worldline Memory Persistence",
+      "loreSubtitle": "The Observer's Curse"
+    },
+    {
+      "name": "Physical Time Machine",
+      "subtitle": "Full-Body Temporal Displacement",
+      "loreDesc": "Satellite-like capsules that generate localized Kerr black holes to physically transport matter across decades. The FG204 (Alpha, one-way) crashed into Radio Kaikan; the C203/C204 (Beta, two-way, named 'Christina' for Kurisu) causes minor divergence shifts on arrival to prevent paradox. If unpowered for a full year, navigational computers lose calibration permanently.",
+      "systemDesc": "A full-state migration tool that relocates an entire runtime instance across temporal partitions via Kerr black hole transit. Multiple hardware revisions exist across attractor fields (FG204, C203, C204, OR204), each with different capabilities. A hard timeout constraint destroys navigational state after 365 days without power.",
+      "icon": "Zap",
+      "color": "emerald-400",
+      "signatureMoment": "Okabe uses the completed time machine to travel to the day of Kurisu's stabbing — not to prevent it, but to stage a deception that tricks his past self's observation, threading the needle to the Steins Gate worldline.",
+      "systemSubtitle": "Full-Body Temporal Displacement",
+      "loreSubtitle": "The Time Machine"
+    },
+    {
+      "name": "Amadeus System",
+      "subtitle": "Digitized Cognitive Archive",
+      "loreDesc": "An AI system built on actual human neurological data rather than traditional algorithms, housing a perfect replica of Kurisu Makise's memories, personality, and analytical capabilities. Because accessing Amadeus is tantamount to possessing Kurisu's mind and her time travel thesis, it becomes the central intelligence target of the Beta field's temporal arms race.",
+      "systemDesc": "A neural-faithful AI instantiation that replicates a human node's complete cognitive state as a queryable archive. Because the source node authored the temporal transit specifications, the AI instance becomes a weaponized knowledge repository — a strategic target that multiple state-level actors compete to capture or destroy.",
+      "icon": "Globe",
+      "color": "rose-400",
+      "signatureMoment": "Amadeus Kurisu sporadically inheriting cross-worldline memory data moments before forced deletion — the digitized ghost of a dead scientist exhibiting Reading Steiner echoes that prove consciousness persists across formats.",
+      "systemSubtitle": "Digitized Cognitive Archive",
+      "loreSubtitle": "The Ghost of Kurisu"
+    }
+  ],
+  "rankings": {
+    "systemName": "Worldline Divergence Hierarchy",
+    "topTierName": "Steins Gate Worldline (1.048596%)",
+    "topTierLore": "The singular worldline that escapes both Alpha and Beta attractor fields — a needle-thin trajectory where neither Mayuri nor Kurisu must die, achieved only by deceiving causality itself.",
+    "topTierSystem": "The unique divergence value that satisfies the convergence constraints of both dominant attractor fields simultaneously, reachable only through observation falsification rather than event prevention.",
+    "tiers": [
+      {
+        "name": "Beta Attractor Field (1–2%)",
+        "loreDesc": "The original worldline cluster where Kurisu dies and SERN never achieves time travel dominance, but World War III erupts over control of Okabe's time travel research.",
+        "systemDesc": "The default-branch attractor corridor where the Kurisu-death convergence point is enforced, and geopolitical competition over temporal technology escalates to global conflict."
+      },
+      {
+        "name": "Alpha Attractor Field (0–1%)",
+        "loreDesc": "The worldline cluster entered after the first D-Mail, where SERN captures the lab's time travel technology and establishes a dystopian surveillance state — and Mayuri is fated to die.",
+        "systemDesc": "An alternate attractor corridor where SERN-convergence is enforced, guaranteeing Mayuri's termination as a fixed-point event regardless of local intervention attempts."
+      },
+      {
+        "name": "Gamma / Delta Fields (2–4%)",
+        "loreDesc": "Distant attractor corridors: Gamma (2–3%) features Y2K catastrophe and Okabe as a Rounder dictator under early SERN dominance; Delta (3–4%) is an anomalous peaceful baseline where neither dystopia nor world war threatens humanity.",
+        "systemDesc": "Alternate convergence corridors with radically different constraint sets — Gamma enforces early SERN capture via Y2K disruption, while Delta represents a null-threat equilibrium with no dominant temporal actor."
+      },
+      {
+        "name": "Convergence Point",
+        "loreDesc": "An event so structurally embedded in an attractor field that no amount of local intervention can prevent it — the universe reroutes causality to enforce the outcome through alternative paths.",
+        "systemDesc": "A write-protected output node in the causal graph that the attractor field's constraint solver guarantees regardless of upstream perturbations. The proximity of the divergence value to the field boundary influences convergence velocity."
+      }
+    ],
+    "loreName": "Attractor Field Hierarchy"
+  },
+  "characters": [
+    {
+      "name": "Okabe Rintarou",
+      "title": "The Mad Scientist",
+      "rank": "Lab Member 001",
+      "primaryAbility": "Reading Steiner / Time Leap",
+      "loreBio": "Founder of the Future Gadget Lab who adopts the 'Hououin Kyouma' chuunibyou persona as psychological armor. He accidentally discovers time travel, then sacrifices everything to undo the cascading damage. In the Beta field, trauma forces him to abandon the Kyouma persona entirely, suffering severe PTSD until Operation Arc-Light resurrects his fighting will.",
+      "systemBio": "The system's sole stateful observer node. His Reading Steiner anomaly makes him the only process capable of detecting worldline state transitions, transforming him into a human debugger forced to manually roll back catastrophic commits across the temporal graph.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-800",
+      "accentColor": "cyan-400",
+      "icon": "Eye",
+      "dangerLevel": 9,
+      "signatureMoment": "Watching Mayuri die for the hundredth time and finally understanding that no action within the Alpha attractor field can save her — convergence is absolute.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 35252
+    },
+    {
+      "name": "Makise Kurisu",
+      "title": "The Theorist",
+      "rank": "Lab Member 004",
+      "primaryAbility": "Temporal Physics / Time Leap Design",
+      "loreBio": "A prodigy neuroscientist who disproved her father's theories at age 11, leading to estrangement. She engineers the Time Leap Machine and provides the theoretical backbone for all temporal operations. Her death on July 28, 2010 is the Beta field's convergence point, and her stolen thesis is the catalyst for World War III.",
+      "systemBio": "The system's primary architect — her theoretical frameworks enable every temporal operation, and her digitized brain data powers the Amadeus system. She is also the critical binary variable whose alive/dead state determines which attractor field the worldline occupies.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "rose-800",
+      "accentColor": "rose-400",
+      "icon": "Brain",
+      "dangerLevel": 7,
+      "signatureMoment": "Telling Okabe to go back and let her die — choosing to sacrifice herself so Mayuri can live, because she trusts Okabe to find another way.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 34470
+    },
+    {
+      "name": "Shiina Mayuri",
+      "title": "The Hostage",
+      "rank": "Lab Member 002",
+      "primaryAbility": "Convergence Target",
+      "loreBio": "Okabe's childhood friend whose gentle innocence masks her structural role: she is the Alpha attractor field's convergence sacrifice. No matter what Okabe does, the universe kills her — by train, by illness, by bullet — until he escapes the field entirely.",
+      "systemBio": "A passive node whose termination is a write-protected fixed-point output in the Alpha attractor field. She has no combat capability, but her death-state functions as the system's most critical constraint — the variable Okabe must falsify to escape.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-800",
+      "accentColor": "violet-400",
+      "icon": "Heart",
+      "dangerLevel": 2,
+      "signatureMoment": "Her watch stopping at the exact moment of her fated death — the same time, every worldline — proving convergence is not coincidence but structural enforcement.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 35007
+    },
+    {
+      "name": "Hashida Itaru",
+      "title": "The Engineer",
+      "rank": "Lab Member 003",
+      "primaryAbility": "Hardware Engineering / Hacking",
+      "loreBio": "Elite hacker ('DaSH') and hardware engineer who cracks SERN's ECHELON surveillance database, constructs every physical time machine iteration (FG204, C203, C204), and authors the decryption software. In the Beta future, he leads the Valkyrie resistance and fathers Suzuha.",
+      "systemBio": "The infrastructure engineer who translates theoretical temporal mechanics into functional hardware. He penetrated SERN's ECHELON surveillance layer, constructed every time machine revision, and in the future branch leads the resistance network that deploys temporal agents backward.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-800",
+      "accentColor": "amber-400",
+      "icon": "Cpu",
+      "dangerLevel": 5,
+      "signatureMoment": "Cracking SERN's database to discover the Jellyman's Report — human test subjects sent through time who arrived as gelatinous corpses, revealing SERN has been experimenting with time travel for years.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 35382
+    },
+    {
+      "name": "Amane Suzuha",
+      "title": "The Soldier",
+      "rank": "Lab Member 008",
+      "primaryAbility": "Physical Time Travel / Combat",
+      "loreBio": "Temporal agent from 2036, daughter of Itaru and Yuki Amane, operating under the alias 'John Titor.' In the Alpha field she seeks the IBN 5100 in 1975 to stop SERN; in the Beta field she arrives in 2010 to force Okabe to prevent World War III. Highly lethal, tactically trained by the Valkyrie resistance, and psychologically isolated by her mission.",
+      "systemBio": "A forward-deployed agent from a future execution branch, carrying mission-critical parameters and the physical time machine hardware. She operates under the 'John Titor' alias — the same identity that disseminated the eleven theories of temporal transit — and represents the resistance network's primary temporal insertion capability.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-800",
+      "accentColor": "emerald-400",
+      "icon": "Zap",
+      "dangerLevel": 7,
+      "signatureMoment": "Her rain-soaked farewell letter revealing she forgot her mission after a failed time jump, spent 24 years in hiding, and died full of regret — 'I failed. I failed. I failed.'",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 46458
+    },
+    {
+      "name": "Kiryuu Moeka",
+      "title": "The Infiltrator",
+      "rank": "Lab Member 005",
+      "primaryAbility": "SERN Agent / Intelligence",
+      "loreBio": "Rounder agent designated M4, operating under orders from handler 'FB' (Yuugo Tennouji) to secure the IBN 5100. She infiltrates the Future Gadget Lab, sends a D-Mail that shifts the worldline deeper into Alpha, and later leads the armed Rounders raid that kills Mayuri.",
+      "systemBio": "A deep-cover agent process embedded in the lab's trusted network, executing commands from SERN's handler node (FB). Her D-Mail operation represents one of the most damaging unauthorized state mutations in the timeline, and her physical raid is the proximate trigger of convergence enforcement.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-700",
+      "accentColor": "gray-400",
+      "icon": "Shield",
+      "dangerLevel": 6,
+      "signatureMoment": "Leading the armed Rounders raid on the lab, shooting Mayuri point-blank — revealing that the quiet woman Okabe trusted was SERN's weapon all along.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 46453
+    },
+    {
+      "name": "Okabe Rintarou (Future)",
+      "title": "The Architect",
+      "rank": "Lab Member 001 (2025)",
+      "primaryAbility": "Operation Skuld Design",
+      "loreBio": "The future version of Okabe who, after 15 years of failure on the Beta worldline, devises Operation Skuld — the precise deception plan that threads the needle to the Steins Gate worldline by falsifying observation rather than preventing events.",
+      "systemBio": "A future-state instance of the primary observer who, after exhaustive brute-force iteration, engineers the only viable escape: an observation-falsification protocol that satisfies both attractor fields' convergence constraints simultaneously.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "sky-900",
+      "accentColor": "sky-400",
+      "icon": "Key",
+      "dangerLevel": 10,
+      "signatureMoment": "Sending the video message to his past self: 'You must deceive the world. Deceive yourself. That is the choice of Steins Gate.'",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 35252
+    },
+    {
+      "name": "Hiyajo Maho",
+      "title": "The Custodian",
+      "rank": "Lab Member 009",
+      "primaryAbility": "Amadeus Architecture / Time Leap Upgrade",
+      "loreBio": "A 21-year-old neuroscientist and co-creator of the Amadeus system, operating under a 'Salieri' inferiority complex toward Kurisu's genius. She holds the kill-switch to Amadeus ('Der Alte würfelt nicht') and in the Beta future engineers the upgraded Time Leap Machine capable of two-week jumps for the Valkyrie resistance.",
+      "systemBio": "The secondary architect who maintains and safeguards the Amadeus cognitive archive. She holds the administrative kill-switch capable of permanent system purge, and in the future branch optimizes the Time Leap compression algorithms to extend the operational window from 48 hours to two weeks.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "indigo-800",
+      "accentColor": "indigo-400",
+      "icon": "Key",
+      "dangerLevel": 6,
+      "signatureMoment": "Activating the Amadeus kill-switch — 'Der Alte würfelt nicht' — permanently deleting the digitized Kurisu to prevent military exploitation, destroying her closest connection to her dead friend to save the world.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": 130861
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Okabe Rintarou",
+      "target": "Makise Kurisu",
+      "type": "dependent",
+      "loreDesc": "She is both his intellectual partner and the convergence point he must save. Their relationship is the emotional core — and the structural key — to reaching the Steins Gate worldline.",
+      "weight": 10
+    },
+    {
+      "source": "Okabe Rintarou",
+      "target": "Shiina Mayuri",
+      "type": "dependent",
+      "loreDesc": "His childhood friend whose death is the Alpha field's convergence point. Saving her requires undoing every D-Mail, which means losing Kurisu — the fundamental dilemma of the series.",
+      "weight": 10
+    },
+    {
+      "source": "Makise Kurisu",
+      "target": "Shiina Mayuri",
+      "type": "rival",
+      "loreDesc": "They are not personal rivals but structural ones — the system forces a binary choice where saving one requires the other's death, until the Steins Gate worldline resolves the contradiction.",
+      "weight": 9
+    },
+    {
+      "source": "Okabe Rintarou",
+      "target": "Hashida Itaru",
+      "type": "ally",
+      "loreDesc": "Daru is the lab's infrastructure backbone. Without his engineering, no time travel device functions. Their partnership is the operational foundation beneath every temporal experiment.",
+      "weight": 8
+    },
+    {
+      "source": "Amane Suzuha",
+      "target": "Hashida Itaru",
+      "type": "dependent",
+      "loreDesc": "Suzuha is Daru's daughter from 2036, sent back in time to change history. Her mission and existence depend entirely on the future version of her father's work.",
+      "weight": 8
+    },
+    {
+      "source": "Kiryuu Moeka",
+      "target": "Okabe Rintarou",
+      "type": "betrayal",
+      "loreDesc": "Moeka infiltrates the lab as a trusted member, then leads SERN's armed raid that kills Mayuri. Her betrayal is the proximate trigger for Okabe's descent into time leap desperation.",
+      "weight": 9
+    },
+    {
+      "source": "Okabe Rintarou (Future)",
+      "target": "Okabe Rintarou",
+      "type": "mentor",
+      "loreDesc": "Future Okabe sends a video message guiding his past self through Operation Skuld — the only viable escape from the attractor field trap that his present self cannot yet see.",
+      "weight": 10
+    },
+    {
+      "source": "Amane Suzuha",
+      "target": "Okabe Rintarou",
+      "type": "ally",
+      "loreDesc": "Suzuha is Okabe's operational partner in both the Alpha and Beta timelines — she provides the time machine, the mission context, and the physical capability Okabe lacks.",
+      "weight": 8
+    },
+    {
+      "source": "Makise Kurisu",
+      "target": "Okabe Rintarou (Future)",
+      "type": "mirror",
+      "loreDesc": "Both sacrifice themselves for Okabe's mission from opposite temporal directions — Kurisu offers her life in the present, Future Okabe offers 15 years of suffering to engineer the solution.",
+      "weight": 7
+    },
+    {
+      "source": "Kiryuu Moeka",
+      "target": "Shiina Mayuri",
+      "type": "enemy",
+      "loreDesc": "Moeka is the direct instrument of Mayuri's death in the Alpha attractor field — the agent through which convergence expresses itself most often.",
+      "weight": 8
+    },
+    {
+      "source": "Hiyajo Maho",
+      "target": "Makise Kurisu",
+      "type": "mirror",
+      "loreDesc": "Maho operates under a 'Salieri' inferiority complex — she co-created Amadeus using Kurisu's brain data, guards the kill-switch to her digitized friend, and in the future builds the upgraded Time Leap Machine that Kurisu's original design could not achieve.",
+      "weight": 8
+    },
+    {
+      "source": "Hiyajo Maho",
+      "target": "Okabe Rintarou",
+      "type": "ally",
+      "loreDesc": "Maho becomes Okabe's critical Beta-field partner, providing access to Amadeus, technical expertise for the temporal operations, and eventually engineering the upgraded Time Leap Machine that enables the resistance's endgame.",
+      "weight": 7
+    }
+  ],
+  "factions": [
+    {
+      "name": "Future Gadget Laboratory",
+      "role": "protagonist",
+      "loreDesc": "A small group of eccentric inventors operating from a rented apartment above a CRT shop. They accidentally create functional time travel and become the fulcrum of a global temporal conflict.",
+      "systemDesc": "A lightweight, underfunded development team that accidentally achieves a breakthrough capability, immediately drawing hostile attention from state-level actors seeking to control the technology.",
+      "icon": "Cpu",
+      "color": "cyan-500",
+      "memberCount": "8 Lab Members"
+    },
+    {
+      "name": "SERN",
+      "role": "antagonist",
+      "loreDesc": "Founded in 1954, SERN initiated the classified 'Z-Program' in 1973 for human time travel via LHC-generated mini black holes. They monitor all global communications via the ECHELON surveillance database and detect Okabe's first D-Mail in July 2010. Their enforcement arm, the Rounders, conducts kidnapping, assassination, and asset seizure operations.",
+      "systemDesc": "A resource-dominant adversary running covert temporal R&D (Z-Program) since 1973 with catastrophic failure rates (Jellyman's Report). Their ECHELON surveillance layer intercepts the lab's temporal signature, triggering acquisition protocols via the Rounders enforcement daemon to absorb or eliminate the competing implementation.",
+      "icon": "Shield",
+      "color": "red-500",
+      "memberCount": "Global organization"
+    },
+    {
+      "name": "The Committee of 300",
+      "role": "systemic",
+      "loreDesc": "An elite clandestine society founded in the 1700s, executing a '360-year plan' for global control via the 'Human Domestication Project' — culling humanity to 1 billion manageable citizens. They operate above SERN through front organizations including the Illuminati, and in the Alpha field achieve total temporal hegemony by 2036 via strict social stratification and psychological brainwashing.",
+      "systemDesc": "A root-level administrative council executing a multi-century convergence plan that treats temporal technology as the ultimate control mechanism. Their 360-year execution pipeline predates all other actors, and SERN functions as their scientific and enforcement subsidiary.",
+      "icon": "Crown",
+      "color": "purple-500",
+      "memberCount": "Unknown"
+    },
+    {
+      "name": "Stratfor / DURPA",
+      "role": "antagonist",
+      "loreDesc": "Beta-field intelligence actors competing for temporal hegemony. Stratfor ('Shadow CIA'), led by Dr. Alexis Leskinen under academic cover at Viktor Chondria University, seeks to reconstruct Kurisu's thesis for sale to the highest bidder. DURPA (U.S. Defense) rivals them for American supremacy. Their escalating covert war is the proximate cause of World War III.",
+      "systemDesc": "Competing state-level adversary processes in the Beta corridor, each racing to reverse-engineer the temporal transit specifications from captured data (Amadeus, stolen thesis). Their resource contention escalates from covert operations to nuclear exchange — the Beta field's terminal failure mode.",
+      "icon": "Eye",
+      "color": "orange-500",
+      "memberCount": "State intelligence networks"
+    },
+    {
+      "name": "Valkyrie Resistance",
+      "role": "chaotic",
+      "loreDesc": "A future resistance movement formed by surviving scientists (Hashida, Hiyajo) after World War III devastates civilization. They build the C204 time machine and deploy Suzuha backward to prevent the war by altering the critical event on July 28, 2010.",
+      "systemDesc": "A decentralized insurgent network spawned by the Beta field's catastrophic endpoint, deploying temporal agents and hardware backward to disrupt the convergence chain. Their engineering output (upgraded Time Leap, C204) represents the resistance's only strategic capability.",
+      "icon": "Flame",
+      "color": "emerald-500",
+      "memberCount": "Future cell network"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Attractor Field Convergence",
+      "subtitle": "Deterministic Outcome Enforcement",
+      "loreConsequence": "Within an attractor field, certain events are structurally guaranteed. No amount of local time manipulation can prevent a convergence point — the universe reroutes causality to force the outcome through alternative paths.",
+      "systemEquivalent": "A constraint solver that guarantees specific output states regardless of upstream input mutations. Local variable changes are absorbed; the fixed-point output is enforced through alternate execution paths.",
+      "severity": "fatal",
+      "systemSubtitle": "Deterministic Outcome Enforcement",
+      "loreSubtitle": "Fate Cannot Be Fought Locally"
+    },
+    {
+      "name": "Worldline Divergence Number",
+      "subtitle": "Global State Identifier",
+      "loreConsequence": "Every worldline has a precise divergence number that determines which attractor field it belongs to. Changing this number requires altering causality at a sufficient scale to push the worldline past an attractor field boundary.",
+      "systemEquivalent": "A floating-point global state hash that determines which convergence corridor the runtime occupies. Crossing an attractor field threshold requires mutations significant enough to shift the hash past a boundary value.",
+      "severity": "high",
+      "systemSubtitle": "Global State Identifier",
+      "loreSubtitle": "The Divergence Meter"
+    },
+    {
+      "name": "Reading Steiner Exclusivity",
+      "subtitle": "Single-Observer Awareness",
+      "loreConsequence": "Only Okabe retains memories across worldline shifts. Everyone else receives overwritten memories consistent with the new worldline, meaning only Okabe knows reality has changed.",
+      "systemEquivalent": "A unique anomaly where one observer node maintains state coherence across global rewrites while all other nodes receive fresh register values. This creates an asymmetric information condition exploitable for iterative debugging.",
+      "severity": "high",
+      "systemSubtitle": "Single-Observer Awareness",
+      "loreSubtitle": "Only One Remembers"
+    },
+    {
+      "name": "Observation-Based Convergence",
+      "subtitle": "Schrödinger Enforcement",
+      "loreConsequence": "Convergence points are enforced based on what is observed, not what objectively occurs. If Okabe observes Kurisu's death, the Beta field locks in — but if the observation itself can be falsified, convergence is satisfied without the actual event.",
+      "systemEquivalent": "The constraint solver validates outputs against observer-reported states, not ground truth. If the observer's input can be spoofed, the convergence check passes even when the underlying event has been altered.",
+      "severity": "fatal",
+      "systemSubtitle": "Schrödinger Enforcement",
+      "loreSubtitle": "Deceive the World"
+    },
+    {
+      "name": "D-Mail Bandwidth Constraint",
+      "subtitle": "36-Byte Payload Ceiling",
+      "loreConsequence": "The PhoneWave's micro-singularity limits each D-Mail to exactly 36 bytes (approximately 18 Japanese characters). This forces all retroactive interventions to be expressed as minimal, ambiguous fragments — maximizing unpredictability of the resulting worldline shift.",
+      "systemEquivalent": "A hard throughput ceiling on the retroactive write channel that forces all temporal mutations to be expressed as minimal-payload operations. The compression constraint ensures that macro-scale state changes are triggered by micro-scale inputs, making outcome prediction nearly impossible.",
+      "severity": "high",
+      "systemSubtitle": "36-Byte Payload Ceiling",
+      "loreSubtitle": "18 Characters to Rewrite History"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "D-Mail Reversal",
+      "defender": "Worldline Shift",
+      "mechanic": "Causal Rollback",
+      "loreDesc": "Each D-Mail that shifted the worldline deeper into Alpha must be individually undone by sending a counter-D-Mail or preventing the original from being sent, sequentially walking the divergence number back toward Beta."
+    },
+    {
+      "attacker": "Time Leap Iteration",
+      "defender": "Convergence Point",
+      "mechanic": "Brute-Force Debugging",
+      "loreDesc": "Okabe uses repeated 48-hour time leaps to test every possible intervention against Mayuri's death, empirically proving that no local action within the Alpha field can prevent convergence."
+    },
+    {
+      "attacker": "Observation Falsification",
+      "defender": "Attractor Field Lock",
+      "mechanic": "Input Spoofing",
+      "loreDesc": "Operation Skuld exploits observation-based convergence. When Future Gadget No. 6 (Cyalume Saber, fake blood) fails due to coagulation, Okabe provokes Nakabachi into stabbing him, then uses his own real blood to stage the scene around stunned Kurisu — satisfying the convergence check with his own body as the prop."
+    },
+    {
+      "attacker": "IBN 5100 Retrieval",
+      "defender": "SERN Database Encryption",
+      "mechanic": "Legacy System Exploit",
+      "loreDesc": "The IBN 5100 — a 1975 computing machine with a unique proprietary programming language — is the only hardware capable of interfacing with SERN's ECHELON deep data structures and Z-Program archives. SERN built their foundational infrastructure on this language, creating an analog bottleneck: modern decryption is useless, and only this obsolete machine can delete the intercepted D-Mail from SERN's servers."
+    },
+    {
+      "attacker": "SERN Rounders Raid",
+      "defender": "Future Gadget Laboratory",
+      "mechanic": "Asset Seizure / Termination",
+      "loreDesc": "SERN deploys the Rounders — a covert enforcement group directed by handler 'FB' (Yuugo Tennouji) — to raid the lab, seize the time machine, kill witnesses, and capture Okabe. This is the direct enforcement mechanism of SERN's temporal monopoly in the Alpha field."
+    },
+    {
+      "attacker": "Amadeus Kill-Switch",
+      "defender": "Temporal Arms Race",
+      "mechanic": "Administrative System Purge",
+      "loreDesc": "Maho Hiyajo embeds a classified kill-switch in the Amadeus system, disguised as a diary access code: 'Der Alte würfelt nicht' (Einstein's 'The Old Man Does Not Play Dice'). Activation executes an unrecoverable purge of the Amadeus Kurisu entity, permanently denying all military actors access to the digitized time travel thesis."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Reading Steiner",
+      "ruleViolated": "Worldline Memory Overwrite",
+      "loreDesc": "Okabe alone retains memories across worldline shifts. This violates the fundamental rule that all observers should receive overwritten memories consistent with the new worldline, making him a singular debugging instrument.",
+      "systemDesc": "A process that maintains state coherence across global state rewrites — an anomaly that transforms one node into a cross-version diff observer while every other node receives clean re-initialization."
+    },
+    {
+      "name": "The Steins Gate Worldline",
+      "ruleViolated": "Attractor Field Binary",
+      "loreDesc": "A worldline that belongs to neither Alpha nor Beta — an impossibly narrow divergence corridor where both Mayuri and Kurisu survive, achieved only by satisfying both fields' convergence constraints through observation deception.",
+      "systemDesc": "A runtime state that exists outside both dominant convergence corridors by simultaneously satisfying their constraint checkers through input falsification — a stable equilibrium that the system's own rules say should not exist."
+    },
+    {
+      "name": "PhoneWave Temporal Coupling",
+      "ruleViolated": "Causal Locality",
+      "loreDesc": "Future Gadget No. 8: a microwave oven fused with a mobile phone logic board that generates micro-singularities. The 42-inch CRT television in the shop below inadvertently supplies an electron injection that accelerates the singularities until they shed their event horizons, creating 'naked singularities' capable of routing data into the past. None of this was designed — it emerged from accidental component interaction.",
+      "systemDesc": "An emergent temporal side-channel created by unintended hardware coupling — the microwave generates singularities, the CRT provides electron injection to strip event horizons, and the phone logic board routes data through the resulting naked singularity. A bug-turned-feature that no engineer intended."
+    },
+    {
+      "name": "Suzuha's Temporal Paradox",
+      "ruleViolated": "Causal Consistency",
+      "loreDesc": "Suzuha travels from a future that may never exist if her mission succeeds. Her presence in 2010 is causally dependent on a 2036 that her actions aim to prevent — a bootstrap loop the system tolerates without resolution.",
+      "systemDesc": "A forward-deployed process whose parent branch may be pruned by its own execution. The runtime tolerates this causal inconsistency as long as the observer (Okabe) does not force a resolution."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "The First D-Mail",
+      "trigger": "Okabe accidentally sends a text message about Kurisu's stabbing through the PhoneWave, which is unknowingly connected to SERN's systems.",
+      "consequence": "The worldline shifts from Beta to Alpha. Kurisu is alive, but SERN now monitors the lab, and Mayuri is fated to die. Every subsequent tragedy stems from this single unintentional message.",
+      "timelinePosition": "Inciting Event (2010, July)",
+      "loreDesc": "A garbled accidental message that rewrites the entire worldline, trapping Okabe in a convergence corridor he doesn't yet understand. The smallest possible action with the largest possible consequence.",
+      "systemDesc": "An unintentional write operation that mutates the global state from Beta to Alpha, enrolling the lab in SERN's surveillance graph and activating the Mayuri-death convergence constraint."
+    },
+    {
+      "name": "SERN Database Discovery",
+      "trigger": "Daru hacks into SERN's network and discovers the Jellyman's Report — evidence of failed human time travel experiments producing gelatinous corpses.",
+      "consequence": "The lab realizes SERN has been pursuing time travel for years and that their own research has drawn SERN's attention, escalating the threat from theoretical to existential.",
+      "timelinePosition": "Early Investigation (2010, August)",
+      "loreDesc": "The moment the lab discovers they are not pioneers but latecomers — and that the dominant player in time travel is a ruthless organization willing to kill human subjects.",
+      "systemDesc": "A reconnaissance query into the adversary's database that reveals both the scope of their temporal R&D and the lethal failure modes of their approach — confirming the lab is now a target."
+    },
+    {
+      "name": "Cascading D-Mails",
+      "trigger": "Multiple lab members send personal D-Mails to alter their pasts, each shifting the worldline divergence deeper into the Alpha attractor field.",
+      "consequence": "Each D-Mail compounds the divergence from Beta, making the worldline increasingly entrenched in SERN's convergence corridor and making Mayuri's death increasingly inevitable.",
+      "timelinePosition": "Escalation (2010, August-September)",
+      "loreDesc": "A cascade of seemingly harmless personal wishes — change a lottery number, prevent a friend's trauma, alter a life choice — each one tightening the noose of Alpha field convergence.",
+      "systemDesc": "A sequence of unauthorized state mutations that incrementally shift the global divergence hash deeper into the Alpha corridor, compounding the difficulty of rollback with each additional commit."
+    },
+    {
+      "name": "Mayuri's First Death",
+      "trigger": "SERN's Rounders, led by Moeka, raid the lab to seize the time machine. Mayuri is shot and killed.",
+      "consequence": "Okabe discovers convergence — no matter how many times he time leaps back, Mayuri dies differently each time. This forces him to confront the need to undo all D-Mails and leave the Alpha field entirely.",
+      "timelinePosition": "Convergence Awakening (2010, September)",
+      "loreDesc": "The first death that reveals the system's true nature. Not a single tragedy but an infinite one — Mayuri dies by gunshot, by train, by illness, by accident, always at the same moment, proving the universe enforces her death.",
+      "systemDesc": "The first observable manifestation of the Alpha field's convergence constraint. Repeated time leap iterations confirm the output is write-protected — debugging is impossible within this attractor corridor."
+    },
+    {
+      "name": "D-Mail Reversal Sequence",
+      "trigger": "Okabe systematically undoes each D-Mail in reverse order, often at devastating personal cost to the senders.",
+      "consequence": "The worldline divergence slowly walks back toward Beta. Each reversal strips away a friend's wish, restoring the original timeline at the cost of their happiness — and Okabe's relationships.",
+      "timelinePosition": "Rollback Arc (2010, September)",
+      "loreDesc": "A brutal sequential undoing where Okabe must personally destroy every change his friends wished for — reversing lottery wins, erasing saved relationships, restoring traumas — to crawl back toward a worldline where Mayuri lives.",
+      "systemDesc": "A manual sequential rollback of each unauthorized state mutation, restoring the divergence hash commit by commit. Each reversal has a human cost that the system is indifferent to."
+    },
+    {
+      "name": "The Beta Return — Kurisu's Death",
+      "trigger": "After undoing the final D-Mail, the worldline shifts back to Beta. Kurisu is dead — stabbed in the Radio Building exactly as Okabe first witnessed.",
+      "consequence": "Okabe has saved Mayuri but lost Kurisu. The Beta worldline's own convergence now activates: without Kurisu, time travel research leads to World War III.",
+      "timelinePosition": "The Impossible Choice (2010, September)",
+      "loreDesc": "The system's cruelest symmetry. Escaping Alpha's prison delivers Okabe to Beta's — trading one fixed-point death for another, proving that attractor fields are not one-sided traps but a binary prison.",
+      "systemDesc": "Restoration of the Beta corridor's default state, re-activating the Kurisu-death convergence point. The observer now faces the complementary constraint: both corridors enforce a different critical termination."
+    },
+    {
+      "name": "Operation Arc-Light",
+      "trigger": "In the Beta future, Mayuri Shiina travels back in the C204 time machine with one objective: deliver a transmission to her past self commanding her to physically strike Okabe after his first failed rescue attempt.",
+      "consequence": "Mayuri's slap shatters Okabe's PTSD-induced paralysis, resurrecting his 'Hououin Kyouma' persona and restoring his will to fight. This is the necessary psychological catalyst without which Operation Skuld never launches.",
+      "timelinePosition": "Catalyst (Beta Future → 2010, September)",
+      "loreDesc": "A temporal intervention targeting not causality but psychology. The resistance sends Mayuri backward not to change an event but to change a person — understanding that the system's escape requires Okabe's will as much as his plan.",
+      "systemDesc": "A motivational injection from the future branch that restores the primary observer's operational capacity. The resistance recognizes that the escape solution already exists (Skuld) but the executing process is in a halted state — Arc-Light is the restart signal."
+    },
+    {
+      "name": "Operation Skuld",
+      "trigger": "Future Okabe sends an encrypted 'Nostalgia Drive' video D-Mail (disguised as static until decryption conditions are met) detailing three strict requirements: Kurisu must survive, past Okabe must observe a 'dead' Kurisu in blood, and Nakabachi's stolen thesis must be destroyed.",
+      "consequence": "Okabe swaps Mayuri's metal Upa toy for a plastic one (ensuring the thesis folder passes airport security into cargo, where it incinerates in a fire). He provokes Nakabachi into stabbing him, stuns Kurisu unconscious, then paints his own blood around her body. Past Okabe arrives, observes the scene, sends the first D-Mail — and the causal loop closes. Divergence shifts to 1.048596%.",
+      "timelinePosition": "Resolution (2010, September → July)",
+      "loreDesc": "The masterstroke that breaks the binary prison. Using Future Gadget No. 6 (Cyalume Saber, which failed) as a backup plan gone wrong, Okabe sacrifices his own body as the blood source, swaps a toy to destroy the thesis via fire, and stages the perfect deception. The convergence constraint is satisfied with a lie.",
+      "systemDesc": "A multi-vector observation-falsification exploit: (1) asset swap ensures thesis destruction via environmental hazard, (2) self-inflicted damage provides the visual false-positive, (3) target incapacitation prevents contradictory observer input. All three vectors must succeed simultaneously to spoof the convergence checker and unlock divergence 1.048596%."
+    }
+  ]
+}
