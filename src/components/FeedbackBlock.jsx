@@ -69,26 +69,26 @@ export default function FeedbackBlock({ slug, theme }) {
             <p className="text-[10px] text-gray-500 tracking-wider uppercase mb-2">Was this system analysis helpful?</p>
             {voteStatus ? (
               <p className="text-[10px] tracking-wider" style={{ color: accentColor }}>
-                {voteStatus === 'needs-data' ? 'Flagged — thank you.' : 'Thanks for the feedback.'}
+                {voteStatus === 'needs_data' ? 'Flagged — thank you.' : 'Thanks for the feedback.'}
               </p>
             ) : (
               <div className="flex flex-wrap gap-2">
                 <button
-                  onClick={() => submitVote('up')}
+                  onClick={() => submitVote('helpful')}
                   disabled={loading}
                   className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] font-bold tracking-wider text-gray-400 hover:text-green-400 transition-all cursor-pointer min-h-[44px] disabled:opacity-50"
                 >
                   <ThumbsUp className="w-3 h-3" /> Yes
                 </button>
                 <button
-                  onClick={() => submitVote('down')}
+                  onClick={() => submitVote('unhelpful')}
                   disabled={loading}
                   className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] font-bold tracking-wider text-gray-400 hover:text-red-400 transition-all cursor-pointer min-h-[44px] disabled:opacity-50"
                 >
                   <ThumbsDown className="w-3 h-3" /> Needs improvement
                 </button>
                 <button
-                  onClick={() => submitVote('needs-data')}
+                  onClick={() => submitVote('needs_data')}
                   disabled={loading}
                   className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] font-bold tracking-wider text-gray-400 hover:text-amber-400 transition-all cursor-pointer min-h-[44px] disabled:opacity-50"
                 >

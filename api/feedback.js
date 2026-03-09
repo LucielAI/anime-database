@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   }
 
   // Validate vote
-  if (!['up', 'down', 'needs-data'].includes(vote)) {
+  if (!['helpful', 'unhelpful', 'needs_data'].includes(vote)) {
     return res.status(400).json({ error: 'Invalid vote' })
   }
 
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/feedback`, {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/archive_feedback`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

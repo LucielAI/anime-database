@@ -32,7 +32,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/suggestions`, {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/archive_suggestions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
