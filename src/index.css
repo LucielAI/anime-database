@@ -147,3 +147,8 @@ body {
 .animate-sys-glitch {
   animation: sysGlitch 0.5s ease-in-out;
 }
+
+/* Share Frame Mode */
+.share-frame .share-frame-hide {
+  display: none !important;
+}

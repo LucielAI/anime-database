@@ -68,6 +68,21 @@ The schema requires:
 
 Do NOT generate fake ChatGPT-style dialogue. Deliver deterministic, thesis-driven archive interpretations.
 
+## Shared Utilities
+
+`deriveBullets(data)` is extracted into `src/utils/deriveBullets.js` and reused by SystemSummary, landing page snapshot cards, hero card, and Share Frame mode. No schema changes are required — bullets are derived from existing payload fields.
+
+`getClassificationLabel(hint)` is extracted into `src/utils/getClassificationLabel.js` and maps visualization hints to human-readable system labels.
+
+## Community Signals
+
+Community feedback (votes, "needs more data" flags, suggestions) can help identify:
+- weak archives that need structural improvement
+- pages missing important data or relationships
+- candidate universes for future expansion
+
+This data is stored minimally via serverless endpoints and does not influence the payload schema.
+
 ## Image Policy
 
 Do not fabricate image URLs.
