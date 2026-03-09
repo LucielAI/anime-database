@@ -1,0 +1,25 @@
+
+> anime-archive@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 1740 modules transformed.
+Γ£ù Build failed in 2.10s
+error during build:
+src/utils/deriveBullets.js (5:26): Expression expected
+file: C:/Users/ZeusPR/Desktop/Anime-Database(LLMs)/anime-database/src/utils/deriveBullets.js:5:26
+
+3: export const getCategoryIcon = (category) => {
+4:   switch (category) {
+5:     case 'ENGINE': return <Zap className="w-2.5 h-2.5" />
+                             ^
+6:     case 'LAW': return <Scale className="w-2.5 h-2.5" />
+7:     case 'EXCEPTION': return <AlertTriangle className="w-2.5 h-2.5" />
+
+    at getRollupError (file:///C:/Users/ZeusPR/Desktop/Anime-Database(LLMs)/anime-database/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at ParseError.initialise (file:///C:/Users/ZeusPR/Desktop/Anime-Database(LLMs)/anime-database/node_modules/rollup/dist/es/shared/node-entry.js:14465:28)
+    at convertNode (file:///C:/Users/ZeusPR/Desktop/Anime-Database(LLMs)/anime-database/node_modules/rollup/dist/es/shared/node-entry.js:16437:10)
+    at convertProgram (file:///C:/Users/ZeusPR/Desktop/Anime-Database(LLMs)/anime-database/node_modules/rollup/dist/es/shared/node-entry.js:15677:12)
+    at Module.setSource (file:///C:/Users/ZeusPR/Desktop/Anime-Database(LLMs)/anime-database/node_modules/rollup/dist/es/shared/node-entry.js:17392:24)
+    at async ModuleLoader.addModuleSource (file:///C:/Users/ZeusPR/Desktop/Anime-Database(LLMs)/anime-database/node_modules/rollup/dist/es/shared/node-entry.js:21497:13)
