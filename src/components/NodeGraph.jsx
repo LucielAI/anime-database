@@ -12,7 +12,7 @@ const EDGE_COLORS = {
   mirror: '#8b5cf6',
 }
 
-export default memo(function NodeGraph({ relationships = [], characters = [] }) {
+export default memo(function NodeGraph({ relationships = [], characters = [], isRevealing, revealStep }) {
   const svgRef = useRef(null)
   const [nodes, setNodes] = useState([])
   const [selected, setSelected] = useState(null)
@@ -21,28 +21,46 @@ export default memo(function NodeGraph({ relationships = [], characters = [] }) 
   const dragOffset = useRef({ x: 0, y: 0 })
   const reqRef = useRef()
 
-  // Wow Graph Moment (Pulse central node on load)
-  useEffect(() => {
-    if (hasPulsed || characters.length === 0 || relationships.length === 0) return
+  // Wow Graph Moment logic
+  const triggerPulse = useCallback((delay = 600, duration = 1200) => {
     const timer = setTimeout(() => {
-      if (!selected) {
-        const degrees = {}
-        relationships.forEach(r => {
-          degrees[r.source] = (degrees[r.source] || 0) + 1
-          degrees[r.target] = (degrees[r.target] || 0) + 1
-        })
-        const maxNode = Object.keys(degrees).reduce((a, b) => (degrees[a] || 0) > (degrees[b] || 0) ? a : b, characters[0].name)
-        setSelected(maxNode)
-        
-        setTimeout(() => {
-          setSelected(prev => prev === maxNode ? null : prev)
-        }, 1200)
-        
-        setHasPulsed(true)
-      }
-    }, 600)
+      setSelected(currentSelected => {
+        if (!currentSelected && characters.length > 0 && relationships.length > 0) {
+          const degrees = {}
+          relationships.forEach(r => {
+            degrees[r.source] = (degrees[r.source] || 0) + 1
+            degrees[r.target] = (degrees[r.target] || 0) + 1
+          })
+          const maxNode = Object.keys(degrees).reduce((a, b) => (degrees[a] || 0) > (degrees[b] || 0) ? a : b, characters[0].name)
+          
+          setTimeout(() => {
+            setSelected(prev => prev === maxNode ? null : prev)
+          }, duration)
+          
+          return maxNode
+        }
+        return currentSelected
+      })
+    }, delay)
     return () => clearTimeout(timer)
-  }, [characters, relationships, hasPulsed, selected])
+  }, [characters, relationships])
+
+  // Standard load pulse
+  useEffect(() => {
+    if (!isRevealing && !hasPulsed && characters.length > 0 && relationships.length > 0) {
+      setTimeout(() => setHasPulsed(true), 0)
+      const cleanup = triggerPulse(600, 1200)
+      return cleanup
+    }
+  }, [hasPulsed, characters, relationships, isRevealing, triggerPulse])
+
+  // Cinematic sequence pulse
+  useEffect(() => {
+    if (isRevealing && revealStep === 4) {
+      const cleanup = triggerPulse(0, 2000)
+      return cleanup
+    }
+  }, [isRevealing, revealStep, triggerPulse])
 
   useEffect(() => {
     const cx = 300
@@ -56,8 +74,7 @@ export default memo(function NodeGraph({ relationships = [], characters = [] }) 
         y: cy + radius * Math.sin(angle),
       }
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    setNodes(arranged)
+    setTimeout(() => setNodes(arranged), 0)
   }, [characters])
 
   const nodeMap = useMemo(() => {

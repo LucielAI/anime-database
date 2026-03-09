@@ -1,4 +1,4 @@
-import { useState, useEffect, memo } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import ImageWithFallback from './ImageWithFallback';
 import DangerBar from './DangerBar';
 import { resolveColor } from '../utils/resolveColor';
@@ -84,19 +84,18 @@ function BootstrapParadoxBanner({ events, theme, isSystemMode }) {
   );
 }
 
-function RelationshipWeb({ characters, relationships, theme, isSystemMode }) {
+function RelationshipWeb({ characters, relationships, theme, isSystemMode, isRevealing, revealStep }) {
   const [hovered, setHovered] = useState(null);
   const [hasInteracted, setHasInteracted] = useState(false);
 
   // Wow Graph Moment (AoT Causal Loop Focus)
-  useEffect(() => {
+  const triggerHighlight = useCallback((delay = 600) => {
     const timer = setTimeout(() => {
-      if (!hasInteracted && !hovered && characters && characters.length > 0) {
-        const eren = characters.find(c => c.name === 'Eren Yeager');
-        if (eren) {
-          setHovered(eren.name);
-        } else {
-          // Fallback: Highest degree node
+      setHovered(current => {
+        if (!hasInteracted && !current && characters && characters.length > 0) {
+          const eren = characters.find(c => c.name === 'Eren Yeager');
+          if (eren) return eren.name;
+          
           const degrees = {};
           if (relationships) {
             relationships.forEach(r => {
@@ -104,13 +103,22 @@ function RelationshipWeb({ characters, relationships, theme, isSystemMode }) {
               degrees[r.target] = (degrees[r.target] || 0) + 1;
             });
           }
-          const maxNode = Object.keys(degrees).reduce((a, b) => degrees[a] > degrees[b] ? a : b, null);
-          if (maxNode) setHovered(maxNode);
+          const maxNode = Object.keys(degrees).reduce((a, b) => (degrees[a] || 0) > (degrees[b] || 0) ? a : b, characters[0]?.name);
+          return maxNode;
         }
-      }
-    }, 600);
+        return current;
+      })
+    }, delay);
     return () => clearTimeout(timer);
-  }, [characters, relationships, hasInteracted, hovered]);
+  }, [characters, relationships, hasInteracted]);
+
+  useEffect(() => {
+    if (!isRevealing) return triggerHighlight(600);
+  }, [isRevealing, triggerHighlight]);
+
+  useEffect(() => {
+    if (isRevealing && revealStep === 4) return triggerHighlight(0);
+  }, [isRevealing, revealStep, triggerHighlight]);
 
   if (!relationships || relationships.length === 0) return null;
   const cx = 200, cy = 120, radius = 85;
@@ -215,14 +223,26 @@ function RelationshipWeb({ characters, relationships, theme, isSystemMode }) {
   );
 }
 
-const Timeline = memo(({ characters, causalEvents, relationships = [], isSystemMode, theme }) => {
+const Timeline = memo(({ characters, causalEvents, relationships = [], isSystemMode, theme, isRevealing, revealStep }) => {
   const [isSweeping, setIsSweeping] = useState(false);
 
-  useEffect(() => {
-    const timer1 = setTimeout(() => setIsSweeping(true), 300);
-    const timer2 = setTimeout(() => setIsSweeping(false), 2200);
+  const triggerSweep = useCallback((delay = 300, duration = 1900) => {
+    const timer1 = setTimeout(() => setIsSweeping(true), delay);
+    const timer2 = setTimeout(() => setIsSweeping(false), delay + duration);
     return () => { clearTimeout(timer1); clearTimeout(timer2); };
   }, []);
+
+  useEffect(() => {
+    if (!isRevealing) {
+      return triggerSweep(300, 1900);
+    }
+  }, [isRevealing, triggerSweep]);
+
+  useEffect(() => {
+    if (isRevealing && revealStep === 4) {
+      return triggerSweep(0, 2000);
+    }
+  }, [isRevealing, revealStep, triggerSweep]);
 
   return (
     <div className="w-full relative py-8 px-4 flex flex-col gap-12">
@@ -316,6 +336,8 @@ const Timeline = memo(({ characters, causalEvents, relationships = [], isSystemM
         relationships={relationships}
         theme={theme}
         isSystemMode={isSystemMode}
+        isRevealing={isRevealing}
+        revealStep={revealStep}
       />
 
       {/* Characters Section */}

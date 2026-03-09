@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { getVisualization } from '../../visualizations/registry'
 import ErrorBoundary from '../ErrorBoundary'
 
+function renderVisualization(hint, props) {
+  const Comp = getVisualization(hint)
+  return <Comp {...props} />
+}
+
 const TYPE_BADGE_COLORS = {
   ally: { bg: 'rgba(34,211,238,0.15)', text: '#22d3ee' },
   enemy: { bg: 'rgba(239,68,68,0.15)', text: '#ef4444' },
@@ -14,7 +19,7 @@ const TYPE_BADGE_COLORS = {
   successor: { bg: 'rgba(34,211,238,0.15)', text: '#22d3ee' },
 }
 
-export default function EntityDatabaseTab({ data, isSystemMode, theme }) {
+export default function EntityDatabaseTab({ data, isSystemMode, theme, revealStep, isRevealing }) {
   const [showRelationships, setShowRelationships] = useState(true)
 
   const characters = data?.characters || []
@@ -22,22 +27,24 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme }) {
   const anomalies = data?.anomalies || []
   const accent = theme?.accent || '#22d3ee'
 
-  const VizComponent = getVisualization(data?.visualizationHint)
+
 
   return (
     <div className="space-y-6 font-mono">
       {/* Main visualization */}
       <ErrorBoundary data={data} isSystemMode={isSystemMode} theme={theme}>
-        <VizComponent
-          characters={characters}
-          causalEvents={data?.causalEvents || []}
-          relationships={relationships}
-          counterplay={data?.counterplay || []}
-          powerSystem={data?.powerSystem || []}
-          data={data}
-          isSystemMode={isSystemMode}
-          theme={theme}
-        />
+        {renderVisualization(data?.visualizationHint, {
+          characters,
+          causalEvents: data?.causalEvents || [],
+          relationships,
+          counterplay: data?.counterplay || [],
+          powerSystem: data?.powerSystem || [],
+          data,
+          isSystemMode,
+          theme,
+          revealStep,
+          isRevealing
+        })}
       </ErrorBoundary>
 
       {/* Anomalies section */}

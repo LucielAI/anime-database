@@ -1,11 +1,11 @@
-import { useState, useEffect, memo } from 'react'
+import { useState, useEffect, useCallback, memo } from 'react'
 
-export default memo(function CounterTree({ counterplay = [], characters = [] }) {
+export default memo(function CounterTree({ counterplay = [], characters = [], isRevealing, revealStep }) {
   const [selectedEdge, setSelectedEdge] = useState(null)
   const [hasInteracted, setHasInteracted] = useState(false)
 
-  // Wow Graph Moment (JJK Counterplay Chain)
-  useEffect(() => {
+  // Wow Graph Moment logic
+  const triggerPulse = useCallback((delay = 600) => {
     const timer = setTimeout(() => {
       if (!hasInteracted && selectedEdge === null && counterplay.length > 0) {
         const index = counterplay.findIndex(c => 
@@ -19,11 +19,19 @@ export default memo(function CounterTree({ counterplay = [], characters = [] }) 
         
         setTimeout(() => {
           setSelectedEdge(prev => prev === targetIndex ? null : prev)
-        }, 1500)
+        }, 2000)
       }
-    }, 600)
+    }, delay)
     return () => clearTimeout(timer)
-  }, [counterplay, hasInteracted, selectedEdge])
+  }, [counterplay, hasInteracted, selectedEdge, setSelectedEdge])
+
+  useEffect(() => {
+    if (!isRevealing) return triggerPulse(600)
+  }, [isRevealing, triggerPulse])
+
+  useEffect(() => {
+    if (isRevealing && revealStep === 4) return triggerPulse(0)
+  }, [isRevealing, revealStep, triggerPulse])
 
   const charMap = {}
   characters.forEach((c) => { charMap[c.name] = c })

@@ -1,13 +1,20 @@
 import { useState, useEffect } from 'react'
 import { Terminal, ChevronRight, Zap, Target } from 'lucide-react'
 
-export default function AIInsightPanel({ aiInsights, theme, isSystemMode }) {
+export default function AIInsightPanel({ aiInsights, theme, isSystemMode, revealStep, isRevealing }) {
   const [isOpen, setIsOpen] = useState(false)
   const [mode, setMode] = useState('casual') // 'casual' | 'deep'
   const [displayedText, setDisplayedText] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   
   const content = aiInsights?.[mode] || 'No system analysis available for this configuration.'
+
+  // System sequence auto-open
+  useEffect(() => {
+    if (isRevealing && revealStep >= 5 && !isOpen) {
+      setTimeout(() => setIsOpen(true), 0)
+    }
+  }, [isRevealing, revealStep, isOpen])
 
   useEffect(() => {
     let isMounted = true
@@ -28,8 +35,13 @@ export default function AIInsightPanel({ aiInsights, theme, isSystemMode }) {
     // Reset state when switching modes or opening
     let currentIndex = 0
     let active = true
-    setDisplayedText('')
-    setIsTyping(true)
+    
+    setTimeout(() => {
+      if (active) {
+        setDisplayedText('')
+        setIsTyping(true)
+      }
+    }, 0)
 
     const typeSpeed = 15 // ms per chunk
     const chunkSize = 2 // reveal 2 chars at a time for smooth performance

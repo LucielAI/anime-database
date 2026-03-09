@@ -5,8 +5,8 @@ import CoreLawsTab from './tabs/CoreLawsTab'
 
 const TABS = [PowerEngineTab, EntityDatabaseTab, FactionsTab, CoreLawsTab]
 
-export default function TabContent({ activeTab, data, isSystemMode, theme }) {
+export default function TabContent({ activeTab, data, isSystemMode, theme, revealStep, isRevealing }) {
   const TabPanel = TABS[activeTab]
   if (!TabPanel) return null
-  return <TabPanel data={data} isSystemMode={isSystemMode} theme={theme} />
+  return <TabPanel data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 }

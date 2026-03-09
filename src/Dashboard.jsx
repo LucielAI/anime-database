@@ -6,6 +6,7 @@ import SystemSummary from './components/SystemSummary'
 import ExploreAnotherUniverse from './components/ExploreAnotherUniverse'
 import WhyThisRenderer from './components/WhyThisRenderer'
 import AIInsightPanel from './components/AIInsightPanel'
+import { useSystemReveal } from './hooks/useSystemReveal'
 
 const TABS = ['POWER ENGINE', 'ENTITY DATABASE', 'FACTIONS', 'CORE LAWS']
 
@@ -56,6 +57,7 @@ const getClassificationLabel = (hint) => {
 export default function Dashboard({ data }) {
   const [activeTab, setActiveTab] = useState(0)
   const [isSystemMode, setIsSystemMode] = useState(false)
+  const { isRevealing, revealStep, startReveal, cancelReveal } = useSystemReveal()
 
   const theme = data?.themeColors || DEFAULT_THEME
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
@@ -82,6 +84,30 @@ export default function Dashboard({ data }) {
         }} 
       />
       <div className={`sys-mode-overlay ${isSystemMode ? 'active' : ''}`} />
+      
+      {/* System Reveal Vignette Overlay */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-40 transition-all duration-1000 ease-in-out" 
+        style={{ 
+          opacity: isRevealing ? 1 : 0,
+          boxShadow: 'inset 0 0 150px 50px rgba(0,0,0,0.95)',
+          backgroundColor: 'rgba(5, 5, 8, 0.5)'
+        }} 
+      >
+        {isRevealing && animeName === 'Attack on Titan' && (
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #ef4444 0, #ef4444 1px, transparent 1px, transparent 10px)' }} />
+        )}
+        {isRevealing && animeName === 'Jujutsu Kaisen' && (
+          <div className="absolute inset-0 opacity-40 shadow-[inset_0_0_120px_rgba(168,85,247,0.4)] animate-pulse" />
+        )}
+        {isRevealing && animeName === 'Hunter x Hunter' && (
+          <div className="absolute inset-0 opacity-30 shadow-[inset_0_0_80px_rgba(34,211,238,0.3)] border-2 border-[#22d3ee]/20 rounded-xl m-1 transition-all duration-1000" />
+        )}
+        {isRevealing && animeName === 'Vinland Saga' && (
+          <div className="absolute inset-x-0 top-0 h-96 bg-linear-to-b from-amber-700/10 to-transparent animate-pulse" />
+        )}
+      </div>
+
       {/* Header */}
       <header
         className="pt-14 pb-6 px-6 relative"
@@ -110,7 +136,7 @@ export default function Dashboard({ data }) {
             {!data?.logoUrl && (
               <h1 
                 key={isSystemMode ? 'sys' : 'lore'} 
-                className={`text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter uppercase bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent mt-2`}
+                className={`text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter uppercase transition-colors duration-700 ${isRevealing && revealStep === 1 ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]' : 'bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent'} mt-2`}
               >
                 {animeName}
               </h1>
@@ -166,16 +192,43 @@ export default function Dashboard({ data }) {
       </header>
 
       {/* 5-Bullet System Summary */}
-      <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} />
+      <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
       {/* Why This Lens? */}
-      <WhyThisRenderer data={data} isSystemMode={isSystemMode} theme={theme} />
+      <WhyThisRenderer data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
+
+      {/* Reveal The System Action Button */}
+      <div className="max-w-6xl mx-auto px-6 mb-4 flex justify-end relative z-50">
+        <button 
+          onClick={isRevealing ? cancelReveal : startReveal}
+          className={`group flex items-center gap-3 px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.2em] transition-all duration-500 border backdrop-blur-md uppercase ${
+            isRevealing 
+              ? 'bg-red-500/10 text-red-400 border-red-500/30 hover:bg-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.2)]' 
+              : 'bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white hover:border-cyan-400/50'
+          }`}
+          style={{ 
+            boxShadow: !isRevealing ? `0 0 10px ${isSystemMode ? theme.secondary : theme.primary}20` : undefined
+          }}
+        >
+          {isRevealing ? (
+            <>
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+              CANCEL SEQUENCE
+            </>
+          ) : (
+            <>
+              <span className="w-0 overflow-hidden group-hover:w-auto transition-all duration-300">▶</span>
+              REVEAL THE SYSTEM
+            </>
+          )}
+        </button>
+      </div>
 
       {/* AI Insight Panel */}
-      <AIInsightPanel aiInsights={data?.aiInsights} theme={theme} isSystemMode={isSystemMode} />
+      <AIInsightPanel aiInsights={data?.aiInsights} theme={theme} isSystemMode={isSystemMode} revealStep={revealStep} isRevealing={isRevealing} />
 
       {/* Navigation Tabs */}
-      <nav className="max-w-6xl mx-auto px-6 mb-3 mt-6 flex overflow-x-auto relative flex-nowrap border-b border-white/5 scrollbar-hide">
+      <nav className="max-w-6xl mx-auto px-6 mb-3 mt-4 flex overflow-x-auto relative flex-nowrap border-b border-white/5 scrollbar-hide">
         {TABS.map((tab, idx) => {
           const isActive = activeTab === idx
           const activeColor = isSystemMode ? theme.secondary : theme.primary
@@ -210,12 +263,14 @@ export default function Dashboard({ data }) {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 pb-24">
+      <main className="max-w-6xl mx-auto px-6 pb-24 relative z-40">
         <TabContent
           activeTab={activeTab}
           data={data}
           isSystemMode={isSystemMode}
           theme={theme}
+          revealStep={revealStep}
+          isRevealing={isRevealing}
         />
       </main>
 

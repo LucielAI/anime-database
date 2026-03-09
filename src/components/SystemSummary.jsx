@@ -88,7 +88,7 @@ function deriveBullets(data) {
   return pool.slice(0, 5)
 }
 
-export default function SystemSummary({ data, isSystemMode, theme }) {
+export default function SystemSummary({ data, isSystemMode, theme, revealStep, isRevealing }) {
   const bullets = useMemo(() => deriveBullets(data), [data])
   const accentColor = isSystemMode ? (theme?.secondary || '#22d3ee') : (theme?.primary || '#8b5cf6')
 
@@ -106,20 +106,27 @@ export default function SystemSummary({ data, isSystemMode, theme }) {
 
         <div className="flex items-center gap-2 mb-4">
           <Terminal className="w-4 h-4 text-gray-500" style={{ color: accentColor }} />
-          <h2 className="text-[11px] uppercase tracking-[0.25em] font-bold text-gray-300">
+          <h2 className={`text-[11px] uppercase tracking-[0.25em] font-bold transition-all duration-500 ${isRevealing && revealStep >= 1 ? 'text-white text-shadow-glow' : 'text-gray-300'}`}>
             {isSystemMode ? '// SYSTEM ARCHITECTURE' : 'THE CORE SYSTEM'}
           </h2>
         </div>
 
         <ul className="space-y-3 relative z-10">
-          {bullets.map((bullet) => {
+          {bullets.map((bullet, index) => {
             const textContent = isSystemMode ? bullet.sys : bullet.lore
+            
+            const isHidden = isRevealing && revealStep < 2
+            const delay = isRevealing ? `${index * 150}ms` : '0ms'
 
             return (
-              <li key={bullet.id} className="flex items-start gap-3 group">
+              <li 
+                key={bullet.id} 
+                className={`flex items-start gap-3 group transition-all duration-700 ease-out transform ${isHidden ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
+                style={{ transitionDelay: delay }}
+              >
                 <span 
-                  className="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-sm opacity-50 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ backgroundColor: accentColor }}
+                  className={`mt-1.5 w-1.5 h-1.5 shrink-0 rounded-sm opacity-50 group-hover:opacity-100 transition-all duration-300 ${isRevealing && revealStep === 2 ? 'animate-pulse' : ''}`}
+                  style={{ backgroundColor: accentColor, boxShadow: isRevealing && revealStep === 2 ? `0 0 10px ${accentColor}` : 'none' }}
                 />
                 <p className="text-xs md:text-sm text-gray-400 group-hover:text-gray-200 transition-colors leading-relaxed">
                   <span 
@@ -129,7 +136,9 @@ export default function SystemSummary({ data, isSystemMode, theme }) {
                     {getCategoryIcon(bullet.category)}
                     {bullet.category}
                   </span>
-                  {textContent}
+                  <span className={`${isRevealing && revealStep === 2 ? 'text-white' : ''} transition-colors duration-700`}>
+                    {textContent}
+                  </span>
                 </p>
               </li>
             )
