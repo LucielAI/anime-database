@@ -6,6 +6,7 @@
 - Hunter x Hunter
 - Vinland Saga
 - Steins;Gate
+- Death Note
 
 ## Current Renderers
 - TimelineExplorer
