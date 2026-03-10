@@ -5,6 +5,7 @@
 - Jujutsu Kaisen
 - Hunter x Hunter
 - Vinland Saga
+- Steins;Gate
 
 ## Current Renderers
 - TimelineExplorer

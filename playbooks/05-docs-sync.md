@@ -1,0 +1,87 @@
+# Playbook: Docs Sync
+
+How to keep docs aligned after adding a universe or making architectural changes.
+
+## When to Run This
+
+After every new universe integration. Also after any change to renderers, pipeline stages, or core architecture.
+
+## Inputs Required
+
+- New universe name and slug
+- Whether it uses legacy or layered data format
+
+---
+
+## After Adding a Universe
+
+Two docs list current universes and will drift if not updated:
+
+### 1. `docs/BLUEPRINT.md` — Current Universes section
+
+```markdown
+## Current Universes
+- Attack on Titan
+- Jujutsu Kaisen
+- Hunter x Hunter
+- Vinland Saga
+- Steins;Gate
+- [New Anime Title]   ← add here
+```
+
+### 2. `docs/REPO_AUDIT_SUMMARY.md` — Current Universes section
+
+```markdown
+## Current Universes
+- Attack on Titan
+- Jujutsu Kaisen
+- Hunter x Hunter
+- Vinland Saga
+- [New Anime Title]   ← add here (note: Steins;Gate is missing here — fix if you see it)
+```
+
+### 3. `src/data/index.js` — Preferred order array
+
+If you want the new universe to appear in a specific position on the homepage, add its slug to `preferredOrder`:
+
+```js
+const preferredOrder = ['aot', 'jjk', 'hxh', 'vinlandsaga', 'steinsgate', 'newslug']
+```
+
+If you don't add it here, the universe will still appear — it just sorts alphabetically after the preferred list.
+
+---
+
+## After Architectural Changes
+
+If you change renderers, pipeline stages, or schema rules, check these docs for accuracy:
+
+| Changed | Docs to update |
+|---|---|
+| New renderer added | `docs/RENDERER_CONTRACT.md` (Supported Renderers + Structural Profiles table) |
+| New pipeline stage | `docs/UNIVERSE_PIPELINE.md` |
+| New schema field | `docs/DATA_PRINCIPLES.md` (if it affects data authoring rules) |
+| New script added | `scripts/README.md` |
+| New presentation config key | `docs/DATA_PRINCIPLES.md` (Presentation Fields section) |
+| Image policy change | `docs/DATA_PRINCIPLES.md` (Image Policy) + `docs/RENDERER_CONTRACT.md` (Image Handling Contract) |
+
+Do not rewrite docs wholesale. Update only the sections that no longer reflect reality.
+
+---
+
+## Done When
+
+- [ ] `docs/BLUEPRINT.md` Current Universes list matches `src/data/` files
+- [ ] `docs/REPO_AUDIT_SUMMARY.md` Current Universes list matches `src/data/` files
+- [ ] `src/data/index.js` preferredOrder reflects desired homepage ordering
+- [ ] Any changed scripts/renderers/schema rules are reflected in relevant docs
+
+## Common Mistakes
+
+**Forgetting `REPO_AUDIT_SUMMARY.md`.** It has its own universe list that drifts independently from `BLUEPRINT.md`.
+
+**Rewriting docs to be aspirational.** Docs must reflect actual current reality. Do not document future plans in present tense.
+
+**Adding to `preferredOrder` but not to `src/data/`.** The `index.js` registry auto-discovers from `src/data/`. The preferred order just controls display sequence — a slug in `preferredOrder` that has no file is silently skipped.
+
+**Not running the validator after a schema doc change.** If you document a new required field, verify `validateSchema.js` actually enforces it (or note that it doesn't yet).
