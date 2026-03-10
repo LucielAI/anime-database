@@ -232,7 +232,8 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
         <svg
           ref={svgRef}
           viewBox={`0 0 ${VB_W} ${VB_H}`}
-          className="min-w-[800px] lg:min-w-full w-full h-[650px]"
+          className="w-full h-auto max-h-[650px]"
+          style={{ aspectRatio: `${VB_W} / ${VB_H}` }}
           onMouseMove={handleMove}
           onMouseUp={handleEnd}
           onMouseLeave={handleEnd}
