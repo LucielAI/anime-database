@@ -1,5 +1,7 @@
 # Agent Playbooks
 
+> **Agent entry point:** `CLAUDE.md` at repo root — read that first for task routing, live sources of truth, and critical rules. This README is the playbook index.
+
 Repo-native operational guides for recurring work in Anime Architecture Archive.
 
 These are not a framework. They are practical checklists written for agents (Claude Code, Codex, Cursor, etc.) and human contributors who need to get work done without reading every doc first.
