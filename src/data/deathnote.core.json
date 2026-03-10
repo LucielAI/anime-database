@@ -1,0 +1,547 @@
+{
+  "anime": "Death Note",
+  "tagline": "An asymmetric information war where anonymous execution power collides with probabilistic deanonymization — and psychology leaks what cryptography cannot",
+  "malId": 1535,
+  "themeColors": {
+    "primary": "#dc2626",
+    "secondary": "#1e1b4b",
+    "accent": "#ef4444",
+    "glow": "rgba(220,38,38,0.35)",
+    "tabActive": "#dc2626",
+    "badgeBg": "rgba(30,27,75,0.15)",
+    "badgeText": "#818cf8",
+    "modeGlow": "rgba(220,38,38,0.25)",
+    "heroGradient": "rgba(5,5,5,0.95)"
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1079/138100l.jpg",
+  "visualizationHint": "node-graph",
+  "visualizationReason": "Death Note is structurally defined by relational interdependence — who controls whom, who knows what about whom, and how shifting alliances and proxy networks reshape the power graph. Every kill, investigation, and betrayal rewires the network. The node-graph renderer is the only lens that captures this web of manipulation, dependency, and counterintelligence.",
+  "headerFlavor": {
+    "loreQuote": "I am justice.",
+    "sysWarning": "// [THREAT_LEVEL]: ANONYMITY BREACH IN PROGRESS — 25 OF 33 BITS COMPROMISED",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "hatch-red",
+  "aiInsights": {
+    "casual": "Death Note is about two geniuses trying to destroy each other using pure information. Light finds a notebook that kills anyone whose name he writes in it — but the catch is that every kill leaks data about who he is. L, the world's greatest detective, doesn't need to find the weapon. He just needs to narrow down who's using it, one deduction at a time. The node-graph view shows how Light builds proxy networks, manipulates shinigami, and infiltrates the investigation hunting him — while L, Near, and Mello tighten the net from different angles.",
+    "deep": "The Death Note universe operates as a cryptographic anonymity problem with ~33 bits of Shannon entropy separating Kira from identification. Light's structural flaw is psychological, not operational — his narcissistic need to demonstrate superiority forces continuous signal emission (temporal kill patterns, reactivity to provocations, FBI purges) that systematically degrades his anonymity. The node-graph exposes the dependency architecture: Light requires proxy nodes (Misa, Mikami) to distribute his execution signature, but each proxy introduces uncontrolled failure modes. Rem's destruction to save Misa is not a relationship event but a protocol exploit — Light weaponizes the Shinigami's hardcoded empathy constraint to eliminate L. The successor fork (Near's logic + Mello's kinetics) reconstructs L's capability through distributed processing, ultimately defeating Kira not through deduction alone but through hardware interception — Gevanni's notebook forgery exploits Mikami's deterministic behavior to break the final layer of anonymity."
+  },
+  "powerSystem": [
+    {
+      "name": "Death Note",
+      "subtitle": "Remote Execution Hardware",
+      "loreDesc": "A supernatural notebook from the Shinigami Realm that kills any human whose name is written in it while the writer visualizes their face. The default cause of death is heart attack within 40 seconds; custom death conditions can be scripted within 6 minutes and 40 seconds, provided they are physically possible.",
+      "systemDesc": "An asymmetric execution platform requiring dual-factor authentication (name string + facial biometric) to process a termination command. The 40-second/6:40 temporal windows constrain scripting complexity, while physical feasibility checks and collateral damage protocols prevent cascading system failures.",
+      "icon": "BookOpen",
+      "color": "red-400",
+      "signatureMoment": "Light's first kill — writing Kurou Otoharada's name as a test, then watching the hostage-taker collapse on live television, proving the notebook is real.",
+      "systemSubtitle": "Remote Execution Hardware",
+      "loreSubtitle": "The Notebook of Death"
+    },
+    {
+      "name": "Shinigami Eyes",
+      "subtitle": "Biometric Overlay Protocol",
+      "loreDesc": "A permanent optical upgrade obtained by trading exactly half of one's remaining lifespan. The user can see any human's true name and remaining lifespan floating above their head — bypassing all aliases, disguises, and identity protection. Users cannot see the lifespan of other Death Note owners.",
+      "systemDesc": "A lifespan-cost biometric enhancement that resolves the dual-authentication bottleneck by providing real-time name resolution for all observable targets. The 50% lifespan cost represents an irreversible resource sacrifice, and the owner-blindness creates a detectable classification gap exploitable for identifying other Note holders.",
+      "icon": "Eye",
+      "color": "purple-400",
+      "signatureMoment": "Misa reveals she can see L's real name floating above his head — the ultimate intelligence asset that Light refuses to use himself, calculating that halving his lifespan is strategically suboptimal.",
+      "systemSubtitle": "Biometric Overlay Protocol",
+      "loreSubtitle": "Eyes of the Death God"
+    },
+    {
+      "name": "Memory Wipe Protocol",
+      "subtitle": "Ownership-Based Cognitive Partitioning",
+      "loreDesc": "When a human relinquishes ownership of a Death Note, all memories associated with using it are instantly and completely erased. The user's psychological state reverts to its pre-exposure baseline. Touching the physical notebook restores all memories immediately, but this restoration is hard-capped at six uses before permanent data corruption.",
+      "systemDesc": "A deterministic memory partitioning system that cleanly segments Death Note episodic data from baseline cognitive state. Ownership transfer triggers a full partition wipe, rendering the former user genuinely innocent under any behavioral analysis. The 6-restoration hard cap prevents indefinite exploit cycling.",
+      "icon": "Brain",
+      "color": "cyan-400",
+      "signatureMoment": "Light voluntarily surrenders the notebook, erasing his own memories of being Kira. He passes L's confinement tests and polygraph analysis because he genuinely no longer knows — the perfect alibi engineered from self-inflicted amnesia.",
+      "systemSubtitle": "Ownership-Based Cognitive Partitioning",
+      "loreSubtitle": "Forgetting the Notebook"
+    }
+  ],
+  "rankings": {
+    "systemName": "Information Control Hierarchy",
+    "loreName": "Kira's Power Structure",
+    "topTierName": "Apex Controller (Kira Prime)",
+    "topTierLore": "The primary Death Note operator who achieved total systemic capture — simultaneously acting as global executioner, head of the Kira investigation, and the identity of L. Five years of unchallenged dominion with 70% global crime reduction.",
+    "topTierSystem": "The singular node that successfully infiltrated and captured the counter-system, eliminating the primary threat (L) through proxy exploitation and achieving full information monopoly over both the execution and investigation networks.",
+    "tiers": [
+      {
+        "name": "Primary Investigator (L / Near)",
+        "loreDesc": "The world's greatest detective who identified Kira's geographic region within days and narrowed the suspect pool to a handful. His successor Near completed the identification through hardware interception.",
+        "systemDesc": "The adversarial analytical engine capable of extracting identification bits from Kira's behavioral signal. L extracted ~25 bits through provocation and statistical inference; Near extracted the remaining bits through physical evidence capture."
+      },
+      {
+        "name": "Proxy Operators (Misa / Mikami)",
+        "loreDesc": "Secondary notebook users who extended Kira's operational reach but introduced critical vulnerabilities through behavioral unpredictability and rigid routine patterns.",
+        "systemDesc": "Distributed execution nodes that reduce the primary operator's signal exposure but introduce uncontrolled failure modes — Misa through chaotic signal amplification, Mikami through deterministic behavioral patterns exploitable by surveillance."
+      },
+      {
+        "name": "Catalytic Vectors (Shinigami)",
+        "loreDesc": "The death gods who delivered the notebooks into the human world. Ryuk dropped the Note out of boredom; Rem was destroyed by her own empathy. Neither serves human interests — they operate on alien incentive structures.",
+        "systemDesc": "Extra-dimensional delivery and enforcement agents operating under non-human optimization functions. Their interventions are structurally decisive but motivationally orthogonal to human conflict objectives."
+      },
+      {
+        "name": "Institutional Actors (Task Force / SPK)",
+        "loreDesc": "Law enforcement bodies caught between two impossible forces — a killer who cannot be caught by conventional means and a detective who operates outside every legal framework they were trained to uphold.",
+        "systemDesc": "Conventional enforcement infrastructure rendered structurally inadequate by asymmetric threat capabilities. Their primary value is as information conduits and cover identities, not as independent threat resolution mechanisms."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Light Yagami",
+      "title": "The Disruptor",
+      "rank": "Kira / Head of Kira Investigation",
+      "primaryAbility": "Death Note / Strategic Manipulation",
+      "loreBio": "A genius high school student who discovers the Death Note and appoints himself judge of the world. Light dismantles global crime networks through anonymous execution, forces superpowers to capitulate, and achieves total systemic capture by killing L and usurping his identity — becoming both the world's executioner and the head of his own investigation.",
+      "systemBio": "The primary entropic engine that converts the Death Note's execution capability into a centralized authoritarian control system. His structural flaw is psychological — narcissistic signal emission under adversarial pressure systematically degrades the anonymity that is his sole defense, leaking ~25 identification bits through temporal patterns, reactivity, and proxy mismanagement.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Crown",
+      "dangerLevel": 10,
+      "signatureMoment": "Manipulating Rem into killing L and Watari to save Misa — weaponizing a shinigami's empathy constraint to eliminate the only mind capable of catching him, while maintaining total plausible deniability.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/63870.jpg?s=3adaed92c13123a9649ccc0cc6551f7d",
+      "malId": 80
+    },
+    {
+      "name": "L Lawliet",
+      "title": "The Immune Response",
+      "rank": "World's Greatest Detective",
+      "primaryAbility": "Bayesian Inference / Provocation Tactics",
+      "loreBio": "A stateless, anonymous detective who mobilizes global intelligence assets to hunt Kira. L identifies the geographic region, demographic profile, and eventually the individual behind the killings through pure statistical analysis and psychological provocation — proving Light is Kira with near-certainty before being assassinated through a vector he never anticipated.",
+      "systemBio": "The system's primary immunological response — a stateless analytical engine that aggregates mortality data, applies Bayesian inference, and exploits the adversary's psychological vulnerabilities to force suboptimal moves. Successfully extracted ~25 of 33 required identification bits before termination via an exploit outside his threat model.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Eye",
+      "dangerLevel": 9,
+      "signatureMoment": "The Lind L. Tailor broadcast — sacrificing a condemned prisoner on live television to provoke Kira into revealing his geographic region, extracting critical identification bits from Light's emotional reaction within minutes.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/249647.jpg?s=95cecc21f3db10318c68a0863f0132c8",
+      "malId": 71
+    },
+    {
+      "name": "Ryuk",
+      "title": "The Catalyst",
+      "rank": "Shinigami",
+      "primaryAbility": "Death Note Deployment / Lifespan Perception",
+      "loreBio": "A bored shinigami who drops his Death Note into the human world purely for entertainment. Ryuk maintains strict neutrality throughout Light's campaign, offering no help and no hindrance — until the final moment, when he writes Light's name in his own notebook, ending the experiment on his terms.",
+      "systemBio": "The delivery vector that injects the disruptive technology into the human system. Operating under a non-human optimization function (entertainment maximization), Ryuk is structurally amoral — neither ally nor enemy but a detached observer who terminates the experiment when its entertainment value reaches zero.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-800",
+      "accentColor": "gray-400",
+      "icon": "Skull",
+      "dangerLevel": 8,
+      "signatureMoment": "Writing Light's name in his notebook at the Yellow Box Warehouse — fulfilling the promise he made on day one: 'I'll be the one to write your name when your time comes.'",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/59125.jpg?s=e258ccc6e6f6ed00c837b5ae8bced941",
+      "malId": 75
+    },
+    {
+      "name": "Near",
+      "title": "The Logic Successor",
+      "rank": "L's Successor / SPK Commander",
+      "primaryAbility": "Data Synthesis / Pattern Reconstruction",
+      "loreBio": "Raised in Wammy's House as L's designated replacement, Near inherits L's pure analytical capacity and emotional detachment but lacks his predecessor's intuitive provocation skills. Leading the SPK, he methodically reconstructs L's investigation, ultimately defeating Kira through hardware interception — forging a replica of Mikami's notebook to expose Light at the Yellow Box Warehouse.",
+      "systemBio": "A high-fidelity logic fork of the terminated L node, optimized for data synthesis and pattern reconstruction but deficient in kinetic operational capability. Requires the complementary Mello fork's chaotic disruption to destabilize Kira's network before applying the final analytical solution.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "zinc-700",
+      "accentColor": "zinc-300",
+      "icon": "Brain",
+      "dangerLevel": 8,
+      "signatureMoment": "Confronting Light at the Yellow Box Warehouse with the forged notebook — calmly explaining every deduction while Light unravels, proving that the successor system works not through genius replication but through distributed processing.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/77339.jpg?s=e045ccd8110b534c2668b4e7a02ac22f",
+      "malId": 464
+    },
+    {
+      "name": "Mello",
+      "title": "The Kinetic Successor",
+      "rank": "L's Successor / Mafia Operative",
+      "primaryAbility": "Asymmetric Warfare / Risk Escalation",
+      "loreBio": "The second Wammy's House successor who inherits L's aggressive drive but channels it through the criminal underworld. Mello kidnaps the NPA Director's daughter, steals a Death Note from the Japanese police, and forces Light into reactive operations that expose critical vulnerabilities — sacrificing his own life to create the opening Near needs for the final confrontation.",
+      "systemBio": "The kinetic-action fork of the L node, specialized in asymmetric disruption and escalation rather than analytical resolution. His operations force the Kira network into defensive postures that leak structural information, proving that neither successor alone can match the original but their antagonistic tandem reconstructs L's full capability.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Flame",
+      "dangerLevel": 7,
+      "signatureMoment": "Kidnapping Takada and forcing Light to expose Mikami's independent notebook access — a deliberate self-sacrifice that strips away the last layer of Kira's proxy insulation.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/31498.jpg?s=021fbd3f7ad05577fbbcd8cfb52e402b",
+      "malId": 463
+    },
+    {
+      "name": "Misa Amane",
+      "title": "The Chaotic Proxy",
+      "rank": "Second Kira",
+      "primaryAbility": "Shinigami Eyes / Emotional Devotion",
+      "loreBio": "A model and actress who acquires a Death Note from the shinigami Gelus and trades half her lifespan for the Shinigami Eyes. Misa's devotion to Kira — who killed her parents' murderer — makes her Light's most powerful and most dangerous asset: she can kill without needing intelligence gathering, but her operational carelessness introduces catastrophic vulnerabilities into his network.",
+      "systemBio": "A chaotic signal amplifier that provides critical capability upgrades (Eyes-based instant target resolution) while simultaneously degrading network security through undisciplined operational behavior. Her value as an execution asset is perpetually offset by her liability as an intelligence risk.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Heart",
+      "dangerLevel": 6,
+      "signatureMoment": "Sending video tapes to Sakura TV proving the existence of a Second Kira — immediately compromising Light's carefully maintained anonymity by demonstrating that multiple notebook users exist and can be investigated independently.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/30971.jpg?s=0af596d087b34f6e05942dcae60aebae",
+      "malId": 835
+    },
+    {
+      "name": "Rem",
+      "title": "The Anomalous Vector",
+      "rank": "Shinigami",
+      "primaryAbility": "Death Note / Empathy Override",
+      "loreBio": "A shinigami who develops genuine protective attachment to Misa Amane after witnessing Gelus die for her. Rem's empathy is her structural vulnerability — Light exploits it by engineering a scenario where L's continued existence threatens Misa, forcing Rem to kill L and Watari at the cost of her own life, as any shinigami who extends a human's lifespan is destroyed.",
+      "systemBio": "An anomalous death-god node whose hardcoded empathy constraint overrides the standard Shinigami self-preservation protocol. Light identifies and weaponizes this constraint, converting Rem into a single-use guided munition — she eliminates the primary adversary but triggers the Shinigami failsafe that terminates her in the process.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Shield",
+      "dangerLevel": 7,
+      "signatureMoment": "Writing L's and Watari's names in her Death Note to save Misa — knowing she will die, choosing to trigger the cosmic failsafe rather than let the human she loves be destroyed.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/28562.jpg?s=c132f8cc80e93184d9cd180218579e69",
+      "malId": 1905
+    },
+    {
+      "name": "Teru Mikami",
+      "title": "The Automated Proxy",
+      "rank": "X-Kira / Hand of Kira",
+      "primaryAbility": "Death Note / Rigid Execution Protocol",
+      "loreBio": "A fanatical prosecutor who worships Kira as divine justice. Selected by Light as a proxy executor precisely for his ideological rigidity and disciplined routine, Mikami perfectly mirrors Light's judgment patterns. But his mechanical predictability becomes his fatal flaw — Near's agent Gevanni exploits Mikami's exact daily schedule to forge a replica notebook, exposing Light at the final confrontation.",
+      "systemBio": "An automated backup execution script selected for ideological alignment and behavioral determinism. Mikami's rigid routine makes him a reliable proxy under stable conditions but a catastrophic single point of failure under adversarial surveillance — his deterministic behavior provides the exact attack surface Near exploits to forge the notebook swap.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Sword",
+      "dangerLevel": 6,
+      "signatureMoment": "Breaking routine to retrieve the real notebook from a bank vault when Takada is kidnapped — the single deviation that confirms to Near the existence of a hidden original, enabling the final forgery.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/36951.jpg?s=e7018dcde90b6f70f192eb36b0e2c81b",
+      "malId": 1904
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Light Yagami",
+      "target": "L Lawliet",
+      "type": "rival",
+      "loreDesc": "The structural spine of the series — two genius-level intellects locked in a lethal information war where every conversation, every shared glance, every tennis match is a calculated extraction operation. They are the only minds capable of processing each other's strategic frequency.",
+      "weight": 10
+    },
+    {
+      "source": "L Lawliet",
+      "target": "Light Yagami",
+      "type": "counter",
+      "loreDesc": "L's entire methodology is designed to counter Kira's anonymity: provocation broadcasts to force geographic reveals, behavioral profiling under confinement, and relentless psychological pressure that exploits Light's narcissistic need to prove superiority.",
+      "weight": 10
+    },
+    {
+      "source": "Ryuk",
+      "target": "Light Yagami",
+      "type": "dependent",
+      "loreDesc": "Ryuk dropped the notebook into the human world because the Shinigami Realm bored him. His entire stake in the conflict is entertainment — Light is his show, and when the show ends, Ryuk writes the final credits.",
+      "weight": 7
+    },
+    {
+      "source": "Light Yagami",
+      "target": "Misa Amane",
+      "type": "dependent",
+      "loreDesc": "Light exploits Misa's unconditional devotion and Shinigami Eyes as a targeting capability he refuses to acquire himself. She is simultaneously his most powerful asset and greatest operational liability.",
+      "weight": 8
+    },
+    {
+      "source": "Rem",
+      "target": "Misa Amane",
+      "type": "dependent",
+      "loreDesc": "Rem's protective attachment to Misa — inherited from witnessing Gelus sacrifice himself for her — is absolute and ultimately fatal. She will destroy herself to save Misa, and Light knows it.",
+      "weight": 9
+    },
+    {
+      "source": "Light Yagami",
+      "target": "Rem",
+      "type": "counter",
+      "loreDesc": "Light engineers a scenario where L's survival threatens Misa, weaponizing Rem's empathy constraint to force her into killing L at the cost of her own life — converting a shinigami into a disposable assassination tool.",
+      "weight": 9
+    },
+    {
+      "source": "Near",
+      "target": "L Lawliet",
+      "type": "successor",
+      "loreDesc": "Near inherits L's analytical framework through Wammy's House but operates with colder detachment and greater institutional backing. He completes L's investigation not through the same intuitive genius but through systematic data synthesis.",
+      "weight": 8
+    },
+    {
+      "source": "Mello",
+      "target": "L Lawliet",
+      "type": "successor",
+      "loreDesc": "Mello inherits L's aggressive drive but lacks the patience for pure analysis. His underworld operations achieve through chaos what investigation cannot — forcing Kira into reactive moves that expose structural vulnerabilities.",
+      "weight": 8
+    },
+    {
+      "source": "Near",
+      "target": "Mello",
+      "type": "rival",
+      "loreDesc": "Competing successors who represent the two halves of L's capability — Near's logic and Mello's kinetic action. Neither can defeat Kira alone; their antagonistic tandem reconstructs the full investigative engine.",
+      "weight": 8
+    },
+    {
+      "source": "Light Yagami",
+      "target": "Teru Mikami",
+      "type": "dependent",
+      "loreDesc": "Light selects Mikami as an automated proxy precisely for his rigid ideological alignment and predictable judgment. Mikami is a reliable script under stable conditions — and a catastrophic vulnerability under surveillance.",
+      "weight": 7
+    },
+    {
+      "source": "Near",
+      "target": "Light Yagami",
+      "type": "counter",
+      "loreDesc": "Near's final move exploits Mikami's deterministic behavior — Gevanni forges the notebook, the real one is swapped, and at the Yellow Box Warehouse, Light's identity is exposed when Mikami writes names that fail to kill.",
+      "weight": 10
+    },
+    {
+      "source": "Mello",
+      "target": "Light Yagami",
+      "type": "enemy",
+      "loreDesc": "Mello attacks Light through kinetic asymmetric warfare — kidnapping, extortion, notebook theft — forcing Kira's network into defensive postures that expose proxy dependencies and break operational isolation.",
+      "weight": 8
+    },
+    {
+      "source": "Misa Amane",
+      "target": "Light Yagami",
+      "type": "ally",
+      "loreDesc": "Misa's devotion to Kira is absolute and unconditional — she trades half her lifespan twice for the Shinigami Eyes, submits to memory wipes, and accepts any risk Light demands. Her loyalty is total; her operational discipline is nonexistent.",
+      "weight": 7
+    },
+    {
+      "source": "Rem",
+      "target": "L Lawliet",
+      "type": "enemy",
+      "loreDesc": "Rem kills L and Watari not from malice but from structural necessity — Light engineers the conditions where L's continued investigation will lead to Misa's death, leaving Rem no choice but to trigger her own destruction to eliminate the threat.",
+      "weight": 9
+    },
+    {
+      "source": "Teru Mikami",
+      "target": "Light Yagami",
+      "type": "ally",
+      "loreDesc": "Mikami worships Kira as divine justice and executes his role with fanatical precision. His devotion is ideological, not personal — he serves the concept of Kira, which is why he follows Light's judgment patterns so perfectly and breaks so completely when Light fails.",
+      "weight": 7
+    }
+  ],
+  "factions": [
+    {
+      "name": "Japanese Task Force",
+      "role": "protagonist",
+      "loreDesc": "An elite subset of the National Police Agency formed to capture Kira, initially led by L and later infiltrated and usurped by Light Yagami. Their proximity to Light and emotional attachment to the Yagami family blind them to the threat operating from within their own ranks.",
+      "systemDesc": "A conventional enforcement body rendered structurally compromised by the adversary's successful infiltration. The Task Force's reliance on trust-based relationships over adversarial verification makes it the ideal institutional cover for the disruptor to achieve total systemic capture.",
+      "icon": "Shield",
+      "color": "blue-500",
+      "memberCount": "6-8 core members"
+    },
+    {
+      "name": "SPK (Special Provision for Kira)",
+      "role": "protagonist",
+      "loreDesc": "A decentralized intelligence unit formed by the U.S. government and led by Near. The SPK operates on pure logic, treating the Kira investigation as a mathematical puzzle rather than a moral crusade — making them resistant to the psychological manipulation that compromised the Task Force.",
+      "systemDesc": "A high-compartmentalization intelligence cell optimized for adversarial analysis. Its emotional detachment and operational security make it structurally resistant to the social engineering attacks that compromised the primary investigation body.",
+      "icon": "Eye",
+      "color": "cyan-500",
+      "memberCount": "Elite cell"
+    },
+    {
+      "name": "Wammy's House",
+      "role": "systemic",
+      "loreDesc": "A clandestine institutional incubator in Winchester, England that manufactures intellectual successors to L. The institution strips orphans of their identities, assigns alphanumeric designators, and subjects them to extreme psychological pressure — producing brilliant but deeply traumatized analytical weapons.",
+      "systemDesc": "A high-pressure production pipeline that attempts to replicate singular genius through institutional pressure. Its output is necessarily fractured — the L capability splits into complementary but antagonistic successor forks (Near's logic, Mello's kinetics) because the original was too complex to clone as a single unit.",
+      "icon": "Brain",
+      "color": "purple-500",
+      "memberCount": "Unknown"
+    },
+    {
+      "name": "Yotsuba Group",
+      "role": "antagonist",
+      "loreDesc": "Eight corporate executives who appropriate the Death Note to eliminate business rivals and inflate stock prices. They represent the inevitable commodification of supernatural power — stripping away Light's ideological pretension and reducing the notebook to a corporate market manipulation tool.",
+      "systemDesc": "A capitalist exploitation vector that demonstrates the Death Note's fungibility as a power instrument. When separated from Light's ideological framework, the notebook defaults to pure economic optimization — automated competitor elimination for profit maximization.",
+      "icon": "Crown",
+      "color": "amber-500",
+      "memberCount": "8 executives"
+    },
+    {
+      "name": "Cult of Kira",
+      "role": "chaotic",
+      "loreDesc": "A decentralized socio-religious movement that evolves organically in response to Kira's global purges. Worshippers, media amplifiers like Demegawa and Takada, and mob violence coalesce into a fanatical support network that weaponizes public opinion against anyone who opposes Kira.",
+      "systemDesc": "An emergent distributed system that replaces institutional justice with panopticon-style deterrence theology. The Cult functions as Kira's force multiplier — converting passive population compliance into active mob enforcement without requiring direct coordination from the primary operator.",
+      "icon": "Flame",
+      "color": "red-500",
+      "memberCount": "Global population"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Dual-Authentication Execution",
+      "subtitle": "Name + Face Biometric Lock",
+      "loreConsequence": "The Death Note requires both the target's true name and a mental visualization of their face. This dual-factor requirement prevents mass anonymous killings and forces the user to invest intelligence resources in target identification — or sacrifice lifespan for the Shinigami Eyes.",
+      "systemEquivalent": "A biometric dual-authentication protocol that prevents data collisions (same-name disambiguation) and creates an intelligence bottleneck exploitable by adversaries. The Eyes bypass trades temporal resources for targeting efficiency.",
+      "severity": "fatal",
+      "systemSubtitle": "Biometric Dual-Factor Authentication",
+      "loreSubtitle": "A Name and a Face to Kill"
+    },
+    {
+      "name": "Default Heart Attack Signature",
+      "subtitle": "Statistical Anomaly Generation",
+      "loreConsequence": "Without a specified cause, every Death Note kill defaults to cardiac arrest within 40 seconds. This creates a statistically impossible cluster of heart attacks among criminals worldwide — the exact signal that allows L to detect Kira's existence and begin geographic profiling.",
+      "systemEquivalent": "The default execution mode generates a highly recognizable statistical signature that violates natural mortality distributions. This signal is the primary data source enabling adversarial detection — the system's convenience feature is simultaneously its greatest operational security vulnerability.",
+      "severity": "high",
+      "systemSubtitle": "Default Execution Mode — OPSEC Vulnerability",
+      "loreSubtitle": "Heart Attacks Heard Around the World"
+    },
+    {
+      "name": "Memory Partition on Ownership Transfer",
+      "subtitle": "Cognitive State Reset Protocol",
+      "loreConsequence": "Relinquishing notebook ownership triggers a complete memory wipe of all Death Note experiences. The user genuinely forgets — passing polygraphs, behavioral analysis, and confinement tests. Touching the notebook later restores all memories, but only up to six times before permanent data loss.",
+      "systemEquivalent": "A deterministic partition wipe that separates Death Note episodic memory from baseline cognitive state, enabling the user to achieve genuine innocence under any analysis. The 6-restoration cap prevents infinite exploit cycling of the amnesia-restoration loop.",
+      "severity": "high",
+      "systemSubtitle": "Deterministic Memory Partition Wipe",
+      "loreSubtitle": "The Perfect Alibi"
+    },
+    {
+      "name": "Collateral Damage Failsafe",
+      "subtitle": "Environmental Scope Limiter",
+      "loreConsequence": "If a specified death would inherently kill unnamed individuals, the system overrides the complex condition and defaults to a heart attack for the named target only. The Death Note cannot be used as a weapon of mass destruction through a single name input.",
+      "systemEquivalent": "An environmental scope checker that evaluates collateral impact before executing complex death conditions. Commands exceeding the single-target boundary are rejected and replaced with the default isolated execution, preventing cascading system failures.",
+      "severity": "high",
+      "systemSubtitle": "Scope Boundary Enforcement",
+      "loreSubtitle": "No Mass Destruction Exploits"
+    },
+    {
+      "name": "Shinigami Self-Destruction Protocol",
+      "subtitle": "Empathy-Triggered Failsafe",
+      "loreConsequence": "Any shinigami who uses their Death Note to extend a human's lifespan — by killing someone who would have killed that human — is instantly destroyed, reduced to ash. This hardcoded failsafe enforces the biological divide between realms and punishes emotional attachment.",
+      "systemEquivalent": "A strict enforcement mechanism that terminates any death-god process that inverts its core function (lifespan extraction) into lifespan preservation. The failsafe treats empathy as an unauthorized system override and executes the offending process immediately.",
+      "severity": "fatal",
+      "systemSubtitle": "Inverted Function Termination",
+      "loreSubtitle": "Love Kills Death Gods"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "L's Provocation Broadcasting",
+      "defender": "Kira's Anonymity",
+      "mechanic": "Emotional Signal Extraction",
+      "loreDesc": "L broadcasts a condemned prisoner under his alias on Kanto-region television. Light kills the decoy, revealing he is in Kanto, can kill remotely, and reacts emotionally to challenges — surrendering ~8 bits of anonymity in a single provocation."
+    },
+    {
+      "attacker": "Memory Wipe Self-Alibi",
+      "defender": "L's Behavioral Profiling",
+      "mechanic": "Cognitive State Rollback",
+      "loreDesc": "Light surrenders the notebook, erasing all memories of being Kira. He passes 50 days of confinement, surveillance, and direct interrogation because he genuinely does not know — weaponizing the system's memory wipe as an unfalsifiable alibi."
+    },
+    {
+      "attacker": "Proxy Network Distribution",
+      "defender": "Single-Source Investigation",
+      "mechanic": "Execution Signature Diffusion",
+      "loreDesc": "Light distributes notebook access through Misa, the Yotsuba Group, and Mikami to diffuse his execution signature across multiple operators — making it impossible for investigators to attribute all kills to a single actor."
+    },
+    {
+      "attacker": "Notebook Forgery",
+      "defender": "Proxy Execution Integrity",
+      "mechanic": "Hardware Interception",
+      "loreDesc": "Near's agent Gevanni exploits Mikami's rigid daily routine to access and forge a perfect replica of his Death Note. At the Yellow Box Warehouse, Mikami writes names in the fake — and when no one dies, Light's identity as Kira is irrefutably exposed."
+    },
+    {
+      "attacker": "Successor Tandem",
+      "defender": "Evolved Kira Network",
+      "mechanic": "Distributed Capability Reconstruction",
+      "loreDesc": "Neither Near nor Mello can defeat Kira alone — Near lacks kinetic capability, Mello lacks analytical patience. But Mello's chaotic disruption (kidnapping Takada) forces Mikami to break routine, which gives Near the opening for the notebook swap. The antagonistic tandem reconstructs L's full capability."
+    },
+    {
+      "attacker": "Shinigami Empathy Exploit",
+      "defender": "L's Investigation",
+      "mechanic": "Protocol Weaponization",
+      "loreDesc": "Light engineers a scenario where L's continued survival threatens Misa, forcing Rem to choose between watching Misa die or killing L at the cost of her own existence. Rem kills L — and Light eliminates both his greatest adversary and his most dangerous shinigami in a single calculated move."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "The 0.06-Second Collision Protocol",
+      "ruleViolated": "Single-Target Execution Certainty",
+      "loreDesc": "If a target's name is written in two Death Notes within 0.06 seconds of each other, both entries are nullified and the target is spared. A cosmic collision-avoidance mechanism revealing the precise, machine-like parsing of shinigami magic.",
+      "systemDesc": "A race-condition handler that detects simultaneous write conflicts to the same target and voids both operations rather than resolving priority — an engineering safeguard proving the execution system operates on clock-cycle-level parsing precision."
+    },
+    {
+      "name": "The Misspelling Immunity Loophole",
+      "ruleViolated": "Execution Targeting Reliability",
+      "loreDesc": "Four accidental misspellings of a target's name grant that individual permanent immunity to that specific notebook. But intentional misspelling triggers the system's anti-exploitation failsafe — the owner is killed instead, preventing manufactured immunity.",
+      "systemDesc": "A buffer overflow protection that treats four failed write attempts as a permanent exception entry. The lethal anti-exploitation countermeasure detects intentional abuse (fuzzy intent detection) and redirects the execution at the offending operator."
+    },
+    {
+      "name": "The 23-Day Rule Override",
+      "ruleViolated": "Temporal Execution Boundary",
+      "loreDesc": "The Death Note cannot schedule a death beyond 23 days — except when specifying a slowly incubating disease that naturally requires more than 24 days to kill. The system keeps the victim alive until the disease reaches its natural conclusion, creating a loophole for long-term behavioral control.",
+      "systemDesc": "A boundary condition conflict where the pathological simulation engine overrides the temporal execution ceiling. The system prioritizes physical plausibility over temporal constraints, creating an exploitable gap for extended-duration operations."
+    },
+    {
+      "name": "Dynamic Rule Patching (A-Kira)",
+      "ruleViolated": "Rule Immutability",
+      "loreDesc": "When Minoru Tanaka auctions the Death Note to the US government, the Shinigami King instantly pushes a new rule: anyone who buys or sells the notebook dies upon transaction completion. The rules are not historical artifacts — they are live-patched by an active administrator.",
+      "systemDesc": "A demonstration that the rule engine is not static firmware but a live-administered system with unilateral write access by the root administrator. Human-engineered exploits can be retroactively patched, proving that no stable meta-gaming strategy exists against a system with dynamic administrative oversight."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "The Notebook Injection",
+      "trigger": "Ryuk, bored by the stagnant Shinigami Realm, drops a Death Note into the human world. Light Yagami, a genius high school student, finds it.",
+      "consequence": "The Death Note's existence is verified through Light's first kills. The global anomaly of mass criminal heart attacks begins, initiating the Kira phenomenon and forcing Interpol to mobilize L.",
+      "timelinePosition": "Phase 1: System Shock (November 2003)",
+      "loreDesc": "A shinigami's boredom becomes the inciting event for the collapse of global institutional justice. One notebook, one genius student, one test kill — and the system is irreversibly altered.",
+      "systemDesc": "The injection of an asymmetric execution capability into the human system by an extra-dimensional catalyst operating under non-aligned incentive structures. The initial deployment immediately generates a statistically detectable mortality anomaly."
+    },
+    {
+      "name": "The Lind L. Tailor Provocation",
+      "trigger": "L broadcasts a condemned prisoner on Kanto-region television claiming to be L, daring Kira to kill him. Light takes the bait and kills the decoy.",
+      "consequence": "L confirms Kira exists, can kill remotely, is in the Kanto region, and responds emotionally to challenges. Light's anonymity degrades catastrophically — from ~33 bits to ~25 bits in a single broadcast.",
+      "timelinePosition": "Phase 1: Localization (December 2003)",
+      "loreDesc": "The opening move of the intellectual war. L sacrifices a condemned man to extract geographic data, proving that Kira can be provoked into leaking information — the fundamental vulnerability that defines the entire conflict.",
+      "systemDesc": "A strategic provocation that converts the adversary's emotional reactivity into geographic identification data. A single interaction extracts ~8 bits of entropy, transforming a global search problem into a regional one."
+    },
+    {
+      "name": "FBI Agent Purge",
+      "trigger": "Light identifies Raye Penber as an FBI agent tailing him, manipulates Penber into revealing all 12 FBI agents' names, and executes all of them simultaneously.",
+      "consequence": "The FBI withdraws from Japan. L narrows the suspect pool to the specific individuals Penber was monitoring — approximately 200 people. Light's anonymity drops to ~8 bits.",
+      "timelinePosition": "Phase 2: Intelligence War (January 2004)",
+      "loreDesc": "Light eliminates an entire intelligence operation in a single coordinated strike — but the precision of the purge is itself a signal. By killing exactly the agents assigned to his surveillance zone, he points L directly at himself.",
+      "systemDesc": "A defensive purge that eliminates the surveillance layer but generates a high-specificity signal. The correlation between purged agents and monitoring assignments reduces the suspect pool by ~17 bits — the single most catastrophic operational security failure in the series."
+    },
+    {
+      "name": "The Yotsuba Interregnum",
+      "trigger": "Under L's intense suspicion, Light voluntarily surrenders the Death Note, erasing his own memories. The notebook passes to Kyosuke Higuchi of the Yotsuba Group.",
+      "consequence": "Light genuinely becomes innocent under confinement. Kira killings shift to a corporate pattern. When Higuchi is captured and Light touches the notebook, all memories restore — and he executes his plan to eliminate L through Rem.",
+      "timelinePosition": "Phase 4: Systemic Reset (July–October 2004)",
+      "loreDesc": "Light weaponizes his own amnesia as an alibi, passing 50 days of confinement while the notebook circulates through corporate hands. The recovery of his memories triggers the assassination of L — the single most decisive power shift in the series.",
+      "systemDesc": "A deliberate cognitive state rollback that neutralizes the adversary's behavioral analysis, followed by a planned memory restoration that re-activates the primary operator with full strategic context. The interregnum also demonstrates the notebook's fungibility as a power tool across different operator classes."
+    },
+    {
+      "name": "L's Assassination",
+      "trigger": "Light manipulates circumstances so that L's continued investigation threatens Misa's life, forcing Rem to kill L and Watari to protect her — triggering Rem's own destruction via the Shinigami failsafe.",
+      "consequence": "The global counter-Kira resistance collapses. Light usurps L's identity, becoming both the executioner and head of the investigation. Five years of unchecked Kira Hegemony follow, with 70% crime reduction and cessation of all wars.",
+      "timelinePosition": "Phase 5: Systemic Capture (November 2004)",
+      "loreDesc": "The masterpiece of Light's strategic career — eliminating his greatest adversary without writing a single name himself. L dies not to Kira's notebook but to a shinigami's love, weaponized by the very human she was trying to protect Misa from.",
+      "systemDesc": "A multi-vector protocol exploit: Light weaponizes the Shinigami empathy-triggered failsafe against its own enforcement mechanism, converting Rem into a single-use assassination tool that eliminates both the primary adversary (L) and the exploited vector (Rem) simultaneously."
+    },
+    {
+      "name": "The Successor Resurgence",
+      "trigger": "Near and Mello independently activate as L's successors. Mello's mafia operations steal a Death Note from police custody. Near's SPK begins reconstructing L's investigation from scratch.",
+      "consequence": "Light's five-year monopoly is destabilized. The distributed successor system attacks from two angles — Near's analytical pressure and Mello's kinetic disruption — forcing Light to deploy Mikami as a visible proxy.",
+      "timelinePosition": "Phase 6: Successor Fork (2009–2010)",
+      "loreDesc": "The system's immune response regenerates. Two imperfect copies of L emerge from the institution that forged him, each carrying half his capability — and together they begin the process that will expose Kira.",
+      "systemDesc": "The activation of redundant successor nodes from the backup production facility (Wammy's House). The distributed capability model — analytical node (Near) + kinetic node (Mello) — reconstructs the terminated L process through complementary specialization."
+    },
+    {
+      "name": "Yellow Box Warehouse",
+      "trigger": "Near arranges a final confrontation, having forged Mikami's Death Note through Gevanni. When Mikami writes the names of everyone present except Light, the forged pages show no kills.",
+      "consequence": "Light is irrefutably exposed as Kira. Cornered, wounded, and stripped of all deniability, he is written into Ryuk's notebook and dies — ending the Kira era as the shinigami fulfills his original promise.",
+      "timelinePosition": "Phase 6: System Termination (January 28, 2010)",
+      "loreDesc": "The final checkmate. Every layer of Light's anonymity is stripped — proxy, alias, institutional cover, plausible deniability — until only the exposed genius remains, bleeding on a warehouse floor while the shinigami who started it all writes the ending.",
+      "systemDesc": "The terminal decryption event where all remaining anonymity bits are resolved simultaneously through physical evidence capture. The notebook forgery converts Mikami's deterministic behavior into an irrefutable identification signal, and Ryuk's final write operation terminates the disrupted process."
+    }
+  ]
+}

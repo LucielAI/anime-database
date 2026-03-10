@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://animearchive.app/universe/deathnote</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://animearchive.app/universe/hxh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

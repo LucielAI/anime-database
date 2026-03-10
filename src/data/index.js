@@ -34,7 +34,7 @@ const groupedBySlug = Object.entries(dataFiles).reduce((acc, [filePath, mod]) =>
 }, {})
 
 // Preserve familiar homepage ordering for current live universes.
-const preferredOrder = ['aot', 'jjk', 'hxh', 'vinlandsaga', 'steinsgate']
+const preferredOrder = ['aot', 'jjk', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote']
 const discoveredSlugs = Object.keys(groupedBySlug)
 const slugs = [
   ...preferredOrder.filter(slug => discoveredSlugs.includes(slug)),

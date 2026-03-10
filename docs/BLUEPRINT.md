@@ -69,6 +69,7 @@ A dynamic navigation system that encourages cross-archive discovery.
 - Hunter x Hunter
 - Vinland Saga
 - Steins;Gate
+- Death Note
 
 ## Product Goals
 The archive serves multiple simultaneous goals:

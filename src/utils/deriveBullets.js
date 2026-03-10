@@ -19,8 +19,8 @@ export function deriveBullets(data) {
       pool.push({
         id: `rule-${rule.name}`,
         category: 'LAW',
-        lore: rule.loreDesc || rule.description,
-        sys: rule.systemDesc || rule.description
+        lore: rule.loreDesc || rule.loreConsequence || rule.loreSubtitle || rule.description,
+        sys: rule.systemDesc || rule.systemEquivalent || rule.systemSubtitle || rule.description
       })
     })
   }
