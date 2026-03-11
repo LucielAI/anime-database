@@ -85,10 +85,10 @@ The archive serves multiple simultaneous goals:
 - **Share Button**: Uses `navigator.share()` with clipboard fallback. Shares anime title, system label, and route URL.
 
 ## Community Feedback
-- **Feedback Block**: A compact section on each universe page asking "Was this archive helpful?" with vote buttons and a "Needs More Data" flag.
-- **Suggest an Anime**: Input field for users to suggest new universes for the archive.
-- **Back-end Flow**: Minimal serverless endpoints (`/api/feedback`, `/api/suggest`) handle incoming signals.
-- **Infrastructure**: Backed by Supabase (optional infrastructure). No personal data collected.
+- **Feedback Block**: A compact section on each universe page with quality votes, plus a short correction-report textarea routed as a structured `needs_data` signal.
+- **Suggest an Anime**: Input field on universe pages and a quick-vote `Community Pulse` strip on the homepage to surface demand for upcoming universes.
+- **Back-end Flow**: Minimal serverless endpoints (`/api/feedback`, `/api/suggest`) handle incoming signals with optional metadata (`source`, correction notes/context).
+- **Infrastructure**: Backed by Supabase (optional infrastructure). No login wall and no personal data collection requirements.
 
 ## Analytics
 - **GoatCounter**: Lightweight, privacy-first page view tracking.

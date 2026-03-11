@@ -1,27 +1,28 @@
+/* eslint-env node */
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  // Content-Length guard
   const contentLength = parseInt(req.headers['content-length'] || '0', 10)
-  if (contentLength > 1024) {
+  if (contentLength > 2048) {
     return res.status(413).json({ error: 'Too large' })
   }
 
-  const { animeName } = req.body || {}
+  const { animeName, source } = req.body || {}
 
   if (!animeName || typeof animeName !== 'string') {
     return res.status(400).json({ error: 'Invalid name' })
   }
 
   const sanitized = animeName.trim().slice(0, 100)
+  const sanitizedSource = typeof source === 'string' ? source.trim().slice(0, 32) : 'unknown'
+
   if (sanitized.length === 0) {
     return res.status(400).json({ error: 'Empty name' })
   }
 
-  // Reject HTML/script injection
-  if (/<|>|script/i.test(sanitized)) {
+  if (/<|>|script/i.test(sanitized) || /<|>|script/i.test(sanitizedSource)) {
     return res.status(400).json({ error: 'Invalid characters' })
   }
 
@@ -42,6 +43,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         anime_name: sanitized,
+        source: sanitizedSource,
         created_at: new Date().toISOString()
       })
     })

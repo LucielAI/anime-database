@@ -1,17 +1,16 @@
+/* eslint-env node */
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  // Content-Length guard
   const contentLength = parseInt(req.headers['content-length'] || '0', 10)
-  if (contentLength > 1024) {
+  if (contentLength > 4096) {
     return res.status(413).json({ error: 'Too large' })
   }
 
-  const { slug, vote } = req.body || {}
+  const { slug, vote, note, context } = req.body || {}
 
-  // Validate slug
   if (!slug || typeof slug !== 'string' || slug.length > 50) {
     return res.status(400).json({ error: 'Invalid slug' })
   }
@@ -19,9 +18,15 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Malformed slug' })
   }
 
-  // Validate vote
   if (!['helpful', 'unhelpful', 'needs_data'].includes(vote)) {
     return res.status(400).json({ error: 'Invalid vote' })
+  }
+
+  const sanitizedNote = typeof note === 'string' ? note.trim().slice(0, 280) : null
+  const sanitizedContext = typeof context === 'string' ? context.trim().slice(0, 80) : null
+
+  if ((sanitizedNote && /<|>|script/i.test(sanitizedNote)) || (sanitizedContext && /<|>|script/i.test(sanitizedContext))) {
+    return res.status(400).json({ error: 'Invalid characters' })
   }
 
   const SUPABASE_URL = process.env.SUPABASE_URL
@@ -42,6 +47,8 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         page_slug: slug,
         vote_type: vote,
+        note: sanitizedNote,
+        context: sanitizedContext,
         created_at: new Date().toISOString()
       })
     })

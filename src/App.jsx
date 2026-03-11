@@ -4,6 +4,7 @@ import { ANIME_LIST } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
 import { deriveBullets } from './utils/deriveBullets'
 import { getClassificationLabel } from './utils/getClassificationLabel'
+import CommunityPulse from './components/CommunityPulse'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const SpeedInsights = lazy(() => import('@vercel/speed-insights/react').then(m => ({ default: m.SpeedInsights })))
@@ -279,6 +280,8 @@ function Home() {
           ))}
         </div>
       </main>
+
+      <CommunityPulse />
 
       <footer className="mt-20 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <a
