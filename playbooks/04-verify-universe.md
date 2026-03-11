@@ -22,6 +22,11 @@ How to QA a universe payload before or after integration.
 npm run validate:payload path/to/{slug}.core.json
 ```
 
+**Archive-wide integrated payload audit (recommended before PR):**
+```bash
+npm run validate:all
+```
+
 **Extended dataset:**
 ```bash
 npm run validate:payload path/to/{slug}.extended.json --extended
@@ -66,7 +71,7 @@ Check the structural profile table in `docs/RENDERER_CONTRACT.md` for per-render
 After the validator passes, do a quick manual review:
 
 **Schema integrity:**
-- [ ] `visualizationHint` matches the intended renderer (`timeline`, `node-graph`, `counter-tree`, `cards`)
+- [ ] `visualizationHint` matches the intended renderer (`timeline`, `node-graph`, `counter-tree`, `affinity-matrix`, `standard-cards`)
 - [ ] `visualizationReason` is present and explains the renderer choice (not a plot summary)
 - [ ] `aiInsights.casual` and `aiInsights.deep` are present and non-empty
 - [ ] `headerFlavor`, `backgroundMotif`, `revealOverlay` are set
@@ -79,6 +84,11 @@ After the validator passes, do a quick manual review:
 
 **Data quality:**
 - [ ] Characters justify inclusion (3+ relationships or clear system relevance)
+- [ ] **Core Laws tab renders real content**: rule heading/body are not blank (`name`, `loreConsequence`, `systemEquivalent` present)
+- [ ] **Combat Matchups render real labels**: no `[ATTACK]`/`[COUNTER]` placeholders (`attacker`, `defender`, `mechanic` present)
+- [ ] **Rule Breakers anomalies render titles**: anomaly cards show `name` + `ruleViolated`
+- [ ] **Causal matrix rows render all columns**: each event has `name`, `trigger`, `consequence`, `timelinePosition`
+- [ ] **Mobile typography sanity** (≈390–430px width): primary card headings (Power Engine/Factions/Core Laws) are readable and not forced into `...` truncation
 - [ ] Relationships represent meaningful structural edges (alliances, conflicts, dependencies) — not filler
 - [ ] `causalEvents` have ordering logic (required for `timeline` renderer)
 - [ ] `counterplay` entries exist and form a combat economy (required for `counter-tree`)

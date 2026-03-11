@@ -18,8 +18,9 @@ function makePayload(overrides = {}) {
     powerSystem: [{ name: 'Nen', loreDesc: 'Life energy', systemDesc: 'Energy API', loreSubtitle: 'sub', systemSubtitle: 'sub' }],
     characters: [makeCharacter('Hero'), makeCharacter('Villain')],
     factions: [{ name: 'Heroes', role: 'protagonist', loreDesc: 'Good guys', systemDesc: 'Main process' }],
-    rules: [{ name: 'Rule 1', severity: 'high', loreSubtitle: 'sub', systemSubtitle: 'sub', loreDesc: 'desc', description: 'desc' }],
-    rankings: [],
+    rules: [{ name: 'Rule 1', severity: 'high', loreConsequence: 'Costly failure', systemEquivalent: 'Permission fault', loreSubtitle: 'sub', systemSubtitle: 'sub' }],
+    rankings: {},
+    aiInsights: { casual: 'Readable system', deep: 'Constraint and incentive model' },
     relationships: [{ source: 'Hero', target: 'Villain', type: 'enemy', loreDesc: 'They fight' }],
     ...overrides,
   }
@@ -30,7 +31,7 @@ function makeCharacter(name, overrides = {}) {
     name, title: 'The One', rank: 'S', dangerLevel: 8,
     loreBio: 'A hero.', systemBio: 'Main process.',
     gradientFrom: 'red-500', gradientTo: 'red-900',
-    accentColor: 'cyan-400', icon: '⚡', signatureMoment: 'Big moment',
+    accentColor: 'cyan-400', icon: 'Zap', signatureMoment: 'Big moment',
     imageUrl: 'https://cdn.myanimelist.net/images/characters/1/1.jpg',
     ...overrides,
   }
@@ -98,9 +99,9 @@ describe('validateCorePayload', () => {
     expect(errors.some(e => e.includes('invalid role'))).toBe(true)
   })
 
-  it('warns about missing aiInsights', () => {
-    const { warnings } = validateCorePayload(makePayload())
-    expect(warnings.some(w => w.includes('aiInsights'))).toBe(true)
+  it('errors on missing aiInsights', () => {
+    const { errors } = validateCorePayload(makePayload({ aiInsights: undefined }))
+    expect(errors.some(e => e.includes('aiInsights'))).toBe(true)
   })
 
   it('validates aiInsights structure when present', () => {

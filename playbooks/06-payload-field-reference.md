@@ -22,6 +22,7 @@ characters      array    — Character entries (12 required fields each)
 factions        array    — Faction entries
 rules           array    — Rule entries
 rankings        object   — Tier/ranking structure (see below)
+aiInsights      object   — `{ casual: string, deep: string }` (both required)
 ```
 
 ---
@@ -107,6 +108,56 @@ The entire LORE/SYS toggle in the UI depends on this. Every entity type has two 
 Missing `loreSubtitle` or `systemSubtitle` on powerSystem/rules generates **warnings**.
 
 ---
+
+
+## UI-Critical Collection Shapes (Prevents Blank Runtime Cards)
+
+These fields are required by current tab components. If you rename keys (e.g. `law` instead of `name`), cards may render as blanks/placeholders even if schema validation mostly passes.
+
+### `rules[]`
+```json
+{
+  "name": "Rule Name",
+  "subtitle": "Short label",
+  "loreConsequence": "Displayed in LORE mode body",
+  "systemEquivalent": "Displayed in SYS mode body",
+  "severity": "low|medium|high|fatal",
+  "loreSubtitle": "LORE badge line",
+  "systemSubtitle": "SYS badge line"
+}
+```
+
+### `counterplay[]`
+```json
+{
+  "attacker": "Technique / side A",
+  "defender": "Counter / side B",
+  "mechanic": "How the interaction works",
+  "loreDesc": "Expanded explanation"
+}
+```
+
+### `anomalies[]`
+```json
+{
+  "name": "Anomaly title",
+  "ruleViolated": "Rule being broken",
+  "loreDesc": "LORE-mode explanation",
+  "systemDesc": "SYS-mode explanation"
+}
+```
+
+### `causalEvents[]`
+```json
+{
+  "name": "Event name",
+  "trigger": "What started it",
+  "consequence": "System impact",
+  "timelinePosition": "Pre-Narrative | Mid-Narrative | Final Arc",
+  "loreDesc": "LORE-mode detail",
+  "systemDesc": "SYS-mode detail"
+}
+```
 
 ## relationships — Enum Constraint on `type` (hard error)
 
@@ -210,4 +261,8 @@ Do not fabricate URLs. Run `scripts/patch_jikan_images.py` to fill real images. 
 - [ ] All rule `severity` values are from the valid enum?
 - [ ] Every character with `imageUrl: null` also has `_fetchFailed: true`?
 - [ ] Both lore and system descriptions present on every entity?
+- [ ] `rules[]` use `name/loreConsequence/systemEquivalent` (not custom keys)?
+- [ ] `counterplay[]` use `attacker/defender/mechanic` (no placeholder text in UI)?
+- [ ] `anomalies[]` use `name/ruleViolated`?
+- [ ] `causalEvents[]` use `name/trigger/consequence/timelinePosition`?
 - [ ] `aiInsights.casual` and `aiInsights.deep` both non-empty?
