@@ -22,6 +22,12 @@ const VALID_REL_TYPES = ['ally', 'enemy', 'rival', 'mentor', 'betrayal', 'mirror
 const VALID_SEVERITIES = ['low', 'medium', 'high', 'fatal']
 const VALID_FACTION_ROLES = ['protagonist', 'antagonist', 'neutral', 'chaotic', 'systemic']
 
+const TAILWIND_COLOR_TOKEN = /^[a-z]+-\d{2,3}$/
+
+function isNonEmptyString(value) {
+  return typeof value === 'string' && value.trim() !== ''
+}
+
 // ─── SAFE IMAGE HOST ALLOWLIST ───────────────────────────────────────────────
 const ALLOWED_IMAGE_HOSTS = [
   'cdn.myanimelist.net',
@@ -109,6 +115,26 @@ export function validateCorePayload(data) {
     if (data[f] === undefined) errors.push(`Missing required field: ${f}`)
   })
 
+  if (!isNonEmptyString(data.anime)) errors.push('anime must be a non-empty string')
+  if (!isNonEmptyString(data.tagline)) errors.push('tagline must be a non-empty string')
+  if (!Number.isInteger(data.malId) || data.malId <= 0) errors.push('malId must be a positive integer')
+  if (!isNonEmptyString(data.visualizationReason)) errors.push('visualizationReason must be a non-empty string')
+
+  if (!Array.isArray(data.powerSystem)) errors.push('powerSystem must be an array')
+  if (!Array.isArray(data.characters)) errors.push('characters must be an array')
+  if (!Array.isArray(data.factions)) errors.push('factions must be an array')
+  if (!Array.isArray(data.rules)) errors.push('rules must be an array')
+  if (typeof data.rankings !== 'object' || data.rankings === null || Array.isArray(data.rankings)) {
+    errors.push('rankings must be an object')
+  }
+
+  const optionalCollections = ['relationships', 'counterplay', 'anomalies', 'causalEvents']
+  optionalCollections.forEach((key) => {
+    if (data[key] !== undefined && !Array.isArray(data[key])) {
+      errors.push(`${key} must be an array when present`)
+    }
+  })
+
   // ── 2. Theme color completeness ──
 
   if (data.themeColors) {
@@ -129,6 +155,13 @@ export function validateCorePayload(data) {
     data.characters.forEach((c, i) => {
       REQUIRED_CHARACTER_FIELDS.forEach(f => {
         if (c[f] === undefined) errors.push(`characters[${i}] (${c.name || 'unnamed'}) missing: ${f}`)
+      })
+
+      ;['gradientFrom', 'gradientTo', 'accentColor'].forEach((key) => {
+        const token = c[key]
+        if (token !== undefined && !TAILWIND_COLOR_TOKEN.test(token)) {
+          errors.push(`characters[${i}] (${c.name || 'unnamed'}) ${key} must be a Tailwind color token (e.g. slate-900), received: ${token}`)
+        }
       })
 
       // Image URL Validation (Must be from ALLOWED_IMAGE_HOSTS or Explicit Fallback)
@@ -179,11 +212,12 @@ export function validateCorePayload(data) {
       if (r.severity && !VALID_SEVERITIES.includes(r.severity)) {
         errors.push(`rules[${i}] invalid severity: "${r.severity}"`)
       }
+      if (!r.severity) errors.push(`rules[${i}] missing required UI field: severity`)
       if (!r.name) errors.push(`rules[${i}] missing required UI field: name`)
       if (!r.loreConsequence) errors.push(`rules[${i}] missing required UI field: loreConsequence (Core Laws body renders blank in LORE mode)`)
       if (!r.systemEquivalent) errors.push(`rules[${i}] missing required UI field: systemEquivalent (Core Laws body renders blank in SYS mode)`)
-      if (!r.loreSubtitle) warnings.push(`rules[${i}] missing loreSubtitle`)
-      if (!r.systemSubtitle) warnings.push(`rules[${i}] missing systemSubtitle`)
+      if (!r.loreSubtitle) errors.push(`rules[${i}] missing required UI field: loreSubtitle`)
+      if (!r.systemSubtitle) errors.push(`rules[${i}] missing required UI field: systemSubtitle`)
 
       if (!r.name && r.ruleName) warnings.push(`rules[${i}] uses non-canonical key "ruleName"; expected "name"`)
       if (!r.loreConsequence && r.loreDesc) warnings.push(`rules[${i}] uses non-canonical key "loreDesc"; expected "loreConsequence"`)
@@ -200,6 +234,7 @@ export function validateCorePayload(data) {
       if (!cp.attacker) errors.push(`counterplay[${i}] missing required UI field: attacker (Power Engine renders [ATTACK] placeholder)`)
       if (!cp.defender) errors.push(`counterplay[${i}] missing required UI field: defender (Power Engine renders [COUNTER] placeholder)`)
       if (!cp.mechanic) errors.push(`counterplay[${i}] missing required UI field: mechanic`)
+      if (!cp.loreDesc && !cp.systemDesc) warnings.push(`counterplay[${i}] missing loreDesc/systemDesc (recommended for LORE/SYS richness)`)
     })
   }
 
@@ -218,6 +253,8 @@ export function validateCorePayload(data) {
       if (!evt.trigger) errors.push(`causalEvents[${i}] missing required UI field: trigger`)
       if (!evt.consequence) errors.push(`causalEvents[${i}] missing required UI field: consequence`)
       if (!evt.timelinePosition) errors.push(`causalEvents[${i}] missing required UI field: timelinePosition`)
+      if (!evt.loreDesc) errors.push(`causalEvents[${i}] missing required LORE field: loreDesc`)
+      if (!evt.systemDesc) errors.push(`causalEvents[${i}] missing required SYS field: systemDesc`)
     })
   }
 

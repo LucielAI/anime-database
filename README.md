@@ -83,7 +83,7 @@ src/
 
 Every universe payload is built via a two-stage workflow: broad system research followed by strict schema validation. The engine enforces structural density over completeness.
 
-- **Top-level:** `anime`, `tagline`, `malId`, `themeColors` (9 fields), `visualizationHint`, `visualizationReason`
+- **Top-level:** `anime`, `tagline`, `malId`, `themeColors` (9 fields), `visualizationHint`, `visualizationReason`, `rankings`, `aiInsights`
 - **Characters:** Strategically selected "hub" actors.
 - **Power Systems:** Raw energy architectures and hardware/software analogies.
 - **Rules:** The unyielding constraints governing the system.

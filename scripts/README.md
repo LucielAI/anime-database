@@ -29,7 +29,7 @@ Extended validation is intentionally lighter than core validation.
 ```bash
 npm run validate:all
 ```
-Runs `validateCorePayload` across every `src/data/*.json` (excluding `*.extended.json`) and prints a per-universe PASS/WARN/FAILED table.
+Runs `validateCorePayload` across every `src/data/*.json` (excluding `*.extended.json`) and prints a per-universe PASS/WARN/FAILED table. Supports `node scripts/auditPayloads.js --strict-warnings` for stricter CI/local gating when needed.
 Use this for archive-wide hardening before PRs.
 
 

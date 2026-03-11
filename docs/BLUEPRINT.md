@@ -44,7 +44,7 @@ A deterministic execution node triggers a global catastrophic cascade.
 
 ### AI Insight System
 The `AIInsightPanel` provides high-level automated commentary on the universe.
-- **Payload Field**: `aiInsights` (required for new universes).
+- **Payload Field**: `aiInsights` (required on every core payload).
 - **Modes**: Support for `casual` (fan-friendly) vs `deep` (system-analytical) explanations.
 - **Behavior**: Simulates a real-time "system scan" with streaming text animations to enhance the "Control Room" aesthetic.
 

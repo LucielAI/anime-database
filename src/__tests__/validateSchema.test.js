@@ -19,7 +19,7 @@ function makePayload(overrides = {}) {
     characters: [makeCharacter('Hero'), makeCharacter('Villain')],
     factions: [{ name: 'Heroes', role: 'protagonist', loreDesc: 'Good guys', systemDesc: 'Main process' }],
     rules: [{ name: 'Rule 1', severity: 'high', loreSubtitle: 'sub', systemSubtitle: 'sub', loreConsequence: 'desc', systemEquivalent: 'desc' }],
-    rankings: [],
+    rankings: {},
     relationships: [{ source: 'Hero', target: 'Villain', type: 'enemy', loreDesc: 'They fight' }],
     aiInsights: { casual: 'Fun take', deep: 'Mechanics-focused take' },
     ...overrides,
@@ -107,6 +107,25 @@ describe('validateCorePayload', () => {
       counterplay: [{ attacker: 'A' }]
     }))
     expect(errors.some(e => e.includes('counterplay'))).toBe(true)
+  })
+
+
+  it('rejects malformed top-level types', () => {
+    const { errors } = validateCorePayload(makePayload({
+      malId: '123',
+      rankings: [],
+      relationships: {}
+    }))
+    expect(errors.some(e => e.includes('malId'))).toBe(true)
+    expect(errors.some(e => e.includes('rankings must be an object'))).toBe(true)
+    expect(errors.some(e => e.includes('relationships must be an array'))).toBe(true)
+  })
+
+  it('rejects hex character gradient values', () => {
+    const { errors } = validateCorePayload(makePayload({
+      characters: [makeCharacter('Hexy', { gradientFrom: '#111111' })]
+    }))
+    expect(errors.some(e => e.includes('Tailwind color token'))).toBe(true)
   })
 
   it('validates faction roles', () => {

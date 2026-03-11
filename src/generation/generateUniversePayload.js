@@ -1,52 +1,60 @@
 import { selectCoreFromExtended } from './selectCoreFromExtended'
 
+const DEFAULT_THEME = {
+  primary: '#22d3ee',
+  secondary: '#8b5cf6',
+  accent: '#f59e0b',
+  glow: 'rgba(34,211,238,0.3)',
+  tabActive: '#22d3ee',
+  badgeBg: 'rgba(139,92,246,0.1)',
+  badgeText: '#8b5cf6',
+  modeGlow: 'rgba(34,211,238,0.2)',
+  heroGradient: 'rgba(5,5,20,0.9)'
+}
+
+const DEFAULT_CHARACTER_COLORS = {
+  gradientFrom: 'slate-900',
+  gradientTo: 'slate-700',
+  accentColor: 'cyan-400'
+}
+
 /**
  * RESEARCH-TO-PAYLOAD TRANSFORMER
  *
- * This module turns structured research into a renderer-ready core payload.
- *
- * Operational intent:
- * 1) Thesis-first renderer mapping (not raw volume-first).
- * 2) Non-breaking defaults for missing fields.
- * 3) Layered support: extended -> deterministic core selection -> core payload.
+ * NOTE: This is a starter utility, not a final authoring path.
+ * Output must always be manually reviewed against:
+ * - src/utils/validateSchema.js
+ * - playbooks/06-payload-field-reference.md
  */
 export function generateUniversePayload(animeName, structuredResearch, options = {}) {
   const sourceLayer = options.sourceLayer || 'core'
 
-  // If research is extended, compress it deterministically before formatting.
   const baseResearch = sourceLayer === 'extended'
     ? selectCoreFromExtended(structuredResearch)
     : structuredResearch
 
-  // The system thesis should drive visualization strategy.
   const thesis = baseResearch.structuralThesis || 'Unknown Mechanism'
-  const themeColors = baseResearch.themeColors || {
-    primary: '#22d3ee', secondary: '#8b5cf6', accent: '#f59e0b',
-    glow: 'rgba(34,211,238,0.3)', tabActive: '#22d3ee',
-    badgeBg: 'rgba(139,92,246,0.1)', badgeText: '#8b5cf6',
-    modeGlow: 'rgba(34,211,238,0.2)', heroGradient: 'rgba(5,5,20,0.9)'
-  }
+  const themeColors = { ...DEFAULT_THEME, ...(baseResearch.themeColors || {}) }
 
-  // Renderer hint selection priority: causality -> counter economy -> relationship web.
   let hint = 'standard-cards'
-  let hintReason = 'Default fallback renderer.'
+  let hintReason = 'Fallback renderer used because no stronger thesis signal was detected.'
 
-  const isCausal = thesis.toLowerCase().includes('time') || thesis.toLowerCase().includes('causal')
-  const isEconomy = thesis.toLowerCase().includes('counter') || thesis.toLowerCase().includes('economy') || thesis.toLowerCase().includes('trade-off')
-  const isWeb = thesis.toLowerCase().includes('network') || thesis.toLowerCase().includes('contract') || thesis.toLowerCase().includes('alliance')
+  const thesisLower = thesis.toLowerCase()
+  const isCausal = thesisLower.includes('time') || thesisLower.includes('causal')
+  const isEconomy = thesisLower.includes('counter') || thesisLower.includes('economy') || thesisLower.includes('trade-off')
+  const isWeb = thesisLower.includes('network') || thesisLower.includes('contract') || thesisLower.includes('alliance')
 
   if (isCausal && baseResearch.causalEvents?.length > 1) {
     hint = 'timeline'
-    hintReason = 'Universe relies on deterministic causality or cross-temporal architecture.'
+    hintReason = 'Universe behavior is primarily causal; timeline best exposes trigger-consequence chains.'
   } else if (isEconomy && baseResearch.counterplay?.length > 1) {
     hint = 'counter-tree'
-    hintReason = 'Universe defines combat explicitly through hard counters and energy economics.'
+    hintReason = 'Universe behavior is primarily matchup/counter economy; counter-tree surfaces exploit paths.'
   } else if (isWeb && baseResearch.relationships?.length > 3) {
     hint = 'node-graph'
-    hintReason = 'Universe relies on strategic exposure and deep interpersonal webs.'
+    hintReason = 'Universe behavior is primarily relational control; node-graph surfaces dependencies and betrayals.'
   }
 
-  // Keep formatting robust to partial research outputs.
   const processCharacters = (chars = []) => chars.map(c => {
     const imageUrl = c.imageUrl || null
 
@@ -55,13 +63,13 @@ export function generateUniversePayload(animeName, structuredResearch, options =
       title: c.title || 'The Anomaly',
       rank: c.rank || 'Unclassified',
       primaryAbility: c.primaryAbility || 'Unknown',
-      dangerLevel: c.dangerLevel || 5,
+      dangerLevel: Number.isFinite(Number(c.dangerLevel)) ? Number(c.dangerLevel) : 5,
       loreBio: c.loreBio || 'No archival lore record exists.',
       systemBio: c.systemBio || 'No system metrics recorded.',
-      gradientFrom: c.gradientFrom || '#1a1a2e',
-      gradientTo: c.gradientTo || '#0f0f1a',
-      accentColor: c.accentColor || '#38bdf8',
-      icon: c.icon || 'circle',
+      gradientFrom: c.gradientFrom || DEFAULT_CHARACTER_COLORS.gradientFrom,
+      gradientTo: c.gradientTo || DEFAULT_CHARACTER_COLORS.gradientTo,
+      accentColor: c.accentColor || DEFAULT_CHARACTER_COLORS.accentColor,
+      icon: c.icon || 'Circle',
       signatureMoment: c.signatureMoment || 'Data expunged.',
       imageUrl,
       ...(imageUrl === null ? { _fetchFailed: true } : {})
@@ -80,10 +88,10 @@ export function generateUniversePayload(animeName, structuredResearch, options =
   return {
     anime: animeName,
     tagline: baseResearch.tagline || 'CLASSIFIED SYSTEM',
-    malId: baseResearch.malId || '00000',
+    malId: Number.isInteger(baseResearch.malId) && baseResearch.malId > 0 ? baseResearch.malId : 1,
     themeColors,
     visualizationHint: hint,
-    visualizationReason: hintReason,
+    visualizationReason: baseResearch.visualizationReason || hintReason,
     powerSystem: baseResearch.powerSystem || [],
     characters: processCharacters(baseResearch.characters),
     relationships: processRelationships(baseResearch.relationships),
@@ -92,6 +100,10 @@ export function generateUniversePayload(animeName, structuredResearch, options =
     anomalies: baseResearch.anomalies || [],
     counterplay: baseResearch.counterplay || [],
     causalEvents: baseResearch.causalEvents || [],
-    rankings: baseResearch.rankings || {}
+    rankings: baseResearch.rankings || {},
+    aiInsights: baseResearch.aiInsights || {
+      casual: 'System scan pending. Replace with a concise fan-facing interpretation.',
+      deep: 'System scan pending. Replace with mechanics-focused analysis of constraints and causality.'
+    }
   }
 }

@@ -56,7 +56,7 @@ Required fields (enforced by `validateCorePayload` as **hard errors**):
 - `visualizationHint` — one of: `timeline`, `node-graph`, `counter-tree`, `affinity-matrix`, `standard-cards`
 - `visualizationReason` — one sentence explaining the renderer choice
 - `powerSystem`, `characters`, `factions`, `rules`, `rankings` — all required arrays/objects
-- `aiInsights` — `{ casual: string, deep: string }` — required for all new universes
+- `aiInsights` — `{ casual: string, deep: string }` — required on every core payload
 - `headerFlavor` — `{ loreQuote, sysWarning, sysWarningColor }` — optional but expected
 - `backgroundMotif`, `revealOverlay` — optional presentation keys
 

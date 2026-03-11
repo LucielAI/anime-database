@@ -22,6 +22,7 @@ characters      array    — Character entries (12 required fields each)
 factions        array    — Faction entries
 rules           array    — Rule entries
 rankings        object   — Tier/ranking structure (see below)
+aiInsights      object   — { casual: string, deep: string }
 ```
 
 ---
@@ -104,7 +105,7 @@ The entire LORE/SYS toggle in the UI depends on this. Every entity type has two 
 
 **System voice:** Analytical, mechanism-focused. Written as if the universe is an engineered system — use terms like "constraint", "node", "convergence", "protocol", "threshold".
 
-Missing `loreSubtitle` or `systemSubtitle` on powerSystem/rules generates **warnings**.
+Missing `loreSubtitle` or `systemSubtitle` on rules now generates **hard errors**. Missing these on powerSystem still generates warnings.
 
 ---
 

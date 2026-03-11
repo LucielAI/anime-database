@@ -71,7 +71,7 @@ Placing a `.core.json` file directly in `src/data/` works — `src/data/index.js
 
 | Script | Purpose |
 |---|---|
-| `src/generation/generateUniversePayload.js` | Research → payload transformer (auto-detects thesis) |
+| `src/generation/generateUniversePayload.js` | Research → starter payload scaffold (manual hardening required) |
 | `src/generation/selectCoreFromExtended.js` | Ranks and caps extended data into core-sized arrays |
 | `src/generation/starterProfiles.js` | System type detection + editorial defaults per renderer |
 
