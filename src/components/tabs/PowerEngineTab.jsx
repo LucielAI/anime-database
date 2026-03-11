@@ -53,7 +53,7 @@ export default function PowerEngineTab({ data, isSystemMode, theme }) {
                   {getIcon(power.icon)}
                 </div>
                 <div>
-                  <h2 className="text-xl md:text-2xl font-bold uppercase tracking-wider truncate">{power.name}</h2>
+                  <h2 className="text-xl md:text-2xl font-bold uppercase tracking-wider leading-tight break-words">{power.name}</h2>
                   <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase" style={{ color: isSystemMode ? theme.secondary : theme.primary }}>{isSystemMode ? (power.systemSubtitle || power.subtitle) : (power.loreSubtitle || power.name)}</span>
                 </div>
               </div>
