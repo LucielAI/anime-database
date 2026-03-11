@@ -179,8 +179,41 @@ export function validateCorePayload(data) {
       if (r.severity && !VALID_SEVERITIES.includes(r.severity)) {
         errors.push(`rules[${i}] invalid severity: "${r.severity}"`)
       }
+      if (!r.name) errors.push(`rules[${i}] missing required UI field: name`)
+      if (!r.loreConsequence) warnings.push(`rules[${i}] missing loreConsequence (Core Laws body may render blank in LORE mode)`)
+      if (!r.systemEquivalent) warnings.push(`rules[${i}] missing systemEquivalent (Core Laws body may render blank in SYS mode)`)
       if (!r.loreSubtitle) warnings.push(`rules[${i}] missing loreSubtitle`)
       if (!r.systemSubtitle) warnings.push(`rules[${i}] missing systemSubtitle`)
+    })
+  }
+
+  // ── 6b. UI-critical section field checks ──
+  // These keys are required for the current tab components to render rich text
+  // (and to avoid placeholder-only cards like [ATTACK] → [COUNTER]).
+
+  if (Array.isArray(data.counterplay)) {
+    data.counterplay.forEach((cp, i) => {
+      if (!cp.attacker) warnings.push(`counterplay[${i}] missing attacker (Power Engine renders [ATTACK] placeholder)`)
+      if (!cp.defender) warnings.push(`counterplay[${i}] missing defender (Power Engine renders [COUNTER] placeholder)`)
+      if (!cp.mechanic) warnings.push(`counterplay[${i}] missing mechanic`)
+    })
+  }
+
+  if (Array.isArray(data.anomalies)) {
+    data.anomalies.forEach((a, i) => {
+      if (!a.name) warnings.push(`anomalies[${i}] missing name (Rule Breakers heading may render blank)`)
+      if (!a.ruleViolated) warnings.push(`anomalies[${i}] missing ruleViolated`)
+      if (!a.loreDesc) warnings.push(`anomalies[${i}] missing loreDesc`)
+      if (!a.systemDesc) warnings.push(`anomalies[${i}] missing systemDesc`)
+    })
+  }
+
+  if (Array.isArray(data.causalEvents)) {
+    data.causalEvents.forEach((evt, i) => {
+      if (!evt.name) warnings.push(`causalEvents[${i}] missing name`)
+      if (!evt.trigger) warnings.push(`causalEvents[${i}] missing trigger`)
+      if (!evt.consequence) warnings.push(`causalEvents[${i}] missing consequence`)
+      if (!evt.timelinePosition) warnings.push(`causalEvents[${i}] missing timelinePosition`)
     })
   }
 
@@ -191,6 +224,9 @@ export function validateCorePayload(data) {
       if (f.role && !VALID_FACTION_ROLES.includes(f.role)) {
         errors.push(`factions[${i}] invalid role: "${f.role}"`)
       }
+      if (!f.name) warnings.push(`factions[${i}] missing name (Faction card heading may render blank)`)
+      if (!f.loreDesc) warnings.push(`factions[${i}] missing loreDesc`)
+      if (!f.systemDesc) warnings.push(`factions[${i}] missing systemDesc`)
     })
   }
 
@@ -198,6 +234,9 @@ export function validateCorePayload(data) {
 
   if (Array.isArray(data.powerSystem)) {
     data.powerSystem.forEach((p, i) => {
+      if (!p.name) warnings.push(`powerSystem[${i}] missing name (Power Engine card heading may render blank)`)
+      if (!p.loreDesc) warnings.push(`powerSystem[${i}] missing loreDesc`)
+      if (!p.systemDesc) warnings.push(`powerSystem[${i}] missing systemDesc`)
       if (!p.loreSubtitle) warnings.push(`powerSystem[${i}] missing loreSubtitle`)
       if (!p.systemSubtitle) warnings.push(`powerSystem[${i}] missing systemSubtitle`)
     })
@@ -328,4 +367,3 @@ export function validateExtendedDataset(data) {
 
   return { errors, warnings }
 }
-

@@ -71,6 +71,7 @@ A dynamic navigation system that encourages cross-archive discovery.
 - Steins;Gate
 - Death Note
 - Fullmetal Alchemist: Brotherhood
+- Code Geass
 
 ## Product Goals
 The archive serves multiple simultaneous goals:

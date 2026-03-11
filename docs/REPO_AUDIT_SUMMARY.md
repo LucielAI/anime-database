@@ -8,6 +8,7 @@
 - Steins;Gate
 - Death Note
 - Fullmetal Alchemist: Brotherhood
+- Code Geass
 
 ## Current Renderers
 - TimelineExplorer
