@@ -71,6 +71,7 @@ A dynamic navigation system that encourages cross-archive discovery.
 - Steins;Gate
 - Death Note
 - Fullmetal Alchemist: Brotherhood
+- Code Geass
 
 ## Product Goals
 The archive serves multiple simultaneous goals:
@@ -84,10 +85,10 @@ The archive serves multiple simultaneous goals:
 - **Share Button**: Uses `navigator.share()` with clipboard fallback. Shares anime title, system label, and route URL.
 
 ## Community Feedback
-- **Feedback Block**: A compact section on each universe page asking "Was this archive helpful?" with vote buttons and a "Needs More Data" flag.
-- **Suggest an Anime**: Input field for users to suggest new universes for the archive.
-- **Back-end Flow**: Minimal serverless endpoints (`/api/feedback`, `/api/suggest`) handle incoming signals.
-- **Infrastructure**: Backed by Supabase (optional infrastructure). No personal data collected.
+- **Feedback Block**: A compact section on each universe page with helpful/unhelpful votes, “Needs More Data,” and a correction-report field.
+- **Community Pulse (Home)**: Lightweight homepage panel for quick “next universe” voting, custom suggestions, and share/follow hooks.
+- **Back-end Flow**: Minimal serverless endpoints (`/api/feedback`, `/api/suggest`) handle anonymous signals. Corrections are queued through the suggestion channel with a structured `[CORRECTION:{slug}]` prefix.
+- **Infrastructure**: Backed by Supabase (optional infrastructure). No accounts or personal profiles.
 
 ## Analytics
 - **GoatCounter**: Lightweight, privacy-first page view tracking.

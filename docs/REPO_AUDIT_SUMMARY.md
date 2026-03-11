@@ -8,6 +8,7 @@
 - Steins;Gate
 - Death Note
 - Fullmetal Alchemist: Brotherhood
+- Code Geass
 
 ## Current Renderers
 - TimelineExplorer
@@ -22,6 +23,8 @@
 - WhyThisRenderer component
 - Wow Graph Moment
 - ExploreAnotherUniverse component
+- Home Community Pulse (suggestions/vote signals)
+- Dashboard FeedbackBlock (votes + correction reports)
 
 ## Core Pipeline
 Research → Payload → Validation → Integration
