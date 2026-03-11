@@ -59,7 +59,7 @@ The goal is structural clarity, not lore completeness.
 
 ## AI Insights (Pregenerated Intelligence)
 
-All newly added universes **MUST** include an `aiInsights` object containing pregenerated analysis of the system.
+All core payloads **MUST** include an `aiInsights` object containing pregenerated analysis of the system.
 
 The schema requires:
 ```json

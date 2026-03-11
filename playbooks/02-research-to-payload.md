@@ -9,7 +9,7 @@ How to transform raw research into a valid archive JSON payload.
 - `docs/RENDERER_CONTRACT.md` — how to pick a renderer from research output
 - `docs/DATA_PRINCIPLES.md` — schema rules, image policy, aiInsights spec
 - `src/generation/selectCoreFromExtended.js` — deterministic core selection
-- `src/generation/generateUniversePayload.js` — higher-level research → payload transformer
+- `src/generation/generateUniversePayload.js` — starter scaffold generator (manual hardening required)
 - `playbooks/06-payload-field-reference.md` — complete field schema with required keys and enums
 
 ## Inputs Required
@@ -35,7 +35,7 @@ Before touching JSON, identify the structural thesis from research:
 - Is the system defined by **affinity/compatibility structures**? → `affinity-matrix`
 - None fit cleanly? → `standard-cards`
 
-`generateUniversePayload.js` auto-detects thesis from keywords (`time`/`causal` → timeline, `counter`/`economy` → counter-tree, `network`/`alliance` → node-graph). Review and override its choice if the auto-detection misses the actual system thesis.
+`generateUniversePayload.js` is a starter utility, not a final authoring path. It can help scaffold shape and thesis defaults, but output must be manually reviewed and corrected against `playbooks/06-payload-field-reference.md` and `src/utils/validateSchema.js` before validation/integration.
 
 This determines `visualizationHint` and drives all structural profile targets.
 
