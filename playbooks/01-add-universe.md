@@ -21,14 +21,15 @@ End-to-end guide for adding a new anime universe to the archive.
 
 ### Stage 1 — Research
 
-Use `docs/MASTER_RESEARCH_PROMPT.md` to guide structural research. Focus on the system (rules, factions, causality, counterplay), not plot.
+Use `docs/MASTER_UNIVERSE_BUILD_PROMPT.md` (canonical) and `docs/MASTER_RESEARCH_PROMPT.md` (companion) to normalize **pre-supplied** research into implementation-ready structure.
+In this repo workflow, research is often generated externally and uploaded manually to `research/`.
 
-Save output to:
+If research is missing and the task explicitly requests it, generate and save to:
 ```
 research/{slug}_research.txt
 ```
 
-See `docs/RESEARCH_GUIDE.md` for what sections to produce.
+See `docs/RESEARCH_GUIDE.md` for expected sections.
 
 ### Stage 2 — Extended Dataset (recommended)
 
@@ -76,6 +77,11 @@ The script reads `malId` from the payload and fetches the official cast list. Do
 
 ```bash
 npm run validate:payload path/to/{slug}.core.json
+```
+
+**Archive-wide hardening gate:**
+```bash
+npm run validate:all
 ```
 
 A clean pass (`CLEAN PASS` or `PASSED WITH WARNINGS`) is required before integration. `FAILED` blocks integration.

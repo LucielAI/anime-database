@@ -17,7 +17,7 @@ Runtime behavior is unchanged: UI/renderers always use the core layer.
 ### Stage 1 — Research
 Input:
 - anime name
-- MASTER_RESEARCH_PROMPT.md
+- MASTER_UNIVERSE_BUILD_PROMPT.md (canonical) + MASTER_RESEARCH_PROMPT.md (companion)
 - optionally RESEARCH_GUIDE.md
 
 Output:
@@ -40,6 +40,11 @@ Output:
 Run:
 ```bash
 npm run validate:payload path/to/slug.core.json
+```
+
+Archive-wide hardening pass before PR:
+```bash
+npm run validate:all
 ```
 
 For extended datasets:

@@ -2,8 +2,10 @@
 
 const REQUIRED_TOP_LEVEL = [
   'anime', 'tagline', 'malId', 'themeColors', 'visualizationHint',
-  'visualizationReason', 'powerSystem', 'characters', 'factions', 'rules', 'rankings'
+  'visualizationReason', 'powerSystem', 'characters', 'factions', 'rules', 'rankings', 'aiInsights'
 ]
+
+const REQUIRED_ARRAY_TOP_LEVEL = ['powerSystem', 'characters', 'factions', 'rules']
 
 const REQUIRED_CHARACTER_FIELDS = [
   'name', 'title', 'rank', 'dangerLevel', 'loreBio', 'systemBio',
@@ -109,6 +111,28 @@ export function validateCorePayload(data) {
     if (data[f] === undefined) errors.push(`Missing required field: ${f}`)
   })
 
+  REQUIRED_ARRAY_TOP_LEVEL.forEach(f => {
+    if (data[f] !== undefined && !Array.isArray(data[f])) {
+      errors.push(`Field "${f}" must be an array.`)
+    }
+  })
+
+  if (data.rankings !== undefined && (typeof data.rankings !== 'object' || data.rankings === null || Array.isArray(data.rankings))) {
+    errors.push('Field "rankings" must be an object.')
+  }
+
+  if (typeof data.anime !== 'string' || data.anime.trim() === '') {
+    errors.push('Field "anime" must be a non-empty string.')
+  }
+
+  if (typeof data.tagline !== 'string' || data.tagline.trim() === '') {
+    errors.push('Field "tagline" must be a non-empty string.')
+  }
+
+  if (typeof data.visualizationReason !== 'string' || data.visualizationReason.trim() === '') {
+    errors.push('Field "visualizationReason" must be a non-empty string.')
+  }
+
   // ── 2. Theme color completeness ──
 
   if (data.themeColors) {
@@ -179,8 +203,42 @@ export function validateCorePayload(data) {
       if (r.severity && !VALID_SEVERITIES.includes(r.severity)) {
         errors.push(`rules[${i}] invalid severity: "${r.severity}"`)
       }
+      if (!r.name) errors.push(`rules[${i}] missing required UI field: name`)
+      if (!r.systemEquivalent) errors.push(`rules[${i}] missing required UI field: systemEquivalent`)
+      if (!r.severity) errors.push(`rules[${i}] missing required UI field: severity`)
+      if (!r.loreConsequence) warnings.push(`rules[${i}] missing loreConsequence (Core Laws body may render blank in LORE mode)`)
       if (!r.loreSubtitle) warnings.push(`rules[${i}] missing loreSubtitle`)
       if (!r.systemSubtitle) warnings.push(`rules[${i}] missing systemSubtitle`)
+    })
+  }
+
+  // ── 6b. UI-critical section field checks ──
+  // These keys are required for the current tab components to render rich text
+  // (and to avoid placeholder-only cards like [ATTACK] → [COUNTER]).
+
+  if (Array.isArray(data.counterplay)) {
+    data.counterplay.forEach((cp, i) => {
+      if (!cp.attacker) errors.push(`counterplay[${i}] missing attacker (Power Engine renders [ATTACK] placeholder)`)
+      if (!cp.defender) errors.push(`counterplay[${i}] missing defender (Power Engine renders [COUNTER] placeholder)`)
+      if (!cp.mechanic) errors.push(`counterplay[${i}] missing mechanic`)
+    })
+  }
+
+  if (Array.isArray(data.anomalies)) {
+    data.anomalies.forEach((a, i) => {
+      if (!a.name) errors.push(`anomalies[${i}] missing name (Rule Breakers heading may render blank)`)
+      if (!a.ruleViolated) errors.push(`anomalies[${i}] missing ruleViolated`)
+      if (!a.loreDesc) warnings.push(`anomalies[${i}] missing loreDesc`)
+      if (!a.systemDesc) warnings.push(`anomalies[${i}] missing systemDesc`)
+    })
+  }
+
+  if (Array.isArray(data.causalEvents)) {
+    data.causalEvents.forEach((evt, i) => {
+      if (!evt.name) errors.push(`causalEvents[${i}] missing name`)
+      if (!evt.trigger) warnings.push(`causalEvents[${i}] missing trigger`)
+      if (!evt.consequence) warnings.push(`causalEvents[${i}] missing consequence`)
+      if (!evt.timelinePosition) errors.push(`causalEvents[${i}] missing timelinePosition`)
     })
   }
 
@@ -191,6 +249,9 @@ export function validateCorePayload(data) {
       if (f.role && !VALID_FACTION_ROLES.includes(f.role)) {
         errors.push(`factions[${i}] invalid role: "${f.role}"`)
       }
+      if (!f.name) warnings.push(`factions[${i}] missing name (Faction card heading may render blank)`)
+      if (!f.loreDesc) warnings.push(`factions[${i}] missing loreDesc`)
+      if (!f.systemDesc) warnings.push(`factions[${i}] missing systemDesc`)
     })
   }
 
@@ -198,6 +259,9 @@ export function validateCorePayload(data) {
 
   if (Array.isArray(data.powerSystem)) {
     data.powerSystem.forEach((p, i) => {
+      if (!p.name) warnings.push(`powerSystem[${i}] missing name (Power Engine card heading may render blank)`)
+      if (!p.loreDesc) warnings.push(`powerSystem[${i}] missing loreDesc`)
+      if (!p.systemDesc) warnings.push(`powerSystem[${i}] missing systemDesc`)
       if (!p.loreSubtitle) warnings.push(`powerSystem[${i}] missing loreSubtitle`)
       if (!p.systemSubtitle) warnings.push(`powerSystem[${i}] missing systemSubtitle`)
     })
@@ -259,21 +323,17 @@ export function validateCorePayload(data) {
     })
   }
 
-  // ── 12. AI Insights Validation (Optional for legacy, strict if present) ──
-  
-  if (data.aiInsights !== undefined) {
-    if (typeof data.aiInsights !== 'object' || data.aiInsights === null) {
-      errors.push(`aiInsights must be an object.`)
-    } else {
-      if (typeof data.aiInsights.casual !== 'string' || data.aiInsights.casual.trim() === '') {
-        errors.push(`aiInsights.casual must be a non-empty string.`)
-      }
-      if (typeof data.aiInsights.deep !== 'string' || data.aiInsights.deep.trim() === '') {
-        errors.push(`aiInsights.deep must be a non-empty string.`)
-      }
-    }
+  // ── 12. AI Insights Validation (Required) ──
+
+  if (typeof data.aiInsights !== 'object' || data.aiInsights === null || Array.isArray(data.aiInsights)) {
+    errors.push('aiInsights must be an object.')
   } else {
-    warnings.push(`aiInsights is missing. This will be required for all future universe payloads to support the AI Insight System.`)
+    if (typeof data.aiInsights.casual !== 'string' || data.aiInsights.casual.trim() === '') {
+      errors.push('aiInsights.casual must be a non-empty string.')
+    }
+    if (typeof data.aiInsights.deep !== 'string' || data.aiInsights.deep.trim() === '') {
+      errors.push('aiInsights.deep must be a non-empty string.')
+    }
   }
 
   // ── Output ──
@@ -328,4 +388,3 @@ export function validateExtendedDataset(data) {
 
   return { errors, warnings }
 }
-

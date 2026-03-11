@@ -17,6 +17,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 | Field schema, enums, themeColors shape | `playbooks/06-payload-field-reference.md` |
 | Renderer selection logic | `docs/RENDERER_CONTRACT.md` |
 | Pipeline stages reference | `docs/UNIVERSE_PIPELINE.md` |
+| Canonical one-pass build prompt | `docs/MASTER_UNIVERSE_BUILD_PROMPT.md` |
 | Image policy, aiInsights rules | `docs/DATA_PRINCIPLES.md` |
 | All CLI commands | `scripts/README.md` |
 
@@ -56,6 +57,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 
 ```bash
 npm run validate:payload path/to/slug.core.json                       # validate core payload
+npm run validate:all                                                   # audit every integrated payload
 npm run validate:payload path/to/slug.extended.json -- --extended     # validate extended dataset
 npm run add:universe path/to/slug.core.json [slug]                    # integrate universe (auto-regenerates sitemap)
 npm run generate:sitemap                                               # regenerate public/sitemap.xml manually

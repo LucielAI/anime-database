@@ -101,6 +101,24 @@ Every universe payload is built via a two-stage workflow: broad system research 
 - Steins;Gate
 - Death Note
 - Fullmetal Alchemist: Brotherhood
+- Code Geass
+
+
+## Lightweight Community Hooks
+
+The archive includes low-friction engagement surfaces without accounts/comments:
+
+- **Community Pulse (Home):** quick “archive next” voting + suggestion form.
+- **Per-universe Feedback Block:** helpful/unhelpful votes, “needs more data”, and correction reporting.
+- **Share + Follow hooks:** native share encouragement and follow CTA.
+
+Signals are anonymous and routed through lightweight serverless endpoints (`/api/feedback`, `/api/suggest`) backed by Supabase when configured.
+
+Optional support CTA can be enabled with:
+
+```bash
+VITE_SUPPORT_URL=https://your-support-link
+```
 
 ## Tech Stack
 
@@ -123,10 +141,17 @@ npm run validate:payload  # Custom CLI tool for JSON structure checking
 
 ## Adding a New Universe
 
-1. Run research using `docs/MASTER_RESEARCH_PROMPT.md` to identify the structural thesis.
-2. Generate a strict JSON schema conforming to `validateSchema.js`.
-3. Ingest via: `npm run add:universe <path-to-payload> <slug>`
-4. The pipeline automatically wires the schema, tests fallbacks, and assigns routing.
+1. Read `AGENTS.md`, `CLAUDE.md`, and playbooks `playbooks/01`→`06`.
+2. Use **pre-uploaded research** from `research/` (research is externally supplied by default).
+3. Build a core payload (`src/data/{slug}.core.json` preferred; legacy `.json` still supported).
+4. Patch images before validation: `python scripts/patch_jikan_images.py --file src/data/{slug}.core.json`.
+5. Run verification gates:
+   - `npm run validate:payload src/data/{slug}.core.json`
+   - `npm run validate:all`
+   - `npm run test`
+   - `npm run build`
+6. Integrate with `npm run add:universe <path-to-core-payload> <slug>` (or place the core file in `src/data/` manually).
+7. Sync docs/order: `README.md`, `docs/BLUEPRINT.md`, `docs/REPO_AUDIT_SUMMARY.md`, and `src/data/index.js` (`preferredOrder`).
 
 ## License
 
