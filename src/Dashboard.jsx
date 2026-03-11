@@ -313,7 +313,7 @@ export default function Dashboard({ data }) {
 
       {/* Community Feedback */}
       <div className="share-frame-hide">
-        <FeedbackBlock slug={data?.id} theme={theme} />
+        <FeedbackBlock slug={data?.id} theme={theme} animeName={animeName} />
       </div>
 
       {/* Footer */}
