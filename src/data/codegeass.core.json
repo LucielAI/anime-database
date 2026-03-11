@@ -1,0 +1,644 @@
+{
+  "anime": "Code Geass: Hangyaku no Lelouch",
+  "tagline": "An occupied nation becomes a control-war between imperial hierarchy, masked insurgency, and a will-hacking anomaly that turns strategy into governance engineering.",
+  "malId": 1575,
+  "themeColors": {
+    "primary": "#7c3aed",
+    "secondary": "#991b1b",
+    "accent": "#f43f5e",
+    "glow": "rgba(124,58,237,0.35)",
+    "tabActive": "#a855f7",
+    "badgeBg": "rgba(239,68,68,0.14)",
+    "badgeText": "#fda4af",
+    "modeGlow": "rgba(168,85,247,0.22)",
+    "heroGradient": "rgba(7,6,16,0.92)"
+  },
+  "visualizationHint": "node-graph",
+  "visualizationReason": "Code Geass is a control-network story: Geass permissions, command chains, propaganda legitimacy, and betrayal edges continuously rewire who can issue orders and who obeys; node-graph most accurately surfaces that shifting authority topology.",
+  "headerFlavor": {
+    "loreQuote": "The only ones who should kill are those prepared to be killed.",
+    "sysWarning": "// [COMMAND_OVERRIDE]: CONSENT LAYER BYPASSED — AUTHORITY GRAPH MUTATING IN REAL TIME",
+    "sysWarningColor": "purple"
+  },
+  "backgroundMotif": "jagged",
+  "revealOverlay": "pulse-purple",
+  "powerSystem": [
+    {
+      "name": "Geass",
+      "subtitle": "Contract-Bound Command Exploit",
+      "loreDesc": "A supernatural power granted through contracts with Code bearers. Each user manifests a personalized ability, and Lelouch's Geass can force absolute obedience once eye contact is established.",
+      "systemDesc": "A per-user authority override protocol that writes temporary or permanent instructions directly into a target's decision layer. It is high impact but bound by strict trigger conditions and runaway-evolution risk.",
+      "loreSubtitle": "The King's Power",
+      "systemSubtitle": "Neurological Permission Bypass",
+      "icon": "Eye",
+      "color": "violet-400",
+      "signatureMoment": "Lelouch accidentally commands Euphemia to kill the Japanese, proving one unstable instruction can cascade into national-scale collapse."
+    },
+    {
+      "name": "Knightmare Frame Warfare",
+      "subtitle": "Sakuradite-Powered Mobility Supremacy",
+      "loreDesc": "Humanoid war machines define the military meta. Superior frames like the Lancelot and Guren repeatedly overturn larger conventional forces through speed and specialized systems.",
+      "systemDesc": "An arms-race platform where sakuradite energy density, maneuver tech, and pilot cognition decide battlefield throughput. Technical edge compounds political edge by rapidly changing territorial control.",
+      "loreSubtitle": "The Steel Layer of Empire",
+      "systemSubtitle": "High-Velocity Force Projection Stack",
+      "icon": "Shield",
+      "color": "rose-400",
+      "signatureMoment": "Suzaku's Lancelot breaks the Battle of Narita's momentum by outclassing legacy units and restoring Britannian operational control."
+    },
+    {
+      "name": "Symbols, Masks, and Broadcast Legitimacy",
+      "subtitle": "Narrative Command Infrastructure",
+      "loreDesc": "Zero's mask turns one exile prince into a global revolutionary symbol. Public declarations, trials, and spectacle warfare recruit civilians and destabilize imperial narrative control.",
+      "systemDesc": "A legitimacy engine that converts perception into manpower, diplomatic recognition, and compliance. Information theater functions as strategic middleware between tactical victories and regime durability.",
+      "loreSubtitle": "Who the World Believes",
+      "systemSubtitle": "Mass-Perception Routing Layer",
+      "icon": "Crown",
+      "color": "amber-400",
+      "signatureMoment": "The Black Rebellion proves Zero can reframe insurgency from terrorism into governance alternative, forcing global actors to re-evaluate allegiance."
+    }
+  ],
+  "characters": [
+    {
+      "name": "Lelouch Lamperouge",
+      "title": "Zero / Disruption Architect",
+      "rank": "Black Knights Supreme Commander",
+      "dangerLevel": 10,
+      "loreBio": "An exiled prince who weaponizes Geass, theatrics, and statecraft to collapse Britannia and then stage-manage a global reset.",
+      "systemBio": "Primary control-graph mutator combining command override, legitimacy capture, and terminal sacrificial planning.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Crown",
+      "signatureMoment": "Executes Zero Requiem and turns his own assassination into a governance reboot.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/406163.jpg?s=e69a97cba35bb909a56523e14212524e",
+      "malId": 417
+    },
+    {
+      "name": "Suzaku Kururugi",
+      "title": "Knight of Zero / Enforcement Blade",
+      "rank": "Britannian Ace Pilot",
+      "dangerLevel": 9,
+      "loreBio": "Japan's former heir to peace-through-law who becomes Lelouch's executor and the living mask that stabilizes the postwar order.",
+      "systemBio": "High-trust enforcement process with elite combat throughput; converts political agreements into coercively credible outcomes.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Sword",
+      "signatureMoment": "Kills Emperor Lelouch in public to complete Zero Requiem and absorb perpetual symbolic burden.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/31564.jpg?s=cb64797d0f0647df7c2e85ac3331d3c7",
+      "malId": 559
+    },
+    {
+      "name": "C.C.",
+      "title": "Code Bearer / Contract Broker",
+      "rank": "Immortal Geass Contractor",
+      "dangerLevel": 8,
+      "loreBio": "An immortal witness to cycles of abuse who grants Lelouch the King's Power while searching for release from endless continuity.",
+      "systemBio": "Metaphysical gateway node that provisions Geass permissions and cross-era protocol knowledge.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "lime-900",
+      "accentColor": "lime-400",
+      "icon": "Key",
+      "signatureMoment": "Keeps Lelouch operational after network collapse and re-centers the final plan.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/33815.jpg?s=b6688e8e5cd4e025e35f617da7a802d5",
+      "malId": 1111
+    },
+    {
+      "name": "Stadtfeld, Kallen",
+      "title": "Black Knights Strike Ace",
+      "rank": "Guren Pilot",
+      "dangerLevel": 8,
+      "loreBio": "A rebel elite pilot whose dual Japanese/Britannian identity mirrors occupation fracture and insurgent resolve.",
+      "systemBio": "High-output tactical node translating strategy into hard wins that preserve rebel bargaining power.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "rose-900",
+      "accentColor": "rose-400",
+      "icon": "Flame",
+      "signatureMoment": "Holds off Britannia's best units during late-war operations with Guren's Radiant Wave armament.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/603839.jpg?s=5ed4bab52b91194208d024d7c2743d4a",
+      "malId": 558
+    },
+    {
+      "name": "Charles zi Britannia",
+      "title": "Emperor / Ragnarök Architect",
+      "rank": "Holy Britannian Sovereign",
+      "dangerLevel": 10,
+      "loreBio": "Britannia's emperor preaches strength while secretly attempting to erase lies and grief by merging all consciousness.",
+      "systemBio": "Root-admin actor pursuing forced metaphysical unification via C's World overwrite.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "red-950",
+      "accentColor": "red-400",
+      "icon": "Lock",
+      "signatureMoment": "Activates Ragnarök Connection in the Thought Elevator to hard-overwrite human individuality.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/146911.jpg?s=a27fde62430b36c24f87535cb5d1e129",
+      "malId": 5610
+    },
+    {
+      "name": "Schneizel el Britannia",
+      "title": "Prime Strategist / Damocles Controller",
+      "rank": "Second Prince",
+      "dangerLevel": 9,
+      "loreBio": "A rational imperial strategist who seeks peace through total fear using Damocles and F.L.E.I.J.A. monopoly.",
+      "systemBio": "Stasis optimizer replacing politics with constant annihilation leverage.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "sky-900",
+      "accentColor": "sky-400",
+      "icon": "Target",
+      "signatureMoment": "Uses Damocles broadcasts to enforce compliance through instant planetary punishment threat.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/31513.jpg?s=e032a87439d7a7db6043be0b1396c16c",
+      "malId": 1710
+    },
+    {
+      "name": "Nunnally Lamperouge",
+      "title": "Moral Anchor / Political Heir",
+      "rank": "Area 11 Viceroy",
+      "dangerLevel": 4,
+      "loreBio": "Lelouch's sister, repeatedly instrumentalized as a legitimacy symbol but still capable of rejecting strategic cruelty.",
+      "systemBio": "High-trust consent token that influences public acceptance across rival authority blocs.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Heart",
+      "signatureMoment": "Publicly rejects Lelouch's tyranny narrative and exposes the emotional cost of systemic engineering.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/31536.jpg?s=c07f02c20e2d6ff3ea83c65c98724ba0",
+      "malId": 1110
+    },
+    {
+      "name": "Jeremiah Gottwald",
+      "title": "Orange / Loyal Counterweight",
+      "rank": "Knight of Loyalty",
+      "dangerLevel": 7,
+      "loreBio": "A disgraced officer rebuilt into a cybernetic loyalist who becomes one of Lelouch's most reliable guardians.",
+      "systemBio": "Security-hardening node with anti-Geass cancellation and high survivability under betrayal-heavy conditions.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Shield",
+      "signatureMoment": "Uses Geass Canceller to restore compromised allies and protect final-phase command continuity.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/107028.jpg?s=41c0866056632523d8cc74590862b07d",
+      "malId": 1113
+    },
+    {
+      "name": "Cornelia li Britannia",
+      "title": "Imperial General / Order Enforcer",
+      "rank": "Viceroy-Class Commander",
+      "dangerLevel": 8,
+      "loreBio": "A ruthless princess-general whose battlefield discipline embodies Britannian military supremacy.",
+      "systemBio": "Top-tier conventional command node that stabilizes imperial fronts and suppresses insurgent variance.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Shield",
+      "signatureMoment": "Nearly crushes Black Knights offensives before Geass-layer intelligence flips engagements.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/33793.jpg?s=0fe272f3ed54c40d352bf6866489712d",
+      "malId": 797
+    },
+    {
+      "name": "Euphemia li Britannia",
+      "title": "Reform Princess / SAZ Catalyst",
+      "rank": "Area 11 Administrator",
+      "dangerLevel": 6,
+      "loreBio": "A sincere reformist whose Special Administrative Zone plan briefly opens nonviolent reintegration before tragedy.",
+      "systemBio": "Rare high-legitimacy bridge node capable of reducing insurgency through policy reconciliation.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Star",
+      "signatureMoment": "Her massacre under Geass converts a diplomatic solution into irreversible civil escalation.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/83313.jpg?s=a0895a29c7d622a43c0504c6bd04c7cb",
+      "malId": 1114
+    },
+    {
+      "name": "Lloyd Asplund",
+      "title": "Camelot Engineer",
+      "rank": "Britannian R&D Lead",
+      "dangerLevel": 5,
+      "loreBio": "An amoral scientist driving Knightmare innovation with little regard for ideological consequences.",
+      "systemBio": "Military R&D acceleration process that repeatedly shifts the tactical meta through prototype deployment.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Brain",
+      "signatureMoment": "Delivers Lancelot upgrades that repeatedly restore Britannian combat overmatch.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/83148.jpg?s=a3da42512b8d125a30e21c1069950449",
+      "malId": 1130
+    },
+    {
+      "name": "Kaname Ohgi",
+      "title": "Black Knights Political Operator",
+      "rank": "Black Knights Senior Officer",
+      "dangerLevel": 5,
+      "loreBio": "A founding insurgent whose trust crisis during the Black Knights split helps topple Lelouch's command.",
+      "systemBio": "Mid-tier coalition governance node; susceptible to misinformation and elite manipulation.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Users",
+      "signatureMoment": "Leads the Black Knights' break from Zero after manipulated evidence of betrayal.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Lelouch Lamperouge",
+      "target": "Suzaku Kururugi",
+      "type": "mirror",
+      "weight": 10,
+      "loreDesc": "Friends become opposite methods for justice but converge for final peace engineering.",
+      "systemDesc": "Disruption node and legitimacy enforcer form a two-key release protocol."
+    },
+    {
+      "source": "Lelouch Lamperouge",
+      "target": "C.C.",
+      "type": "dependent",
+      "weight": 9,
+      "loreDesc": "C.C. grants Geass and repeatedly stabilizes Lelouch when his identity fragments.",
+      "systemDesc": "Exploit user depends on gateway provider for backend access and context."
+    },
+    {
+      "source": "Lelouch Lamperouge",
+      "target": "Stadtfeld, Kallen",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Kallen keeps fighting for Zero despite secrecy, doubt, and collateral costs.",
+      "systemDesc": "Primary strike executor sustains strategic credibility through wins."
+    },
+    {
+      "source": "Lelouch Lamperouge",
+      "target": "Nunnally Lamperouge",
+      "type": "dependent",
+      "weight": 10,
+      "loreDesc": "Everything Lelouch builds is framed as a world for Nunnally.",
+      "systemDesc": "Emotional objective variable that can override optimal policy calculations."
+    },
+    {
+      "source": "Lelouch Lamperouge",
+      "target": "Charles zi Britannia",
+      "type": "enemy",
+      "weight": 10,
+      "loreDesc": "Father and son clash over whether peace requires deleting human contradiction.",
+      "systemDesc": "Competing root-governance models: plural agency vs forced unification."
+    },
+    {
+      "source": "Lelouch Lamperouge",
+      "target": "Schneizel el Britannia",
+      "type": "rival",
+      "weight": 9,
+      "loreDesc": "Two grand strategists propose incompatible final-order architectures.",
+      "systemDesc": "Regime-reset optimization competes with fear-stasis optimization."
+    },
+    {
+      "source": "Lelouch Lamperouge",
+      "target": "Kaname Ohgi",
+      "type": "betrayal",
+      "weight": 7,
+      "loreDesc": "Ohgi helps depose Zero after manipulated evidence and trust collapse.",
+      "systemDesc": "Coalition node exits commander graph, fracturing insurgent chain-of-command."
+    },
+    {
+      "source": "Suzaku Kururugi",
+      "target": "Schneizel el Britannia",
+      "type": "counter",
+      "weight": 8,
+      "loreDesc": "Suzaku's frontline force counters Schneizel's remote-control deterrence doctrine.",
+      "systemDesc": "High-mobility strike capability disrupts static command platforms."
+    },
+    {
+      "source": "Suzaku Kururugi",
+      "target": "Euphemia li Britannia",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Euphemia is Suzaku's central reform path before catastrophe.",
+      "systemDesc": "Legitimacy anchor for Suzaku's inside-the-system strategy."
+    },
+    {
+      "source": "Schneizel el Britannia",
+      "target": "Nunnally Lamperouge",
+      "type": "dependent",
+      "weight": 7,
+      "loreDesc": "Schneizel presents Nunnally as moral face for Damocles governance.",
+      "systemDesc": "Civilian-trust node used to normalize coercive deterrence framework."
+    },
+    {
+      "source": "Charles zi Britannia",
+      "target": "Cornelia li Britannia",
+      "type": "successor",
+      "weight": 6,
+      "loreDesc": "Cornelia executes imperial doctrine as one of Charles's strongest commanders.",
+      "systemDesc": "Command doctrine inheritance from sovereign node to theater-level enforcer."
+    },
+    {
+      "source": "C.C.",
+      "target": "Charles zi Britannia",
+      "type": "enemy",
+      "weight": 7,
+      "loreDesc": "C.C. rejects Charles's attempt to monopolize C's World.",
+      "systemDesc": "Legacy protocol holder blocks backend capture by single sovereign actor."
+    },
+    {
+      "source": "Jeremiah Gottwald",
+      "target": "Lelouch Lamperouge",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Jeremiah's devotion gives Lelouch rare dependable protection late-game.",
+      "systemDesc": "Security node preserves command continuity under betrayal load."
+    },
+    {
+      "source": "Cornelia li Britannia",
+      "target": "Stadtfeld, Kallen",
+      "type": "enemy",
+      "weight": 7,
+      "loreDesc": "Cornelia and Kallen repeatedly collide as imperial order meets insurgent force.",
+      "systemDesc": "Top-down armored doctrine clashes with agile insurgent strike node."
+    },
+    {
+      "source": "Lloyd Asplund",
+      "target": "Suzaku Kururugi",
+      "type": "mentor",
+      "weight": 6,
+      "loreDesc": "Lloyd develops and tunes Suzaku's Knightmare stack.",
+      "systemDesc": "R&D controller increases pilot throughput via continuous upgrades."
+    },
+    {
+      "source": "Euphemia li Britannia",
+      "target": "Lelouch Lamperouge",
+      "type": "counter",
+      "weight": 9,
+      "loreDesc": "Euphemia's reform legitimacy threatens to outflank Zero's armed path.",
+      "systemDesc": "Policy reconciliation node counters insurgency recruitment loop."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Holy Britannian Empire",
+      "role": "antagonist",
+      "loreDesc": "Expansionist monarchy enforcing nobility supremacy and Number-system dehumanization across occupied Areas.",
+      "systemDesc": "Centralized extraction state optimized for hierarchy, occupation logistics, and coercive propaganda.",
+      "influence": 10
+    },
+    {
+      "name": "Order of the Black Knights",
+      "role": "protagonist",
+      "loreDesc": "Zero-led insurgency that scales from local resistance to global anti-imperial military actor.",
+      "systemDesc": "Asymmetric coalition converting symbolic legitimacy into distributed force projection.",
+      "influence": 9
+    },
+    {
+      "name": "United Federation of Nations",
+      "role": "neutral",
+      "loreDesc": "Post-colonial alliance framework built to contain renewed imperial monopoly.",
+      "systemDesc": "Distributed governance protocol designed to prevent single-node hegemony.",
+      "influence": 8
+    },
+    {
+      "name": "Geass Order",
+      "role": "systemic",
+      "loreDesc": "Secret institution breeding and managing Geass users for elite designs.",
+      "systemDesc": "Metaphysical R&D layer controlling exploit acquisition and memory operations.",
+      "influence": 7
+    },
+    {
+      "name": "Britannian Military R&D (Camelot/Rakshata Axis)",
+      "role": "chaotic",
+      "loreDesc": "Competing engineering circles that escalate Knightmare warfare regardless of ideology.",
+      "systemDesc": "Innovation feedback loop that rapidly mutates combat doctrine and raises collateral risk.",
+      "influence": 7
+    },
+    {
+      "name": "Area 11 Civilian Bloc",
+      "role": "neutral",
+      "loreDesc": "The occupied population whose fear, hope, and outrage determine which narrative can govern.",
+      "systemDesc": "Mass-legitimacy substrate; shifts in perceived justice directly alter recruitment and compliance rates.",
+      "influence": 8
+    }
+  ],
+  "rules": [
+    {
+      "name": "Geass Contracts Demand Precision",
+      "subtitle": "Power granted through Geass is never free and never perfectly stable.",
+      "loreConsequence": "Small misreads become catastrophic human consequences when commands override agency.",
+      "systemEquivalent": "Consent-bypass exploit with strict trigger semantics and escalating failure modes.",
+      "severity": "high",
+      "loreSubtitle": "The king's power grants control, then asks who deserves to wield it.",
+      "systemSubtitle": "Exploit surface grows faster than operator safeguards."
+    },
+    {
+      "name": "Britannian Hierarchy Converts People into Numbers",
+      "subtitle": "Empire governance strips occupied identities and ranks human worth by bloodline and utility.",
+      "loreConsequence": "Dehumanization normalizes routine brutality and fuels insurgent rage.",
+      "systemEquivalent": "Stratified policy architecture generates high extraction with chronic rebellion feedback.",
+      "severity": "high",
+      "loreSubtitle": "When names are erased, revolt becomes identity recovery.",
+      "systemSubtitle": "Classification regimes create persistent insurgency fuel."
+    },
+    {
+      "name": "Legitimacy Is a Weapon System",
+      "subtitle": "Military victories collapse unless a believable governance story follows them.",
+      "loreConsequence": "Zero survives because people believe he can protect the weak.",
+      "systemEquivalent": "Narrative control is middleware converting force into durable authority.",
+      "severity": "medium",
+      "loreSubtitle": "Masks and broadcasts can recruit faster than rifles.",
+      "systemSubtitle": "Perception routing multiplies or nullifies battlefield output."
+    },
+    {
+      "name": "Deterrence Without Accountability Becomes Tyranny",
+      "subtitle": "Damocles-style peace promises order by permanent fear.",
+      "loreConsequence": "Society freezes under terror until one failure triggers total backlash.",
+      "systemEquivalent": "Centralized superweapon governance optimizes compliance but destroys adaptive trust.",
+      "severity": "fatal",
+      "loreSubtitle": "A peace built on annihilation threat is only delayed war.",
+      "systemSubtitle": "Hard-stasis control eventually collapses legitimacy."
+    },
+    {
+      "name": "Metaphysical Unity Cannot Be Forced",
+      "subtitle": "Ragnarök proposes ending pain by erasing individual boundaries.",
+      "loreConsequence": "Erasing loneliness also erases choice, grief, love, and responsibility.",
+      "systemEquivalent": "Backend consciousness merge deletes agent diversity and system resilience.",
+      "severity": "fatal",
+      "loreSubtitle": "A world without lies can also be a world without selves.",
+      "systemSubtitle": "Homogenization removes variance required for recovery and innovation."
+    },
+    {
+      "name": "Sacrificial Endgames Leave Governance Debt",
+      "subtitle": "Zero Requiem creates peace through one orchestrated martyr-villain narrative.",
+      "loreConsequence": "Catharsis buys time but cannot replace institutions forever.",
+      "systemEquivalent": "Single-event hostility sink reduces conflict temporarily; long-term stability still requires distributed legitimacy repair.",
+      "severity": "high",
+      "loreSubtitle": "Even successful miracles decay without upkeep.",
+      "systemSubtitle": "Reset events need post-reset governance maintenance."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Euphemia Command Catastrophe",
+      "ruleViolated": "Geass Misfire",
+      "loreDesc": "A single accidental command turns reconciliation into massacre and destroys trust in peaceful reintegration.",
+      "systemDesc": "Operator-side failure transforms tactical exploit into civilization-scale legitimacy collapse."
+    },
+    {
+      "name": "Ragnarök Connection Attempt",
+      "ruleViolated": "Individual Agency",
+      "loreDesc": "Charles and Marianne attempt to merge all consciousness in C's World and erase private selves.",
+      "systemDesc": "Forced backend unification seeks to remove conflict by removing subject-level variance."
+    },
+    {
+      "name": "F.L.E.I.J.A. Deployment at Tokyo Settlement",
+      "ruleViolated": "Proportional Warfare",
+      "loreDesc": "Localized superweapon use erases urban space and civilians, shattering prior deterrence assumptions.",
+      "systemDesc": "Instant mass-deletion event invalidates conventional escalation ladders."
+    },
+    {
+      "name": "Black Knights Command Fracture",
+      "ruleViolated": "Chain of Command",
+      "loreDesc": "Zero's network implodes when trust and information integrity fail simultaneously.",
+      "systemDesc": "Coalition control graph collapses under coordinated disinformation injection."
+    },
+    {
+      "name": "Zero Requiem Public Assassination",
+      "ruleViolated": "Transparent Justice",
+      "loreDesc": "A planned tyrant execution resets global hostility through engineered spectacle.",
+      "systemDesc": "Intentional blame centralization followed by symbolic decapitation triggers short-horizon equilibrium rebound."
+    },
+    {
+      "name": "Geass Canceller Restorations",
+      "ruleViolated": "Memory Integrity",
+      "loreDesc": "Jeremiah restores compromised cognition, undoing prior coercive edits.",
+      "systemDesc": "Counter-exploit process reopens locked decision pathways in controlled subjects."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Lelouch Geass Command",
+      "defender": "Independent actor with prior immunity/cancellation",
+      "mechanic": "Eye-contact overwrite vs immunity windows and cancel tech",
+      "loreDesc": "Control spikes instantly but collapses if target is shielded or command context is malformed."
+    },
+    {
+      "attacker": "Lancelot high-mobility assault",
+      "defender": "Guren Radiant Wave burst",
+      "mechanic": "Sustained precision dueling vs close-range one-touch kill threat",
+      "loreDesc": "Outcome depends on spacing discipline, energy timing, and prediction cycles."
+    },
+    {
+      "attacker": "Damocles F.L.E.I.J.A. deterrence",
+      "defender": "Multi-theater decentralized insurgency",
+      "mechanic": "Single terror platform vs distributed sabotage and intel leaks",
+      "loreDesc": "Deterrence fails when command confidence and targeting certainty degrade."
+    },
+    {
+      "attacker": "Britannian propaganda framing",
+      "defender": "Zero symbolic counter-narrative",
+      "mechanic": "State legitimacy broadcast vs insurgent justice theater",
+      "loreDesc": "Visible imperial cruelty increases rebel conversion and weakens compliance."
+    },
+    {
+      "attacker": "Ragnarök consciousness merge",
+      "defender": "Lelouch/C.C. rejection of homogenization",
+      "mechanic": "Metaphysical forced unity vs agency-preservation intervention",
+      "loreDesc": "Plural agency survives by destroying overwrite infrastructure."
+    },
+    {
+      "attacker": "Cornelia line warfare doctrine",
+      "defender": "Lelouch terrain asymmetry traps",
+      "mechanic": "Conventional discipline vs engineered battlefield irregularity",
+      "loreDesc": "Superior formation can be broken by precomputed environmental traps."
+    },
+    {
+      "attacker": "Schneizel strategic stasis",
+      "defender": "Suzaku direct kinetic disruption",
+      "mechanic": "Remote-control equilibrium vs close-quarters decapitation strikes",
+      "loreDesc": "Terror governance loses leverage when invulnerable image is punctured publicly."
+    },
+    {
+      "attacker": "Black Knights coalition governance",
+      "defender": "Disinformation and betrayal ops",
+      "mechanic": "Alliance cohesion vs trust poisoning campaigns",
+      "loreDesc": "Coalitions survive only with verifiable intel channels and redundancy in leadership."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Britannia conquers Japan as Area 11",
+      "trigger": "Imperial resource and strategic expansion",
+      "consequence": "Identity erasure and Number-system rule create long-horizon insurgency pressure.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "Occupation trauma seeds the resistance era.",
+      "systemDesc": "Colonial classification policy creates persistent legitimacy deficit."
+    },
+    {
+      "name": "Lelouch forms Geass contract with C.C.",
+      "trigger": "Rescue encounter after Shinjuku conflict",
+      "consequence": "A powerless exile gains command exploit capability and births Zero.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "The masked rebellion becomes executable, not hypothetical.",
+      "systemDesc": "Single-node capability upgrade enables asymmetric challenge to empire hardware."
+    },
+    {
+      "name": "Special Administrative Zone massacre",
+      "trigger": "Uncontrolled Geass command issued to Euphemia",
+      "consequence": "Reform pathway collapses and total-war logic becomes dominant.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "A possible peaceful bridge is drowned in blood.",
+      "systemDesc": "Trust-network crash pushes all actors toward maximalist strategies."
+    },
+    {
+      "name": "Black Knights depose Zero",
+      "trigger": "Schneizel and collaborators inject strategic disinformation",
+      "consequence": "Insurgent command coherence breaks and Lelouch loses coalition custody.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "The revolution fractures under suspicion and manipulation.",
+      "systemDesc": "Information-integrity failure fragments high-centrality rebel graph."
+    },
+    {
+      "name": "Ragnarök Connection destroyed",
+      "trigger": "Lelouch and allies confront Charles in Thought Elevator",
+      "consequence": "Forced consciousness merge is prevented; individual agency remains in-system.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "Humanity keeps pain and freedom instead of synthetic serenity.",
+      "systemDesc": "Backend overwrite protocol is terminated before global commit."
+    },
+    {
+      "name": "Zero Requiem executed publicly",
+      "trigger": "Lelouch seizes empire then stages own assassination",
+      "consequence": "Global hatred is discharged into a single event and war intensity drops.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "The villain dies, and the world gets one chance to breathe.",
+      "systemDesc": "Engineered hostility sink produces temporary multi-faction equilibrium."
+    }
+  ],
+  "rankings": {
+    "systemName": "Authority Control Stack",
+    "loreName": "Who Can Rewrite the World",
+    "topTierName": "Reality and Regime Rewriters",
+    "topTierLore": "Actors who can alter nations or consciousness itself.",
+    "topTierSystem": "Nodes with both strategic planning capacity and architecture-level override access.",
+    "tiers": [
+      {
+        "name": "Metaphysical Root Access",
+        "loreDesc": "Code bearers and Geass architects who interface with C's World.",
+        "systemDesc": "Back-end operators with permissions beyond conventional politics."
+      },
+      {
+        "name": "Global Command Strategists",
+        "loreDesc": "Leaders who shape wars, alliances, and legitimacy narratives.",
+        "systemDesc": "High-centrality nodes controlling military and information routing."
+      },
+      {
+        "name": "Battlefield Execution Elites",
+        "loreDesc": "Pilots and officers who convert plans into decisive tactical outcomes.",
+        "systemDesc": "Throughput units that realize strategic intent under contested conditions."
+      },
+      {
+        "name": "Mass Legitimacy Constituency",
+        "loreDesc": "Citizens whose belief, fear, or refusal determines whether regimes hold.",
+        "systemDesc": "Distributed acceptance layer that ultimately validates or rejects command systems."
+      }
+    ]
+  },
+  "aiInsights": {
+    "casual": "Code Geass looks like a mecha rebellion, but the real engine is control. Lelouch doesn't just win fights; he hacks command itself through Geass, propaganda, and political theater. Every major shift comes from changing who people obey: emperors, symbols, superweapons, or a masked revolutionary. The universe feels unstable because military power, public legitimacy, and supernatural coercion are always competing for the same steering wheel.",
+    "deep": "The universe is a layered authority architecture with three competing stabilization models: imperial hierarchy (Britannia), coercive stasis (Schneizel's Damocles), and sacrificial legitimacy reset (Zero Requiem). Geass acts as a localized consent-bypass exploit that can override individual agency, while Knightmare and sakuradite systems determine hard-force throughput. However, durable governance is decided in the legitimacy layer: symbols, broadcasts, and perceived justice. The decisive mechanic is not raw destruction but control-graph rewiring—who can issue commands, who is trusted to enforce them, and how quickly those trust edges can be collapsed or rebuilt after anomalies like Euphemia's massacre or F.L.E.I.J.A. strikes."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1032/135088l.jpg"
+}

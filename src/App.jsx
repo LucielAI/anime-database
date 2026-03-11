@@ -2,6 +2,7 @@ import { useEffect, lazy, Suspense } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation } from 'react-router-dom'
 import { ANIME_LIST } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
+import CommunityPulse from './components/CommunityPulse'
 import { deriveBullets } from './utils/deriveBullets'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 
@@ -279,6 +280,9 @@ function Home() {
           ))}
         </div>
       </main>
+
+
+      <CommunityPulse />
 
       <footer className="mt-20 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <a

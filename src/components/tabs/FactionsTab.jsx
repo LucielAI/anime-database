@@ -72,7 +72,7 @@ export default function FactionsTab({ data, isSystemMode, theme }) {
                 </div>
 
                 <div className="w-full flex-grow">
-                  <h2 className="text-xl md:text-2xl font-bold uppercase tracking-wider mb-3 truncate">{faction.name}</h2>
+                  <h2 className="text-xl md:text-2xl font-bold uppercase tracking-wider leading-tight mb-3 break-words">{faction.name}</h2>
                   <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
                     {isSystemMode ? faction.systemDesc : faction.loreDesc}
                   </p>

@@ -28,7 +28,7 @@ Visualizers
 ↓
 ExploreAnotherUniverse
 ↓
-FeedbackBlock (Help Improve This Archive)
+FeedbackBlock (Votes + Suggestions + Correction Reports)
 ↓
 Footer
 

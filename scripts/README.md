@@ -25,6 +25,14 @@ npm run validate:payload path/to/any.json --extended
 ```
 Extended validation is intentionally lighter than core validation.
 
+### Audit all integrated payloads
+```bash
+npm run validate:all
+```
+Runs `validateCorePayload` across every `src/data/*.json` (excluding `*.extended.json`) and prints a per-universe PASS/WARN/FAILED table.
+Use this for archive-wide hardening before PRs.
+
+
 ### Add a universe (backward-compatible default)
 ```bash
 npm run add:universe path/to/payload.json [slug]
@@ -61,3 +69,16 @@ Uses the anime cast endpoint (`/anime/{id}/characters`), correlates characters b
 ```bash
 python scripts/patch_jikan_images.py --file src/data/new_anime.json
 ```
+
+
+## CI baseline
+
+GitHub Actions runs these merge-gate checks on PRs and `main` pushes:
+
+```bash
+npm run validate:all
+npm run test
+npm run build
+```
+
+Treat local success on these commands as required before opening a PR.
