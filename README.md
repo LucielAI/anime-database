@@ -135,10 +135,18 @@ npm run validate:all      # Audit all integrated universe payloads in src/data/
    - `npm run validate:all`
 5. Integrate via `npm run add:universe <path-to-core-payload> <slug>` (or manual placement in `src/data/` after validation).
 6. Run merge-gate checks: `npm run test` and `npm run build`.
-7. Sync required docs: `README.md`, `docs/BLUEPRINT.md`, `docs/REPO_AUDIT_SUMMARY.md`, and `src/data/index.js` (`preferredOrder`).
+7. Sync required docs: `README.md`, `docs/BLUEPRINT.md`, `docs/REPO_AUDIT_SUMMARY.md`, and `src/data/catalog.js` (`preferredOrder` + lightweight homepage metadata).
 
 For agent execution hygiene, see `docs/CODEX_QUICKSTART.md` and `CLAUDE.md`.
 
 ## License
 
 MIT
+
+
+## Runtime Payload Delivery
+
+- Homepage/archive listing reads from `src/data/catalog.js` (lightweight static metadata + counts).
+- Universe detail routes lazy-load full validated payloads via `loadUniverseBySlug` in `src/data/index.js` when `/universe/:id` is visited.
+- Core payload source-of-truth remains repo JSON files in `src/data/` (`.core.json` preferred, legacy `.json` supported).
+- Sitemap generation is unchanged and still derives routes from files in `src/data/`.

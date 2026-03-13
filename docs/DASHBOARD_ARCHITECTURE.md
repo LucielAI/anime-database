@@ -56,3 +56,10 @@ Visualizers
 
 ExploreAnotherUniverse
 → keeps users inside the archive ecosystem
+
+
+## Route Data Resolution
+
+- `/universe/:slug` first resolves lightweight slug metadata from `src/data/catalog.js` for immediate route-safe context.
+- Full universe JSON is then loaded on demand using `loadUniverseBySlug` (`src/data/index.js`).
+- This keeps homepage payload light while preserving static, indexable universe routes.

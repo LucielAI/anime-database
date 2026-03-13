@@ -106,3 +106,11 @@ Enables much larger research inputs without forcing renderer complexity or immed
 Tradeoff:
 Data management gains a second layer, but runtime stays stable by always rendering from core.
 
+
+
+## ADR-014 — Catalog + Route-Level Payload Loading
+Decision:
+Homepage/archive listing consumes lightweight static metadata (`src/data/catalog.js`), while universe routes lazy-load full core payload JSON at route visit time via `loadUniverseBySlug`.
+
+Why:
+Prevents first-load bundle growth as universes scale while preserving repo-native static payload source-of-truth and stable `/universe/:slug` routing for SEO.

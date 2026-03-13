@@ -1,8 +1,7 @@
-import { useEffect, lazy, Suspense } from 'react'
+import { useEffect, lazy, Suspense, useState } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation } from 'react-router-dom'
-import { ANIME_LIST } from './data/index.js'
+import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug } from './data/index.js'
 import { Lock, ExternalLink } from 'lucide-react'
-import { deriveBullets } from './utils/deriveBullets'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 import CommunityPulse from './components/CommunityPulse'
 
@@ -11,11 +10,11 @@ const SpeedInsights = lazy(() => import('@vercel/speed-insights/react').then(m =
 const Analytics = lazy(() => import('@vercel/analytics/react').then(m => ({ default: m.Analytics })))
 
 function Home() {
-  const totalEntities = ANIME_LIST.reduce((sum, a) => sum + (a.characters?.length || 0), 0)
-  const totalPowers = ANIME_LIST.reduce((sum, a) => sum + (a.powerSystem?.length || 0), 0)
-  const totalRules = ANIME_LIST.reduce((sum, a) => sum + (a.rules?.length || 0), 0)
+  const totalEntities = UNIVERSE_CATALOG.reduce((sum, a) => sum + (a.stats?.characters || 0), 0)
+  const totalPowers = UNIVERSE_CATALOG.reduce((sum, a) => sum + (a.stats?.powerSystem || 0), 0)
+  const totalRules = UNIVERSE_CATALOG.reduce((sum, a) => sum + (a.stats?.rules || 0), 0)
   const MIN_GRID_FILL = 6
-  const placeholdersCount = Math.max(0, MIN_GRID_FILL - ANIME_LIST.length)
+  const placeholdersCount = Math.max(0, MIN_GRID_FILL - UNIVERSE_CATALOG.length)
   const placeholders = Array(placeholdersCount).fill(0)
 
   return (
@@ -53,7 +52,7 @@ function Home() {
         </p>
 
         <div className="mt-8 font-mono text-[10px] md:text-xs text-white/30 tracking-widest uppercase flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6">
-          <span className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-cyan-400/50" />[{ANIME_LIST.length}] UNIVERSES</span>
+          <span className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-cyan-400/50" />[{UNIVERSE_CATALOG.length}] UNIVERSES</span>
           <span className="hidden sm:inline text-white/10">|</span>
           <span className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-cyan-400/50" />[{totalEntities}] ENTITIES</span>
           <span className="hidden sm:inline text-white/10">|</span>
@@ -65,11 +64,11 @@ function Home() {
 
       {/* Featured "Today's System" Hero Card */}
       {(() => {
-        const featured = ANIME_LIST[ANIME_LIST.length - 1]
+        const featured = UNIVERSE_CATALOG[UNIVERSE_CATALOG.length - 1]
         if (!featured) return null
         const ft = featured.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
         const heroLabel = getClassificationLabel(featured.visualizationHint)
-        const heroBullets = deriveBullets(featured).slice(0, 3)
+        const featuredStats = featured.stats || { characters: 0, powerSystem: 0, rules: 0 }
         return (
           <section className="max-w-6xl mx-auto px-6 -mt-6 mb-12 relative z-20 animate-fade-in">
             <Link
@@ -131,10 +130,14 @@ function Home() {
                     <p className="text-[10px] text-white/40 tracking-widest uppercase mb-4">{featured.tagline}</p>
 
                     <div className="space-y-2 mb-6">
-                      {heroBullets.map(b => (
-                        <div key={b.id} className="flex items-start gap-2.5">
-                          <span className="w-1.5 h-1.5 rounded-sm mt-1 shrink-0 opacity-60" style={{ backgroundColor: ft.primary }} />
-                          <span className="text-xs text-gray-400 leading-relaxed line-clamp-2">{b.lore}</span>
+                      {[
+                        `${featuredStats.characters} entities mapped`,
+                        `${featuredStats.powerSystem} power mechanics indexed`,
+                        `${featuredStats.rules} core laws modeled`
+                      ].map((line) => (
+                        <div key={line} className="flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 opacity-60" style={{ backgroundColor: ft.primary }} />
+                          <span className="text-xs text-gray-400 leading-relaxed">{line}</span>
                         </div>
                       ))}
                     </div>
@@ -171,13 +174,12 @@ function Home() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ANIME_LIST.map((data, idx) => {
+          {UNIVERSE_CATALOG.map((data, idx) => {
             const theme = data.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
-            const entityCount = data.characters?.length || 0
-            const powerCount = data.powerSystem?.length || 0
+            const entityCount = data.stats?.characters || 0
+            const powerCount = data.stats?.powerSystem || 0
             const classLabel = getClassificationLabel(data.visualizationHint)
-            const bullets = deriveBullets(data).slice(0, 2)
-            return (
+                        return (
               <Link
                 to={`/universe/${data.id}`}
                 key={data.anime}
@@ -242,14 +244,7 @@ function Home() {
                   >
                     {classLabel}
                   </div>
-                  <div className="space-y-1 mb-3">
-                    {bullets.map(b => (
-                      <div key={b.id} className="flex items-start gap-2">
-                        <span className="w-1 h-1 rounded-full mt-1.5 shrink-0 opacity-60" style={{ backgroundColor: theme.primary }} />
-                        <span className="text-[10px] text-gray-500 leading-relaxed line-clamp-1">{b.lore}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="text-[10px] text-gray-500 leading-relaxed line-clamp-2 mb-3">{data.tagline}</p>
                   <div className="text-xs font-bold tracking-widest opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:translate-y-2 md:group-hover:translate-y-0 uppercase pointer-events-none" style={{ color: theme.primary }}>
                     EXPLORE ARCHIVE &rarr;
                   </div>
@@ -266,7 +261,7 @@ function Home() {
               style={{
                 border: '1px solid rgba(255,255,255,0.05)',
                 background: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 10px)',
-                animationDelay: `${(ANIME_LIST.length + idx) * 120}ms`,
+                animationDelay: `${(UNIVERSE_CATALOG.length + idx) * 120}ms`,
                 animationFillMode: 'both',
               }}
             >
@@ -309,14 +304,52 @@ function Home() {
 function UniverseRoute() {
   const navigate = useNavigate()
   const { id } = useParams()
-  
-  const data = ANIME_LIST.find(a => a.id === id)
-  
+  const [data, setData] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
-    if (!data) {
-      navigate('/', { replace: true })
+    let cancelled = false
+
+    async function resolveUniverse() {
+      if (!id || !UNIVERSE_CATALOG_MAP[id]) {
+        navigate('/', { replace: true })
+        return
+      }
+
+      const preview = UNIVERSE_CATALOG_MAP[id]
+      document.title = `${preview.anime} | Anime Architecture Archive`
+
+      try {
+        const payload = await loadUniverseBySlug(id)
+        if (!payload || cancelled) return
+        setData(payload)
+      } catch (error) {
+        console.error('[universe-load]', { id, error: error instanceof Error ? error.message : error })
+        if (!cancelled) navigate('/', { replace: true })
+      } finally {
+        if (!cancelled) setIsLoading(false)
+      }
     }
-  }, [data, navigate])
+
+    resolveUniverse()
+
+    return () => {
+      cancelled = true
+    }
+  }, [id, navigate])
+
+  if (isLoading) {
+    const preview = id ? UNIVERSE_CATALOG_MAP[id] : null
+    return (
+      <div className="min-h-screen bg-[#050508] text-white font-mono flex items-center justify-center">
+        <div className="text-center px-6">
+          <p className="text-[10px] tracking-[0.25em] uppercase text-cyan-300/80 mb-2">Loading Universe</p>
+          <h1 className="text-2xl md:text-3xl font-bold uppercase tracking-tight">{preview?.anime || 'Initializing Archive'}</h1>
+          <p className="mt-3 text-xs text-gray-500">Resolving validated payload from static catalog…</p>
+        </div>
+      </div>
+    )
+  }
 
   if (!data) return null
 
@@ -326,7 +359,7 @@ function UniverseRoute() {
         to="/"
         className="fixed top-6 left-6 z-50 px-5 py-2.5 bg-black/60 hover:bg-white/10 border border-white/10 hover:border-white/40 shadow-lg hover:shadow-cyan-500/20 rounded-lg font-mono text-[10px] text-gray-400 hover:text-white tracking-[0.2em] transition-all duration-300 backdrop-blur-xl uppercase cursor-pointer min-h-[44px] min-w-[44px] group flex items-center justify-center"
       >
-        <span className="group-hover:-translate-x-1 inline-block transition-transform duration-200 mr-2">&larr;</span> 
+        <span className="group-hover:-translate-x-1 inline-block transition-transform duration-200 mr-2">&larr;</span>
         <span>INDEX</span>
       </Link>
       <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>

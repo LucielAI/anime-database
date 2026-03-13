@@ -1,66 +1,43 @@
 import { validateCorePayload } from '../utils/validateSchema'
+import { preferredOrder, UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP } from './catalog'
 
-// Runtime registry loader for layered universe data.
-// Non-breaking resolution order per slug: .core.json -> legacy .json.
-// Keep the runtime bundle scoped to renderer-facing payloads only.
-// Extended research datasets stay out of eager client imports.
-const dataFiles = import.meta.glob(['./*.json', '!./*.extended.json'], {
-  eager: true
-})
+const dataLoaders = import.meta.glob(['./*.json', '!./*.extended.json'])
 
-function extractSlug(filePath) {
-  const fileName = filePath.split('/').pop() || ''
-  return fileName
-    .replace(/\.extended\.json$/, '')
-    .replace(/\.core\.json$/, '')
-    .replace(/\.json$/, '')
+const cache = new Map()
+
+function normalizePayload(payload, slug) {
+  return { ...payload, id: slug }
 }
 
-const groupedBySlug = Object.entries(dataFiles).reduce((acc, [filePath, mod]) => {
-  const payload = mod.default || mod
-  const slug = extractSlug(filePath)
+function getCandidatePaths(slug) {
+  return [`./${slug}.core.json`, `./${slug}.json`]
+}
 
-  if (!acc[slug]) {
-    acc[slug] = { slug, legacy: null, core: null }
+export async function loadUniverseBySlug(slug) {
+  if (!slug) return null
+  if (cache.has(slug)) return cache.get(slug)
+
+  for (const filePath of getCandidatePaths(slug)) {
+    const loader = dataLoaders[filePath]
+    if (!loader) continue
+
+    const mod = await loader()
+    const payload = normalizePayload(mod.default || mod, slug)
+    const { errors } = validateCorePayload(payload)
+    if (errors.length > 0) {
+      throw new Error(`Invalid payload for ${slug}: ${errors.join(' | ')}`)
+    }
+
+    cache.set(slug, payload)
+    return payload
   }
 
-  if (filePath.endsWith('.core.json')) {
-    acc[slug].core = payload
-  } else {
-    acc[slug].legacy = payload
-  }
+  return null
+}
 
-  return acc
-}, {})
-
-// Preserve familiar homepage ordering for current live universes.
-const preferredOrder = ['aot', 'jjk', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha']
-const discoveredSlugs = Object.keys(groupedBySlug)
-const slugs = [
-  ...preferredOrder.filter(slug => discoveredSlugs.includes(slug)),
-  ...discoveredSlugs.filter(slug => !preferredOrder.includes(slug)).sort()
+export const UNIVERSE_SLUGS = [
+  ...preferredOrder.filter(slug => UNIVERSE_CATALOG_MAP[slug]),
+  ...UNIVERSE_CATALOG.map(entry => entry.id).filter(slug => !preferredOrder.includes(slug)).sort()
 ]
 
-export const UNIVERSE_DATA_REGISTRY = slugs.reduce((acc, slug) => {
-  const entry = groupedBySlug[slug]
-  const rawCorePayload = entry.core || entry.legacy
-
-  if (!rawCorePayload) return acc
-
-  const corePayload = { ...rawCorePayload, id: slug }
-
-  acc[slug] = {
-    slug,
-    core: corePayload,
-    source: entry.core ? 'core' : 'legacy'
-  }
-
-  return acc
-}, {})
-
-// UI always renders from core payloads to keep renderer contract stable.
-export const ANIME_LIST = slugs
-  .map(slug => UNIVERSE_DATA_REGISTRY[slug]?.core)
-  .filter(Boolean)
-
-ANIME_LIST.forEach(validateCorePayload)
+export { preferredOrder, UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP }

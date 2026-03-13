@@ -1,4 +1,46 @@
 /* eslint-env node */
+
+function safeBody(req) {
+  if (!req.body) return {}
+  if (typeof req.body === 'string') {
+    try {
+      return JSON.parse(req.body)
+    } catch {
+      return {}
+    }
+  }
+  return req.body
+}
+
+async function insertFeedback({ supabaseUrl, supabaseKey, payload }) {
+  const baseHeaders = {
+    'Content-Type': 'application/json',
+    apikey: supabaseKey,
+    Authorization: `Bearer ${supabaseKey}`,
+    Prefer: 'return=minimal'
+  }
+
+  const primary = await fetch(`${supabaseUrl}/rest/v1/archive_feedback`, {
+    method: 'POST',
+    headers: baseHeaders,
+    body: JSON.stringify(payload)
+  })
+
+  if (primary.ok) return primary
+
+  const fallbackPayload = {
+    page_slug: payload.page_slug,
+    vote_type: payload.vote_type,
+    created_at: payload.created_at
+  }
+
+  return fetch(`${supabaseUrl}/rest/v1/archive_feedback`, {
+    method: 'POST',
+    headers: baseHeaders,
+    body: JSON.stringify(fallbackPayload)
+  })
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -9,7 +51,8 @@ export default async function handler(req, res) {
     return res.status(413).json({ error: 'Too large' })
   }
 
-  const { slug, vote, note, context } = req.body || {}
+  const body = safeBody(req)
+  const { slug, vote, note, context } = body
 
   if (!slug || typeof slug !== 'string' || slug.length > 50) {
     return res.status(400).json({ error: 'Invalid slug' })
@@ -32,33 +75,32 @@ export default async function handler(req, res) {
   const SUPABASE_URL = process.env.SUPABASE_URL
   const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
   if (!SUPABASE_URL || !SUPABASE_KEY) {
+    console.error('[api/feedback] missing Supabase env vars')
     return res.status(503).json({ error: 'Feedback system offline' })
   }
 
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/archive_feedback`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_KEY,
-        'Authorization': `Bearer ${SUPABASE_KEY}`,
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({
+    const response = await insertFeedback({
+      supabaseUrl: SUPABASE_URL,
+      supabaseKey: SUPABASE_KEY,
+      payload: {
         page_slug: slug,
         vote_type: vote,
         note: sanitizedNote,
         context: sanitizedContext,
         created_at: new Date().toISOString()
-      })
+      }
     })
 
     if (!response.ok) {
+      const details = await response.text()
+      console.error('[api/feedback] storage failed', { status: response.status, details })
       return res.status(500).json({ error: 'Storage failed' })
     }
 
     return res.status(200).json({ ok: true })
-  } catch {
+  } catch (error) {
+    console.error('[api/feedback] unexpected failure', error)
     return res.status(500).json({ error: 'Storage failed' })
   }
 }

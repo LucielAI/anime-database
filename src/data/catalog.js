@@ -1,0 +1,62 @@
+export const preferredOrder = ['aot', 'jjk', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha']
+
+export const UNIVERSE_CATALOG = [
+  {
+    id: 'aot',
+    anime: 'Attack on Titan',
+    tagline: 'A brutal deterministic closed-loop temporal matrix',
+    malId: 16498,
+    visualizationHint: 'timeline',
+    visualizationReason: 'Causality itself functions as the supreme power system; the timeline is a malleable battlespace.',
+    animeImageUrl: 'https://cdn.myanimelist.net/images/anime/10/47347l.jpg',
+    themeColors: { primary: '#6b7280', secondary: '#10b981', accent: '#ef4444', glow: 'rgba(107,114,128,0.35)', tabActive: '#6b7280', badgeBg: 'rgba(239,68,68,0.12)', badgeText: '#ef4444', modeGlow: 'rgba(16,185,129,0.25)', heroGradient: 'rgba(13,20,13,0.95)' },
+    stats: { characters: 10, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'jjk', anime: 'Jujutsu Kaisen', tagline: 'Negative Energy Economy & Algorithmic Combat', malId: 40748, visualizationHint: 'counter-tree', visualizationReason: 'JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1171/109222l.jpg',
+    themeColors: { primary: '#4f46e5', secondary: '#0f172a', accent: '#ef4444', glow: 'rgba(79, 70, 229, 0.4)', tabActive: '#818cf8', badgeBg: 'rgba(79, 70, 229, 0.2)', badgeText: '#c7d2fe', modeGlow: 'rgba(34, 197, 94, 0.5)', heroGradient: 'rgba(30, 27, 75, 0.95)' },
+    stats: { characters: 10, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'demonslayer', anime: 'Demon Slayer: Kimetsu no Yaiba', tagline: 'A nocturnal immortality network versus humans burning their own lifespan for solar-grade kill windows.', malId: 38000, visualizationHint: 'counter-tree', visualizationReason: 'Demon Slayer is fundamentally a kill-economy matchup system: each duel is decided by how breathing forms, blood arts, poison, sunlight constraints, and decapitation windows counter each other.', animeImageUrl: 'https://myanimelist.net/images/anime/1286/99889l.jpg',
+    themeColors: { primary: '#dc2626', secondary: '#0f172a', accent: '#f59e0b', glow: 'rgba(220,38,38,0.30)', tabActive: '#ef4444', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#fca5a5', modeGlow: 'rgba(245,158,11,0.28)', heroGradient: 'rgba(2,6,23,0.93)' },
+    stats: { characters: 10, powerSystem: 4, rules: 5 }
+  },
+  {
+    id: 'hxh', anime: 'Hunter x Hunter', tagline: 'Contractual Power Economy & Asymmetric Information Warfare', malId: 11061, visualizationHint: 'node-graph', visualizationReason: 'HxH is defined by conditional alliances, asymmetric information, and binding contractual power — the node-graph maps the strategic web where every relationship is a potential betrayal vector.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1337/99013l.jpg',
+    themeColors: { primary: '#059669', secondary: '#0f172a', accent: '#f59e0b', glow: 'rgba(5, 150, 105, 0.4)', tabActive: '#34d399', badgeBg: 'rgba(5, 150, 105, 0.2)', badgeText: '#6ee7b7', modeGlow: 'rgba(245, 158, 11, 0.5)', heroGradient: 'rgba(6, 45, 30, 0.95)' },
+    stats: { characters: 11, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'vinlandsaga', anime: 'Vinland Saga', tagline: 'A deterministic economy of retributive violence', malId: 37521, visualizationHint: 'node-graph', visualizationReason: 'Because the universe\'s topology is defined by shifting strategic interdependence, profound mirror relationships, and the difficult severing of edges from the base violence economy.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1500/103005l.jpg',
+    themeColors: { primary: '#d97706', secondary: '#dc2626', accent: '#f59e0b', glow: 'rgba(217,119,6,0.35)', tabActive: '#d97706', badgeBg: 'rgba(220,38,38,0.12)', badgeText: '#ef4444', modeGlow: 'rgba(220,38,38,0.25)', heroGradient: 'rgba(15,10,5,0.95)' },
+    stats: { characters: 6, powerSystem: 4, rules: 3 }
+  },
+  {
+    id: 'steinsgate', anime: 'Steins;Gate', tagline: 'A deterministic attractor-field prison where convergence cannot be outrun — only rewritten', malId: 9253, visualizationHint: 'timeline', visualizationReason: 'Steins;Gate is structurally defined by worldline divergence and attractor field convergence. Every meaningful event is a causal fork — D-Mails rewrite history, time leaps overwrite memory, and the entire plot is a single actor navigating a branching temporal graph toward an escape trajectory. The timeline renderer is the only lens that captures this.', animeImageUrl: 'https://myanimelist.net/images/anime/1935/127974l.jpg',
+    themeColors: { primary: '#22d3ee', secondary: '#a855f7', accent: '#06b6d4', glow: 'rgba(34,211,238,0.35)', tabActive: '#22d3ee', badgeBg: 'rgba(168,85,247,0.12)', badgeText: '#a855f7', modeGlow: 'rgba(168,85,247,0.25)', heroGradient: 'rgba(8,12,20,0.95)' },
+    stats: { characters: 8, powerSystem: 5, rules: 5 }
+  },
+  {
+    id: 'deathnote', anime: 'Death Note', tagline: 'An asymmetric information war where anonymous execution power collides with probabilistic deanonymization — and psychology leaks what cryptography cannot', malId: 1535, visualizationHint: 'node-graph', visualizationReason: 'Death Note is structurally defined by relational interdependence — who controls whom, who knows what about whom, and how shifting alliances and proxy networks reshape the power graph. Every kill, investigation, and betrayal rewires the network. The node-graph renderer is the only lens that captures this web of manipulation, dependency, and counterintelligence.', animeImageUrl: 'https://myanimelist.net/images/anime/1079/138100l.jpg',
+    themeColors: { primary: '#dc2626', secondary: '#1e1b4b', accent: '#ef4444', glow: 'rgba(220,38,38,0.35)', tabActive: '#dc2626', badgeBg: 'rgba(30,27,75,0.15)', badgeText: '#818cf8', modeGlow: 'rgba(220,38,38,0.25)', heroGradient: 'rgba(5,5,5,0.95)' },
+    stats: { characters: 8, powerSystem: 3, rules: 5 }
+  },
+  {
+    id: 'fmab', anime: 'Fullmetal Alchemist: Brotherhood', tagline: 'A closed thermodynamic system where every act of creation demands an equal destruction — and a 400-year parasite has been rigging the ledger from beneath the earth', malId: 5114, visualizationHint: 'node-graph', visualizationReason: 'FMAB is structurally defined by parasitic control networks — Father routes energy through a hidden layer beneath Amestris, homunculi enforce institutional dependency, and alchemists unknowingly operate on a hijacked grid. The node-graph renderer exposes who controls whom, which nodes bypass the firewall, and how the counter-network assembles to dismantle the parasite from within.', animeImageUrl: 'https://myanimelist.net/images/anime/1208/94745l.jpg',
+    themeColors: { primary: '#d97706', secondary: '#991b1b', accent: '#fbbf24', glow: 'rgba(217,119,6,0.3)', tabActive: '#d97706', badgeBg: 'rgba(153,27,27,0.12)', badgeText: '#f59e0b', modeGlow: 'rgba(217,119,6,0.2)', heroGradient: 'rgba(5,5,10,0.92)' },
+    stats: { characters: 9, powerSystem: 4, rules: 5 }
+  },
+  {
+    id: 'codegeass', anime: 'Code Geass: Hangyaku no Lelouch', tagline: 'An occupied nation becomes a control-war between imperial hierarchy, masked insurgency, and a will-hacking anomaly that turns strategy into governance engineering.', malId: 1575, visualizationHint: 'node-graph', visualizationReason: 'Code Geass is a control-network story: Geass permissions, command chains, propaganda legitimacy, and betrayal edges continuously rewire who can issue orders and who obeys; node-graph most accurately surfaces that shifting authority topology.', animeImageUrl: 'https://myanimelist.net/images/anime/1032/135088l.jpg',
+    themeColors: { primary: '#7c3aed', secondary: '#991b1b', accent: '#f43f5e', glow: 'rgba(124,58,237,0.35)', tabActive: '#a855f7', badgeBg: 'rgba(239,68,68,0.14)', badgeText: '#fda4af', modeGlow: 'rgba(168,85,247,0.22)', heroGradient: 'rgba(7,6,16,0.92)' },
+    stats: { characters: 12, powerSystem: 3, rules: 6 }
+  },
+  {
+    id: 'mha', anime: 'My Hero Academia', tagline: 'Mutating biological power collides with state-managed hero capitalism.', malId: 31964, visualizationHint: 'node-graph', visualizationReason: 'MHA is governed by control webs: HPSC policy routing, inherited and stolen Quirk chains, and ideological splinter networks that determine which nodes stabilize or collapse society.', animeImageUrl: 'https://myanimelist.net/images/anime/10/78745l.jpg',
+    themeColors: { primary: '#0ea5e9', secondary: '#0f172a', accent: '#f97316', glow: 'rgba(14,165,233,0.35)', tabActive: '#38bdf8', badgeBg: 'rgba(14,165,233,0.18)', badgeText: '#bae6fd', modeGlow: 'rgba(249,115,22,0.42)', heroGradient: 'rgba(15,23,42,0.94)' },
+    stats: { characters: 10, powerSystem: 4, rules: 6 }
+  }
+]
+
+export const UNIVERSE_CATALOG_MAP = Object.fromEntries(UNIVERSE_CATALOG.map(entry => [entry.id, entry]))

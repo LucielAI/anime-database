@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ANIME_LIST } from '../data/index'
+import { UNIVERSE_CATALOG } from '../data/index'
 import { Database, Lock, ArrowRight } from 'lucide-react'
 
 
@@ -8,7 +8,7 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
   const accentColor = isSystemMode ? (theme?.secondary || '#22d3ee') : (theme?.primary || '#8b5cf6')
   
   // Filter out the current universe
-  const liveUniverses = ANIME_LIST.filter(a => a.id !== currentId)
+  const liveUniverses = UNIVERSE_CATALOG.filter(a => a.id !== currentId)
 
   return (
     <div className="w-full max-w-4xl mx-auto px-6 py-16 mt-8 font-mono border-t border-white/5">
