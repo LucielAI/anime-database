@@ -1,0 +1,484 @@
+{
+  "anime": "Demon Slayer: Kimetsu no Yaiba",
+  "tagline": "A nocturnal immortality network versus humans burning their own lifespan for solar-grade kill windows.",
+  "malId": 38000,
+  "themeColors": {
+    "primary": "#dc2626",
+    "secondary": "#0f172a",
+    "accent": "#f59e0b",
+    "glow": "rgba(220,38,38,0.30)",
+    "tabActive": "#ef4444",
+    "badgeBg": "rgba(15,23,42,0.55)",
+    "badgeText": "#fca5a5",
+    "modeGlow": "rgba(245,158,11,0.28)",
+    "heroGradient": "rgba(2,6,23,0.93)"
+  },
+  "visualizationHint": "counter-tree",
+  "visualizationReason": "Demon Slayer is fundamentally a kill-economy matchup system: each duel is decided by how breathing forms, blood arts, poison, sunlight constraints, and decapitation windows counter each other.",
+  "headerFlavor": {
+    "loreQuote": "Set your heart ablaze.",
+    "sysWarning": "// [ATTRITION_LOOP]: REGENERATION ADVANTAGE DETECTED — HUMAN OVERCLOCK PROTOCOLS ACTIVE",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "temporal",
+  "revealOverlay": "hatch-red",
+  "aiInsights": {
+    "casual": "Demon Slayer looks flashy, but the fights are brutally practical: demons regenerate forever unless you hit one of a few hard kill conditions, while slayers can only win by timing perfect openings and paying with their bodies. The counter-tree view works because every big battle is about matchup logic — who can force the other side into a losing condition first.",
+    "deep": "The universe runs on asymmetric resource curves. Demons have near-infinite stamina and regeneration but hard environmental constraints (sunlight, Nichirin decapitation, selective toxins), while slayers use finite metabolic overclocking through breathing and marks that accelerate long-term physiological failure. Combat therefore behaves like conditional execution: victory goes to the side that can force state transition into a terminal rule set (sun exposure, neck severance, anti-regeneration poison stack, or strategic immobilization) before its own cost curve collapses."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1286/99889l.jpg",
+  "powerSystem": [
+    {
+      "name": "Total Concentration Breathing",
+      "subtitle": "Metabolic Overclock Protocol",
+      "loreDesc": "A disciplined breathing method that lets slayers push body temperature, oxygenation, and muscle output beyond normal limits to challenge monsters that should be physically unbeatable.",
+      "systemDesc": "A voluntary cardiopulmonary amplification stack that temporarily increases output, reaction speed, and blade control while rapidly consuming endurance and structural integrity.",
+      "icon": "Wind",
+      "color": "cyan-400",
+      "signatureMoment": "Tanjiro chaining Water and Sun forms under life-threatening oxygen debt to maintain pressure against Upper Rank opponents.",
+      "loreSubtitle": "Human limits broken through training",
+      "systemSubtitle": "Finite burst-performance engine"
+    },
+    {
+      "name": "Nichirin Blades",
+      "subtitle": "Solar-Encoded Kill Interface",
+      "loreDesc": "Swords forged from ore that absorbs sunlight, giving humans a way to permanently kill demons through precise neck severance.",
+      "systemDesc": "A specialized hardware layer that converts otherwise non-terminal damage into valid kill events when strike geometry intersects cervical critical zones.",
+      "icon": "Sword",
+      "color": "amber-400",
+      "signatureMoment": "Mitsuri and Obanai coordinating blade trajectories in Infinity Castle to create a decapitation opportunity against Muzan.",
+      "loreSubtitle": "Sunlight carried in steel",
+      "systemSubtitle": "Conditional terminal-hit weapon"
+    },
+    {
+      "name": "Blood Demon Arts",
+      "subtitle": "Mutated Ability Runtime",
+      "loreDesc": "Demonic techniques born from Muzan's blood that bend space, flesh, perception, or elemental phenomena into lethal battlefield tools.",
+      "systemDesc": "Individualized mutation modules that grant demons high-variance control abilities, often creating terrain denial, debuffs, or regeneration-compatible offense loops.",
+      "icon": "Flame",
+      "color": "red-400",
+      "signatureMoment": "Akaza's Compass Needle reading fighting spirit vectors to auto-adjust offense and defense in real time.",
+      "loreSubtitle": "Personalized demon sorcery",
+      "systemSubtitle": "Adaptive combat middleware"
+    },
+    {
+      "name": "Demon Slayer Mark",
+      "subtitle": "Lifespan-for-Output Contract",
+      "loreDesc": "A crest awakening under extreme conditions that dramatically amplifies slayer performance, but ties the user to a shortened life trajectory.",
+      "systemDesc": "A high-risk amplification state that multiplies throughput at the cost of accelerated systemic wear and long-horizon survivability.",
+      "icon": "Target",
+      "color": "emerald-400",
+      "signatureMoment": "Muichiro activating his mark to reverse an Upper Rank engagement despite severe pre-existing damage.",
+      "loreSubtitle": "The mark of chosen sacrifice",
+      "systemSubtitle": "Short-term gain, long-term burn"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Tanjiro Kamado",
+      "title": "Adaptive Frontline Executor",
+      "rank": "Demon Slayer Corps",
+      "dangerLevel": 8,
+      "loreBio": "A compassionate swordsman whose family was slaughtered by demons, Tanjiro fights to restore Nezuko and end Muzan's cycle of predation. He fuses disciplined empathy with relentless tactical adjustment.",
+      "systemBio": "Primary adaptation node capable of switching breathing patterns and threat priorities mid-fight, making him unusually resilient in volatile matchup trees.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Heart",
+      "signatureMoment": "Unlocking Hinokami Kagura chains while cornered, transforming a losing exchange into a viable kill window.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Nezuko Kamado",
+      "title": "Solar-Exception Demon",
+      "rank": "Anomalous Demon Ally",
+      "dangerLevel": 9,
+      "loreBio": "Turned into a demon but retaining protective attachment to humans, Nezuko becomes the system anomaly Muzan has searched for: demon survivability without sunlight death.",
+      "systemBio": "Constraint-breaking demonic node whose sunlight immunity invalidates the species' core environmental lock and destabilizes Muzan's strategic monopoly.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Sun",
+      "signatureMoment": "Conquering sunlight after the Swordsmith Village battle and proving the demon constraint set is mutable.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/378254.jpg?s=c3cdc50f2d9f3b30e4453c8ca1f8460f",
+      "malId": 146157
+    },
+    {
+      "name": "Muzan Kibutsuji",
+      "title": "Origin Node of Demonkind",
+      "rank": "Demon Progenitor",
+      "dangerLevel": 10,
+      "loreBio": "The first demon, Muzan created and controls the demonic lineage while obsessively seeking immunity to sunlight. He governs through fear, secrecy, and disposable subordinates.",
+      "systemBio": "Centralized root process controlling demon replication, command hierarchy, and kill-switch curses; highest throughput entity with strategic dependence on removing solar vulnerability.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "red-950",
+      "accentColor": "red-400",
+      "icon": "Crown",
+      "signatureMoment": "Launching the Infinity Castle collapse sequence to force all remaining slayers into one terminal attrition arena.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/384669.jpg?s=c9d7f04d71e6651de82cb1e56f52e8e0",
+      "malId": 151156
+    },
+    {
+      "name": "Kyojuro Rengoku",
+      "title": "Flame Hashira Bulwark",
+      "rank": "Hashira",
+      "dangerLevel": 8,
+      "loreBio": "A charismatic Hashira whose unwavering resolve inspires allies even in hopeless scenarios. Rengoku turns a doomed defense into a moral and tactical inflection point for the Corps.",
+      "systemBio": "High-output defensive anchor capable of delaying superior demon threats long enough for mission-critical asset preservation and downstream morale amplification.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Flame",
+      "signatureMoment": "Holding Akaza in place until dawn pressure nearly converts the engagement into an environmental kill.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Giyu Tomioka",
+      "title": "Water Hashira Precision Node",
+      "rank": "Hashira",
+      "dangerLevel": 8,
+      "loreBio": "A stoic veteran who first spares Tanjiro and Nezuko, Giyu embodies the Corps' strict professionalism while quietly enabling its most important exception.",
+      "systemBio": "Low-noise high-accuracy combat operator with elite defensive form execution, ideal for neutralizing high-speed demons and stabilizing chaotic fronts.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Shield",
+      "signatureMoment": "Deploying Dead Calm to nullify Akaza's momentum spikes and buy critical survival time.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Shinobu Kocho",
+      "title": "Poison Doctrine Architect",
+      "rank": "Hashira",
+      "dangerLevel": 7,
+      "loreBio": "Unable to decapitate upper demons by strength alone, Shinobu weaponizes intellect, chemistry, and self-sacrifice to engineer anti-regeneration kill routes.",
+      "systemBio": "Specialist countermeasure node that substitutes direct execution with layered biochemical disruption, enabling team-based upper-rank deletion strategies.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "FlaskConical",
+      "signatureMoment": "Embedding a body-saturated wisteria payload so Doma's consumption triggers delayed internal collapse.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Akaza",
+      "title": "Upper Rank Three Duel Engine",
+      "rank": "Twelve Kizuki",
+      "dangerLevel": 9,
+      "loreBio": "A battle-obsessed upper moon who seeks worthy opponents and despises weakness, Akaza combines brutal close-quarters force with predictive combat senses.",
+      "systemBio": "High-frequency melee optimizer using intent-tracking to anticipate attacks, producing sustained offensive pressure and rapid regeneration under heavy damage.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "rose-900",
+      "accentColor": "rose-400",
+      "icon": "Zap",
+      "signatureMoment": "Overwhelming multiple Hashira-level fighters by reading their battle spirit vectors before strike commitment.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Kokushibo",
+      "title": "Upper Rank One Legacy Anomaly",
+      "rank": "Twelve Kizuki",
+      "dangerLevel": 10,
+      "loreBio": "A former swordsman from the Sengoku era turned demon, Kokushibo embodies the terrifying fusion of elite breathing mastery and immortal regeneration.",
+      "systemBio": "Top-tier hybrid node combining centuries of sword optimization with demon recovery loops, creating near-unmatched duel persistence.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "indigo-950",
+      "accentColor": "indigo-400",
+      "icon": "Moon",
+      "signatureMoment": "Forcing a multi-Hashira coalition into sacrificial sequencing just to create a single viable decapitation attempt.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Doma",
+      "title": "Upper Rank Two Absorption Predator",
+      "rank": "Twelve Kizuki",
+      "dangerLevel": 9,
+      "loreBio": "A smiling cult leader who treats slaughter as ritual theater, Doma weaponizes freezing blood arts and ingestion-based kills against emotionally destabilized opponents.",
+      "systemBio": "Area-denial and attrition node using cryogenic debuffs, aerosol toxins, and consumption mechanics to degrade enemy output over time.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Snowflake",
+      "signatureMoment": "Suppressing multiple high-level slayers with room-scale frost constructs before being compromised by Shinobu's poison architecture.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Kagaya Ubuyashiki",
+      "title": "Corps Strategic Coordinator",
+      "rank": "Corps Master",
+      "dangerLevel": 6,
+      "loreBio": "Physically frail but spiritually unwavering, Kagaya guides the Corps through long-term intelligence, morale stewardship, and sacrificial command decisions.",
+      "systemBio": "Low-mobility high-impact command node coordinating distributed slayer assets and timing convergence operations for maximum strategic leverage.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Brain",
+      "signatureMoment": "Triggering a planned self-sacrifice blast to pin Muzan in place and initiate the final containment phase.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/387497.jpg?s=e6703bc6bca651607032e86749bfdc2a",
+      "malId": 151150
+    }
+  ],
+  "factions": [
+    {
+      "name": "Demon Slayer Corps",
+      "role": "protagonist",
+      "loreDesc": "A secret Taisho-era organization of swordsmen and support units that hunts demons at night to protect civilians.",
+      "systemDesc": "Decentralized human resistance network optimized for reconnaissance, specialized matchups, and coordinated kill-condition execution."
+    },
+    {
+      "name": "Twelve Kizuki",
+      "role": "antagonist",
+      "loreDesc": "Muzan's elite demon cadre ranked by strength, each with unique blood arts and extreme regenerative resilience.",
+      "systemDesc": "Tiered high-threat subnetwork providing force projection, territory control, and attritional suppression for the root demon process."
+    },
+    {
+      "name": "Muzan's Inner Control Network",
+      "role": "systemic",
+      "loreDesc": "A fear-based command structure maintained through blood dependence, secrecy, and lethal punishment for disobedience.",
+      "systemDesc": "Centralized governance layer using curse-enforced compliance, information compartmentalization, and disposable subordinate architecture."
+    },
+    {
+      "name": "Wisteria Safehouse & Support Grid",
+      "role": "neutral",
+      "loreDesc": "Medical estates, swordsmith villages, and civilian allies that keep slayers supplied, hidden, and alive.",
+      "systemDesc": "Logistics and recovery infrastructure sustaining mission continuity, equipment refresh cycles, and casualty stabilization."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Sunlight Is Absolute",
+      "subtitle": "Phototoxic Terminal Rule",
+      "loreConsequence": "Even the strongest demon is annihilated by direct sun exposure, forcing demon activity into nocturnal windows.",
+      "systemEquivalent": "Global hard constraint: sunlight applies unavoidable fatal damage-over-time that bypasses regeneration.",
+      "severity": "fatal",
+      "loreSubtitle": "Dawn is the great equalizer",
+      "systemSubtitle": "Unpatchable environmental kill switch"
+    },
+    {
+      "name": "Nichirin Decapitation Requirement",
+      "subtitle": "Valid Kill Condition",
+      "loreConsequence": "Most demons survive massive injury unless their neck is cut by sunlight-forged steel.",
+      "systemEquivalent": "Permanent deletion requires cervical critical hit from authenticated weapon class; other damage routes auto-heal.",
+      "severity": "high",
+      "loreSubtitle": "Steel and precision decide survival",
+      "systemSubtitle": "Conditional terminal event gate"
+    },
+    {
+      "name": "Breathing Output Has a Human Cost",
+      "subtitle": "Finite Physiology Law",
+      "loreConsequence": "Slayers gain explosive combat performance, but fatigue, injury, and organ strain escalate rapidly.",
+      "systemEquivalent": "Performance multipliers consume limited biological resources, creating steep endurance and survivability decay curves.",
+      "severity": "high",
+      "loreSubtitle": "Power is borrowed from tomorrow",
+      "systemSubtitle": "Burst throughput with degradation debt"
+    },
+    {
+      "name": "Muzan Name Curse",
+      "subtitle": "Speech-Level Compliance Trap",
+      "loreConsequence": "Demons who reveal Muzan's identity can be destroyed instantly from within by his curse.",
+      "systemEquivalent": "Remote failsafe trigger tied to prohibited disclosure events, enforcing extreme information containment.",
+      "severity": "fatal",
+      "loreSubtitle": "Fear polices every tongue",
+      "systemSubtitle": "Root-node kill switch on leak"
+    },
+    {
+      "name": "Mark Awakening Shortens Lifespan",
+      "subtitle": "Sacrificial Amplification Contract",
+      "loreConsequence": "The Demon Slayer Mark grants huge combat gains but condemns most users to early death.",
+      "systemEquivalent": "High-gain mode applies irreversible long-term survivability penalty in exchange for immediate performance uplift.",
+      "severity": "fatal",
+      "loreSubtitle": "Victory can consume the victor",
+      "systemSubtitle": "Non-recoverable lifecycle tradeoff"
+    }
+  ],
+  "rankings": {
+    "systemName": "Demon Threat and Slayer Response Tiers",
+    "loreName": "Night War Hierarchy",
+    "topTierName": "Progenitor / Upper Rank Apex",
+    "topTierLore": "Muzan and the highest Upper Moons can erase squads, outlast prolonged engagements, and force sacrificial coalition tactics.",
+    "topTierSystem": "Root and apex nodes with regeneration dominance, high-output blood art runtime, and multi-opponent suppression capacity.",
+    "tiers": [
+      {
+        "name": "Hashira / Upper Rank Engagement Tier",
+        "loreDesc": "Battles at this level reshape entire missions; even winning usually demands irreversible cost.",
+        "systemDesc": "Elite confrontation band where kill windows are narrow and resource conversion efficiency decides outcomes."
+      },
+      {
+        "name": "Mid-Rank Demon & Kinoe-Level Slayer Tier",
+        "loreDesc": "Experienced slayers can clear these threats with coordinated breathing and tactical terrain use.",
+        "systemDesc": "Operational tier defined by matchup knowledge, stamina management, and disciplined execution of known counters."
+      },
+      {
+        "name": "Civilian / Low-Rank Exposure Tier",
+        "loreDesc": "Untrained humans are overwhelmingly vulnerable during nocturnal encounters.",
+        "systemDesc": "Baseline nodes lacking combat protocols, dependent on external protection and early warning networks."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "source": "Tanjiro Kamado",
+      "target": "Nezuko Kamado",
+      "type": "dependent",
+      "weight": 10,
+      "loreDesc": "Tanjiro's mission exists to protect Nezuko's humanity and prove demons are not uniformly irredeemable.",
+      "systemDesc": "Core protective dependency that drives strategic risk-taking and adaptation choices across all major arcs."
+    },
+    {
+      "source": "Muzan Kibutsuji",
+      "target": "Kokushibo",
+      "type": "dependent",
+      "weight": 9,
+      "loreDesc": "Muzan rules the Upper Moons through terror and blood authority, treating them as disposable instruments.",
+      "systemDesc": "Central controller dependency chain distributing commands to elite sub-processes with punitive compliance enforcement."
+    },
+    {
+      "source": "Shinobu Kocho",
+      "target": "Doma",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Shinobu's personal grudge and scientific preparation converge into a long-planned anti-Doma execution route.",
+      "systemDesc": "Adversarial edge where direct damage incapability is replaced by delayed toxin-stack kill logic."
+    },
+    {
+      "source": "Giyu Tomioka",
+      "target": "Tanjiro Kamado",
+      "type": "mentor",
+      "weight": 7,
+      "loreDesc": "Giyu's early trust in Tanjiro and Nezuko creates the narrative opening that keeps both alive.",
+      "systemDesc": "Mentorship link that authorizes exception handling and accelerates trainee integration into high-risk operations."
+    },
+    {
+      "source": "Kokushibo",
+      "target": "Muzan Kibutsuji",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Kokushibo serves Muzan as the strongest upper moon while pursuing his own fixation on surpassing human limits.",
+      "systemDesc": "High-capability alliance coupling root-node command authority with top-tier execution throughput."
+    },
+    {
+      "source": "Akaza",
+      "target": "Kyojuro Rengoku",
+      "type": "rival",
+      "weight": 8,
+      "loreDesc": "Akaza's admiration for strength clashes with Rengoku's refusal to abandon human values, producing one of the series' purest ideological duels.",
+      "systemDesc": "Rivalry edge between regeneration-optimized offense and conviction-driven defensive endurance under sunrise pressure."
+    },
+    {
+      "source": "Kagaya Ubuyashiki",
+      "target": "Tanjiro Kamado",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Kagaya invests strategic trust in Tanjiro as a catalyst for ending the cycle.",
+      "systemDesc": "Command-to-field alliance routing intelligence and mission priority toward the highest adaptation node."
+    },
+    {
+      "source": "Nezuko Kamado",
+      "target": "Muzan Kibutsuji",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Nezuko's sunlight survival directly threatens Muzan's centuries-long objective and triggers his most aggressive hunting behavior.",
+      "systemDesc": "Constraint-breaking anomaly versus root-process objective conflict over ownership of the sole sunlight-immunity pathway."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Upper Rank regeneration loop",
+      "defender": "Nichirin decapitation with coordinated pinning",
+      "mechanic": "Slayers layer immobilization and timing to force a valid terminal neck-cut before tissue recovery completes.",
+      "loreDesc": "Even monsters who heal instantly can fall if multiple fighters create one perfect opening.",
+      "systemDesc": "Team sequencing converts infinite-heal target into finite-state kill event by synchronizing control and strike vectors."
+    },
+    {
+      "attacker": "Akaza's Compass Needle prediction",
+      "defender": "Irregular rhythm and emotional masking",
+      "mechanic": "Disrupting readable battle intent reduces predictive accuracy and creates micro-openings for clean hits.",
+      "loreDesc": "Breaking your own habits can make Akaza miss the beat he relies on.",
+      "systemDesc": "Signal obfuscation attack against intent-tracking model lowers forecast confidence and reaction efficiency."
+    },
+    {
+      "attacker": "Doma's freezing area denial",
+      "defender": "Wisteria toxin saturation",
+      "mechanic": "Biochemical payload bypasses terrain control by degrading demon internals after ingestion/absorption.",
+      "loreDesc": "Shinobu wins by turning Doma's appetite into a trap.",
+      "systemDesc": "Indirect kill vector ignores frontal control pressure and targets regeneration substrate integrity."
+    },
+    {
+      "attacker": "Muzan's whip-like multi-heart offense",
+      "defender": "Drug stack plus rotational relay assault",
+      "mechanic": "Tamayo's compounds slow mutation and division while exhausted Hashira rotate to preserve pressure until dawn.",
+      "loreDesc": "No single fighter can beat Muzan; they survive by passing the burden in waves.",
+      "systemDesc": "Compound debuff architecture plus distributed duty cycling prevents frontline collapse against superior throughput node."
+    },
+    {
+      "attacker": "Nocturnal initiative advantage",
+      "defender": "Dawn delay strategy",
+      "mechanic": "Humans trade direct kills for stalling maneuvers that drag elites into sunrise fatality windows.",
+      "loreDesc": "Sometimes winning means lasting until first light.",
+      "systemDesc": "Temporal counterplay converts environmental constraint into scheduled execution event."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Nezuko's Sunlight Immunity",
+      "ruleViolated": "Sunlight Is Absolute",
+      "loreDesc": "A demon survives daylight, overturning the oldest law in the war.",
+      "systemDesc": "Constraint exception indicating demon phenotype can bypass global phototoxic terminal rule."
+    },
+    {
+      "name": "Tamayo's Defection",
+      "ruleViolated": "Muzan Name Curse / Absolute Control",
+      "loreDesc": "A demon physician escapes Muzan's dominion and weaponizes medicine against him.",
+      "systemDesc": "Former subordinate node breaks command-lock and initiates anti-root biochemical research branch."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Muzan Creates the Demon Lineage",
+      "trigger": "Experimental treatment prevents Muzan's death but mutates him into the first demon.",
+      "consequence": "A self-propagating predator network emerges with sunlight vulnerability and regenerative dominance.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "A desperate bid for life births centuries of night terror.",
+      "systemDesc": "Origin event instantiates root process and all downstream infection branches."
+    },
+    {
+      "name": "Kamado Family Massacre",
+      "trigger": "Muzan attacks Tanjiro's household, leaving Nezuko transformed.",
+      "consequence": "Tanjiro enters the Corps and the central anti-Muzan campaign gains its key adaptation node.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "Personal tragedy ignites the story's core promise.",
+      "systemDesc": "Catalyst event redirects civilian node into high-priority resistance pipeline."
+    },
+    {
+      "name": "Rengoku vs Akaza at Mugen Train",
+      "trigger": "Upper Rank Three intercepts after Enmu's defeat.",
+      "consequence": "Corps loses a Hashira but secures strategic proof that upper ranks can be pressured by dawn constraints.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "A heroic loss becomes a doctrine for everyone who survives.",
+      "systemDesc": "High-cost engagement yields critical data on stall-based environmental counterplay viability."
+    },
+    {
+      "name": "Nezuko Conquers the Sun",
+      "trigger": "Extreme combat stress and evolution in Swordsmith Village.",
+      "consequence": "Muzan reprioritizes the entire war toward capturing Nezuko as a sunlight-immunity template.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "The impossible happens, and every faction changes course.",
+      "systemDesc": "Anomaly event rewrites antagonist objective tree and global threat allocation."
+    },
+    {
+      "name": "Infinity Castle Final Operation",
+      "trigger": "Ubuyashiki initiates sacrificial ambush to force direct confrontation.",
+      "consequence": "All key nodes converge into a terminal attrition battle resolved by drug stacking, relay tactics, and sunrise exposure.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "The hidden war collapses into one endless night before dawn.",
+      "systemDesc": "Endgame convergence event where distributed resistance attempts root-process deletion under time-locked environmental constraints."
+    }
+  ]
+}

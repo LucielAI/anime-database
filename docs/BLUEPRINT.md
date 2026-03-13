@@ -66,6 +66,7 @@ A dynamic navigation system that encourages cross-archive discovery.
 ## Current Universes
 - Attack on Titan
 - Jujutsu Kaisen
+- Demon Slayer: Kimetsu no Yaiba
 - Hunter x Hunter
 - Vinland Saga
 - Steins;Gate

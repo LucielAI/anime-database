@@ -96,6 +96,7 @@ Every universe payload is built via a two-stage workflow: broad system research 
 
 - Attack on Titan
 - Jujutsu Kaisen
+- Demon Slayer: Kimetsu no Yaiba
 - Hunter x Hunter
 - Vinland Saga
 - Steins;Gate
