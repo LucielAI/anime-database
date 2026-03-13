@@ -160,7 +160,7 @@
       "gradientTo": "violet-900",
       "accentColor": "violet-400",
       "icon": "FlaskConical",
-      "signatureMoment": "Embedding a body-saturated wisteria payload so Doma's consumption triggers delayed internal collapse.",
+      "signatureMoment": "Embedding a body-saturated wisteria payload so Douma's consumption triggers delayed internal collapse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/386591.jpg?s=3c18dc65ee6cd3a032214d6a6e49ac9e",
       "malId": 146736
     },
@@ -195,19 +195,19 @@
       "malId": 174145
     },
     {
-      "name": "Doma",
+      "name": "Douma",
       "title": "Upper Rank Two Absorption Predator",
       "rank": "Twelve Kizuki",
       "dangerLevel": 9,
-      "loreBio": "A smiling cult leader who treats slaughter as ritual theater, Doma weaponizes freezing blood arts and ingestion-based kills against emotionally destabilized opponents.",
+      "loreBio": "A smiling cult leader who treats slaughter as ritual theater, Douma weaponizes freezing blood arts and ingestion-based kills against emotionally destabilized opponents.",
       "systemBio": "Area-denial and attrition node using cryogenic debuffs, aerosol toxins, and consumption mechanics to degrade enemy output over time.",
       "gradientFrom": "slate-900",
       "gradientTo": "cyan-900",
       "accentColor": "cyan-400",
       "icon": "Snowflake",
       "signatureMoment": "Suppressing multiple high-level slayers with room-scale frost constructs before being compromised by Shinobu's poison architecture.",
-      "imageUrl": "https://myanimelist.net/images/characters/7/396103.jpg",
-      "malId": 176524
+      "imageUrl": "https://myanimelist.net/images/characters/3/465011.jpg",
+      "malId": 170152
     },
     {
       "name": "Kagaya Ubuyashiki",
@@ -341,10 +341,10 @@
     },
     {
       "source": "Shinobu Kocho",
-      "target": "Doma",
+      "target": "Douma",
       "type": "enemy",
       "weight": 9,
-      "loreDesc": "Shinobu's personal grudge and scientific preparation converge into a long-planned anti-Doma execution route.",
+      "loreDesc": "Shinobu's personal grudge and scientific preparation converge into a long-planned anti-Douma execution route.",
       "systemDesc": "Adversarial edge where direct damage incapability is replaced by delayed toxin-stack kill logic."
     },
     {
@@ -404,10 +404,10 @@
       "systemDesc": "Signal obfuscation attack against intent-tracking model lowers forecast confidence and reaction efficiency."
     },
     {
-      "attacker": "Doma's freezing area denial",
+      "attacker": "Douma's freezing area denial",
       "defender": "Wisteria toxin saturation",
       "mechanic": "Biochemical payload bypasses terrain control by degrading demon internals after ingestion/absorption.",
-      "loreDesc": "Shinobu wins by turning Doma's appetite into a trap.",
+      "loreDesc": "Shinobu wins by turning Douma's appetite into a trap.",
       "systemDesc": "Indirect kill vector ignores frontal control pressure and targets regeneration substrate integrity."
     },
     {

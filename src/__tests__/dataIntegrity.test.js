@@ -50,3 +50,16 @@ describe('live payload integrity', () => {
     })
   })
 })
+
+
+describe('demon slayer image mapping regression checks', () => {
+  it('maps Douma to the expected MAL character id and image', () => {
+    const raw = fs.readFileSync(path.join(DATA_DIR, 'demonslayer.core.json'), 'utf-8')
+    const data = JSON.parse(raw)
+    const douma = (data.characters || []).find(c => c.name === 'Douma')
+
+    expect(douma).toBeTruthy()
+    expect(douma.malId).toBe(170152)
+    expect(douma.imageUrl).toContain('/characters/3/465011.jpg')
+  })
+})

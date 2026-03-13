@@ -80,6 +80,8 @@ After the validator passes, do a quick manual review:
 - [ ] All `imageUrl` values are either from `cdn.myanimelist.net` / `images.myanimelist.net` or are `null`
 - [ ] Any character with `imageUrl: null` also has `_fetchFailed: true`
 - [ ] No fabricated or non-MAL image URLs exist
+- [ ] No duplicate `characters[].imageUrl` or duplicate `characters[].malId` values for different names (unless intentionally documented)
+- [ ] For ambiguous one-token names (e.g. Doma/Douma), manually verify MAL character page/API mapping
 - [ ] `animeImageUrl` is set (not null) unless unavailable from MAL
 
 **Data quality:**

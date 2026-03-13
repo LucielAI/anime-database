@@ -76,14 +76,14 @@ export default memo(function CounterTree({ counterplay = [], characters = [], is
             <div className="sm:hidden p-3 bg-[#0a0a14] rounded-lg border border-white/10 hover:border-white/20 transition-colors space-y-2">
               <div className="flex items-center gap-3">
                 <div className="border-2 border-green-500 rounded-lg px-3 py-1.5 flex-1 min-w-0">
-                  <span className="text-green-400 text-xs font-bold truncate block">{cp.attacker}</span>
+                  <span className="text-green-400 text-xs font-bold leading-snug break-words block">{cp.attacker}</span>
                 </div>
                 <span className="text-white/40 text-xs shrink-0">▶</span>
                 <div className="border-2 border-red-500 rounded-lg px-3 py-1.5 flex-1 min-w-0">
-                  <span className="text-red-400 text-xs font-bold truncate block">{cp.defender}</span>
+                  <span className="text-red-400 text-xs font-bold leading-snug break-words block">{cp.defender}</span>
                 </div>
               </div>
-              <div className="text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded px-2 py-1 text-center">
+              <div className="text-[10px] text-amber-300 bg-amber-500/10 border border-amber-500/20 rounded px-2 py-1 text-center leading-snug break-words">
                 {cp.mechanic}
               </div>
             </div>

@@ -26,7 +26,7 @@ Run image patch → then validate → then integrate.
 1. `/anime/{malId}` — fetches the official anime poster → patches `animeImageUrl`
 2. `/anime/{malId}/characters` — fetches the official cast list → matches by name → patches `imageUrl` and `malId` per character
 
-Name matching uses set intersection (handles `LastName, FirstName` vs `FirstName LastName` formatting). It removes `_fetchFailed` flags when a valid image is found.
+Name matching uses confidence tiers (exact normalized name → exact token set → conservative multi-token subset). This avoids weak one-token collisions and removes `_fetchFailed` flags when a valid image is found.
 
 ---
 
@@ -54,15 +54,15 @@ python scripts/patch_jikan_images.py --file staging/codegeass.core.json
 // Success: Patched primary anime image: https://cdn.myanimelist.net/...
 // Fetching official cast list for Death Note (ID: 1535)
 // Success: Retrieved 48 cast members.
-  [+] Match found for 'Light Yagami' -> 'Yagami, Light': ID 816
-  [+] Match found for 'L' -> 'Lawliet, L': ID 85
-  [-] No match found for 'Watari'. Left intact.
+  [+] Match found (exact-normalized) for 'Light Yagami' -> 'Yagami, Light': ID 816
+  [+] Match found (exact-token-set) for 'L' -> 'Lawliet, L': ID 85
+  [-] No high-confidence match found for 'Watari'. Left intact.
 // Patched 14 out of 16 characters.
 // PATCH COMPLETE. Payload saved.
 ```
 
 - `[+]` — character matched and patched
-- `[-]` — no match found, left intact (this is expected for some characters)
+- `[-]` — no high-confidence match found, left intact (this is expected for some characters)
 
 ---
 
@@ -95,3 +95,6 @@ The validator checks that all `imageUrl` values are from the allowed host list (
 **Running after integration.** Run the patcher on the staging file before running `add:universe`, not on `src/data/` after. (Running on `src/data/` post-integration also works, but patch before validate.)
 
 **Not having `requests` installed.** Run `pip install requests` if the script errors on import.
+
+
+**Important:** `/anime/{malId}/characters` can omit later-arc characters for some franchises. For unmatched but important characters, set `malId` + `imageUrl` manually from the character page/API and keep `validate:payload` clean.

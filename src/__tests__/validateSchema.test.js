@@ -72,6 +72,34 @@ describe('validateCorePayload', () => {
     expect(imageErrors).toHaveLength(0)
   })
 
+  it('warns on duplicate character imageUrl values', () => {
+    const shared = 'https://cdn.myanimelist.net/images/characters/1/1.jpg'
+    const { warnings } = validateCorePayload(makePayload({
+      characters: [
+        makeCharacter('Hero', { imageUrl: shared, malId: 11 }),
+        makeCharacter('Villain', { imageUrl: shared, malId: 22 }),
+      ]
+    }))
+    expect(warnings.some(w => w.includes('Duplicate character imageUrl detected'))).toBe(true)
+  })
+
+  it('warns on duplicate character malId values', () => {
+    const { warnings } = validateCorePayload(makePayload({
+      characters: [
+        makeCharacter('Hero', { malId: 999 }),
+        makeCharacter('Villain', { malId: 999, imageUrl: 'https://cdn.myanimelist.net/images/characters/2/2.jpg' }),
+      ]
+    }))
+    expect(warnings.some(w => w.includes('Duplicate character malId detected'))).toBe(true)
+  })
+
+  it('errors on invalid character malId values', () => {
+    const { errors } = validateCorePayload(makePayload({
+      characters: [makeCharacter('Broken', { malId: -1 })]
+    }))
+    expect(errors.some(e => e.includes('invalid malId'))).toBe(true)
+  })
+
   it('errors when imageUrl is null without _fetchFailed', () => {
     const noFlag = makeCharacter('NoFlag', { imageUrl: null })
     const { errors } = validateCorePayload(makePayload({ characters: [noFlag] }))

@@ -28,6 +28,16 @@ function isNonEmptyString(value) {
   return typeof value === 'string' && value.trim() !== ''
 }
 
+function canonicalCharacterName(name) {
+  if (!name) return ''
+  return String(name)
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, ' ')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 // ─── SAFE IMAGE HOST ALLOWLIST ───────────────────────────────────────────────
 const ALLOWED_IMAGE_HOSTS = [
   'cdn.myanimelist.net',
@@ -152,6 +162,9 @@ export function validateCorePayload(data) {
   // ── 4. Character field completeness (hard errors) ──
 
   if (Array.isArray(data.characters)) {
+    const imageToNames = new Map()
+    const malIdToNames = new Map()
+
     data.characters.forEach((c, i) => {
       REQUIRED_CHARACTER_FIELDS.forEach(f => {
         if (c[f] === undefined) errors.push(`characters[${i}] (${c.name || 'unnamed'}) missing: ${f}`)
@@ -163,6 +176,10 @@ export function validateCorePayload(data) {
           errors.push(`characters[${i}] (${c.name || 'unnamed'}) ${key} must be a Tailwind color token (e.g. slate-900), received: ${token}`)
         }
       })
+
+      if (c.malId !== undefined && c.malId !== null && (!Number.isInteger(c.malId) || c.malId <= 0)) {
+        errors.push(`characters[${i}] (${c.name || 'unnamed'}) has invalid malId: ${c.malId}`)
+      }
 
       // Image URL Validation (Must be from ALLOWED_IMAGE_HOSTS or Explicit Fallback)
       if (c.imageUrl !== undefined) {
@@ -178,6 +195,36 @@ export function validateCorePayload(data) {
         }
         if (c.imageUrl === null && c._fetchFailed !== true) {
           errors.push(`characters[${i}] (${c.name}) has null imageUrl but missing _fetchFailed: true flag.`)
+        }
+      }
+
+      if (typeof c.imageUrl === 'string') {
+        const names = imageToNames.get(c.imageUrl) || []
+        names.push(c.name || `characters[${i}]`)
+        imageToNames.set(c.imageUrl, names)
+      }
+
+      if (Number.isInteger(c.malId)) {
+        const names = malIdToNames.get(c.malId) || []
+        names.push(c.name || `characters[${i}]`)
+        malIdToNames.set(c.malId, names)
+      }
+    })
+
+    imageToNames.forEach((names, imageUrl) => {
+      if (names.length > 1) {
+        const canonicalNames = new Set(names.map(canonicalCharacterName))
+        if (canonicalNames.size > 1) {
+          warnings.push(`Duplicate character imageUrl detected (${imageUrl}) in ${anime}: ${names.join(', ')}`)
+        }
+      }
+    })
+
+    malIdToNames.forEach((names, malId) => {
+      if (names.length > 1) {
+        const canonicalNames = new Set(names.map(canonicalCharacterName))
+        if (canonicalNames.size > 1) {
+          warnings.push(`Duplicate character malId detected (${malId}) in ${anime}: ${names.join(', ')}`)
         }
       }
     })

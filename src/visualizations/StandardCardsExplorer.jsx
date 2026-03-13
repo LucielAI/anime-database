@@ -42,10 +42,10 @@ export default function StandardCardsExplorer({ characters = [], isSystemMode, t
                 accentColor={char.accentColor || 'cyan-400'}
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-3">
-                <h3 className="text-sm font-bold font-mono" style={{ color: theme?.accent || '#22d3ee' }}>
+                <h3 className="text-sm font-bold font-mono leading-tight break-words" style={{ color: theme?.accent || '#22d3ee' }}>
                   {char.name}
                 </h3>
-                <p className="text-[10px] text-gray-500">{char.title}</p>
+                <p className="text-[10px] text-gray-300 leading-snug line-clamp-2">{char.title}</p>
               </div>
             </div>
             <div className="p-3 space-y-2">
