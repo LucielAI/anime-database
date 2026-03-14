@@ -75,3 +75,14 @@ ExploreAnotherUniverse
 - Dashboard reads optional discovery metadata (`startTab`, `startLabel`) from `src/data/discoveryMetadata.js`.
 - If missing, a renderer-aware fallback picks the first recommended tab.
 - Tabs show a subtle `START` marker and a top “Best Entry” cue for first-impression guidance.
+
+## System Questions Panel (Answerability Layer)
+
+Universe routes render a lightweight `SystemQuestionsPanel` directly under the introduction block.
+
+Design goals:
+- visible, concise Q&A snippets for long-tail mechanism queries,
+- direct jump links into existing tab/section content,
+- no hidden content and no heavy runtime additions.
+
+Data source: payload `systemQuestions[]`.

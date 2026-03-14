@@ -640,5 +640,42 @@
     "casual": "Code Geass looks like a mecha rebellion, but the real engine is control. Lelouch doesn't just win fights; he hacks command itself through Geass, propaganda, and political theater. Every major shift comes from changing who people obey: emperors, symbols, superweapons, or a masked revolutionary. The universe feels unstable because military power, public legitimacy, and supernatural coercion are always competing for the same steering wheel.",
     "deep": "The universe is a layered authority architecture with three competing stabilization models: imperial hierarchy (Britannia), coercive stasis (Schneizel's Damocles), and sacrificial legitimacy reset (Zero Requiem). Geass acts as a localized consent-bypass exploit that can override individual agency, while Knightmare and sakuradite systems determine hard-force throughput. However, durable governance is decided in the legitimacy layer: symbols, broadcasts, and perceived justice. The decisive mechanic is not raw destruction but control-graph rewiring—who can issue commands, who is trusted to enforce them, and how quickly those trust edges can be collapsed or rebuilt after anomalies like Euphemia's massacre or F.L.E.I.J.A. strikes."
   },
-  "animeImageUrl": "https://myanimelist.net/images/anime/1032/135088l.jpg"
+  "animeImageUrl": "https://myanimelist.net/images/anime/1032/135088l.jpg",
+  "systemQuestions": [
+    {
+      "question": "How does Geass create leverage without direct force?",
+      "answer": "Geass acts as a precision command exploit; one successful command can reconfigure institutions far beyond the immediate scene.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why does the system escalate into empire-scale conflict?",
+      "answer": "Causal chains show how localized coercion triggers legitimacy crises, faction realignment, and retaliatory governance.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "What rules keep Geass from being a simple win button?",
+      "answer": "Usage constraints, visibility risk, and counterintelligence pressure impose hard strategic trade-offs.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How do Britannia, the Black Knights, and shadow operators interact?",
+      "answer": "The faction and relationship layers reveal overlapping command hierarchies rather than a single two-side war.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "What makes Code Geass unique as a system thesis?",
+      "answer": "It models politics as an information-control network where narrative legitimacy is as important as military power.",
+      "tabIndex": 1,
+      "sectionId": "entity-database-heading",
+      "tabLabel": "Entity Database"
+    }
+  ]
 }

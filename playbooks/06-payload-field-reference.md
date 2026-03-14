@@ -289,3 +289,26 @@ Do not fabricate URLs. Run `scripts/patch_jikan_images.py` to fill real images. 
 ```
 
 Do not write `aiInsights.deep` as plot recap text.
+
+## systemQuestions (Recommended, high-value discoverability field)
+
+Add a visible `systemQuestions` array to every core payload to improve long-tail answerability and AI crawler clarity.
+
+```json
+"systemQuestions": [
+  {
+    "question": "How does the power system work?",
+    "answer": "1-2 sentence mechanism summary with concrete constraints.",
+    "tabIndex": 0,
+    "sectionId": "power-system-heading",
+    "tabLabel": "Power Engine"
+  }
+]
+```
+
+Guidelines:
+- Target 4-8 entries.
+- Keep answers concise, specific, and non-redundant.
+- Prefer mechanism questions (rules, causality, counterplay, faction control).
+- `tabIndex` maps to tabs (`0` Power Engine, `1` Entity Database, `2` Factions, `3` Core Laws).
+- `sectionId` should reference visible heading IDs so users can jump directly.

@@ -31,7 +31,13 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
   const anomalies = data?.anomalies || []
   const accent = theme?.accent || '#22d3ee'
 
-
+  const visualizationCaption = {
+    'timeline': 'Timeline graph of trigger → consequence chains across major events.',
+    'node-graph': 'Relationship graph showing influence, hostility, and dependency between key entities.',
+    'counter-tree': 'Counter-tree map of matchup branches and exploit/counter interactions.',
+    'affinity-matrix': 'Affinity matrix comparing compatibility and synergy across the core roster.',
+    'standard-cards': 'Structured roster cards summarizing key actors and system-relevant traits.'
+  }[data?.visualizationHint] || 'Universe entity visualization.'
 
   return (
     <div className="space-y-6 font-mono">
@@ -41,6 +47,10 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
           The entity graph maps key actors and their links so you can inspect control flow, dependencies, and conflict pressure without needing prior story context.
         </p>
       {/* Main visualization */}
+      <p className="text-[10px] text-gray-500 mb-3" id="entity-graph-caption">
+        {visualizationCaption}
+      </p>
+      <figure aria-labelledby="entity-database-heading" aria-describedby="entity-graph-caption">
       <ErrorBoundary data={data} isSystemMode={isSystemMode} theme={theme}>
         {renderVisualization(data?.visualizationHint, {
           characters,
@@ -55,6 +65,7 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
           isRevealing
         })}
       </ErrorBoundary>
+      </figure>
       </section>
 
       {/* Anomalies section */}

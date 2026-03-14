@@ -543,5 +543,42 @@
       "loreDesc": "The final checkmate. Every layer of Light's anonymity is stripped — proxy, alias, institutional cover, plausible deniability — until only the exposed genius remains, bleeding on a warehouse floor while the shinigami who started it all writes the ending.",
       "systemDesc": "The terminal decryption event where all remaining anonymity bits are resolved simultaneously through physical evidence capture. The notebook forgery converts Mikami's deterministic behavior into an irrefutable identification signal, and Ryuk's final write operation terminates the disrupted process."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "How does the Death Note system actually kill targets?",
+      "answer": "The notebook enforces name-face identity matching and deterministic kill conditions, so power comes from information control as much as supernatural force.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why does Light lose strategic momentum over time?",
+      "answer": "His early asymmetry erodes once investigators diversify evidence channels, forcing riskier moves that expose causal traces.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "What are the governing constraints everyone must respect?",
+      "answer": "The notebook has hard operational limits, and every actor builds plans around those constraints rather than pure ideology.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How does the Kira investigation network counter a single hidden actor?",
+      "answer": "The relationship graph shows distributed pressure: parallel investigators, succession logic, and forced narrowing of suspects.",
+      "tabIndex": 1,
+      "sectionId": "relationship-matrix-heading",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "What makes Death Note distinct as a system?",
+      "answer": "It is a surveillance-and-signaling contest where the decisive resource is verifiable identity, not raw combat output.",
+      "tabIndex": 1,
+      "sectionId": "entity-database-heading",
+      "tabLabel": "Entity Database"
+    }
   ]
 }

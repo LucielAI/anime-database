@@ -87,6 +87,39 @@ export function generateUniversePayload(animeName, structuredResearch, options =
 
   const introductionSummary = baseResearch.introductionSummary || `${animeName} is profiled as a structured system where power mechanics, governing rules, and faction incentives create repeatable outcomes. This page highlights how constraints and leverage points interact so the universe can be compared against other archive entries as a reference model.`
 
+  const systemQuestions = Array.isArray(baseResearch.systemQuestions) && baseResearch.systemQuestions.length > 0
+    ? baseResearch.systemQuestions
+    : [
+      {
+        question: `How does ${animeName}'s power system work?`,
+        answer: 'Summarize the core mechanics, costs, and leverage points in 1-2 sentences.',
+        tabIndex: 0,
+        sectionId: 'power-system-heading',
+        tabLabel: 'Power Engine'
+      },
+      {
+        question: 'What governing rules constrain outcomes?',
+        answer: 'Explain the most important constraints and what happens when they are violated.',
+        tabIndex: 3,
+        sectionId: 'rules-heading',
+        tabLabel: 'Core Laws'
+      },
+      {
+        question: 'Which factions or actors control the system?',
+        answer: 'Point to the highest-leverage institutions or entities and how they influence decisions.',
+        tabIndex: 2,
+        sectionId: 'factions-heading',
+        tabLabel: 'Factions'
+      },
+      {
+        question: 'What is the best way to understand this universe quickly?',
+        answer: 'Give a recommended reading order across tabs based on this universe’s structural thesis.',
+        tabIndex: 1,
+        sectionId: 'entity-database-heading',
+        tabLabel: 'Entity Database'
+      }
+    ]
+
   return {
     anime: animeName,
     tagline: baseResearch.tagline || 'CLASSIFIED SYSTEM',
@@ -107,6 +140,7 @@ export function generateUniversePayload(animeName, structuredResearch, options =
     aiInsights: baseResearch.aiInsights || {
       casual: 'System scan pending. Replace with a concise fan-facing interpretation.',
       deep: 'System scan pending. Replace with mechanics-focused analysis of constraints and causality.'
-    }
+    },
+    systemQuestions
   }
 }

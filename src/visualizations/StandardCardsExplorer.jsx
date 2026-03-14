@@ -35,7 +35,7 @@ export default function StandardCardsExplorer({ characters = [], isSystemMode, t
             <div className="aspect-[2/3] relative overflow-hidden">
               <ImageWithFallback
                 src={char.imageUrl}
-                alt={char.name}
+                alt={`${char.name} portrait — ${char.title} in ${isSystemMode ? "system" : "lore"} view`}
                 fallbackIcon={Icon}
                 gradientFrom={char.gradientFrom || 'gray-900'}
                 gradientTo={char.gradientTo || 'gray-950'}

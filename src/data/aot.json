@@ -586,5 +586,35 @@
       "loreDesc": "The terminal consequence of every prior causal event — a planetary extinction march initiated by a single individual who concluded that absolute freedom requires absolute annihilation of all external threats.",
       "systemDesc": "A catastrophic root-level command executing a global wipe of all external servers. The recursive causal chain reaches its terminal output: total environmental reset initiated by the very node the system was designed to contain."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "Why is Attack on Titan best analyzed as causality architecture?",
+      "answer": "Its decisive shifts come from trigger-consequence chains across generations rather than isolated battles.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How do titan powers function as a control system?",
+      "answer": "Power entries show inheritance, transformation limits, and command authority as interacting constraints.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What institutional forces keep conflict recurring?",
+      "answer": "Factions encode competing survival doctrines that repeatedly lock actors into escalation.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "How does the relationship graph help explain plot turns?",
+      "answer": "Edges expose hidden dependencies and betrayals that make key decisions predictable in retrospect.",
+      "tabIndex": 1,
+      "sectionId": "relationship-matrix-heading",
+      "tabLabel": "Entity Database"
+    }
   ]
 }

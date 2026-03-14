@@ -155,3 +155,13 @@ Every new core payload should include content that works as a standalone landing
 **Oversizing the core payload.** Core is capped for renderer performance. Put extra data in extended. `selectCoreFromExtended` handles capping automatically.
 
 **Writing `aiInsights.deep` as a plot summary.** Must read like a system analysis. Reference rules, constraints, and causal mechanics — not episode events.
+
+## Step 7 — Build `systemQuestions` (Answerability Layer)
+
+Before final validation, create 4-8 high-value, visible Q&A snippets in `systemQuestions`.
+
+Quality bar:
+- Questions should mirror real fan/system queries ("how does X work", "why did Y happen", "what rule governs Z").
+- Answers must be concise and mechanism-focused (not plot recap fluff).
+- Each answer should map to a deeper section using `tabIndex` + `sectionId`.
+- Keep language crawl-friendly and human-readable; avoid keyword stuffing.

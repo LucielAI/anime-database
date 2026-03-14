@@ -124,3 +124,12 @@ After the validator passes, do a quick manual review:
 **Mistaking extended validation for core validation.** Extended validation is lighter and will pass things that core validation rejects. Always validate the core payload with the default command (no `--extended` flag) before integration.
 
 **Treating validator output as the only QA.** The validator checks schema shape and structural profiles, not content quality. Manual review of `aiInsights.deep` content and relationship meaningfulness is still needed.
+
+## Discoverability / Answerability checks
+
+- [ ] `systemQuestions` exists with 4-8 entries.
+- [ ] Q&A entries are visible on-page (not hidden metadata).
+- [ ] Questions are universe-specific and mechanism-focused.
+- [ ] Answers are concise, accurate, and linked to relevant tabs/sections.
+- [ ] No FAQ spam, no repetitive filler, no keyword stuffing.
+- [ ] Graph/image-adjacent text and alt labels are descriptive and useful.

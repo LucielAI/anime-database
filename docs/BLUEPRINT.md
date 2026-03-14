@@ -109,3 +109,6 @@ To scale the archive safely, universes can now carry:
 
 The runtime always resolves a universe's **core payload** for rendering. If both legacy and `.core` exist, `.core` takes precedence.
 
+### Discoverability defaults
+
+All universes should ship with a visible `systemQuestions` layer (4-8 concise entries) to improve answerability, AI-crawler readability, and section-level navigation.

@@ -406,5 +406,35 @@
       "loreDesc": "A stunning rejection of unbridled military power in favor of ensuring absolute, systemic peace.",
       "systemDesc": "Institutional Deletion: The dismantling of a primary systemic organ of violence through an assertion of localized absolute authority."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "What is the core system conflict in Vinland Saga?",
+      "answer": "It contrasts violence-based status acquisition with long-horizon governance and social trust-building.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "Why do character relationships matter so much here?",
+      "answer": "Relationship edges track mentorship, trauma inheritance, and ideological inversion that drive strategic decisions.",
+      "tabIndex": 1,
+      "sectionId": "relationship-matrix-heading",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "What rules constrain power despite constant warfare?",
+      "answer": "Core laws and consequences show that revenge, loyalty, and resource scarcity impose recurring strategic limits.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How should readers approach this universe profile?",
+      "answer": "Use Factions for macro incentives, then Causal Events for the chain linking personal choices to geopolitical outcomes.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    }
   ]
 }

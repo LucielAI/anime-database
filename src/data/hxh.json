@@ -577,5 +577,35 @@
       "loreDesc": "The definitive proof-of-concept for Nen Conditions as a strategic weapon system. A single operator with maximally restricted abilities systematically dismantled a 13-member A-class threat group through superior intelligence, contractual leverage, and absolute commitment to his binding terms.",
       "systemDesc": "A textbook hostile prosecution where a single over-collateralized operator used information asymmetry and binding contractual instruments to neutralize a diversified threat syndicate. The operation demonstrated that narrow mandate with total commitment outperforms broad capability with distributed risk."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "How does Nen create a balanced yet flexible power economy?",
+      "answer": "Nen types and vows enable specialization while preserving counterplay through explicit costs and restrictions.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why are restrictions and contracts so powerful?",
+      "answer": "Rules convert self-imposed constraints into amplified output, rewarding commitment but increasing failure risk.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How should readers decode complex matchups quickly?",
+      "answer": "Start with Counterplay to map interaction logic, then use Entity Database to track cross-arc dependencies.",
+      "tabIndex": 0,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What makes HxH different from simple tier lists?",
+      "answer": "Outcomes are highly conditional; information, preparation, and contract design frequently beat raw ceiling power.",
+      "tabIndex": 1,
+      "sectionId": "entity-database-heading",
+      "tabLabel": "Entity Database"
+    }
   ]
 }

@@ -571,5 +571,42 @@
       "systemDesc": "Full-spectrum stress test where governance opacity, incentive drift, and singularity pressure converge into systemic failure."
     }
   ],
-  "animeImageUrl": "https://myanimelist.net/images/anime/10/78745l.jpg"
+  "animeImageUrl": "https://myanimelist.net/images/anime/10/78745l.jpg",
+  "systemQuestions": [
+    {
+      "question": "How does the quirk ecosystem produce both heroes and villains?",
+      "answer": "Quirks create asymmetric capability markets, and institutions decide which abilities are formalized, regulated, or criminalized.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why are rankings so central in MHA?",
+      "answer": "Rankings act as resource allocation and trust signals that shape patrol priority, media pressure, and recruitment flow.",
+      "tabIndex": 0,
+      "sectionId": "rankings-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What rules govern legal force and intervention?",
+      "answer": "Core laws define when power use is sanctioned, which determines who can act first during crisis events.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How do factions influence conflict outcomes?",
+      "answer": "Government, school, and villain networks each optimize different objectives, creating recurring systemic friction.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "How should a new reader approach this universe page?",
+      "answer": "Use Power Engine for capability basics, then Relationship Matrix to understand mentorship, rivalry, and succession pressure.",
+      "tabIndex": 1,
+      "sectionId": "relationship-matrix-heading",
+      "tabLabel": "Entity Database"
+    }
+  ]
 }

@@ -399,6 +399,31 @@ export function validateCorePayload(data) {
     }
   }
 
+
+  // ── 12b. System Questions (Answerability layer) ──
+
+  if (!Array.isArray(data.systemQuestions) || data.systemQuestions.length === 0) {
+    warnings.push('systemQuestions is missing or empty. Add 4-8 concise visible Q&A entries to improve answerability and crawler clarity.')
+  } else {
+    if (data.systemQuestions.length < 4) {
+      warnings.push(`systemQuestions has ${data.systemQuestions.length} entries; recommend at least 4 for strong long-tail coverage.`)
+    }
+    if (data.systemQuestions.length > 8) {
+      warnings.push(`systemQuestions has ${data.systemQuestions.length} entries; recommend at most 8 to avoid FAQ bloat.`)
+    }
+
+    data.systemQuestions.forEach((q, i) => {
+      if (!isNonEmptyString(q.question)) warnings.push(`systemQuestions[${i}] missing non-empty question`)
+      if (!isNonEmptyString(q.answer)) warnings.push(`systemQuestions[${i}] missing non-empty answer`)
+      if (q.tabIndex !== undefined && (!Number.isInteger(q.tabIndex) || q.tabIndex < 0 || q.tabIndex > 3)) {
+        warnings.push(`systemQuestions[${i}] has invalid tabIndex (${q.tabIndex}); expected integer 0-3 when present.`)
+      }
+      if (q.sectionId !== undefined && typeof q.sectionId !== 'string') {
+        warnings.push(`systemQuestions[${i}] has non-string sectionId; expected heading id string when present.`)
+      }
+    })
+  }
+
   // ── Output ──
 
   const hasErrors = errors.length > 0

@@ -553,5 +553,35 @@
       "loreDesc": "The masterstroke that breaks the binary prison. Using Future Gadget No. 6 (Cyalume Saber, which failed) as a backup plan gone wrong, Okabe sacrifices his own body as the blood source, swaps a toy to destroy the thesis via fire, and stages the perfect deception. The convergence constraint is satisfied with a lie.",
       "systemDesc": "A multi-vector observation-falsification exploit: (1) asset swap ensures thesis destruction via environmental hazard, (2) self-inflicted damage provides the visual false-positive, (3) target incapacitation prevents contradictory observer input. All three vectors must succeed simultaneously to spoof the convergence checker and unlock divergence 1.048596%."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "How does Steins;Gate’s time-travel system stay coherent?",
+      "answer": "The system uses worldline divergence constraints, so each intervention carries bounded but accumulative causal impact.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Why do small actions trigger major timeline shifts?",
+      "answer": "Causal events show leverage points where communication or timing differences propagate into large outcome deltas.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "What rules limit experimentation with time mechanics?",
+      "answer": "Core laws define operational boundaries and failure costs that prevent infinite free retries.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Best path for understanding this page quickly?",
+      "answer": "Begin with Causal Events, then read Entity Database to see which actors anchor or destabilize each worldline.",
+      "tabIndex": 1,
+      "sectionId": "entity-database-heading",
+      "tabLabel": "Entity Database"
+    }
   ]
 }

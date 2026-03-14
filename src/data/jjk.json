@@ -638,5 +638,35 @@
       "loreDesc": "The ultimate expression of system dominance out-scaling the patchwork defense subroutines. You cannot win inside another's domain using a Simple Domain; you can only delay your execution.",
       "systemDesc": "High-dominance domain deployment pressures anti-domain defenses by exhausting their duration and forcing repeated stability checks."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "How does cursed energy behave as a system?",
+      "answer": "It is an energy-conversion framework where emotion, technique architecture, and domain control shape effective output.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why are domain interactions so decisive?",
+      "answer": "Domain mechanics redefine engagement rules, forcing opponents into unfavorable information and space conditions.",
+      "tabIndex": 0,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What governance rules shape sorcerer operations?",
+      "answer": "Core laws map institutional constraints, taboo techniques, and sanction boundaries that affect deployment choices.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How do school, clan, and curse factions interact?",
+      "answer": "Faction and relationship layers capture alliance volatility and succession pressure in high-risk environments.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    }
   ]
 }

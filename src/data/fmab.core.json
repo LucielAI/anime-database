@@ -528,5 +528,42 @@
       "loreDesc": "Four hundred years of engineered atrocity converge in a single day. The parasite achieves its goal, the counter-network fires, and the system's final verdict is delivered by Truth itself — proving that no amount of stolen power can override the ledger.",
       "systemDesc": "The terminal convergence event where the parasitic extraction algorithm executes against the planetary energy grid, the decentralized counter-network activates its failsafe sequence, and the root-level arbiter (Truth) enforces final thermodynamic compliance — stripping the parasitic process of all stolen resources and returning it to its original null state."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "How does alchemy work at a system level?",
+      "answer": "Alchemy is a transformation protocol bounded by equivalent exchange, so gains are always paid through material or structural cost.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why is equivalent exchange more than a slogan?",
+      "answer": "The rules section shows it as a hard accounting layer that limits shortcuts and defines failure states.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How did Amestris become a national transmutation engine?",
+      "answer": "Causal events connect military expansion, sacrifice logistics, and state doctrine into one engineered pipeline.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Which factions drive or resist the core mechanism?",
+      "answer": "Faction cards map state, resistance, and homunculus incentives that keep the system stable or push it toward collapse.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "Best way to read FMAB in this archive?",
+      "answer": "Start with Power Engine, then jump to Causal Events to see how transmutation rules scale from lab practice to geopolitical design.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    }
   ]
 }

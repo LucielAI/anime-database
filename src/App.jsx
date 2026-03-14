@@ -38,7 +38,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default' }) {
         {data.animeImageUrl && !imageFailed ? (
           <img
             src={data.animeImageUrl}
-            alt={data.anime}
+            alt={`${data.anime} universe cover art`}
             width={400}
             height={250}
             loading="lazy"
@@ -88,7 +88,7 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
               />
               <img
                 src={entry.animeImageUrl}
-                alt={entry.anime}
+                alt={`${entry.anime} featured universe artwork`}
                 className="relative w-full h-full object-cover object-center opacity-90 group-hover:scale-105 transition-transform duration-500"
                 loading={priority ? 'eager' : 'lazy'}
                 fetchPriority={priority ? 'high' : 'auto'}

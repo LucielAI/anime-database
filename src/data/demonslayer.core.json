@@ -480,5 +480,42 @@
       "loreDesc": "The hidden war collapses into one endless night before dawn.",
       "systemDesc": "Endgame convergence event where distributed resistance attempts root-process deletion under time-locked environmental constraints."
     }
+  ],
+  "systemQuestions": [
+    {
+      "question": "How does breathing style combat actually generate advantage?",
+      "answer": "Breathing styles are disciplined execution frameworks that convert training, timing, and physiology into repeatable combat outcomes.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why do matchups matter more than raw strength in many fights?",
+      "answer": "Counterplay shows branch-specific interactions where tempo, regeneration limits, and style compatibility decide outcomes.",
+      "tabIndex": 0,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What are the core rules that demons and slayers cannot ignore?",
+      "answer": "Core laws map sunlight, nichirin constraints, and vulnerability windows that define all viable strategies.",
+      "tabIndex": 3,
+      "sectionId": "rules-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How do corps command and Upper Moon pressure reshape the war?",
+      "answer": "Faction dynamics explain how centralized discipline meets decentralized high-threat adversaries.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "What makes Demon Slayer structurally distinct?",
+      "answer": "It is a constrained attrition system: survival depends on maintaining technical discipline under severe physical and emotional load.",
+      "tabIndex": 3,
+      "sectionId": "causal-events-heading",
+      "tabLabel": "Core Laws"
+    }
   ]
 }

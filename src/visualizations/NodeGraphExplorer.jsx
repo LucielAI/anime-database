@@ -63,7 +63,7 @@ function getEdgeLabelPos(sx, sy, tx, ty) {
   return { x: mx + perpX, y: my + perpY }
 }
 
-export default function NodeGraphExplorer({ characters = [], relationships = [], isSystemMode, theme }) {
+export default function NodeGraphExplorer({ characters = [], relationships = [], isSystemMode, theme, data }) {
   const svgRef = useRef(null)
   const simulationRef = useRef(null)
   const [nodes, setNodes] = useState([])
@@ -147,6 +147,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
   nodes.forEach(n => { nodeMap[n.name] = n })
 
   const accent = theme?.accent || '#22d3ee'
+  const graphSummary = `${data?.anime || 'Universe'} relationship graph showing ${characters.length} entities and ${relationships.length} directed edges.`
 
   const getSvgPoint = (e) => {
     const svg = svgRef.current
@@ -231,6 +232,8 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
       <div className={`relative w-full overflow-x-auto scrollbar-hide rounded-xl border border-white/10 bg-[#050508] ${isSystemMode ? 'sys-mode-container shadow-[inset_0_0_100px_rgba(34,211,238,0.03)]' : ''}`}>
         <svg
           ref={svgRef}
+          role="img"
+          aria-label={graphSummary}
           viewBox={`0 0 ${VB_W} ${VB_H}`}
           className="w-full h-auto max-h-[650px]"
           style={{ aspectRatio: `${VB_W} / ${VB_H}` }}
@@ -240,6 +243,8 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
           onTouchMove={handleMove}
           onTouchEnd={handleEnd}
         >
+          <title>{graphSummary}</title>
+          <desc>Interactive network map of characters and relationship edge types. Select nodes to inspect local dependencies and conflict links.</desc>
           <defs>
             {/* Single shared clip at origin — each node group uses transform */}
             <clipPath id="portrait-clip">
@@ -465,7 +470,7 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
               {selectedChar.imageUrl && !imgFailed[selectedChar.name] ? (
                 <img
                   src={selectedChar.imageUrl}
-                  alt={selectedChar.name}
+                  alt={`${selectedChar.name} portrait — ${selectedChar.title}`}
                   className="w-full h-full object-cover object-top"
                   onError={() => setImgFailed(prev => ({ ...prev, [selectedChar.name]: true }))}
                 />

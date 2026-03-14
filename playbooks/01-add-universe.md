@@ -145,3 +145,10 @@ Every new core payload should include content that works as a standalone landing
 **Not running image patch before validation.** Image validation will flag missing hosts. Run the patcher first.
 
 **Incomplete character objects.** Every character requires 12 specific fields. Missing any one causes hard errors per character. See `playbooks/06-payload-field-reference.md`.
+
+## Required discoverability enhancement (default)
+
+Include `systemQuestions` in your core payload before integration. This is the archive default for long-tail answerability and AI-readable summaries.
+
+- Target 4-8 concise Q&A entries.
+- Tie each entry to an existing tab via `tabIndex` and, where possible, a section heading via `sectionId`.

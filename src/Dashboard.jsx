@@ -8,6 +8,7 @@ import WhyThisRenderer from './components/WhyThisRenderer'
 import AIInsightPanel from './components/AIInsightPanel'
 import ShareButton from './components/ShareButton'
 import FeedbackBlock from './components/FeedbackBlock'
+import SystemQuestionsPanel from './components/SystemQuestionsPanel'
 import { useSystemReveal } from './hooks/useSystemReveal'
 import { useShareFrame } from './hooks/useShareFrame'
 import { getClassificationLabel } from './utils/getClassificationLabel'
@@ -72,6 +73,18 @@ export default function Dashboard({ data }) {
   const universeIntro = useMemo(() => buildUniverseIntroduction(data), [data])
   const headerFlavor = data?.headerFlavor
   const revealOverlay = getRevealOverlay(data?.revealOverlay)
+
+  const handleJumpToSection = (tabIndex, sectionId) => {
+    setActiveTab(tabIndex)
+    if (!sectionId || typeof window === 'undefined') return
+
+    requestAnimationFrame(() => {
+      const target = document.getElementById(sectionId)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    })
+  }
 
   return (
     <div
@@ -193,7 +206,7 @@ export default function Dashboard({ data }) {
             </div>
             
             {data?.logoUrl && (
-              <img src={data.logoUrl} alt={`${animeName} Logo`} className="h-16 md:h-20 object-contain mt-2 mb-1 drop-shadow-lg" />
+              <img src={data.logoUrl} alt={`${animeName} official logo artwork`} className="h-16 md:h-20 object-contain mt-2 mb-1 drop-shadow-lg" />
             )}
 
             {!data?.logoUrl && (
@@ -243,6 +256,10 @@ export default function Dashboard({ data }) {
           </p>
         </div>
       </section>
+
+      <div className="share-frame-hide">
+        <SystemQuestionsPanel data={data} onJumpToSection={handleJumpToSection} />
+      </div>
 
       {/* 5-Bullet System Summary */}
       <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
