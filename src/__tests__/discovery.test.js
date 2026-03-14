@@ -18,4 +18,11 @@ describe('discovery utils', () => {
     const hits = filterCatalogUniverses(UNIVERSE_CATALOG, 'fullmetal')
     expect(hits.some(entry => entry.id === 'fmab')).toBe(true)
   })
+
+  it('returns unique suggestions for a daily curation set', () => {
+    const suggestions = getCuratedSuggestions(UNIVERSE_CATALOG, 'aot')
+    const ids = suggestions.map(entry => entry.id)
+    expect(new Set(ids).size).toBe(ids.length)
+  })
+
 })

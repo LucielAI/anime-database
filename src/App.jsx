@@ -58,6 +58,56 @@ function UniverseLinkCard({ data, compact = false }) {
   )
 }
 
+
+function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
+  if (!entry) return null
+
+  return (
+    <Link
+      to={`/universe/${entry.id}`}
+      className={`group rounded-xl border border-white/10 bg-white/5 overflow-hidden transition-all hover:border-cyan-400/40 ${className}`}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+        <div className="relative" style={{ aspectRatio: '4/3' }}>
+          {entry.animeImageUrl ? (
+            <>
+              <img
+                src={entry.animeImageUrl}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover object-center opacity-25 blur-sm scale-105"
+                loading={priority ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+              <img
+                src={entry.animeImageUrl}
+                alt={entry.anime}
+                className="relative w-full h-full object-cover object-center opacity-90 group-hover:scale-105 transition-transform duration-500"
+                loading={priority ? 'eager' : 'lazy'}
+                fetchPriority={priority ? 'high' : 'auto'}
+                decoding="async"
+                sizes="(max-width: 1024px) 90vw, 45vw"
+              />
+            </>
+          ) : (
+            <div className="w-full h-full" style={{ background: 'linear-gradient(150deg, #111827 0%, #0b1220 55%, #030712 100%)' }} />
+          )}
+          <div className="absolute inset-0 bg-linear-to-t from-[#050508] via-[#050508]/50 to-transparent" />
+        </div>
+
+        <div className="p-6 flex flex-col justify-between min-h-[170px]">
+          <div>
+            <p className="text-[10px] text-cyan-300 tracking-[0.2em] uppercase mb-2">Primary Feature</p>
+            <h3 className="text-xl md:text-2xl font-bold uppercase mb-2 leading-tight">{entry.anime}</h3>
+            <p className="text-xs text-gray-400 leading-relaxed">{entry.tagline}</p>
+          </div>
+          <span className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 uppercase tracking-[0.15em]">Enter archive <ArrowRight className="w-3.5 h-3.5" /></span>
+        </div>
+      </div>
+    </Link>
+  )
+}
+
 function Home() {
   const [sortMode, setSortMode] = useState('latest')
   const seo = buildHomeSeo(UNIVERSE_CATALOG)
@@ -97,27 +147,25 @@ function Home() {
         </div>
 
         {primaryFeatured && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <Link to={`/universe/${primaryFeatured.id}`} className="lg:col-span-2 rounded-xl border border-white/10 bg-white/5 overflow-hidden hover:border-cyan-400/40 transition-all">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="relative" style={{ aspectRatio: '4/3' }}>
-                  <img src={primaryFeatured.animeImageUrl} alt={primaryFeatured.anime} className="w-full h-full object-cover opacity-80" loading="eager" />
-                </div>
-                <div className="p-6 flex flex-col justify-between">
-                  <div>
-                    <p className="text-[10px] text-cyan-300 tracking-[0.2em] uppercase mb-2">Primary Feature</p>
-                    <h3 className="text-2xl font-bold uppercase mb-2">{primaryFeatured.anime}</h3>
-                    <p className="text-xs text-gray-400 leading-relaxed">{primaryFeatured.tagline}</p>
-                  </div>
-                  <span className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 uppercase tracking-[0.15em]">Enter archive <ArrowRight className="w-3.5 h-3.5" /></span>
-                </div>
+          <>
+            <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-4">
+              <FeaturedPrimaryCard entry={primaryFeatured} className="lg:col-span-2" priority />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                {secondaryFeatured.map(entry => <UniverseLinkCard key={entry.id} data={entry} compact />)}
               </div>
-            </Link>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-              {secondaryFeatured.map(entry => <UniverseLinkCard key={entry.id} data={entry} compact />)}
             </div>
-          </div>
+
+            <div className="lg:hidden -mx-1 px-1 overflow-x-auto snap-x snap-mandatory pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex gap-3 w-max pr-1">
+                <FeaturedPrimaryCard entry={primaryFeatured} priority className="snap-start w-[88vw] max-w-[460px] shrink-0" />
+                {secondaryFeatured.map(entry => (
+                  <div key={entry.id} className="snap-start w-[78vw] max-w-[360px] shrink-0">
+                    <UniverseLinkCard data={entry} compact />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
         )}
       </section>
 

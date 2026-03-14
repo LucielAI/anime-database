@@ -66,6 +66,31 @@ function deterministicPick(items, seed) {
   return items[hash % items.length]
 }
 
+function tokenize(text) {
+  return String(text || '')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter(token => token.length >= 4)
+}
+
+function getThematicScore(candidate, current, currentTokens) {
+  if (!candidate || !current) return 0
+
+  let score = 0
+  if (candidate.visualizationHint === current.visualizationHint) score += 4
+
+  const candidateTokens = new Set(tokenize(candidate.tagline))
+  for (const token of currentTokens) {
+    if (candidateTokens.has(token)) score += 1
+  }
+
+  const currentClass = DISCOVERY_METADATA[current.id]?.classification
+  const candidateClass = DISCOVERY_METADATA[candidate.id]?.classification
+  if (currentClass && candidateClass && currentClass === candidateClass) score += 2
+
+  return score
+}
+
 export function getCuratedSuggestions(catalog, currentId) {
   const current = catalog.find(entry => entry.id === currentId)
   const pool = catalog.filter(entry => entry.id !== currentId)
@@ -77,10 +102,20 @@ export function getCuratedSuggestions(catalog, currentId) {
   const popular = sortCatalogUniverses(pool, 'most-viewed').find(entry => !seen.has(entry.id))
   if (popular) seen.add(popular.id)
 
-  const thematicPool = pool.filter(entry => entry.visualizationHint === current?.visualizationHint && !seen.has(entry.id))
+  const currentTokens = tokenize(current?.tagline)
   const fallbackPool = pool.filter(entry => !seen.has(entry.id))
+  const thematicPool = fallbackPool
+    .map(entry => ({
+      entry,
+      score: getThematicScore(entry, current, currentTokens),
+    }))
+    .filter(row => row.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(row => row.entry)
+
   const seed = `${currentId || 'archive'}:${new Date().toISOString().slice(0, 10)}`
-  const thematic = deterministicPick(thematicPool.length ? thematicPool : fallbackPool, seed)
+  const themedCandidates = thematicPool.slice(0, 4)
+  const thematic = deterministicPick(themedCandidates.length ? themedCandidates : fallbackPool, seed)
 
   return [newest, popular, thematic].filter(Boolean).slice(0, 3)
 }

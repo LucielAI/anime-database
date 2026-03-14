@@ -97,6 +97,7 @@ After the validator passes, do a quick manual review:
 - [ ] **Rule Breakers anomalies render titles**: anomaly cards show `name` + `ruleViolated`
 - [ ] **Causal matrix rows render all columns**: each event has `name`, `trigger`, `consequence`, `timelinePosition`
 - [ ] **Mobile typography sanity** (≈390–430px width): primary card headings (Power Engine/Factions/Core Laws) are readable and not forced into `...` truncation
+- [ ] **Homepage featured rail sanity** (≈390–430px width): featured cards horizontal snap/slide works, hero image foreground remains legible over background glow, and no cropped artifacting appears
 - [ ] Relationships represent meaningful structural edges (alliances, conflicts, dependencies) — not filler
 - [ ] `causalEvents` have ordering logic (required for `timeline` renderer)
 - [ ] `counterplay` entries exist and form a combat economy (required for `counter-tree`)
