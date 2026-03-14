@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { ExternalLink, Camera, X, Network } from 'lucide-react'
+import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
 import SystemSummary from './components/SystemSummary'
@@ -34,6 +34,8 @@ const DEFAULT_THEME = {
   modeGlow: 'rgba(34,211,238,0.25)',
   heroGradient: 'rgba(5,5,20,0.95)',
 }
+
+const SUPPORT_URL = 'https://buymeacoffee.com/hashiai'
 
 function buildUniverseIntroduction(data) {
   if (!data) return ''
@@ -367,13 +369,25 @@ export default function Dashboard({ data }) {
             <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-cyan-400 group-hover:text-white transition-colors" fill="currentColor">
               <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.63a8.23 8.23 0 004.79 1.53V6.71a4.85 4.85 0 01-1.03-.02z"/>
             </svg>
-            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-400 group-hover:text-white transition-colors uppercase">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">
               @KENSHIPEAK
             </span>
           </a>
+          <a
+            href={SUPPORT_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="group flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300"
+          >
+            <HeartHandshake className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white transition-colors" />
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">
+              Support the archive
+            </span>
+          </a>
+
         </div>
-        <p className="text-[10px] text-white/15 tracking-[0.2em] uppercase max-w-2xl mx-auto px-6 text-center">
-          Unofficial fan-made interactive analysis. All characters, names, and lore belong to their respective creators and studios.
+        <p className="text-[10px] text-gray-300/70 tracking-[0.2em] uppercase max-w-2xl mx-auto px-6 text-center">
+          Unofficial fan-made interactive analysis. All characters, names, and lore belong to their respective creators and studios. Created by Hashi.Ai.
         </p>
       </footer>
     </div>

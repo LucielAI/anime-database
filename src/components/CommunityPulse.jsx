@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import { Flame, HeartHandshake, Radio, Send } from 'lucide-react'
 
+const SUPPORT_URL = 'https://buymeacoffee.com/hashiai'
+
 const NEXT_UNIVERSE_CANDIDATES = [
   'Naruto',
   'One Piece',
@@ -106,10 +108,12 @@ export default function CommunityPulse() {
             <Flame className="w-3 h-3 text-cyan-400" /> Follow updates
           </a>
           <a
-            href="mailto:kenshipeak@gmail.com?subject=Support%20Anime%20Architecture%20Archive"
+            href={SUPPORT_URL}
+            target="_blank"
+            rel="noreferrer"
             className="min-h-[44px] px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.18em] uppercase font-bold text-gray-300 inline-flex items-center gap-1.5"
           >
-            <HeartHandshake className="w-3 h-3 text-emerald-400" /> Support / Sponsor
+            <HeartHandshake className="w-3 h-3 text-emerald-400" /> Buy me a coffee
           </a>
         </div>
       </div>

@@ -20,6 +20,8 @@ const Dashboard = lazy(() => import('./Dashboard'))
 const SpeedInsights = lazy(() => import('@vercel/speed-insights/react').then(m => ({ default: m.SpeedInsights })))
 const Analytics = lazy(() => import('@vercel/analytics/react').then(m => ({ default: m.Analytics })))
 
+const SUPPORT_URL = 'https://buymeacoffee.com/hashiai'
+
 function UniverseLinkCard({ data, compact = false }) {
   const theme = data.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
   const classLabel = getClassificationLabel(data.visualizationHint)
@@ -67,8 +69,8 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
       to={`/universe/${entry.id}`}
       className={`group rounded-xl border border-white/10 bg-white/5 overflow-hidden transition-all hover:border-cyan-400/40 ${className}`}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-        <div className="relative" style={{ aspectRatio: '4/3' }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[320px]">
+        <div className="relative h-full min-h-[220px] md:min-h-[320px]" style={{ aspectRatio: '4/3' }}>
           {entry.animeImageUrl ? (
             <>
               <img
@@ -130,7 +132,7 @@ function Home() {
           Anime Architecture Archive
         </h1>
         <p className="text-sm md:text-base text-cyan-400/60 tracking-[0.25em] uppercase font-bold">Fictional Universe Intelligence System</p>
-        <p className="mt-6 text-xs md:text-sm text-gray-500 max-w-2xl leading-relaxed">
+        <p className="mt-6 text-xs md:text-sm text-gray-300/80 max-w-2xl leading-relaxed">
           Browse a structured archive of fictional universe systems. Discover power mechanics, faction topology, and causal constraints through curated paths that stay fast as the catalog grows.
         </p>
         <div className="mt-8 text-[10px] text-white/30 tracking-widest uppercase flex flex-wrap justify-center gap-4">
@@ -140,6 +142,7 @@ function Home() {
         </div>
       </header>
 
+      <main id="main-content">
       <section className="max-w-6xl mx-auto px-6 py-10" aria-labelledby="featured-archives-heading">
         <div className="flex items-center gap-2 mb-4">
           <Star className="w-4 h-4 text-cyan-300" />
@@ -197,18 +200,26 @@ function Home() {
           <Link to="/universes" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-[10px] uppercase tracking-[0.2em] text-gray-300 hover:text-white transition-colors">
             Browse all universes
           </Link>
-          <span className="text-[10px] text-gray-500 tracking-[0.15em] uppercase">Showing 6 of {UNIVERSE_CATALOG.length}</span>
+          <span className="text-[10px] text-gray-300/70 tracking-[0.15em] uppercase">Showing 6 of {UNIVERSE_CATALOG.length}</span>
         </div>
       </section>
 
       <CommunityPulse />
 
       <footer className="mt-12 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
-        <a href="https://www.tiktok.com/@kenshipeak" target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">
-          <span className="text-[10px] font-bold tracking-[0.2em] text-gray-400 group-hover:text-white transition-colors uppercase">@KENSHIPEAK</span>
-          <ExternalLink className="w-3 h-3 text-gray-600 group-hover:text-cyan-400 transition-colors" />
-        </a>
+        <div className="flex flex-wrap justify-center gap-3">
+          <a href="https://www.tiktok.com/@kenshipeak" target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">@KENSHIPEAK</span>
+            <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+          </a>
+          <a href={SUPPORT_URL} target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">Support the archive</span>
+            <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-emerald-400 transition-colors" />
+          </a>
+        </div>
+        <p className="text-[10px] tracking-[0.2em] uppercase text-gray-300">Created by Hashi.Ai</p>
       </footer>
+      </main>
     </div>
   )
 }
@@ -235,20 +246,20 @@ function UniversesCatalogRoute() {
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono px-6 py-14">
       <SeoHead {...seo} structuredData={structuredData} />
-      <div className="max-w-6xl mx-auto">
+      <main id="catalog-main" className="max-w-6xl mx-auto">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">Universe Catalog</h1>
           <Link to="/" className="text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white">← Back Home</Link>
         </div>
-        <p className="text-xs text-gray-500 max-w-3xl mb-6">Search and sort the archive using lightweight catalog metadata only. Universe payloads still lazy-load when you open a route.</p>
+        <p className="text-xs text-gray-300/80 max-w-3xl mb-6">Search and sort the archive using lightweight catalog metadata only. Universe payloads still lazy-load when you open a route.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
           <label className="md:col-span-2 flex items-center gap-2 border border-white/10 rounded-lg px-3 bg-white/5">
-            <Search className="w-4 h-4 text-gray-500" />
+            <Search className="w-4 h-4 text-gray-300/70" />
             <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search universe, thesis, or tagline..." className="w-full bg-transparent h-11 text-sm outline-none" />
           </label>
           <label className="flex items-center gap-2 border border-white/10 rounded-lg px-3 bg-white/5">
-            <ListFilter className="w-4 h-4 text-gray-500" />
+            <ListFilter className="w-4 h-4 text-gray-300/70" />
             <select value={sortMode} onChange={(e) => setSortMode(e.target.value)} className="w-full bg-transparent h-11 text-sm outline-none">
               <option className="bg-black" value="latest">Latest</option>
               <option className="bg-black" value="most-viewed">Most Viewed</option>
@@ -268,7 +279,7 @@ function UniversesCatalogRoute() {
             </button>
           </div>
         )}
-      </div>
+      </main>
     </div>
   )
 }

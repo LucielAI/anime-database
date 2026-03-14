@@ -119,7 +119,7 @@ export function buildHomeStructuredData(catalog = []) {
       url: `${SITE_URL}/`,
       creator: {
         '@type': 'Organization',
-        name: SITE_NAME,
+        name: 'Hashi.Ai',
       },
       isAccessibleForFree: true,
     },
@@ -158,7 +158,7 @@ export function buildUniverseStructuredData(preview) {
       measurementTechnique: ['lore analysis', 'system analysis', 'causal mapping'],
       creator: {
         '@type': 'Organization',
-        name: SITE_NAME,
+        name: 'Hashi.Ai',
       },
     },
     {
