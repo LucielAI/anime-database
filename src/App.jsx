@@ -253,8 +253,8 @@ function Home() {
 
       <footer className="mt-12 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <div className="flex flex-wrap justify-center gap-3">
-          <a href="https://www.tiktok.com/@kenshipeak" target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">
-            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">@KENSHIPEAK</span>
+          <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">@HASHI.AI</span>
             <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors" />
           </a>
           <a href={SUPPORT_URL} target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300">

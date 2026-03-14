@@ -100,7 +100,7 @@ export default function CommunityPulse() {
 
         <div className="mt-5 pt-4 border-t border-white/5 flex flex-wrap gap-2">
           <a
-            href="https://www.tiktok.com/@kenshipeak"
+            href="https://www.tiktok.com/@hashi.ai"
             target="_blank"
             rel="noreferrer"
             className="min-h-[44px] px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.18em] uppercase font-bold text-gray-300 inline-flex items-center gap-1.5"

@@ -412,7 +412,7 @@ export default function Dashboard({ data }) {
             </a>
           )}
           <a
-            href="https://www.tiktok.com/@kenshipeak"
+            href="https://www.tiktok.com/@hashi.ai"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300"
@@ -421,7 +421,7 @@ export default function Dashboard({ data }) {
               <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.63a8.23 8.23 0 004.79 1.53V6.71a4.85 4.85 0 01-1.03-.02z"/>
             </svg>
             <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">
-              @KENSHIPEAK
+              @HASHI.AI
             </span>
           </a>
           <a
