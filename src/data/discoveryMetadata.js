@@ -9,5 +9,6 @@ export const DISCOVERY_METADATA = {
   fmab: { addedAt: '2024-04-28', popularityBaseline: 91, classification: 'affinity', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for alchemy exchange mechanics.' },
   codegeass: { addedAt: '2024-05-18', popularityBaseline: 86, classification: 'network', startTab: 'factions', startLabel: 'Start with FACTIONS for empire-scale command structures.' },
   mha: { addedAt: '2024-06-01', popularityBaseline: 87, classification: 'network', startTab: 'entity-database', startLabel: 'Start with ENTITY DATABASE to parse quirk-role ecosystems.' },
-  frieren: { addedAt: '2024-06-22', popularityBaseline: 95, classification: 'causal', startTab: 'core-laws', startLabel: 'Start with CORE LAWS for suppression and visualization constraints.' }
+  frieren: { addedAt: '2024-06-22', popularityBaseline: 95, classification: 'causal', startTab: 'core-laws', startLabel: 'Start with CORE LAWS for suppression and visualization constraints.' },
+  sololeveling: { addedAt: '2024-07-05', popularityBaseline: 93, featuredRank: 4, classification: 'network', startTab: 'entity-database', startLabel: 'Start with ENTITY DATABASE to map gate pressure, sovereign scaling, and dependency edges.' }
 }

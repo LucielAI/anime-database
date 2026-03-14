@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { filterCatalogUniverses, getBestEntryConfig, getCuratedSuggestions, sortCatalogUniverses } from '../utils/discovery'
 import { UNIVERSE_CATALOG } from '../data/catalog'
+import { DISCOVERY_METADATA } from '../data/discoveryMetadata'
 
 describe('discovery utils', () => {
   it('sorts alphabetically', () => {
@@ -35,6 +36,13 @@ describe('discovery utils', () => {
   it('builds best-entry fallback when metadata is missing', () => {
     const config = getBestEntryConfig('unknown-slug', 'timeline')
     expect(config.tabIndex).toBe(3)
+  })
+
+  it('ensures every catalog universe has discovery metadata', () => {
+    const missing = UNIVERSE_CATALOG
+      .map(entry => entry.id)
+      .filter(id => !Object.prototype.hasOwnProperty.call(DISCOVERY_METADATA, id))
+    expect(missing).toEqual([])
   })
 
 })
