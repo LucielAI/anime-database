@@ -85,6 +85,12 @@ After the validator passes, do a quick manual review:
 - [ ] `animeImageUrl` is set (not null) unless unavailable from MAL
 
 **Data quality:**
+
+**Discoverability checks:**
+- [ ] Universe route resolves at `/universe/{slug}` and redirects any casing variants to canonical lowercase
+- [ ] Universe has unique title + meta description via SEO utilities
+- [ ] Universe has canonical URL and OG/Twitter image metadata
+- [ ] `npm run validate:indexing` passes after sitemap regeneration
 - [ ] Characters justify inclusion (3+ relationships or clear system relevance)
 - [ ] **Core Laws tab renders real content**: rule heading/body are not blank (`name`, `loreConsequence`, `systemEquivalent` present)
 - [ ] **Combat Matchups render real labels**: no `[ATTACK]`/`[COUNTER]` placeholders (`attacker`, `defender`, `mechanic` present)

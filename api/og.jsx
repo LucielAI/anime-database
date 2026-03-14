@@ -1,47 +1,34 @@
-import { ImageResponse } from '@vercel/og';
+import { ImageResponse } from '@vercel/og'
+import { UNIVERSE_CATALOG_MAP } from '../src/data/catalog.js'
+import { getClassificationLabel } from '../src/utils/getClassificationLabel.js'
 
 export const config = {
   runtime: 'edge',
-};
+}
+
+const FALLBACK = {
+  anime: 'Anime Architecture Archive',
+  tagline: 'Fictional Universe Intelligence System',
+  visualizationHint: 'standard-cards',
+  themeColors: { primary: '#22d3ee' },
+}
+
+function normalizePreview(id) {
+  const normalizedId = (id || '').trim().toLowerCase()
+  return UNIVERSE_CATALOG_MAP[normalizedId] || FALLBACK
+}
 
 export default async function handler(request) {
   try {
-    const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id') || 'aot';
-    
-    let title = 'Anime Architecture Archive';
-    let subtitle = 'Fictional Universe Intelligence System';
-    let themeColor = '#22d3ee'; // cyan
-    let typeLab = 'ARCHIVE';
+    const { searchParams } = new URL(request.url)
+    const preview = normalizePreview(searchParams.get('id'))
 
-    if (id === 'aot') {
-      title = 'ATTACK ON TITAN';
-      subtitle = 'CAUSALITY, DETERMINISM & THE TIMELINE';
-      themeColor = '#ef4444'; // red
-      typeLab = 'TIMELINE ARCHIVE';
-    } else if (id === 'jjk') {
-      title = 'JUJUTSU KAISEN';
-      subtitle = 'NEGATIVE ENERGY ECONOMY & COUNTERPLAY';
-      themeColor = '#3b82f6'; // blue
-      typeLab = 'COUNTER-TREE ARCHIVE';
-    } else if (id === 'hxh') {
-      title = 'HUNTER x HUNTER';
-      subtitle = 'STRATEGIC INTERDEPENDENCE & CONTRACTS';
-      themeColor = '#10b981'; // green
-      typeLab = 'NODE GRAPH ARCHIVE';
-    } else if (id === 'vinlandsaga') {
-      title = 'VINLAND SAGA';
-      subtitle = 'SOCIAL MECHANICS & VIOLENCE ECONOMY';
-      themeColor = '#dc2626'; // red
-      typeLab = 'NODE GRAPH ARCHIVE';
-    } else if (id === 'steinsgate') {
-      title = 'STEINS;GATE';
-      subtitle = 'ATTRACTOR FIELDS & CONVERGENCE';
-      themeColor = '#22d3ee'; // cyan
-      typeLab = 'TIMELINE ARCHIVE';
-    }
+    const title = preview.anime.toUpperCase()
+    const subtitle = preview.tagline.toUpperCase()
+    const typeLabel = `${getClassificationLabel(preview.visualizationHint).toUpperCase()} ARCHIVE`
+    const themeColor = preview.themeColors?.primary || '#22d3ee'
 
-    const fontData = await fetch(new URL('./assets/RobotoMono-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer());
+    const fontData = await fetch(new URL('./assets/RobotoMono-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer())
 
     return new ImageResponse(
       (
@@ -63,24 +50,24 @@ export default async function handler(request) {
           <div style={{ display: 'flex', border: '2px solid rgba(255,255,255,0.1)', padding: '60px', borderRadius: '24px', backgroundColor: 'rgba(255,255,255,0.03)', flexDirection: 'column', width: '100%', height: '100%', justifyContent: 'space-between', boxShadow: `inset 0 0 100px ${themeColor}20` }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ color: themeColor, fontSize: '28px', letterSpacing: '0.3em', fontWeight: 'bold' }}>// {typeLab}</span>
+                <span style={{ color: themeColor, fontSize: '28px', letterSpacing: '0.2em', fontWeight: 'bold' }}>// {typeLabel}</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.2)', padding: '12px 24px', borderRadius: '50px' }}>
-                <span style={{ color: '#fff', fontSize: '20px', letterSpacing: '0.2em', fontWeight: 'bold' }}>SYS_MODE: ONLINE</span>
+                <span style={{ color: '#fff', fontSize: '20px', letterSpacing: '0.2em', fontWeight: 'bold' }}>SYSTEM PROFILE</span>
               </div>
             </div>
-            
+
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
-              <h1 style={{ fontSize: '110px', fontWeight: '900', color: '#fff', margin: '0 0 20px 0', letterSpacing: '-0.02em', lineHeight: '1.1', textShadow: `0 0 40px ${themeColor}60` }}>
+              <h1 style={{ fontSize: '84px', fontWeight: '900', color: '#fff', margin: '0 0 20px 0', letterSpacing: '-0.02em', lineHeight: '1.1', textShadow: `0 0 40px ${themeColor}60`, maxWidth: '1000px' }}>
                 {title}
               </h1>
-              <p style={{ fontSize: '32px', color: themeColor, margin: 0, letterSpacing: '0.2em', fontWeight: 'bold' }}>
+              <p style={{ fontSize: '26px', color: themeColor, margin: 0, letterSpacing: '0.08em', fontWeight: 'bold', maxWidth: '1000px' }}>
                 {subtitle}
               </p>
             </div>
-            
+
             <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
-              <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '24px', letterSpacing: '0.4em', fontWeight: 'bold' }}>ANIME_ARCHITECTURE_ARCHIVE</span>
+              <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '24px', letterSpacing: '0.3em', fontWeight: 'bold' }}>ANIME_ARCHITECTURE_ARCHIVE</span>
             </div>
           </div>
         </div>
@@ -96,9 +83,9 @@ export default async function handler(request) {
           },
         ],
       }
-    );
-  } catch (e) {
-    console.error('OG API Error:', e);
-    return new Response('Failed to generate OG image', { status: 500 });
+    )
+  } catch (error) {
+    console.error('OG API Error:', error)
+    return new Response('Failed to generate OG image', { status: 500 })
   }
 }

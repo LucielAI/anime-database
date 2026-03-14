@@ -92,3 +92,13 @@ Do not rewrite docs wholesale. Update only the sections that no longer reflect r
 **Adding to `preferredOrder` but not to `src/data/`.** The `index.js` registry auto-discovers from `src/data/`. The preferred order just controls display sequence — a slug in `preferredOrder` that has no file is silently skipped.
 
 **Not running the validator after a schema doc change.** If you document a new required field, verify `validateSchema.js` actually enforces it (or note that it doesn't yet).
+
+
+## Discoverability Defaults Sync
+
+After SEO/discoverability changes, verify these are still true:
+
+- [ ] `scripts/generateSitemap.js` still auto-includes all integrated universes
+- [ ] `scripts/validateIndexing.js` still passes and checks metadata guardrails
+- [ ] `index.html` keeps fallback canonical + OG/Twitter tags for non-JS fetchers
+- [ ] `api/og` supports every catalog universe slug without manual per-slug coding

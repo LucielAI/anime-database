@@ -17,24 +17,27 @@ function getSlugs() {
     .readdirSync(DATA_DIR)
     .filter(f => f.endsWith('.json') && !f.endsWith('.extended.json'))
     .map(f => f.replace(/\.core\.json$/, '').replace(/\.json$/, ''))
-    .filter((slug, i, arr) => arr.indexOf(slug) === i) // dedupe (core + legacy coexist)
+    .filter((slug, i, arr) => arr.indexOf(slug) === i)
+    .filter(Boolean)
     .sort()
 }
 
 function buildSitemap(slugs) {
+  const lastmod = new Date().toISOString().split('T')[0]
   const urls = [
-    { loc: `${BASE_URL}/`, priority: '1.0', changefreq: 'weekly' },
+    { loc: `${BASE_URL}/`, priority: '1.0', changefreq: 'weekly', lastmod },
     ...slugs.map(slug => ({
       loc: `${BASE_URL}/universe/${slug}`,
       priority: '0.8',
-      changefreq: 'monthly',
+      changefreq: 'weekly',
+      lastmod,
     })),
   ]
 
   const entries = urls
     .map(
-      ({ loc, priority, changefreq }) =>
-        `  <url>\n    <loc>${loc}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
+      ({ loc, priority, changefreq, lastmod: modified }) =>
+        `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${modified}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
     )
     .join('\n')
 
