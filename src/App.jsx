@@ -26,6 +26,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default' }) {
   const theme = data.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
   const classLabel = getClassificationLabel(data.visualizationHint)
   const isCatalogDense = density === 'catalog'
+  const [imageFailed, setImageFailed] = useState(false)
 
   return (
     <Link
@@ -34,7 +35,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default' }) {
       style={{ border: `1px solid ${theme.primary}` }}
     >
       <div className="relative w-full overflow-hidden shrink-0" style={{ aspectRatio: compact || isCatalogDense ? '16/9' : '16/10' }}>
-        {data.animeImageUrl ? (
+        {data.animeImageUrl && !imageFailed ? (
           <img
             src={data.animeImageUrl}
             alt={data.anime}
@@ -42,6 +43,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default' }) {
             height={250}
             loading="lazy"
             decoding="async"
+            onError={() => setImageFailed(true)}
             className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
           />
         ) : (
@@ -64,6 +66,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default' }) {
 
 function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
   if (!entry) return null
+  const [imageFailed, setImageFailed] = useState(false)
 
   return (
     <Link
@@ -72,7 +75,7 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[320px]">
         <div className="relative h-full min-h-[220px] md:min-h-[320px]" style={{ aspectRatio: '4/3' }}>
-          {entry.animeImageUrl ? (
+          {entry.animeImageUrl && !imageFailed ? (
             <>
               <img
                 src={entry.animeImageUrl}
@@ -81,6 +84,7 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
                 className="absolute inset-0 w-full h-full object-cover object-center opacity-25 blur-sm scale-105"
                 loading={priority ? 'eager' : 'lazy'}
                 decoding="async"
+                onError={() => setImageFailed(true)}
               />
               <img
                 src={entry.animeImageUrl}
@@ -90,6 +94,7 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
                 fetchPriority={priority ? 'high' : 'auto'}
                 decoding="async"
                 sizes="(max-width: 1024px) 90vw, 45vw"
+                onError={() => setImageFailed(true)}
               />
             </>
           ) : (
