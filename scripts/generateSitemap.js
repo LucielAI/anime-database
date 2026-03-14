@@ -26,6 +26,7 @@ function buildSitemap(slugs) {
   const lastmod = new Date().toISOString().split('T')[0]
   const urls = [
     { loc: `${BASE_URL}/`, priority: '1.0', changefreq: 'weekly', lastmod },
+    { loc: `${BASE_URL}/universes`, priority: '0.9', changefreq: 'weekly', lastmod },
     ...slugs.map(slug => ({
       loc: `${BASE_URL}/universe/${slug}`,
       priority: '0.8',

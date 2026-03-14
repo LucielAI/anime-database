@@ -38,7 +38,7 @@ A deterministic execution node triggers a global catastrophic cascade.
 3. AI readout → AIInsightPanel
 4. Visual hook → Wow Graph Moment
 5. Exploration → multi-tab dashboard
-6. Discovery → ExploreAnotherUniverse
+6. Discovery → curated suggestions + /universes catalog
 
 ## Core Systems
 

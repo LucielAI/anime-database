@@ -1,0 +1,21 @@
+import { describe, it, expect } from 'vitest'
+import { filterCatalogUniverses, getCuratedSuggestions, sortCatalogUniverses } from '../utils/discovery'
+import { UNIVERSE_CATALOG } from '../data/catalog'
+
+describe('discovery utils', () => {
+  it('sorts alphabetically', () => {
+    const sorted = sortCatalogUniverses(UNIVERSE_CATALOG, 'alphabetical')
+    expect(sorted[0].anime <= sorted[1].anime).toBe(true)
+  })
+
+  it('returns curated suggestions capped to 3', () => {
+    const suggestions = getCuratedSuggestions(UNIVERSE_CATALOG, 'deathnote')
+    expect(suggestions.length).toBeLessThanOrEqual(3)
+    expect(suggestions.find(s => s.id === 'deathnote')).toBeUndefined()
+  })
+
+  it('filters catalog by query', () => {
+    const hits = filterCatalogUniverses(UNIVERSE_CATALOG, 'fullmetal')
+    expect(hits.some(entry => entry.id === 'fmab')).toBe(true)
+  })
+})

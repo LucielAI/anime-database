@@ -118,6 +118,7 @@ Every new core payload should include content that works as a standalone landing
 - Ensure section-level prose exists for: power system, rules, factions, and any optional sections used (`counterplay`, `anomalies`, `causalEvents`).
 - Write summaries for humans first: explain mechanics, constraints, and why the system matters for analysis.
 - Avoid filler SEO text or keyword stuffing; prioritize clarity and comparative usefulness.
+- Confirm catalog discovery metadata supports browse defaults (`addedAt`, popularity baseline, and optional featured rank) or allow safe fallback behavior.
 
 ## Done When
 

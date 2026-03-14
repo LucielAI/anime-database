@@ -38,6 +38,41 @@ export function buildHomeSeo(catalog = []) {
   }
 }
 
+
+export function buildCatalogSeo(catalog = []) {
+  const description = truncate(`Browse ${catalog.length}+ universes in a searchable, sortable archive catalog built for system-level comparison and fast discovery.`)
+
+  return {
+    title: `Universe Catalog | ${SITE_NAME}`,
+    description,
+    canonicalUrl: `${SITE_URL}/universes`,
+    image: DEFAULT_OG_IMAGE,
+    type: 'website',
+  }
+}
+
+export function buildCatalogStructuredData(catalog = []) {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `${SITE_NAME} Universe Catalog`,
+      description: 'Searchable and sortable catalog for archive universes.',
+      url: `${SITE_URL}/universes`,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+      },
+      hasPart: catalog.map((entry) => ({
+        '@type': 'CreativeWork',
+        name: `${entry.anime} System Analysis`,
+        url: `${SITE_URL}/universe/${entry.id}`,
+      })),
+    },
+  ]
+}
+
 export function buildUniverseSeo(preview) {
   if (!preview) return buildHomeSeo()
 

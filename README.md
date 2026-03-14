@@ -12,6 +12,8 @@ The archive itself is a connected content graph: universes are linked by shared 
 
 ## Core Experience
 
+- **Universe Catalog (`/universes`)** — Searchable and sortable browse surface (Latest / Most Viewed / Alphabetical) backed by lightweight catalog metadata.
+
 Each universe page exposes four tabs:
 
 - **Power Engine** — Abilities, techniques, and the mechanics that define combat.
@@ -114,6 +116,12 @@ Every universe payload is built via a two-stage workflow: broad system research 
 - **Lucide React** for UI iconography
 - **D3** for force-directed SVG layouts
 - Deployed on **Vercel** with Edge-function dynamic Open Graph imagery
+
+## Discovery & Scale Defaults
+
+- Homepage shows curated slices (not full-list rendering) to stay fast as the archive grows.
+- Universe pages show a small curated suggestion set + clear path to `/universes`.
+- Catalog browsing uses metadata-only sorting/search; full payload JSON remains route-lazy.
 
 ## Development
 
