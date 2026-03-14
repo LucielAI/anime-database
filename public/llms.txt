@@ -1,0 +1,18 @@
+# Anime Architecture Archive
+
+> Structured analysis of fictional anime universes focused on power systems, causality, factions, and formal constraints.
+
+Primary index: https://animearchive.app/
+Sitemap: https://animearchive.app/sitemap.xml
+
+## URL patterns
+- Universe analyses: https://animearchive.app/universe/{slug}
+- Archive homepage: https://animearchive.app/
+
+## Data model notes
+- Each universe page is a dual-voice analysis (LORE + SYS)
+- Content includes characters, power systems, factions, rules, and ranking structures
+- Universe routes are stable and slug-based for long-term referencing
+
+## Attribution
+This is a fan-made analytical archive. Original characters and source IP belong to their respective creators and studios.

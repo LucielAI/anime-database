@@ -4,6 +4,14 @@ import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug } from './da
 import { Lock, ExternalLink } from 'lucide-react'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 import CommunityPulse from './components/CommunityPulse'
+import SeoHead from './components/SeoHead'
+import {
+  buildHomeSeo,
+  buildHomeStructuredData,
+  buildUniverseSeo,
+  buildUniverseStructuredData,
+  SITE_NAME
+} from './utils/seo'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const SpeedInsights = lazy(() => import('@vercel/speed-insights/react').then(m => ({ default: m.SpeedInsights })))
@@ -16,6 +24,8 @@ function Home() {
   const MIN_GRID_FILL = 6
   const placeholdersCount = Math.max(0, MIN_GRID_FILL - UNIVERSE_CATALOG.length)
   const placeholders = Array(placeholdersCount).fill(0)
+  const seo = buildHomeSeo(UNIVERSE_CATALOG)
+  const structuredData = buildHomeStructuredData(UNIVERSE_CATALOG)
 
   return (
     <div
@@ -28,6 +38,7 @@ function Home() {
         backgroundSize: '50px 50px'
       }}
     >
+      <SeoHead {...seo} structuredData={structuredData} />
       <div className="absolute top-0 left-0 w-full h-px bg-white/5 z-0 animate-[scan_8s_linear_infinite]" />
 
       {/* Hero Section */}
@@ -306,6 +317,9 @@ function UniverseRoute() {
   const { id } = useParams()
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+  const preview = id ? UNIVERSE_CATALOG_MAP[id] : null
+  const seo = buildUniverseSeo(preview)
+  const structuredData = buildUniverseStructuredData(preview)
 
   useEffect(() => {
     let cancelled = false
@@ -315,9 +329,6 @@ function UniverseRoute() {
         navigate('/', { replace: true })
         return
       }
-
-      const preview = UNIVERSE_CATALOG_MAP[id]
-      document.title = `${preview.anime} | Anime Architecture Archive`
 
       try {
         const payload = await loadUniverseBySlug(id)
@@ -339,9 +350,9 @@ function UniverseRoute() {
   }, [id, navigate])
 
   if (isLoading) {
-    const preview = id ? UNIVERSE_CATALOG_MAP[id] : null
     return (
       <div className="min-h-screen bg-[#050508] text-white font-mono flex items-center justify-center">
+        <SeoHead {...seo} structuredData={structuredData} />
         <div className="text-center px-6">
           <p className="text-[10px] tracking-[0.25em] uppercase text-cyan-300/80 mb-2">Loading Universe</p>
           <h1 className="text-2xl md:text-3xl font-bold uppercase tracking-tight">{preview?.anime || 'Initializing Archive'}</h1>
@@ -355,6 +366,14 @@ function UniverseRoute() {
 
   return (
     <div className="relative">
+      <SeoHead {...seo} structuredData={structuredData} />
+      <nav aria-label="Breadcrumb" className="fixed top-20 left-6 z-50 bg-black/60 border border-white/10 rounded-lg px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-gray-400 backdrop-blur-xl">
+        <ol className="flex items-center gap-2">
+          <li><Link to="/" className="hover:text-white transition-colors">Archive</Link></li>
+          <li className="text-white/30">/</li>
+          <li className="text-white">{preview?.anime || 'Universe'}</li>
+        </ol>
+      </nav>
       <Link
         to="/"
         className="fixed top-6 left-6 z-50 px-5 py-2.5 bg-black/60 hover:bg-white/10 border border-white/10 hover:border-white/40 shadow-lg hover:shadow-cyan-500/20 rounded-lg font-mono text-[10px] text-gray-400 hover:text-white tracking-[0.2em] transition-all duration-300 backdrop-blur-xl uppercase cursor-pointer min-h-[44px] min-w-[44px] group flex items-center justify-center"
@@ -362,6 +381,11 @@ function UniverseRoute() {
         <span className="group-hover:-translate-x-1 inline-block transition-transform duration-200 mr-2">&larr;</span>
         <span>INDEX</span>
       </Link>
+      <section className="sr-only" aria-label="Universe analysis summary">
+        <h1>{preview?.anime} universe analysis</h1>
+        <p>{preview?.tagline}</p>
+        <p>This page provides a structured breakdown of power systems, factions, rules, characters, and causal mechanics for machine-readable discovery.</p>
+      </section>
       <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
         <Dashboard data={data} />
       </Suspense>
@@ -372,20 +396,15 @@ function UniverseRoute() {
 export default function App() {
   const location = useLocation()
 
-  useEffect(() => {
-    document.title = 'Anime Architecture Archive'
-  }, [])
-
   // GoatCounter SPA tracking
   useEffect(() => {
     if (window.goatcounter) {
       window.goatcounter.count({
         path: location.pathname,
-        title: document.title
+        title: document.title || SITE_NAME
       })
     }
   }, [location.pathname])
-
   return (
     <>
       <Routes>

@@ -33,6 +33,13 @@ Runs `validateCorePayload` across every `src/data/*.json` (excluding `*.extended
 Use this for archive-wide hardening before PRs.
 
 
+
+### Validate indexing + crawlability guardrails
+```bash
+npm run validate:indexing
+```
+Confirms sitemap coverage for every catalog universe route, robots sitemap directive, and SEO head wiring for universe pages.
+
 ### Add a universe (preferred core format)
 ```bash
 npm run add:universe path/to/slug.core.json [slug]
