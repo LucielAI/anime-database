@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "validate:payload": "node scripts/validatePayload.js",
-    "add:universe": "node scripts/addUniverse.js && node scripts/generateSitemap.js",
+    "add:universe": "node scripts/addUniverseWithSitemap.js",
     "test": "vitest run",
     "test:watch": "vitest",
     "validate:all": "node scripts/auditPayloads.js && node scripts/validateIndexing.js",
