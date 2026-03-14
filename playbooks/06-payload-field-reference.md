@@ -87,6 +87,15 @@ Common Lucide icon names: `Eye`, `Brain`, `Heart`, `Zap`, `Globe`, `Shield`, `Sw
 
 ---
 
+### Landing-page intro field
+
+`introductionSummary` is strongly recommended for all universes and should:
+- summarize the power system in plain language,
+- describe structure (rules/factions/causality/counterplay),
+- explain why this universe is analytically interesting.
+
+Keep it concise (2-4 sentences).
+
 ## The Dual-Voice Pattern (lore + system on every entity)
 
 The entire LORE/SYS toggle in the UI depends on this. Every entity type has two description variants. Getting this wrong means half the product is blank or broken.

@@ -35,6 +35,21 @@ const DEFAULT_THEME = {
   heroGradient: 'rgba(5,5,20,0.95)',
 }
 
+function buildUniverseIntroduction(data) {
+  if (!data) return ''
+  if (typeof data.introductionSummary === 'string' && data.introductionSummary.trim()) {
+    return data.introductionSummary.trim()
+  }
+
+  const powerCount = data.powerSystem?.length || 0
+  const rulesCount = data.rules?.length || 0
+  const factionCount = data.factions?.length || 0
+  const relationshipCount = data.relationships?.length || 0
+  const architectureLine = data.visualizationReason || data.tagline || 'This universe rewards structural analysis over surface-level plot recall.'
+
+  return `${data.anime} is modeled here as a constrained system where abilities, institutions, and consequences create predictable strategic pressure. This archive profile maps ${powerCount} core mechanics, ${rulesCount} governing constraints, and ${factionCount} major power blocs so readers can quickly understand the operating logic of the world. ${architectureLine} Relationship and causality layers (${relationshipCount} mapped edges) make this page useful as a standalone reference for comparative universe analysis.`
+}
+
 export default function Dashboard({ data }) {
   const [activeTab, setActiveTab] = useState(0)
   const [isSystemMode, setIsSystemMode] = useState(false)
@@ -45,6 +60,7 @@ export default function Dashboard({ data }) {
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
   const classLabel = getClassificationLabel(data?.visualizationHint)
   const shareFrameBullets = useMemo(() => deriveBullets(data).slice(0, 3), [data])
+  const universeIntro = useMemo(() => buildUniverseIntroduction(data), [data])
   const headerFlavor = data?.headerFlavor
   const revealOverlay = getRevealOverlay(data?.revealOverlay)
 
@@ -207,6 +223,17 @@ export default function Dashboard({ data }) {
           </div>
         </div>
       </header>
+
+      <section className="max-w-6xl mx-auto px-6 mt-8 mb-8 share-frame-hide" aria-labelledby="universe-introduction-heading">
+        <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 md:p-8">
+          <h2 id="universe-introduction-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-3">
+            Universe Introduction
+          </h2>
+          <p className="text-xs md:text-sm text-gray-300 leading-relaxed max-w-4xl">
+            {universeIntro}
+          </p>
+        </div>
+      </section>
 
       {/* 5-Bullet System Summary */}
       <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />

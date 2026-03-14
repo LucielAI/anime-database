@@ -19,13 +19,14 @@ function buildUniverseDescription(preview) {
     stats.rules ? `${stats.rules} governing rules` : null,
   ].filter(Boolean).join(' • ')
 
-  const sentence = `${preview.anime}: ${preview.tagline} Structured ${lens.toLowerCase()} analysis covering factions, causal logic, and strategic constraints${statsSummary ? ` (${statsSummary})` : ''}.`
+  const intro = preview.introductionSummary ? `${preview.introductionSummary} ` : ''
+  const sentence = `${preview.anime}: ${intro}${preview.tagline} Structured ${lens.toLowerCase()} analysis covering factions, causal logic, and strategic constraints${statsSummary ? ` (${statsSummary})` : ''}.`
   return truncate(sentence)
 }
 
 export function buildHomeSeo(catalog = []) {
   const description = truncate(
-    `Structured archive of anime universe system analyses. Explore ${catalog.length}+ machine-readable breakdowns of power economies, causal chains, factions, and governing rules.`
+    `Anime Architecture Archive is a structured reference system for fictional worlds. Explore ${catalog.length}+ universe landing pages with power-system briefs, causal models, faction structures, and cross-universe comparison paths.`
   )
 
   return {
@@ -35,6 +36,41 @@ export function buildHomeSeo(catalog = []) {
     image: DEFAULT_OG_IMAGE,
     type: 'website',
   }
+}
+
+
+export function buildCatalogSeo(catalog = []) {
+  const description = truncate(`Browse ${catalog.length}+ universes in a searchable, sortable archive catalog built for system-level comparison and fast discovery.`)
+
+  return {
+    title: `Universe Catalog | ${SITE_NAME}`,
+    description,
+    canonicalUrl: `${SITE_URL}/universes`,
+    image: DEFAULT_OG_IMAGE,
+    type: 'website',
+  }
+}
+
+export function buildCatalogStructuredData(catalog = []) {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `${SITE_NAME} Universe Catalog`,
+      description: 'Searchable and sortable catalog for archive universes.',
+      url: `${SITE_URL}/universes`,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+      },
+      hasPart: catalog.map((entry) => ({
+        '@type': 'CreativeWork',
+        name: `${entry.anime} System Analysis`,
+        url: `${SITE_URL}/universe/${entry.id}`,
+      })),
+    },
+  ]
 }
 
 export function buildUniverseSeo(preview) {
@@ -56,7 +92,7 @@ export function buildHomeStructuredData(catalog = []) {
       '@type': 'WebSite',
       name: SITE_NAME,
       url: `${SITE_URL}/`,
-      description: 'A structured archive of fictional universe system analyses.',
+      description: 'A structured archive and reference graph for fictional universe system analyses.',
       inLanguage: 'en',
     },
     {

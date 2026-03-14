@@ -28,6 +28,11 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
     <div className="space-y-6 font-mono animate-fade-in">
       {/* Rules */}
       {rules.length > 0 && (
+        <section aria-labelledby="rules-heading">
+          <h2 id="rules-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Rules</h2>
+          <p className="text-xs text-gray-500 leading-relaxed mb-5">
+            Core laws define non-negotiable constraints. These are the universe-level conditions that shape viable strategies and punish illegal moves.
+          </p>
         <div className="grid grid-cols-1 gap-6">
           {rules.map((rule, idx) => (
             <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 rounded-xl p-6 md:p-8 transition-colors duration-300">
@@ -53,11 +58,17 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
             </div>
           ))}
         </div>
+        </section>
       )}
 
       {/* Anomalies */}
       {anomalies.length > 0 && (
-        <div className="mt-16 pt-8 border-t border-dashed" style={{ borderColor: `${theme?.accent || '#f59e0b'}50` }}>
+        <section aria-labelledby="anomalies-heading" className="mt-16">
+          <h2 id="anomalies-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Anomalies</h2>
+          <p className="text-xs text-gray-500 leading-relaxed mb-5">
+            Anomalies expose edge cases where normal laws fail, are bypassed, or are intentionally exploited. They are crucial for understanding where the system is brittle.
+          </p>
+        <div className="pt-8 border-t border-dashed" style={{ borderColor: `${theme?.accent || '#f59e0b'}50` }}>
           <div className="flex items-center gap-2 mb-8 justify-center">
             <AlertTriangle className="w-5 h-5 animate-pulse" style={{ color: theme?.accent }} />
             <span className="font-bold tracking-[0.2em] text-xs md:text-sm uppercase" style={{ color: theme?.accent }}>{isSystemMode ? 'Known System Anomalies' : 'Known Rule Breakers'}</span>
@@ -76,10 +87,16 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
             ))}
           </div>
         </div>
+        </section>
       )}
 
       {/* Causal Events */}
       {causalEvents.length > 0 && (
+        <section aria-labelledby="causal-events-heading">
+          <h2 id="causal-events-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Causal Events</h2>
+          <p className="text-xs text-gray-500 leading-relaxed mb-4">
+            This timeline captures high-leverage events and their trigger-consequence chains so the system can be read as an evolving mechanism rather than isolated moments.
+          </p>
         <div>
           <button
             onClick={() => setExpandedCausal(!expandedCausal)}
@@ -121,6 +138,7 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
             </div>
           )}
         </div>
+        </section>
       )}
     </div>
   )
