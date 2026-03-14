@@ -156,6 +156,18 @@ For agent execution hygiene, see `docs/CODEX_QUICKSTART.md` and `CLAUDE.md`.
 MIT
 
 
+
+## Security Headers (Vercel)
+
+Production responses are hardened in `vercel.json` with a low-regression profile:
+
+- Enforced CSP tailored to this app's actual runtime sources (`self`, GoatCounter, MAL image hosts, Vercel analytics endpoints).
+- Clickjacking protection via `frame-ancestors 'none'` (CSP) plus `X-Frame-Options: DENY` for legacy support.
+- `Strict-Transport-Security` is enabled in staged mode (`max-age=15552000`) without `includeSubDomains` or `preload` to avoid unsafe domain-wide assumptions.
+- Additional low-risk defaults: `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Cross-Origin-Opener-Policy: same-origin`, and a restrictive `Permissions-Policy`.
+
+If new third-party scripts, analytics providers, or image hosts are introduced, update CSP directives in `vercel.json` accordingly before deploying.
+
 ## Runtime Payload Delivery
 
 - Homepage/archive listing reads from `src/data/catalog.js` (lightweight static metadata + counts).
