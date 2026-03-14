@@ -22,9 +22,10 @@ const Analytics = lazy(() => import('@vercel/analytics/react').then(m => ({ defa
 
 const SUPPORT_URL = 'https://buymeacoffee.com/hashiai'
 
-function UniverseLinkCard({ data, compact = false }) {
+function UniverseLinkCard({ data, compact = false, density = 'default' }) {
   const theme = data.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
   const classLabel = getClassificationLabel(data.visualizationHint)
+  const isCatalogDense = density === 'catalog'
 
   return (
     <Link
@@ -32,7 +33,7 @@ function UniverseLinkCard({ data, compact = false }) {
       className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 relative flex flex-col focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
       style={{ border: `1px solid ${theme.primary}` }}
     >
-      <div className="relative w-full overflow-hidden shrink-0" style={{ aspectRatio: compact ? '16/9' : '16/10' }}>
+      <div className="relative w-full overflow-hidden shrink-0" style={{ aspectRatio: compact || isCatalogDense ? '16/9' : '16/10' }}>
         {data.animeImageUrl ? (
           <img
             src={data.animeImageUrl}
@@ -49,12 +50,12 @@ function UniverseLinkCard({ data, compact = false }) {
         <div className="absolute inset-0 bg-linear-to-t from-[#050508] to-transparent pointer-events-none" />
       </div>
 
-      <div className="p-4 grow flex flex-col justify-end">
+      <div className={`grow flex flex-col justify-end ${isCatalogDense ? 'p-3.5' : 'p-4'}`}>
         <div className="inline-flex items-center self-start px-2 py-0.5 rounded text-[8px] font-bold tracking-[0.2em] uppercase mb-2 border" style={{ color: theme.primary, borderColor: `${theme.primary}40`, backgroundColor: `${theme.primary}10` }}>
           {classLabel}
         </div>
-        <h3 className="text-lg font-bold uppercase text-white truncate">{data.anime}</h3>
-        <p className="text-[11px] text-gray-500 leading-relaxed line-clamp-2 mt-1">{data.tagline}</p>
+        <h3 className={`font-bold uppercase text-white truncate ${isCatalogDense ? 'text-base' : 'text-lg'}`}>{data.anime}</h3>
+        <p className={`text-gray-500 leading-relaxed mt-1 ${isCatalogDense ? 'text-[10px] line-clamp-2' : 'text-[11px] line-clamp-2'}`}>{data.tagline}</p>
       </div>
     </Link>
   )
@@ -269,7 +270,7 @@ function UniversesCatalogRoute() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {visible.map(entry => <UniverseLinkCard key={entry.id} data={entry} />)}
+          {visible.map(entry => <UniverseLinkCard key={entry.id} data={entry} density="catalog" />)}
         </div>
 
         {canLoadMore && (

@@ -125,3 +125,14 @@ Keeps homepage curated and fast while allowing growth to 20/50/100+ universes wi
 
 Tradeoff:
 Adds one extra route, but preserves crawlability and avoids infinite-scroll UX debt.
+
+
+## ADR-016 — Guided Best-Entry Discovery Cue
+Decision:
+Use lightweight discovery metadata (`startTab`, `startLabel`) with renderer-aware fallback logic to preselect and label the strongest first tab on universe routes.
+
+Why:
+Reduces first-impression overwhelm and guides regular fans to the highest-engagement section faster without redesigning dashboard structure.
+
+Tradeoff:
+Introduces small metadata maintenance overhead, but defaults remain safe when fields are missing.

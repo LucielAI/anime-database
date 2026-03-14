@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
@@ -12,6 +12,7 @@ import { useSystemReveal } from './hooks/useSystemReveal'
 import { useShareFrame } from './hooks/useShareFrame'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 import { deriveBullets } from './utils/deriveBullets'
+import { getBestEntryConfig } from './utils/discovery'
 import { getBackgroundMotif, getRevealOverlay, getSysWarningColors } from './config/universePresentation'
 
 const TABS = ['POWER ENGINE', 'ENTITY DATABASE', 'FACTIONS', 'CORE LAWS']
@@ -57,6 +58,12 @@ export default function Dashboard({ data }) {
   const [isSystemMode, setIsSystemMode] = useState(false)
   const { isRevealing, revealStep, startReveal, cancelReveal } = useSystemReveal()
   const { isShareFrame, toggleShareFrame } = useShareFrame()
+
+  const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
+
+  useEffect(() => {
+    setActiveTab(bestEntry.tabIndex)
+  }, [bestEntry.tabIndex, data?.id])
 
   const theme = data?.themeColors || DEFAULT_THEME
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
@@ -240,6 +247,21 @@ export default function Dashboard({ data }) {
       {/* 5-Bullet System Summary */}
       <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
+      <div className="max-w-6xl mx-auto px-6 mt-3 mb-4 share-frame-hide">
+        <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-3 flex flex-wrap items-center gap-3">
+          <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-2.5 py-1 text-[9px] font-bold tracking-[0.2em] uppercase text-cyan-200">
+            Best Entry
+          </span>
+          <p className="text-[11px] text-gray-300 leading-relaxed grow min-w-[220px]">{bestEntry.label}</p>
+          <button
+            onClick={() => setActiveTab(bestEntry.tabIndex)}
+            className="px-3 py-1.5 min-h-[44px] rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.18em] uppercase text-gray-200"
+          >
+            Open {TABS[bestEntry.tabIndex]}
+          </button>
+        </div>
+      </div>
+
       {/* Why This Lens? */}
       <WhyThisRenderer data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
@@ -304,7 +326,15 @@ export default function Dashboard({ data }) {
                 textShadow: isActive ? `0 0 12px ${activeColor}60` : 'none'
               }}
             >
-              <span className="relative z-10">{tab}</span>
+              <span className="relative z-10 inline-flex items-center gap-1.5">{tab}
+                {idx === bestEntry.tabIndex && (
+                  <span className="inline-flex items-center justify-center min-w-4 h-4 text-[8px] px-1.5 py-0.5 rounded border border-cyan-300/20 bg-cyan-400/10 text-cyan-200 tracking-[0.12em]">
+                    <span className="sm:hidden" aria-hidden="true">★</span>
+                    <span className="hidden sm:inline">START</span>
+                    <span className="sr-only">Recommended starting tab</span>
+                  </span>
+                )}
+              </span>
               {isActive && (
                 <span
                   className="absolute bottom-0 left-2 right-2 h-[2px] rounded-full transition-all duration-300"
@@ -321,7 +351,7 @@ export default function Dashboard({ data }) {
 
       {/* Tab Description */}
       <div className="max-w-6xl mx-auto px-6 mb-10 share-frame-hide">
-        <p className="text-[10px] md:text-xs text-gray-600 tracking-wider">{TAB_DESCRIPTIONS[activeTab]}</p>
+        <p className="text-[10px] md:text-xs text-gray-600 tracking-wider">{TAB_DESCRIPTIONS[activeTab]}{activeTab === bestEntry.tabIndex ? ' · Recommended first view.' : ''}</p>
       </div>
 
       {/* Main Content */}

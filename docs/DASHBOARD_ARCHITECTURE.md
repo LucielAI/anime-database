@@ -55,7 +55,7 @@ Visualizers
 → deliver the “wow moment” and deeper understanding
 
 ExploreAnotherUniverse
-→ keeps users inside the archive ecosystem
+→ keeps users inside the archive ecosystem via a curated 3-card mix (recent + popular + thematic wildcard)
 
 
 ## Route Data Resolution
@@ -67,5 +67,11 @@ ExploreAnotherUniverse
 
 ## Universe Catalog route
 - `/universes` is the dedicated browse page for scalable discovery.
-- Search/sort run on lightweight catalog metadata only.
+- Search/sort run on lightweight catalog metadata only (Latest / Most Viewed / Alphabetical).
+- Controlled batch expansion uses Load More (no infinite scroll).
 - Universe JSON payloads still load only on `/universe/:slug` route visits.
+
+## Guided first-entry behavior
+- Dashboard reads optional discovery metadata (`startTab`, `startLabel`) from `src/data/discoveryMetadata.js`.
+- If missing, a renderer-aware fallback picks the first recommended tab.
+- Tabs show a subtle `START` marker and a top “Best Entry” cue for first-impression guidance.

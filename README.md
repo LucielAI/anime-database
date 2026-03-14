@@ -12,7 +12,7 @@ The archive itself is a connected content graph: universes are linked by shared 
 
 ## Core Experience
 
-- **Universe Catalog (`/universes`)** — Searchable and sortable browse surface (Latest / Most Viewed / Alphabetical) backed by lightweight catalog metadata.
+- **Universe Catalog (`/universes`)** — Searchable and sortable browse surface (Latest / Most Viewed / Alphabetical) backed by lightweight catalog metadata, with controlled load-more expansion (no infinite scroll).
 
 Each universe page exposes four tabs:
 
@@ -22,6 +22,8 @@ Each universe page exposes four tabs:
 - **Core Laws** — The unbreakable rules that govern the universe.
 
 Every description field supports dual framing:
+
+Universe pages now also include a lightweight **Best Entry** cue that recommends the highest-engagement first tab (metadata-driven with renderer-based fallback).
 - **LORE Mode** — Human-readable, narrative-focused.
 - **SYS Mode** — Root-access system-level analogy (e.g. treating a spell as "Proprietary Software" or an assassin as a "System Exploit").
 

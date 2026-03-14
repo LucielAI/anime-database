@@ -2,6 +2,13 @@ import { DISCOVERY_METADATA } from '../data/discoveryMetadata'
 
 const VIEW_STORAGE_KEY = 'anime-archive:view-counts:v1'
 
+const TAB_KEY_TO_INDEX = {
+  'power-engine': 0,
+  'entity-database': 1,
+  factions: 2,
+  'core-laws': 3,
+}
+
 function safeParse(raw, fallback) {
   try {
     return JSON.parse(raw)
@@ -26,6 +33,22 @@ function getPopularity(entry, index, total, localViewMap) {
   return baseline + localViews
 }
 
+function getFeaturedRank(entry) {
+  return DISCOVERY_METADATA[entry.id]?.featuredRank ?? 99
+}
+
+function getDailySeed() {
+  return new Date().toISOString().slice(0, 10)
+}
+
+function seededHash(seed) {
+  let hash = 0
+  for (let i = 0; i < seed.length; i += 1) {
+    hash = (hash * 31 + seed.charCodeAt(i)) % 2147483647
+  }
+  return hash
+}
+
 export function incrementUniverseLocalView(slug) {
   if (!slug || typeof window === 'undefined') return
   const current = getLocalViewMap()
@@ -40,7 +63,7 @@ export function sortCatalogUniverses(catalog, mode = 'latest') {
     ...entry,
     _addedAtTs: parseAddedAt(entry, index),
     _popularity: getPopularity(entry, index, total, localViewMap),
-    _featuredRank: DISCOVERY_METADATA[entry.id]?.featuredRank ?? 99,
+    _featuredRank: getFeaturedRank(entry),
   }))
 
   const sorter = {
@@ -54,15 +77,20 @@ export function sortCatalogUniverses(catalog, mode = 'latest') {
 }
 
 export function getFeaturedUniverses(catalog, count = 3) {
-  return sortCatalogUniverses(catalog, 'featured').slice(0, count)
+  const featuredPool = sortCatalogUniverses(catalog, 'featured').slice(0, Math.max(count, 3))
+  if (featuredPool.length <= count) return featuredPool
+
+  const [primary] = featuredPool
+  const secondaryPool = featuredPool.slice(1)
+  const offset = seededHash(getDailySeed()) % secondaryPool.length
+  const rotated = secondaryPool.slice(offset).concat(secondaryPool.slice(0, offset))
+
+  return [primary, ...rotated.slice(0, count - 1)]
 }
 
 function deterministicPick(items, seed) {
   if (!items.length) return null
-  let hash = 0
-  for (let i = 0; i < seed.length; i += 1) {
-    hash = (hash * 31 + seed.charCodeAt(i)) % 2147483647
-  }
+  const hash = seededHash(seed)
   return items[hash % items.length]
 }
 
@@ -113,7 +141,7 @@ export function getCuratedSuggestions(catalog, currentId) {
     .sort((a, b) => b.score - a.score)
     .map(row => row.entry)
 
-  const seed = `${currentId || 'archive'}:${new Date().toISOString().slice(0, 10)}`
+  const seed = `${currentId || 'archive'}:${getDailySeed()}`
   const themedCandidates = thematicPool.slice(0, 4)
   const thematic = deterministicPick(themedCandidates.length ? themedCandidates : fallbackPool, seed)
 
@@ -127,4 +155,24 @@ export function filterCatalogUniverses(catalog, query) {
     const haystack = [entry.anime, entry.tagline, entry.visualizationHint].filter(Boolean).join(' ').toLowerCase()
     return haystack.includes(normalized)
   })
+}
+
+export function getBestEntryConfig(universeId, visualizationHint) {
+  const metadata = DISCOVERY_METADATA[universeId] || {}
+  const fallbackKey = visualizationHint === 'timeline'
+    ? 'core-laws'
+    : visualizationHint === 'counter-tree'
+      ? 'power-engine'
+      : visualizationHint === 'node-graph' || visualizationHint === 'affinity-matrix'
+        ? 'entity-database'
+        : 'power-engine'
+
+  const tabKey = TAB_KEY_TO_INDEX[metadata.startTab] != null ? metadata.startTab : fallbackKey
+  const tabIndex = TAB_KEY_TO_INDEX[tabKey] ?? 0
+
+  return {
+    tabKey,
+    tabIndex,
+    label: metadata.startLabel || 'Start here for the fastest strategic orientation.',
+  }
 }

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { filterCatalogUniverses, getCuratedSuggestions, sortCatalogUniverses } from '../utils/discovery'
+import { filterCatalogUniverses, getBestEntryConfig, getCuratedSuggestions, sortCatalogUniverses } from '../utils/discovery'
 import { UNIVERSE_CATALOG } from '../data/catalog'
 
 describe('discovery utils', () => {
@@ -23,6 +23,18 @@ describe('discovery utils', () => {
     const suggestions = getCuratedSuggestions(UNIVERSE_CATALOG, 'aot')
     const ids = suggestions.map(entry => entry.id)
     expect(new Set(ids).size).toBe(ids.length)
+  })
+
+
+  it('builds best-entry config with metadata override', () => {
+    const config = getBestEntryConfig('deathnote', 'node-graph')
+    expect(config.tabIndex).toBe(1)
+    expect(config.label.toLowerCase()).toContain('entity database')
+  })
+
+  it('builds best-entry fallback when metadata is missing', () => {
+    const config = getBestEntryConfig('unknown-slug', 'timeline')
+    expect(config.tabIndex).toBe(3)
   })
 
 })
