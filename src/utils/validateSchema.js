@@ -348,6 +348,13 @@ export function validateCorePayload(data) {
   if (hint === 'timeline' && (!data.causalEvents || data.causalEvents.length === 0)) {
     errors.push(`Renderer "${hint}" requires non-empty 'causalEvents' for runtime rendering.`)
   }
+  if (hint === 'timeline' && Array.isArray(data.characters)) {
+    data.characters.forEach((c, i) => {
+      if (!isNonEmptyString(c.primaryAbility)) {
+        errors.push(`characters[${i}] (${c.name || 'unnamed'}) missing required timeline field: primaryAbility (Timeline character footer will render blank)`)
+      }
+    })
+  }
   if (hint === 'node-graph' && (!data.relationships || data.relationships.length === 0)) {
     errors.push(`Renderer "${hint}" requires non-empty 'relationships' to wire the D3 graph.`)
   }

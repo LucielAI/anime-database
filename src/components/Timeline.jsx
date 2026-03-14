@@ -356,7 +356,7 @@ const Timeline = memo(({ characters, causalEvents, relationships = [], isSystemM
               </p>
               <div className="mt-auto pt-4 border-t border-white/10">
                 <span className="text-[10px] uppercase tracking-widest block mb-1" style={{ color: resolveColor(char.accentColor) }}>Signature Matchup / Ability</span>
-                <p className="text-xs text-gray-400 line-clamp-2 md:line-clamp-none">{char.primaryAbility}</p>
+                <p className="text-xs text-gray-400 line-clamp-2 md:line-clamp-none">{char.primaryAbility || "No primary ability specified"}</p>
               </div>
             </div>
           </HoverLink>

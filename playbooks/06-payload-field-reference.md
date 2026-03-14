@@ -168,6 +168,17 @@ These fields are required by current tab components and are enforced by core val
 }
 ```
 
+### `timeline` character footer field (`characters[].primaryAbility`)
+For universes using `visualizationHint: "timeline"`, every character must include:
+
+```json
+{
+  "primaryAbility": "Short signature technique/capability label"
+}
+```
+
+This powers the **"Signature Matchup / Ability"** line in `Timeline.jsx`. Missing values now fail core validation to prevent blank production cards.
+
 ## relationships — Enum Constraint on `type` (hard error)
 
 Valid relationship types:

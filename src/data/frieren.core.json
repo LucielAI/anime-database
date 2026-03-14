@@ -84,7 +84,8 @@
       "icon": "Eye",
       "signatureMoment": "She overturns Aura's mana-scaling certainty by revealing an intentionally concealed reserve.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/525105.jpg?s=1706604ec2ca141a172526b8dedf3177",
-      "malId": 184947
+      "malId": 184947,
+      "primaryAbility": "Mana Suppression / High-Order Dispel"
     },
     {
       "name": "Fern",
@@ -99,7 +100,8 @@
       "icon": "Target",
       "signatureMoment": "Outpaces veteran mages in exchange velocity during certification-stage duels.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/619183.jpg?s=15f45c66440c0e9843e2f0109f0c1aef",
-      "malId": 188176
+      "malId": 188176,
+      "primaryAbility": "Rapid Precision Casting / Zoltraak Barrage"
     },
     {
       "name": "Stark",
@@ -114,7 +116,8 @@
       "icon": "Shield",
       "signatureMoment": "Holds lethal melee pressure long enough for mage-side reconfiguration and counter-casting.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/621924.jpg?s=ff623ff40dde15a769f879d87d6e7dcd",
-      "malId": 188177
+      "malId": 188177,
+      "primaryAbility": "Frontline Interception / Burst Axe Strikes"
     },
     {
       "name": "Himmel",
@@ -129,7 +132,8 @@
       "icon": "Star",
       "signatureMoment": "His posthumous memory drives Frieren's entire second journey and reframes mission priorities.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/621925.jpg?s=5faec0afd8c70ec30faa16d5e256baa6",
-      "malId": 186854
+      "malId": 186854,
+      "primaryAbility": "Heroic Swordplay / Morale Stabilization"
     },
     {
       "name": "Flamme",
@@ -144,7 +148,8 @@
       "icon": "Book",
       "signatureMoment": "Institutionalizes mana suppression as a civilization-scale asymmetry against demon heuristics.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/528177.jpg?s=8b3a2d8085f11194c19344fe11e9605c",
-      "malId": 187307
+      "malId": 187307,
+      "primaryAbility": "Anti-Demon Doctrine Engineering"
     },
     {
       "name": "Serie",
@@ -159,7 +164,8 @@
       "icon": "Crown",
       "signatureMoment": "Her exam oversight filters who can access strategic-grade magical authority.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/536851.jpg?s=bc2d816ac437e368cc7b7b7cb94922d0",
-      "malId": 211285
+      "malId": 211285,
+      "primaryAbility": "Spell Authority / First-Class Mage Gatekeeping"
     },
     {
       "name": "Aura",
@@ -174,7 +180,8 @@
       "icon": "Sword",
       "signatureMoment": "Her certainty in mana-read hierarchy is exploited and reversed in a single decision collapse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/524719.jpg?s=4048eff20f4b708dcb207e42dcf350a2",
-      "malId": 206722
+      "malId": 206722,
+      "primaryAbility": "Auserlese Obedience Scale"
     },
     {
       "name": "Macht",
@@ -189,7 +196,8 @@
       "icon": "Flame",
       "signatureMoment": "Introduces transformation-scale threats that conventional anti-demon playbooks cannot cleanly absorb.",
       "imageUrl": null,
-      "_fetchFailed": true
+      "_fetchFailed": true,
+      "primaryAbility": "Di Agolze Curse Transmutation"
     }
   ],
   "relationships": [
