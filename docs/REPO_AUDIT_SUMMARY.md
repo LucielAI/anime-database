@@ -11,6 +11,7 @@
 - Fullmetal Alchemist: Brotherhood
 - Code Geass
 - My Hero Academia
+- Sousou no Frieren
 
 ## Current Renderers
 - TimelineExplorer

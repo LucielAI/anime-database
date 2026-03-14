@@ -110,6 +110,7 @@ Every universe payload is built via a two-stage workflow: broad system research 
 - Fullmetal Alchemist: Brotherhood
 - Code Geass
 - My Hero Academia
+- Sousou no Frieren
 
 ## Tech Stack
 

@@ -74,6 +74,7 @@ A dynamic navigation system that encourages cross-archive discovery.
 - Fullmetal Alchemist: Brotherhood
 - Code Geass
 - My Hero Academia
+- Sousou no Frieren
 
 ## Product Goals
 The archive serves multiple simultaneous goals:

@@ -106,6 +106,27 @@ describe('validateCorePayload', () => {
     expect(errors.some(e => e.includes('_fetchFailed'))).toBe(true)
   })
 
+  it('errors when timeline characters are missing primaryAbility', () => {
+    const { errors } = validateCorePayload(makePayload({
+      visualizationHint: 'timeline',
+      causalEvents: [{ name: 'E1', trigger: 'T', consequence: 'C', timelinePosition: 'Mid-Narrative', loreDesc: 'L', systemDesc: 'S' }]
+    }))
+    expect(errors.some(e => e.includes('missing required timeline field: primaryAbility'))).toBe(true)
+  })
+
+  it('passes timeline primaryAbility check when all characters provide it', () => {
+    const chars = [
+      makeCharacter('Hero', { primaryAbility: 'Time Loop Exploit' }),
+      makeCharacter('Villain', { primaryAbility: 'Convergence Enforcement' }),
+    ]
+    const { errors } = validateCorePayload(makePayload({
+      visualizationHint: 'timeline',
+      characters: chars,
+      causalEvents: [{ name: 'E1', trigger: 'T', consequence: 'C', timelinePosition: 'Mid-Narrative', loreDesc: 'L', systemDesc: 'S' }]
+    }))
+    expect(errors.some(e => e.includes('primaryAbility'))).toBe(false)
+  })
+
   it('validates relationship types', () => {
     const { errors } = validateCorePayload(makePayload({
       relationships: [{ source: 'Hero', target: 'Villain', type: 'romance' }]

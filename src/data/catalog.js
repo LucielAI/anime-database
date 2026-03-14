@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha']
+export const preferredOrder = ['aot', 'jjk', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -56,6 +56,11 @@ export const UNIVERSE_CATALOG = [
     id: 'mha', anime: 'My Hero Academia', tagline: 'Mutating biological power collides with state-managed hero capitalism.', malId: 31964, visualizationHint: 'node-graph', visualizationReason: 'MHA is governed by control webs: HPSC policy routing, inherited and stolen Quirk chains, and ideological splinter networks that determine which nodes stabilize or collapse society.', animeImageUrl: 'https://myanimelist.net/images/anime/10/78745l.jpg',
     themeColors: { primary: '#0ea5e9', secondary: '#0f172a', accent: '#f97316', glow: 'rgba(14,165,233,0.35)', tabActive: '#38bdf8', badgeBg: 'rgba(14,165,233,0.18)', badgeText: '#bae6fd', modeGlow: 'rgba(249,115,22,0.42)', heroGradient: 'rgba(15,23,42,0.94)' },
     stats: { characters: 10, powerSystem: 4, rules: 6 }
+  }  ,
+  {
+    id: 'frieren', anime: 'Sousou no Frieren', tagline: 'A post-war fantasy where mana deception, lifespan asymmetry, and visualization limits decide who survives.', malId: 52991, visualizationHint: 'timeline', visualizationReason: 'Frieren\'s core thesis is causal and longitudinal: Flamme\'s anti-demon doctrine, millennium-scale mana training, the Demon King\'s defeat, and current-era mage institutions all form a delayed-consequence chain that the timeline renderer explains best.', animeImageUrl: 'https://myanimelist.net/images/anime/1015/138006l.jpg',
+    themeColors: { primary: '#0f766e', secondary: '#1e3a8a', accent: '#22d3ee', glow: 'rgba(34,211,238,0.3)', tabActive: '#14b8a6', badgeBg: 'rgba(15,118,110,0.18)', badgeText: '#67e8f9', modeGlow: 'rgba(20,184,166,0.26)', heroGradient: 'rgba(3,12,28,0.92)' },
+    stats: { characters: 8, powerSystem: 4, rules: 5 }
   }
 ]
 

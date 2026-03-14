@@ -1,0 +1,499 @@
+{
+  "anime": "Sousou no Frieren",
+  "tagline": "A post-war fantasy where mana deception, lifespan asymmetry, and visualization limits decide who survives.",
+  "malId": 52991,
+  "animeImageUrl": "https://myanimelist.net/images/anime/1015/138006l.jpg",
+  "introductionSummary": "Frieren reframes fantasy combat as a systems problem, not a spectacle problem. Power depends on long-horizon mana accumulation, but outcomes are often decided by information quality: what each side can perceive, visualize, and correctly infer. The world is also stratified by species cognition, where demon language-mimicry and elven time depth create asymmetric decision loops. The result is a strategic ecology in which patience, suppression, and epistemic discipline beat raw output.",
+  "themeColors": {
+    "primary": "#0f766e",
+    "secondary": "#1e3a8a",
+    "accent": "#22d3ee",
+    "glow": "rgba(34,211,238,0.3)",
+    "tabActive": "#14b8a6",
+    "badgeBg": "rgba(15,118,110,0.18)",
+    "badgeText": "#67e8f9",
+    "modeGlow": "rgba(20,184,166,0.26)",
+    "heroGradient": "rgba(3,12,28,0.92)"
+  },
+  "visualizationHint": "timeline",
+  "visualizationReason": "Frieren's core thesis is causal and longitudinal: Flamme's anti-demon doctrine, millennium-scale mana training, the Demon King's defeat, and current-era mage institutions all form a delayed-consequence chain that the timeline renderer explains best.",
+  "headerFlavor": {
+    "loreQuote": "The problem wasn't that the journey was short. It was that I didn't understand it while it was happening.",
+    "sysWarning": "// [EPISTEMIC ALERT]: OBSERVED MANA OUTPUT MAY NOT MATCH TRUE THREAT CLASS",
+    "sysWarningColor": "cyan"
+  },
+  "backgroundMotif": "temporal",
+  "revealOverlay": "glow-border-soft",
+  "powerSystem": [
+    {
+      "name": "Mana Accumulation & Suppression",
+      "subtitle": "Lifespan-Weighted Energy Economics",
+      "loreDesc": "Mages cultivate mana over years and centuries, and veterans like Frieren hide vast reserves behind intentionally weak emissions.",
+      "systemDesc": "A long-horizon resource model where true capacity scales with training time, while emitted signature can be spoofed to induce opponent misclassification.",
+      "loreSubtitle": "Silent Oceans Beneath Calm Water",
+      "systemSubtitle": "Signal Obfuscation Layer",
+      "icon": "Eye",
+      "color": "teal-400",
+      "signatureMoment": "Frieren reveals suppressed mana against Aura after allowing a false threat model to stabilize."
+    },
+    {
+      "name": "Visualization Constraint",
+      "subtitle": "Belief-Bounded Spell Throughput",
+      "loreDesc": "Magic only manifests at magnitudes the caster can truly imagine and rationally accept as possible.",
+      "systemDesc": "Cognitive priors act as hard runtime limits: if a caster cannot simulate an outcome, cast efficiency collapses regardless of mana stock.",
+      "loreSubtitle": "Imagination as a Battlefield",
+      "systemSubtitle": "Epistemic Throughput Cap",
+      "icon": "Brain",
+      "color": "cyan-400",
+      "signatureMoment": "Exam arcs repeatedly show technically possible spells failing when users cannot visualize execution conditions."
+    },
+    {
+      "name": "Specialization Meta",
+      "subtitle": "Generalist Fundamentals vs Niche Exploits",
+      "loreDesc": "Modern mages iterate practical spells while legendary demons and archmages rely on signature techniques tied to identity and doctrine.",
+      "systemDesc": "The combat meta rewards broad defensive basics plus narrow high-impact modules, creating matchup-dependent win windows.",
+      "loreSubtitle": "Old Myths, New Toolchains",
+      "systemSubtitle": "Adaptive Build Diversity",
+      "icon": "Zap",
+      "color": "sky-400",
+      "signatureMoment": "Fern's disciplined fundamentals repeatedly neutralize flashier opponents in controlled engagements."
+    },
+    {
+      "name": "Demon Speech as Predation Interface",
+      "subtitle": "Language Without Shared Ethics",
+      "loreDesc": "Demons emulate empathy through language but treat conversation as hunting camouflage, not social contract.",
+      "systemDesc": "A cross-species protocol mismatch: human trust heuristics are exploitable because demon signaling is non-cooperative by design.",
+      "loreSubtitle": "Words That Imitate Warmth",
+      "systemSubtitle": "Adversarial Social Engineering",
+      "icon": "Mask",
+      "color": "violet-400",
+      "signatureMoment": "Early village encounters demonstrate that humane negotiation assumptions become immediate vulnerability surfaces."
+    }
+  ],
+  "characters": [
+    {
+      "name": "Frieren",
+      "title": "Elven Mage / Long-Horizon Analyst",
+      "rank": "Legendary Mage",
+      "dangerLevel": 10,
+      "loreBio": "A millennium-old elf who defeated the Demon King with Himmel's party and now retraces the world to understand human time and memory.",
+      "systemBio": "Top-tier strategic node combining extreme mana reserve, suppression discipline, anti-demon doctrine, and exceptional dispel capability.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "teal-900",
+      "accentColor": "teal-400",
+      "icon": "Eye",
+      "signatureMoment": "She overturns Aura's mana-scaling certainty by revealing an intentionally concealed reserve.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/525105.jpg?s=1706604ec2ca141a172526b8dedf3177",
+      "malId": 184947,
+      "primaryAbility": "Mana Suppression / High-Order Dispel"
+    },
+    {
+      "name": "Fern",
+      "title": "Precision Mage / Throughput Specialist",
+      "rank": "First-Class Mage Candidate",
+      "dangerLevel": 8,
+      "loreBio": "A calm prodigy raised under Heiter who masters rapid, efficient casting through relentless discipline.",
+      "systemBio": "High-frequency execution node; wins by clean timing, low-noise fundamentals, and superior tactical consistency.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Target",
+      "signatureMoment": "Outpaces veteran mages in exchange velocity during certification-stage duels.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/619183.jpg?s=15f45c66440c0e9843e2f0109f0c1aef",
+      "malId": 188176,
+      "primaryAbility": "Rapid Precision Casting / Zoltraak Barrage"
+    },
+    {
+      "name": "Stark",
+      "title": "Warrior Vanguard / Threat Interceptor",
+      "rank": "Frontline Warrior",
+      "dangerLevel": 7,
+      "loreBio": "An anxious but resilient disciple of Eisen who grows into the party's physical stopper against high-momentum threats.",
+      "systemBio": "Non-mage kinetic defense module that stabilizes fragile caster formations and absorbs close-range volatility.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Shield",
+      "signatureMoment": "Holds lethal melee pressure long enough for mage-side reconfiguration and counter-casting.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/621924.jpg?s=ff623ff40dde15a769f879d87d6e7dcd",
+      "malId": 188177,
+      "primaryAbility": "Frontline Interception / Burst Axe Strikes"
+    },
+    {
+      "name": "Himmel",
+      "title": "Hero / Moral Legitimacy Anchor",
+      "rank": "Hero Party Leader",
+      "dangerLevel": 7,
+      "loreBio": "The charismatic swordsman whose empathy and persistence made the Demon King campaign socially coherent.",
+      "systemBio": "Narrative-legitimacy node that unified heterogeneous specialists into a durable expeditionary coalition.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Star",
+      "signatureMoment": "His posthumous memory drives Frieren's entire second journey and reframes mission priorities.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/621925.jpg?s=5faec0afd8c70ec30faa16d5e256baa6",
+      "malId": 186854,
+      "primaryAbility": "Heroic Swordplay / Morale Stabilization"
+    },
+    {
+      "name": "Flamme",
+      "title": "Great Mage / Doctrine Architect",
+      "rank": "Historical Archmage",
+      "dangerLevel": 9,
+      "loreBio": "A foundational human mage who mentored Frieren and built anti-demon strategic doctrine around deception and survivability.",
+      "systemBio": "Root policy node; authored resilient operating procedures that still define anti-demon combat centuries later.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "Book",
+      "signatureMoment": "Institutionalizes mana suppression as a civilization-scale asymmetry against demon heuristics.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/528177.jpg?s=8b3a2d8085f11194c19344fe11e9605c",
+      "malId": 187307,
+      "primaryAbility": "Anti-Demon Doctrine Engineering"
+    },
+    {
+      "name": "Serie",
+      "title": "Living Grimoire / Institutional Sovereign",
+      "rank": "Ancient Mage",
+      "dangerLevel": 10,
+      "loreBio": "An ancient elf at the apex of magical knowledge who oversees elite certification while remaining emotionally distant from ordinary lives.",
+      "systemBio": "Gatekeeper node controlling credentialing, spell legitimacy, and access to top-tier magical capital.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Crown",
+      "signatureMoment": "Her exam oversight filters who can access strategic-grade magical authority.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/536851.jpg?s=bc2d816ac437e368cc7b7b7cb94922d0",
+      "malId": 211285,
+      "primaryAbility": "Spell Authority / First-Class Mage Gatekeeping"
+    },
+    {
+      "name": "Aura",
+      "title": "Guillotine Sage / Dominance Enforcer",
+      "rank": "Demon Commander",
+      "dangerLevel": 9,
+      "loreBio": "A demon commander who weaponizes obedience scales and assumes visible mana equals true hierarchy.",
+      "systemBio": "Legacy demon command node optimized for intimidation and deterministic ranking assumptions.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "rose-900",
+      "accentColor": "rose-400",
+      "icon": "Sword",
+      "signatureMoment": "Her certainty in mana-read hierarchy is exploited and reversed in a single decision collapse.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/524719.jpg?s=4048eff20f4b708dcb207e42dcf350a2",
+      "malId": 206722,
+      "primaryAbility": "Auserlese Obedience Scale"
+    },
+    {
+      "name": "Macht",
+      "title": "Sage of Destruction / Rule-Breaking Anomaly",
+      "rank": "Elite Demon",
+      "dangerLevel": 10,
+      "loreBio": "A near-unmatched demon whose curse mechanics and curiosity destabilize both military and philosophical assumptions.",
+      "systemBio": "Catastrophic anomaly node capable of violating standard defensive expectations and forcing doctrine rewrites.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "fuchsia-900",
+      "accentColor": "fuchsia-400",
+      "icon": "Flame",
+      "signatureMoment": "Introduces transformation-scale threats that conventional anti-demon playbooks cannot cleanly absorb.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "primaryAbility": "Di Agolze Curse Transmutation"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Flamme",
+      "target": "Frieren",
+      "type": "mentor",
+      "weight": 10,
+      "loreDesc": "Flamme's teachings gave Frieren both magical depth and anti-demon philosophy.",
+      "systemDesc": "Core doctrine transfer establishing long-term strategic baseline."
+    },
+    {
+      "source": "Frieren",
+      "target": "Fern",
+      "type": "mentor",
+      "weight": 9,
+      "loreDesc": "Frieren trains Fern in patience, efficiency, and battlefield composure.",
+      "systemDesc": "High-capacity veteran turns novice into reliable throughput partner."
+    },
+    {
+      "source": "Frieren",
+      "target": "Stark",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Mage and warrior synchronize to survive mixed-range threats.",
+      "systemDesc": "Caster front-line coupling reduces single-point fragility."
+    },
+    {
+      "source": "Frieren",
+      "target": "Himmel",
+      "type": "dependent",
+      "weight": 8,
+      "loreDesc": "Himmel's memory reshapes Frieren's emotional understanding of time.",
+      "systemDesc": "Historical mission objective persists as behavioral control variable."
+    },
+    {
+      "source": "Serie",
+      "target": "Frieren",
+      "type": "rival",
+      "weight": 7,
+      "loreDesc": "Two ancient mages represent different values: detached perfection versus relational growth.",
+      "systemDesc": "Competing governance models for magical talent allocation."
+    },
+    {
+      "source": "Frieren",
+      "target": "Aura",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Frieren directly opposes Aura's predatory command logic.",
+      "systemDesc": "Suppression-based deception counters hierarchy-reading combat protocol."
+    },
+    {
+      "source": "Fern",
+      "target": "Stark",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Fern and Stark develop trust through repeated survival scenarios.",
+      "systemDesc": "Backline precision plus frontline interception forms stable tactical pair."
+    },
+    {
+      "source": "Macht",
+      "target": "Frieren",
+      "type": "counter",
+      "weight": 8,
+      "loreDesc": "Macht's curse complexity pressures even Frieren's elite toolkit.",
+      "systemDesc": "Anomaly-grade mechanics stress-test baseline anti-demon architecture."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Frieren Expedition Party",
+      "role": "protagonist",
+      "loreDesc": "A small traveling unit rebuilding human-elf bonds while confronting remnant demon threats.",
+      "systemDesc": "Low-headcount, high-skill mobile team optimized for adaptive mission response and knowledge transfer."
+    },
+    {
+      "name": "Continental Magic Association",
+      "role": "systemic",
+      "loreDesc": "An institution that certifies mages, controls elite access, and preserves magical order.",
+      "systemDesc": "Credentialing bureaucracy that regulates strategic talent pipelines and spell legitimacy."
+    },
+    {
+      "name": "Demon Remnant Networks",
+      "role": "antagonist",
+      "loreDesc": "Scattered demon command cells that continue predatory conflict after the Demon King's fall.",
+      "systemDesc": "Decentralized hostile clusters exploiting trust heuristics and asymmetric violence windows."
+    },
+    {
+      "name": "Imperial Human Apparatus",
+      "role": "neutral",
+      "loreDesc": "Regional authorities balancing public safety, military priorities, and mage dependence.",
+      "systemDesc": "State governance layer managing resource allocation and anti-demon security coordination."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Visible Mana Is Not Ground Truth",
+      "subtitle": "Detection-Trust Failure",
+      "loreConsequence": "Those who judge strength by aura alone die to hidden veterans.",
+      "systemEquivalent": "Observable output is a spoofable signal; risk models must include intentional suppression and decoy emissions.",
+      "severity": "fatal",
+      "loreSubtitle": "Quiet Mages, Sudden Graves",
+      "systemSubtitle": "Signal Integrity Compromised"
+    },
+    {
+      "name": "Magic Obeys Visualization",
+      "subtitle": "Imagination Constraint",
+      "loreConsequence": "A spell fails when the caster cannot truly picture its success.",
+      "systemEquivalent": "Cognitive confidence functions as execution gate; weak internal models throttle throughput.",
+      "severity": "high",
+      "loreSubtitle": "Mind Before Mana",
+      "systemSubtitle": "Belief-Bounded Runtime"
+    },
+    {
+      "name": "Species Lifespan Sets Strategic Tempo",
+      "subtitle": "Temporal Asymmetry",
+      "loreConsequence": "Humans act quickly and burn brightly; elves and demons win by waiting.",
+      "systemEquivalent": "Decision horizons differ by biology, producing mismatched planning cycles and exploit windows.",
+      "severity": "high",
+      "loreSubtitle": "Years vs Centuries",
+      "systemSubtitle": "Time-Horizon Divergence"
+    },
+    {
+      "name": "Demon Language Is Predatory",
+      "subtitle": "Protocol Mismatch",
+      "loreConsequence": "Mercy offered under human assumptions becomes bait.",
+      "systemEquivalent": "Shared vocabulary does not imply shared utility function; trust inference must be zero-based.",
+      "severity": "fatal",
+      "loreSubtitle": "Words Without Kinship",
+      "systemSubtitle": "Adversarial Signaling"
+    },
+    {
+      "name": "Specialization Beats Brute Generality",
+      "subtitle": "Matchup Law",
+      "loreConsequence": "A narrowly tuned spell can overturn a stronger opponent in the right context.",
+      "systemEquivalent": "Context-specific counters produce nonlinear combat outcomes despite raw mana disparities.",
+      "severity": "medium",
+      "loreSubtitle": "Right Tool, Right Moment",
+      "systemSubtitle": "Localized Counter Advantage"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Aura-style Mana Hierarchy Judgment",
+      "defender": "Frieren-style Mana Suppression",
+      "mechanic": "Opponent commits to a false threat model and triggers self-defeating decisions.",
+      "loreDesc": "Arrogance toward weak-looking prey becomes the opening blow.",
+      "systemDesc": "Classifier poisoning via deliberately low observability."
+    },
+    {
+      "attacker": "High-Cost Signature Spell",
+      "defender": "Fern's Rapid Basic Barrage",
+      "mechanic": "Fast, repeatable fundamentals interrupt slow peak-cast setups.",
+      "loreDesc": "Elegant finishing moves are denied before they form.",
+      "systemDesc": "Cycle-time advantage suppresses burst-window realization."
+    },
+    {
+      "attacker": "Close-Range Rush on Caster",
+      "defender": "Stark Frontline Interception",
+      "mechanic": "Warrior body-blocking buys mage-side reset time.",
+      "loreDesc": "Steel and courage hold the line for spellwork.",
+      "systemDesc": "Kinetic buffering protects high-value casting nodes."
+    },
+    {
+      "attacker": "Demon Social Deception",
+      "defender": "Doctrine-Level Zero-Trust Protocol",
+      "mechanic": "Negotiation channels are denied to remove manipulation vectors.",
+      "loreDesc": "Mercy is withheld because the premise is false.",
+      "systemDesc": "Protocol hardening closes empathy exploit surfaces."
+    },
+    {
+      "attacker": "Unknown Curse Mechanics",
+      "defender": "Frieren's Dispel + Long-Form Analysis",
+      "mechanic": "Threat is delayed, sampled, and decomposed before commitment.",
+      "loreDesc": "Patience turns impossible magic into solvable structure.",
+      "systemDesc": "Iterative reverse-engineering de-risks anomaly engagement."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Macht's Transformative Curse Domain",
+      "ruleViolated": "Conventional defensive magic should not be bypassed this consistently.",
+      "loreDesc": "Macht introduces calamity-scale magic that feels alien even by demon standards.",
+      "systemDesc": "Anomaly-tier effect stack exceeds baseline anti-demon defensive assumptions."
+    },
+    {
+      "name": "Frieren's Extreme Suppression Longevity",
+      "ruleViolated": "Long-term output masking at this depth should degrade combat responsiveness.",
+      "loreDesc": "She maintains low visible mana for centuries without dulling lethal precision.",
+      "systemDesc": "Sustained signal obfuscation with negligible performance tax indicates elite control singularity."
+    },
+    {
+      "name": "Heroic Legacy as Active Force",
+      "ruleViolated": "Dead actors should not keep altering current strategic behavior so strongly.",
+      "loreDesc": "Himmel's memory continues to redirect life choices and mission goals.",
+      "systemDesc": "Historical narrative anchors function as persistent policy constraints on living nodes."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Flamme Trains Frieren",
+      "trigger": "Early anti-demon wars and scarcity of human survival doctrine.",
+      "consequence": "Mana suppression and anti-demon epistemics become durable cross-era strategy.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "A human teacher gives an elf the patience to weaponize humility.",
+      "systemDesc": "Doctrine seeding creates multi-century strategic compounding."
+    },
+    {
+      "name": "Hero Party Defeats the Demon King",
+      "trigger": "Coalition campaign led by Himmel with Frieren, Heiter, and Eisen.",
+      "consequence": "Macro threat falls, but local demon clusters and systemic trauma persist.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The great victory ends an era but not the deeper problem.",
+      "systemDesc": "Centralized adversary removal fragments conflict into distributed remnants."
+    },
+    {
+      "name": "Himmel's Death Reorients Frieren",
+      "trigger": "Funeral reflection reveals Frieren's shallow understanding of human time.",
+      "consequence": "She launches a second journey focused on relational comprehension and delayed meaning.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Regret becomes the compass of a new pilgrimage.",
+      "systemDesc": "Primary objective shifts from mission completion to memory-aware model correction."
+    },
+    {
+      "name": "Aura Engagement",
+      "trigger": "Demon resurgence tests whether old doctrines still work.",
+      "consequence": "Suppression strategy is publicly vindicated, reinforcing anti-demon zero-trust practices.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Old pride meets older patience and breaks.",
+      "systemDesc": "Classifier-deception tactic validated against high-rank enemy node."
+    },
+    {
+      "name": "First-Class Mage Exam Arc",
+      "trigger": "Institutional need to screen strategic-grade mages amid persistent instability.",
+      "consequence": "New generation capabilities are benchmarked under scarce-resource, adversarial conditions.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "A rite of passage reveals who can carry the future.",
+      "systemDesc": "Talent pipeline stress-test updates institutional confidence and deployment logic."
+    }
+  ],
+  "rankings": {
+    "systemName": "Arcane Capability Hierarchy",
+    "loreName": "Mages, Warriors, and Demon Threat Classes",
+    "topTierName": "Epoch-Class Entities",
+    "topTierLore": "Ancient mages and elite demons whose decisions can rewrite regions, doctrines, and eras.",
+    "topTierSystem": "Nodes with extreme mana depth, anomaly mechanics, or governance-level control over magical institutions.",
+    "tiers": [
+      {
+        "name": "Tier 1 — Epoch-Class",
+        "loreDesc": "Frieren, Serie, and calamity-grade demons operate beyond conventional battlefield expectations.",
+        "systemDesc": "Strategic actors capable of forcing ecosystem-wide adaptation."
+      },
+      {
+        "name": "Tier 2 — Elite Specialists",
+        "loreDesc": "Top human mages and high-function warriors who can decide major engagements.",
+        "systemDesc": "High reliability nodes with context-dependent hard counters."
+      },
+      {
+        "name": "Tier 3 — Institutional Operators",
+        "loreDesc": "Certified mages and trained personnel sustaining regional stability.",
+        "systemDesc": "Operational backbone for routine anti-threat response and governance support."
+      }
+    ]
+  },
+  "aiInsights": {
+    "casual": "Frieren's world looks gentle, but it's built on brutal information asymmetry. People who mistake visible mana for real power, or demon speech for human empathy, are selected out quickly.",
+    "deep": "The universe runs on three coupled constraints: signal integrity (suppression vs detection), cognitive computability (visualization-bounded casting), and temporal asymmetry (species-specific planning horizons). High performers win by controlling all three at once—spoofing observables, preserving execution confidence, and exploiting opponents locked into shorter or more rigid decision loops."
+  },
+  "systemQuestions": [
+    {
+      "question": "Why does mana suppression matter more than raw mana in key battles?",
+      "answer": "Because many opponents infer threat from visible output. Suppression poisons that inference and creates fatal misplays before raw power is even exchanged.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What is the most important hard rule in Frieren's magic system?",
+      "answer": "Visualization. If a caster cannot truly model an outcome as possible, spell throughput collapses regardless of mana reserves.",
+      "tabIndex": 3,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Why are demons structurally dangerous beyond combat strength?",
+      "answer": "Their language behavior mimics empathy without sharing human ethics, so social trust itself becomes an attack surface.",
+      "tabIndex": 2,
+      "sectionId": "factions-heading",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "Why is this universe modeled as a timeline?",
+      "answer": "Major outcomes emerge from delayed effects across centuries, where old doctrines and old relationships continue to shape present conflict.",
+      "tabIndex": 3,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    }
+  ]
+}
