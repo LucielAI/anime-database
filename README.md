@@ -2,13 +2,17 @@
 
 **Live:** https://animearchive.app/
 
-A dark, cyberpunk-styled interactive archive that deconstructs fictional universes through two interpretive lenses: **LORE** (narrative) and **SYS** (strategic/systemic).
+A dark, cyberpunk-styled interactive archive that deconstructs fictional universes through two interpretive lenses: **LORE** (narrative) and **SYS** (strategic/systemic). Each universe page is intended to function as a standalone reference landing page, not just a visual dashboard.
 
 This is not an encyclopedic wiki. It is a structural analysis tool designed to reveal the hidden mechanics of fictional worlds — energy economies, permission hierarchies, counterplay graphs, and causal chains.
 
 Every universe is treated as a deterministic system. The archive renders these systems via specialized visualization engines rather than static text pages.
 
+The archive itself is a connected content graph: universes are linked by shared structural thesis (causality, control networks, counter-economies, affinity systems), and discovery components surface related + newest entries through curated sets instead of full-list dumps.
+
 ## Core Experience
+
+- **Universe Catalog (`/universes`)** — Searchable and sortable browse surface (Latest / Most Viewed / Alphabetical) backed by lightweight catalog metadata.
 
 Each universe page exposes four tabs:
 
@@ -112,6 +116,12 @@ Every universe payload is built via a two-stage workflow: broad system research 
 - **Lucide React** for UI iconography
 - **D3** for force-directed SVG layouts
 - Deployed on **Vercel** with Edge-function dynamic Open Graph imagery
+
+## Discovery & Scale Defaults
+
+- Homepage shows curated slices (not full-list rendering) to stay fast as the archive grows.
+- Universe pages show a small curated suggestion set + clear path to `/universes`.
+- Catalog browsing uses metadata-only sorting/search; full payload JSON remains route-lazy.
 
 ## Development
 

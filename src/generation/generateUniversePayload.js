@@ -85,9 +85,12 @@ export function generateUniversePayload(animeName, structuredResearch, options =
     systemDesc: r.systemDesc || 'Symmetric edge established.'
   }))
 
+  const introductionSummary = baseResearch.introductionSummary || `${animeName} is profiled as a structured system where power mechanics, governing rules, and faction incentives create repeatable outcomes. This page highlights how constraints and leverage points interact so the universe can be compared against other archive entries as a reference model.`
+
   return {
     anime: animeName,
     tagline: baseResearch.tagline || 'CLASSIFIED SYSTEM',
+    introductionSummary,
     malId: Number.isInteger(baseResearch.malId) && baseResearch.malId > 0 ? baseResearch.malId : 1,
     themeColors,
     visualizationHint: hint,

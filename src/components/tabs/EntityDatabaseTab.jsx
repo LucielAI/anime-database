@@ -35,6 +35,11 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
 
   return (
     <div className="space-y-6 font-mono">
+      <section aria-labelledby="entity-database-heading">
+        <h2 id="entity-database-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Entity Database</h2>
+        <p className="text-xs text-gray-500 leading-relaxed mb-5">
+          The entity graph maps key actors and their links so you can inspect control flow, dependencies, and conflict pressure without needing prior story context.
+        </p>
       {/* Main visualization */}
       <ErrorBoundary data={data} isSystemMode={isSystemMode} theme={theme}>
         {renderVisualization(data?.visualizationHint, {
@@ -50,11 +55,12 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
           isRevealing
         })}
       </ErrorBoundary>
+      </section>
 
       {/* Anomalies section */}
       {anomalies.length > 0 && (
-        <div>
-          <h3 className="text-xs tracking-widest text-gray-500 mb-3">{isSystemMode ? '// SYSTEM ANOMALIES' : '// RULE BREAKERS'}</h3>
+        <section aria-labelledby="entity-anomalies-heading">
+          <h3 id="entity-anomalies-heading" className="text-xs tracking-widest text-gray-500 mb-3">{isSystemMode ? '// SYSTEM ANOMALIES' : '// RULE BREAKERS'}</h3>
           <p className="text-[10px] text-gray-600 mb-2">Characters who break the rules of their own universe.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {anomalies.map((a, i) => (
@@ -67,12 +73,16 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
       {/* Relationship Matrix */}
       {relationships.length > 0 && (
-        <div>
+        <section aria-labelledby="relationship-matrix-heading">
+          <h3 id="relationship-matrix-heading" className="text-xs tracking-widest text-gray-500 mb-2">{isSystemMode ? '// DEPENDENCY GRAPH' : '// RELATIONSHIP MATRIX'}</h3>
+          <p className="text-[10px] text-gray-600 mb-3">
+            Relationship edges show who influences whom, and where alliances or hostilities can rewire system behavior.
+          </p>
           <button
             onClick={() => setShowRelationships(!showRelationships)}
             className="text-xs tracking-widest text-gray-500 hover:text-gray-300 transition-colors mb-3 flex items-center gap-2"
@@ -119,7 +129,7 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
               </table>
             </div>
           )}
-        </div>
+        </section>
       )}
     </div>
   )

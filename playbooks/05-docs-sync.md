@@ -102,3 +102,10 @@ After SEO/discoverability changes, verify these are still true:
 - [ ] `scripts/validateIndexing.js` still passes and checks metadata guardrails
 - [ ] `index.html` keeps fallback canonical + OG/Twitter tags for non-JS fetchers
 - [ ] `api/og` supports every catalog universe slug without manual per-slug coding
+
+
+## Discovery defaults (if touching browsing UX)
+- [ ] `/universes` route is documented where architecture/navigation is described
+- [ ] Homepage is documented as curated (not full-list)
+- [ ] Sort modes (Latest / Most Viewed / Alphabetical) are documented if changed
+- [ ] Sitemap generation still includes root, `/universes`, and all `/universe/:slug` routes

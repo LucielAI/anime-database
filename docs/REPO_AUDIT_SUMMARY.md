@@ -19,6 +19,7 @@
 - StandardCardsExplorer
 
 ## Key UX Layers
+- Dedicated `/universes` catalog route (search, sort, load-more)
 - React Router navigation
 - Dynamic OG images
 - SystemSummary component
@@ -32,6 +33,7 @@ Research → Payload → Validation → Integration
 This structure allows the archive to scale to new universes without rebuilding the architecture each time.
 
 ## SEO & Crawling Infrastructure
+- Crawlable catalog route: `/universes`
 - `public/robots.txt` — allows all crawlers, points to sitemap
 - `public/sitemap.xml` — auto-generated from `src/data/` slugs on every build and `add:universe` run
 - Google site verification meta tag in `index.html`

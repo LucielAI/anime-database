@@ -35,6 +35,21 @@ const DEFAULT_THEME = {
   heroGradient: 'rgba(5,5,20,0.95)',
 }
 
+function buildUniverseIntroduction(data) {
+  if (!data) return ''
+  if (typeof data.introductionSummary === 'string' && data.introductionSummary.trim()) {
+    return data.introductionSummary.trim()
+  }
+
+  const powerCount = data.powerSystem?.length || 0
+  const rulesCount = data.rules?.length || 0
+  const factionCount = data.factions?.length || 0
+  const relationshipCount = data.relationships?.length || 0
+  const architectureLine = data.visualizationReason || data.tagline || 'This universe rewards structural analysis over surface-level plot recall.'
+
+  return `${data.anime} is modeled here as a constrained system where abilities, institutions, and consequences create predictable strategic pressure. This archive profile maps ${powerCount} core mechanics, ${rulesCount} governing constraints, and ${factionCount} major power blocs so readers can quickly understand the operating logic of the world. ${architectureLine} Relationship and causality layers (${relationshipCount} mapped edges) make this page useful as a standalone reference for comparative universe analysis.`
+}
+
 export default function Dashboard({ data }) {
   const [activeTab, setActiveTab] = useState(0)
   const [isSystemMode, setIsSystemMode] = useState(false)
@@ -45,6 +60,7 @@ export default function Dashboard({ data }) {
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
   const classLabel = getClassificationLabel(data?.visualizationHint)
   const shareFrameBullets = useMemo(() => deriveBullets(data).slice(0, 3), [data])
+  const universeIntro = useMemo(() => buildUniverseIntroduction(data), [data])
   const headerFlavor = data?.headerFlavor
   const revealOverlay = getRevealOverlay(data?.revealOverlay)
 
@@ -208,6 +224,17 @@ export default function Dashboard({ data }) {
         </div>
       </header>
 
+      <section className="max-w-6xl mx-auto px-6 mt-8 mb-8 share-frame-hide" aria-labelledby="universe-introduction-heading">
+        <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 md:p-8">
+          <h2 id="universe-introduction-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-3">
+            Universe Introduction
+          </h2>
+          <p className="text-xs md:text-sm text-gray-300 leading-relaxed max-w-4xl">
+            {universeIntro}
+          </p>
+        </div>
+      </section>
+
       {/* 5-Bullet System Summary */}
       <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
@@ -332,7 +359,7 @@ export default function Dashboard({ data }) {
             </a>
           )}
           <a
-            href="https://www.tiktok.com/@kenshipeak"
+            href="https://buymeacoffee.com/hashiai"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300"
@@ -341,7 +368,7 @@ export default function Dashboard({ data }) {
               <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.63a8.23 8.23 0 004.79 1.53V6.71a4.85 4.85 0 01-1.03-.02z"/>
             </svg>
             <span className="text-[10px] font-bold tracking-[0.2em] text-gray-400 group-hover:text-white transition-colors uppercase">
-              @KENSHIPEAK
+              HASHI.AI
             </span>
           </a>
         </div>

@@ -26,6 +26,7 @@ if (!fs.existsSync(sitemapPath)) {
   const urls = new Set([...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]))
 
   if (!urls.has('https://animearchive.app/')) failures.push('Sitemap missing homepage URL')
+  if (!urls.has('https://animearchive.app/universes')) failures.push('Sitemap missing catalog URL')
   for (const universeUrl of expectedUniverseUrls) {
     if (!urls.has(universeUrl)) failures.push(`Sitemap missing universe URL: ${universeUrl}`)
   }
@@ -52,6 +53,7 @@ if (!fs.existsSync(appPath)) {
 } else {
   const app = fs.readFileSync(appPath, 'utf8')
   if (!app.includes('path="/universe/:id"')) failures.push('Universe route missing in App.jsx')
+  if (!app.includes('path="/universes"')) failures.push('Universes catalog route missing in App.jsx')
   if (!app.includes('<SeoHead')) failures.push('SEO head injection missing in App.jsx')
 }
 

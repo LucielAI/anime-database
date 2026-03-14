@@ -114,3 +114,14 @@ Homepage/archive listing consumes lightweight static metadata (`src/data/catalog
 
 Why:
 Prevents first-load bundle growth as universes scale while preserving repo-native static payload source-of-truth and stable `/universe/:slug` routing for SEO.
+
+
+## ADR-015 — Dedicated Catalog Browsing Route
+Decision:
+Introduce `/universes` as the primary scalable browsing surface with metadata-only search/sort and controlled batch expansion.
+
+Why:
+Keeps homepage curated and fast while allowing growth to 20/50/100+ universes without clutter.
+
+Tradeoff:
+Adds one extra route, but preserves crawlability and avoids infinite-scroll UX debt.

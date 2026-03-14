@@ -40,7 +40,12 @@ export default function PowerEngineTab({ data, isSystemMode, theme }) {
 
   return (
     <div className="space-y-8 font-mono animate-fade-in">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section aria-labelledby="power-system-heading">
+        <h2 id="power-system-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Power System</h2>
+        <p className="text-xs text-gray-500 leading-relaxed mb-5">
+          This section maps the core mechanics that generate advantages in this universe. Read each entry as a rule-bearing subsystem: what it enables, what it costs, and where it creates strategic leverage.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {powerSystem.map((power, idx) => (
           <HoverCard
             key={idx}
@@ -71,10 +76,16 @@ export default function PowerEngineTab({ data, isSystemMode, theme }) {
             </div>
           </HoverCard>
         ))}
-      </div>
+        </div>
+      </section>
 
       {/* Rankings/Tiers Section */}
       {rankings && (
+        <section aria-labelledby="rankings-heading">
+          <h2 id="rankings-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Rankings</h2>
+          <p className="text-xs text-gray-500 leading-relaxed mb-5">
+            Rankings summarize how authority or combat priority is distributed. Use it to understand what the top tier can do, which constraints still apply, and how lower tiers remain relevant.
+          </p>
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8" style={{ background: `radial-gradient(ellipse at top left, ${theme.glow} 0%, transparent 60%)` }}>
           <h2 className="text-lg md:text-xl font-bold mb-8 text-center tracking-[0.2em] text-gray-400 uppercase">
             {isSystemMode ? rankings.systemName : (rankings.loreName || rankings.systemName)}
@@ -101,10 +112,16 @@ export default function PowerEngineTab({ data, isSystemMode, theme }) {
             ))}
           </div>
         </div>
+        </section>
       )}
 
       {/* Counterplay section */}
       {counterplay.length > 0 && (
+        <section aria-labelledby="counterplay-heading">
+          <h2 id="counterplay-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Counterplay</h2>
+          <p className="text-xs text-gray-500 leading-relaxed mb-4">
+            Counterplay entries explain practical interaction logic: which tools answer which threats and why specific matchups swing toward one side.
+          </p>
         <div>
           <button
             onClick={() => setExpandedCounterplay(!expandedCounterplay)}
@@ -126,6 +143,7 @@ export default function PowerEngineTab({ data, isSystemMode, theme }) {
             </div>
           )}
         </div>
+        </section>
       )}
     </div>
   )

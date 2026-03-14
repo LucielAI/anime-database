@@ -63,3 +63,9 @@ ExploreAnotherUniverse
 - `/universe/:slug` first resolves lightweight slug metadata from `src/data/catalog.js` for immediate route-safe context.
 - Full universe JSON is then loaded on demand using `loadUniverseBySlug` (`src/data/index.js`).
 - This keeps homepage payload light while preserving static, indexable universe routes.
+
+
+## Universe Catalog route
+- `/universes` is the dedicated browse page for scalable discovery.
+- Search/sort run on lightweight catalog metadata only.
+- Universe JSON payloads still load only on `/universe/:slug` route visits.
