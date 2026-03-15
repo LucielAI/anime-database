@@ -14,6 +14,7 @@ import {
   SITE_NAME
 } from './utils/seo'
 import { getFeaturedUniverses, sortCatalogUniverses, filterCatalogUniverses, incrementUniverseLocalView, getDiscoveryClusters, getRelatedUniverseSuggestions } from './utils/discovery'
+import { DISCOVERY_CLUSTERS } from './data/discoveryMetadata'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
@@ -217,21 +218,21 @@ function Home() {
 
 
       <section className="max-w-6xl mx-auto px-6 pb-2" aria-labelledby="cluster-pathways-heading">
-        <div className="rounded-xl border border-white/10 bg-white/5 p-4 md:p-5">
+        <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 md:px-5">
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
             <h2 id="cluster-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Browse by System Cluster</h2>
             <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">View full catalog →</Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+          <p className="text-[11px] text-gray-400 mb-3">Quick pathways into related universes without opening the full directory.</p>
+          <div className="flex flex-wrap gap-2">
             {discoveryClusters.map(cluster => (
               <Link
                 key={cluster.key}
                 to={`/universes?cluster=${cluster.key}`}
-                className="group rounded-lg border border-white/10 bg-[#090b14] hover:border-cyan-300/40 px-3 py-3 transition-colors"
+                className="inline-flex items-center gap-2 min-h-[40px] px-3 py-2 rounded-full border border-white/10 bg-[#090b14] hover:border-cyan-300/40 text-[10px] tracking-[0.16em] uppercase text-gray-200 transition-colors"
               >
-                <p className="text-[10px] tracking-[0.18em] uppercase text-cyan-200">{cluster.shortLabel}</p>
-                <p className="text-[11px] text-gray-400 mt-1 line-clamp-2">{cluster.description}</p>
-                <p className="text-[9px] text-gray-500 mt-2 uppercase tracking-[0.15em]">{cluster.count} universes</p>
+                <span>{cluster.shortLabel}</span>
+                <span className="text-gray-500">{cluster.count}</span>
               </Link>
             ))}
           </div>
@@ -303,6 +304,11 @@ function UniversesCatalogRoute() {
   const seo = buildCatalogSeo(UNIVERSE_CATALOG)
   const structuredData = buildCatalogStructuredData(UNIVERSE_CATALOG)
   const clusterOptions = useMemo(() => getDiscoveryClusters(UNIVERSE_CATALOG), [])
+  const activeClusterMeta = clusterOptions.find((cluster) => cluster.key === activeCluster) || null
+  const activeClusterFeatured = useMemo(() => {
+    if (!activeCluster) return []
+    return sortCatalogUniverses(filterCatalogUniverses(UNIVERSE_CATALOG, '', activeCluster), 'most-viewed').slice(0, 3)
+  }, [activeCluster])
 
   const filtered = useMemo(() => {
     const sorted = sortCatalogUniverses(UNIVERSE_CATALOG, sortMode)
@@ -358,6 +364,26 @@ function UniversesCatalogRoute() {
             </Link>
           ))}
         </div>
+
+        {activeClusterMeta && (
+          <div className="mb-6 rounded-xl border border-cyan-300/20 bg-cyan-400/5 p-4">
+            <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-200">{activeClusterMeta.label}</p>
+            <p className="text-xs text-gray-300 mt-1">{DISCOVERY_CLUSTERS[activeClusterMeta.key]?.description || activeClusterMeta.description}</p>
+            {activeClusterFeatured.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {activeClusterFeatured.map((entry) => (
+                  <Link
+                    key={entry.id}
+                    to={`/universe/${entry.id}`}
+                    className="inline-flex min-h-[40px] items-center rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-gray-200 hover:text-white hover:bg-white/10"
+                  >
+                    {entry.anime}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {visible.map((entry, index) => <UniverseLinkCard key={entry.id} data={entry} density="catalog" priorityImage={index < 3} />)}

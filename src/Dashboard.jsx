@@ -63,7 +63,8 @@ export default function Dashboard({ data }) {
   const { isShareFrame, toggleShareFrame } = useShareFrame()
 
   const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
-  const relatedUniverses = useMemo(() => getRelatedUniverseSuggestions(UNIVERSE_CATALOG, data?.id, 4), [data?.id])
+  const relatedUniverses = useMemo(() => getRelatedUniverseSuggestions(UNIVERSE_CATALOG, data?.id, 3), [data?.id])
+  const bestParallel = relatedUniverses[0]
 
   useEffect(() => {
     setActiveTab(bestEntry.tabIndex)
@@ -261,11 +262,11 @@ export default function Dashboard({ data }) {
           <p className="text-xs md:text-sm text-gray-300 leading-relaxed max-w-4xl">
             {universeIntro}
           </p>
-          {relatedUniverses[0] && (
+          {bestParallel?.entry && (
             <p className="mt-4 text-[11px] text-gray-400">
-              For a close structural parallel, continue with{' '}
-              <Link to={`/universe/${relatedUniverses[0].entry.id}`} className="text-cyan-300 hover:text-cyan-200">
-                {relatedUniverses[0].entry.anime}
+              If you want to compare this architecture against a {bestParallel.reason.toLowerCase()}, continue with{' '}
+              <Link to={`/universe/${bestParallel.entry.id}`} className="text-cyan-300 hover:text-cyan-200">
+                {bestParallel.entry.anime}
               </Link>
               .
             </p>
