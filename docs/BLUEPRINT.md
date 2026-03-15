@@ -77,6 +77,7 @@ A dynamic navigation system that encourages cross-archive discovery.
 - Sousou no Frieren
 - Solo Leveling
 - Goblin Slayer
+- Mushoku Tensei: Jobless Reincarnation
 
 ## Product Goals
 The archive serves multiple simultaneous goals:

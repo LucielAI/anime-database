@@ -14,6 +14,7 @@
 - Sousou no Frieren
 - Solo Leveling
 - Goblin Slayer
+- Mushoku Tensei: Jobless Reincarnation
 
 ## Current Renderers
 - TimelineExplorer

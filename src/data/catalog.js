@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer']
+export const preferredOrder = ['aot', 'jjk', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -71,6 +71,11 @@ export const UNIVERSE_CATALOG = [
     id: 'goblinslayer', anime: 'Goblin Slayer', tagline: 'A low-prestige extermination niche becomes the hidden maintenance layer that keeps a fantasy civilization from collapsing.', malId: 37349, visualizationHint: 'node-graph', visualizationReason: 'Goblin Slayer is driven by dependency edges between frontier villages, guild bureaucracy, faith-casters, and specialist operators; the node graph best shows who supplies protection, who absorbs risk, and how trust links stabilize the system.', animeImageUrl: 'https://myanimelist.net/images/anime/1719/95621l.jpg',
     themeColors: { primary: '#065f46', secondary: '#111827', accent: '#b45309', glow: 'rgba(6,95,70,0.32)', tabActive: '#10b981', badgeBg: 'rgba(17,24,39,0.58)', badgeText: '#a7f3d0', modeGlow: 'rgba(180,83,9,0.3)', heroGradient: 'rgba(8,12,15,0.94)' },
     stats: { characters: 8, powerSystem: 4, rules: 5 }
+  },
+  {
+    id: 'mushokutensei', anime: 'Mushoku Tensei: Jobless Reincarnation', tagline: 'A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.', malId: 39535, visualizationHint: 'timeline', visualizationReason: 'Mushoku Tensei is fundamentally a delayed-causality system: ancient god-war fallout, Laplace-era fragmentation, and present-era choices all compound across centuries, so the timeline renderer captures the thesis best.', animeImageUrl: 'https://myanimelist.net/images/anime/1530/117776l.jpg',
+    themeColors: { primary: '#0f766e', secondary: '#1e293b', accent: '#7c3aed', glow: 'rgba(15,118,110,0.32)', tabActive: '#14b8a6', badgeBg: 'rgba(124,58,237,0.14)', badgeText: '#a78bfa', modeGlow: 'rgba(20,184,166,0.28)', heroGradient: 'rgba(4,14,27,0.94)' },
+    stats: { characters: 10, powerSystem: 4, rules: 4 }
   }
 ]
 

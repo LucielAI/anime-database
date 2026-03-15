@@ -113,6 +113,7 @@ Every universe payload is built via a two-stage workflow: broad system research 
 - Sousou no Frieren
 - Solo Leveling
 - Goblin Slayer
+- Mushoku Tensei: Jobless Reincarnation
 
 ## Tech Stack
 

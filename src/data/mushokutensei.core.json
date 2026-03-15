@@ -1,0 +1,531 @@
+{
+  "anime": "Mushoku Tensei: Jobless Reincarnation",
+  "tagline": "A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.",
+  "malId": 39535,
+  "animeImageUrl": "https://myanimelist.net/images/anime/1530/117776l.jpg",
+  "introductionSummary": "Mushoku Tensei is built as a long-horizon causal machine, not a simple coming-of-age fantasy. Individual decisions propagate through a world where fate pressure, divine manipulation, and ancient contingency plans all compete to steer history. The result is a timeline dominated by delayed consequences: one teleport disaster rewires geopolitics, one duel reshapes alliance architecture, and one reincarnated actor becomes a strategic bridge between eras. The universe works best when read as an engineered struggle over who controls future branches.",
+  "themeColors": {
+    "primary": "#0f766e",
+    "secondary": "#1e293b",
+    "accent": "#7c3aed",
+    "glow": "rgba(15,118,110,0.32)",
+    "tabActive": "#14b8a6",
+    "badgeBg": "rgba(124,58,237,0.14)",
+    "badgeText": "#a78bfa",
+    "modeGlow": "rgba(20,184,166,0.28)",
+    "heroGradient": "rgba(4,14,27,0.94)"
+  },
+  "visualizationHint": "timeline",
+  "visualizationReason": "Mushoku Tensei is fundamentally a delayed-causality system: ancient god-war fallout, Laplace-era fragmentation, and present-era choices all compound across centuries, so the timeline renderer captures the thesis best.",
+  "headerFlavor": {
+    "loreQuote": "I was given another life, but this world still charges interest on every choice.",
+    "sysWarning": "// [TEMPORAL PRESSURE]: STRONG-FATE NODES RESIST LOCAL INTERVENTION",
+    "sysWarningColor": "cyan"
+  },
+  "backgroundMotif": "temporal",
+  "revealOverlay": "glow-border-soft",
+  "powerSystem": [
+    {
+      "name": "Mana Capacity Growth",
+      "subtitle": "Early-Life Throughput Scaling",
+      "loreDesc": "Children who train mana circulation early can expand reserves far beyond ordinary ceilings, making childhood discipline a lifetime multiplier.",
+      "systemDesc": "Resource capacity is path-dependent: early training windows create compounding returns and lock in high-ceiling builds.",
+      "loreSubtitle": "Talent Is Built Before It Is Seen",
+      "systemSubtitle": "Front-Loaded Stat Growth",
+      "icon": "Zap",
+      "color": "teal-400",
+      "signatureMoment": "Rudeus' childhood casting routine creates the reserve base that later supports emperor-tier spell output."
+    },
+    {
+      "name": "Incantationless Casting",
+      "subtitle": "Latency Reduction in Live Combat",
+      "loreDesc": "Most mages require chants, but elite users skip verbal formulas to cast at reaction speed and improvise spell shape mid-fight.",
+      "systemDesc": "Removing chant latency compresses execution cycles, enabling higher APM and adaptive spell routing under pressure.",
+      "loreSubtitle": "Thought as Trigger",
+      "systemSubtitle": "Zero-Buffer Spell Invocation",
+      "icon": "Brain",
+      "color": "violet-400",
+      "signatureMoment": "Rudeus repeatedly outpaces veteran opponents by chaining silent casts before they complete formal incantations."
+    },
+    {
+      "name": "Battle Aura (Toki)",
+      "subtitle": "Body Reinforcement Meta",
+      "loreDesc": "Top swordsmen amplify physique and survivability through aura reinforcement, creating a different combat economy from ranged mage warfare.",
+      "systemDesc": "A separate enhancement stack that boosts durability, speed, and melee threat; users without Toki must compensate via zoning and tools.",
+      "loreSubtitle": "Steel Through Spirit",
+      "systemSubtitle": "Close-Range Reinforcement Layer",
+      "icon": "Shield",
+      "color": "amber-400",
+      "signatureMoment": "Sword God style duelists close distance through reinforcement, forcing casters into pre-trap and mobility solutions."
+    },
+    {
+      "name": "Strong Fate vs Weak Fate",
+      "subtitle": "Timeline Elasticity Differential",
+      "loreDesc": "Some lives are unnaturally resistant to disruption while weak-fated people can be redirected or erased by divine interference.",
+      "systemDesc": "The world applies uneven causal inertia: strong-fate nodes resist branch edits, weak-fate nodes become manipulable control points.",
+      "loreSubtitle": "Destiny Has Weight",
+      "systemSubtitle": "Causal Immunity Gradient",
+      "icon": "Target",
+      "color": "sky-400",
+      "signatureMoment": "Hitogami relies on disposable apostles around weak-fate actors because direct edits against strong nodes are unstable."
+    }
+  ],
+  "characters": [
+    {
+      "name": "Rudeus Greyrat",
+      "title": "Reincarnated Mage / Strategic Pivot",
+      "rank": "King-Class Mage",
+      "dangerLevel": 9,
+      "loreBio": "A shut-in reborn into the Six-Faced World who commits to growth and becomes a central actor in both family-scale and world-scale conflicts.",
+      "systemBio": "High-impact adaptive node with massive mana reserves, silent casting throughput, and alliance utility across multiple factions.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "teal-900",
+      "accentColor": "teal-400",
+      "icon": "Zap",
+      "signatureMoment": "His confrontation with Orsted exposes the ceiling gap between elite classes and forces a full strategic reorientation.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/423667.jpg?s=6b182cf752969a2d5a6d75c278f4ce2f",
+      "malId": 111245,
+      "primaryAbility": "Silent Casting / High-Capacity Elemental Magic"
+    },
+    {
+      "name": "Orsted",
+      "title": "Dragon God / Loop Executor",
+      "rank": "World Power Rank #2",
+      "dangerLevel": 10,
+      "loreBio": "The Dragon God carries an inherited mission to eliminate Hitogami and repeats history loops while refining plans each cycle.",
+      "systemBio": "Top-tier deterministic controller; accumulates loop memory and applies long-horizon optimization against a deceptive adversary.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Crown",
+      "signatureMoment": "His overwhelming duel with Rudeus demonstrates why raw talent cannot bypass world-power tier differentials.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/457289.jpg?s=384f31cb80fd7e0017eb8e5a5396bf89",
+      "malId": 115175,
+      "primaryAbility": "Dragon God Combat Mastery / Loop Knowledge"
+    },
+    {
+      "name": "Hitogami",
+      "title": "Human God / Void Manipulator",
+      "rank": "Sealed Deity",
+      "dangerLevel": 10,
+      "loreBio": "A mysterious godlike manipulator imprisoned in the Void World who influences events through dreams and apostles.",
+      "systemBio": "Asymmetric information super-node specializing in indirect branch edits via weak-fate intermediaries.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "Eye",
+      "signatureMoment": "He continuously redirects humans through selective guidance, making trust itself a strategic liability.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/297091.jpg?s=e235658795a2b5dc89e7bbca111b7b32",
+      "malId": 118253,
+      "primaryAbility": "Dream Oracle Manipulation / Apostle Routing"
+    },
+    {
+      "name": "Eris Boreas Greyrat",
+      "title": "Sword King / Burst Duelist",
+      "rank": "Sword King",
+      "dangerLevel": 8,
+      "loreBio": "A noble-born swordswoman whose ferocious style and relentless discipline turn her into one of Rudeus' most consequential partners.",
+      "systemBio": "High-velocity melee asset that creates immediate pressure windows and protects mage setups.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "rose-900",
+      "accentColor": "rose-400",
+      "icon": "Sword",
+      "signatureMoment": "Her post-teleport growth arc transforms her from impulsive fighter into elite close-range deterrence.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/324594.jpg?s=3648ce18134882a5f934130607f69548",
+      "malId": 111335,
+      "primaryAbility": "Sword God Style Burst Assault"
+    },
+    {
+      "name": "Roxy Migurdia",
+      "title": "Demon Mage / Foundational Mentor",
+      "rank": "King-Class Water Mage",
+      "dangerLevel": 7,
+      "loreBio": "Rudeus' first teacher, whose patient instruction and worldview expansion ignite his long-term commitment to magic.",
+      "systemBio": "Early-stage doctrine installer; establishes fundamentals that compound across the entire timeline.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Book",
+      "signatureMoment": "Her tutoring phase establishes silent casting habits and confidence scaffolding that persist into late-game conflicts.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/552605.jpg?s=77b5b2dfd526c9ec5563c372a4dac111",
+      "malId": 111341,
+      "primaryAbility": "Water Magic Doctrine / Instruction"
+    },
+    {
+      "name": "Sylphiette",
+      "title": "Support Mage / Stability Anchor",
+      "rank": "Advanced Mage",
+      "dangerLevel": 7,
+      "loreBio": "A childhood friend shaped by displacement and court politics who becomes both emotional anchor and tactical support.",
+      "systemBio": "Resilience and sustain node that preserves team continuity under political and battlefield volatility.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Heart",
+      "signatureMoment": "Her survival and later reunion with Rudeus demonstrate strong-fate clustering around key timeline actors.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/423669.jpg?s=858da1787027ca0290e9833fc9b32e02",
+      "malId": 111337,
+      "primaryAbility": "Support Casting / Barrier and Healing Utility"
+    },
+    {
+      "name": "Ruijerd Superdia",
+      "title": "Superd Warrior / Reputation Breaker",
+      "rank": "Warrior Elite",
+      "dangerLevel": 8,
+      "loreBio": "A feared Superd veteran carrying generational stigma who protects children and seeks to restore his people's name.",
+      "systemBio": "Legacy-combat specialist and moral signal inverter; converts hostile public priors through repeat proof-of-conduct.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "lime-900",
+      "accentColor": "lime-400",
+      "icon": "Shield",
+      "signatureMoment": "His escort across the Demon Continent turns survival logistics into a long-form trust reconstruction campaign.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/490046.jpg?s=b16b9af0cd4aea5ad5f72b1ec3f398e7",
+      "malId": 111739,
+      "primaryAbility": "Superd Spear Combat / Detection Instinct"
+    },
+    {
+      "name": "Kishirika Kishirisu",
+      "title": "Demon Empress / Ocular Grantor",
+      "rank": "Demon Emperor",
+      "dangerLevel": 8,
+      "loreBio": "An ancient demon ruler whose capricious aid and demon-eye gifts alter the tactical options of key actors.",
+      "systemBio": "Rare-ability distributor node; injects asymmetric perception tools that shift local engagement math.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "fuchsia-900",
+      "accentColor": "fuchsia-400",
+      "icon": "Star",
+      "signatureMoment": "Granting Rudeus a demon eye introduces prediction and perception leverage into otherwise losing exchanges.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/267699.jpg?s=5355204ba6feae9ee5bd7c339f3ad6c9",
+      "malId": 111745,
+      "primaryAbility": "Demon Eye Grant / Ancient Authority"
+    },
+    {
+      "name": "Perugius Dola",
+      "title": "Sky Fortress Sovereign",
+      "rank": "Hero-Class Summoner",
+      "dangerLevel": 8,
+      "loreBio": "A surviving ancient hero who maintains magical authority and evaluates whether modern actors can be trusted with old-world stakes.",
+      "systemBio": "Institutional gatekeeper node with high symbolic and logistical leverage over anti-Hitogami operations.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Globe",
+      "signatureMoment": "His conditional cooperation policy filters who gains access to strategic-grade support infrastructure.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/460706.jpg?s=722e675fae2d861d4e9e6f91d85f74f1",
+      "malId": 118279,
+      "primaryAbility": "Summoning and Fortress Control"
+    },
+    {
+      "name": "Badigadi",
+      "title": "Immortal Demon King / Armor Vector",
+      "rank": "World Power-Class Threat",
+      "dangerLevel": 9,
+      "loreBio": "An immortal demon king whose ties to the sentient Fighting God Armor and unpredictable loyalties make him a historical wildcard.",
+      "systemBio": "Anomaly delivery platform; can become a catastrophic multiplier when paired with autonomous war-asset armor.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Flame",
+      "signatureMoment": "His historical collision with Laplace and armor-linked escalation reshapes macro-level risk modeling for entire eras.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "primaryAbility": "Immortal Demon Physiology / Armor Synchronization"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Roxy Migurdia",
+      "target": "Rudeus Greyrat",
+      "type": "mentor",
+      "weight": 9,
+      "loreDesc": "Roxy introduces Rudeus to disciplined magic and gives his second life a direction.",
+      "systemDesc": "Foundational training edge that unlocks long-term capacity compounding."
+    },
+    {
+      "source": "Orsted",
+      "target": "Rudeus Greyrat",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "After initial conflict, Rudeus joins Orsted's anti-Hitogami camp.",
+      "systemDesc": "Former collision becomes high-value alliance inside loop-optimization strategy."
+    },
+    {
+      "source": "Hitogami",
+      "target": "Rudeus Greyrat",
+      "type": "betrayal",
+      "weight": 10,
+      "loreDesc": "Hitogami's guidance appears helpful but ultimately seeks to weaponize Rudeus' choices.",
+      "systemDesc": "Adversarial recommendation engine exploiting trust to induce unfavorable branch outcomes."
+    },
+    {
+      "source": "Rudeus Greyrat",
+      "target": "Eris Boreas Greyrat",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "They evolve from tutor-and-student friction into a high-stakes combat partnership.",
+      "systemDesc": "Mage-duelist pairing creates combined-arms pressure profile."
+    },
+    {
+      "source": "Rudeus Greyrat",
+      "target": "Sylphiette",
+      "type": "dependent",
+      "weight": 7,
+      "loreDesc": "Their bond stabilizes both of them through displacement and trauma.",
+      "systemDesc": "Mutual emotional-regulation link that reduces decision volatility under stress."
+    },
+    {
+      "source": "Ruijerd Superdia",
+      "target": "Rudeus Greyrat",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Ruijerd protects Rudeus' party across lethal terrain and social hostility.",
+      "systemDesc": "Frontline guardian node enabling fragile-caster survival during long transit arcs."
+    },
+    {
+      "source": "Perugius Dola",
+      "target": "Orsted",
+      "type": "ally",
+      "weight": 6,
+      "loreDesc": "Perugius' respect for anti-Hitogami goals drives conditional collaboration.",
+      "systemDesc": "Legacy authority node reinforces anti-manipulation coalition durability."
+    },
+    {
+      "source": "Badigadi",
+      "target": "Hitogami",
+      "type": "dependent",
+      "weight": 6,
+      "loreDesc": "Badigadi is repeatedly drawn into actions that align with Hitogami's broader manipulation game.",
+      "systemDesc": "Anomaly-class combat vector susceptible to external directive influence."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Orsted Corporation",
+      "role": "protagonist",
+      "loreDesc": "A covert coalition assembled to oppose Hitogami's manipulation and prepare for eventual decisive conflict.",
+      "systemDesc": "Low-visibility strategic network optimized for intel control, talent recruitment, and branch-risk reduction."
+    },
+    {
+      "name": "Hitogami's Apostles",
+      "role": "antagonist",
+      "loreDesc": "A rotating set of pawns and believers used by Hitogami to steer events without direct exposure.",
+      "systemDesc": "Distributed proxy layer for deniable interventions against strong-fate actors."
+    },
+    {
+      "name": "Asura Kingdom Court",
+      "role": "systemic",
+      "loreDesc": "A prestigious but unstable political center where succession, marriage, and noble rivalry shape policy.",
+      "systemDesc": "Institutional power router controlling legitimacy, resources, and alliance incentives."
+    },
+    {
+      "name": "Superd Remnants",
+      "role": "neutral",
+      "loreDesc": "A stigmatized warrior people burdened by historical curses and misinformation.",
+      "systemDesc": "Reputation-constrained combat population with high tactical value but low social trust."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Mana Capacity Is Early-Window Sensitive",
+      "severity": "high",
+      "loreConsequence": "Those who train mana circulation young can eclipse peers permanently; late starters rarely catch up.",
+      "systemEquivalent": "Early progression creates irreversible stat divergence and long-term role stratification.",
+      "loreSubtitle": "Childhood Leaves Permanent Traces",
+      "systemSubtitle": "Path-Dependent Resource Ceiling"
+    },
+    {
+      "name": "Incantation Time Is a Combat Liability",
+      "severity": "medium",
+      "loreConsequence": "Mages bound to full chants are vulnerable to interruption by faster fighters and silent casters.",
+      "systemEquivalent": "Execution latency determines survivability in high-pressure encounter loops.",
+      "loreSubtitle": "Speak Too Long, Lose the Duel",
+      "systemSubtitle": "Cast-Time Punish Window"
+    },
+    {
+      "name": "Strong Fate Resists Forced Divergence",
+      "severity": "fatal",
+      "loreConsequence": "Certain pivotal people and outcomes repeatedly survive attempts to erase or redirect them.",
+      "systemEquivalent": "High-inertia nodes produce branch correction and suppress unstable timeline edits.",
+      "loreSubtitle": "Some Threads Refuse to Break",
+      "systemSubtitle": "Causal Inertia Constraint"
+    },
+    {
+      "name": "Divine Guidance Is Not Neutral",
+      "severity": "high",
+      "loreConsequence": "Advice from godlike entities can be selectively true while still steering victims toward catastrophic outcomes.",
+      "systemEquivalent": "Information channels may be adversarial optimization interfaces rather than support systems.",
+      "loreSubtitle": "Prophecy Can Be a Trap",
+      "systemSubtitle": "Hostile Signaling Layer"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Sword God-Style Duelist",
+      "defender": "Silent Casting Mage",
+      "mechanic": "Gap-closing pressure before spell chain completion",
+      "loreDesc": "Elite swordsmen sprint through casting windows to force close-quarters mistakes.",
+      "systemDesc": "Melee burst punishes setup-dependent ranged builds."
+    },
+    {
+      "attacker": "Silent Casting Mage",
+      "defender": "Sword Aura Specialist",
+      "mechanic": "Terrain shaping and range control",
+      "loreDesc": "Mages alter battlefield geometry with earth and water spells to deny clean melee routes.",
+      "systemDesc": "Spatial denial converts speed advantage into pathing tax."
+    },
+    {
+      "attacker": "Hitogami Apostle Network",
+      "defender": "Orsted Coalition",
+      "mechanic": "Proxy deception versus vetted intel",
+      "loreDesc": "Apostles spread manipulated decisions while Orsted's side builds verification layers.",
+      "systemDesc": "Information warfare of spoofed directives versus trust-graph hardening."
+    },
+    {
+      "attacker": "Fighting God Armor Host",
+      "defender": "Conventional Elite Fighters",
+      "mechanic": "Autonomous armor escalation",
+      "loreDesc": "Armor-linked users can spike beyond normal combat assumptions.",
+      "systemDesc": "Anomaly equipment invalidates baseline power-scaling heuristics."
+    },
+    {
+      "attacker": "Strong-Fate Actor",
+      "defender": "Timeline Manipulator",
+      "mechanic": "Outcome resilience",
+      "loreDesc": "Even targeted manipulation struggles to remove strong-fate individuals from key branches.",
+      "systemDesc": "High-inertia entities reduce effectiveness of branch-edit operations."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Laplace Soul Split",
+      "ruleViolated": "Identity and ability sets should remain coupled within one actor.",
+      "loreDesc": "Laplace's catastrophic battle fractured one being into Technique God and Demon God variants.",
+      "systemDesc": "Single-node decomposition produced two specialized entities with disjoint capability stacks."
+    },
+    {
+      "name": "Fighting God Armor Sentience",
+      "ruleViolated": "Equipment should not become independent strategic agents.",
+      "loreDesc": "An ultimate war armor developed autonomous behavior and altered succession of major conflicts.",
+      "systemDesc": "Tool-to-agent transition creates nonhuman decision loop inside combat chain."
+    },
+    {
+      "name": "Teleportation Incident",
+      "ruleViolated": "Civilian geography is expected to remain stable outside war campaigns.",
+      "loreDesc": "A mass displacement event scattered populations across hostile territories overnight.",
+      "systemDesc": "Planetary-scale forced redistribution event rewired demographics and alliance maps."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Creation of the Six-Faced World",
+      "trigger": "The Creator God's failing realms required a stabilizing merger.",
+      "consequence": "Six worlds were fused, creating a balanced but fragile cosmic architecture and central Void dependency.",
+      "timelinePosition": "Mythic Genesis",
+      "loreDesc": "The fractured cosmos was compressed into a single die-like world to prevent immediate collapse.",
+      "systemDesc": "Initial condition for all later conflicts: one multi-race environment with shared failure core."
+    },
+    {
+      "name": "First God War and Hitogami's Sealing",
+      "trigger": "Hitogami's deception redirected the First Dragon God into catastrophic retaliation.",
+      "consequence": "Five worlds were destroyed, refugees concentrated in the Human World, and Hitogami was sealed in the Void.",
+      "timelinePosition": ">100,000 years ago",
+      "loreDesc": "A divine war erased entire worlds and remade racial coexistence under trauma.",
+      "systemDesc": "Massive topology collapse that concentrates mana, population, and future conflict vectors."
+    },
+    {
+      "name": "Laplace Sundering",
+      "trigger": "Laplace's clash linked to the Fighting God Armor reached catastrophic output.",
+      "consequence": "The supercontinent split and Laplace became two entities with divergent functions.",
+      "timelinePosition": "~5,000 years ago",
+      "loreDesc": "One duel permanently altered geography and history's power balance.",
+      "systemDesc": "Global map rewrite plus strategic role bifurcation into knowledge-node and destruction-node."
+    },
+    {
+      "name": "Fittoa Teleportation Incident",
+      "trigger": "A massive magical event detonated across Asura territory.",
+      "consequence": "Families and factions were violently dispersed, forcing new alliances and survival routes.",
+      "timelinePosition": "Modern era",
+      "loreDesc": "An entire region vanished and reappeared in fragments across dangerous lands.",
+      "systemDesc": "High-scale shock event producing long-tail political, social, and combat externalities."
+    },
+    {
+      "name": "Rudeus-Orsted Collision and Alliance Pivot",
+      "trigger": "Rudeus entered direct conflict with Orsted while still influenced by Hitogami's framing.",
+      "consequence": "After near-fatal confrontation, Rudeus realigned under Orsted, strengthening anti-Hitogami strategy.",
+      "timelinePosition": "Modern era",
+      "loreDesc": "A failed confrontation became the turning point for Rudeus' role in world-level conflict.",
+      "systemDesc": "Node reassignment from manipulable independent actor to coordinated coalition asset."
+    }
+  ],
+  "rankings": {
+    "tiers": [
+      {
+        "rank": "SS",
+        "title": "World-Scale Determinants",
+        "description": "Entities that can reshape timelines, continents, or civilization-level outcomes.",
+        "entities": [
+          "Orsted",
+          "Hitogami",
+          "Laplace (historical composite)"
+        ]
+      },
+      {
+        "rank": "S",
+        "title": "Era-Defining Executives",
+        "description": "Actors who can decide wars, dynastic succession, or strategic doctrine.",
+        "entities": [
+          "Rudeus Greyrat",
+          "Perugius Dola",
+          "Badigadi"
+        ]
+      },
+      {
+        "rank": "A",
+        "title": "High-Leverage Specialists",
+        "description": "Elite units with decisive influence in regional or mission-critical operations.",
+        "entities": [
+          "Eris Boreas Greyrat",
+          "Roxy Migurdia",
+          "Ruijerd Superdia",
+          "Sylphiette"
+        ]
+      }
+    ]
+  },
+  "aiInsights": {
+    "casual": "Mushoku Tensei feels personal, but under the hood it's a huge cause-and-effect machine. Childhood training, ancient wars, and who you trust in one moment can radically change the whole future.",
+    "deep": "The universe runs on layered temporal control: strong-fate inertia limits direct edits, so adversaries optimize through proxy networks and delayed interventions. Competitive advantage comes from combining high-throughput combat primitives (silent casting, aura specialization) with long-horizon branch management, which is why alliance routing around Orsted becomes more valuable than isolated peak power."
+  },
+  "systemQuestions": [
+    {
+      "question": "Why does the archive model Mushoku Tensei as a timeline system instead of a pure power-scaling system?",
+      "answer": "Because the highest-impact outcomes are delayed causal chains—divine manipulation, historical fractures, and branch corrections—not isolated duel results.",
+      "tabIndex": 0,
+      "sectionId": "causal-events"
+    },
+    {
+      "question": "What is the single biggest growth lever for mages in this universe?",
+      "answer": "Early mana training windows create path-dependent reserve growth, which compounds for life and defines late-game ceiling differences.",
+      "tabIndex": 1,
+      "sectionId": "power-system"
+    },
+    {
+      "question": "How does Hitogami keep influence while sealed?",
+      "answer": "He avoids direct intervention and instead steers weak-fate or manipulable actors through selective information and apostle networks.",
+      "tabIndex": 2,
+      "sectionId": "relationships"
+    },
+    {
+      "question": "Why is the Rudeus-Orsted relationship structurally important?",
+      "answer": "It converts a high-variance independent node into a coordinated anti-manipulation asset, improving coalition-level branch stability.",
+      "tabIndex": 2,
+      "sectionId": "relationships"
+    },
+    {
+      "question": "What makes the Teleportation Incident more than a plot twist?",
+      "answer": "It is a map-scale redistribution shock that reassigns social ties, threat exposure, and political leverage across the world.",
+      "tabIndex": 0,
+      "sectionId": "causal-events"
+    }
+  ]
+}

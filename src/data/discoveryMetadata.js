@@ -109,5 +109,12 @@ export const DISCOVERY_METADATA = {
     clusterTags: ['combat-systems', 'faction-heavy', 'hierarchy-heavy'],
     appealTags: ['technical-counterplay', 'strategy-network'],
     systemProfile: { factionComplexity: 3, causalDensity: 2, powerStructure: 'specialization' }
+  },
+  mushokutensei: {
+    addedAt: '2024-08-03', popularityBaseline: 89, classification: 'causal', startTab: 'core-laws', startLabel: 'Start with CORE LAWS for fate pressure and timeline constraints.',
+    clusterTags: ['causal-systems', 'hierarchy-heavy', 'anomaly-driven'],
+    appealTags: ['deterministic-systems', 'high-stakes-escalation'],
+    systemProfile: { factionComplexity: 2, causalDensity: 3, powerStructure: 'causal' }
   }
+
 }
