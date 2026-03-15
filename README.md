@@ -8,11 +8,11 @@ This is not an encyclopedic wiki. It is a structural analysis tool designed to r
 
 Every universe is treated as a deterministic system. The archive renders these systems via specialized visualization engines rather than static text pages.
 
-The archive itself is a connected content graph: universes are linked by shared structural thesis (causality, control networks, counter-economies, affinity systems), and discovery components surface related + newest entries through curated sets instead of full-list dumps.
+The archive itself is a connected content graph: universes are linked by shared structural thesis (causality, control networks, counter-economies, affinity systems), lightweight system clusters (combat/causal/faction/hierarchy/inheritance/anomaly), and discovery components that surface related next reads through deterministic metadata-driven curation.
 
 ## Core Experience
 
-- **Universe Catalog (`/universes`)** — Searchable and sortable browse surface (Latest / Most Viewed / Alphabetical) backed by lightweight catalog metadata, with controlled load-more expansion (no infinite scroll).
+- **Universe Catalog (`/universes`)** — Searchable and sortable browse surface (Latest / Most Viewed / Alphabetical) with crawlable cluster routes (`/universes?cluster=...`) backed by lightweight catalog metadata and controlled load-more expansion (no infinite scroll).
 
 Each universe page exposes four tabs:
 

@@ -1,4 +1,5 @@
 import { useEffect, useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
@@ -13,8 +14,9 @@ import { useSystemReveal } from './hooks/useSystemReveal'
 import { useShareFrame } from './hooks/useShareFrame'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 import { deriveBullets } from './utils/deriveBullets'
-import { getBestEntryConfig } from './utils/discovery'
+import { getBestEntryConfig, getRelatedUniverseSuggestions } from './utils/discovery'
 import { getBackgroundMotif, getRevealOverlay, getSysWarningColors } from './config/universePresentation'
+import { UNIVERSE_CATALOG } from './data/index'
 
 const TABS = ['POWER ENGINE', 'ENTITY DATABASE', 'FACTIONS', 'CORE LAWS']
 
@@ -61,6 +63,8 @@ export default function Dashboard({ data }) {
   const { isShareFrame, toggleShareFrame } = useShareFrame()
 
   const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
+  const relatedUniverses = useMemo(() => getRelatedUniverseSuggestions(UNIVERSE_CATALOG, data?.id, 3), [data?.id])
+  const bestParallel = relatedUniverses[0]
 
   useEffect(() => {
     setActiveTab(bestEntry.tabIndex)
@@ -258,11 +262,20 @@ export default function Dashboard({ data }) {
           <p className="text-xs md:text-sm text-gray-300 leading-relaxed max-w-4xl">
             {universeIntro}
           </p>
+          {bestParallel?.entry && (
+            <p className="mt-4 text-[11px] text-gray-400">
+              If you want to compare this architecture against a {bestParallel.reason.toLowerCase()}, continue with{' '}
+              <Link to={`/universe/${bestParallel.entry.id}`} className="text-cyan-300 hover:text-cyan-200">
+                {bestParallel.entry.anime}
+              </Link>
+              .
+            </p>
+          )}
         </div>
       </section>
 
       <div className="share-frame-hide">
-        <SystemQuestionsPanel data={data} onJumpToSection={handleJumpToSection} />
+        <SystemQuestionsPanel data={data} onJumpToSection={handleJumpToSection} relatedUniverses={relatedUniverses} />
       </div>
 
       {/* 5-Bullet System Summary */}

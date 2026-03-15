@@ -1,5 +1,5 @@
 import { useEffect, lazy, Suspense, useMemo, useState } from 'react'
-import { Routes, Route, useNavigate, useParams, Link, useLocation } from 'react-router-dom'
+import { Routes, Route, useNavigate, useParams, Link, useLocation, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug, warmUniverseBySlug } from './data/index.js'
 import { ExternalLink, ArrowRight, Star, ListFilter, Search } from 'lucide-react'
 import { getClassificationLabel } from './utils/getClassificationLabel'
@@ -13,7 +13,8 @@ import {
   buildCatalogStructuredData,
   SITE_NAME
 } from './utils/seo'
-import { getFeaturedUniverses, sortCatalogUniverses, filterCatalogUniverses, incrementUniverseLocalView } from './utils/discovery'
+import { getFeaturedUniverses, sortCatalogUniverses, filterCatalogUniverses, incrementUniverseLocalView, getDiscoveryClusters, getRelatedUniverseSuggestions } from './utils/discovery'
+import { DISCOVERY_CLUSTERS } from './data/discoveryMetadata'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
@@ -161,6 +162,7 @@ function Home() {
   const featuredUniverses = useMemo(() => getFeaturedUniverses(UNIVERSE_CATALOG, 3), [])
   const primaryFeatured = featuredUniverses[0]
   const secondaryFeatured = featuredUniverses.slice(1)
+  const discoveryClusters = useMemo(() => getDiscoveryClusters(UNIVERSE_CATALOG).slice(0, 4), [])
 
   const totalEntities = UNIVERSE_CATALOG.reduce((sum, a) => sum + (a.stats?.characters || 0), 0)
 
@@ -211,6 +213,30 @@ function Home() {
             </div>
           </>
         )}
+      </section>
+
+
+
+      <section className="max-w-6xl mx-auto px-6 pb-2" aria-labelledby="cluster-pathways-heading">
+        <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 md:px-5">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <h2 id="cluster-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Browse by System Cluster</h2>
+            <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">View full catalog →</Link>
+          </div>
+          <p className="text-[11px] text-gray-400 mb-3">Quick pathways into related universes without opening the full directory.</p>
+          <div className="flex flex-wrap gap-2">
+            {discoveryClusters.map(cluster => (
+              <Link
+                key={cluster.key}
+                to={`/universes?cluster=${cluster.key}`}
+                className="inline-flex items-center gap-2 min-h-[40px] px-3 py-2 rounded-full border border-white/10 bg-[#090b14] hover:border-cyan-300/40 text-[10px] tracking-[0.16em] uppercase text-gray-200 transition-colors"
+              >
+                <span>{cluster.shortLabel}</span>
+                <span className="text-gray-500">{cluster.count}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-6 pb-4" aria-labelledby="archive-browse-heading">
@@ -273,20 +299,28 @@ function UniversesCatalogRoute() {
   const [search, setSearch] = useState('')
   const [sortMode, setSortMode] = useState('latest')
   const [visibleCount, setVisibleCount] = useState(12)
+  const [searchParams] = useSearchParams()
+  const activeCluster = searchParams.get('cluster') || ''
   const seo = buildCatalogSeo(UNIVERSE_CATALOG)
   const structuredData = buildCatalogStructuredData(UNIVERSE_CATALOG)
+  const clusterOptions = useMemo(() => getDiscoveryClusters(UNIVERSE_CATALOG), [])
+  const activeClusterMeta = clusterOptions.find((cluster) => cluster.key === activeCluster) || null
+  const activeClusterFeatured = useMemo(() => {
+    if (!activeCluster) return []
+    return sortCatalogUniverses(filterCatalogUniverses(UNIVERSE_CATALOG, '', activeCluster), 'most-viewed').slice(0, 3)
+  }, [activeCluster])
 
   const filtered = useMemo(() => {
     const sorted = sortCatalogUniverses(UNIVERSE_CATALOG, sortMode)
-    return filterCatalogUniverses(sorted, search)
-  }, [search, sortMode])
+    return filterCatalogUniverses(sorted, search, activeCluster)
+  }, [search, sortMode, activeCluster])
 
   const visible = filtered.slice(0, visibleCount)
   const canLoadMore = visibleCount < filtered.length
 
   useEffect(() => {
     setVisibleCount(12)
-  }, [search, sortMode])
+  }, [search, sortMode, activeCluster])
 
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono px-6 py-14">
@@ -313,9 +347,51 @@ function UniversesCatalogRoute() {
           </label>
         </div>
 
+        <div className="mb-6 flex flex-wrap gap-2">
+          <Link
+            to="/universes"
+            className={`px-3 py-2 rounded-full text-[10px] uppercase tracking-[0.16em] border transition-colors ${activeCluster ? 'text-gray-400 border-white/10 bg-white/5 hover:text-white' : 'text-white border-cyan-300/60 bg-cyan-400/10'}`}
+          >
+            All Clusters
+          </Link>
+          {clusterOptions.map((cluster) => (
+            <Link
+              key={cluster.key}
+              to={`/universes?cluster=${cluster.key}`}
+              className={`px-3 py-2 rounded-full text-[10px] uppercase tracking-[0.16em] border transition-colors ${activeCluster === cluster.key ? 'text-white border-cyan-300/60 bg-cyan-400/10' : 'text-gray-400 border-white/10 bg-white/5 hover:text-white'}`}
+            >
+              {cluster.shortLabel} ({cluster.count})
+            </Link>
+          ))}
+        </div>
+
+        {activeClusterMeta && (
+          <div className="mb-6 rounded-xl border border-cyan-300/20 bg-cyan-400/5 p-4">
+            <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-200">{activeClusterMeta.label}</p>
+            <p className="text-xs text-gray-300 mt-1">{DISCOVERY_CLUSTERS[activeClusterMeta.key]?.description || activeClusterMeta.description}</p>
+            {activeClusterFeatured.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {activeClusterFeatured.map((entry) => (
+                  <Link
+                    key={entry.id}
+                    to={`/universe/${entry.id}`}
+                    className="inline-flex min-h-[40px] items-center rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-gray-200 hover:text-white hover:bg-white/10"
+                  >
+                    {entry.anime}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {visible.map((entry, index) => <UniverseLinkCard key={entry.id} data={entry} density="catalog" priorityImage={index < 3} />)}
         </div>
+
+        {visible.length === 0 && (
+          <p className="mt-6 text-sm text-gray-400">No universes match this filter yet. Try a different cluster or search term.</p>
+        )}
 
         {canLoadMore && (
           <div className="mt-6">
@@ -342,9 +418,8 @@ function UniverseRoute() {
   useEffect(() => {
     if (!normalizedId) return
 
-    const siblings = UNIVERSE_CATALOG
-      .filter((entry) => entry.id !== normalizedId)
-      .slice(0, 2)
+    const siblings = getRelatedUniverseSuggestions(UNIVERSE_CATALOG, normalizedId, 2)
+      .map((row) => row.entry)
 
     siblings.forEach((entry) => warmUniverseBySlug(entry.id))
   }, [normalizedId])

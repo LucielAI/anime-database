@@ -152,3 +152,14 @@ Include `systemQuestions` in your core payload before integration. This is the a
 
 - Target 4-8 concise Q&A entries.
 - Tie each entry to an existing tab via `tabIndex` and, where possible, a section heading via `sectionId`.
+
+
+## Discovery Metadata (required for strongest interlinking)
+
+When adding a new universe, add a matching entry in `src/data/discoveryMetadata.js` with:
+- `classification`
+- `startTab` + `startLabel`
+- `clusterTags` (from `combat-systems`, `causal-systems`, `faction-heavy`, `hierarchy-heavy`, `inheritance`, `anomaly-driven`)
+- optional `appealTags` + `systemProfile`
+
+If metadata is partially missing, runtime fallbacks still place the universe into at least one cluster automatically, but explicit tags produce better related-universe quality.

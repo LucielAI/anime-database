@@ -1,7 +1,11 @@
-export default function SystemQuestionsPanel({ data, onJumpToSection }) {
+import { Link } from 'react-router-dom'
+
+export default function SystemQuestionsPanel({ data, onJumpToSection, relatedUniverses = [] }) {
   const questions = Array.isArray(data?.systemQuestions) ? data.systemQuestions.filter((q) => q?.question && q?.answer) : []
 
   if (questions.length === 0) return null
+
+  const bestCompare = relatedUniverses[0]
 
   return (
     <section className="max-w-6xl mx-auto px-6 mt-6 mb-8" aria-labelledby="system-questions-heading" id="system-questions">
@@ -29,6 +33,18 @@ export default function SystemQuestionsPanel({ data, onJumpToSection }) {
             </article>
           ))}
         </div>
+
+        {bestCompare && (
+          <div className="mt-5 pt-4 border-t border-white/10 flex flex-wrap gap-2 items-center">
+            <span className="text-[9px] tracking-[0.2em] uppercase text-gray-500">Best compare read:</span>
+            <Link
+              to={`/universe/${bestCompare.entry.id}`}
+              className="inline-flex min-h-[40px] items-center rounded-full border border-white/10 bg-white/5 hover:bg-white/10 px-3 py-2 text-[9px] tracking-[0.16em] uppercase text-gray-300 hover:text-white"
+            >
+              {bestCompare.entry.anime}
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   )
