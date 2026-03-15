@@ -182,7 +182,7 @@ export default function FeedbackBlock({ slug, theme, animeName }) {
           <div className="border-t border-white/5 pt-4">
             <p className="text-[10px] text-gray-500 tracking-wider uppercase mb-2">Spot a correction? Send a quick issue note</p>
             {correctionSent ? (
-              <p className="text-[10px] tracking-wider" style={{ color: accentColor }}>Correction signal received.</p>
+              <p className="text-[10px] tracking-wider" style={{ color: accentColor }}>Correction received. Thank you.</p>
             ) : (
               <form onSubmit={submitCorrection} className="space-y-2">
                 <textarea

@@ -197,7 +197,7 @@ function getRelatedScore(currentEntry, candidateEntry) {
   const sharedAppeal = overlapCount(currentProfile.appealTags, candidateProfile.appealTags)
   if (sharedAppeal > 0) {
     score += sharedAppeal * 1.5
-    reasons.push('Similar reader appeal')
+    reasons.push('Similar thematic focus')
   }
 
   if (currentProfile.powerStructure === candidateProfile.powerStructure) {
@@ -321,6 +321,6 @@ export function getBestEntryConfig(universeId, visualizationHint) {
   return {
     tabKey,
     tabIndex,
-    label: metadata.startLabel || 'Start here for the fastest strategic orientation.',
+    label: metadata.startLabel || 'Start here for a quick overview of this universe.',
   }
 }

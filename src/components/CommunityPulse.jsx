@@ -39,10 +39,10 @@ export default function CommunityPulse() {
         throw new Error('submission_failed')
       }
 
-      setStatus(`Signal logged for ${sanitized}.`)
+      setStatus(`Added ${sanitized} to the request list.`)
       setCustomSuggestion('')
     } catch (error) {
-      setStatus(error?.message === 'config_missing' ? 'Signal endpoint offline: missing Supabase configuration.' : 'Signal endpoint is temporarily unavailable.')
+      setStatus(error?.message === 'config_missing' ? 'Suggestion endpoint is offline: missing Supabase configuration.' : 'Suggestion endpoint is temporarily unavailable.')
     } finally {
       setLoadingChoice('')
     }
@@ -57,7 +57,7 @@ export default function CommunityPulse() {
         </div>
 
         <p className="text-xs text-gray-400 leading-relaxed mb-4">
-          Help steer the next archive drop. One tap vote, optional custom request.
+          Vote on which anime universe should be archived next, or send a custom request.
         </p>
 
         <div className="flex flex-wrap gap-2 mb-4">
@@ -68,7 +68,7 @@ export default function CommunityPulse() {
               disabled={Boolean(loadingChoice)}
               className="px-3 py-2 min-h-[44px] rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.18em] uppercase font-bold text-gray-300 transition-all disabled:opacity-50"
             >
-              {loadingChoice === candidate ? 'Logging...' : candidate}
+              {loadingChoice === candidate ? 'Saving...' : candidate}
             </button>
           ))}
         </div>

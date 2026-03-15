@@ -53,7 +53,7 @@ function buildUniverseIntroduction(data) {
   const relationshipCount = data.relationships?.length || 0
   const architectureLine = data.visualizationReason || data.tagline || 'This universe rewards structural analysis over surface-level plot recall.'
 
-  return `${data.anime} is modeled here as a constrained system where abilities, institutions, and consequences create predictable strategic pressure. This archive profile maps ${powerCount} core mechanics, ${rulesCount} governing constraints, and ${factionCount} major power blocs so readers can quickly understand the operating logic of the world. ${architectureLine} Relationship and causality layers (${relationshipCount} mapped edges) make this page useful as a standalone reference for comparative universe analysis.`
+  return `${data.anime} is presented here as a structured universe where abilities, institutions, and consequences shape every major outcome. This archive profile maps ${powerCount} core mechanics, ${rulesCount} governing constraints, and ${factionCount} major power blocs so fans can quickly understand how the world works. ${architectureLine} Relationship and causality layers (${relationshipCount} mapped edges) make this page useful as a standalone reference for comparative universe analysis.`
 }
 
 export default function Dashboard({ data }) {
@@ -264,7 +264,7 @@ export default function Dashboard({ data }) {
           </p>
           {bestParallel?.entry && (
             <p className="mt-4 text-[11px] text-gray-400">
-              If you want to compare this architecture against a {bestParallel.reason.toLowerCase()}, continue with{' '}
+              If you want a close comparison point, continue with{' '}
               <Link to={`/universe/${bestParallel.entry.id}`} className="text-cyan-300 hover:text-cyan-200">
                 {bestParallel.entry.anime}
               </Link>
@@ -284,7 +284,7 @@ export default function Dashboard({ data }) {
       <div className="max-w-6xl mx-auto px-6 mt-3 mb-4 share-frame-hide">
         <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-3 flex flex-wrap items-center gap-3">
           <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-2.5 py-1 text-[9px] font-bold tracking-[0.2em] uppercase text-cyan-200">
-            Best Entry
+            Start Here
           </span>
           <p className="text-[11px] text-gray-300 leading-relaxed grow min-w-[220px]">{bestEntry.label}</p>
           <button
@@ -365,7 +365,7 @@ export default function Dashboard({ data }) {
                   <span className="inline-flex items-center justify-center min-w-4 h-4 text-[8px] px-1.5 py-0.5 rounded border border-cyan-300/20 bg-cyan-400/10 text-cyan-200 tracking-[0.12em]">
                     <span className="sm:hidden" aria-hidden="true">★</span>
                     <span className="hidden sm:inline">START</span>
-                    <span className="sr-only">Recommended starting tab</span>
+                    <span className="sr-only">Suggested starting tab</span>
                   </span>
                 )}
               </span>
@@ -385,7 +385,7 @@ export default function Dashboard({ data }) {
 
       {/* Tab Description */}
       <div className="max-w-6xl mx-auto px-6 mb-10 share-frame-hide">
-        <p className="text-[10px] md:text-xs text-gray-600 tracking-wider">{TAB_DESCRIPTIONS[activeTab]}{activeTab === bestEntry.tabIndex ? ' · Recommended first view.' : ''}</p>
+        <p className="text-[10px] md:text-xs text-gray-600 tracking-wider">{TAB_DESCRIPTIONS[activeTab]}{activeTab === bestEntry.tabIndex ? ' · Suggested first view.' : ''}</p>
       </div>
 
       {/* Main Content */}

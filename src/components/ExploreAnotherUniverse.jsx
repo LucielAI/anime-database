@@ -15,12 +15,12 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
         <div className="flex items-center gap-3">
           <Compass className="w-5 h-5" style={{ color: accentColor }} />
           <h2 id="related-universes-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white">
-            Explore Similar Systems
+            Related Universes
           </h2>
         </div>
 
         <p className="text-xs text-gray-500 max-w-3xl leading-relaxed">
-          Keep the analysis flow going with one close structural match and two high-signal adjacent reads.
+          Continue through the archive with one close structural match and two comparable universe profiles.
         </p>
 
         <ul className="w-full space-y-3" aria-label="Related universes">
@@ -63,8 +63,8 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
 
         <div className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
-            <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-200/80">Next Read Path</p>
-            <p className="text-xs text-gray-300 mt-1">Want one clear next click? Continue with {nextRead?.anime || 'the most-viewed system'}.</p>
+            <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-200/80">Where to Go Next</p>
+            <p className="text-xs text-gray-300 mt-1">If you want one clear follow-up, continue with {nextRead?.anime || 'a popular universe profile'}.</p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             {nextRead && (
@@ -76,7 +76,7 @@ export default function ExploreAnotherUniverse({ currentId, isSystemMode, theme 
               to="/universes"
               className="px-3 py-2 min-h-[40px] rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] font-bold tracking-[0.2em] uppercase text-gray-300 hover:text-white transition-all inline-flex items-center"
             >
-              Browse All
+              Browse Archive
             </Link>
           </div>
         </div>

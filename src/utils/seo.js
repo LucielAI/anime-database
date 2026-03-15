@@ -26,7 +26,7 @@ function buildUniverseDescription(preview) {
 
 export function buildHomeSeo(catalog = []) {
   const description = truncate(
-    `Anime Architecture Archive is a structured reference system for fictional worlds. Explore ${catalog.length}+ universe landing pages with power-system briefs, causal models, faction structures, and cross-universe comparison paths.`
+    `Anime Architecture Archive is a curated anime analysis archive for fictional worlds. Explore ${catalog.length}+ universe pages with power system breakdowns, faction structures, hierarchy dynamics, and cross-universe comparisons.`
   )
 
   return {
@@ -40,7 +40,7 @@ export function buildHomeSeo(catalog = []) {
 
 
 export function buildCatalogSeo(catalog = []) {
-  const description = truncate(`Browse ${catalog.length}+ universes in a searchable, sortable archive catalog built for system-level comparison and fast discovery.`)
+  const description = truncate(`Browse ${catalog.length}+ anime universes in a searchable, sortable archive catalog built for power system comparison, faction analysis, and worldbuilding study.`)
 
   return {
     title: `Universe Catalog | ${SITE_NAME}`,
@@ -57,7 +57,7 @@ export function buildCatalogStructuredData(catalog = []) {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       name: `${SITE_NAME} Universe Catalog`,
-      description: 'Searchable and sortable catalog for archive universes.',
+      description: 'Searchable and sortable catalog for anime universe analysis.',
       url: `${SITE_URL}/universes`,
       isPartOf: {
         '@type': 'WebSite',
@@ -92,7 +92,7 @@ export function buildHomeStructuredData(catalog = []) {
       '@type': 'WebSite',
       name: SITE_NAME,
       url: `${SITE_URL}/`,
-      description: 'A structured archive and reference graph for fictional universe system analyses.',
+      description: 'A curated anime archive and reference graph for fictional universe system analysis.',
       inLanguage: 'en',
     },
     {

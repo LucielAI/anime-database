@@ -8,7 +8,7 @@ This is not an encyclopedic wiki. It is a structural analysis tool designed to r
 
 Every universe is treated as a deterministic system. The archive renders these systems via specialized visualization engines rather than static text pages.
 
-The archive itself is a connected content graph: universes are linked by shared structural thesis (causality, control networks, counter-economies, affinity systems), lightweight system clusters (combat/causal/faction/hierarchy/inheritance/anomaly), and discovery components that surface related next reads through deterministic metadata-driven curation.
+The archive itself is a connected analysis graph: universes are linked by shared structural thesis (causality, control networks, counter-economies, affinity systems), lightweight system clusters (combat/causal/faction/hierarchy/inheritance/anomaly), and related-universe sections that surface comparable entries through consistent metadata rules.
 
 ## Core Experience
 
@@ -23,7 +23,7 @@ Each universe page exposes four tabs:
 
 Every description field supports dual framing:
 
-Universe pages now also include a lightweight **Best Entry** cue that recommends the highest-engagement first tab (metadata-driven with renderer-based fallback).
+Universe pages now also include a lightweight **Start Here** cue that points to the most useful first tab (metadata-driven with renderer-based fallback).
 - **LORE Mode** — Human-readable, narrative-focused.
 - **SYS Mode** — Root-access system-level analogy (e.g. treating a spell as "Proprietary Software" or an assassin as a "System Exploit").
 
@@ -47,7 +47,7 @@ src/
 ├── Dashboard.jsx              # Universe detail view with tabs
 ├── data/
 │   ├── index.js               # Import, validate, export all payloads
-│   └── *.json                 # Hand-curated JSON intelligence schemas
+│   └── *.json                 # Hand-curated JSON universe schemas
 ├── config/
 │   ├── universePresentation.js # Background motifs, reveal overlays, SYS warning colors
 │   └── relationshipColors.js  # Canonical edge colors shared across renderers
@@ -123,8 +123,8 @@ Every universe payload is built via a two-stage workflow: broad system research 
 
 ## Discovery & Scale Defaults
 
-- Homepage shows curated slices (not full-list rendering) to stay fast as the archive grows.
-- Universe pages show a small curated suggestion set + clear path to `/universes`.
+- Homepage shows selected universe slices (not full-list rendering) to stay fast as the archive grows.
+- Universe pages show a small related-universe set + clear path to `/universes`.
 - Catalog browsing uses metadata-only sorting/search; full payload JSON remains route-lazy.
 
 ## Development

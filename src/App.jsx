@@ -174,9 +174,9 @@ function Home() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter uppercase mb-3 bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent">
           Anime Architecture Archive
         </h1>
-        <p className="text-sm md:text-base text-cyan-400/60 tracking-[0.25em] uppercase font-bold">Fictional Universe Intelligence System</p>
+        <p className="text-sm md:text-base text-cyan-400/60 tracking-[0.25em] uppercase font-bold">Anime Systems Analysis Archive</p>
         <p className="mt-6 text-xs md:text-sm text-gray-300/80 max-w-2xl leading-relaxed">
-          Browse a structured archive of fictional universe systems. Discover power mechanics, faction topology, and causal constraints through curated paths that stay fast as the catalog grows.
+          Browse a structured anime archive of universe systems. Compare power mechanics, faction structures, and causal constraints through curated archive pathways built for fans.
         </p>
         <div className="mt-8 text-[10px] text-white/30 tracking-widest uppercase flex flex-wrap justify-center gap-4">
           <span>[{UNIVERSE_CATALOG.length}] Universes</span>
@@ -220,10 +220,10 @@ function Home() {
       <section className="max-w-6xl mx-auto px-6 pb-2" aria-labelledby="cluster-pathways-heading">
         <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 md:px-5">
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <h2 id="cluster-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Browse by System Cluster</h2>
+            <h2 id="cluster-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Browse by System Structure</h2>
             <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">View full catalog →</Link>
           </div>
-          <p className="text-[11px] text-gray-400 mb-3">Quick pathways into related universes without opening the full directory.</p>
+          <p className="text-[11px] text-gray-400 mb-3">Quick paths into related anime universes without opening the full catalog.</p>
           <div className="flex flex-wrap gap-2">
             {discoveryClusters.map(cluster => (
               <Link

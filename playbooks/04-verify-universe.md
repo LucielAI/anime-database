@@ -125,6 +125,11 @@ After the validator passes, do a quick manual review:
 
 **Treating validator output as the only QA.** The validator checks schema shape and structural profiles, not content quality. Manual review of `aiInsights.deep` content and relationship meaningfulness is still needed.
 
+## Tone & Language checks
+
+- [ ] Archive copy sounds natural for anime fans and avoids internal ranking, recommendation, or growth-system language.
+- [ ] UI labels read like a curated anime archive (e.g., "Related Universes", "Where to Go Next"), not a recommendation engine.
+
 ## Discoverability / Answerability checks
 
 - [ ] `systemQuestions` exists with 4-8 entries.
@@ -137,7 +142,7 @@ After the validator passes, do a quick manual review:
 
 ## Related universe checks
 
-Before merge, verify the new universe participates in discovery:
+Before merge, verify the new universe is surfaced naturally in archive navigation:
 - Appears in at least one `/universes?cluster=...` route.
 - Shows up as a related suggestion on at least one other universe page.
-- Bottom-of-page retention cards render with crawlable links (`/universe/:slug`).
+- Bottom-of-page related universe cards render with crawlable links (`/universe/:slug`).
