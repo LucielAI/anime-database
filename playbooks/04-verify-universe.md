@@ -133,3 +133,11 @@ After the validator passes, do a quick manual review:
 - [ ] Answers are concise, accurate, and linked to relevant tabs/sections.
 - [ ] No FAQ spam, no repetitive filler, no keyword stuffing.
 - [ ] Graph/image-adjacent text and alt labels are descriptive and useful.
+
+
+## Related universe checks
+
+Before merge, verify the new universe participates in discovery:
+- Appears in at least one `/universes?cluster=...` route.
+- Shows up as a related suggestion on at least one other universe page.
+- Bottom-of-page retention cards render with crawlable links (`/universe/:slug`).

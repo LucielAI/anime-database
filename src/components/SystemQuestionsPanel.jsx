@@ -1,4 +1,6 @@
-export default function SystemQuestionsPanel({ data, onJumpToSection }) {
+import { Link } from 'react-router-dom'
+
+export default function SystemQuestionsPanel({ data, onJumpToSection, relatedUniverses = [] }) {
   const questions = Array.isArray(data?.systemQuestions) ? data.systemQuestions.filter((q) => q?.question && q?.answer) : []
 
   if (questions.length === 0) return null
@@ -29,6 +31,21 @@ export default function SystemQuestionsPanel({ data, onJumpToSection }) {
             </article>
           ))}
         </div>
+
+        {relatedUniverses.length > 0 && (
+          <div className="mt-5 pt-4 border-t border-white/10 flex flex-wrap gap-2 items-center">
+            <span className="text-[9px] tracking-[0.2em] uppercase text-gray-500">Related reads:</span>
+            {relatedUniverses.slice(0, 2).map((row) => (
+              <Link
+                key={row.entry.id}
+                to={`/universe/${row.entry.id}`}
+                className="inline-flex rounded-full border border-white/10 bg-white/5 hover:bg-white/10 px-2.5 py-1.5 text-[9px] tracking-[0.16em] uppercase text-gray-300 hover:text-white"
+              >
+                {row.entry.anime}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )
