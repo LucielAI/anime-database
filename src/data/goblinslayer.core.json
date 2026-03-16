@@ -237,6 +237,36 @@
         "Kenja"
       ],
       "malId": 178477
+    },
+    {
+      "name": "Spearman",
+      "title": "Frontier Vanguard Specialist",
+      "rank": "Silver",
+      "dangerLevel": 7,
+      "loreBio": "A veteran adventurer whose confidence and frontline discipline cover regions Goblin Slayer cannot personally patrol.",
+      "systemBio": "Parallel high-skill response node that prevents the ecosystem from overfitting to one specialist actor.",
+      "gradientFrom": "sky-900",
+      "gradientTo": "indigo-800",
+      "accentColor": "cyan-300",
+      "icon": "Shield",
+      "signatureMoment": "He holds high-threat fronts long enough for guild dispatches and civilian evacuation chains to stabilize.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Witch",
+      "title": "Utility Caster & Recon Support",
+      "rank": "Silver",
+      "dangerLevel": 6,
+      "loreBio": "A composed caster who supports frontier veterans with precision utility and calm threat assessment.",
+      "systemBio": "Flexible support node that improves mission survivability by bridging reconnaissance, debuff timing, and extraction safety.",
+      "gradientFrom": "violet-900",
+      "gradientTo": "fuchsia-800",
+      "accentColor": "purple-300",
+      "icon": "Brain",
+      "signatureMoment": "Her spell timing repeatedly converts uncertain skirmishes into controllable engagements for allied teams.",
+      "imageUrl": null,
+      "_fetchFailed": true
     }
   ],
   "relationships": [
@@ -311,6 +341,30 @@
       "weight": 5,
       "loreDesc": "He accepts her requests when they align with his mission to prevent further goblin casualties.",
       "systemDesc": "Conditional cooperation link bridging local extermination ops and city-level governance pressure."
+    },
+    {
+      "source": "Spearman",
+      "target": "Goblin Slayer",
+      "type": "ally",
+      "weight": 6,
+      "loreDesc": "He jokes about Goblin Slayer's obsession yet repeatedly backs him when stakes exceed routine quests.",
+      "systemDesc": "Cross-team reinforcement edge that adds depth to regional response coverage."
+    },
+    {
+      "source": "Witch",
+      "target": "Spearman",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Their battlefield trust lets them execute fast support-and-strike rotations under pressure.",
+      "systemDesc": "Stable duo edge improving reliability of non-party interventions."
+    },
+    {
+      "source": "Guild Girl",
+      "target": "Spearman",
+      "type": "ally",
+      "weight": 6,
+      "loreDesc": "She routes urgent requests to available veterans when Goblin Slayer is already deployed elsewhere.",
+      "systemDesc": "Dispatch redundancy edge preventing single-node saturation in guild operations."
     }
   ],
   "factions": [
@@ -337,6 +391,13 @@
       "role": "neutral",
       "loreDesc": "Religious institutions that provide healing legitimacy but are not always tactically proactive.",
       "systemDesc": "Stability infrastructure with high symbolic capital and uneven tactical deployment speed."
+    },
+    {
+      "name": "Frontier Villages and Militias",
+      "role": "neutral",
+      "influence": 7,
+      "loreDesc": "Rural communities absorb first contact with goblin raids and often survive only through ad hoc local defense.",
+      "systemDesc": "Civilian early-warning and resilience layer whose reports determine whether response arrives before collapse."
     }
   ],
   "rules": [
@@ -384,6 +445,15 @@
       "severity": "medium",
       "loreSubtitle": "Kill goblins, not the town",
       "systemSubtitle": "Collateral-risk guardrail"
+    },
+    {
+      "name": "Prestige Markets Misprice Rural Threat",
+      "severity": "high",
+      "loreSubtitle": "The deadliest jobs are often the least glamorous",
+      "systemSubtitle": "Incentive mismatch creates recurring blind spots",
+      "loreConsequence": "High-visibility quests draw talent away while villages facing goblins remain under-protected until too late.",
+      "systemEquivalent": "Reward structures bias labor allocation, so low-pay extermination work requires intentional correction mechanisms.",
+      "subtitle": "Structural Escalation Constraint"
     }
   ],
   "counterplay": [
@@ -441,6 +511,12 @@
       "ruleViolated": "Teleportation tools are for escape, not siege-breaking firepower",
       "loreDesc": "A retreat artifact becomes one of the deadliest anti-monster weapons in the setting.",
       "systemDesc": "Cross-domain resource repurposing produces nonlinear offensive output from utility infrastructure."
+    },
+    {
+      "name": "Single-Target Specialist Outperforms Heroic Generalists",
+      "loreDesc": "A supposedly narrow hunter repeatedly outperforms celebrated adventurers against the most persistent frontier threat.",
+      "systemDesc": "Domain-specialized optimization beats broad heroic profiles in environments dominated by one adaptive enemy class.",
+      "ruleViolated": "Generalist hero parties should outperform narrow specialists at scale"
     }
   ],
   "causalEvents": [
@@ -475,6 +551,14 @@
       "timelinePosition": "Mid-Narrative",
       "loreDesc": "The battle shows that villagers can survive when warned and organized.",
       "systemDesc": "Early warning plus layered defense converts civilian node from passive victim to resilient cluster."
+    },
+    {
+      "name": "Guild Training Grounds Raise Baseline Survival",
+      "trigger": "Repeated goblin incidents force veterans to formalize anti-goblin methods for newer ranks.",
+      "consequence": "More adventurers survive first-contact encounters, reducing catastrophic novice wipe patterns.",
+      "timelinePosition": 4,
+      "loreDesc": "Hard lessons from massacres are converted into shared doctrine instead of being buried as isolated tragedies.",
+      "systemDesc": "Knowledge codification shifts outcomes by moving tactics from individual memory to institutional protocol."
     }
   ],
   "systemQuestions": [

@@ -217,6 +217,36 @@
       "signatureMoment": "Withdrawing from frontline operations after cumulative shock, highlighting non-power bottlenecks in hunter sustainability.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/540694.jpg?s=b1d8998cd3b8c1409c0dc98ea7b18177",
       "malId": 173986
+    },
+    {
+      "name": "Thomas Andre",
+      "title": "National-Level Guildmaster",
+      "rank": "National Level Hunter",
+      "dangerLevel": 9,
+      "loreBio": "Leader of the Scavenger Guild whose overwhelming force represents the pre-monarch ceiling of human deterrence.",
+      "systemBio": "External benchmark node for global S-rank governance; his presence tests whether Jinwoo is merely exceptional or structurally game-breaking.",
+      "gradientFrom": "amber-900",
+      "gradientTo": "yellow-800",
+      "accentColor": "amber-300",
+      "icon": "Shield",
+      "signatureMoment": "After Jeju and later crises, his acknowledgement of Jinwoo signals a global reindexing of hunter authority.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Antares",
+      "title": "Monarch of Destruction",
+      "rank": "Sovereign-Class Entity",
+      "dangerLevel": 10,
+      "loreBio": "The Dragon Monarch embodies terminal conquest logic and arrives as the clearest existential counter to Jinwoo's rise.",
+      "systemBio": "Endgame adversary node that pressure-tests shadow scaling, command latency, and sovereign permission depth.",
+      "gradientFrom": "red-900",
+      "gradientTo": "orange-800",
+      "accentColor": "red-300",
+      "icon": "Flame",
+      "signatureMoment": "His appearance forces the system from national crisis management into species-level survival mode.",
+      "imageUrl": null,
+      "_fetchFailed": true
     }
   ],
   "relationships": [
@@ -283,6 +313,30 @@
       "weight": 4,
       "loreDesc": "Cha increasingly aligns with Jinwoo's methods as older systems prove insufficient.",
       "systemDesc": "Adoption edge where elite institutional talent migrates toward the emergent dominant node."
+    },
+    {
+      "source": "Thomas Andre",
+      "target": "Sung Jin-Woo",
+      "type": "rival",
+      "weight": 7,
+      "loreDesc": "A top global hunter initially sizes Jinwoo up as a contender before recognizing a new tier entirely.",
+      "systemDesc": "Comparator edge between legacy national-level throughput and system-accelerated sovereign growth."
+    },
+    {
+      "source": "Antares",
+      "target": "Sung Jin-Woo",
+      "type": "enemy",
+      "weight": 10,
+      "loreDesc": "Antares targets Jinwoo as the only node capable of contesting destruction sovereignty.",
+      "systemDesc": "Terminal conflict edge where monarch-layer command systems directly collide."
+    },
+    {
+      "source": "Thomas Andre",
+      "target": "Go Gun-Hee",
+      "type": "ally",
+      "weight": 6,
+      "loreDesc": "Both veterans prioritize coordinated defense over guild prestige during global escalations.",
+      "systemDesc": "Institutional cooperation link that reduces response fragmentation across national command structures."
     }
   ],
   "factions": [
@@ -315,6 +369,13 @@
       "role": "chaotic",
       "loreDesc": "Jinwoo's expanding force of converted shadows that changes battle math every time it deploys.",
       "systemDesc": "Recursive force-multiplication network with centralized command authority."
+    },
+    {
+      "name": "International Hunter Authorities",
+      "role": "systemic",
+      "influence": 8,
+      "loreDesc": "National-level associations and governments coordinating treaty-scale responses to gates and sovereign incursions.",
+      "systemDesc": "Macro-governance layer that allocates elite labor, negotiates cross-border raid authority, and updates deterrence doctrine."
     }
   ],
   "rules": [
@@ -362,6 +423,15 @@
       "severity": "fatal",
       "loreSubtitle": "No endless retries",
       "systemSubtitle": "Finite checkpoint budget"
+    },
+    {
+      "name": "Sovereign Conflict Overrides National Borders",
+      "severity": "fatal",
+      "loreSubtitle": "No nation can solo a monarch war",
+      "systemSubtitle": "Threat domain exceeds state-only governance",
+      "loreConsequence": "Once monarchs fully mobilize, even top guild states cannot contain damage within domestic lines.",
+      "systemEquivalent": "Endgame threats invalidate local optimization and force transnational command pooling.",
+      "subtitle": "Structural Escalation Constraint"
     }
   ],
   "counterplay": [
@@ -453,6 +523,14 @@
       "timelinePosition": "Final Arc",
       "loreDesc": "Humanity receives one last chance to avoid terminal defeat.",
       "systemDesc": "Limited checkpoint restore generates improved endgame execution branch."
+    },
+    {
+      "name": "Jeju Raid Reorders Global Hunter Hierarchy",
+      "trigger": "Ant-level catastrophe forces multinational intervention under severe casualty pressure.",
+      "consequence": "Jinwoo's intervention shifts trust, deterrence planning, and recruitment assumptions worldwide.",
+      "timelinePosition": 3,
+      "loreDesc": "The Jeju operation exposes how brittle legacy S-rank planning is until Jinwoo's shadow force flips the board.",
+      "systemDesc": "A regional raid becomes a global reindex event: authority migrates toward whoever can deliver repeatable high-end clearance."
     }
   ],
   "animeImageUrl": "https://myanimelist.net/images/anime/1801/142390l.jpg",
@@ -498,6 +576,13 @@
       "tabIndex": 3,
       "sectionId": "core-laws-heading",
       "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Why do national-level hunters still matter after Jinwoo breaks scaling limits?",
+      "answer": "They remain institutional stabilizers and deterrence anchors while the world transitions from state-era defense to sovereign-era conflict.",
+      "tabIndex": 2,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
     }
   ]
 }
