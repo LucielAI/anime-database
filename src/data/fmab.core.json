@@ -145,8 +145,11 @@
       "accentColor": "red-400",
       "icon": "Globe",
       "signatureMoment": "Activating the Nationwide Transmutation Circle on the Promised Day — absorbing fifty million Amestrian souls and pulling God into his body, achieving momentary omnipotence before the counter-network tears it away.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/80675.jpg?s=d88162ea44efd5b1b9e6e3ac4ef61158",
+      "jikanAliases": [
+        "Homunculus"
+      ],
+      "malId": 15542
     },
     {
       "name": "Roy Mustang",
@@ -235,8 +238,12 @@
       "accentColor": "teal-400",
       "icon": "Heart",
       "signatureMoment": "Performing healing transmutation during the Promised Day battle while all Amestrian alchemy is disabled — proving that her chi-based system exists on a completely independent energy grid.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/80248.jpg?s=0e6976dff1fa9de9242c0842a375c815",
+      "jikanAliases": [
+        "Mei Chang",
+        "Chang, Mei"
+      ],
+      "malId": 15532
     }
   ],
   "relationships": [

@@ -195,9 +195,9 @@
       "accentColor": "fuchsia-400",
       "icon": "Flame",
       "signatureMoment": "Introduces transformation-scale threats that conventional anti-demon playbooks cannot cleanly absorb.",
-      "imageUrl": null,
-      "_fetchFailed": true,
-      "primaryAbility": "Di Agolze Curse Transmutation"
+      "imageUrl": "https://myanimelist.net/images/characters/5/491752.jpg",
+      "primaryAbility": "Di Agolze Curse Transmutation",
+      "malId": 219460
     }
   ],
   "relationships": [

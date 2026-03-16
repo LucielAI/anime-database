@@ -239,9 +239,11 @@
       "icon": "Key",
       "dangerLevel": 6,
       "signatureMoment": "Activating the Amadeus kill-switch — 'Der Alte würfelt nicht' — permanently deleting the digitized Kurisu to prevent military exploitation, destroying her closest connection to her dead friend to save the world.",
-      "imageUrl": null,
-      "_fetchFailed": true,
-      "malId": 130861
+      "imageUrl": "https://myanimelist.net/images/characters/10/340197.jpg",
+      "malId": 83419,
+      "jikanAliases": [
+        "Maho Hiyajou"
+      ]
     }
   ],
   "relationships": [

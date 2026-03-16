@@ -235,8 +235,12 @@
       "accentColor": "yellow-400",
       "icon": "Users",
       "signatureMoment": "Leads the Black Knights' break from Zero after manipulated evidence of betrayal.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/61063.jpg?s=e370facf97b1f956f1429d4b329288a4",
+      "jikanAliases": [
+        "Kaname Ougi",
+        "Ougi, Kaname"
+      ],
+      "malId": 1115
     }
   ],
   "relationships": [

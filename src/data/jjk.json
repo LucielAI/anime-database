@@ -15,7 +15,7 @@
     "casual": "Jujutsu Kaisen is basically a giant, lethal game of rock-paper-scissors using negative energy. Every sorcerer has a unique power, but pure strength rarely wins alone. It's all about how abilities cleverly counter or exploit each other, which is exactly why the 'Counterplay' tree is the best way to view this universe.",
     "deep": "JJK functions as a brutal negative energy economy governed by strict, lethal smart contracts (Binding Vows). The Counter-Tree visualization perfectly maps its core structural thesis: raw power is less relevant than algorithmic advantage. Anomaly nodes (like Toji) or hyper-optimized domain expansions routinely crash the system by bypassing established physical laws or leveraging asymmetric information."
   },
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1171/109222l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1171/109222l.jpg",
   "themeColors": {
     "primary": "#4f46e5",
     "secondary": "#0f172a",
@@ -202,7 +202,6 @@
       "dangerLevel": 9,
       "signatureMoment": "Massacring the entirety of the corrupt Zenin Clan single-handedly after unlocking her true physical potential.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/423949.jpg?s=72edfa936ac89421e8d16970762d8b5b",
-      "_fetchFailed": false,
       "malId": 164482
     },
     {
@@ -218,9 +217,12 @@
       "icon": "Flame",
       "dangerLevel": 8,
       "signatureMoment": "Landing his first Black Flash against Hanami — a 120% power amplification requiring nanosecond-perfect timing — proving that raw talent and will can close the gap against Special Grade threats.",
-      "imageUrl": null,
-      "_fetchFailed": true,
-      "malId": 163847
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/467646.jpg?s=9e1cb7b0c6c7f145661e8ee93f32215d",
+      "malId": 163847,
+      "jikanAliases": [
+        "Yuuji Itadori",
+        "Itadori, Yuuji"
+      ]
     },
     {
       "name": "Megumi Fushiguro",
@@ -251,9 +253,8 @@
       "icon": "Activity",
       "dangerLevel": 9,
       "signatureMoment": "Callously transfiguring Junpei in front of Yuji, proving that in the curse economy, innocence provides zero defense against foundational corruption.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/423984.jpg",
-      "_fetchFailed": false,
-      "malId": 178972
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/446508.jpg?s=8cfa45381097f1e9a720982061ec087d",
+      "malId": 164481
     },
     {
       "name": "Kento Nanami",
@@ -268,9 +269,8 @@
       "icon": "Clock",
       "dangerLevel": 8,
       "signatureMoment": "Loosening his tie precisely at 5:30 PM, triggering his Overtime vow and systematically destroying Mahito's transfigured humans with overwhelming, budgeted force.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/424368.jpg",
-      "_fetchFailed": false,
-      "malId": 164474
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/581424.jpg?s=78de007092c9e32f3555753de4999ee6",
+      "malId": 164473
     }
   ],
   "factions": [

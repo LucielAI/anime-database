@@ -13,7 +13,7 @@
     "modeGlow": "rgba(220,38,38,0.25)",
     "heroGradient": "rgba(15,10,5,0.95)"
   },
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1500/103005l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1500/103005l.jpg",
   "visualizationHint": "node-graph",
   "visualizationReason": "Because the universe's topology is defined by shifting strategic interdependence, profound mirror relationships, and the difficult severing of edges from the base violence economy.",
   "headerFlavor": {
@@ -133,8 +133,7 @@
       "icon": "Brain",
       "dangerLevel": 9,
       "signatureMoment": "Assassinating King Sweyn in a suicidal gambit to force Canute's ascension and permanently shield Wales from the Danish invasion.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/401940.jpg",
-      "_fetchFailed": false,
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/401940.jpg?s=738c36550f7afd3f402a32a5bbef66c8",
       "malId": 13020
     },
     {
@@ -201,9 +200,8 @@
       "icon": "Leaf",
       "dangerLevel": 2,
       "signatureMoment": "Pulling Thorfinn out of his catatonic nightmares and affirming that even hands stained with blood can be used to grow wheat.",
-      "imageUrl": null,
-      "_fetchFailed": true,
-      "malId": null
+      "imageUrl": "https://myanimelist.net/images/characters/16/501347.jpg",
+      "malId": 28030
     }
   ],
   "relationships": [

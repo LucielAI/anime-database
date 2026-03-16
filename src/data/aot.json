@@ -13,7 +13,7 @@
     "modeGlow": "rgba(16,185,129,0.25)",
     "heroGradient": "rgba(13,20,13,0.95)"
   },
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/10/47347l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/10/47347l.jpg",
   "visualizationHint": "timeline",
   "visualizationReason": "Causality itself functions as the supreme power system; the timeline is a malleable battlespace.",
   "headerFlavor": {
@@ -122,7 +122,6 @@
       "dangerLevel": 10,
       "signatureMoment": "Tricking his father through sophisticated future memory manipulation to slaughter the royal family.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/216895.jpg?s=ccb6539cbfc5462df97d61a48c52af93",
-      "_fetchFailed": false,
       "malId": 40882
     },
     {
@@ -139,7 +138,6 @@
       "dangerLevel": 9,
       "signatureMoment": "Brutally decapitating the Jaw Titan in a high-speed, mid-air maneuver to secure Eren's safe extraction during the raid on Liberio.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/215563.jpg?s=5b0650bb09a7e053afc6bad84ab48947",
-      "_fetchFailed": false,
       "malId": 40881
     },
     {
@@ -156,7 +154,6 @@
       "dangerLevel": 8,
       "signatureMoment": "Formulating a suicidal strategy to distract the Colossal Titan by enduring lethal steam burns, allowing Eren to extract the pilot.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/220267.jpg?s=afa2751e2201aba1f5179544e787ba1a",
-      "_fetchFailed": false,
       "malId": 46494
     },
     {
@@ -190,7 +187,6 @@
       "dangerLevel": 8,
       "signatureMoment": "Surviving a direct, catastrophic decapitation attempt by rapidly transferring his neurological consciousness throughout his Titan's central nervous system.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/206489.jpg?s=e48695a419dc6e71c831d7481a5fc86f",
-      "_fetchFailed": false,
       "malId": 46484
     },
     {
@@ -224,7 +220,6 @@
       "dangerLevel": 8,
       "signatureMoment": "Leading a final suicidal cavalry charge directly into the Beast Titan's kill zone, screaming 'My soldiers, rage!' as boulders shred his formation — buying Levi the opening to annihilate Zeke.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/559023.jpg?s=148a0689d341e23cae536207d030f3fc",
-      "_fetchFailed": false,
       "malId": 46496
     },
     {
@@ -241,7 +236,6 @@
       "dangerLevel": 8,
       "signatureMoment": "Revealing herself as the Female Titan in the Stohess District, triggering a catastrophic urban battle that forced the Survey Corps to destroy an entire city district to capture her.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/206357.jpg?s=3a853fc7177a3eeaefbecb530d590a4a",
-      "_fetchFailed": false,
       "malId": 46490
     },
     {
@@ -274,9 +268,8 @@
       "icon": "Key",
       "dangerLevel": 8,
       "signatureMoment": "Collapsing in horror after slaughtering the Reiss family, screaming to the invisible future Eren, 'Is this what you wanted?'",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/208573.jpg",
-      "_fetchFailed": false,
-      "malId": 46524
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/206441.jpg?s=9618f66845f0678a8e993d9bd76675c6",
+      "malId": 62477
     }
   ],
   "relationships": [

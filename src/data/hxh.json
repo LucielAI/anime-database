@@ -15,7 +15,7 @@
     "casual": "Hunter x Hunter isn't just about punching hard; it's about complex alliances and deadly contracts. Power comes from risking your own life, and characters constantly betray, groom, or depend on each other. The 'Node Graph' shows this perfectly, revealing the hidden web of trust and hostility connecting everyone.",
     "deep": "HxH models a high-stakes, unregulated strategic economy where power is generated through extreme, collateralized contracts (Nen Vows). The Relational Node Graph is the optimal lens because systemic victories here are rarely achieved through brute force; they are won by identifying and exploiting the asymmetric dependencies, emotional liabilities, and rigid behavioral mandates of opponent nodes."
   },
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1337/99013l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1337/99013l.jpg",
   "themeColors": {
     "primary": "#059669",
     "secondary": "#0f172a",
@@ -260,9 +260,8 @@
       "icon": "Activity",
       "dangerLevel": 8,
       "signatureMoment": "Dropping her disguise to reveal a hulking, brutally muscled true form, shattering a highly-trained bomber's jaw in a single, unceremonious strike.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/236165.jpg",
-      "_fetchFailed": false,
-      "malId": 4130
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/194667.jpg?s=b2a4def7e985c1ca4f4aac63a511ffc5",
+      "malId": 13898
     },
     {
       "name": "Ging Freecss",
@@ -277,9 +276,8 @@
       "icon": "Globe",
       "dangerLevel": 10,
       "signatureMoment": "Replicating Leorio's proprietary teleportation punch perfectly after being hit by it once, casually demonstrating that his base operating system can emulate bespoke applications just by observing them.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/235313.jpg",
-      "_fetchFailed": false,
-      "malId": 3137
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/231795.jpg?s=a02e50645c7dc0816f3e7108cbef2c42",
+      "malId": 26
     }
   ],
   "factions": [
