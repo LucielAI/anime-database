@@ -217,6 +217,42 @@
       "signatureMoment": "Imposes kill-or-be-killed conditioning on Denji and Power to force adaptive combat behavior.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/488553.jpg?s=90bf9b9117281aaead8dd8ac08cf388f",
       "malId": 174748
+    },
+    {
+      "name": "Santa Claus",
+      "title": "Global Doll Devil Contractor",
+      "rank": "Transnational Assassin Asset",
+      "dangerLevel": 9,
+      "loreBio": "A multilayer identity operator who weaponizes contracts and human bodies at city scale.",
+      "systemBio": "Distributed-control node that demonstrates how off-book contractors can bypass Public Safety command boundaries.",
+      "gradientFrom": "zinc-900",
+      "gradientTo": "stone-800",
+      "accentColor": "emerald-300",
+      "icon": "Key",
+      "signatureMoment": "In the assassin conflict, Santa turns crowds into disposable processors and drags the battle into Hell-state conditions.",
+      "imageUrl": "https://myanimelist.net/images/characters/10/413238.jpg",
+      "malId": 184106,
+      "jikanAliases": [
+        "Master"
+      ]
+    },
+    {
+      "name": "Katana Man",
+      "title": "Yakuza-Backed Hybrid Enforcer",
+      "rank": "Hybrid Weapon Unit",
+      "dangerLevel": 8,
+      "loreBio": "A revenge-driven hybrid whose emergence exposes how criminal legacies mutate into devil-era insurgency.",
+      "systemBio": "Hybrid disruption node proving that non-state actors can generate elite threat parity through contract-tech fusion.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "neutral-800",
+      "accentColor": "cyan-300",
+      "icon": "Sword",
+      "signatureMoment": "His assault on Public Safety reveals how thin institutional control becomes when hybrid actors target logistics directly.",
+      "imageUrl": "https://myanimelist.net/images/characters/3/495669.jpg",
+      "malId": 174747,
+      "jikanAliases": [
+        "Samurai Sword"
+      ]
     }
   ],
   "relationships": [
@@ -299,6 +335,38 @@
       "weight": 10,
       "loreDesc": "Makima seeks to dominate Chainsaw Man so she can use erasure power to redesign history and society.",
       "systemDesc": "Hostile capture attempt on ontology-delete primitive for long-term governance reprogramming."
+    },
+    {
+      "source": "Makima",
+      "target": "Kishibe",
+      "type": "enemy",
+      "weight": 8,
+      "loreDesc": "Kishibe recognizes Makima's control logic and quietly organizes opposition before she can fully close the net.",
+      "systemDesc": "Counterintelligence edge between centralized coercion and internal institutional resistance."
+    },
+    {
+      "source": "Aki Hayakawa",
+      "target": "Makima",
+      "type": "dependent",
+      "weight": 8,
+      "loreDesc": "Aki believes in command structure while unknowingly moving along Makima's scripted path.",
+      "systemDesc": "Chain-of-command dependency exploited by a higher-order controller."
+    },
+    {
+      "source": "Denji",
+      "target": "Katana Man",
+      "type": "enemy",
+      "weight": 8,
+      "loreDesc": "Their clashes pit improvised survival against revenge-fueled hybrid discipline.",
+      "systemDesc": "Hybrid-vs-hybrid test edge defining short-window kill economics."
+    },
+    {
+      "source": "Santa Claus",
+      "target": "Denji",
+      "type": "counter",
+      "weight": 8,
+      "loreDesc": "Santa hunts Chainsaw Man as a global prize, forcing Denji into multi-front adaptation.",
+      "systemDesc": "External adversary edge that stress-tests Denji outside Makima's immediate theater."
     }
   ],
   "factions": [
@@ -325,6 +393,13 @@
       "role": "chaotic",
       "loreDesc": "Unstable actors who can swing outcomes through sudden violence, betrayal, or unexpected loyalty.",
       "systemDesc": "High-variance nodes that inject nonlinear shocks into otherwise predictable command structures."
+    },
+    {
+      "name": "Transnational Devil Brokers",
+      "role": "chaotic",
+      "influence": 8,
+      "loreDesc": "Foreign handlers, contractors, and black-market intermediaries who treat Devil assets as geopolitical currency.",
+      "systemDesc": "External competition layer that injects high-variance operators into Tokyo and destabilizes local command assumptions."
     }
   ],
   "rules": [
@@ -363,6 +438,15 @@
       "severity": "fatal",
       "loreSubtitle": "History Can Be Cut Out",
       "systemSubtitle": "Ontology Rewrite Primitive"
+    },
+    {
+      "name": "Institutional Secrecy Creates Fragile Trust",
+      "severity": "high",
+      "loreSubtitle": "Hunters fight in the dark even with allies nearby",
+      "systemSubtitle": "Opacity amplifies internal compromise risk",
+      "loreConsequence": "Public Safety withholds critical devil intelligence, leaving field teams vulnerable to unseen escalations.",
+      "systemEquivalent": "Information asymmetry raises coordination cost and makes infiltration harder to detect until failure cascades.",
+      "subtitle": "Structural Escalation Constraint"
     }
   ],
   "counterplay": [
@@ -420,6 +504,12 @@
       "ruleViolated": "Human/Devil boundaries should be singular",
       "loreDesc": "Weapon hybrids survive lethal damage while retaining core identity, unlike standard fiend possession patterns.",
       "systemDesc": "Sustained dual-state architecture that preserves human agency alongside devil kernel functions."
+    },
+    {
+      "name": "Hell Transfer by Proxy Sacrifice",
+      "loreDesc": "Large groups can be converted into payment to force battlefield relocation into Hell itself.",
+      "systemDesc": "Spatial state-transition exploit that redefines engagement constraints through mass-cost contract execution.",
+      "ruleViolated": "Battlefields should remain geographically local once engagement begins"
     }
   ],
   "causalEvents": [
@@ -454,6 +544,14 @@
       "timelinePosition": "Final Arc",
       "loreDesc": "Makima dismantles Denji's reasons to live so she can separate weapon from person.",
       "systemDesc": "Psychological kill-chain disables operator autonomy to unlock controllable anomaly state."
+    },
+    {
+      "name": "International Assassins Converge on Chainsaw Heart",
+      "trigger": "Foreign powers bid for Chainsaw capacity and dispatch layered kill teams into Tokyo.",
+      "consequence": "Local conflicts become global competition, escalating from patrol incidents to Hell-linked mass-casualty operations.",
+      "timelinePosition": 4,
+      "loreDesc": "The city becomes a hunting ground where every alliance is temporary and every contract hides another agenda.",
+      "systemDesc": "The conflict space transitions from domestic policing to transnational asset contention with stacked adversaries."
     }
   ],
   "systemQuestions": [
