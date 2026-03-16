@@ -250,8 +250,11 @@
       "accentColor": "cyan-300",
       "icon": "Shield",
       "signatureMoment": "He holds high-threat fronts long enough for guild dispatches and civilian evacuation chains to stabilize.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://myanimelist.net/images/characters/8/402005.jpg",
+      "malId": 159321,
+      "jikanAliases": [
+        "Yaritsukai"
+      ]
     },
     {
       "name": "Witch",
@@ -265,8 +268,11 @@
       "accentColor": "purple-300",
       "icon": "Brain",
       "signatureMoment": "Her spell timing repeatedly converts uncertain skirmishes into controllable engagements for allied teams.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://myanimelist.net/images/characters/10/402054.jpg",
+      "malId": 148959,
+      "jikanAliases": [
+        "Majo"
+      ]
     }
   ],
   "relationships": [

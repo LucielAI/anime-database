@@ -230,8 +230,11 @@
       "accentColor": "emerald-300",
       "icon": "Key",
       "signatureMoment": "In the assassin conflict, Santa turns crowds into disposable processors and drags the battle into Hell-state conditions.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://myanimelist.net/images/characters/10/413238.jpg",
+      "malId": 184106,
+      "jikanAliases": [
+        "Master"
+      ]
     },
     {
       "name": "Katana Man",
@@ -245,8 +248,11 @@
       "accentColor": "cyan-300",
       "icon": "Sword",
       "signatureMoment": "His assault on Public Safety reveals how thin institutional control becomes when hybrid actors target logistics directly.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://myanimelist.net/images/characters/3/495669.jpg",
+      "malId": 174747,
+      "jikanAliases": [
+        "Samurai Sword"
+      ]
     }
   ],
   "relationships": [

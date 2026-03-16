@@ -230,23 +230,29 @@
       "accentColor": "amber-300",
       "icon": "Shield",
       "signatureMoment": "After Jeju and later crises, his acknowledgement of Jinwoo signals a global reindexing of hunter authority.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "imageUrl": "https://myanimelist.net/images/characters/7/456350.jpg",
+      "malId": 194373,
+      "jikanAliases": [
+        "Thomas Andre"
+      ]
     },
     {
-      "name": "Antares",
-      "title": "Monarch of Destruction",
+      "name": "Ashborn",
+      "title": "Original Shadow Monarch",
       "rank": "Sovereign-Class Entity",
       "dangerLevel": 10,
-      "loreBio": "The Dragon Monarch embodies terminal conquest logic and arrives as the clearest existential counter to Jinwoo's rise.",
-      "systemBio": "Endgame adversary node that pressure-tests shadow scaling, command latency, and sovereign permission depth.",
+      "loreBio": "The primordial Shadow Monarch whose legacy defines sovereign succession and the architecture Jinwoo ultimately inherits.",
+      "systemBio": "Root-authority predecessor node that explains how monarch permissions can transfer without collapsing command continuity.",
       "gradientFrom": "red-900",
       "gradientTo": "orange-800",
       "accentColor": "red-300",
       "icon": "Flame",
-      "signatureMoment": "His appearance forces the system from national crisis management into species-level survival mode.",
-      "imageUrl": null,
-      "_fetchFailed": true
+      "signatureMoment": "His inheritance chain reframes Jinwoo's rise as succession into an existing sovereign stack, not a random miracle.",
+      "imageUrl": "https://myanimelist.net/images/characters/6/579269.jpg",
+      "malId": 245955,
+      "jikanAliases": [
+        "Ashborn"
+      ]
     }
   ],
   "relationships": [
@@ -323,11 +329,11 @@
       "systemDesc": "Comparator edge between legacy national-level throughput and system-accelerated sovereign growth."
     },
     {
-      "source": "Antares",
+      "source": "Ashborn",
       "target": "Sung Jin-Woo",
       "type": "enemy",
       "weight": 10,
-      "loreDesc": "Antares targets Jinwoo as the only node capable of contesting destruction sovereignty.",
+      "loreDesc": "Ashborn's legacy positions Jinwoo as the active inheritor of shadow sovereignty against rival monarch pressure.",
       "systemDesc": "Terminal conflict edge where monarch-layer command systems directly collide."
     },
     {
