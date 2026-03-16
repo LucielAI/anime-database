@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -16,6 +16,11 @@ export const UNIVERSE_CATALOG = [
     id: 'jjk', anime: 'Jujutsu Kaisen', tagline: 'Negative Energy Economy & Algorithmic Combat', malId: 40748, visualizationHint: 'counter-tree', visualizationReason: 'JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1171/109222l.jpg',
     themeColors: { primary: '#4f46e5', secondary: '#0f172a', accent: '#ef4444', glow: 'rgba(79, 70, 229, 0.4)', tabActive: '#818cf8', badgeBg: 'rgba(79, 70, 229, 0.2)', badgeText: '#c7d2fe', modeGlow: 'rgba(34, 197, 94, 0.5)', heroGradient: 'rgba(30, 27, 75, 0.95)' },
     stats: { characters: 10, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'chainsawman', anime: 'Chainsaw Man', tagline: 'A fear-fed devil economy where control networks weaponize trauma, contracts, and identity erasure.', malId: 44511, visualizationHint: 'node-graph', visualizationReason: 'Chainsaw Man is structurally a control web: fear flows into devils, contracts reroute agency, and Makima-centered dependency edges determine who can act, betray, or survive.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1806/126216l.jpg',
+    themeColors: { primary: '#dc2626', secondary: '#0f172a', accent: '#f59e0b', glow: 'rgba(220,38,38,0.34)', tabActive: '#ef4444', badgeBg: 'rgba(15,23,42,0.56)', badgeText: '#fca5a5', modeGlow: 'rgba(245,158,11,0.28)', heroGradient: 'rgba(8,10,16,0.94)' },
+    stats: { characters: 8, powerSystem: 4, rules: 4 }
   },
   {
     id: 'demonslayer', anime: 'Demon Slayer: Kimetsu no Yaiba', tagline: 'A nocturnal immortality network versus humans burning their own lifespan for solar-grade kill windows.', malId: 38000, visualizationHint: 'counter-tree', visualizationReason: 'Demon Slayer is fundamentally a kill-economy matchup system: each duel is decided by how breathing forms, blood arts, poison, sunlight constraints, and decapitation windows counter each other.', animeImageUrl: 'https://myanimelist.net/images/anime/1286/99889l.jpg',

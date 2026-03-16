@@ -44,6 +44,12 @@ export const DISCOVERY_METADATA = {
     appealTags: ['technical-counterplay', 'power-scaling'],
     systemProfile: { factionComplexity: 2, causalDensity: 1, powerStructure: 'matchup' }
   },
+  chainsawman: {
+    addedAt: '2026-03-16', popularityBaseline: 95, featuredRank: 4, classification: 'combat', startTab: 'entity-database', startLabel: 'Start with ENTITY DATABASE to map Makima-centered control links first.',
+    clusterTags: ['combat-systems', 'faction-heavy', 'anomaly-driven'],
+    appealTags: ['high-stakes-escalation', 'strategy-network'],
+    systemProfile: { factionComplexity: 3, causalDensity: 2, powerStructure: 'control' }
+  },
   demonslayer: {
     addedAt: '2024-02-21', popularityBaseline: 94, featuredRank: 3, classification: 'combat', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for kill-window counterplay.',
     clusterTags: ['combat-systems', 'hierarchy-heavy', 'inheritance'],

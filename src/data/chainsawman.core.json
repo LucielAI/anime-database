@@ -1,0 +1,497 @@
+{
+  "anime": "Chainsaw Man",
+  "tagline": "A fear-fed devil economy where control networks weaponize trauma, contracts, and identity erasure.",
+  "malId": 44511,
+  "themeColors": {
+    "primary": "#dc2626",
+    "secondary": "#0f172a",
+    "accent": "#f59e0b",
+    "glow": "rgba(220,38,38,0.34)",
+    "tabActive": "#ef4444",
+    "badgeBg": "rgba(15,23,42,0.56)",
+    "badgeText": "#fca5a5",
+    "modeGlow": "rgba(245,158,11,0.28)",
+    "heroGradient": "rgba(8,10,16,0.94)"
+  },
+  "visualizationHint": "node-graph",
+  "visualizationReason": "Chainsaw Man is structurally a control web: fear flows into devils, contracts reroute agency, and Makima-centered dependency edges determine who can act, betray, or survive.",
+  "headerFlavor": {
+    "loreQuote": "In a world that runs on fear, even love can be a leash.",
+    "sysWarning": "// [SYS_WARN]: HORSEMAN CONTROL NETWORK DETECTED — IDENTITY ERASURE VECTOR ACTIVE",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "glow-border",
+  "introductionSummary": "Chainsaw Man models reality as a feedback economy where human fear creates and powers devils. Public Safety attempts to regulate this market through contracts, but every contract externalizes cost onto bodies, memory, or lifespan. The core instability comes from Makima's control architecture and Pochita's concept-erasure capability, which can rewrite the ontology itself rather than merely winning fights.",
+  "aiInsights": {
+    "casual": "Chainsaw Man looks chaotic, but its world is actually very strict: fear makes devils stronger, contracts always demand payment, and social control decides who gets used. Denji's rise is not just power growth — it's a battle over who owns his choices.",
+    "deep": "The universe behaves like a recursive risk market. Fear is the energy source, contracts are irreversible debt instruments, and faction leaders optimize through proxy nodes. Makima's strategy treats humans/devils as controllable assets, while Chainsaw Devil erasure is a system-level delete operation that can remove problem classes from global memory, destabilizing the ontology that all other actors depend on."
+  },
+  "powerSystem": [
+    {
+      "name": "Fear-Backed Devil Scaling",
+      "subtitle": "Collective Emotion as Energy",
+      "loreDesc": "Each Devil is born from a feared concept, and its strength rises with how terrified humanity is of that idea.",
+      "systemDesc": "A globally distributed demand index where population-level fear acts as real-time power liquidity for concept-linked entities.",
+      "icon": "Brain",
+      "color": "red-400",
+      "signatureMoment": "The Gun Devil's massacre permanently raises global fear, amplifying Devil baseline power across the system.",
+      "loreSubtitle": "Concept Embodiment",
+      "systemSubtitle": "Emotion-Derived Throughput"
+    },
+    {
+      "name": "Devil Contracts",
+      "subtitle": "Power-for-Cost Exchange",
+      "loreDesc": "Humans can borrow Devil power only by paying explicit prices like blood, organs, memories, or lifespan.",
+      "systemDesc": "Binding smart-contract architecture with non-reversible settlement terms and severe default penalties.",
+      "icon": "Key",
+      "color": "amber-400",
+      "signatureMoment": "Aki repeatedly burns lifespan through Future and Curse Devil clauses to stay operational against superior threats.",
+      "loreSubtitle": "Forbidden Bargains",
+      "systemSubtitle": "Debt-Encoded Permissions"
+    },
+    {
+      "name": "Hybridization",
+      "subtitle": "Human-Devil Fusion Runtime",
+      "loreDesc": "Some humans merge with weapon devils, gaining regenerative transformation while retaining personal identity.",
+      "systemDesc": "A persistent dual-stack process where human cognition controls a Devil combat kernel with rapid self-healing.",
+      "icon": "Zap",
+      "color": "orange-400",
+      "signatureMoment": "Denji pulls his chest cord and enters Chainsaw Man form after fatal damage, resetting his combat state.",
+      "loreSubtitle": "Living Weapon Bodies",
+      "systemSubtitle": "Self-Restoring Combat Instance"
+    },
+    {
+      "name": "Concept Erasure",
+      "subtitle": "Ontology Deletion Protocol",
+      "loreDesc": "When Chainsaw Man consumes a Devil, the concept tied to that Devil can vanish from human memory and reality.",
+      "systemDesc": "A root-level delete operation that removes named entities from the world model, not just from active threats.",
+      "icon": "Lock",
+      "color": "rose-400",
+      "signatureMoment": "Makima's obsession with Chainsaw Man centers on using this ability to redesign civilization by deleting selected fears.",
+      "loreSubtitle": "Names Lost to History",
+      "systemSubtitle": "Global Schema Rewrite"
+    }
+  ],
+  "rankings": {
+    "systemName": "Devil Threat and Control Hierarchy",
+    "loreName": "Fear-Domain Ladder",
+    "topTierName": "Primal / Horseman Class",
+    "topTierLore": "Entities tied to foundational human terror or apocalyptic governance concepts that can bend or rewrite civilization-scale outcomes.",
+    "topTierSystem": "Near-sovereign actors with persistent strategic leverage, high survivability, and cross-faction coercion capacity.",
+    "tiers": [
+      {
+        "name": "Weapon Hybrids",
+        "loreDesc": "Human-Devil fusions that recover from lethal damage and function as sustained battle units.",
+        "systemDesc": "High-uptime operator nodes with rapid reset loops and strong tactical persistence."
+      },
+      {
+        "name": "High-Contract Hunters",
+        "loreDesc": "Public Safety or private hunters carrying expensive Devil contracts to contest stronger threats.",
+        "systemDesc": "Human agents with leased capabilities but increasing debt load and failure risk."
+      },
+      {
+        "name": "Fiends / Minor Devils",
+        "loreDesc": "Embodied devils with narrower fear domains or reduced capacity, still dangerous in local engagements.",
+        "systemDesc": "Lower-band actors suitable for swarm pressure, disruption, or disposable field operations."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Denji",
+      "title": "Chainsaw Hybrid",
+      "rank": "Public Safety Asset",
+      "dangerLevel": 9,
+      "loreBio": "A debt-ridden teenager fused with Pochita who is pulled into Public Safety as both a weapon and a person searching for ordinary happiness.",
+      "systemBio": "Primary hybrid node with extreme regeneration and high volatility; control over his incentives determines whether he functions as state asset or runaway anomaly.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Sword",
+      "signatureMoment": "Activates Chainsaw form against Katana Man after near-fatal attrition and grinds through a prolonged urban duel.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/492407.jpg?s=4d8e9a01dac6a5d891c3ed434187fba9",
+      "malId": 170732
+    },
+    {
+      "name": "Pochita",
+      "title": "Chainsaw Devil",
+      "rank": "Concept Erasure Core",
+      "dangerLevel": 10,
+      "loreBio": "The Chainsaw Devil who formed a contract with Denji out of companionship and later became the center of global strategic obsession.",
+      "systemBio": "Root anomaly that can erase concepts by consuming corresponding Devils, enabling irreversible ontology edits.",
+      "gradientFrom": "stone-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Lock",
+      "signatureMoment": "Re-emerges under extreme stress to repel multiple high-tier attackers while preserving Denji's contract promise.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/391655.jpg?s=98a1bd67048600807f26dd709b70b7cc",
+      "malId": 174750
+    },
+    {
+      "name": "Makima",
+      "title": "Control Devil",
+      "rank": "Public Safety Executive",
+      "dangerLevel": 10,
+      "loreBio": "A charismatic Public Safety leader who cultivates loyalty and dependency while secretly pursuing total social redesign through Chainsaw Man.",
+      "systemBio": "Central command-and-control node that acquires obedience by dominance, then deploys humans/devils as modular proxy infrastructure.",
+      "gradientFrom": "zinc-900",
+      "gradientTo": "rose-900",
+      "accentColor": "rose-400",
+      "icon": "Crown",
+      "signatureMoment": "Systematically engineers Denji's emotional collapse to surface Chainsaw Man for capture and strategic use.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/489561.jpg?s=6593bd49704ffb415d3fd9d40e5dc183",
+      "malId": 170734
+    },
+    {
+      "name": "Aki Hayakawa",
+      "title": "Contract Hunter",
+      "rank": "Public Safety Field Lead",
+      "dangerLevel": 8,
+      "loreBio": "A disciplined hunter driven by vengeance against the Gun Devil, sacrificing lifespan and certainty through successive contracts.",
+      "systemBio": "High-competence operator whose contractual load increases combat output while accelerating terminal risk and emotional fragility.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Target",
+      "signatureMoment": "Uses Future Devil foresight windows and Curse Devil conditions in repeated high-cost engagements.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/395003.jpg?s=d0d59f9d3f6d5aa89534c8b16433cf74",
+      "malId": 170735
+    },
+    {
+      "name": "Power",
+      "title": "Blood Fiend",
+      "rank": "Public Safety Irregular",
+      "dangerLevel": 7,
+      "loreBio": "A chaotic fiend who starts selfish and feral but forms genuine attachment to Denji and Aki inside their unstable household unit.",
+      "systemBio": "High-variance ally node with strong burst combat and low protocol discipline; trust links dramatically improve reliability.",
+      "gradientFrom": "red-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Flame",
+      "signatureMoment": "Returns in a critical moment to extract Denji from Makima's kill zone and restore his will to act.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/494969.jpg?s=02622d6ffa487b8d6d7503af4792a106",
+      "malId": 170733
+    },
+    {
+      "name": "Himeno",
+      "title": "Ghost Contract Specialist",
+      "rank": "Public Safety Senior Hunter",
+      "dangerLevel": 6,
+      "loreBio": "A veteran hunter who carries accumulated grief from partner deaths and mentors Aki through cynical survival ethics.",
+      "systemBio": "Experienced stabilizer node that trades body resources for tactical intervention, then becomes a one-time sacrifice event.",
+      "gradientFrom": "emerald-900",
+      "gradientTo": "teal-900",
+      "accentColor": "emerald-400",
+      "icon": "Eye",
+      "signatureMoment": "Offers her entire body to Ghost Devil in a final attempt to neutralize overwhelming opposition.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/386392.jpg?s=587b426444b95d23293c9b8f1aa38450",
+      "malId": 170765
+    },
+    {
+      "name": "Kobeni Higashiyama",
+      "title": "Panic-Survival Operator",
+      "rank": "Public Safety Junior Hunter",
+      "dangerLevel": 5,
+      "loreBio": "A terrified recruit forced into devil hunting by economic pressure who repeatedly survives impossible engagements through instinct.",
+      "systemBio": "Low-confidence but high-reactivity node; stress spikes trigger short-duration performance surges that preserve team continuity.",
+      "gradientFrom": "gray-900",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Heart",
+      "signatureMoment": "In the Eternity Devil incident, fear-driven reflexes let her survive and contribute to team extraction despite collapse.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/467961.jpg?s=62b404edd1edcea21a0fb16f230f3916",
+      "malId": 174749
+    },
+    {
+      "name": "Kishibe",
+      "title": "Veteran Enforcer",
+      "rank": "Special Division Trainer",
+      "dangerLevel": 8,
+      "loreBio": "Public Safety's hardest veteran who trains Denji and Power through lethal repetition and openly distrusts Makima's long game.",
+      "systemBio": "Legacy human node with deep institutional memory, used as resilience layer when central leadership is compromised.",
+      "gradientFrom": "neutral-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Shield",
+      "signatureMoment": "Imposes kill-or-be-killed conditioning on Denji and Power to force adaptive combat behavior.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/488553.jpg?s=90bf9b9117281aaead8dd8ac08cf388f",
+      "malId": 174748
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Denji",
+      "target": "Pochita",
+      "type": "dependent",
+      "weight": 10,
+      "loreDesc": "Denji's life literally continues through his contract with Pochita, making companionship the anchor of survival.",
+      "systemDesc": "Core co-process dependency: Denji runtime fails without Pochita heart module."
+    },
+    {
+      "source": "Makima",
+      "target": "Denji",
+      "type": "dependent",
+      "weight": 9,
+      "loreDesc": "Makima cultivates Denji's affection and need for belonging to keep him obedient and emotionally capturable.",
+      "systemDesc": "Incentive-capture pipeline where controlled rewards maintain asset compliance."
+    },
+    {
+      "source": "Denji",
+      "target": "Makima",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Denji initially interprets Makima as salvation and attaches to her authority as a path to normal life.",
+      "systemDesc": "Asymmetric trust edge that grants Makima high write access over Denji's decision logic."
+    },
+    {
+      "source": "Aki Hayakawa",
+      "target": "Denji",
+      "type": "mentor",
+      "weight": 8,
+      "loreDesc": "Aki moves from hostility to guardianship, becoming Denji's first stable household authority.",
+      "systemDesc": "Behavior-shaping supervision edge that increases Denji's operational discipline."
+    },
+    {
+      "source": "Power",
+      "target": "Denji",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Their chaotic partnership evolves into genuine family-level trust under constant trauma.",
+      "systemDesc": "Mutual support edge that reduces collapse probability during high-stress engagements."
+    },
+    {
+      "source": "Himeno",
+      "target": "Aki Hayakawa",
+      "type": "mentor",
+      "weight": 7,
+      "loreDesc": "Himeno mentors Aki with pragmatic survival doctrine forged by repeated partner loss.",
+      "systemDesc": "Experience-transfer link that improves Aki's tactical judgment under casualty pressure."
+    },
+    {
+      "source": "Kishibe",
+      "target": "Denji",
+      "type": "mentor",
+      "weight": 7,
+      "loreDesc": "Kishibe's brutal training strips Denji's bad habits and forces strategic adaptation.",
+      "systemDesc": "Adversarial training loop that upgrades Denji's reaction model and durability."
+    },
+    {
+      "source": "Kishibe",
+      "target": "Power",
+      "type": "mentor",
+      "weight": 7,
+      "loreDesc": "He repeatedly hunts Power to convert panic into combat reflex and teamwork compliance.",
+      "systemDesc": "Iterative stress-conditioning edge that reduces friendly-side unpredictability."
+    },
+    {
+      "source": "Makima",
+      "target": "Power",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Power's attachment to Denji makes her a target in Makima's plan to isolate and break him.",
+      "systemDesc": "Makima removes high-empathy support nodes to collapse Denji's psychological resilience graph."
+    },
+    {
+      "source": "Makima",
+      "target": "Pochita",
+      "type": "counter",
+      "weight": 10,
+      "loreDesc": "Makima seeks to dominate Chainsaw Man so she can use erasure power to redesign history and society.",
+      "systemDesc": "Hostile capture attempt on ontology-delete primitive for long-term governance reprogramming."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Tokyo Public Safety Division",
+      "role": "systemic",
+      "loreDesc": "State devil-hunting institution balancing public order, secrecy, and extremely expendable human labor.",
+      "systemDesc": "Centralized risk-management bureaucracy that converts contracts into deployable coercive capacity."
+    },
+    {
+      "name": "Control Devil Command Sphere",
+      "role": "antagonist",
+      "loreDesc": "Makima's hidden influence network of humans, devils, and hybrids bound through domination.",
+      "systemDesc": "Shadow governance layer with high network centrality and strong behavioral override permissions."
+    },
+    {
+      "name": "Civilian Fear Population",
+      "role": "neutral",
+      "loreDesc": "Ordinary people whose terror fuels devils and unintentionally dictates escalation levels.",
+      "systemDesc": "Mass-input emotional substrate that determines baseline power allocation across all devil classes."
+    },
+    {
+      "name": "Hybrid and Fiend Irregulars",
+      "role": "chaotic",
+      "loreDesc": "Unstable actors who can swing outcomes through sudden violence, betrayal, or unexpected loyalty.",
+      "systemDesc": "High-variance nodes that inject nonlinear shocks into otherwise predictable command structures."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Fear Determines Devil Output",
+      "subtitle": "Emotion Is Ammunition",
+      "loreConsequence": "When collective fear spikes, the related Devil becomes dramatically harder to kill and more destructive.",
+      "systemEquivalent": "Public sentiment directly modifies enemy stat ceilings and threat bandwidth in real time.",
+      "severity": "fatal",
+      "loreSubtitle": "Terror Feeds Monsters",
+      "systemSubtitle": "Dynamic Threat Scaling"
+    },
+    {
+      "name": "Contracts Demand Explicit Cost",
+      "subtitle": "Power Is Never Free",
+      "loreConsequence": "Hunters gain survival tools only by surrendering body parts, lifespan, or other irreversible personal assets.",
+      "systemEquivalent": "Ability access requires immediate debt settlement with no rollback clause.",
+      "severity": "high",
+      "loreSubtitle": "Blood Price Clauses",
+      "systemSubtitle": "Non-Reversible Payment Logic"
+    },
+    {
+      "name": "Devils Reincarnate Between Realms",
+      "subtitle": "Suppression, Not Eradication",
+      "loreConsequence": "Killing a Devil on Earth only sends it back to Hell, ensuring recurring future threats.",
+      "systemEquivalent": "Threat entities persist via cross-environment respawn loop with memory reset.",
+      "severity": "high",
+      "loreSubtitle": "Death Is Transit",
+      "systemSubtitle": "Bi-Domain Respawn Cycle"
+    },
+    {
+      "name": "Chainsaw Consumption Can Erase Concepts",
+      "subtitle": "Names Can Be Deleted",
+      "loreConsequence": "If Chainsaw Man consumes a Devil, that concept can disappear from collective memory and reality itself.",
+      "systemEquivalent": "A privileged actor can execute schema-level deletes that alter global semantic state.",
+      "severity": "fatal",
+      "loreSubtitle": "History Can Be Cut Out",
+      "systemSubtitle": "Ontology Rewrite Primitive"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Gun Devil terror surge",
+      "defender": "State contracts + coordinated squads",
+      "mechanic": "Public Safety stacks specialist contracts and distributed teams to absorb burst devastation and secure fragments.",
+      "loreDesc": "Human institutions respond to apocalypse-level fear spikes with sacrificial cooperation.",
+      "systemDesc": "Distributed mitigation strategy against high-throughput single-point aggressor."
+    },
+    {
+      "attacker": "Makima control leverage",
+      "defender": "Kishibe's parallel planning",
+      "mechanic": "Veteran operators reduce central-point capture risk by running covert counter-networks outside official command.",
+      "loreDesc": "Distrust becomes survival when leadership itself may be the threat.",
+      "systemDesc": "Out-of-band governance hedge against compromised administrative core."
+    },
+    {
+      "attacker": "Devil contract debt spiral",
+      "defender": "Team role specialization",
+      "mechanic": "Units rotate high-cost users and assign niche roles so no single hunter burns out immediately.",
+      "loreDesc": "Hunters survive longer when burdens are shared instead of heroically centralized.",
+      "systemDesc": "Load-balancing reduces premature node failure from cumulative payment drains."
+    },
+    {
+      "attacker": "Psychological isolation of Denji",
+      "defender": "Aki/Power household bond",
+      "mechanic": "Emotional attachment restores agency and interrupts manipulation attempts that rely on loneliness.",
+      "loreDesc": "Found family becomes a weapon against emotional exploitation.",
+      "systemDesc": "Redundant trust links harden key asset against control-channel hijacking."
+    },
+    {
+      "attacker": "Hell-class anomaly incursions",
+      "defender": "Hybrid regeneration tempo",
+      "mechanic": "Hybrid physiology allows repeated re-entry into lethal zones where normal hunters would terminate instantly.",
+      "loreDesc": "Only monsters can stand long enough to fight the worst monsters.",
+      "systemDesc": "Rapid self-repair grants sustained uptime in catastrophic engagement environments."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Pochita's Erasure Exception",
+      "ruleViolated": "Devils should persist through reincarnation",
+      "loreDesc": "Chainsaw Man can remove a Devil's concept itself, bypassing the normal cycle of death and return.",
+      "systemDesc": "Violates persistence invariant by deleting entity class from shared world schema."
+    },
+    {
+      "name": "Makima's Multi-Layer Proxy Control",
+      "ruleViolated": "Command chains should remain institutionally bounded",
+      "loreDesc": "Makima extends control across humans, devils, and political structures beyond normal Public Safety limits.",
+      "systemDesc": "Unauthorized superuser behavior across nominally separate governance domains."
+    },
+    {
+      "name": "Hybrid Identity Persistence",
+      "ruleViolated": "Human/Devil boundaries should be singular",
+      "loreDesc": "Weapon hybrids survive lethal damage while retaining core identity, unlike standard fiend possession patterns.",
+      "systemDesc": "Sustained dual-state architecture that preserves human agency alongside devil kernel functions."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Gun Devil Global Massacre",
+      "trigger": "Planet-scale terror event",
+      "consequence": "Fear baseline rises and legitimizes expansion of state devil-hunting infrastructure.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The massacre traumatizes the world and sets the tone for permanent emergency governance.",
+      "systemDesc": "Exogenous shock event that permanently increases threat coefficients and security spend."
+    },
+    {
+      "name": "Denji-Pochita Contract Formation",
+      "trigger": "Mutual survival pact after betrayal",
+      "consequence": "Creates the Chainsaw Hybrid node that multiple factions attempt to capture or erase.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "Pochita gives Denji a second life under one condition: keep living his dreams.",
+      "systemDesc": "Bootstraps high-value anomaly process by merging human agency with erasure-capable devil core."
+    },
+    {
+      "name": "Eternity Devil Containment Crisis",
+      "trigger": "Team trapped in recursive hotel space",
+      "consequence": "Stress fractures expose unit weaknesses, while Denji proves endurance-based kill viability.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "The squad's panic and infighting clarify who can actually function under prolonged fear pressure.",
+      "systemDesc": "Closed-environment attrition test reveals reliability distribution of core field nodes."
+    },
+    {
+      "name": "Makima's Denji Break Sequence",
+      "trigger": "Targeted destruction of Denji's support bonds",
+      "consequence": "Denji's agency collapses, enabling temporary extraction of full Chainsaw Man form.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "Makima dismantles Denji's reasons to live so she can separate weapon from person.",
+      "systemDesc": "Psychological kill-chain disables operator autonomy to unlock controllable anomaly state."
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "Why are Devils so hard to permanently defeat in Chainsaw Man?",
+      "answer": "Because normal kills only move Devils between Earth and Hell; the threat loop persists unless an anomaly like Chainsaw erasure intervenes.",
+      "tabIndex": 3,
+      "tabLabel": "Core Laws",
+      "sectionId": "core-laws-heading"
+    },
+    {
+      "question": "What makes Makima more dangerous than a typical strong Devil?",
+      "answer": "Her danger is network-level: she captures agency through control edges and turns entire institutions into programmable proxies.",
+      "tabIndex": 1,
+      "tabLabel": "Entity Database",
+      "sectionId": "entity-database-heading"
+    },
+    {
+      "question": "How do contracts shape the power economy for human hunters?",
+      "answer": "Contracts convert immediate power into long-term debt, forcing hunters into a constant tradeoff between short-term survival and future viability.",
+      "tabIndex": 0,
+      "tabLabel": "Power Engine",
+      "sectionId": "power-system-heading"
+    },
+    {
+      "question": "Why does Denji's household dynamic matter to system stability?",
+      "answer": "Aki and Power create emotional redundancy that buffers Denji against manipulation, so personal bonds become strategic infrastructure.",
+      "tabIndex": 2,
+      "tabLabel": "Factions",
+      "sectionId": "factions-heading"
+    },
+    {
+      "question": "What is concept erasure in practical system terms?",
+      "answer": "It is a schema-delete operation: removing a Devil can remove the named concept from shared memory, altering future state constraints.",
+      "tabIndex": 3,
+      "tabLabel": "Core Laws",
+      "sectionId": "core-laws-heading"
+    }
+  ],
+  "animeImageUrl": "https://myanimelist.net/images/anime/1806/126216l.jpg"
+}
