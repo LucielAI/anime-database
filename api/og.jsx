@@ -28,7 +28,7 @@ export default async function handler(request) {
     const typeLabel = `${getClassificationLabel(preview.visualizationHint).toUpperCase()} ARCHIVE`
     const themeColor = preview.themeColors?.primary || '#22d3ee'
 
-    const fontData = await fetch(new URL('./assets/RobotoMono-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer())
+    const fontData = new ArrayBuffer(0); // placeholder
 
     return new ImageResponse(
       (
@@ -75,13 +75,7 @@ export default async function handler(request) {
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'Roboto Mono',
-            data: fontData,
-            style: 'normal',
-          },
-        ],
+        fonts: [],
       }
     )
   } catch (error) {
