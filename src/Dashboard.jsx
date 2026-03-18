@@ -297,6 +297,34 @@ export default function Dashboard({ data }) {
       {/* 5-Bullet System Summary */}
       <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
+      {/* Watch the Series - Entry Point 1 */}
+      {data?.id === 'sololeveling' && (
+        <div className="mt-6 px-6">
+          <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 pt-1">
+                <svg className="w-4 h-4 text-white/60" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-[10px] font-bold tracking-[0.15em] uppercase text-white/80 mb-1">Watch the Series</h4>
+                <p className="text-[11px] text-gray-400">View full series availability on Amazon (English subtitles included)</p>
+                <a
+                  className="mt-2 inline-block text-[10px] font-bold tracking-[0.15em] uppercase text-cyan-300 hover:text-cyan-200 underline"
+                  href="https://www.amazon.com/dp/B0G3PC5LX2/ref=cm_sw_r_as_gl_apa_gl_i_4B03CWS4T2XWERHGFR58?linkCode=ml1&tag=hashiai-20&linkId=2377a03ae811e823cf9ba44a6d6df18a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackAffiliateClick('sololeveling-amazon', 'sololeveling', 'amazon')}
+                >
+                  View Available Now →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl mx-auto px-6 mt-3 mb-4 share-frame-hide">
         <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-3 flex flex-wrap items-center gap-3">
           <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-2.5 py-1 text-[9px] font-bold tracking-[0.2em] uppercase text-cyan-200">
@@ -315,12 +343,16 @@ export default function Dashboard({ data }) {
       {/* Amazon Affiliate CTA (Solo Leveling only) */}
       {data?.id === 'sololeveling' && (
         <div className="max-w-6xl mx-auto px-6 mt-4 mb-6 share-frame-hide">
-          <div className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm p-4 flex flex-wrap items-center gap-4">
+          <div className="rounded-lg border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-5 flex flex-wrap items-center gap-4 md:gap-6">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/5 border border-white/10 flex-shrink-0">
+              <svg className="w-8 h-8 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1z"/>
+              </svg>
+            </div>
             <div className="flex-1 min-w-[200px]">
-              <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-white mb-1">Support the Archive</h3>
+              <h3 className="text-sm font-bold tracking-[0.15em] uppercase text-white mb-1">Own the Series</h3>
               <p className="text-[11px] text-gray-300 leading-relaxed">
-                Get the official Blu‑ray via our affiliate link. Every purchase helps fund Anime Archive.<br/>
-                <span className="text-[9px] text-gray-500">We earn a commission at no extra cost to you.</span>
+                Get the official Solo Leveling Blu‑ray – complete series, all 25 episodes, English subtitles
               </p>
             </div>
             <a
@@ -328,15 +360,11 @@ export default function Dashboard({ data }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackAffiliateClick('sololeveling-amazon', 'sololeveling', 'amazon')}
-              className="px-4 py-2.5 min-h-[44px] rounded-full border bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.18em] uppercase text-white font-bold transition-all duration-300 inline-flex items-center gap-2"
-              style={{
-                borderColor: `${theme.primary}60`,
-                boxShadow: `0 0 12px ${theme.primary}20`,
-              }}
+              className="px-5 py-3 min-h-[52px] rounded-full bg-white/10 hover:bg-white/20 text-[10px] tracking-[0.2em] uppercase text-white font-bold border border-white/30 hover:border-white/50 transition-all duration-300 inline-flex items-center gap-2"
             >
-              <span>Buy Blu‑ray on Amazon</span>
+              View on Amazon
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1z"/>
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
               </svg>
             </a>
           </div>
