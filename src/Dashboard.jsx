@@ -470,19 +470,6 @@ export default function Dashboard({ data }) {
               <ExternalLink className="w-3 h-3" />
             </a>
           )}
-          {data?.id === 'aot' && (
-            <a
-              href="https://www.crunchyroll.com/attack-on-titan?ref=animearchive"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-orange-500/30 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase transition-all duration-300"
-              style={{ color: theme.primary }}
-              onClick={() => trackAffiliateClick('crunchyroll-aot', 'aot', 'crunchyroll')}
-            >
-              WATCH ON CRUNCHYROLL
-              <ExternalLink className="w-3 h-3" />
-            </a>
-          )}
           <a
             href="https://www.tiktok.com/@hashi.ai"
             target="_blank"
