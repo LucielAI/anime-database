@@ -119,6 +119,7 @@ function normalizePreview(id) {
   return UNIVERSE_MAP[normalizedId] || FALLBACK
 }
 
+
 function generateSVG(title, subtitle, typeLabel, themeColor) {
   const width = 1200
   const height = 630
