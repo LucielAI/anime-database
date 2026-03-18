@@ -41,6 +41,16 @@ const DEFAULT_THEME = {
 
 const SUPPORT_URL = 'https://buymeacoffee.com/hashiai'
 
+function trackAffiliateClick(label) {
+  if (typeof window !== 'undefined' && window.goatcounter) {
+    window.goatcounter.count({
+      path: `affiliate-${label}`,
+      title: `Affiliate Click: ${label}`,
+      event: true,
+    })
+  }
+}
+
 function buildUniverseIntroduction(data) {
   if (!data) return ''
   if (typeof data.introductionSummary === 'string' && data.introductionSummary.trim()) {
@@ -421,6 +431,19 @@ export default function Dashboard({ data }) {
               style={{ color: theme.primary }}
             >
               VIEW ON MAL
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          )}
+          {data?.id === 'aot' && (
+            <a
+              href="https://www.crunchyroll.com/attack-on-titan?ref=animearchive"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-orange-500/30 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase transition-all duration-300"
+              style={{ color: theme.primary }}
+              onClick={() => trackAffiliateClick('crunchyroll-aot')}
+            >
+              WATCH ON CRUNCHYROLL
               <ExternalLink className="w-3 h-3" />
             </a>
           )}

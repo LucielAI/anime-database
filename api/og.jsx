@@ -20,6 +20,7 @@ function normalizePreview(id) {
 
 export default async function handler(request) {
   try {
+    console.log('OG endpoint called', request.url)
     const { searchParams } = new URL(request.url)
     const preview = normalizePreview(searchParams.get('id'))
 
@@ -28,7 +29,7 @@ export default async function handler(request) {
     const typeLabel = `${getClassificationLabel(preview.visualizationHint).toUpperCase()} ARCHIVE`
     const themeColor = preview.themeColors?.primary || '#22d3ee'
 
-    const fontData = new ArrayBuffer(0); // placeholder
+    const fontData = await fetch(new URL('./assets/RobotoMono-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer())
 
     return new ImageResponse(
       (
@@ -75,7 +76,13 @@ export default async function handler(request) {
       {
         width: 1200,
         height: 630,
-        fonts: [],
+        fonts: [
+          {
+            name: 'Roboto Mono',
+            data: fontData,
+            style: 'normal',
+          },
+        ],
       }
     )
   } catch (error) {
