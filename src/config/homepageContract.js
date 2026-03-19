@@ -16,7 +16,7 @@ const SYSTEM_STRUCTURE_TAXONOMY = [
   {
     key: 'relational-systems',
     label: 'Relational Systems',
-    description: 'Control webs, alliances, betrayals, and dependency-driven architectures.',
+    description: 'Power through alliances, betrayal, and influence networks.',
     matches: (entry, metadata) => ['node-graph', 'affinity-matrix'].includes(entry.visualizationHint)
       || metadata.classification === 'network'
       || metadata.systemProfile?.powerStructure === 'control',
@@ -24,7 +24,7 @@ const SYSTEM_STRUCTURE_TAXONOMY = [
   {
     key: 'counterplay-systems',
     label: 'Counterplay Systems',
-    description: 'Matchup engines where win conditions depend on explicit counters and execution windows.',
+    description: 'Win by counters, timing windows, and matchup reads.',
     matches: (entry, metadata) => entry.visualizationHint === 'counter-tree'
       || metadata.classification === 'combat'
       || metadata.clusterTags?.includes('combat-systems'),
@@ -32,26 +32,26 @@ const SYSTEM_STRUCTURE_TAXONOMY = [
   {
     key: 'timeline-systems',
     label: 'Timeline Systems',
-    description: 'Deterministic and branching universes governed by delayed causality.',
+    description: 'Causal chains, time pressure, and delayed consequences.',
     matches: (entry, metadata) => entry.visualizationHint === 'timeline' || metadata.clusterTags?.includes('causal-systems'),
   },
   {
     key: 'control-systems',
     label: 'Control Systems',
-    description: 'Institutional command chains, surveillance pressure, and authority routing.',
+    description: 'Command systems driven by institutions, policy, and obedience.',
     matches: (_entry, metadata) => metadata.systemProfile?.powerStructure === 'control' || metadata.clusterTags?.includes('hierarchy-heavy'),
   },
   {
     key: 'closed-loop-systems',
     label: 'Closed-Loop Systems',
-    description: 'Self-reinforcing loops where constraints feed back into future state changes.',
+    description: 'Self-reinforcing loops where today’s rule shapes tomorrow’s outcome.',
     matches: (_entry, metadata) => ['causal', 'inheritance'].includes(metadata.systemProfile?.powerStructure)
       || metadata.clusterTags?.includes('causal-systems'),
   },
   {
     key: 'power-economy-systems',
     label: 'Power Economy Systems',
-    description: 'Resource-conversion systems where contracts, scarcity, and exchange costs govern outcomes.',
+    description: 'Resource systems where power is traded, spent, and priced.',
     matches: (_entry, metadata) => ['exchange', 'matchup', 'growth-loop', 'resource', 'suppression', 'modular', 'specialization'].includes(metadata.systemProfile?.powerStructure)
       || metadata.clusterTags?.includes('combat-systems'),
   },
