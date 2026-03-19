@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
+import { ExternalLink, Camera, X, Network, HeartHandshake, ArrowRight, Compass } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
 import SystemSummary from './components/SystemSummary'
@@ -72,6 +72,15 @@ function buildUniverseIntroduction(data) {
   return `${data.anime} is presented here as a structured universe where abilities, institutions, and consequences shape every major outcome. This archive profile maps ${powerCount} core mechanics, ${rulesCount} governing constraints, and ${factionCount} major power blocs so fans can quickly understand how the world works. ${architectureLine} Relationship and causality layers (${relationshipCount} mapped edges) make this page useful as a standalone reference for comparative universe analysis.`
 }
 
+function getFirstSentence(text) {
+  if (typeof text !== 'string') return ''
+  const normalized = text.trim()
+  if (!normalized) return ''
+
+  const firstSentenceMatch = normalized.match(/^.*?[.!?](?:\s|$)/)
+  return (firstSentenceMatch ? firstSentenceMatch[0] : normalized).trim()
+}
+
 export default function Dashboard({ data }) {
   const [activeTab, setActiveTab] = useState(0)
   const [isSystemMode, setIsSystemMode] = useState(false)
@@ -91,8 +100,10 @@ export default function Dashboard({ data }) {
   const classLabel = getClassificationLabel(data?.visualizationHint)
   const shareFrameBullets = useMemo(() => deriveBullets(data).slice(0, 3), [data])
   const universeIntro = useMemo(() => buildUniverseIntroduction(data), [data])
+  const quickIntro = useMemo(() => getFirstSentence(universeIntro), [universeIntro])
   const headerFlavor = data?.headerFlavor
   const revealOverlay = getRevealOverlay(data?.revealOverlay)
+  const lensLabel = (data?.visualizationHint || '').replace(/-/g, ' ')
 
   const handleJumpToSection = (tabIndex, sectionId) => {
     const normalizedTabIndex = Number.isInteger(tabIndex)
@@ -210,7 +221,7 @@ export default function Dashboard({ data }) {
 
       {/* Header */}
       <header
-        className="pt-14 pb-6 px-6 relative"
+        className="pt-10 pb-4 px-6 relative"
         style={{ background: `radial-gradient(ellipse at center, ${theme.heroGradient} 0%, transparent 100%)` }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-[#050508]/20 to-transparent pointer-events-none" />
@@ -270,7 +281,122 @@ export default function Dashboard({ data }) {
         </div>
       </header>
 
-      <section className="max-w-6xl mx-auto px-6 mt-8 mb-8 share-frame-hide" aria-labelledby="universe-introduction-heading">
+      <section className="max-w-6xl mx-auto px-6 mt-4 mb-4 share-frame-hide" aria-labelledby="first-viewport-heading">
+        <h2 id="first-viewport-heading" className="sr-only">Start here and system lens overview</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-3">
+          <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 md:p-5">
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-2.5 py-1 text-[9px] font-bold tracking-[0.2em] uppercase text-cyan-200">
+                Start Here
+              </span>
+              <span className="inline-flex items-center gap-1 text-[9px] text-white/50 uppercase tracking-[0.18em]">
+                <Compass className="w-3 h-3" />
+                First pass
+              </span>
+            </div>
+            <p className="text-sm md:text-base text-white leading-relaxed">{bestEntry.label}</p>
+            <p className="mt-2 text-[11px] text-gray-400 leading-relaxed max-w-2xl">
+              {quickIntro}
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <button
+                onClick={() => setActiveTab(bestEntry.tabIndex)}
+                className="inline-flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full border border-cyan-300/35 bg-cyan-400/10 hover:bg-cyan-400/15 text-[10px] tracking-[0.18em] uppercase text-cyan-100"
+              >
+                Open {TABS[bestEntry.tabIndex]}
+                <ArrowRight className="w-3 h-3" />
+              </button>
+              <button
+                onClick={isRevealing ? cancelReveal : startReveal}
+                className={`inline-flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full border text-[10px] tracking-[0.18em] uppercase transition-all ${
+                  isRevealing
+                    ? 'bg-red-500/10 text-red-300 border-red-500/30 hover:bg-red-500/20'
+                    : 'bg-white/5 text-gray-200 border-white/15 hover:bg-white/10'
+                }`}
+              >
+                {isRevealing ? 'Cancel Sequence' : 'Reveal the System'}
+              </button>
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 md:p-5">
+            <p className="text-[10px] font-bold tracking-[0.22em] uppercase text-white/50 mb-1">
+              Why this {lensLabel} lens?
+            </p>
+            <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
+              {data?.visualizationReason || data?.thesis}
+            </p>
+            <div className="mt-3 flex items-center gap-2 text-[10px] text-gray-500 uppercase tracking-[0.18em]">
+              <span>{data?.powerSystem?.length || 0} mechanics</span>
+              <span>•</span>
+              <span>{data?.relationships?.length || 0} links</span>
+              <span>•</span>
+              <span>{data?.rules?.length || 0} laws</span>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <ShareButton
+                title={animeName}
+                systemLabel={classLabel}
+                url={typeof window !== 'undefined' ? window.location.href : ''}
+                theme={theme}
+              />
+              <button
+                onClick={toggleShareFrame}
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer min-h-[44px]"
+                style={{ color: theme.primary }}
+              >
+                <Camera className="w-3.5 h-3.5" />
+                Share Frame
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Tabs */}
+      <nav className="max-w-6xl mx-auto px-6 mb-2 mt-2 flex overflow-x-auto relative flex-nowrap border-b border-white/5 scrollbar-hide share-frame-hide">
+        {TABS.map((tab, idx) => {
+          const isActive = activeTab === idx
+          const activeColor = isSystemMode ? theme.secondary : theme.primary
+          return (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(idx)}
+              className={`relative px-4 py-3.5 min-h-[44px] md:px-6 md:py-4 text-[10px] md:text-xs font-bold tracking-[0.2em] whitespace-nowrap transition-all duration-300 cursor-pointer ${isActive ? '' : 'hover:text-gray-300'}`}
+              style={{
+                color: isActive ? activeColor : '#4b5563',
+                textShadow: isActive ? `0 0 12px ${activeColor}60` : 'none'
+              }}
+            >
+              <span className="relative z-10 inline-flex items-center gap-1.5">{tab}
+                {idx === bestEntry.tabIndex && (
+                  <span className="inline-flex items-center justify-center min-w-4 h-4 text-[8px] px-1.5 py-0.5 rounded border border-cyan-300/20 bg-cyan-400/10 text-cyan-200 tracking-[0.12em]">
+                    <span className="sm:hidden" aria-hidden="true">★</span>
+                    <span className="hidden sm:inline">START</span>
+                    <span className="sr-only">Suggested starting tab</span>
+                  </span>
+                )}
+              </span>
+              {isActive && (
+                <span
+                  className="absolute bottom-0 left-2 right-2 h-[2px] rounded-full transition-all duration-300"
+                  style={{
+                    backgroundColor: activeColor,
+                    boxShadow: `0 0 8px ${isSystemMode ? theme.modeGlow : theme.glow}`
+                  }}
+                />
+              )}
+            </button>
+          )
+        })}
+      </nav>
+
+      {/* Tab Description */}
+      <div className="max-w-6xl mx-auto px-6 mb-6 share-frame-hide">
+        <p className="text-[10px] md:text-xs text-gray-600 tracking-wider">{TAB_DESCRIPTIONS[activeTab]}{activeTab === bestEntry.tabIndex ? ' · Suggested first view.' : ''}</p>
+      </div>
+
+      <section className="max-w-6xl mx-auto px-6 mt-2 mb-8 share-frame-hide" aria-labelledby="universe-introduction-heading">
         <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 md:p-8">
           <h2 id="universe-introduction-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-3">
             Universe Introduction
@@ -296,22 +422,6 @@ export default function Dashboard({ data }) {
 
       {/* 5-Bullet System Summary */}
       <SystemSummary data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
-
-      {/* Start Here */}
-      <div className="max-w-6xl mx-auto px-6 mt-3 mb-4 share-frame-hide">
-        <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-3 flex flex-wrap items-center gap-3">
-          <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-2.5 py-1 text-[9px] font-bold tracking-[0.2em] uppercase text-cyan-200">
-            Start Here
-          </span>
-          <p className="text-[11px] text-gray-300 leading-relaxed grow min-w-[220px]">{bestEntry.label}</p>
-          <button
-            onClick={() => setActiveTab(bestEntry.tabIndex)}
-            className="px-3 py-1.5 min-h-[44px] rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.18em] uppercase text-gray-200"
-          >
-            Open {TABS[bestEntry.tabIndex]}
-          </button>
-        </div>
-      </div>
 
       {/* Mobile Sticky Footer - Solo Leveling ONLY (always visible at bottom) */}
       {data?.id === 'sololeveling' && (
@@ -359,93 +469,9 @@ export default function Dashboard({ data }) {
       {/* Why This Lens? */}
       <WhyThisRenderer data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
 
-      {/* Action Buttons */}
-      <div className="max-w-6xl mx-auto px-6 mb-4 flex flex-wrap justify-center md:justify-end gap-3 relative z-50 share-frame-hide">
-        <ShareButton
-          title={animeName}
-          systemLabel={classLabel}
-          url={typeof window !== 'undefined' ? window.location.href : ''}
-          theme={theme}
-        />
-        <button
-          onClick={toggleShareFrame}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer min-h-[44px]"
-          style={{ color: theme.primary }}
-        >
-          <Camera className="w-3.5 h-3.5" />
-          SHARE FRAME
-        </button>
-        <button
-          onClick={isRevealing ? cancelReveal : startReveal}
-          className={`group flex items-center gap-3 px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.2em] transition-all duration-500 border backdrop-blur-md uppercase cursor-pointer min-h-[44px] ${
-            isRevealing
-              ? 'bg-red-500/10 text-red-400 border-red-500/30 hover:bg-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.2)]'
-              : 'bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white hover:border-cyan-400/50'
-          }`}
-          style={{
-            boxShadow: !isRevealing ? `0 0 10px ${isSystemMode ? theme.secondary : theme.primary}20` : undefined
-          }}
-        >
-          {isRevealing ? (
-            <>
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-              CANCEL SEQUENCE
-            </>
-          ) : (
-            <>
-              <span className="w-0 overflow-hidden group-hover:w-auto transition-all duration-300">▶</span>
-              REVEAL THE SYSTEM
-            </>
-          )}
-        </button>
-      </div>
-
       {/* AI Insight Panel */}
       <div className="share-frame-hide">
         <AIInsightPanel aiInsights={data?.aiInsights} theme={theme} isSystemMode={isSystemMode} revealStep={revealStep} isRevealing={isRevealing} />
-      </div>
-
-      {/* Navigation Tabs */}
-      <nav className="max-w-6xl mx-auto px-6 mb-3 mt-4 flex overflow-x-auto relative flex-nowrap border-b border-white/5 scrollbar-hide share-frame-hide">
-        {TABS.map((tab, idx) => {
-          const isActive = activeTab === idx
-          const activeColor = isSystemMode ? theme.secondary : theme.primary
-          return (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(idx)}
-              className={`relative px-4 py-3.5 min-h-[44px] md:px-6 md:py-4 text-[10px] md:text-xs font-bold tracking-[0.2em] whitespace-nowrap transition-all duration-300 cursor-pointer ${isActive ? '' : 'hover:text-gray-300'}`}
-              style={{
-                color: isActive ? activeColor : '#4b5563',
-                textShadow: isActive ? `0 0 12px ${activeColor}60` : 'none'
-              }}
-            >
-              <span className="relative z-10 inline-flex items-center gap-1.5">{tab}
-                {idx === bestEntry.tabIndex && (
-                  <span className="inline-flex items-center justify-center min-w-4 h-4 text-[8px] px-1.5 py-0.5 rounded border border-cyan-300/20 bg-cyan-400/10 text-cyan-200 tracking-[0.12em]">
-                    <span className="sm:hidden" aria-hidden="true">★</span>
-                    <span className="hidden sm:inline">START</span>
-                    <span className="sr-only">Suggested starting tab</span>
-                  </span>
-                )}
-              </span>
-              {isActive && (
-                <span
-                  className="absolute bottom-0 left-2 right-2 h-[2px] rounded-full transition-all duration-300"
-                  style={{
-                    backgroundColor: activeColor,
-                    boxShadow: `0 0 8px ${isSystemMode ? theme.modeGlow : theme.glow}`
-                  }}
-                />
-              )}
-            </button>
-          )
-        })}
-      </nav>
-
-      {/* Tab Description */}
-      <div className="max-w-6xl mx-auto px-6 mb-10 share-frame-hide">
-        <p className="text-[10px] md:text-xs text-gray-600 tracking-wider">{TAB_DESCRIPTIONS[activeTab]}{activeTab === bestEntry.tabIndex ? ' · Suggested first view.' : ''}</p>
       </div>
 
       {/* Main Content */}
