@@ -78,7 +78,9 @@ function getFirstSentence(text) {
   if (!normalized) return ''
 
   const firstSentenceMatch = normalized.match(/^.*?[.!?](?:\s|$)/)
-  return (firstSentenceMatch ? firstSentenceMatch[0] : normalized).trim()
+  const sentence = firstSentenceMatch ? firstSentenceMatch[0].trim() : normalized
+  if (!sentence) return ''
+  return sentence.length > 150 ? sentence.substring(0, 147) + '...' : sentence
 }
 
 export default function Dashboard({ data }) {
@@ -103,7 +105,9 @@ export default function Dashboard({ data }) {
   const quickIntro = useMemo(() => getFirstSentence(universeIntro), [universeIntro])
   const headerFlavor = data?.headerFlavor
   const revealOverlay = getRevealOverlay(data?.revealOverlay)
-  const lensLabel = (data?.visualizationHint || '').replace(/-/g, ' ')
+  const lensLabel = (typeof data?.visualizationHint === 'string' && data.visualizationHint 
+    ? data.visualizationHint.replace(/-/g, ' ') 
+    : 'Visualization')
 
   const handleJumpToSection = (tabIndex, sectionId) => {
     const normalizedTabIndex = Number.isInteger(tabIndex)
