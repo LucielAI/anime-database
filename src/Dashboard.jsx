@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react'
+import { useEffect, useState, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
 import Toggle from './components/Toggle'
@@ -78,6 +78,9 @@ export default function Dashboard({ data }) {
   const [isSystemMode, setIsSystemMode] = useState(false)
   const { isRevealing, revealStep } = useSystemReveal()
   const { isShareFrame, toggleShareFrame } = useShareFrame()
+  const heroRef = useRef(null)
+  const [isHeroVisible, setIsHeroVisible] = useState(true)
+  const [showMonetizationBar, setShowMonetizationBar] = useState(false)
 
   const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
   const relatedUniverses = useMemo(() => getRelatedUniverseSuggestions(UNIVERSE_CATALOG, data?.id, 3), [data?.id])
@@ -86,6 +89,30 @@ export default function Dashboard({ data }) {
   useEffect(() => {
     setActiveTab(bestEntry.tabIndex)
   }, [bestEntry.tabIndex, data?.id])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !heroRef.current) return undefined
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroVisible(entry.isIntersecting)
+      },
+      { threshold: 0.2 }
+    )
+
+    observer.observe(heroRef.current)
+    return () => observer.disconnect()
+  }, [data?.id])
+
+  useEffect(() => {
+    if (isHeroVisible) {
+      setShowMonetizationBar(false)
+      return undefined
+    }
+
+    const timeoutId = window.setTimeout(() => setShowMonetizationBar(true), 150)
+    return () => window.clearTimeout(timeoutId)
+  }, [isHeroVisible])
 
   const theme = data?.themeColors || DEFAULT_THEME
   const animeName = data?.anime || 'UNKNOWN ARCHIVE'
@@ -216,6 +243,7 @@ export default function Dashboard({ data }) {
 
       {/* Hero: first viewport reset */}
       <header
+        ref={heroRef}
         className="relative min-h-[100svh] px-6 pt-14 pb-12 flex items-center"
         style={{ background: `radial-gradient(ellipse at center, ${theme.heroGradient} 0%, transparent 100%)` }}
       >
@@ -305,15 +333,17 @@ export default function Dashboard({ data }) {
 
       {/* Mobile Sticky Footer - Solo Leveling ONLY (always visible at bottom) */}
       {data?.id === 'sololeveling' && (
-        <div className="fixed bottom-0 left-0 right-0 p-4 bg-black/90 backdrop-blur-xl border-t border-cyan-400/30 z-50 md:hidden">
+        <div className={`fixed bottom-[max(env(safe-area-inset-bottom),0px)] left-0 right-0 p-3 bg-black/88 backdrop-blur-xl border-t border-cyan-400/30 z-50 md:hidden transition-all duration-300 ${
+          showMonetizationBar ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}>
           <div className="max-w-6xl mx-auto flex items-center justify-between px-3">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1z"/>
               </svg>
               <div className="flex flex-col">
-                <span className="text-xs font-bold text-white">Solo Leveling Series</span>
-                <span className="text-[10px] text-gray-400">Complete • 25 eps • English subs</span>
+                <span className="text-[11px] font-bold text-white">Solo Leveling Series</span>
+                <span className="text-[9px] text-gray-400">Complete • 25 eps • English subs</span>
               </div>
             </div>
             <a
@@ -321,7 +351,7 @@ export default function Dashboard({ data }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackAffiliateClick('sololeveling-amazon', 'sololeveling', 'amazon')}
-              className="text-xs font-bold tracking-[0.2em] uppercase text-cyan-400 hover:text-cyan-300 py-2.5 px-4 bg-cyan-400/10 hover:bg-cyan-400/20 rounded-full transition-colors"
+              className="text-[11px] font-bold tracking-[0.18em] uppercase text-cyan-400 hover:text-cyan-300 py-2 px-3 bg-cyan-400/10 hover:bg-cyan-400/20 rounded-full transition-colors"
             >
               Buy Now
             </a>
