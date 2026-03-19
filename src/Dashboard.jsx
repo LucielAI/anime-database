@@ -76,7 +76,7 @@ function buildUniverseIntroduction(data) {
 export default function Dashboard({ data }) {
   const [activeTab, setActiveTab] = useState(0)
   const [isSystemMode, setIsSystemMode] = useState(false)
-  const { isRevealing, revealStep, startReveal, cancelReveal } = useSystemReveal()
+  const { isRevealing, revealStep } = useSystemReveal()
   const { isShareFrame, toggleShareFrame } = useShareFrame()
 
   const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
@@ -260,16 +260,6 @@ export default function Dashboard({ data }) {
                 style={{ borderColor: `${theme.primary}80`, color: '#020617', backgroundColor: theme.primary, boxShadow: `0 0 24px ${theme.glow}` }}
               >
                 Open System
-              </button>
-              <button
-                onClick={isRevealing ? cancelReveal : startReveal}
-                className={`px-5 py-3 min-h-[44px] rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border transition-all duration-400 ${
-                  isRevealing
-                    ? 'bg-red-500/10 text-red-300 border-red-400/30 hover:bg-red-500/20'
-                    : 'bg-white/5 text-gray-200 border-white/20 hover:bg-white/10'
-                }`}
-              >
-                {isRevealing ? 'Cancel Sequence' : 'Reveal the System'}
               </button>
             </div>
             <p className="text-[10px] text-gray-500 tracking-[0.18em] uppercase">

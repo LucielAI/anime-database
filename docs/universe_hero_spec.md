@@ -51,8 +51,7 @@ Add a top-level `hero` object to each core payload:
 - `hero.microHook`: target `<=95` characters.
 - `hero.thesis`: target `<=140` characters.
 - Primary CTA label is standardized to **Open System**.
-- Secondary CTA label is standardized to **Reveal the System**.
-- Hero should expose one primary and one secondary CTA only.
+- Hero should expose one decisive primary CTA only.
 
 ---
 
@@ -63,7 +62,7 @@ Add a top-level `hero` object to each core payload:
 3. Micro-hook
 4. Thesis (short)
 5. Proof strip
-6. Primary + Secondary CTA
+6. Primary CTA
 
 Everything else belongs below the fold.
 
@@ -81,4 +80,3 @@ Everything else belongs below the fold.
 - Use long plot summary as thesis.
 - Add multiple competing primary actions.
 - Hide the title as low-opacity decorative text.
-
