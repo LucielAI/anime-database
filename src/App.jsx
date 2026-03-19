@@ -141,11 +141,11 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
 
         <div className="p-6 flex flex-col justify-between min-h-[170px]">
           <div>
-            <p className="text-[10px] text-cyan-300 tracking-[0.2em] uppercase mb-2">Best Starting Point</p>
+            <p className="text-[10px] text-cyan-300 tracking-[0.2em] uppercase mb-2">Best Place to Start</p>
             <h3 className="text-xl md:text-2xl font-bold uppercase mb-2 leading-tight">{entry.anime}</h3>
             <p className="text-xs text-gray-400 leading-relaxed">{entry.tagline}</p>
           </div>
-          <span className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 uppercase tracking-[0.15em]">Enter archive <ArrowRight className="w-3.5 h-3.5" /></span>
+          <span className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 uppercase tracking-[0.15em]">Open breakdown <ArrowRight className="w-3.5 h-3.5" /></span>
         </div>
       </div>
     </Link>
@@ -191,11 +191,11 @@ function Home() {
       <SeoHead {...seo} structuredData={structuredData} />
 
       <header className="w-full relative py-20 md:py-24 px-6 border-b border-white/5 flex flex-col items-center text-center" style={{ background: 'radial-gradient(ellipse at center, #101634 0%, #050508 100%)' }}>
-        <p className="text-[10px] md:text-xs text-cyan-300/80 tracking-[0.24em] uppercase font-bold mb-3">Archive Active · System Intelligence Index</p>
+        <p className="text-[10px] md:text-xs text-cyan-300/80 tracking-[0.24em] uppercase font-bold mb-3">For Anime Fans Who Love Deep Breakdowns</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase mb-3 text-white leading-[0.96]">
           Analyze Anime Power Systems
         </h1>
-        <p className="text-sm md:text-base text-cyan-300/85 tracking-[0.2em] uppercase font-bold">Compare Anime Worlds by Strategy, Control, and Worldbuilding Logic</p>
+        <p className="text-sm md:text-base text-cyan-300/85 tracking-[0.2em] uppercase font-bold">Compare anime worlds by power, strategy, and worldbuilding</p>
         <p className="mt-6 text-xs md:text-sm text-gray-300/80 max-w-2xl leading-relaxed">
           Find the best anime systems, compare anime power systems side-by-side, and explore the mechanics behind each world in minutes.
         </p>
@@ -217,14 +217,14 @@ function Home() {
       <main id="main-content">
       <section className="max-w-5xl mx-auto px-6 pt-6 pb-2" aria-label="Anime analysis overview">
         <p className="text-[11px] text-gray-500 leading-relaxed">
-          Anime Architecture Archive is an anime analysis and anime comparison platform built for fans who care about power systems, combat logic, and worldbuilding structure.
-          Instead of browsing by title alone, you can compare anime systems by relationship networks, counterplay mechanics, and timeline causality.
+          Anime Architecture Archive helps you compare how different shows handle power, fights, and world rules.
+          Pick a style, jump into a title, and see what makes each world work.
         </p>
       </section>
       <section id="explore-system-structure" className="max-w-6xl mx-auto px-6 pt-12 pb-10" aria-labelledby="explore-structure-heading">
         <div className="flex items-center gap-2 mb-4">
           <Compass className="w-4 h-4 text-cyan-300" />
-          <h2 id="explore-structure-heading" className="text-sm font-bold tracking-[0.2em] uppercase">Explore by System Structure</h2>
+          <h2 id="explore-structure-heading" className="text-sm font-bold tracking-[0.2em] uppercase">Explore by World Style</h2>
         </div>
         <p className="text-xs text-gray-400 mb-5 max-w-2xl">
           Pick a system style to start exploring.
@@ -259,7 +259,7 @@ function Home() {
           <Star className="w-4 h-4 text-cyan-300" />
           <h2 id="featured-archives-heading" className="text-sm font-bold tracking-[0.2em] uppercase">Featured Starting Points</h2>
         </div>
-        <p className="text-xs text-gray-400 mb-4">Start with the strongest system designs in the archive, then branch into adjacent universes.</p>
+        <p className="text-xs text-gray-400 mb-4">Start with fan-favorite picks, then branch into similar shows.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {featuredUniverses.map((entry, index) => (
@@ -274,13 +274,13 @@ function Home() {
       <section id="continue-next-paths" className="max-w-6xl mx-auto px-6 pt-8 pb-7" aria-labelledby="continue-pathways-heading">
         <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 md:px-5">
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <h2 id="continue-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Continue / Recommended Next Paths</h2>
-            <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">Explore full map →</Link>
+            <h2 id="continue-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Where to Go Next</h2>
+            <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">See all titles →</Link>
           </div>
           <p className="text-[11px] text-gray-400 mb-3">
             {continuation.continueEntry
-              ? `Continue from your latest visited system: ${continuation.continueEntry.anime}.`
-              : 'No local continue history yet. Start with editor picks, then return for guided comparisons.'}
+              ? `Pick up where you left off with ${continuation.continueEntry.anime}.`
+              : 'New here? Start with our top picks below.'}
           </p>
           {continuation.continueEntry && (
             <div className="mb-3">
@@ -313,7 +313,7 @@ function Home() {
                 className="inline-flex items-center gap-2 min-h-[40px] px-3 py-2 rounded-full border border-emerald-300/30 bg-emerald-500/5 hover:border-emerald-300/50 text-[10px] tracking-[0.16em] uppercase text-gray-200 transition-colors"
               >
                 <LibraryBig className="w-3.5 h-3.5 text-emerald-300" />
-                Editor pick: {entry.anime}
+                Top pick: {entry.anime}
               </Link>
             ))}
           </div>
@@ -372,8 +372,8 @@ function Home() {
 
       <footer className="mt-12 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <div className="max-w-4xl text-center px-6">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-300/80">System Exploration Engine</p>
-          <p className="text-[11px] text-gray-400 mt-2">Use this hub to enter via structure, compare system families, and route into universe-level analysis with machine-readable paths.</p>
+          <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-300/80">Compare. Discover. Rewatch Smarter.</p>
+          <p className="text-[11px] text-gray-400 mt-2">See how your favorite anime worlds handle power, strategy, and big turning points.</p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">
           <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">

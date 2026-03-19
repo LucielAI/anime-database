@@ -16,7 +16,7 @@ const SYSTEM_STRUCTURE_TAXONOMY = [
   {
     key: 'relational-systems',
     label: 'Relational Systems',
-    description: 'Power through alliances, betrayal, and influence networks.',
+    description: 'Power swings through alliances, betrayal, and influence.',
     matches: (entry, metadata) => ['node-graph', 'affinity-matrix'].includes(entry.visualizationHint)
       || metadata.classification === 'network'
       || metadata.systemProfile?.powerStructure === 'control',
@@ -24,7 +24,7 @@ const SYSTEM_STRUCTURE_TAXONOMY = [
   {
     key: 'counterplay-systems',
     label: 'Counterplay Systems',
-    description: 'Win by counters, timing windows, and matchup reads.',
+    description: 'Fights are won with counters, timing, and matchup reads.',
     matches: (entry, metadata) => entry.visualizationHint === 'counter-tree'
       || metadata.classification === 'combat'
       || metadata.clusterTags?.includes('combat-systems'),
@@ -32,26 +32,26 @@ const SYSTEM_STRUCTURE_TAXONOMY = [
   {
     key: 'timeline-systems',
     label: 'Timeline Systems',
-    description: 'Causal chains, time pressure, and delayed consequences.',
+    description: 'Choices ripple forward through time and change everything.',
     matches: (entry, metadata) => entry.visualizationHint === 'timeline' || metadata.clusterTags?.includes('causal-systems'),
   },
   {
     key: 'control-systems',
     label: 'Control Systems',
-    description: 'Command systems driven by institutions, policy, and obedience.',
+    description: 'Power comes from command, status, and who people obey.',
     matches: (_entry, metadata) => metadata.systemProfile?.powerStructure === 'control' || metadata.clusterTags?.includes('hierarchy-heavy'),
   },
   {
     key: 'closed-loop-systems',
     label: 'Closed-Loop Systems',
-    description: 'Self-reinforcing loops where today’s rule shapes tomorrow’s outcome.',
+    description: 'The world loops back on itself, and rules keep repeating.',
     matches: (_entry, metadata) => ['causal', 'inheritance'].includes(metadata.systemProfile?.powerStructure)
       || metadata.clusterTags?.includes('causal-systems'),
   },
   {
     key: 'power-economy-systems',
     label: 'Power Economy Systems',
-    description: 'Resource systems where power is traded, spent, and priced.',
+    description: 'Power is a resource you earn, spend, trade, or lose.',
     matches: (_entry, metadata) => ['exchange', 'matchup', 'growth-loop', 'resource', 'suppression', 'modular', 'specialization'].includes(metadata.systemProfile?.powerStructure)
       || metadata.clusterTags?.includes('combat-systems'),
   },

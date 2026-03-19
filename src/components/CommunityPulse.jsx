@@ -44,11 +44,11 @@ export default function CommunityPulse({ quickVoteCandidates = [] }) {
       <div className="rounded-xl border border-white/5 bg-[#0a0a10] p-4 md:p-4.5">
         <div className="flex items-center gap-2 mb-3">
           <Radio className="w-4 h-4 text-cyan-400" />
-          <h2 id="community-pulse-heading" className="text-[10px] tracking-[0.22em] uppercase font-bold text-white/70">Community Pulse / Request Queue</h2>
+          <h2 id="community-pulse-heading" className="text-[10px] tracking-[0.22em] uppercase font-bold text-white/70">What Should We Cover Next?</h2>
         </div>
 
         <p className="text-[11px] text-gray-400 leading-relaxed mb-3">
-          Vote on the next archive target from the current requestable queue, or send a custom universe request.
+          Vote for the next anime breakdown, or send your own request.
         </p>
 
         <div className="flex flex-wrap gap-1.5 mb-3">
@@ -62,7 +62,7 @@ export default function CommunityPulse({ quickVoteCandidates = [] }) {
               {loadingChoice === candidate ? 'Saving...' : candidate}
             </button>
           )) : (
-            <p className="text-[11px] text-gray-500">Request queue is being refreshed. Use the custom request field below.</p>
+            <p className="text-[11px] text-gray-500">Updating suggestions… you can still submit your own request below.</p>
           )}
         </div>
 
@@ -78,7 +78,7 @@ export default function CommunityPulse({ quickVoteCandidates = [] }) {
             value={customSuggestion}
             onChange={(e) => setCustomSuggestion(e.target.value)}
             maxLength={100}
-            placeholder="Request another universe..."
+            placeholder="Request another anime..."
             className="flex-1 min-h-[38px] bg-transparent border-b border-white/10 focus:border-cyan-400/60 text-sm text-gray-300 px-1 outline-none"
           />
           <button
