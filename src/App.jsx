@@ -205,6 +205,16 @@ function Home() {
   const [sortMode, setSortMode] = useState('latest')
   const [deferSecondary, setDeferSecondary] = useState(false)
   const [compareLeftId, setCompareLeftId] = useState(UNIVERSE_CATALOG[0]?.id || '')
+  const [lastViewed, setLastViewed] = useState(null)
+
+  // Get last viewed universe for returning visitor
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const last = String(window.localStorage.getItem('anime-archive:last-viewed:v1') || '').trim().toLowerCase()
+    if (last && UNIVERSE_CATALOG_MAP[last]) {
+      setLastViewed(UNIVERSE_CATALOG_MAP[last])
+    }
+  }, [])
   const [compareRightId, setCompareRightId] = useState(UNIVERSE_CATALOG[1]?.id || '')
 
   useEffect(() => {
@@ -268,6 +278,28 @@ function Home() {
               </svg>
               Follow @hashi.ai
             </a>
+          </div>
+
+          {/* Returning visitor: pick up where you left off */}
+          {lastViewed && (
+            <div className="mt-4 flex items-center gap-3 px-4 py-2.5 rounded-xl border border-cyan-400/20 bg-cyan-400/5 backdrop-blur-sm">
+              <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+              <p className="text-[10px] text-gray-400">
+                <span className="text-cyan-300">Continue reading: </span>
+                <Link to={`/universe/${lastViewed.id}`} className="text-white underline underline-offset-2 hover:text-cyan-300 transition-colors">
+                  {lastViewed.anime}
+                </Link>
+              </p>
+            </div>
+          )}
+
+          {/* Archive stats bar */}
+          <div className="mt-5 flex flex-wrap justify-center gap-4 text-[10px] text-gray-500 tracking-widest uppercase">
+            <span>{UNIVERSE_CATALOG.length} Universes</span>
+            <span className="text-white/10">·</span>
+            <span>{UNIVERSE_CATALOG.reduce((s, a) => s + (a.stats?.characters || 0), 0)} Characters</span>
+            <span className="text-white/10">·</span>
+            <span>{new Set(UNIVERSE_CATALOG.map((a) => a.visualizationHint)).size} System Types</span>
           </div>
         </div>
         <div className="mt-5 text-[10px] text-white/30 tracking-widest uppercase flex flex-wrap justify-center gap-4">
