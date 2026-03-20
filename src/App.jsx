@@ -59,6 +59,17 @@ function cancelIdleTask(handle) {
   clearTimeout(handle)
 }
 
+function RouteScrollReset() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [location.pathname])
+
+  return null
+}
+
 function UniverseLinkCard({ data, compact = false, density = 'default', priorityImage = false }) {
   const theme = data.themeColors || { primary: '#374151', glow: 'rgba(255,255,255,0.1)' }
   const classLabel = getClassificationLabel(data.visualizationHint)
@@ -318,9 +329,10 @@ function Home() {
             <h2 id="continue-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Where to Go Next</h2>
             <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">See all titles →</Link>
           </div>
-          <div className="mb-4 rounded-xl border border-white/10 bg-[#080a12] p-3">
+          <div className="mb-4 rounded-xl border border-white/10 bg-[#080a12] p-3 md:p-4">
             <div className="flex items-center justify-between gap-2 mb-2">
               <p className="text-[10px] uppercase tracking-[0.18em] text-cyan-200">Compare systems</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-[0.14em]">Pick any two</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
               <select value={compareLeftId} onChange={(e) => setCompareLeftId(e.target.value)} className="h-10 rounded-lg border border-white/10 bg-black/30 px-2 text-xs">
@@ -331,14 +343,21 @@ function Home() {
               </select>
             </div>
             {comparison && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
-                {[comparison.left, comparison.right].map((side) => (
-                  <div key={side.id} className="rounded-lg border border-white/10 bg-white/5 p-3">
-                    <p className="text-[10px] uppercase tracking-[0.16em] text-cyan-200 mb-1">{side.anime}</p>
-                    <p className="text-gray-300">Power type: <span className="text-white">{side.powerSystemType}</span></p>
-                    <p className="text-gray-300">Combat: <span className="text-white">{side.combatStyle}</span></p>
-                    <p className="text-gray-300">Complexity: <span className="text-white">{side.complexity}</span></p>
-                    <p className="text-gray-300">Style: <span className="text-white">{side.strategyVsRaw}</span></p>
+              <div className="rounded-lg border border-white/10 bg-white/5 overflow-hidden">
+                <div className="grid grid-cols-2 border-b border-white/10">
+                  <p className="px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-cyan-200">{comparison.left.anime}</p>
+                  <p className="px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-cyan-200 border-l border-white/10">{comparison.right.anime}</p>
+                </div>
+                {[
+                  { label: 'System Type', left: comparison.left.powerSystemType, right: comparison.right.powerSystemType },
+                  { label: 'Combat Style', left: comparison.left.combatStyle, right: comparison.right.combatStyle },
+                  { label: 'Complexity', left: String(comparison.left.complexity), right: String(comparison.right.complexity) },
+                  { label: 'Strategy vs Power', left: comparison.left.strategyVsRaw, right: comparison.right.strategyVsRaw },
+                ].map((row) => (
+                  <div key={row.label} className="grid grid-cols-1 md:grid-cols-[160px_1fr_1fr] border-b border-white/10 last:border-b-0">
+                    <p className="px-3 py-2 text-[10px] uppercase tracking-[0.14em] text-gray-500 bg-black/20">{row.label}</p>
+                    <p className="px-3 py-2 text-[11px] text-gray-200">{row.left}</p>
+                    <p className="px-3 py-2 text-[11px] text-gray-200 border-l border-white/10">{row.right}</p>
                   </div>
                 ))}
               </div>
@@ -448,7 +467,7 @@ function Home() {
             <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors" />
           </a>
           <a href={SUPPORT_URL} target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300">
-            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">Support the archive</span>
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">Support this project</span>
             <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-emerald-400 transition-colors" />
           </a>
         </div>
@@ -580,6 +599,11 @@ function UniverseRoute() {
   const structuredData = buildUniverseStructuredData(preview)
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [normalizedId])
+
+  useEffect(() => {
     if (!normalizedId) return
 
     const siblings = getRelatedUniverseSuggestions(UNIVERSE_CATALOG, normalizedId, 2)
@@ -592,6 +616,8 @@ function UniverseRoute() {
     let cancelled = false
 
     async function resolveUniverse() {
+      setIsLoading(true)
+      setData(null)
       if (!normalizedId || !UNIVERSE_CATALOG_MAP[normalizedId]) {
         navigate('/', { replace: true })
         return
@@ -687,6 +713,7 @@ export default function App() {
 
   return (
     <>
+      <RouteScrollReset />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/universes" element={<UniversesCatalogRoute />} />

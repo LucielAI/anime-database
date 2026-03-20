@@ -46,6 +46,9 @@ Builds lightweight two-title comparison fields:
 - complexity
 - strategy vs raw power
 
+UI expectation:
+- render field-first rows (label + left/right values) for scannable side-by-side reading on mobile and desktop.
+
 ### `getHomepageHighlightLeaders(catalog)`
 Returns IDs for engagement highlights (`mostComplexId`, `mostStrategicId`).
 
@@ -70,6 +73,11 @@ Applies request queue filtering:
 - `src/App.jsx` homepage sections
 - `src/components/CommunityPulse.jsx` quick-vote UI
 - `src/utils/seo.js` homepage structured data lists
+
+## Navigation + Scroll Safety
+
+- Homepage/universe route transitions should reset scroll to top on pathname change.
+- Universe route swaps should reset loading/data state before resolving next payload.
 
 ## Change Management Checklist
 

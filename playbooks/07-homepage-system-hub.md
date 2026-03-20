@@ -45,6 +45,9 @@ npm run validate:catalog
 - [ ] Compare systems entry allows selecting 2 universes and shows quick fields
 - [ ] Featured shows stable top 3 across refreshes
 - [ ] Quick-vote queue excludes already implemented universes
+- [ ] Universe route changes always reset to top/hero state (no stale mid-scroll carryover)
+- [ ] Compare systems UI is field-first and readable on mobile/desktop
+- [ ] Public-facing copy stays fan-first (no internal/builder wording)
 - [ ] Mobile layout has no half-card/awkward featured interaction
 - [ ] Home links route correctly to `/universes` and `/universe/:slug`
 - [ ] Structured data includes collection + item lists for featured and structure taxonomy

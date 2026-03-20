@@ -100,6 +100,23 @@ Homepage should include:
 - plain-language explanatory copy for retrieval systems.
 - screenshot-friendly quick insight blocks with short factual lines.
 
+## Navigation Consistency Contract
+
+- Route changes must reset viewport to top-level landing context.
+- Opening `/universe/:slug` should always land at the universe top/hero state.
+- Swapping universe routes (homepage cards, compare links, related links, catalog links) must not preserve stale mid-page scroll.
+- Universe route loading state should reset between slug transitions to prevent carrying old-page context.
+
+Primary implementation:
+- `RouteScrollReset` in `src/App.jsx`
+- `UniverseRoute` top reset and loading reset behavior in `src/App.jsx`
+
+## Copy Tone Guardrail
+
+- Public-facing homepage copy must stay fan-first and non-technical.
+- Avoid internal-builder language (e.g., “machine-readable”, “routing structures”, “system intelligence index”).
+- Keep helper copy concise and action-oriented.
+
 Primary implementation:
 - `src/App.jsx`
 - `src/utils/seo.js`
