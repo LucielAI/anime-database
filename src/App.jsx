@@ -141,8 +141,8 @@ function UniverseLinkCard({ data, compact = false, density = 'default', priority
 
 
 function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
-  if (!entry) return null
   const [imageFailed, setImageFailed] = useState(false)
+  if (!entry) return null
 
   return (
     <Link

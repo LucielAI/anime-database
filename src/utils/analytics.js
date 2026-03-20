@@ -41,7 +41,7 @@ export function trackCTAClick(url, universe, phase) {
   }
 
   // Backup: console log for debugging
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     console.log('[Analytics] CTA Click:', { url, universe, phase, ...data })
   }
 
@@ -49,7 +49,7 @@ export function trackCTAClick(url, universe, phase) {
   try {
     const beaconData = encodeURIComponent(JSON.stringify(data))
     navigator.sendBeacon(`https://hashi.goatcounter.com/count?t=${Date.now()}&d=${beaconData}`, new Blob([beaconData], { type: 'application/json' }))
-  } catch (e) {
+  } catch {
     // Silent fail for beacon
   }
 }
@@ -76,7 +76,7 @@ export function trackOpenSystem(tabIndex, universe, tabName) {
     })
   }
 
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     console.log('[Analytics] Open System:', { tabIndex, universe, tabName, ...data })
   }
 }
@@ -105,7 +105,7 @@ export function trackScrollDepth(currentDepth) {
       })
     }
 
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.log('[Analytics] Scroll Depth:', currentDepth)
     }
   }
@@ -132,7 +132,7 @@ export function trackHeroVisibility(isVisible, duration = 0) {
     })
   }
 
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     console.log('[Analytics] Hero Visibility:', { isVisible, duration: `${duration}s`, ...data })
   }
 }
@@ -157,7 +157,7 @@ export function trackShareFrame(visible) {
     })
   }
 
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     console.log('[Analytics] Share Frame:', { visible, ...data })
   }
 }

@@ -28,7 +28,6 @@ export default function PowerEngineTab({ data, isSystemMode, theme }) {
   const powerSystem = data?.powerSystem || []
   const counterplay = data?.counterplay || []
   const rankings = data?.rankings
-  const accent = theme?.accent || '#f59e0b'
 
   if (powerSystem.length === 0) {
     return (

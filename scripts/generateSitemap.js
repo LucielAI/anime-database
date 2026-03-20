@@ -1,4 +1,3 @@
-/* global process */
 // Generates public/sitemap.xml from the universe slugs in src/data/.
 // Runs automatically: before every `vite build` and after `add:universe`.
 // Manual: node scripts/generateSitemap.js

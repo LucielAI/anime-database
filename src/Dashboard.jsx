@@ -1,5 +1,7 @@
 import { useEffect, useState, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { loadNavState, saveNavState } from './utils/navState.js'
+import { throttle } from './utils/throttle.js'
 import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
@@ -19,7 +21,7 @@ import { getBestEntryConfig, getRelatedUniverseSuggestions } from './utils/disco
 import { getHeroContract } from './utils/heroContract'
 import { getBackgroundMotif, getRevealOverlay } from './config/universePresentation'
 import { UNIVERSE_CATALOG } from './data/index'
-import { trackCTAClick, trackOpenSystem, trackScrollDepth, trackHeroVisibility, trackShareFrame, trackExternalLink } from './utils/analytics'
+import { trackCTAClick, trackOpenSystem, trackScrollDepth, trackHeroVisibility, trackExternalLink } from './utils/analytics'
 
 const TABS = ['POWER ENGINE', 'ENTITY DATABASE', 'FACTIONS', 'CORE LAWS']
 

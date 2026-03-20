@@ -171,7 +171,6 @@ function overlapCount(a = [], b = []) {
 function getRelatedScore(currentEntry, candidateEntry) {
   const currentProfile = getUniverseDiscoveryProfile(currentEntry)
   const candidateProfile = getUniverseDiscoveryProfile(candidateEntry)
-  const currentMeta = currentProfile.metadata
   const candidateMeta = candidateProfile.metadata
 
   let score = 0
