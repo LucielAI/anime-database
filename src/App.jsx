@@ -567,7 +567,7 @@ function UniversesCatalogRoute() {
   const [visibleCount, setVisibleCount] = useState(12)
   const [searchParams] = useSearchParams()
   const activeCluster = searchParams.get('cluster') || ''
-  const seo = buildCatalogSeo(UNIVERSE_CATALOG)
+  const seo = buildCatalogSeo(UNIVERSE_CATALOG, { activeCluster, sortMode: sortMode !== 'latest' ? sortMode : '' })
   const structuredData = buildCatalogStructuredData(UNIVERSE_CATALOG)
   const clusterOptions = useMemo(() => getDiscoveryClusters(UNIVERSE_CATALOG), [])
   const activeClusterMeta = clusterOptions.find((cluster) => cluster.key === activeCluster) || null

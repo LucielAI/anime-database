@@ -40,14 +40,17 @@ export function buildHomeSeo(catalog = []) {
 }
 
 
-export function buildCatalogSeo(catalog = []) {
+export function buildCatalogSeo(catalog = [], options = {}) {
   const count = catalog.length
-  const description = truncate(`Browse ${count} anime universes in a searchable, sortable archive catalog built for power system comparison, faction analysis, and worldbuilding study. Filter by cluster, sort by latest or most viewed.`)
-
+  const { activeCluster = '', sortMode = '' } = options || {}
+  let description = `Browse ${count} anime universes in a searchable, sortable archive catalog built for power system comparison, faction analysis, and worldbuilding study.`
+  if (activeCluster) description += ` Cluster: ${activeCluster}.`
+  if (sortMode) description += ` Sorted by ${sortMode}.`
+  const title = activeCluster ? `${activeCluster.replace(/-/g, ' ')} Universes | ${SITE_NAME}` : `Browse ${count} Anime Universe Analyses | ${SITE_NAME}`
   return {
-    title: `Browse ${count} Anime Universe Analyses | ${SITE_NAME}`,
-    description,
-    canonicalUrl: `${SITE_URL}/universes`,
+    title,
+    description: truncate(description),
+    canonicalUrl: `${SITE_URL}/universes${activeCluster ? `?cluster=${activeCluster}` : ''}`,
     image: DEFAULT_OG_IMAGE,
     type: 'website',
   }
