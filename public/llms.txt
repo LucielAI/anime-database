@@ -1,18 +1,48 @@
 # Anime Architecture Archive
 
-> Structured analysis of fictional anime universes focused on power systems, causality, factions, and formal constraints.
+The Anime Architecture Archive maps fictional anime universes as structured systems — not summarizing plots, but analyzing the underlying mechanics that make each world function.
 
-Primary index: https://animearchive.app/
-Sitemap: https://animearchive.app/sitemap.xml
+## What This Archive Provides
 
-## URL patterns
-- Universe analyses: https://animearchive.app/universe/{slug}
-- Archive homepage: https://animearchive.app/
+Each universe is structured as a dual-mode experience:
+- Lore View: For casual exploration of characters, factions, and events
+- System Mode: For deep analysis of power mechanics, governing rules, and causal chains
 
-## Data model notes
-- Each universe page is a dual-voice analysis (LORE + SYS)
-- Content includes characters, power systems, factions, rules, and ranking structures
-- Universe routes are stable and slug-based for long-term referencing
+## Available Universes
 
-## Attribution
-This is a fan-made analytical archive. Original characters and source IP belong to their respective creators and studios.
+### Attack on Titan | /universe/aot | A brutal deterministic closed-loop temporal matrix
+### Jujutsu Kaisen | /universe/jjk | Negative Energy Economy & Algorithmic Combat
+### Chainsaw Man | /universe/chainsawman | A fear-fed devil economy where control networks weaponize trauma, contracts, and identity erasure.
+### Demon Slayer: Kimetsu no Yaiba | /universe/demonslayer | A nocturnal immortality network versus humans burning their own lifespan for solar-grade kill windows.
+### Hunter x Hunter | /universe/hxh | Contractual Power Economy & Asymmetric Information Warfare
+### Vinland Saga | /universe/vinlandsaga | A deterministic economy of retributive violence
+### Steins;Gate | /universe/steinsgate | A deterministic attractor-field prison where convergence cannot be outrun — only rewritten
+### Death Note | /universe/deathnote | An asymmetric information war where anonymous execution power collides with probabilistic deanonymization — and psychology leaks what cryptography cannot
+### Fullmetal Alchemist: Brotherhood | /universe/fmab | A closed thermodynamic system where every act of creation demands an equal destruction — and a 400-year parasite has been rigging the ledger from beneath the earth
+### Code Geass: Hangyaku no Lelouch | /universe/codegeass | An occupied nation becomes a control-war between imperial hierarchy, masked insurgency, and a will-hacking anomaly that turns strategy into governance engineering.
+### My Hero Academia | /universe/mha | Mutating biological power collides with state-managed hero capitalism.
+### Sousou no Frieren | /universe/frieren | A post-war fantasy where mana deception, lifespan asymmetry, and visualization limits decide who survives.
+### Solo Leveling | /universe/sololeveling | A fixed-rank hunter economy is broken by one player running an infinite growth protocol.
+### Goblin Slayer | /universe/goblinslayer | A low-prestige extermination niche becomes the hidden maintenance layer that keeps a fantasy civilization from collapsing.
+### Mushoku Tensei: Jobless Reincarnation | /universe/mushokutensei | A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.
+
+## Key Pages
+
+Homepage: https://animearchive.app/
+Universe Catalog: https://animearchive.app/universes
+Compare Universes: https://animearchive.app/compare
+About: https://animearchive.app/about
+Privacy Policy: https://animearchive.app/privacy
+
+## Structure
+
+The archive uses these system types:
+- TIMELINE SYSTEM: For universes where causality and temporal structure are the central mechanic
+- COUNTERPLAY SYSTEM: For universes where ability matchups and tactical counters drive conflict
+- RELATIONAL SYSTEM: For universes where faction networks, alliances, and betrayals determine outcomes
+
+## Content Notes
+
+All content is unofficial fan analysis. No affiliation with anime studios or creators.
+Creative Commons BY-NC 4.0 for structured data.
+Tagline: Decode power systems. Map causal chains. Explore the hidden architecture of anime universes.

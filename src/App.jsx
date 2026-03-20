@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense, useMemo, useState } from 'react'
+import { useEffect, lazy, Suspense, useMemo, useState, useRef } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug, warmUniverseBySlug } from './data/index.js'
 import { ExternalLink, ArrowRight, Star, ListFilter, Search, Compass, Route as RouteIcon, LibraryBig, Network, ShieldAlert, Clock3, Landmark, Repeat2, Coins } from 'lucide-react'
@@ -82,10 +82,23 @@ function UniverseLinkCard({ data, compact = false, density = 'default', priority
   const classLabel = getClassificationLabel(data.visualizationHint)
   const isCatalogDense = density === 'catalog'
   const [imageFailed, setImageFailed] = useState(false)
+  const [viewCount, setViewCount] = useState(0)
+
+  // Prefetch universe data on hover
+  const linkRef = useRef(null)
+  const handleMouseEnter = () => warmUniverseBySlug(data.id)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const stored = JSON.parse(window.localStorage.getItem('archive:views') || '{}')
+    setViewCount(Number(stored[data.id] || 0))
+  }, [data.id])
 
   return (
     <Link
+      ref={linkRef}
       to={`/universe/${data.id}`}
+      onMouseEnter={handleMouseEnter}
       className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300 relative flex flex-col focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
       style={{ border: `1px solid ${theme.primary}` }}
     >
@@ -107,6 +120,12 @@ function UniverseLinkCard({ data, compact = false, density = 'default', priority
           <div className="w-full h-full" style={{ background: `radial-gradient(ellipse at 50% 40%, ${theme.primary}15 0%, transparent 60%), linear-gradient(160deg, #0a0a14 0%, #0d0f1a 50%, ${theme.primary}0a 100%)` }} />
         )}
         <div className="absolute inset-0 bg-linear-to-t from-[#050508] to-transparent pointer-events-none" />
+        {viewCount > 0 && (
+          <div className="absolute top-2 right-2 flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-black/60 backdrop-blur-sm text-[9px] text-gray-400 font-mono">
+            <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            {viewCount.toLocaleString()}
+          </div>
+        )}
       </div>
 
       <div className={`grow flex flex-col justify-end p-4 md:p-6`}>
@@ -615,6 +634,20 @@ function UniversesCatalogRoute() {
             </button>
           </div>
         )}
+
+        {/* Request a Universe CTA */}
+        <div className="mt-12 rounded-xl border border-cyan-400/20 bg-cyan-400/5 p-6 text-center">
+          <p className="text-xs uppercase tracking-[0.2em] text-cyan-300 mb-2">Missing a universe?</p>
+          <p className="text-xs text-gray-400 mb-4">Know an anime that would make a great system analysis? Submit it and we'll prioritize the most-requested universes.</p>
+          <a
+            href="https://www.tiktok.com/@hashi.ai"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-400 text-[#020617] font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-cyan-300 transition-colors"
+          >
+            Request on TikTok →
+          </a>
+        </div>
       </main>
     </div>
   )
