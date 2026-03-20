@@ -69,6 +69,7 @@ If you change renderers, pipeline stages, or schema rules, check these docs for 
 | New script added | `scripts/README.md` |
 | New presentation config key | `docs/DATA_PRINCIPLES.md` (Presentation Fields section) |
 | Image policy change | `docs/DATA_PRINCIPLES.md` (Image Policy) + `docs/RENDERER_CONTRACT.md` (Image Handling Contract) |
+| Homepage IA or curation logic changed | `docs/HOMEPAGE_SPEC.md` + `docs/HOMEPAGE_DATA_CONTRACT.md` + `playbooks/07-homepage-system-hub.md` |
 
 Do not rewrite docs wholesale. Update only the sections that no longer reflect reality.
 
@@ -118,4 +119,3 @@ npm run validate:catalog
 ```
 
 This fails if any universe payload (for example `chainsawman.core.json`) exists in `src/data/` but is missing from `UNIVERSE_CATALOG` or `preferredOrder`.
-

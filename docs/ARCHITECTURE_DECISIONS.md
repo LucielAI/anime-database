@@ -136,3 +136,13 @@ Reduces first-impression overwhelm and guides regular fans to the highest-engage
 
 Tradeoff:
 Introduces small metadata maintenance overhead, but defaults remain safe when fields are missing.
+
+## ADR-017 — Homepage Contract-First Guidance Layer
+Decision:
+Homepage behavior is contract-driven via `src/config/homepageContract.js` and documented in `docs/HOMEPAGE_SPEC.md` + `docs/HOMEPAGE_DATA_CONTRACT.md`, with deterministic section order and curation rules.
+
+Why:
+Prevents one-off homepage redesign drift and keeps AI-agent updates reproducible across future iterations.
+
+Tradeoff:
+Requires explicit contract/doc updates whenever homepage logic changes, but avoids hidden JSX-only business logic.

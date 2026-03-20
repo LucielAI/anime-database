@@ -16,6 +16,7 @@ These are not a framework. They are practical checklists written for agents (Cla
 | Validate and QA a universe before integration | [04-verify-universe.md](./04-verify-universe.md) |
 | Keep docs aligned after adding a universe | [05-docs-sync.md](./05-docs-sync.md) |
 | Look up required fields, enums, themeColors, character schema | [06-payload-field-reference.md](./06-payload-field-reference.md) |
+| Upgrade homepage architecture/data-contract | [07-homepage-system-hub.md](./07-homepage-system-hub.md) |
 
 ## How These Were Written
 

@@ -1,6 +1,7 @@
 import { DISCOVERY_METADATA, DISCOVERY_CLUSTERS } from '../data/discoveryMetadata'
 
 const VIEW_STORAGE_KEY = 'anime-archive:view-counts:v1'
+const LAST_VIEWED_STORAGE_KEY = 'anime-archive:last-viewed:v1'
 
 const TAB_KEY_TO_INDEX = {
   'power-engine': 0,
@@ -62,6 +63,12 @@ export function incrementUniverseLocalView(slug) {
   const current = getLocalViewMap()
   current[slug] = Number(current[slug] || 0) + 1
   window.localStorage.setItem(VIEW_STORAGE_KEY, JSON.stringify(current))
+  window.localStorage.setItem(LAST_VIEWED_STORAGE_KEY, slug)
+}
+
+export function getLastViewedUniverseId() {
+  if (typeof window === 'undefined') return ''
+  return String(window.localStorage.getItem(LAST_VIEWED_STORAGE_KEY) || '').trim().toLowerCase()
 }
 
 export function sortCatalogUniverses(catalog, mode = 'latest') {
@@ -85,15 +92,7 @@ export function sortCatalogUniverses(catalog, mode = 'latest') {
 }
 
 export function getFeaturedUniverses(catalog, count = 3) {
-  const featuredPool = sortCatalogUniverses(catalog, 'featured').slice(0, Math.max(count, 3))
-  if (featuredPool.length <= count) return featuredPool
-
-  const [primary] = featuredPool
-  const secondaryPool = featuredPool.slice(1)
-  const offset = seededHash(getDailySeed()) % secondaryPool.length
-  const rotated = secondaryPool.slice(offset).concat(secondaryPool.slice(0, offset))
-
-  return [primary, ...rotated.slice(0, count - 1)]
+  return sortCatalogUniverses(catalog, 'featured').slice(0, Math.max(1, count))
 }
 
 function deterministicPick(items, seed) {

@@ -1,7 +1,7 @@
 import { useEffect, lazy, Suspense, useMemo, useState } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug, warmUniverseBySlug } from './data/index.js'
-import { ExternalLink, ArrowRight, Star, ListFilter, Search } from 'lucide-react'
+import { ExternalLink, ArrowRight, Star, ListFilter, Search, Compass, Route as RouteIcon, LibraryBig, Network, ShieldAlert, Clock3, Landmark, Repeat2, Coins } from 'lucide-react'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 import SeoHead from './components/SeoHead'
 import {
@@ -13,8 +13,19 @@ import {
   buildCatalogStructuredData,
   SITE_NAME
 } from './utils/seo'
-import { getFeaturedUniverses, sortCatalogUniverses, filterCatalogUniverses, incrementUniverseLocalView, getDiscoveryClusters, getRelatedUniverseSuggestions } from './utils/discovery'
+import { sortCatalogUniverses, filterCatalogUniverses, incrementUniverseLocalView, getDiscoveryClusters, getRelatedUniverseSuggestions } from './utils/discovery'
 import { DISCOVERY_CLUSTERS } from './data/discoveryMetadata'
+import {
+  getHomepageFeaturedUniverses,
+  getHomepageRequestCandidates,
+  getSystemStructureGroups,
+  getHomepageContinuation,
+  getHomepageClusterLinks,
+  getHomepageBrowsePreview,
+  getHomepageQuickInsights,
+  buildUniverseComparison,
+  getHomepageHighlightLeaders,
+} from './config/homepageContract'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
@@ -46,6 +57,17 @@ function cancelIdleTask(handle) {
   }
 
   clearTimeout(handle)
+}
+
+function RouteScrollReset() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [location.pathname])
+
+  return null
 }
 
 function UniverseLinkCard({ data, compact = false, density = 'default', priorityImage = false }) {
@@ -133,22 +155,31 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
 
         <div className="p-6 flex flex-col justify-between min-h-[170px]">
           <div>
-            <p className="text-[10px] text-cyan-300 tracking-[0.2em] uppercase mb-2">Primary Feature</p>
+            <p className="text-[10px] text-cyan-300 tracking-[0.2em] uppercase mb-2">Best Place to Start</p>
             <h3 className="text-xl md:text-2xl font-bold uppercase mb-2 leading-tight">{entry.anime}</h3>
             <p className="text-xs text-gray-400 leading-relaxed">{entry.tagline}</p>
           </div>
-          <span className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 uppercase tracking-[0.15em]">Enter archive <ArrowRight className="w-3.5 h-3.5" /></span>
+          <span className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 uppercase tracking-[0.15em]">Open breakdown <ArrowRight className="w-3.5 h-3.5" /></span>
         </div>
       </div>
     </Link>
   )
 }
 
+const STRUCTURE_VISUALS = {
+  'relational-systems': { icon: Network, tone: 'border-cyan-300/30 hover:border-cyan-300/60 shadow-[0_0_0_1px_rgba(34,211,238,0.08)]', badge: 'text-cyan-200 bg-cyan-400/10' },
+  'counterplay-systems': { icon: ShieldAlert, tone: 'border-amber-300/30 hover:border-amber-300/60 shadow-[0_0_0_1px_rgba(251,191,36,0.08)]', badge: 'text-amber-200 bg-amber-400/10' },
+  'timeline-systems': { icon: Clock3, tone: 'border-purple-300/30 hover:border-purple-300/60 shadow-[0_0_0_1px_rgba(196,181,253,0.08)]', badge: 'text-purple-200 bg-purple-400/10' },
+  'control-systems': { icon: Landmark, tone: 'border-rose-300/30 hover:border-rose-300/60 shadow-[0_0_0_1px_rgba(251,113,133,0.08)]', badge: 'text-rose-200 bg-rose-400/10' },
+  'closed-loop-systems': { icon: Repeat2, tone: 'border-emerald-300/30 hover:border-emerald-300/60 shadow-[0_0_0_1px_rgba(16,185,129,0.08)]', badge: 'text-emerald-200 bg-emerald-400/10' },
+  'power-economy-systems': { icon: Coins, tone: 'border-indigo-300/30 hover:border-indigo-300/60 shadow-[0_0_0_1px_rgba(129,140,248,0.08)]', badge: 'text-indigo-200 bg-indigo-400/10' },
+}
+
 function Home() {
   const [sortMode, setSortMode] = useState('latest')
-  const seo = buildHomeSeo(UNIVERSE_CATALOG)
-  const structuredData = buildHomeStructuredData(UNIVERSE_CATALOG)
   const [deferSecondary, setDeferSecondary] = useState(false)
+  const [compareLeftId, setCompareLeftId] = useState(UNIVERSE_CATALOG[0]?.id || '')
+  const [compareRightId, setCompareRightId] = useState(UNIVERSE_CATALOG[1]?.id || '')
 
   useEffect(() => {
     if (typeof window === 'undefined') return undefined
@@ -157,12 +188,24 @@ function Home() {
     return () => cancelIdleTask(token)
   }, [])
 
-  const sortedUniverses = useMemo(() => sortCatalogUniverses(UNIVERSE_CATALOG, sortMode), [sortMode])
-  const previewUniverses = sortedUniverses.slice(0, 6)
-  const featuredUniverses = useMemo(() => getFeaturedUniverses(UNIVERSE_CATALOG, 3), [])
-  const primaryFeatured = featuredUniverses[0]
-  const secondaryFeatured = featuredUniverses.slice(1)
-  const discoveryClusters = useMemo(() => getDiscoveryClusters(UNIVERSE_CATALOG).slice(0, 4), [])
+  const featuredUniverses = useMemo(() => getHomepageFeaturedUniverses(UNIVERSE_CATALOG, 3), [])
+  const structureGroups = useMemo(() => getSystemStructureGroups(UNIVERSE_CATALOG, 6), [])
+  const continuation = useMemo(() => getHomepageContinuation(UNIVERSE_CATALOG), [deferSecondary])
+  const clusterLinks = useMemo(() => getHomepageClusterLinks(UNIVERSE_CATALOG, 4), [])
+  const previewUniverses = useMemo(() => getHomepageBrowsePreview(UNIVERSE_CATALOG, sortMode, 6), [sortMode])
+  const requestCandidates = useMemo(() => getHomepageRequestCandidates(UNIVERSE_CATALOG, 6).map((row) => row.anime), [])
+  const quickInsights = useMemo(() => getHomepageQuickInsights(UNIVERSE_CATALOG, 3), [])
+  const highlights = useMemo(() => getHomepageHighlightLeaders(UNIVERSE_CATALOG), [])
+  const comparison = useMemo(() => {
+    const left = UNIVERSE_CATALOG.find((entry) => entry.id === compareLeftId)
+    const right = UNIVERSE_CATALOG.find((entry) => entry.id === compareRightId)
+    return buildUniverseComparison(left, right)
+  }, [compareLeftId, compareRightId])
+  const seo = buildHomeSeo(UNIVERSE_CATALOG)
+  const structuredData = buildHomeStructuredData(UNIVERSE_CATALOG, {
+    featuredUniverses,
+    structureGroups,
+  })
 
   const totalEntities = UNIVERSE_CATALOG.reduce((sum, a) => sum + (a.stats?.characters || 0), 0)
 
@@ -170,70 +213,205 @@ function Home() {
     <div className="min-h-screen bg-[#050508] text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden relative">
       <SeoHead {...seo} structuredData={structuredData} />
 
-      <header className="w-full relative py-20 md:py-24 px-6 border-b border-white/5 flex flex-col items-center text-center" style={{ background: 'radial-gradient(ellipse at center, #0d0d1f 0%, #050508 100%)' }}>
-        <p className="text-[10px] md:text-xs text-cyan-300/80 tracking-[0.24em] uppercase font-bold mb-3">Archive Active · System Intelligence Index</p>
+      <header className="w-full relative py-20 md:py-24 px-6 border-b border-white/5 flex flex-col items-center text-center" style={{ background: 'radial-gradient(ellipse at center, #101634 0%, #050508 100%)' }}>
+        <p className="text-[10px] md:text-xs text-cyan-300/80 tracking-[0.24em] uppercase font-bold mb-3">For Anime Fans Who Love Deep Breakdowns</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase mb-3 text-white leading-[0.96]">
-          Anime Architecture Archive
+          Analyze Anime Power Systems
         </h1>
-        <p className="text-sm md:text-base text-cyan-300/85 tracking-[0.2em] uppercase font-bold">Anime Systems Analysis Archive</p>
+        <p className="text-sm md:text-base text-cyan-300/85 tracking-[0.2em] uppercase font-bold">Compare anime worlds by power, strategy, and worldbuilding</p>
         <p className="mt-6 text-xs md:text-sm text-gray-300/80 max-w-2xl leading-relaxed">
-          Browse a structured anime archive of universe systems. Compare power mechanics, faction structures, and causal constraints through curated archive pathways built for fans.
+          Find the best anime systems, compare anime power systems side-by-side, and explore the mechanics behind each world in minutes.
         </p>
-        <div className="mt-8 text-[10px] text-white/30 tracking-widest uppercase flex flex-wrap justify-center gap-4">
+        <div className="mt-7 flex flex-col items-center gap-3">
+          <a
+            href="#explore-system-structure"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-cyan-300/40 bg-cyan-400/10 px-5 py-2 text-[10px] font-bold tracking-[0.2em] uppercase text-cyan-100 hover:border-cyan-300/70 hover:bg-cyan-400/15 transition-colors"
+          >
+            Explore System Structures
+          </a>
+          <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white transition-colors">Browse all universes →</Link>
+        </div>
+        <div className="mt-5 text-[10px] text-white/30 tracking-widest uppercase flex flex-wrap justify-center gap-4">
           <span>[{UNIVERSE_CATALOG.length}] Universes</span>
           <span>[{totalEntities}] Entities</span>
-          <span><Link to="/universes" className="text-cyan-300 hover:text-white transition-colors">Open Universe Catalog →</Link></span>
         </div>
       </header>
 
       <main id="main-content">
-      <section className="max-w-6xl mx-auto px-6 py-10" aria-labelledby="featured-archives-heading">
+      <section className="max-w-5xl mx-auto px-6 pt-6 pb-2" aria-label="Anime analysis overview">
+        <p className="text-[11px] text-gray-500 leading-relaxed">
+          Anime Architecture Archive helps you compare how different shows handle power, fights, and world rules.
+          Pick a style, jump into a title, and see what makes each world work.
+        </p>
+      </section>
+      <section id="explore-system-structure" className="max-w-6xl mx-auto px-6 pt-12 pb-10" aria-labelledby="explore-structure-heading">
+        <div className="flex items-center gap-2 mb-4">
+          <Compass className="w-4 h-4 text-cyan-300" />
+          <h2 id="explore-structure-heading" className="text-sm font-bold tracking-[0.2em] uppercase">Explore by World Style</h2>
+        </div>
+        <p className="text-xs text-gray-400 mb-5 max-w-2xl">
+          Pick a system style to start exploring.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {structureGroups.map((group) => {
+            const visual = STRUCTURE_VISUALS[group.key] || STRUCTURE_VISUALS['relational-systems']
+            const Icon = visual.icon
+            return (
+            <Link
+              key={group.key}
+              to="/universes"
+              className={`group rounded-xl border bg-white/5 p-4 md:p-5 min-h-[132px] transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.01] ${visual.tone}`}
+            >
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <h3 className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-full text-[10px] tracking-[0.14em] uppercase ${visual.badge}`}>
+                  <Icon className="w-3.5 h-3.5" />
+                  {group.label}
+                </h3>
+                <span className="text-[10px] text-gray-300 tracking-[0.14em] uppercase">{group.count}</span>
+              </div>
+              <p className="text-[11px] text-gray-300/90 leading-relaxed group-hover:text-gray-200">{group.description}</p>
+            </Link>
+            )
+          })}
+        </div>
+      </section>
+      <div className="max-w-6xl mx-auto px-6"><div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" /></div>
+
+      <section id="featured-archive-systems" className="max-w-6xl mx-auto px-6 pt-9 pb-8" aria-labelledby="featured-archives-heading">
         <div className="flex items-center gap-2 mb-4">
           <Star className="w-4 h-4 text-cyan-300" />
-          <h2 id="featured-archives-heading" className="text-sm font-bold tracking-[0.2em] uppercase">Featured Archive Systems</h2>
+          <h2 id="featured-archives-heading" className="text-sm font-bold tracking-[0.2em] uppercase">Featured Starting Points</h2>
         </div>
+        <p className="text-xs text-gray-400 mb-4">Start with fan-favorite picks, then branch into similar shows.</p>
 
-        {primaryFeatured && (
-          <>
-            <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-4">
-              <FeaturedPrimaryCard entry={primaryFeatured} className="lg:col-span-2" priority />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                {secondaryFeatured.map((entry, index) => <UniverseLinkCard key={entry.id} data={entry} compact priorityImage={index === 0} />)}
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {featuredUniverses.map((entry, index) => (
+            index === 0
+              ? <FeaturedPrimaryCard key={entry.id} entry={entry} priority className="md:col-span-2" />
+              : <UniverseLinkCard key={entry.id} data={entry} compact priorityImage={index === 1} />
+          ))}
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {featuredUniverses.map((entry) => (
+            <span key={entry.id} className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] tracking-[0.14em] uppercase text-gray-300">
+              {entry.id === highlights.mostComplexId && 'Most Complex · '}
+              {entry.id === highlights.mostStrategicId && 'Most Strategic · '}
+              {entry.anime}
+            </span>
+          ))}
+        </div>
+      </section>
+      <div className="max-w-6xl mx-auto px-6"><div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" /></div>
+
+      <section className="max-w-6xl mx-auto px-6 pt-8 pb-7" aria-labelledby="quick-insights-heading">
+        <div className="flex items-center justify-between gap-3 mb-3">
+          <h2 id="quick-insights-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Quick Insights</h2>
+          <span className="text-[10px] text-gray-500 uppercase tracking-[0.16em]">Easy to share</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {quickInsights.map((item) => (
+            <Link
+              key={item.id}
+              to={`/universe/${item.id}`}
+              className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 hover:border-cyan-300/40 transition-colors"
+            >
+              <p className="text-[10px] text-cyan-200 uppercase tracking-[0.16em] mb-2">{item.anime}</p>
+              <p className="text-xs text-gray-200 leading-relaxed">“{item.insight}”</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <div className="max-w-6xl mx-auto px-6"><div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" /></div>
+
+      <section id="continue-next-paths" className="max-w-6xl mx-auto px-6 pt-8 pb-7" aria-labelledby="continue-pathways-heading">
+        <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 md:px-5">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <h2 id="continue-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Where to Go Next</h2>
+            <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">See all titles →</Link>
+          </div>
+          <div className="mb-4 rounded-xl border border-white/10 bg-[#080a12] p-3 md:p-4">
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-cyan-200">Compare systems</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-[0.14em]">Pick any two</p>
             </div>
-
-            <div className="lg:hidden -mx-1 px-1 overflow-x-auto snap-x snap-mandatory pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <div className="flex gap-3 w-max pr-1">
-                <FeaturedPrimaryCard entry={primaryFeatured} priority className="snap-start w-[88vw] max-w-[460px] shrink-0" />
-                {secondaryFeatured.map((entry, index) => (
-                  <div key={entry.id} className="snap-start w-[78vw] max-w-[360px] shrink-0">
-                    <UniverseLinkCard data={entry} compact priorityImage={index === 0} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+              <select value={compareLeftId} onChange={(e) => setCompareLeftId(e.target.value)} className="h-10 rounded-lg border border-white/10 bg-black/30 px-2 text-xs">
+                {UNIVERSE_CATALOG.map((entry) => <option key={entry.id} value={entry.id}>{entry.anime}</option>)}
+              </select>
+              <select value={compareRightId} onChange={(e) => setCompareRightId(e.target.value)} className="h-10 rounded-lg border border-white/10 bg-black/30 px-2 text-xs">
+                {UNIVERSE_CATALOG.map((entry) => <option key={entry.id} value={entry.id}>{entry.anime}</option>)}
+              </select>
+            </div>
+            {comparison && (
+              <div className="rounded-lg border border-white/10 bg-white/5 overflow-hidden">
+                <div className="grid grid-cols-2 border-b border-white/10">
+                  <p className="px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-cyan-200">{comparison.left.anime}</p>
+                  <p className="px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-cyan-200 border-l border-white/10">{comparison.right.anime}</p>
+                </div>
+                {[
+                  { label: 'System Type', left: comparison.left.powerSystemType, right: comparison.right.powerSystemType },
+                  { label: 'Combat Style', left: comparison.left.combatStyle, right: comparison.right.combatStyle },
+                  { label: 'Complexity', left: String(comparison.left.complexity), right: String(comparison.right.complexity) },
+                  { label: 'Strategy vs Power', left: comparison.left.strategyVsRaw, right: comparison.right.strategyVsRaw },
+                ].map((row) => (
+                  <div key={row.label} className="grid grid-cols-1 md:grid-cols-[160px_1fr_1fr] border-b border-white/10 last:border-b-0">
+                    <p className="px-3 py-2 text-[10px] uppercase tracking-[0.14em] text-gray-500 bg-black/20">{row.label}</p>
+                    <p className="px-3 py-2 text-[11px] text-gray-200">{row.left}</p>
+                    <p className="px-3 py-2 text-[11px] text-gray-200 border-l border-white/10">{row.right}</p>
                   </div>
                 ))}
               </div>
-            </div>
-          </>
-        )}
-      </section>
-
-
-
-      <section className="max-w-6xl mx-auto px-6 pb-2" aria-labelledby="cluster-pathways-heading">
-        <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 md:px-5">
-          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <h2 id="cluster-pathways-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Browse by System Structure</h2>
-            <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">View full catalog →</Link>
+            )}
           </div>
-          <p className="text-[11px] text-gray-400 mb-3">Quick paths into related anime universes without opening the full catalog.</p>
+          <p className="text-[11px] text-gray-400 mb-3">
+            {continuation.continueEntry
+              ? `Pick up where you left off with ${continuation.continueEntry.anime}.`
+              : 'New here? Start with our top picks below.'}
+          </p>
+          {continuation.continueEntry && (
+            <div className="mb-3">
+              <Link
+                to={`/universe/${continuation.continueEntry.id}`}
+                className="inline-flex items-center gap-2 min-h-[40px] px-3 py-2 rounded-full border border-cyan-300/40 bg-cyan-400/10 hover:border-cyan-300/60 text-[10px] tracking-[0.16em] uppercase text-gray-100 transition-colors"
+              >
+                <RouteIcon className="w-3.5 h-3.5" />
+                Continue {continuation.continueEntry.anime}
+              </Link>
+            </div>
+          )}
+          <div className="flex flex-wrap gap-2 mb-3">
+            {continuation.nextComparisons.map((row) => (
+              <Link
+                key={row.entry.id}
+                to={`/universe/${row.entry.id}`}
+                className="inline-flex items-center gap-2 min-h-[40px] px-3 py-2 rounded-full border border-white/10 bg-[#090b14] hover:border-cyan-300/40 text-[10px] tracking-[0.16em] uppercase text-gray-200 transition-colors"
+              >
+                <span>{row.entry.anime}</span>
+                <span className="text-gray-500 normal-case tracking-normal">{row.reason}</span>
+              </Link>
+            ))}
+          </div>
           <div className="flex flex-wrap gap-2">
-            {discoveryClusters.map(cluster => (
+            {continuation.editorPicks.map((entry) => (
+              <Link
+                key={entry.id}
+                to={`/universe/${entry.id}`}
+                className="inline-flex items-center gap-2 min-h-[40px] px-3 py-2 rounded-full border border-emerald-300/30 bg-emerald-500/5 hover:border-emerald-300/50 text-[10px] tracking-[0.16em] uppercase text-gray-200 transition-colors"
+              >
+                <LibraryBig className="w-3.5 h-3.5 text-emerald-300" />
+                Top pick: {entry.anime}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {clusterLinks.map((cluster) => (
               <Link
                 key={cluster.key}
                 to={`/universes?cluster=${cluster.key}`}
-                className="inline-flex items-center gap-2 min-h-[40px] px-3 py-2 rounded-full border border-white/10 bg-[#090b14] hover:border-cyan-300/40 text-[10px] tracking-[0.16em] uppercase text-gray-200 transition-colors"
+                className="inline-flex items-center gap-2 min-h-[36px] px-3 py-1.5 rounded-full border border-white/10 bg-[#090b14] hover:border-cyan-300/40 text-[10px] tracking-[0.12em] uppercase text-gray-300 transition-colors"
               >
-                <span>{cluster.shortLabel}</span>
-                <span className="text-gray-500">{cluster.count}</span>
+                <span>Compare in {cluster.shortLabel}</span>
+                <span className="text-gray-500">{cluster.count} universes</span>
               </Link>
             ))}
           </div>
@@ -274,18 +452,22 @@ function Home() {
 
       {deferSecondary && (
         <Suspense fallback={null}>
-          <CommunityPulse />
+          <CommunityPulse quickVoteCandidates={requestCandidates} />
         </Suspense>
       )}
 
       <footer className="mt-12 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
+        <div className="max-w-4xl text-center px-6">
+          <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-300/80">Compare. Discover. Rewatch Smarter.</p>
+          <p className="text-[11px] text-gray-400 mt-2">See how your favorite anime worlds handle power, strategy, and big turning points.</p>
+        </div>
         <div className="flex flex-wrap justify-center gap-3">
           <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">
             <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">@HASHI.AI</span>
             <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors" />
           </a>
           <a href={SUPPORT_URL} target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300">
-            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">Support the archive</span>
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">Support this project</span>
             <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-emerald-400 transition-colors" />
           </a>
         </div>
@@ -417,6 +599,11 @@ function UniverseRoute() {
   const structuredData = buildUniverseStructuredData(preview)
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [normalizedId])
+
+  useEffect(() => {
     if (!normalizedId) return
 
     const siblings = getRelatedUniverseSuggestions(UNIVERSE_CATALOG, normalizedId, 2)
@@ -429,6 +616,8 @@ function UniverseRoute() {
     let cancelled = false
 
     async function resolveUniverse() {
+      setIsLoading(true)
+      setData(null)
       if (!normalizedId || !UNIVERSE_CATALOG_MAP[normalizedId]) {
         navigate('/', { replace: true })
         return
@@ -524,6 +713,7 @@ export default function App() {
 
   return (
     <>
+      <RouteScrollReset />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/universes" element={<UniversesCatalogRoute />} />

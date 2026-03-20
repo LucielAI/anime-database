@@ -128,9 +128,14 @@ Payloads should follow **scope-fit density**: tight universes remain compact, wh
 
 ## Discovery & Scale Defaults
 
+- Homepage is a guided system-exploration hub (structure taxonomy → featured systems → continuation paths → browse → community).
 - Homepage shows selected universe slices (not full-list rendering) to stay fast as the archive grows.
 - Universe pages show a small related-universe set + clear path to `/universes`.
 - Catalog browsing uses metadata-only sorting/search; full payload JSON remains route-lazy.
+
+Homepage implementation contract:
+- `docs/HOMEPAGE_SPEC.md`
+- `docs/HOMEPAGE_DATA_CONTRACT.md`
 
 ## Development
 

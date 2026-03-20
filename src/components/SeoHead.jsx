@@ -25,13 +25,14 @@ function ensureLink(selector, attrs) {
   })
 }
 
-export default function SeoHead({ title, description, canonicalUrl, image, type = 'website', structuredData = [] }) {
+export default function SeoHead({ title, description, canonicalUrl, image, type = 'website', keywords = '', structuredData = [] }) {
   useEffect(() => {
     if (!title) return
 
     document.title = title
 
     ensureMeta('meta[name="description"]', { name: 'description', content: description || '' })
+    if (keywords) ensureMeta('meta[name="keywords"]', { name: 'keywords', content: keywords })
     ensureMeta('meta[name="robots"]', { name: 'robots', content: 'index, follow, max-image-preview:large' })
 
     ensureMeta('meta[property="og:title"]', { property: 'og:title', content: title })
@@ -60,7 +61,7 @@ export default function SeoHead({ title, description, canonicalUrl, image, type 
       script.textContent = JSON.stringify(schema)
       document.head.appendChild(script)
     })
-  }, [title, description, canonicalUrl, image, type, structuredData])
+  }, [title, description, canonicalUrl, image, type, keywords, structuredData])
 
   return null
 }

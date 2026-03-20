@@ -26,12 +26,13 @@ function buildUniverseDescription(preview) {
 
 export function buildHomeSeo(catalog = []) {
   const description = truncate(
-    `Anime Architecture Archive is a curated anime analysis archive for fictional worlds. Explore ${catalog.length}+ universe pages with power system breakdowns, faction structures, hierarchy dynamics, and cross-universe comparisons.`
+    `Explore anime power systems, anime analysis, and anime comparison in one archive. Compare ${catalog.length}+ anime worlds for strategy, combat logic, and worldbuilding structure.`
   )
 
   return {
-    title: SITE_NAME,
+    title: `Anime Power Systems Analysis Archive | Compare Anime Worlds`,
     description,
+    keywords: 'anime power systems, anime analysis, anime comparison, best anime systems, anime worldbuilding',
     canonicalUrl: `${SITE_URL}/`,
     image: DEFAULT_OG_IMAGE,
     type: 'website',
@@ -85,7 +86,10 @@ export function buildUniverseSeo(preview) {
   }
 }
 
-export function buildHomeStructuredData(catalog = []) {
+export function buildHomeStructuredData(catalog = [], options = {}) {
+  const featuredUniverses = options.featuredUniverses || []
+  const structureGroups = options.structureGroups || []
+
   return [
     {
       '@context': 'https://schema.org',
@@ -109,6 +113,29 @@ export function buildHomeStructuredData(catalog = []) {
         '@type': 'CreativeWork',
         name: `${entry.anime} System Analysis`,
         url: `${SITE_URL}/universe/${entry.id}`,
+      })),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Top Featured Archive Systems',
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      numberOfItems: featuredUniverses.length,
+      itemListElement: featuredUniverses.map((entry, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${SITE_URL}/universe/${entry.id}`,
+        name: entry.anime,
+      })),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Explore by System Structure',
+      itemListElement: structureGroups.map((group, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: `${group.label} (${group.count})`,
       })),
     },
     {

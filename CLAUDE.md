@@ -15,6 +15,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 | Validate / QA before integration | `playbooks/04-verify-universe.md` |
 | Sync docs after adding a universe | `playbooks/05-docs-sync.md` |
 | Field schema, enums, themeColors shape | `playbooks/06-payload-field-reference.md` |
+| Homepage architecture/data-contract updates | `playbooks/07-homepage-system-hub.md` |
 | Renderer selection logic | `docs/RENDERER_CONTRACT.md` |
 | Pipeline stages reference | `docs/UNIVERSE_PIPELINE.md` |
 | Repo-native universe build prompt | `docs/MASTER_UNIVERSE_BUILD_PROMPT.md` |
@@ -32,6 +33,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 | Homepage display order | `preferredOrder` array in `src/data/index.js` |
 | Supported renderers + structural profiles | `docs/RENDERER_CONTRACT.md` |
 | Presentation config keys (motifs, overlays, colors) | `src/config/universePresentation.js` |
+| Homepage architecture contract | `src/config/homepageContract.js` + `docs/HOMEPAGE_SPEC.md` |
 | Validation rules (enforced schema) | `src/utils/validateSchema.js` |
 
 ---
