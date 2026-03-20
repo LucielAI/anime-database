@@ -37,7 +37,9 @@ if (!fs.existsSync(robotsPath)) {
 } else {
   const robots = fs.readFileSync(robotsPath, 'utf8')
   if (!robots.includes('Sitemap: https://animearchive.app/sitemap.xml')) failures.push('robots.txt missing sitemap directive')
-  if (robots.includes('Disallow: /')) failures.push('robots.txt blocks entire site')
+  // Check for Disallow: / (blocks entire site) — but allow Disallow: /api/ etc.
+  const disallowRootPattern = /^Disallow:\s*\/$/m
+  if (disallowRootPattern.test(robots)) failures.push('robots.txt blocks entire site')
 }
 
 if (!fs.existsSync(indexHtmlPath)) {

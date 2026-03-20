@@ -84,6 +84,7 @@ export default function Dashboard({ data }) {
   const heroRef = useRef(null)
   const [isHeroVisible, setIsHeroVisible] = useState(true)
   const [showMonetizationBar, setShowMonetizationBar] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
   const relatedUniverses = useMemo(() => getRelatedUniverseSuggestions(UNIVERSE_CATALOG, data?.id, 3), [data?.id])
@@ -125,6 +126,18 @@ export default function Dashboard({ data }) {
       saveNavState(data.id, activeTab, window.scrollY);
     };
   }, [data?.id, activeTab]);
+
+  // Scroll-to-top button visibility
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > window.innerHeight)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     if (typeof window === 'undefined' || !heroRef.current) return undefined
@@ -565,6 +578,20 @@ export default function Dashboard({ data }) {
           SHARE FRAME
         </button>
       </div>
+
+      {/* Scroll to Top */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`fixed right-5 bottom-[max(env(safe-area-inset-bottom),24px)] z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-xl transition-all duration-300 cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center share-frame-hide ${
+          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
+        style={{ color: theme.primary }}
+        aria-label="Scroll to top"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="18 15 12 9 6 15" />
+        </svg>
+      </button>
 
       {/* AI Insight Panel */}
       <div className="share-frame-hide">

@@ -523,5 +523,6 @@
     "microHook": "Read the matchup economy before ranking strength.",
     "thesis": "Demon Slayer is fundamentally a kill-economy matchup system: each duel is decided by how breathing forms, blood arts, poison, sunlight cons…",
     "primarySystemType": "power_engine"
-  }
+  },
+  "introductionSummary": "Demon Slayer maps a nocturnal immortality economy — demons feeding on humans in exchange for supernatural abilities — against a corps of demon slayers burning their own lifespan for solar-grade kill windows. Each breathing style, blood art, and sunlight constraint creates a kill-economy matchup system where the question isn't who is stronger, but who has the right counter at the right distance."
 }

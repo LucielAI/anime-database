@@ -41,10 +41,11 @@ export function buildHomeSeo(catalog = []) {
 
 
 export function buildCatalogSeo(catalog = []) {
-  const description = truncate(`Browse ${catalog.length}+ anime universes in a searchable, sortable archive catalog built for power system comparison, faction analysis, and worldbuilding study.`)
+  const count = catalog.length
+  const description = truncate(`Browse ${count} anime universes in a searchable, sortable archive catalog built for power system comparison, faction analysis, and worldbuilding study. Filter by cluster, sort by latest or most viewed.`)
 
   return {
-    title: `Universe Catalog | ${SITE_NAME}`,
+    title: `Browse ${count} Anime Universe Analyses | ${SITE_NAME}`,
     description,
     canonicalUrl: `${SITE_URL}/universes`,
     image: DEFAULT_OG_IMAGE,
@@ -53,7 +54,7 @@ export function buildCatalogSeo(catalog = []) {
 }
 
 export function buildCatalogStructuredData(catalog = []) {
-  return [
+  const schemas = [
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
@@ -65,13 +66,38 @@ export function buildCatalogStructuredData(catalog = []) {
         name: SITE_NAME,
         url: `${SITE_URL}/`,
       },
+      numberOfItems: catalog.length,
       hasPart: catalog.map((entry) => ({
         '@type': 'CreativeWork',
         name: `${entry.anime} System Analysis`,
         url: `${SITE_URL}/universe/${entry.id}`,
+        description: entry.tagline || '',
       })),
     },
   ]
+
+  // Add per-universe ItemPage schemas for better SERP presence
+  catalog.forEach((entry) => {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'ItemPage',
+      name: `${entry.anime} | ${SITE_NAME}`,
+      description: entry.tagline || '',
+      url: `${SITE_URL}/universe/${entry.id}`,
+      isPartOf: {
+        '@type': 'CollectionPage',
+        name: `${SITE_NAME} Universe Catalog`,
+        url: `${SITE_URL}/universes`,
+      },
+      about: {
+        '@type': 'Thing',
+        name: entry.anime,
+        description: entry.tagline || '',
+      },
+    })
+  })
+
+  return schemas
 }
 
 export function buildUniverseSeo(preview) {

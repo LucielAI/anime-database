@@ -611,5 +611,6 @@
     "microHook": "Track control edges before reading motives.",
     "thesis": "HxH is defined by conditional alliances, asymmetric information, and binding contractual power — the node-graph maps the strategic web wher…",
     "primarySystemType": "entity_db"
-  }
+  },
+  "introductionSummary": "Hunter x Hunter operates as a contractual power economy where Nen conditions, professional licenses, and information asymmetry continuously rebalance who can fight whom under what circumstances. The node graph captures the strategic web: every relationship is a potential betrayal vector, every contract a conditional weapon, and every power-up a negotiated constraint rather than raw stat growth."
 }

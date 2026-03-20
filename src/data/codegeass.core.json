@@ -687,5 +687,6 @@
     "microHook": "Track control edges before reading motives.",
     "thesis": "Code Geass is a control-network story: Geass permissions, command chains, propaganda legitimacy, and betrayal edges continuously rewire who…",
     "primarySystemType": "entity_db"
-  }
+  },
+  "introductionSummary": "Code Geass plays out as a control-war between an occupying empire, a masked resistance cell, and one teenager who can issue absolute commands — except every order reshapes the political graph and creates new dependency edges he didn't intend. Lelouch's Geass permissions and the Knightmare frame technology continuously rewire who can give orders and who must obey. The node-graph renderer exposes what the anime's political intrigue hinges on: authority isn't seized once, it's maintained under constant renegotiation."
 }

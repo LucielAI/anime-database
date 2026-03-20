@@ -591,5 +591,6 @@
     "microHook": "Map the causal chain before judging outcomes.",
     "thesis": "Steins;Gate is structurally defined by worldline divergence and attractor field convergence.",
     "primarySystemType": "entity_db"
-  }
+  },
+  "introductionSummary": "Steins;Gate is a deterministic attractor-field prison where convergence is inevitable until it isn't — and the entire plot is one actor navigating a branching temporal graph toward an escape trajectory he can only find by understanding what he would have to sacrifice to escape it. The timeline renderer is the only lens that captures why the D-mail system creates irreversible causal forks, why the attractor field keeps pulling outcomes back to the same failures, and why the final escape requires rewriting the fundamental conditions of the experiment."
 }

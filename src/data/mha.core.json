@@ -614,5 +614,6 @@
     "microHook": "Track control edges before reading motives.",
     "thesis": "MHA is governed by control webs: HPSC policy routing, inherited and stolen Quirk chains, and ideological splinter networks that determine w…",
     "primarySystemType": "entity_db"
-  }
+  },
+  "introductionSummary": "My Hero Academia maps a society where Quirk inheritance chains, hero school institutions, and villain syndicates each form distinct control networks — and All For One and One For All represent the system's two poles of power consolidation versus power redistribution. The node graph captures what drives the narrative: not individual battles, but which institutional and Quirk dependency networks survive the collapse of hero capitalism."
 }

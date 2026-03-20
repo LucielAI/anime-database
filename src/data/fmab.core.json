@@ -578,5 +578,6 @@
     "microHook": "Track control edges before reading motives.",
     "thesis": "FMAB is structurally defined by parasitic control networks — Father routes energy through a hidden layer beneath Amestris, homunculi enforc…",
     "primarySystemType": "entity_db"
-  }
+  },
+  "introductionSummary": "Fullmetal Alchemist: Brotherhood runs on a thermodynamic ledger — every creation demands equivalent destruction — that a 400-year parasite has been systematically rigging from beneath the earth. Father's hidden control layer beneath Amestris, the homunculi's institutional dependency network, and the State Alchemists' unknowingly hijacked grid all map as nodes in a control web designed to keep the ledger permanently off-balance. The node-graph best shows who bypasses Father's firewall and how the counter-network assembles to collapse it."
 }

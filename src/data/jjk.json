@@ -674,5 +674,6 @@
     "microHook": "Read the matchup economy before ranking strength.",
     "thesis": "JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.",
     "primarySystemType": "power_engine"
-  }
+  },
+  "introductionSummary": "Jujutsu Kaisen runs on a negative energy economy where cursed energy flows between technique users according to rules of nullification, amplification, and domain expansion — fights are won by reading matchups and executing counters, not raw power. Gojo's infinity, Sukuna's slash, and Mahito's idle transfiguration each represent different branches of the same cursed technique tree, and the counter-tree renderer maps which abilities cancel each other at each level of engagement."
 }
