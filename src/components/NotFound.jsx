@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Home, Search, Compass, ArrowRight } from 'lucide-react'
-import { UNIVERSE_CATALOG } from './data/index.js'
+import { UNIVERSE_CATALOG } from '../data/index.js'
 
 function RandomUniverseButton() {
   const handleRandom = () => {

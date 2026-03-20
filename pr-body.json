@@ -1,0 +1,6 @@
+{
+  "title": "Operator Sprint Week — Full Audit Overhaul",
+  "body": "## Summary\n\n2-commit comprehensive audit of animearchive.app. All changes on operator-sprint-week branch.\n\n### SEO\n- FAQPage schema from systemQuestions on universe pages\n- HowTo schema from aiInsights on universe pages\n- Organization schema with TikTok sameAs on homepage\n- ItemPage schemas for all 15 universes in catalog\n- robots.txt: Disallow:/api/ + proper sitemap\n- sitemap.xml: all URLs including /about and /privacy\n\n### Analytics\n- trackExternalLink: TikTok, MAL, BuyMeACoffee tracked\n- trackShareButton: clipboard vs native_share tracked\n- All footer and CommunityPulse external links tracked\n\n### New Pages\n- /about — archive mission + creator info\n- /privacy — GoatCounter policy, affiliate disclosure\n- 404 NotFound — with random universe button\n\n### UX\n- Floating scroll-to-top button\n- TikTok follow CTA in homepage hero\n- About + Privacy links in footer\n\n### Data\n- introductionSummary added to all 10 missing universes (all 15 now complete)\n\n### Bug Fix\n- validateIndexing.js: fixed false-positive on Disallow:/api/\n\n### validate:all: 0 errors, 1 pre-existing warning",
+  "head": "operator-sprint-week",
+  "base": "Main"
+}
