@@ -413,8 +413,8 @@ export default function Dashboard({ data }) {
                 <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1z"/>
               </svg>
               <div className="flex flex-col">
-                <span className="text-[11px] font-bold text-white">Solo Leveling Series</span>
-                <span className="text-[9px] text-gray-400">Complete • 25 eps • English subs</span>
+                <span className="text-[11px] font-bold text-white">Own the Complete Series</span>
+                <span className="text-[9px] text-gray-400">Blu-ray • Digital • 25 Episodes</span>
               </div>
             </div>
             <a
@@ -437,15 +437,15 @@ export default function Dashboard({ data }) {
       {data?.id === 'sololeveling' && (
         <div className="max-w-6xl mx-auto px-6 mt-8 mb-12 mb-16 md:mb-24">
           <p className="text-center text-xs text-gray-500">
-            <span className="text-gray-600">Own the complete series on</span>{' '}
+            <span className="text-gray-500">Continue your watch:</span>
             <a
               href="https://www.amazon.com/dp/B0G3PC5LX2/ref=cm_sw_r_as_gl_apa_gl_i_4B03CWS4T2XWERHGFR58?linkCode=ml1&tag=hashiai-20&linkId=2377a03ae811e823cf9ba44a6d6df18a"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackAffiliateClick('sololeveling-amazon', 'sololeveling', 'amazon')}
-              className="text-cyan-400 hover:text-cyan-300 underline font-medium"
+              className="text-cyan-400 hover:text-cyan-300 font-bold tracking-wide"
             >
-              Amazon
+              Get Solo Leveling on Amazon →
             </a>
           </p>
         </div>
