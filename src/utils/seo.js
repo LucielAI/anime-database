@@ -140,6 +140,16 @@ export function buildHomeStructuredData(catalog = [], options = {}) {
     },
     {
       '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Hashi.Ai',
+      url: `${SITE_URL}/`,
+      description: 'AI-native anime architecture platform. Structured analysis of fictional universes as systems.',
+      sameAs: [
+        'https://www.tiktok.com/@hashi.ai',
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
       '@type': 'Dataset',
       name: SITE_NAME,
       description: 'Machine-readable universe analyses built around characters, rules, factions, and causality.',
@@ -154,13 +164,42 @@ export function buildHomeStructuredData(catalog = [], options = {}) {
   ]
 }
 
-export function buildUniverseStructuredData(preview) {
+export function buildUniverseStructuredData(preview, options = {}) {
   if (!preview) return []
 
   const pageUrl = `${SITE_URL}/universe/${preview.id}`
   const description = buildUniverseDescription(preview)
+  const systemQuestions = options.systemQuestions || preview.systemQuestions || []
+  const aiInsights = preview.aiInsights || []
 
-  return [
+  // Build FAQPage schema from systemQuestions
+  const faqSchema = systemQuestions.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: systemQuestions.slice(0, 8).map((q) => ({
+      '@type': 'Question',
+      name: q.question || q.q || q.title || 'What is the ' + preview.anime + ' power system?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: q.answer || q.answerText || q.summary || q.lore || '',
+      },
+    })),
+  } : null
+
+  // Build HowTo schema from aiInsights
+  const howToSchema = aiInsights.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `How to understand ${preview.anime}'s power system`,
+    description: description,
+    step: aiInsights.slice(0, 3).map((insight, i) => ({
+      '@type': 'HowToStep',
+      name: insight.title || `Step ${i + 1}`,
+      text: insight.summary || insight.text || insight.casual || insight.deep || '',
+    })),
+  } : null
+
+  const schemas = [
     {
       '@context': 'https://schema.org',
       '@type': 'CreativeWork',
@@ -188,6 +227,7 @@ export function buildUniverseStructuredData(preview) {
       creator: {
         '@type': 'Organization',
         name: 'Hashi.Ai',
+        url: 'https://animearchive.app',
       },
       license: 'https://creativecommons.org/licenses/by-nc/4.0/',
     },
@@ -210,4 +250,9 @@ export function buildUniverseStructuredData(preview) {
       ],
     },
   ]
+
+  if (faqSchema) schemas.push(faqSchema)
+  if (howToSchema) schemas.push(howToSchema)
+
+  return schemas
 }

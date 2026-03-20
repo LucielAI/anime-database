@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Flame, HeartHandshake, Radio, Send } from 'lucide-react'
+import { trackExternalLink } from '../utils/analytics'
 
 const SUPPORT_URL = 'https://buymeacoffee.com/hashiai'
 
@@ -98,6 +99,7 @@ export default function CommunityPulse({ quickVoteCandidates = [] }) {
             href="https://www.tiktok.com/@hashi.ai"
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackExternalLink('tiktok', 'https://www.tiktok.com/@hashi.ai')}
             className="min-h-[38px] px-2.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.14em] uppercase font-bold text-gray-300 inline-flex items-center gap-1.5"
           >
             <Flame className="w-3 h-3 text-cyan-400" /> Follow updates
@@ -106,6 +108,7 @@ export default function CommunityPulse({ quickVoteCandidates = [] }) {
             href={SUPPORT_URL}
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackExternalLink('buymeacoffee', SUPPORT_URL)}
             className="min-h-[38px] px-2.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] tracking-[0.14em] uppercase font-bold text-gray-300 inline-flex items-center gap-1.5"
           >
             <HeartHandshake className="w-3 h-3 text-emerald-400" /> Buy me a coffee

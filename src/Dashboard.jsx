@@ -20,7 +20,7 @@ import { getBestEntryConfig, getRelatedUniverseSuggestions } from './utils/disco
 import { getHeroContract } from './utils/heroContract'
 import { getBackgroundMotif, getRevealOverlay } from './config/universePresentation'
 import { UNIVERSE_CATALOG } from './data/index'
-import { trackCTAClick, trackOpenSystem, trackScrollDepth, trackHeroVisibility, trackShareFrame } from './utils/analytics'
+import { trackCTAClick, trackOpenSystem, trackScrollDepth, trackHeroVisibility, trackShareFrame, trackExternalLink } from './utils/analytics'
 
 const TABS = ['POWER ENGINE', 'ENTITY DATABASE', 'FACTIONS', 'CORE LAWS']
 
@@ -643,6 +643,7 @@ export default function Dashboard({ data }) {
               href={`https://myanimelist.net/anime/${data.malId}`}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackExternalLink('myanimelist', `https://myanimelist.net/anime/${data.malId}`)}
               className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase transition-all duration-300"
               style={{ color: theme.primary }}
             >
@@ -654,6 +655,7 @@ export default function Dashboard({ data }) {
             href="https://www.tiktok.com/@hashi.ai"
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackExternalLink('tiktok', 'https://www.tiktok.com/@hashi.ai')}
             className="group flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300"
           >
             <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-cyan-400 group-hover:text-white transition-colors" fill="currentColor">
@@ -667,6 +669,7 @@ export default function Dashboard({ data }) {
             href={SUPPORT_URL}
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackExternalLink('buymeacoffee', SUPPORT_URL)}
             className="group flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300"
           >
             <HeartHandshake className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white transition-colors" />

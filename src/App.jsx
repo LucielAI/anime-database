@@ -26,6 +26,10 @@ import {
   buildUniverseComparison,
   getHomepageHighlightLeaders,
 } from './config/homepageContract'
+import NotFound from './components/NotFound'
+import About from './components/About'
+import Privacy from './components/Privacy'
+import { trackExternalLink } from './utils/analytics'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
@@ -231,7 +235,20 @@ function Home() {
           >
             Explore System Structures
           </a>
-          <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white transition-colors">Browse all universes →</Link>
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white transition-colors">Browse all universes →</Link>
+            <a
+              href="https://www.tiktok.com/@hashi.ai"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase text-gray-500 hover:text-cyan-400 transition-colors"
+            >
+              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.63a8.23 8.23 0 004.79 1.53V6.71a4.85 4.85 0 01-1.03-.02z"/>
+              </svg>
+              Follow @hashi.ai
+            </a>
+          </div>
         </div>
         <div className="mt-5 text-[10px] text-white/30 tracking-widest uppercase flex flex-wrap justify-center gap-4">
           <span>[{UNIVERSE_CATALOG.length}] Universes</span>
@@ -464,14 +481,21 @@ function Home() {
           <p className="text-[11px] text-gray-400 mt-2">See how your favorite anime worlds handle power, strategy, and big turning points.</p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">
-          <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">
+          <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" onClick={() => trackExternalLink('tiktok', 'https://www.tiktok.com/@hashi.ai')} className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/30 rounded-full transition-all duration-300">
             <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">@HASHI.AI</span>
             <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors" />
           </a>
-          <a href={SUPPORT_URL} target="_blank" rel="noreferrer" className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300">
+          <a href={SUPPORT_URL} target="_blank" rel="noreferrer" onClick={() => trackExternalLink('buymeacoffee', SUPPORT_URL)} className="group flex items-center gap-2.5 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/30 rounded-full transition-all duration-300">
             <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 group-hover:text-white transition-colors uppercase">Support this project</span>
             <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-emerald-400 transition-colors" />
           </a>
+        </div>
+        <div className="flex flex-wrap justify-center gap-4 text-[10px] tracking-[0.14em] uppercase text-gray-600">
+          <a href="/about" className="hover:text-gray-400 transition-colors">About</a>
+          <span className="text-gray-700">·</span>
+          <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</a>
+          <span className="text-gray-700">·</span>
+          <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="hover:text-gray-400 transition-colors">Contact</a>
         </div>
         <p className="text-[10px] tracking-[0.2em] uppercase text-gray-300">Created by Hashi.Ai</p>
       </footer>
@@ -598,7 +622,9 @@ function UniverseRoute() {
   const [isLoading, setIsLoading] = useState(true)
   const preview = normalizedId ? UNIVERSE_CATALOG_MAP[normalizedId] : null
   const seo = buildUniverseSeo(preview)
-  const structuredData = buildUniverseStructuredData(preview)
+  const structuredData = buildUniverseStructuredData(preview, {
+    systemQuestions: data?.systemQuestions,
+  })
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -720,6 +746,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/universes" element={<UniversesCatalogRoute />} />
         <Route path="/universe/:id" element={<UniverseRoute />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {telemetry.SpeedInsights && <telemetry.SpeedInsights />}
       {telemetry.Analytics && <telemetry.Analytics />}

@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
 import { Link2, Check } from 'lucide-react'
+import { trackShareButton } from '../utils/analytics'
 
 export default function ShareButton({ title, systemLabel, url, theme }) {
   const [copied, setCopied] = useState(false)
@@ -11,6 +12,7 @@ export default function ShareButton({ title, systemLabel, url, theme }) {
     if (navigator.share) {
       try {
         await navigator.share(shareData)
+        trackShareButton('native')
         return
       } catch {
         // User cancelled or share failed — fall through to clipboard
@@ -20,6 +22,7 @@ export default function ShareButton({ title, systemLabel, url, theme }) {
     try {
       await navigator.clipboard.writeText(`${shareText}\n${url}`)
       setCopied(true)
+      trackShareButton('clipboard')
       setTimeout(() => setCopied(false), 2000)
     } catch {
       // Clipboard also failed — silent fail

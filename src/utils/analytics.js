@@ -8,6 +8,8 @@ const TRACKING_EVENTS = {
   SCROLL_DEPTH: 'scroll_depth',
   HERO_VISIBILITY: 'hero_visibility',
   SHARE_FRAME: 'share_frame',
+  EXTERNAL_LINK: 'external_link',
+  SHARE_BUTTON: 'share_button',
 }
 
 // Default tracking target (GoatCounter or console)
@@ -157,6 +159,49 @@ export function trackShareFrame(visible) {
 
   if (process.env.NODE_ENV === 'development') {
     console.log('[Analytics] Share Frame:', { visible, ...data })
+  }
+}
+
+// Track external link clicks (TikTok, MAL, BuyMeACoffee, etc.)
+export function trackExternalLink(platform, url) {
+  if (!TRACKING_CONFIG.enabled) return
+
+  const data = {
+    page: TRACKING_CONFIG.trackURL,
+    platform,
+    url: url || '',
+    event_name: TRACKING_EVENTS.EXTERNAL_LINK,
+    timestamp: Date.now(),
+  }
+
+  if (window.goatcounter) {
+    window.goatcounter.count({
+      path: `external_${platform}`,
+      title: `External Link: ${platform}`,
+      event: true,
+      data,
+    })
+  }
+}
+
+// Track share button usage
+export function trackShareButton(method) {
+  if (!TRACKING_CONFIG.enabled) return
+
+  const data = {
+    page: TRACKING_CONFIG.trackURL,
+    method: method || 'clipboard',
+    event_name: TRACKING_EVENTS.SHARE_BUTTON,
+    timestamp: Date.now(),
+  }
+
+  if (window.goatcounter) {
+    window.goatcounter.count({
+      path: `share_button_${method || 'clipboard'}`,
+      title: `Share Button: ${method || 'clipboard'}`,
+      event: true,
+      data,
+    })
   }
 }
 
