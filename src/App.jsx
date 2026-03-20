@@ -29,6 +29,7 @@ import {
 import NotFound from './components/NotFound'
 import About from './components/About'
 import Privacy from './components/Privacy'
+import CompareRoute from './components/CompareRoute'
 import { trackExternalLink } from './utils/analytics'
 
 const Dashboard = lazy(() => import('./Dashboard'))
@@ -351,7 +352,12 @@ function Home() {
           <div className="mb-4 rounded-xl border border-white/10 bg-[#080a12] p-3 md:p-4">
             <div className="flex items-center justify-between gap-2 mb-2">
               <p className="text-[10px] uppercase tracking-[0.18em] text-cyan-200">Compare systems</p>
-              <p className="text-[10px] text-gray-500 uppercase tracking-[0.14em]">Pick any two</p>
+              <Link
+                to={`/compare?left=${compareLeftId}&right=${compareRightId}`}
+                className="text-[9px] uppercase tracking-[0.14em] text-gray-500 hover:text-cyan-400 transition-colors"
+              >
+                Full comparison →
+              </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
               <select value={compareLeftId} onChange={(e) => setCompareLeftId(e.target.value)} className="h-10 rounded-lg border border-white/10 bg-black/30 px-2 text-xs">
@@ -748,6 +754,7 @@ export default function App() {
         <Route path="/universe/:id" element={<UniverseRoute />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/compare" element={<CompareRoute />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {telemetry.SpeedInsights && <telemetry.SpeedInsights />}

@@ -1,7 +1,5 @@
 import { useEffect, useState, useMemo, useRef } from 'react'
-import { loadNavState, saveNavState } from './utils/navState.js'
-import { throttle } from './utils/throttle.js'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
@@ -12,6 +10,7 @@ import AIInsightPanel from './components/AIInsightPanel'
 import ShareButton from './components/ShareButton'
 import FeedbackBlock from './components/FeedbackBlock'
 import SystemQuestionsPanel from './components/SystemQuestionsPanel'
+import KeyboardShortcutsOverlay from './components/KeyboardShortcutsOverlay'
 import { useSystemReveal } from './hooks/useSystemReveal'
 import { useShareFrame } from './hooks/useShareFrame'
 import { getClassificationLabel } from './utils/getClassificationLabel'
@@ -81,10 +80,12 @@ export default function Dashboard({ data }) {
   const [isSystemMode, setIsSystemMode] = useState(false)
   const { isRevealing, revealStep } = useSystemReveal()
   const { isShareFrame, toggleShareFrame } = useShareFrame()
+  const navigate = useNavigate()
   const heroRef = useRef(null)
   const [isHeroVisible, setIsHeroVisible] = useState(true)
   const [showMonetizationBar, setShowMonetizationBar] = useState(false)
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [showShortcuts, setShowShortcuts] = useState(false)
 
   const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
   const relatedUniverses = useMemo(() => getRelatedUniverseSuggestions(UNIVERSE_CATALOG, data?.id, 3), [data?.id])
@@ -170,6 +171,52 @@ export default function Dashboard({ data }) {
     trackHeroVisibility(isHeroVisible, (Date.now() - startTime) / 1000)
     return () => trackHeroVisibility(isHeroVisible, (Date.now() - startTime) / 1000)
   }, [isHeroVisible])
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const handleKey = (e) => {
+      // Ignore when typing in inputs
+      if (e.target.matches('input, textarea, select')) return
+
+      switch (e.key) {
+        case '?':
+          e.preventDefault()
+          setShowShortcuts(true)
+          break
+        case 'j':
+          setActiveTab((prev) => Math.min(prev + 1, 3))
+          break
+        case 'k':
+          setActiveTab((prev) => Math.max(prev - 1, 0))
+          break
+        case 't':
+          setIsSystemMode((prev) => !prev)
+          break
+        case 's':
+          document.getElementById('share-btn')?.click()
+          break
+        case 'r':
+          toggleShareFrame()
+          break
+        case 'h':
+          navigate('/')
+          break
+        case 'c':
+          navigate(`/compare?left=${data?.id}`)
+          break
+        case 'u':
+          navigate('/universes')
+          break
+        default:
+          break
+      }
+    }
+
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [data?.id, navigate, toggleShareFrame])
 
   // Track scroll depth
   useEffect(() => {
@@ -564,6 +611,7 @@ export default function Dashboard({ data }) {
       {/* Action Buttons */}
       <div className="max-w-6xl mx-auto px-6 mb-4 flex flex-wrap justify-center md:justify-end gap-3 relative z-50 share-frame-hide">
         <ShareButton
+          id="share-btn"
           title={animeName}
           systemLabel={classLabel}
           url={typeof window !== 'undefined' ? window.location.href : ''}
@@ -710,6 +758,9 @@ export default function Dashboard({ data }) {
           Unofficial fan-made interactive analysis. All characters, names, and lore belong to their respective creators and studios. Created by Hashi.Ai.
         </p>
       </footer>
+      {showShortcuts && (
+        <KeyboardShortcutsOverlay onClose={() => setShowShortcuts(false)} />
+      )}
     </div>
   )
 }
