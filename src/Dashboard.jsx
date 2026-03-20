@@ -467,7 +467,7 @@ export default function Dashboard({ data }) {
               </div>
             </div>
             <a
-              href="https://amzn.to/40FGy0n?linkCode=ml1&tag=hashiai-20"
+              href="https://www.amazon.com/dp/B0BP8Z6C52/ref=cm_sw_r_as_gl_apa_gl_i_CWK2N3JQY2M09VFD8XA1?linkCode=ml1&tag=hashiai-20&linkId=715f5e7c6b7b543316cb761fbcbaab77"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
@@ -487,7 +487,7 @@ export default function Dashboard({ data }) {
           <p className="text-center text-xs text-gray-500">
             <span className="text-gray-500">Continue your watch:</span>
             <a
-              href="https://amzn.to/40FGy0n?linkCode=ml1&tag=hashiai-20"
+              href="https://www.amazon.com/dp/B0BP8Z6C52/ref=cm_sw_r_as_gl_apa_gl_i_CWK2N3JQY2M09VFD8XA1?linkCode=ml1&tag=hashiai-20&linkId=715f5e7c6b7b543316cb761fbcbaab77"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackAffiliateClick('jjk-amazon', 'jujutsu-kaisen', 'amazon')}
@@ -514,7 +514,7 @@ export default function Dashboard({ data }) {
               </div>
             </div>
             <a
-              href="https://www.amazon.com/dp/B0BP8Z6C52/ref=cm_sw_r_as_gl_apa_gl_i_CWK2N3JQY2M09VFD8XA1?linkCode=ml1&tag=hashiai-20&linkId=715f5e7c6b7b543316cb761fbcbaab77"
+              href="https://www.amazon.com/dp/B01MR7O5UT/ref=cm_sw_r_as_gl_apa_gl_i_T2DG0N7B4VN7X0E7VPJD?linkCode=ml1&tag=hashiai-20&linkId=17aed0c66cb05488cfb934cccbc0a1ee"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
@@ -534,7 +534,7 @@ export default function Dashboard({ data }) {
           <p className="text-center text-xs text-gray-500">
             <span className="text-gray-500">Continue your watch:</span>
             <a
-              href="https://www.amazon.com/dp/B0BP8Z6C52/ref=cm_sw_r_as_gl_apa_gl_i_CWK2N3JQY2M09VFD8XA1?linkCode=ml1&tag=hashiai-20&linkId=715f5e7c6b7b543316cb761fbcbaab77"
+              href="https://www.amazon.com/dp/B01MR7O5UT/ref=cm_sw_r_as_gl_apa_gl_i_T2DG0N7B4VN7X0E7VPJD?linkCode=ml1&tag=hashiai-20&linkId=17aed0c66cb05488cfb934cccbc0a1ee"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackAffiliateClick('mha-amazon', 'mha', 'amazon')}
