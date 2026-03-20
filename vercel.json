@@ -55,7 +55,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!sitemap\\.xml|robots\\.txt|llms\\.txt|assets/|api/).*)",
+      "source": "/((?!sitemap\\.xml|robots\\.txt|llms\\.txt|assets/|api/|src/data/).*)",
       "destination": "/index.html"
     }
   ]
