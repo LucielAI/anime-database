@@ -151,25 +151,25 @@ Prevents one-off homepage redesign drift and keeps AI-agent updates reproducible
 Tradeoff:
 Requires explicit contract/doc updates whenever homepage logic changes, but avoids hidden JSX-only business logic.
 
-## ADR-013 — Keyboard Navigation (2026-03-20)
+## ADR-018 — Keyboard Navigation (2026-03-20)
 Decision:
 Universe pages support keyboard shortcuts for power-user navigation: `j/k` (prev/next tab), `t` (toggle system mode), `s` (share), `r` (share frame), `h/c/u` (navigate home/compare/universes), `?` (shortcuts overlay).
 Why:
 Archive users are engaged, analytical viewers who benefit from keyboard navigation. Reduces mouse dependency for repeat visitors.
 
-## ADR-014 — Compare Route (2026-03-20)
+## ADR-019 — Compare Route (2026-03-20)
 Decision:
 Dedicated `/compare` route for side-by-side universe comparison. Accepts `?left=` and `?right=` search params. Full comparison table across system type, combat stats, world metrics. Homepage widget links to it.
 Why:
 Structural comparison is a primary use case. Inline widget is limited — a full page enables more detailed analysis and better SEO (dedicated URL for each pair).
 
-## ADR-015 — llms.txt for AI Crawlers (2026-03-20)
+## ADR-020 — llms.txt for AI Crawlers (2026-03-20)
 Decision:
 `/public/llms.txt` generated at build time via `scripts/generateLlms.js`. Lists all universes, key pages, and archive structure in plain text. Linked in `index.html` via `<link rel="alternate" type="text/plain">`. Vercel headers serve it as `text/plain`.
 Why:
 AI agents (ChatGPT, Claude, Perplexity) crawl sites and need lightweight text representations. llms.txt is the emerging standard for this. Also improves Perplexity/Claude Search SERP presence.
 
-## ADR-016 — RSS Feed (2026-03-20)
+## ADR-021 — RSS Feed (2026-03-20)
 Decision:
 Static `/public/feed.xml` with atom link in `index.html` for RSS reader subscribers and SEO.
 Why:

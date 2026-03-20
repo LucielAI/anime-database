@@ -16,6 +16,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 | Sync docs after adding a universe | `playbooks/05-docs-sync.md` |
 | Field schema, enums, themeColors shape | `playbooks/06-payload-field-reference.md` |
 | Homepage architecture/data-contract updates | `playbooks/07-homepage-system-hub.md` |
+| Keyboard shortcuts, Compare route, llms.txt, RSS | `docs/ARCHITECTURE_DECISIONS.md` (ADR-018–021) |
 | Renderer selection logic | `docs/RENDERER_CONTRACT.md` |
 | Pipeline stages reference | `docs/UNIVERSE_PIPELINE.md` |
 | Repo-native universe build prompt | `docs/MASTER_UNIVERSE_BUILD_PROMPT.md` |
@@ -52,6 +53,9 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 - Fallback renderer hint is `standard-cards`, not `cards`.
 - Extended datasets (`slug.extended.json`) are NOT the primary arg to `add:universe`.
 - After integration, update **both** `docs/BLUEPRINT.md` and `docs/REPO_AUDIT_SUMMARY.md` — each has its own universe list. Also update the `README.md` Current Universes list.
+- Universe pages support keyboard shortcuts (`j/k` prev/next tab, `t` system mode, `s` share, `r` share frame, `h/c/u` nav, `?` overlay) — see ADR-018.
+- Compare route at `/compare` accepts `?left=` and `?right=` params — see ADR-019.
+- Community feedback at `/api/feedback` and suggestions at `/api/suggest` — Supabase-backed, no login required — see ADR-010.
 - Every entity needs both lore and system voice fields. Missing one silently breaks the LORE/SYS toggle.
 
 ---
@@ -59,13 +63,16 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 ## CLI Cheatsheet
 
 ```bash
-npm run validate:payload path/to/slug.core.json                       # validate core payload
-npm run validate:payload path/to/slug.extended.json -- --extended     # validate extended dataset
-npm run add:universe path/to/slug.core.json [slug]                    # integrate universe (auto-regenerates sitemap)
-npm run generate:sitemap                                               # regenerate public/sitemap.xml manually
-npm run build                                                          # production build (also regenerates sitemap)
-npm run test                                                           # run Vitest test suite
-python scripts/patch_jikan_images.py --file path/to/slug.json         # inject MAL images
+npm run validate:all                                              # full audit: payloads + catalog + indexing
+npm run validate:indexing                                        # verify all 15 universes are indexed correctly
+npm run validate:payload src/data/<slug>.core.json                 # validate core payload
+npm run validate:payload src/data/<slug>.extended.json -- --extended  # validate extended dataset
+npm run add:universe src/data/<slug>.core.json [slug]              # integrate universe (auto-regenerates sitemap)
+npm run generate:sitemap                                          # regenerate public/sitemap.xml manually
+npm run build                                                     # production build (regenerates sitemap + llms.txt)
+npm run test                                                      # run Vitest test suite
+npm run lint                                                      # ESLint check
+python scripts/patch_jikan_images.py --file src/data/<slug>.json   # inject MAL images
 ```
 
 ### Manual Integration (alternative to `add:universe`)
