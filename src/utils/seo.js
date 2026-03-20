@@ -148,6 +148,7 @@ export function buildHomeStructuredData(catalog = [], options = {}) {
         '@type': 'Organization',
         name: 'Hashi.Ai',
       },
+      license: 'https://creativecommons.org/licenses/by-nc/4.0/',
       isAccessibleForFree: true,
     },
   ]
@@ -174,6 +175,7 @@ export function buildUniverseStructuredData(preview) {
       },
       inLanguage: 'en',
       genre: 'Analytical reference',
+      license: 'https://creativecommons.org/licenses/by-nc/4.0/',
     },
     {
       '@context': 'https://schema.org',
@@ -187,6 +189,7 @@ export function buildUniverseStructuredData(preview) {
         '@type': 'Organization',
         name: 'Hashi.Ai',
       },
+      license: 'https://creativecommons.org/licenses/by-nc/4.0/',
     },
     {
       '@context': 'https://schema.org',
