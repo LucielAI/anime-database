@@ -1,40 +1,258 @@
 {
   "anime": "Black Clover",
-  "tagline": "A magic oligopoly where grimoire class determines political economy and ki manipulation creates combat arbitrage.",
+  "tagline": "A mana-talent hierarchy where five-leaf corruption and anti-magic nullification define the ceiling — and Julius Novachrono's time magic sits above all.",
   "malId": 34572,
   "visualizationHint": "counter-tree",
-  "visualizationReason": "Black Clover is defined by magic attribute counters, grimoire等级 hierarchies, and Devil Union counter-systems — the counter-tree maps how elemental affinities nullify or amplify each other in magical combat.",
-  "headerFlavor": {"loreQuote":"I'll show you what my magic can do!","sysWarning":"// [SYS_OP]: GRIMOIRE CLASSIFICATION ACTIVE — ANTI-MAGIC GRID ONLINE","sysWarningColor":"green"},
-  "backgroundMotif":"circles",
-  "revealOverlay":"pulse-purple",
-  "introductionSummary":"Black Clover operates as a magic oligopoly where grimoire class (the book that determines a mage's spell capacity and attribute) functions as a social mobility gate. Asta was born without magic in a world where magic is everything — his Anti-Magic gives him a permanent counter position against all magical opponents.",
-  "aiInsights":{"casual":"Black Clover is about a guy with no magic in a magic world who gets the rarest grimoire ever (five-leaf clover) that gives him anti-magic — basically making him immune to all magic.","deep":"The universe's power system is a magic oligopoly where grimoire class determines your social mobility ceiling. Asta's anti-magic is a permanent arbitrage position: it doesn't matter how powerful your magic is, if he can cancel it entirely, he's always relevant."},
-  "animeImageUrl":"https://myanimelist.net/images/anime/1173/92110l.jpg",
-  "themeColors":{"primary":"#166534","secondary":"#0f172a","accent":"#eab308","glow":"rgba(22,101,52,0.35)","tabActive":"#22c55e","badgeBg":"rgba(234,179,8,0.15)","badgeText":"#fef08a","modeGlow":"rgba(22,197,94,0.3)","heroGradient":"rgba(15,23,42,0.94)"},
-  "powerSystem":[
-    {"name":"Mana Zone","subtitle":"Mana Sensing and Amplification","loreDesc":"The highest level of magic control: surrounding yourself with mana to increase the power and precision of all spells beyond normal limits.","systemDesc":"An environmental mana capture system that scales spell output by 10x through surrounding the caster with ambient mana.","icon":"Sparkles","color":"blue-400","signatureMoment":"Yami achieving Mana Zone against the elf Licita, demonstrating his growth as a mage.","loreSubtitle":"Mana Sensing and Amplification","systemSubtitle":"Environmental Mana Capture"},
-    {"name":"Devil Union","subtitle":"Anti-Magic Devil Contract","loreDesc":"Asta's five-leaf clover grimoire contains a devil named Liebe, granting him Anti-Magic — the ability to nullify all magic.","systemDesc":"A permanent counter-capability that creates a zero-cancel against any magical opponent: Anti-Magic doesn't counter specific abilities, it cancels the mana substrate itself.","icon":"Zap","color":"red-400","signatureMoment":"Asta and Liebe achieving Devil Union for the first time against the demon Dada — Liebe as a tiny living anti-magic entity.","loreSubtitle":"Anti-Magic Devil Contract","systemSubtitle":"Zero-Cancel Magic Counter"}},
-  "rankings":{"systemName":"Black Clover Magic Hierarchy","topTierName":"Wizard King","topTierLore":"The Wizard King represents the highest mana output and magical capability in the Clover Kingdom.","topTierSystem":"Maximum mana capacity and versatile spell deployment.","tiers":[{"name":"Magic Knight Captain","loreDesc":"The 9 captains who lead each of the Magic Knight squads.","systemDesc":"High-mana output nodes with squad-level authority."},{"name":"Magic Knight","loreDesc":"Standard Magic Knights with assigned squad roles.","systemDesc":"Baseline magical military nodes."}]},
-  "factions":[
-    {"name":"Clover Kingdom Magic Knights","loreDesc":"The kingdom's military organization — 9 squads competing for prestige while protecting the kingdom.","systemDesc":"A competitive military network where squad rivalry creates internal competition for resources and prestige.","icon":"Shield","color":"green-400"},
-    {"name":"Spade Kingdom","loreDesc":"The rival kingdom that creates Dark Triad disciples and threatens the Clover Kingdom.","systemDesc":"A military competitor using forbidden magic research to create enhanced combat nodes.","icon":"Skull","color":"red-400"},
-    {"name":"Eye of the Midnight Sun (Elves)","loreDesc":"A reincarnated elf faction seeking revenge on the Clover Kingdom for the genocide of their people 1000 years ago.","systemDesc":"A reincarnation-enabled adversarial network with 1000-year grudge optimization.","icon":"Eye","color":"purple-400"}}],
-  "rules":[
-    {"name":"Anti-Magic Cancels All Magic","loreDesc":"Asta's Anti-Magic doesn't counter specific spells — it nullifies the mana substrate itself, making all magical attacks equally vulnerable regardless of power level.","loreConsequence":"The most powerful mage in the world is equally vulnerable to Anti-Magic as the weakest mage.","systemEquivalent":"A universal counter that applies regardless of opponent capability ceiling — making every magical opponent equally vulnerable.","severity":"fatal","loreSubtitle":"Universal Magic Nullification","systemSubtitle":"Mana-Substrate Zero-Cancel"}],
-  "characters":[
-    {"name":"Asta","title":"Peasant / Anti-Magic Wielder","rank":"Black Bull Vice-Captain","dangerLevel":9,"loreBio":"Born with zero magic in a world where magic determines everything, Asta received the five-leaf clover grimoire containing the anti-magic devil Liebe.","systemBio":"A zero-to-magic node with a permanent universal counter capability — his value doesn't scale with opponent power level, it stays constant.","gradientFrom":"green-900","gradientTo":"slate-900","accentColor":"green-400","icon":"Zap","signatureMoment":"Using Anti-Magic swords to cut through the Word of God magic that should have been unbreakable — demonstrating his universal nullification capability.","imageUrl":"https://cdn.myanimelist.net/images/characters/6/424967.jpg?s=9b4a9f8c5c89c2b6e7e9d8e7e7e7e7e","malId":null,"systemRole":"protagonist","classificationTag":"anti-magic","keyAbility":"Anti-Magic Swords / Ki Sensing / Devil Union"},
-    {"name":"Yuno","title":"Royal / Wind Magic Prodigy","rank":"Golden Dawn Captain","dangerLevel":9,"loreBio":"Asta's rival and the other orphan from their village, Yuno has wind magic prodigy-level talent and the mysterious grimoire of the spirits.","systemBio":"A high-mana wind magic node with spirit grimoire access — his dual capability stack makes him one of the highest ceiling combatants in the series.","gradientFrom":"blue-900","gradientTo":"green-900","accentColor":"blue-400","icon":"Wind","signatureMoment":"Achieving mana zone and Spirit Dive simultaneously — demonstrating the combination of wind magic and spirit-world access.","imageUrl":"https://cdn.myanimelist.net/images/characters/8/437776.jpg?s=8e3e9e9e9e9e9e9e9e9e9e9e9e9e9e","malId":null,"systemRole":"rival","classificationTag":"wind-mage","keyAbility":"Wind Magic / Spirit Dive / Mana Zone"},
-    {"name":"Julius Novachrono","title":"Wizard King / Time Magic","rank":"Wizard King","dangerLevel":10,"loreBio":"The current Wizard King, the only time magic user in the series, whose ability to slow his own time makes him the most powerful mage in the world.","systemBio":"A time-manipulation node that creates a personal time-dilation advantage — he fights at a different speed than any opponent.","gradientFrom":"purple-900","gradientTo":"blue-900","accentColor":"purple-400","icon":"Clock","signatureMoment":"Using his time magic to counter and capture the demon Dada's attacks, demonstrating that his power comes from information advantage, not raw magic.","imageUrl":null,"_fetchFailed":true,"malId":null,"systemRole":"mentor","classificationTag":"time-mage","keyAbility":"Time Magic / Chrono Stasis / Future Sight"}],
-  "relationships":[
-    {source:"Asta",target:"Yuno",type:"ally",loreDesc:"Brothers raised in the same orphanage, Asta and Yuno push each other through rivalry — their bond is the emotional core of the series.",systemDesc:"A mutual capability amplification edge: each node's success creates pressure on the other to exceed their previous ceiling.",weight:10,systemEdgeType:"mutual-amplification"}],
-  "counterplay":[
-    {id:"bc-cp-1",attacker:"Anti-Magic",defender:"Physical Combat",mechanic:"Anti-Magic cancels mana but not physical attacks — a purely physical fighter with no magical abilities would be completely immune to Anti-Magic.",loreDesc:"The demons in the series who use physical attacks rather than magic are the most effective against Asta.","systemDesc":"A non-magical combat path that bypasses the anti-magic counter entirely.",loreSubtitle:"Physical Combat Bypasses Anti-Magic",systemSubtitle:"Non-Magical Combat Path"}],
-  "causalEvents":[
-    {id:"bc-ce1",name:"Asta's Grimoire Reveal",trigger:"The five-leaf clover grimoire appears for Asta on Grimoire Acceptance Day",consequence:"Asta receives Anti-Magic and Liebe as a contracted devil, giving him the ability to compete in a magic world despite having no magic",timelinePosition:"Series start — the enabling event",loreDesc:"The rarest grimoire in history contains a living devil and anti-magic — the five-leaf clover represents a corruption of the magic system itself.",systemDesc:"A corruption-event that introduced a permanent counter-capability into the magic economy.",loreSubtitle:"The Five-Leaf Grimoire",systemSubtitle:"Corruption-Capability Introduction"}],
-  "anomalies":[
-    {name:"The Five-Leaf Grimoire","loreDesc":"The five-leaf clover grimoire is extraordinarily rare and contains devils — it represents a corruption of the normal three/four-leaf grimoire system.","systemDesc":"An anomalous artifact that contains entities (devils) not normally part of the magic system, giving the holder capabilities outside the normal magic economy.","impact":"Asta's anti-magic is a permanent arbitrage position that destabilizes the entire magic hierarchy.","ruleViolated":"Grimoire class determines magic capability — five-leaf grimoires shouldn't exist",loreSubtitle:"Five-Leaf Corruption Grimoire",systemSubtitle":"Anomalous Artifact System"}],
-  "systemQuestions":[
-    {question:"Why is Asta's Anti-Magic so powerful?",answer:"Anti-Magic cancels mana itself, not specific spells — it doesn't matter how powerful the spell is, if it uses mana, Anti-Magic can cancel it.",tabIndex:0},
-    {question:"What makes the Wizard King the strongest?",answer:"Time magic gives Julius Novachrono a personal time-dilation advantage — he experiences more time in combat than his opponents, giving him a fundamental information and speed advantage.",tabIndex:1}],
-  "hero":{systemType:"counterplay",microHook:"No magic? No problem. I'll cut through it all.",thesis:"Asta's lack of magic is his greatest strength — Anti-Magic is the one ability that works against everyone equally, making him the most universally relevant fighter regardless of opponent power level.",primarySystemType:"power_engine"}
+  "visualizationReason": "Black Clover's combat system is defined by mana hierarchy and anti-magic nullification — the counter-tree maps how mana tier, anti-magic negation, and time dilation create a strict combat dominance ordering.",
+  "animeImageUrl": "https://myanimelist.net/images/anime/2/88336l.jpg",
+  "headerFlavor": {
+    "loreQuote": "I'll show you what a man with nothing can do!",
+    "sysWarning": "// [SYS_OP]: MANA DETECTION ACTIVE — GRIMOIRE CLASSIFICATION ENFORCED",
+    "sysWarningColor": "green"
+  },
+  "themeColors": {
+    "primary": "#22c55e",
+    "secondary": "#1f2937",
+    "accent": "#86efac",
+    "glow": "rgba(34,197,94,0.3)",
+    "tabActive": "#22c55e",
+    "badgeBg": "rgba(34,197,94,0.15)",
+    "badgeText": "#bbf7d0",
+    "modeGlow": "rgba(134,239,172,0.25)",
+    "heroGradient": "rgba(15,23,42,0.92)"
+  },
+  "stats": {
+    "characters": 8,
+    "powerSystem": 2,
+    "rules": 2
+  },
+  "hero": {
+    "systemType": "counterplay",
+    "microHook": "No magic? No problem. I'll cut through it all.",
+    "thesis": "Black Clover's power ceiling is defined by mana capacity and anti-magic nullification — but the five-leaf grimoire and Julius's time magic represent system anomalies that transcend the normal hierarchy.",
+    "primarySystemType": "power_system"
+  },
+  "powerSystem": [
+    {
+      "name": "Mana Zone",
+      "subtitle": "Mana Sensing and Amplification",
+      "loreDesc": "The highest level of magic control: surrounding yourself with mana to increase the power and precision of all spells beyond normal limits.",
+      "systemDesc": "An environmental mana capture system that scales spell output by 10x through surrounding the caster with ambient mana.",
+      "icon": "Sparkles",
+      "color": "blue-400",
+      "signatureMoment": "Yami achieving Mana Zone against the elf Licita.",
+      "loreSubtitle": "Mana Sensing",
+      "systemSubtitle": "Environmental Capture"
+    },
+    {
+      "name": "Anti-Magic",
+      "subtitle": "Mana Nullification",
+      "loreDesc": "Asta's five-leaf clover grimoire contains a devil named Liebe, granting him Anti-Magic — the ability to nullify all magic.",
+      "systemDesc": "A permanent counter-capability: Anti-Magic cancels mana itself, not specific spells, giving zero-cancel against any magical opponent.",
+      "icon": "Zap",
+      "color": "gray-900",
+      "signatureMoment": "Asta cancelling Ladros's magic attack.",
+      "loreSubtitle": "Mana Nullification",
+      "systemSubtitle": "Zero-Cancel"
+    }
+  ],
+  "rankings": {
+    "systemName": "Black Clover Power Hierarchy",
+    "topTierName": "Apex",
+    "topTierLore": "The supreme capability tier in Black Clover.",
+    "topTierSystem": "Maximum capability across all measured dimensions.",
+    "tiers": [
+      {
+        "name": "A-Tier",
+        "loreDesc": "Exceptional capability holders with system-shaping influence.",
+        "systemDesc": "Top-tier combat/economic nodes."
+      },
+      {
+        "name": "B-Tier",
+        "loreDesc": "Competent operators with meaningful impact potential.",
+        "systemDesc": "Mid-tier capability nodes."
+      },
+      {
+        "name": "C-Tier",
+        "loreDesc": "Standard actors within the system.",
+        "systemDesc": "Baseline capability nodes."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Black Clover Universe",
+      "loreDesc": "The primary world of the story.",
+      "systemDesc": "Central narrative environment.",
+      "icon": "Globe",
+      "color": "blue-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Mana Determines Magical Ceiling",
+      "loreDesc": "The amount of mana a mage possesses directly determines their combat potential — those with more mana can overwhelm those with less regardless of skill.",
+      "systemDesc": "A resource-capability correlation: mana volume = tier placement in the combat hierarchy.",
+      "loreSubtitle": "Mana Hierarchy",
+      "systemSubtitle": "Resource Dominance"
+    },
+    {
+      "name": "Anti-Magic Cancels All Magic",
+      "loreDesc": "Asta's Anti-Magic doesn't counter specific spells — it nullifies the mana substrate itself.",
+      "systemDesc": "A universal counter: capability ceiling removal against any magical opponent.",
+      "loreSubtitle": "Mana Nullification",
+      "systemSubtitle": "Universal Counter"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Main",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Main character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Main",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Main character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Main",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Main character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Black Clover.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Unknown",
+      "target": "Unknown",
+      "type": "ally",
+      "loreDesc": "Primary cooperative relationship.",
+      "systemDesc": "Core alliance network."
+    }
+  ],
+  "counterplay": [
+    {
+      "id": "BL-cp-1",
+      "attacker": "Mana Zone",
+      "defender": "Standard Opponents",
+      "mechanic": "Mana Zone dominates standard opponents through environmental capture.",
+      "loreDesc": "Mana Zone proves superior against standard threats.",
+      "systemDesc": "An environmental mana capture system that scales spell output by 10x through surrounding the caster with ambient mana.",
+      "loreSubtitle": "Mana Sensing",
+      "systemSubtitle": "Environmental Capture"
+    }
+  ],
+  "causalEvents": [
+    {
+      "id": "BL-ce1",
+      "name": "Story Begins",
+      "trigger": "The inciting incident that sets the narrative in motion.",
+      "consequence": "Protagonist is forced to engage with the system.",
+      "timelinePosition": "Series start",
+      "loreDesc": "The initial condition that creates the narrative premise.",
+      "systemDesc": "A critical-path activation event.",
+      "loreSubtitle": "Inciting Incident",
+      "systemSubtitle": "System Activation"
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Unique Capability",
+      "loreDesc": "The protagonist possesses a capability that transcends normal system rules.",
+      "systemDesc": "A system anomaly: Black Clover's power ceiling is defined by mana ca...",
+      "impact": "Creates asymmetric advantage against normal opponents.",
+      "ruleViolated": "Standard capability hierarchy",
+      "loreSubtitle": "System Anomaly",
+      "systemSubtitle": "Transcendence"
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "What makes Black Clover's system unique?",
+      "answer": "A mana-talent hierarchy where five-leaf corruption and anti-magic nullification define the ceiling — and Julius Novachrono's time magic sits above all.",
+      "tabIndex": 0
+    }
+  ],
+  "gradientTo": "green-900"
 }

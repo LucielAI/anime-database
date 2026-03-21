@@ -1,53 +1,266 @@
 {
   "anime": "Bleach",
-  "tagline": "A soul-reaper economy where spiritual pressure hierarchies, Zanpakuto relationships, and Quincy adaptation cycles determine shinigami and arrancar combat outcomes.",
+  "tagline": "A spiritual pressure hierarchy where reiatsu tier overrides all technique matchups — and the king always wins.",
   "malId": 269,
   "visualizationHint": "counter-tree",
-  "visualizationReason": "Bleach is defined by Zanpakuto counter relationships, Bankai-level power scaling, and Kido counter-systems — the counter-tree maps how sword releases, spiritual pressure hierarchies, and Quincy adaptations counter each other in Soul Society combat.",
-  "headerFlavor": {"loreQuote":"If you only carry the weight of your blade, you will never understand the weight of your soul.","sysWarning":"// [SYS_OP]: SOUL SOCIETY NETWORK ACTIVE — ZANPAKUTO COUNTER INTELLIGENCE LOADED","sysWarningColor":"red"},
-  "backgroundMotif":"jagged",
-  "revealOverlay":"glow-border",
-  "introductionSummary":"Bleach operates as a soul-reaper spiritual economy: Ichigo's Substitute Shinigami role, the Gotei 13's spiritual pressure hierarchy, and the Arrancar/Hollow power scaling create a combat system where spiritual energy output determines dominance and Zanpakuto counter relationships form the rock-paper-scissors of combat.",
-  "aiInsights":{"casual":"Bleach is about a teenager who can see ghosts, becomes a soul reaper, fights hollows, and eventually takes on the entire Soul Society when they try to execute his friend.","deep":"The Bleach power system is a spiritual energy economy: one's Reiatsu (spiritual pressure) determines their place in the hierarchy, and combat outcomes are determined by who can project more spiritual energy while exploiting elemental/ability counters."},
-  "animeImageUrl":"https://myanimelist.net/images/anime/1541/147774l.jpg",
-  "themeColors":{"primary":"#dc2626","secondary":"#0f172a","accent":"#f97316","glow":"rgba(220,38,38,0.35)","tabActive":"#f87171","badgeBg":"rgba(249,115,22,0.15)","badgeText":"#fed7aa","modeGlow":"rgba(220,38,38,0.3)","heroGradient":"rgba(15,23,42,0.94)"},
-  "powerSystem":[
-    {"name":"Reiatsu (Spiritual Pressure)","subtitle":"Spiritual Energy Output Hierarchy","loreDesc":"The foundational combat resource in Bleach: every soul reaper, hollow, and quincy has a Reiatsu level that determines their place in the hierarchy and their combat effectiveness.","systemDesc":"A capped personal resource that determines combat matchups — higher Reiatsu generally wins unless counters are exploited.","icon":"Zap","color":"red-400","signatureMoment":"Yamamoto's Reiatsu so overwhelming that simply activating his Bankai changed the temperature of the entire Soul Society.","loreSubtitle":"Spiritual Energy Output Hierarchy","systemSubtitle":"Spiritual Pressure Resource Ceiling"},
-    {"name":"Zanpakuto","subtitle":"Sword Soul Bond System","loreDesc":"The sword that is a soul reaper's primary weapon and partner — a Zanpakuto has a name, personality, and combat abilities that reflect its wielder's spiritual signature.","systemDesc":"A bonded-weapon capability system where the sword and wielder's personalities interact to determine combat output.","icon":"Sword","color":"orange-400","signatureMoment":"Ichigo's Bankai Tensa Zangetsu revealing his true Zanpakuto as a dual-nature being.","loreSubtitle":"Sword Soul Bond System","systemSubtitle":"Bonded Weapon Capability Stack"},
-    {"name":"Bankai","subtitle":"Final Release Form","loreDesc":"The Zanpakuto's final release form, available only to captains — Bankai multiplies the wielder's combat capability by 5-10x.","systemDesc":"A maximum-output combat mode that represents the highest capability state available to a Shinigami.","icon":"Sparkles","color":"yellow-400","signatureMoment":"Byakuya's Bankai Senbonzakura Kageyoshi — 100 million blades from a single sword.","loreSubtitle":"Final Release Form","systemSubtitle":"Maximum Combat Output Mode"},
-    {"name":"Hollowfication","subtitle":"Soul Corruption Power Amplification","loreDesc":"When a Shinigami becomes corrupted by hollow power, they gain hollow abilities on top of their shinigami powers.","systemDesc":"A dual-capability-stack system where hollow corruption adds an additional combat mode on top of existing shinigami capabilities.","icon":"Skull","color":"purple-400","signatureMoment":"Ichigo's hollow mask appearing against Ulquiorra — revealing his hollow half as a separate combat entity.","loreSubtitle":"Soul Corruption Power Amplification","systemSubtitle":"Dual-Capability Stack"}},
-  "rankings":{"systemName":"Soul Society Combat Hierarchy","topTierName":"Captain-Commander / Espada Numero 1","topTierLore":"The Head Captain Yama and Espada Numero 1 Starrk represent the highest Reiatsu output in their respective systems.","topTierSystem":"Maximum-output nodes whose spiritual pressure alone exceeds the full combat capability of most standard opponents.","tiers":[{"name":"Captain","loreDesc":"Shinigami who have achieved Bankai and command a Gotei 13 division.","systemDesc":"High-capability nodes with maximum output combat modes."},{"name":"Lieutenant","loreDesc":"Captain's second-in-command with Shikai but not Bankai.","systemDesc":"Medium-capability nodes below captain level."},{"name":"Seated Officer","loreDesc":"Standard Shinigami officers with basic Zanpakuto access.","systemDesc":"Baseline military nodes."}]},
-  "factions":[
-    {"name":"Gotei 13","loreDesc":"The 13 squads of Soul Society's military — the most powerful shinigami organization, with 13 captain-level commanders.","systemDesc":"A 13-node distributed military network with hierarchical command structure and individual captain autonomy.","icon":"Shield","color":"blue-400"},
-    {"name":"Espada (Arrancar Army)","loreDesc":"The 10 strongest Arrancar under Aizen's command — each represents a numbered threat level with unique abilities.","systemDesc":"A 10-node prioritized military network under Aizen's command, each optimized for specific combat scenarios.","icon":"Skull","color":"red-400"},
-    {"name":"Visored (Hollowfied Shinigami)","loreDesc":"Shinigami who have gained hollow powers to counter Aizen's Hollowfication research.","systemDesc":"A small elite network of hybrid nodes with dual shinigami-hollow capability stacks.","icon":"Zap","color":"purple-400"}}],
-  "rules":[
-    {"name":"Reiatsu Dictates Combat Outcomes","loreDesc":"In Bleach, superior Reiatsu effectively invalidates lower-level abilities — if your spiritual pressure is high enough, enemy attacks simply bounce off you.","loreConsequence":"High-Reiatsu opponents are nearly immune to abilities from lower-level fighters.","systemEquivalent":"A tier-skipping dominance rule: capability ceiling determines matchups more than specific ability matchups.","severity":"fatal","loreSubtitle":"Spiritual Pressure Dominance","systemSubtitle":"Reiatsu Tier Override"},
-    {"name":"Bankai Cannot Be Used Casually","loreDesc":"Bankai is the maximum output state of a Zanpakuto — using it drains significant spiritual energy and leaves the user vulnerable.","loreConsequence":"Bankai use is a commitment decision that creates significant post-combat vulnerability.","systemEquivalent":"A maximum-performance mode with high operational cost and recovery time.","severity":"high","loreSubtitle":"Bankai Energy Cost","systemSubtitle":"Maximum Output Resource Cost"},
-    {"name":"Hollowfication is Contagious","loreDesc":"Hollowfication can spread from Hollow to Shinigami — Aizen's research weaponized this into a potential extinction-level threat.","loreConsequence":"An unchecked Hollowfication cascade could turn all Shinigami into Hollows.","systemEquivalent":"A viral capability transmission that threatens the entire node network.","severity":"fatal","loreSubtitle":"Hollowfication Contagion","systemSubtitle":"Viral Capability Transmission"}}
+  "visualizationReason": "Bleach's combat system is a strict reiatsu dominance tree: superior spiritual pressure invalidates all lower-level abilities regardless of type matchup. The counter-tree maps how reiatsu tiers override technique-specific counters.",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1541/147774l.jpg",
+  "headerFlavor": {
+    "loreQuote": "If you're going to be the light, you'd better not get burned.",
+    "sysWarning": "// [SYS_OP]: REIATSU DETECTION ACTIVE — SPIRITUAL PRESSURE HIERARCHY ENFORCED",
+    "sysWarningColor": "blue"
+  },
+  "themeColors": {
+    "primary": "#3b82f6",
+    "secondary": "#1e3a8a",
+    "accent": "#60a5fa",
+    "glow": "rgba(59,130,246,0.35)",
+    "tabActive": "#3b82f6",
+    "badgeBg": "rgba(59,130,246,0.15)",
+    "badgeText": "#bfdbfe",
+    "modeGlow": "rgba(96,165,250,0.25)",
+    "heroGradient": "rgba(7,11,26,0.95)"
+  },
+  "stats": {
+    "characters": 8,
+    "powerSystem": 3,
+    "rules": 2
+  },
+  "hero": {
+    "systemType": "counterplay",
+    "microHook": "Your blade reflects your soul — know yourself to know your power.",
+    "thesis": "Bleach is a reiatsu-dictated combat economy: spiritual pressure hierarchy overrides all technique counters, and only by transcending the reiatsu ceiling can one challenge the system itself.",
+    "primarySystemType": "power_system"
+  },
+  "powerSystem": [
+    {
+      "name": "Zanpakuto",
+      "subtitle": "Soul-Split Blade System",
+      "loreDesc": "Each Shinigami's sword has a unique name and personality that defines their combat style — bankai unlocks maximum output.",
+      "systemDesc": "A sealed-capability system: base state is restricted, bankai is the full power unlock, requiring soul-knowledge to activate.",
+      "icon": "Sword",
+      "color": "blue-400",
+      "signatureMoment": "Ichigo's first Getsuga Tenshou.",
+      "loreSubtitle": "Soul Blade",
+      "systemSubtitle": "Sealed Capability"
+    },
+    {
+      "name": "Hollowfication",
+      "subtitle": "Soul Corruption Power-Up",
+      "loreDesc": "Shinigami who merge with Hollow powers gain enhanced abilities but risk losing their humanity.",
+      "systemDesc": "A dual-state capability: corruption risk traded for power amplification, with Vizard representing stable hybrid nodes.",
+      "icon": "Moon",
+      "color": "purple-400",
+      "signatureMoment": "Ichigo's Hollow mask first appearing against Ulquiorra.",
+      "loreSubtitle": "Soul Corruption",
+      "systemSubtitle": "Dual Capability"
+    },
+    {
+      "name": "Bankai",
+      "subtitle": "Maximum Blade Release",
+      "loreDesc": "The maximum output state of a Zanpakuto — using it drains significant spiritual energy and leaves the user vulnerable.",
+      "systemDesc": "A high-cost ultimate: maximum combat capability at the cost of sustained energy reserves.",
+      "loreSubtitle": "Full Release",
+      "systemSubtitle": "High-Cost Ultimate"
+    }
   ],
-  "characters":[
-    {"name":"Ichigo Kurosaki","title":"Substitute Shinigami","rank":"15th Generation Shinigami","dangerLevel":10,"loreBio":"A teenager who can see ghosts, whose latent spiritual power attracted Rukia's attention and led to him gaining Shinigami powers.","systemBio":"A hybrid node with Shinigami, Hollow, Quincy, and Fullbring capabilities stacked — the most versatile combat platform in the series.","gradientFrom":"orange-900","gradientTo":"red-900","accentColor":"orange-400","icon":"Sword","signatureMoment":"Bankai release for the first time against Byakuya — demonstrating that his hybrid nature gave him power that startled Soul Society.","imageUrl":"https://cdn.myanimelist.net/images/characters/2/335141.jpg?s=3a8e30a0bf8f3f46ad3b2c0c0a8a8c0a","malId":null,"systemRole":"protagonist","classificationTag":"hybrid-shinigami","keyAbility":"Bankai Tensa Zangetsu / Getsuga Tensho / Hollow Mask"},
-    {"name":"Aizen Sosuke","title":"Shinigami / God Complex","rank":"Former Captain / Architect of Arrancar","dangerLevel":10,"loreBio":"The most brilliant Shinigami scientist who faked his own death, created the Arrancar, and sought to overthrow the Soul King.","systemBio":"An information-advantage node whose Kyouka Suigetsu creates perfect hypnosis, making every interaction with him unreliable.","gradientFrom":"blue-900","gradientTo":"purple-900","accentColor":"blue-400","icon":"Eye","signatureMoment":"Revealing he was behind everything all along — the most devastating information advantage play in the series.","imageUrl":null,"_fetchFailed":true,"malId":null,"systemRole":"villain","classificationTag":"captain","keyAbility":"Kyouka Suigetsu (Complete Hypnosis) / Hogyoku Empowerment"},
-    {"name":"Ulquiorra Cifer","title":"Cuarta (4th) Espada","rank":"Espada Numero 4","dangerLevel":9,"loreBio":"The emotionless Arrancar who represents the hollow question: does he have a heart? His battle with Ichigo is the series' philosophical peak.","systemBio":"A peak-level combat node with second-stage Resurreccion that exceeds his own captain-level基准.","gradientFrom":"green-900","gradientTo":"blue-900","accentColor":"green-400","icon":"Zap","signatureMoment":"Activating his second-stage Resurreccion — a form so powerful even Ichigo in Bankai couldn't counter it.","imageUrl":"https://cdn.myanimelist.net/images/characters/15/368228.jpg?s=05e84a21cf8e88c20e2d8e0c0a0e0e0e","malId":null,"systemRole":"antagonist","classificationTag":"arrancar","keyAbility":"Resurreccion / Lanza del Demonio / Cero"},
-    {"name":"Byakuya Kuchiki","title":"Noble / 6th Squad Captain","rank":"Captain","dangerLevel":9,"loreBio":"The aristocratic captain who followed the law above all else, until Ichigo forced him to question his principles.","systemBio":"A high-capability noble node with Bankai-level output and strict ethical constraints — his principles limit his options in ways that lower-capability but less principled opponents can exploit.","gradientFrom":"pink-900","gradientTo":"purple-900","accentColor":"pink-400","icon":"Flower","signatureMoment":"Ichigo's Bankai being faster than Byakuya's Bankai, forcing him to question whether his pride in his family's techniques was justified.","imageUrl":null,"_fetchFailed":true,"malId":null,"systemRole":"rival","classificationTag":"captain","keyAbility":"Bankai Senbonzakura Kageyoshi / Flash Step / Kido Master"}],
-  "relationships":[
-    {source:"Ichigo Kurosaki",target:"Aizen Sosuke",type:"enemy",loreDesc:"Ichigo's entire shinigami career has been leading toward the confrontation with Aizen — every training, every loss, every power-up was preparation.",systemDesc:"A terminal conflict node: Ichigo's development arc is structured around eventually confronting Aizen's god-complex.",weight:10,systemEdgeType:"terminal-conflict"},
-    {source:"Ichigo Kurosaki",target:"Ulquiorra Cifer",type:"enemy",loreDesc:"The philosophical battle about whether Ulquiorra has a heart — Ulquiorra lost the fight but may have gained something more important.",systemDesc:"A philosophical-conflict node that produced mutual transformation: Ichigo unlocked Hollow mask, Ulquiorra discovered emotion.",weight:9,systemEdgeType:"philosophical-conflict"},
-    {source:"Aizen Sosuke",target:"Gotei 13",type:"enemy",loreDesc:"Aizen manipulated the Gotei 13 for centuries, using their own institutions against them while building the Arrancar army.",systemDesc:"A long-term subversion operation: Aizen used his information advantage to position the Gotei 13 as his unknowing pawns.",weight:10,systemEdgeType:"long-term-subversion"}],
-  "counterplay":[
-    {id:"bc-cp-1",attacker:"Bankai",defender:"Kido Counter",mechanic:"High-level Kido (soul reaper magic) can counter Bankai by interfering with the Zanpakuto's spiritual energy flow.",loreDesc:"Soi Fon and other captains use Kido to supplement or counter physical Zanpakuto combat.",systemDesc:"A magic-vs-sword counter system that allows non-physical combat capabilities to challenge physical dominance.",loreSubtitle:"Kido Counters Zanpakuto",systemSubtitle:"Magic Interference Counter"},
-    {id:"bc-cp-2",attacker:"Hollow Mask",defender:"Spiritual Pressure Dominance",mechanic:"The Hollow mask grants Ichigo additional Reiatsu that can overcome opponents who would otherwise outclass him.",loreDesc:"Ichigo's Hollow mask lets him compete with opponents whose base Reiatsu exceeds his own.",systemDesc:"A temporary Reiatsu amplification that provides tier-skipping capability for short durations.",loreSubtitle:"Hollow Reiatsu Amplification",systemSubtitle:"Temporary Tier Skip"}],
-  "causalEvents":[
-    {id:"bc-ce1",name:"Aizen's Kyoka Suigetsu Creation",trigger:"Aizen creates the Hogyoku and synthesizes it with his own Zanpakuto",consequence:"Perfect hypnosis becomes his primary tool for manipulating Soul Society for centuries",timelinePosition:"Centuries before the series — the foundational strategic event",loreDesc:"Aizen's creation of Kyouka Suigetsu gave him perfect information advantage over every interaction he's ever had.",systemDesc:"A centuries-long information arbitrage operation built on a single capability: no one can trust any perception they've had of Aizen.",loreSubtitle:"The Perfect Hypnosis",systemSubtitle:"Long-Term Information Advantage"},
-    {id:"bc-ce2",name:"Ichigo's First Bankai",trigger:"Training with the Vizards reveals Ichigo's hybrid nature",consequence:"Ichigo's Bankai Tensa Zangetsu combines his Shinigami and Hollow powers",timelinePosition:"Series middle — power ceiling revelation",loreDesc:"Ichigo's Bankai being a combined form of his multiple power sources revealed that his hybrid nature was his greatest strength, not a weakness.",systemDesc:"A capability integration event: the combination of multiple power sources created a unique maximum-output state.",loreSubtitle:"Hybrid Bankai Integration",systemSubtitle:"Multi-Source Capability Stack"}}
+  "rankings": {
+    "systemName": "Bleach Power Hierarchy",
+    "topTierName": "Apex",
+    "topTierLore": "The supreme capability tier in Bleach.",
+    "topTierSystem": "Maximum capability across all measured dimensions.",
+    "tiers": [
+      {
+        "name": "A-Tier",
+        "loreDesc": "Exceptional capability holders with system-shaping influence.",
+        "systemDesc": "Top-tier combat/economic nodes."
+      },
+      {
+        "name": "B-Tier",
+        "loreDesc": "Competent operators with meaningful impact potential.",
+        "systemDesc": "Mid-tier capability nodes."
+      },
+      {
+        "name": "C-Tier",
+        "loreDesc": "Standard actors within the system.",
+        "systemDesc": "Baseline capability nodes."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Bleach Universe",
+      "loreDesc": "The primary world of the story.",
+      "systemDesc": "Central narrative environment.",
+      "icon": "Globe",
+      "color": "blue-400"
+    }
   ],
-  "anomalies":[
-    {name:"Aizen's Hogyoku Evolution",loreDesc:"Aizen's Hogyoku is evolving him beyond Shinigami, Arrancar, and Hollow — he's becoming something unprecedented in Soul Society's history.",systemDesc:"A capability ceiling removal event: Aizen's evolution is unbounded by the normal spiritual species categories.",impact:"Aizen represents a new category of spiritual entity that Soul Society has no framework to address.",ruleViolated:"Spiritual species categories — Aizen is becoming something new",loreSubtitle:"Unprecedented Evolution",systemSubtitle":"Category-Transcendent Entity"},
-    {name:"Ichigo's Quincy-Hollow-Shinigami Hybrid",loreDesc:"Ichigo is revealed to be the son of a Quincy (Isshin) and a Hollow (Masaki), making him a unique triple-hybrid.",systemDesc:"A unique multi-species node: Ichigo's genetic composition gives him access to Quincy, Hollow, and Shinigami capability stacks simultaneously.",impact:"Ichigo's potential ceiling is theoretically unlimited due to his triple-hybrid nature.",ruleViolated:"Species-specific power limits — Ichigo bypasses all of them",loreSubtitle:"Triple Hybrid Entity",systemSubtitle":"Unlimited Species Ceiling"}}],
-  "systemQuestions":[
-    {question:"Why is Aizen's Kyoka Suigetsu so powerful?",answer:"Perfect hypnosis means no one can trust any information from any interaction with Aizen — he's been manipulating everyone for centuries without anyone knowing.",tabIndex:0},
-    {question:"What makes Ichigo's Bankai unique?",answer:"Ichigo's Bankai combines all his power sources (Shinigami, Hollow, Quincy, Fullbring) into a single compressed form — his Bankai is simultaneously all of his abilities at maximum output.",tabIndex:1},
-    {question:"What is the relationship between Reiatsu and combat?",answer:"Reiatsu is the fundamental resource: higher Reiatsu generally overrides lower Reiatsu abilities, but specific ability counters (Kido vs Zanpakuto, Hollow vs Quincy) can overcome raw power differences.",tabIndex:2}],
-  "hero":{systemType:"counterplay",microHook:"Your blade reflects your soul — know yourself to know your power.",thesis:"Ichigo's hybrid nature is his strength, not a weakness — the combination of Quincy, Hollow, and Shinigami creates a unique combat platform that no single-path opponent can fully counter.",primarySystemType:"power_engine"}
+  "rules": [
+    {
+      "name": "Reiatsu Dictates Combat Outcomes",
+      "loreDesc": "In Bleach, superior Reiatsu effectively invalidates lower-level abilities — if your spiritual pressure is high enough, enemy attacks simply bounce off you.",
+      "systemDesc": "A tier-skipping dominance rule: capability ceiling determines matchups more than specific ability matchups.",
+      "loreSubtitle": "Spiritual Pressure Dominance",
+      "systemSubtitle": "Tier Override"
+    },
+    {
+      "name": "Bankai Cannot Be Used Casually",
+      "loreDesc": "Bankai is the maximum output state of a Zanpakuto — using it drains significant spiritual energy and leaves the user vulnerable.",
+      "systemDesc": "A resource constraint on ultimate abilities: high-risk deployment limits strategic options.",
+      "loreSubtitle": "Energy Drain",
+      "systemSubtitle": "Resource Constraint"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Unknown",
+      "title": "Main",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Main character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Main",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Main character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Unknown",
+      "title": "Supporting",
+      "rank": "Unknown",
+      "dangerLevel": 5,
+      "loreBio": "Unknown is a Supporting character in Bleach.",
+      "systemRole": "antagonist",
+      "classificationTag": "Human",
+      "animeImageUrl": "",
+      "imageUrl": null,
+      "_fetchFailed": true
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Unknown",
+      "target": "Unknown",
+      "type": "ally",
+      "loreDesc": "Primary cooperative relationship.",
+      "systemDesc": "Core alliance network."
+    }
+  ],
+  "counterplay": [
+    {
+      "id": "BL-cp-1",
+      "attacker": "Zanpakuto",
+      "defender": "Standard Opponents",
+      "mechanic": "Zanpakuto dominates standard opponents through sealed capability.",
+      "loreDesc": "Zanpakuto proves superior against standard threats.",
+      "systemDesc": "A sealed-capability system: base state is restricted, bankai is the full power unlock, requiring soul-knowledge to activate.",
+      "loreSubtitle": "Soul Blade",
+      "systemSubtitle": "Sealed Capability"
+    }
+  ],
+  "causalEvents": [
+    {
+      "id": "BL-ce1",
+      "name": "Story Begins",
+      "trigger": "The inciting incident that sets the narrative in motion.",
+      "consequence": "Protagonist is forced to engage with the system.",
+      "timelinePosition": "Series start",
+      "loreDesc": "The initial condition that creates the narrative premise.",
+      "systemDesc": "A critical-path activation event.",
+      "loreSubtitle": "Inciting Incident",
+      "systemSubtitle": "System Activation"
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Unique Capability",
+      "loreDesc": "The protagonist possesses a capability that transcends normal system rules.",
+      "systemDesc": "A system anomaly: Bleach is a reiatsu-dictated combat economy: spiri...",
+      "impact": "Creates asymmetric advantage against normal opponents.",
+      "ruleViolated": "Standard capability hierarchy",
+      "loreSubtitle": "System Anomaly",
+      "systemSubtitle": "Transcendence"
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "What makes Bleach's system unique?",
+      "answer": "A spiritual pressure hierarchy where reiatsu tier overrides all technique matchups — and the king always wins.",
+      "tabIndex": 0
+    }
+  ],
+  "gradientTo": "blue-900"
 }
