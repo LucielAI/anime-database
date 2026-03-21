@@ -1,0 +1,46 @@
+{
+  "slug": "lore-vs-sys-explained",
+  "title": "LORE vs SYS Mode: How the Archive Sees Anime Differently",
+  "date": "2026-03-21",
+  "description": "Every universe in the archive can be read two ways: as a story (LORE) or as an engineered system (SYS). Here's why that matters and how to use it.",
+  "keywords": "anime analysis, anime systems thinking, lore mode, system mode, anime worldbuilding analysis",
+  "author": "Archive Intelligence",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "The Anime Architecture Archive doesn't just describe anime — it decodes them. Every universe in the archive supports two reading modes: LORE and SYS."
+    },
+    {
+      "type": "heading",
+      "text": "LORE Mode: The Story Layer"
+    },
+    {
+      "type": "paragraph",
+      "text": "LORE mode is for fans. It describes characters, events, and mechanics in human-readable narrative language. 'Eren becomes the catalyst for the Rumbling' — that's LORE."
+    },
+    {
+      "type": "heading",
+      "text": "SYS Mode: The System Layer"
+    },
+    {
+      "type": "paragraph",
+      "text": "SYS mode treats the anime as an engineered system. Same character, same event, but framed as infrastructure: 'A deterministic execution node triggers a global catastrophic cascade.' SYS mode reveals the structural mechanics behind the narrative."
+    },
+    {
+      "type": "heading",
+      "text": "Why Two Modes?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Because anime worlds ARE systems. They have rules, constraints, failure modes, and emergent behavior. Seeing both layers simultaneously is what makes the archive different from every wiki out there."
+    },
+    {
+      "type": "paragraph",
+      "text": "Try it yourself — open any universe and toggle the mode switch. Start with Attack on Titan for the most dramatic contrast."
+    },
+    {
+      "type": "universe-link",
+      "slug": "aot"
+    }
+  ]
+}

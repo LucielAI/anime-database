@@ -193,6 +193,150 @@ export function buildHomeStructuredData(catalog = [], options = {}) {
   ]
 }
 
+export function buildCharacterSeo(preview, character, charIndex) {
+  if (!preview || !character) return buildHomeSeo()
+
+  const description = truncate(
+    character.loreBio
+      ? `${character.name} — ${character.title || character.rank || ''}: ${character.loreBio}`
+      : `${character.name} from ${preview.anime}. Structured character analysis and system profile.`
+  )
+
+  return {
+    title: `${character.name} — ${preview.anime} | ${SITE_NAME}`,
+    description,
+    canonicalUrl: `${SITE_URL}/universe/${preview.id}/character/${charIndex}`,
+    image: `${SITE_URL}/api/og?id=${preview.id}`,
+    type: 'article',
+  }
+}
+
+export function buildPowerSystemSeo(preview, power, powerIndex) {
+  if (!preview || !power) return buildHomeSeo()
+
+  const description = truncate(
+    power.loreDesc
+      ? `${power.name} — ${power.subtitle || ''}: ${power.loreDesc}`
+      : `${power.name} power system from ${preview.anime}. Structured mechanics and system analysis.`
+  )
+
+  return {
+    title: `${power.name} — ${preview.anime} | ${SITE_NAME}`,
+    description,
+    canonicalUrl: `${SITE_URL}/universe/${preview.id}/power/${powerIndex}`,
+    image: `${SITE_URL}/api/og?id=${preview.id}`,
+    type: 'article',
+  }
+}
+
+export function buildFactionSeo(preview, faction, factionIndex) {
+  if (!preview || !faction) return buildHomeSeo()
+
+  const description = truncate(
+    faction.loreDesc
+      ? `${faction.name} (${faction.role}): ${faction.loreDesc}`
+      : `${faction.name} faction from ${preview.anime}. Structural role, members, and system analysis.`
+  )
+
+  return {
+    title: `${faction.name} — ${preview.anime} | ${SITE_NAME}`,
+    description,
+    canonicalUrl: `${SITE_URL}/universe/${preview.id}/faction/${factionIndex}`,
+    image: `${SITE_URL}/api/og?id=${preview.id}`,
+    type: 'article',
+  }
+}
+
+export function buildCharacterStructuredData(preview, character, charIndex) {
+  if (!preview || !character) return []
+
+  const pageUrl = `${SITE_URL}/universe/${preview.id}/character/${charIndex}`
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: preview.anime, item: `${SITE_URL}/universe/${preview.id}` },
+        { '@type': 'ListItem', position: 3, name: character.name, item: pageUrl },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Thing',
+      name: character.name,
+      description: truncate(character.loreBio || '', 200),
+      url: pageUrl,
+      isPartOf: {
+        '@type': 'CreativeWork',
+        name: `${preview.anime} System Architecture Profile`,
+        url: `${SITE_URL}/universe/${preview.id}`,
+      },
+    },
+  ]
+}
+
+export function buildPowerSystemStructuredData(preview, power, powerIndex) {
+  if (!preview || !power) return []
+
+  const pageUrl = `${SITE_URL}/universe/${preview.id}/power/${powerIndex}`
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: preview.anime, item: `${SITE_URL}/universe/${preview.id}` },
+        { '@type': 'ListItem', position: 3, name: power.name, item: pageUrl },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Thing',
+      name: power.name,
+      description: truncate(power.loreDesc || '', 200),
+      url: pageUrl,
+      isPartOf: {
+        '@type': 'CreativeWork',
+        name: `${preview.anime} System Architecture Profile`,
+        url: `${SITE_URL}/universe/${preview.id}`,
+      },
+    },
+  ]
+}
+
+export function buildFactionStructuredData(preview, faction, factionIndex) {
+  if (!preview || !faction) return []
+
+  const pageUrl = `${SITE_URL}/universe/${preview.id}/faction/${factionIndex}`
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: preview.anime, item: `${SITE_URL}/universe/${preview.id}` },
+        { '@type': 'ListItem', position: 3, name: faction.name, item: pageUrl },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Thing',
+      name: faction.name,
+      description: truncate(faction.loreDesc || '', 200),
+      url: pageUrl,
+      isPartOf: {
+        '@type': 'CreativeWork',
+        name: `${preview.anime} System Architecture Profile`,
+        url: `${SITE_URL}/universe/${preview.id}`,
+      },
+    },
+  ]
+}
+
 export function buildUniverseStructuredData(preview, options = {}) {
   if (!preview) return []
 

@@ -30,10 +30,18 @@ import NotFound from './components/NotFound'
 import About from './components/About'
 import Privacy from './components/Privacy'
 import CompareRoute from './components/CompareRoute'
+import GlobalSearch from './components/GlobalSearch'
 import { trackExternalLink } from './utils/analytics'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
+const SearchResults = lazy(() => import('./components/SearchResults'))
+const ThematicPage = lazy(() => import('./components/ThematicPage'))
+const BlogIndex = lazy(() => import('./components/BlogIndex'))
+const BlogPost = lazy(() => import('./components/BlogPost'))
+const CharacterPage = lazy(() => import('./components/CharacterPage'))
+const PowerSystemPage = lazy(() => import('./components/PowerSystemPage'))
+const FactionPage = lazy(() => import('./components/FactionPage'))
 
 const SUPPORT_URL = 'https://buymeacoffee.com/hashiai'
 
@@ -774,9 +782,66 @@ function UniverseRoute() {
   )
 }
 
+function EntityRoute({ type }) {
+  const navigate = useNavigate()
+  const { id, charIndex, powerIndex, factionIndex } = useParams()
+  const normalizedId = (id || '').trim().toLowerCase()
+  const entityIndex = Number(charIndex ?? powerIndex ?? factionIndex ?? 0)
+  const [data, setData] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const preview = normalizedId ? UNIVERSE_CATALOG_MAP[normalizedId] : null
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [normalizedId, entityIndex])
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function resolve() {
+      setIsLoading(true)
+      setData(null)
+      if (!normalizedId || !UNIVERSE_CATALOG_MAP[normalizedId]) {
+        navigate('/', { replace: true })
+        return
+      }
+      try {
+        const payload = await loadUniverseBySlug(normalizedId)
+        if (!payload || cancelled) return
+        setData(payload)
+      } catch {
+        if (!cancelled) navigate(`/universe/${normalizedId}`, { replace: true })
+      } finally {
+        if (!cancelled) setIsLoading(false)
+      }
+    }
+
+    resolve()
+    return () => { cancelled = true }
+  }, [normalizedId, navigate])
+
+  if (isLoading || !data || !preview) {
+    return (
+      <div className="min-h-screen bg-[#050508] text-white font-mono flex items-center justify-center">
+        <p className="text-[10px] tracking-[0.25em] uppercase text-cyan-300/80">Loading...</p>
+      </div>
+    )
+  }
+
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
+      {type === 'character' && <CharacterPage data={data} preview={preview} charIndex={entityIndex} />}
+      {type === 'power' && <PowerSystemPage data={data} preview={preview} powerIndex={entityIndex} />}
+      {type === 'faction' && <FactionPage data={data} preview={preview} factionIndex={entityIndex} />}
+    </Suspense>
+  )
+}
+
 export default function App() {
   const location = useLocation()
   const [telemetry, setTelemetry] = useState({ SpeedInsights: null, Analytics: null })
+  const [searchOpen, setSearchOpen] = useState(false)
 
   useEffect(() => {
     let mounted = true
@@ -810,6 +875,24 @@ export default function App() {
     }
   }, [location.pathname])
 
+  // Global `/` keyboard shortcut to open search
+  useEffect(() => {
+    function handleKeyDown(e) {
+      // Don't intercept when typing in an input/textarea/contenteditable
+      const tag = document.activeElement?.tagName
+      const isEditable = tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable
+      if (isEditable) return
+
+      if (e.key === '/') {
+        e.preventDefault()
+        setSearchOpen(true)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
   return (
     <>
       <RouteScrollReset />
@@ -820,8 +903,47 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/compare" element={<CompareRoute />} />
+        <Route path="/universe/:id/character/:charIndex" element={<EntityRoute type="character" />} />
+        <Route path="/universe/:id/power/:powerIndex" element={<EntityRoute type="power" />} />
+        <Route path="/universe/:id/faction/:factionIndex" element={<EntityRoute type="faction" />} />
+        <Route path="/systems/:slug" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
+            <ThematicPage />
+          </Suspense>
+        } />
+        <Route path="/blog" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
+            <BlogIndex />
+          </Suspense>
+        } />
+        <Route path="/blog/:slug" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
+            <BlogPost />
+          </Suspense>
+        } />
+        <Route path="/search" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
+            <SearchResults />
+          </Suspense>
+        } />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      {/* Floating search button */}
+      <button
+        onClick={() => setSearchOpen(true)}
+        aria-label="Open search (press /)"
+        title="Search (press /)"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 rounded-full bg-[#0d0d18] border border-cyan-400/30 hover:border-cyan-400/70 hover:bg-cyan-400/10 shadow-lg shadow-black/50 transition-all group md:px-3 md:py-3"
+      >
+        <Search className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-cyan-400 group-hover:text-cyan-300 transition-colors md:hidden">Search</span>
+        <kbd className="hidden md:inline-flex items-center px-1.5 py-0.5 rounded bg-white/10 text-[9px] text-gray-400 font-mono">/</kbd>
+      </button>
+
+      {/* Global search modal */}
+      <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+
       {telemetry.SpeedInsights && <telemetry.SpeedInsights />}
       {telemetry.Analytics && <telemetry.Analytics />}
     </>

@@ -26,11 +26,35 @@ Each universe is structured as a dual-mode experience:
 ### Goblin Slayer | /universe/goblinslayer | A low-prestige extermination niche becomes the hidden maintenance layer that keeps a fantasy civilization from collapsing.
 ### Mushoku Tensei: Jobless Reincarnation | /universe/mushokutensei | A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.
 
+## Systems / Thematic Pages
+
+### Relational Systems | /systems/relational-systems | Universes where alliances, betrayal, and influence networks determine who wins.
+### Counterplay Systems | /systems/counterplay-systems | Universes where fights are decided by matchup reads, counters, and technical timing.
+### Timeline Systems | /systems/timeline-systems | Universes driven by cause-and-effect, time loops, and deterministic causality.
+### Control Systems | /systems/control-systems | Universes where institutional control, status, and authority structures determine outcomes.
+### Closed-Loop Systems | /systems/closed-loop-systems | Universes with self-reinforcing rules that create inescapable cycles.
+### Power Economy Systems | /systems/power-economy-systems | Universes where abilities are resources that can be earned, spent, traded, or permanently lost.
+
+## Blog
+
+Blog Index: https://animearchive.app/blog
+### Anime Power Systems Ranked | /blog/anime-power-systems-ranked
+### Best Anime Worldbuilding | /blog/best-anime-worldbuilding
+### Lore Vs Sys Explained | /blog/lore-vs-sys-explained
+
+## Entity Pages
+
+Each universe page exposes deep-link pages for individual entities:
+- Characters: /universe/:id/character/:index
+- Power Systems: /universe/:id/power/:index
+- Factions: /universe/:id/faction/:index
+
 ## Key Pages
 
 Homepage: https://animearchive.app/
 Universe Catalog: https://animearchive.app/universes
 Compare Universes: https://animearchive.app/compare
+Search: https://animearchive.app/search
 About: https://animearchive.app/about
 Privacy Policy: https://animearchive.app/privacy
 

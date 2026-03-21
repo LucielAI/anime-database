@@ -1,0 +1,26 @@
+{
+  "slug": "best-anime-worldbuilding",
+  "title": "Best Anime Worldbuilding: 5 Universes Where the World Is the Main Character",
+  "date": "2026-03-21",
+  "description": "Some anime have worlds so structurally rich that the setting itself drives the story. These 5 universes have the most architecturally complete worldbuilding in anime.",
+  "keywords": "best anime worldbuilding, anime world design, best anime settings, anime universe design",
+  "author": "Archive Intelligence",
+  "content": [
+    { "type": "paragraph", "text": "Great worldbuilding isn't about how much lore exists — it's about whether the world follows its own rules consistently enough that you could predict outcomes." },
+    { "type": "heading", "text": "1. Hunter x Hunter" },
+    { "type": "paragraph", "text": "The world of HxH has a fully functioning economic system, a political structure that operates independently of the protagonists, and a power system (Nen) complex enough to support infinite strategic variation. The Dark Continent exists as a conceptual expansion that makes the known world feel small by design." },
+    { "type": "universe-link", "slug": "hxh" },
+    { "type": "heading", "text": "2. Attack on Titan" },
+    { "type": "paragraph", "text": "AoT's world is a closed temporal loop disguised as a post-apocalyptic survival story. Every wall, every institution, every military branch serves a structural purpose that only becomes clear in retrospect. The worldbuilding is the plot." },
+    { "type": "universe-link", "slug": "aot" },
+    { "type": "heading", "text": "3. Fullmetal Alchemist: Brotherhood" },
+    { "type": "paragraph", "text": "Amestris functions as a complete nation-state with working infrastructure, military hierarchy, and a thermodynamic magic system. The twist is that the entire civilization was designed as a battery — the worldbuilding IS the villain." },
+    { "type": "universe-link", "slug": "fmab" },
+    { "type": "heading", "text": "4. Mushoku Tensei" },
+    { "type": "paragraph", "text": "Mushoku Tensei builds a world across centuries with gods, magic systems, and civilizational shifts that compound over time. The reincarnation mechanic is a lens for exploring how the world's deep history created its present constraints." },
+    { "type": "universe-link", "slug": "mushokutensei" },
+    { "type": "heading", "text": "5. Code Geass" },
+    { "type": "paragraph", "text": "The Britannian Empire, the Black Knights, and the Geass Order form three overlapping power networks. Code Geass builds a world where every political decision has cascading structural consequences — governance IS the power system." },
+    { "type": "universe-link", "slug": "codegeass" }
+  ]
+}

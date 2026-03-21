@@ -1,0 +1,103 @@
+import { randomUUID } from 'node:crypto'
+import { resolveSupabaseConfig, classifySupabaseFailure, parseSupabaseError } from './_supabase.js'
+
+function safeBody(req) {
+  if (!req.body) return {}
+  if (typeof req.body === 'string') {
+    try {
+      return JSON.parse(req.body)
+    } catch {
+      return {}
+    }
+  }
+  return req.body
+}
+
+export default async function handler(req, res) {
+  const requestId = randomUUID()
+  res.setHeader('x-request-id', requestId)
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed', requestId })
+  }
+
+  const contentLength = parseInt(req.headers['content-length'] || '0', 10)
+  if (contentLength > 1024) {
+    return res.status(413).json({ error: 'Too large', requestId })
+  }
+
+  const body = safeBody(req)
+  const { email } = body
+
+  if (!email || typeof email !== 'string' || !email.includes('@') || email.length > 254) {
+    return res.status(400).json({ error: 'Invalid email', requestId })
+  }
+
+  // Basic sanitization — reject obvious injection attempts
+  if (/<|>|script/i.test(email)) {
+    return res.status(400).json({ error: 'Invalid email', requestId })
+  }
+
+  const supabase = resolveSupabaseConfig()
+
+  if (!supabase.url || !supabase.key) {
+    console.error('[api/newsletter] missing Supabase env vars', {
+      requestId,
+      missingUrl: supabase.missing.url,
+      missingKey: supabase.missing.key,
+    })
+    // Graceful degradation — don't expose config state to the client
+    return res.status(200).json({ ok: true, requestId })
+  }
+
+  try {
+    const response = await fetch(`${supabase.url.value}/rest/v1/archive_newsletter`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: supabase.key.value,
+        Authorization: `Bearer ${supabase.key.value}`,
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify({
+        email: email.trim().toLowerCase(),
+        source: 'web',
+        created_at: new Date().toISOString(),
+      }),
+    })
+
+    if (!response.ok) {
+      const { parsed, raw } = await parseSupabaseError(response)
+      const category = classifySupabaseFailure({
+        status: response.status,
+        parsedError: parsed,
+        rawError: raw,
+      })
+
+      // Duplicate email (unique constraint violation) — treat as success
+      if (parsed?.code === '23505') {
+        return res.status(200).json({ ok: true, message: 'Already subscribed', requestId })
+      }
+
+      console.error('[api/newsletter] storage failed', {
+        requestId,
+        status: response.status,
+        category,
+        error: parsed || raw,
+      })
+
+      // Graceful degradation for table_missing and other infra issues
+      return res.status(200).json({ ok: true, requestId })
+    }
+
+    return res.status(200).json({ ok: true, requestId })
+  } catch (error) {
+    console.error('[api/newsletter] unexpected failure', {
+      requestId,
+      name: error?.name,
+      message: error?.message,
+    })
+    // Graceful degradation — network issues shouldn't surface as errors to the user
+    return res.status(200).json({ ok: true, requestId })
+  }
+}
