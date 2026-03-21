@@ -440,5 +440,12 @@
     "microHook": "I'm not a good ruler. But I'm the only one Nazarick has.",
     "thesis": "Ainz is the last member of a dead guild, ruling perfect subordinates who love a god he can't fully be — his leadership is loneliness disguised as omnipotence.",
     "primarySystemType": "entity_db"
+  },
+  "id": "overlord",
+  "gradientTo": "purple-900",
+  "stats": {
+    "characters": 7,
+    "powerSystem": 4,
+    "rules": 4
   }
 }

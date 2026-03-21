@@ -82,6 +82,116 @@ export const UNIVERSE_CATALOG = [
     themeColors: { primary: '#0f766e', secondary: '#1e293b', accent: '#7c3aed', glow: 'rgba(15,118,110,0.32)', tabActive: '#14b8a6', badgeBg: 'rgba(124,58,237,0.14)', badgeText: '#a78bfa', modeGlow: 'rgba(20,184,166,0.28)', heroGradient: 'rgba(4,14,27,0.94)' },
     stats: { characters: 10, powerSystem: 4, rules: 4 }
   }
-]
+],
+  {
+    id: 'onepiece',
+    anime: 'One Piece',
+    tagline: 'A world where ocean geography IS political economy, and whoever controls the seas controls civilization itself.',
+    malId: 21,
+    visualizationHint: 'node-graph',
+    visualizationReason: 'One Piece is defined by shifting pirate alliances, faction dependencies, and geopolitical power grids — the node-graph maps how emperors, warlords, revolutionaries, and marines form, break, and rewire the world order.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/1244/138851l.jpg',
+    themeColors: { primary: '#1e40af', secondary: '#b91c1c', accent: '#f59e0b', glow: 'rgba(30,64,175,0.35)', tabActive: '#3b82f6', badgeBg: 'rgba(185,28,28,0.15)', badgeText: '#f87171', modeGlow: 'rgba(245,158,11,0.3)', heroGradient: 'rgba(5,10,25,0.94)' },
+    stats: { characters: 9, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'naruto',
+    anime: 'Naruto',
+    tagline: 'A shinobi economy where chakra compounding, jutsu intellectual property, and village hierarchies determine civilization-scale outcomes.',
+    malId: 20,
+    visualizationHint: 'counter-tree',
+    visualizationReason: 'Naruto is defined by jutsu counter relationships, elemental weaknesses, and power scaling hierarchies — the counter-tree maps how techniques nullify, amplify, or bypass each other in combat.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/1141/142503l.jpg',
+    themeColors: { primary: '#f97316', secondary: '#0f172a', accent: '#3b82f6', glow: 'rgba(249,115,22,0.35)', tabActive: '#fb923c', badgeBg: 'rgba(59,130,246,0.15)', badgeText: '#93c5fd', modeGlow: 'rgba(249,115,22,0.3)', heroGradient: 'rgba(15,23,42,0.94)' },
+    stats: { characters: 9, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'mobpsycho100',
+    anime: 'Mob Psycho 100',
+    tagline: 'A psychic ecosystem where spiritual energy flows from trauma, belief structures weaponize into combat power, and true strength comes from emotional honesty.',
+    malId: 32182,
+    visualizationHint: 'node-graph',
+    visualizationReason: 'Mob Psycho 100 is structurally a dependency web: esper organizations, body-thief parasites, cult followings, and ego networks create a topology where psychic power, corruption, and spiritual authority determine the entire graph structure.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/8/80356l.jpg',
+    themeColors: { primary: '#ec4899', secondary: '#0f172a', accent: '#f472b6', glow: 'rgba(236,72,153,0.35)', tabActive: '#f472b6', badgeBg: 'rgba(236,72,153,0.15)', badgeText: '#fbcfe8', modeGlow: 'rgba(244,114,182,0.3)', heroGradient: 'rgba(15,23,42,0.94)' },
+    stats: { characters: 6, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'rezero',
+    anime: 'Re:Zero − Starting Life in Another World',
+    tagline: 'A death-loop economy where checkpoint saves, information asymmetry, and trauma compounding create the ultimate strategic survival market.',
+    malId: 31240,
+    visualizationHint: 'timeline',
+    visualizationReason: 'Re:Zero is defined by checkpoint-based causality, Return by Death loops, and delayed-consequence decision trees — the timeline renderer maps how choices propagate through parallel futures.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/1522/128039l.jpg',
+    themeColors: { primary: '#7c3aed', secondary: '#0f172a', accent: '#a855f7', glow: 'rgba(124,58,237,0.35)', tabActive: '#a855f7', badgeBg: 'rgba(124,58,237,0.15)', badgeText: '#d8b4fe', modeGlow: 'rgba(168,85,247,0.3)', heroGradient: 'rgba(15,23,42,0.94)' },
+    stats: { characters: 8, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'overlord',
+    anime: 'Overlord',
+    tagline: 'A heteromorphic player\'s endgame audit: when the raid boss becomes the guild\'s only remaining member.',
+    malId: 29803,
+    visualizationHint: 'node-graph',
+    visualizationReason: 'Overlord is defined by NPC servant networks, heteromorphic power hierarchies, and guild-fortress dependencies — the node-graph maps how Ainz controls, exploits, and strategically delegates through a network of loyal subordinates and rival factions.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/1945/136600l.jpg',
+    themeColors: { primary: '#7c3aed', secondary: '#0f172a', accent: '#fbbf24', glow: 'rgba(124,58,237,0.35)', tabActive: '#a78bfa', badgeBg: 'rgba(124,58,237,0.15)', badgeText: '#c4b5fd', modeGlow: 'rgba(251,191,36,0.3)', heroGradient: 'rgba(15,23,42,0.94)' },
+    stats: { characters: 7, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'fireforce',
+    anime: 'Enen no Shouboutai',
+    tagline: 'A combustion economy where burning humans powers civilization — and the only solution is to break the loop.',
+    malId: 38671,
+    visualizationHint: 'timeline',
+    visualizationReason: 'Fire Force is a causal loop system: the Great Cataclysm causes the combustion crisis, which causes the attempted prevention, which IS the cause. Only a timeline view captures this self-sealing structure.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/1664/103275l.jpg',
+    themeColors: { primary: '#f97316', secondary: '#1f2937', accent: '#fb923c', glow: 'rgba(249,115,22,0.3)', tabActive: '#f97316', badgeBg: 'rgba(249,115,22,0.15)', badgeText: '#fed7aa', modeGlow: 'rgba(251,146,60,0.25)', heroGradient: 'rgba(15,23,42,0.92)' },
+    stats: { characters: 8, powerSystem: 3, rules: 2 }
+  },
+  {
+    id: 'tokyo_revengers',
+    anime: 'Tokyo Revengers',
+    tagline: 'A temporal arbitrage mechanism where one man\'s loyalty rewrites gang economics — and every rewrite costs someone their future.',
+    malId: 42249,
+    visualizationHint: 'timeline',
+    visualizationReason: 'Tokyo Revengers is fundamentally a temporal feedback loop: each time leap changes the causal graph, creating new winners and losers in the gang hierarchy. Only a timeline renderer captures how intervention points cascade.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/1839/122012l.jpg',
+    themeColors: { primary: '#3b82f6', secondary: '#1f2937', accent: '#60a5fa', glow: 'rgba(59,130,246,0.3)', tabActive: '#3b82f6', badgeBg: 'rgba(59,130,246,0.15)', badgeText: '#bfdbfe', modeGlow: 'rgba(96,165,250,0.25)', heroGradient: 'rgba(15,23,42,0.92)' },
+    stats: { characters: 8, powerSystem: 2, rules: 2 }
+  },
+  {
+    id: 'bleach',
+    anime: 'Bleach',
+    tagline: 'A spiritual pressure hierarchy where reiatsu tier overrides all technique matchups — and the king always wins.',
+    malId: 269,
+    visualizationHint: 'counter-tree',
+    visualizationReason: 'Bleach\'s combat system is a strict reiatsu dominance tree: superior spiritual pressure invalidates all lower-level abilities regardless of type matchup. The counter-tree maps how reiatsu tiers override technique-specific counters.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/1541/147774l.jpg',
+    themeColors: { primary: '#3b82f6', secondary: '#1e3a8a', accent: '#60a5fa', glow: 'rgba(59,130,246,0.35)', tabActive: '#3b82f6', badgeBg: 'rgba(59,130,246,0.15)', badgeText: '#bfdbfe', modeGlow: 'rgba(96,165,250,0.25)', heroGradient: 'rgba(7,11,26,0.95)' },
+    stats: { characters: 8, powerSystem: 3, rules: 2 }
+  },
+  {
+    id: 'blackclover',
+    anime: 'Black Clover',
+    tagline: 'A mana-talent hierarchy where five-leaf corruption and anti-magic nullification define the ceiling — and Julius Novachrono\'s time magic sits above all.',
+    malId: 34572,
+    visualizationHint: 'counter-tree',
+    visualizationReason: 'Black Clover\'s combat system is defined by mana hierarchy and anti-magic nullification — the counter-tree maps how mana tier, anti-magic negation, and time dilation create a strict combat dominance ordering.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/2/88336l.jpg',
+    themeColors: { primary: '#22c55e', secondary: '#1f2937', accent: '#86efac', glow: 'rgba(34,197,94,0.3)', tabActive: '#22c55e', badgeBg: 'rgba(34,197,94,0.15)', badgeText: '#bbf7d0', modeGlow: 'rgba(134,239,172,0.25)', heroGradient: 'rgba(15,23,42,0.92)' },
+    stats: { characters: 8, powerSystem: 2, rules: 2 }
+  },
+  {
+    id: 'parasyte',
+    anime: 'Kiseijuu: Sei no Kakuritsu',
+    tagline: 'A parasite-host symbiosis system where consciousness negotiation determines survival — and Gotou\'s economic efficiency outpaces violence.',
+    malId: 22535,
+    visualizationHint: 'standard-cards',
+    visualizationReason: 'Parasyte\'s core conflict is not combat but biological optimization: parasites and humans compete for the same resource (survival) through different strategies, with Gotou\'s economic approach being the ultimate threat.',
+    animeImageUrl: 'https://myanimelist.net/images/anime/3/73178l.jpg',
+    themeColors: { primary: '#a855f7', secondary: '#1f2937', accent: '#c084fc', glow: 'rgba(168,85,247,0.3)', tabActive: '#a855f7', badgeBg: 'rgba(168,85,247,0.15)', badgeText: '#e9d5ff', modeGlow: 'rgba(192,132,252,0.25)', heroGradient: 'rgba(15,23,42,0.92)' },
+    stats: { characters: 8, powerSystem: 2, rules: 2 }
+  }
 
 export const UNIVERSE_CATALOG_MAP = Object.fromEntries(UNIVERSE_CATALOG.map(entry => [entry.id, entry]))

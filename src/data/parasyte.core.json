@@ -254,5 +254,6 @@
       "tabIndex": 0
     }
   ],
-  "gradientTo": "purple-900"
+  "gradientTo": "purple-900",
+  "id": "parasyte"
 }

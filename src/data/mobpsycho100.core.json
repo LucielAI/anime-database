@@ -445,5 +445,12 @@
     "microHook": "100% power requires 0% ego.",
     "thesis": "Emotional honesty is the ultimate power source — genuine connection beats ego.",
     "primarySystemType": "entity_db"
+  },
+  "id": "mobpsycho100",
+  "gradientTo": "purple-900",
+  "stats": {
+    "characters": 6,
+    "powerSystem": 4,
+    "rules": 4
   }
 }
