@@ -1,0 +1,228 @@
+{
+  "anime": "Enen no Shouboutai (Fire Force)",
+  "tagline": "A combustion theology economy where spontaneous human ignition, evangelical mega-corporations, and delayed cataclysm create competing religious-industrial complex factions.",
+  "malId": 38671,
+  "visualizationHint": "timeline",
+  "visualizationReason": "Fire Force is defined by generational Causality Rift propagation, evangelist-company competing timelines, and Great Cataclysm delayed-consequence mapping — the timeline renderer maps how the cataclysm unfolds and how present-day Infernal factions race to control or prevent recurrence.",
+  "headerFlavor": {
+    "loreQuote": "I am the hope of those who burn.",
+    "sysWarning": "// [SYS_OP]: COMBUSTION NETWORK ACTIVE — CATACLYSM COUNTDOWN CALCULATING",
+    "sysWarningColor": "orange"
+  },
+  "backgroundMotif": "jagged",
+  "revealOverlay": "glow-border",
+  "introductionSummary": "Fire Force operates as a combustion theology economy: spontaneous human ignition creates 'Infernals' who must be contained by company fire brigades, while the Great Cataclysm that started it all is a delayed causal event whose full consequences are still propagating through society. The timeline captures how the cataclysm created religious-industrial complex factions competing to either complete or prevent the cataclysm's recurrence.",
+  "aiInsights": {
+    "casual": "Fire Force is about people who catch fire and become monsters, dealt with by other people who catch fire and fight monsters. The twist is that the entire system is caused by a time-manipulation event and everyone is unknowingly participating in a causal loop.",
+    "deep": "The Fire Force universe models combustion as a religious-industrial complex: the Evangelist cult wants to complete the Great Cataclysm to 'reset' humanity, the Holy Sol Tree wants to contain it, and the Asakusa faction wants to find a cure. The Great Cataclysm is a delayed-causal event from the future — the cataclysm was caused by the people trying to prevent it, making it a causal loop with no clear beginning."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1664/103275l.jpg",
+  "themeColors": {
+    "primary": "#ea580c",
+    "secondary": "#0f172a",
+    "accent": "#dc2626",
+    "glow": "rgba(234,88,12,0.35)",
+    "tabActive": "#fb923c",
+    "badgeBg": "rgba(220,38,38,0.15)",
+    "badgeText": "#fca5a5",
+    "modeGlow": "rgba(234,88,12,0.3)",
+    "heroGradient": "rgba(15,23,42,0.94)"
+  },
+  "powerSystem": [
+    {
+      "name": "Ignition",
+      "subtitle": "Spontaneous Human Combustion",
+      "loreDesc": "Humans in this world spontaneously ignite when their body temperature reaches critical mass, becoming Infernals — monsters that retain some memory of who they were.",
+      "systemDesc": "A mass-state-change event where human nodes undergo thermal transformation, losing cognitive function but retaining combat capability and partial identity memory.",
+      "icon": "Flame",
+      "color": "orange-400",
+      "signatureMoment": "Shinmon's spontaneous ignition at the Adolla Burst scene — revealing that the 'Demon' was the original cause of the Great Cataclysm.",
+      "loreSubtitle": "Spontaneous Human Combustion",
+      "systemSubtitle": "Thermal State Cascade Event"
+    },
+    {
+      "name": "Adolla Burst",
+      "subtitle": "Catastrophic Causality Rift",
+      "loreDesc": "The Great Cataclysm was caused by an 'Adolla Burst' — a massive Causality Rift that propagated through the world and triggered spontaneous ignition in the entire population.",
+      "systemDesc": "A temporal-causality cascade event that permanently altered the world's fundamental rules, creating the combustion economy.",
+      "icon": "Zap",
+      "color": "red-400",
+      "signatureMoment": "The revelation that the Great Cataclysm was caused from within — a causal loop from the future.",
+      "loreSubtitle": "Catastrophic Causality Rift",
+      "systemSubtitle": "Temporal-Causality Cascade"
+    },
+    {
+      "name": "Company Brigades",
+      "subtitle": "Industrial Combat Hierarchy",
+      "loreDesc": "The eight major company fire brigades that contain Infernals and maintain the combustion theology industrial complex — each company has its own theological and political agenda.",
+      "systemDesc": "A distributed military-industrial network where each brigade operates semi-independently under company control, creating internal competition.",
+      "icon": "Shield",
+      "color": "blue-400",
+      "signatureMoment": "Company 1's revealed agenda to maintain the cataclysm system versus Company 8's goal of finding a cure.",
+      "loreSubtitle": "Industrial Combat Hierarchy",
+      "systemSubtitle": "Distributed Military-Industrial Network"
+    },
+    {
+      "name": "Demon (Haime)",
+      "subtitle": "First Igniter / Causality Origin",
+      "loreDesc": "The entity known as the 'Demon' is revealed to be the human who caused the Great Cataclysm — and who is still alive, burning eternally at the source.",
+      "systemDesc": "A causal-loop node: the entity that caused the cataclysm is also the entity preventing its resolution.",
+      "icon": "Skull",
+      "color": "purple-400",
+      "signatureMoment": "Revealing that the Demon is Haime, the original Adolla Burst initiator, trapped in an eternal combustion loop.",
+      "loreSubtitle": "First Igniter / Causality Origin",
+      "systemSubtitle": "Causal Loop Perpetrator"
+    }
+  ],
+  "rankings": {
+    "systemName": "Fire Force World Hierarchy",
+    "topTierName": "Evangelist / Great Cataclysm Entity",
+    "topTierLore": "The Evangelist and the entities behind the Great Cataclysm represent system-level threats whose goals supersede any company or national interest.",
+    "topTierSystem": "World-ending capability nodes whose agenda operates across centuries and generational timelines.",
+    "tiers": [
+      {
+        "name": "Company Captain",
+        "loreDesc": "Elite fire brigade leaders who can control their own ignition and fight Infernals at a personal combat level.",
+        "systemDesc": "High-combat nodes with thermal capability control and institutional authority."
+      },
+      {
+        "name": "Rookie Fire Soldier",
+        "loreDesc": "Standard company fire soldiers with basic training and limited thermal control.",
+        "systemDesc": "Baseline military nodes with standard Infernal containment capability."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Holy Sol Tree / White-Clad",
+      "loreDesc": "The religious faction that worships the Great Cataclysm and wants to complete it — believing it will grant immortality to humanity.",
+      "systemDesc": "A millennialist organization whose goal is to accelerate the cataclysm system, treating the combustion economy as a desired end-state.",
+      "icon": "TreeDeciduous",
+      "color": "green-400"
+    },
+    {
+      "name": "Company 8 (Hinawa's Brigade)",
+      "loreDesc": "The independent brigade investigating the truth of the Great Cataclysm, operating outside normal company hierarchy.",
+      "systemDesc": "An intelligence-gathering node operating independently of the industrial complex, pursuing information rather than containment.",
+      "icon": "Flame",
+      "color": "orange-400"
+    },
+    {
+      "name": "Asakusa",
+      "loreDesc": "The independent territory that has developed a cure for Infernalization — representing hope for the combustion economy's resolution.",
+      "systemDesc": "A research-and-development node that has cracked the Infernalization mechanism and developed a reversal protocol.",
+      "icon": "Heart",
+      "color": "red-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Ignition Cannot Be Stopped Once Started",
+      "loreDesc": "Once a human begins the Infernal ignition process, it cannot be reversed by normal means — only the Asakusa cure or death can stop it.",
+      "loreConsequence": "Every ignition is a permanent state change until the cure is found.",
+      "systemEquivalent": "A state machine with no rollback capability — only forward progression or termination.",
+      "severity": "fatal",
+      "loreSubtitle": "Irreversible Ignition State",
+      "systemSubtitle": "Permanent State Change Event"
+    },
+    {
+      "name": "The Great Cataclysm is a Causal Loop",
+      "loreDesc": "The Great Cataclysm was caused by the people trying to prevent it — creating a causal loop with no clear origin point.",
+      "loreConsequence": "Every attempt to prevent the cataclysm is part of the causal chain that causes it.",
+      "systemEquivalent": "A self-sealing causal loop where the prevention mechanism is the cause.",
+      "severity": "fatal",
+      "loreSubtitle": "Causal Loop Paradox",
+      "systemSubtitle": "Self-Causing Prevention"
+    },
+    {
+      "name": "Company Theology Protects the Status Quo",
+      "loreDesc": "The eight companies maintain the combustion theology because their power depends on the Infernal problem existing.",
+      "loreConsequence": "The institutions responsible for solving the combustion crisis benefit from it remaining unsolved.",
+      "systemEquivalent": "Incentive structures that reward problem perpetuation over problem resolution.",
+      "severity": "high",
+      "loreSubtitle": "Institutional Problem Perpetuation",
+      "systemSubtitle": "Incentive-Aligned Problem Maintenance"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Shinmon (Benimaru Shinmon)",
+      "title": "Third Generation / Asakusa Leader",
+      "rank": "Company 8 Captain",
+      "dangerLevel": 10,
+      "loreBio": "The strongest fire soldier in the world, leader of Asakusa, who can generate black flames that burn even other people's fire.",
+      "systemBio": "A third-generation combustion node with complete thermal control — his black flames represent the highest thermal output tier in the series.",
+      "gradientFrom": "orange-900",
+      "gradientTo": "red-900",
+      "accentColor": "orange-400",
+      "icon": "Flame",
+      "signatureMoment": "Single-handedly defeating an entire company brigade sent to destroy Asakusa — demonstrating that his power alone exceeds entire military units.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "protagonist",
+      "classificationTag": "third-generation",
+      "keyAbility": "Black Flame Generation / Thermal Control / Infernal Combat"
+    },
+    {
+      "name": "Arthur (Arthur Light)",
+      "title": "Holy Sol Temple Knight",
+      "rank": "White-Clad Leader",
+      "dangerLevel": 9,
+      "loreBio": "The leader of the Holy Sol Tree's knight order who genuinely believes completing the Great Cataclysm will save humanity.",
+      "systemBio": "A high-capability node driven by sincere millenarian belief — he is not evil, he genuinely believes the cataclysm is salvation.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "white",
+      "accentColor": "blue-400",
+      "icon": "Sun",
+      "signatureMoment": "Revealing his plan to use the Great Cataclysm to grant immortality to all of humanity.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "antagonist",
+      "classificationTag": "white-clad",
+      "keyAbility": "Holy Sol Fire / Evangelist Combat / Thermal Conversion"
+    },
+    {
+      "name": "Haumea (Evangelist)",
+      "title": "The Evangelist",
+      "rank": "Causality Architect",
+      "dangerLevel": 10,
+      "loreBio": "The entity orchestrating the Great Cataclysm completion — a child-like being who exists outside normal causality.",
+      "systemBio": "A causal-loop architect node who has been manipulating the combustion economy for centuries to engineer a specific causal outcome.",
+      "gradientFrom": "purple-900",
+      "gradientTo": "pink-900",
+      "accentColor": "purple-400",
+      "icon": "Eye",
+      "signatureMoment": "Revealing that the Great Cataclysm was always meant to be completed by the people trying to prevent it.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "villain",
+      "classificationTag": "evangelist",
+      "keyAbility": "Causality Manipulation / Evangelist Network / Temporal Control"
+    }
+  ],
+  "relationships": [
+    {source:"Shinmon (Benimaru Shinmon)",target:"Arthur (Arthur Light)",type:"enemy",loreDesc:"The strongest fire soldier versus the strongest Holy Sol knight — their conflict represents the fundamental ideological divide.",systemDesc:"Thermal output optimization versus millennialist belief system — two high-capability nodes with incompatible end-goals.",weight:9,systemEdgeType:"ideological-conflict"},
+    {source:"Haumea (Evangelist)",target:"Arthur (Arthur Light)",type:"ally",loreDesc:"Arthur is executing the Evangelist's plan without fully understanding the causal loop he's part of.",systemDesc:"A principal-agent relationship where the agent (Arthur) is being manipulated toward the principal's (Evangelist) goal.",weight:9,systemEdgeType:"manipulation"}
+  ],
+  "counterplay": [
+    {id:"ff-cp-1",attacker:"Black Flame",defender:"Standard Fire",mechanic:"Black Flame burns thermal energy itself — it can extinguish other fires and burn at temperatures that ignore normal fire resistance.",loreDesc:"Shinmon's black flame can extinguish any normal fire, making him effectively immune to standard fire-based attacks.",systemDesc:"A thermal cascade that consumes the thermal output of other fire-based abilities.",loreSubtitle:"Black Flame Extinguishes All Fire",systemSubtitle:"Thermal Energy Consumption"},
+    {id:"ff-cp-2",attacker:"Asakusa Cure",defender:"Infernalization",mechanic:"Asakusa has developed a cure that reverses the Infernalization process, potentially ending the combustion economy's core problem.",loreDesc:"The existence of a cure undermines both the Holy Sol's cataclysm theology and the companies' problem-perpetuation incentives.",systemDesc:"A solution that invalidates the institutional incentive structure of the combustion economy.",loreSubtitle:"Infernalization Cure",systemSubtitle:"Problem Resolution Threat"}
+  ],
+  "causalEvents": [
+    {id:"ff-ce1",name:"The Great Cataclysm",trigger:"Haumea manipulates the Adolla Burst to propagate through the world",consequence:"The entire world's population becomes susceptible to spontaneous ignition — the combustion economy begins",timelinePosition:"~250 years before series start — the founding causal event",loreDesc:"The Great Cataclysm was caused by an Adolla Burst that spread through the world, triggering mass spontaneous ignition and creating the Infernal problem.",systemDesc:"A temporal-causality cascade that permanently altered the world's human combustion state parameters.",loreSubtitle:"The Great Cataclysm",systemSubtitle:"Mass Combustion Initiation Event"},
+    {id:"ff-ce2",name:"The Causal Loop Reveal",trigger:"Shin group discovers the cataclysm was caused by people in the future",consequence:"Every attempt to prevent the cataclysm is revealed to be part of the causal chain that causes it",timelinePosition:"Series present — the revelation that changes everything",loreDesc:"The people trying to prevent the Great Cataclysm are revealed to be its original cause — a causal loop with no beginning.",systemDesc:"A self-sealing causal discovery that invalidates all prevention attempts as they are simultaneously causation.",loreSubtitle:"The Causal Paradox Revealed",systemSubtitle:"Self-Causing Prevention Discovered"}
+  ],
+  "anomalies": [
+    {name:"The Causal Loop Without Beginning",loreDesc:"The Great Cataclysm has no clear origin — it was caused by people in the future who were trying to prevent it, creating a causal loop.",systemDesc:"A self-referential causal chain with no origin point — the cause and effect are the same event.",impact:"Any attempt to prevent the cataclysm is part of its cause — preventing it requires understanding the loop.",ruleViolated:"Linear causality — events have causes that precede their effects",loreSubtitle:"No-Origin Causal Loop",systemSubtitle:"Self-Contained Causal Chain"},
+    {name:"The Asakusa Cure Exists",loreDesc:"Asakusa has developed a cure for Infernalization that could end the combustion economy — but using it would collapse the companies' power structure.",systemDesc:"A solution exists but the institutions that could deploy it are structurally incentivized to prevent its use.",impact:"The cure represents a threat to the institutional power structure, making it a target for suppression.",ruleViolated:"Institutional problem-solving incentive",loreSubtitle:"Cure Exists But Suppressed",systemSubtitle:"Solution-Threatened Institutions"}
+  ],
+  "systemQuestions": [
+    {question:"What is the Great Cataclysm actually trying to achieve?",answer:"The cataclysm is a self-sealing causal loop: it was caused by people trying to prevent it, meaning the prevention IS the cause.",tabIndex:0},
+    {question:"Why do the companies maintain the problem instead of solving it?",answer:"Their power, theology, and economics are all built on the combustion crisis existing — solving it would collapse the entire institutional structure.",tabIndex:1},
+    {question:"Can the causal loop be broken?",answer:"Only by understanding WHO caused it and WHY — the causal loop requires intervention at a specific point that may be inaccessible from within the loop.",tabIndex:2}
+  ],
+  "hero": {systemType:"timeline",microHook:"The cataclysm is already happening — we've just been inside it.",thesis:"The combustion economy is a causal loop: the people trying to prevent the Great Cataclysm are the ones who caused it.",primarySystemType:"core_laws"}
+}

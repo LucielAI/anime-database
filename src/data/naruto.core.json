@@ -1,0 +1,528 @@
+{
+  "anime": "Naruto",
+  "tagline": "A shinobi economy where chakra compounding, jutsu intellectual property, and village hierarchies determine civilization-scale outcomes.",
+  "malId": 20,
+  "visualizationHint": "counter-tree",
+  "visualizationReason": "Naruto is defined by jutsu counter relationships, elemental weaknesses, and power scaling hierarchies — the counter-tree maps how techniques nullify, amplify, or bypass each other in combat.",
+  "headerFlavor": {
+    "loreQuote": "Believe it!",
+    "sysWarning": "// [SYS_OP]: CHAKRA NETWORK ACTIVE — JUTSU COUNTER INTELLIGENCE LOADED",
+    "sysWarningColor": "orange"
+  },
+  "backgroundMotif": "circles",
+  "revealOverlay": "glow-border",
+  "introductionSummary": "Naruto operates as a chakra oligopoly where villages function as corporations, jutsu as proprietary IP, and ninja as competitive market actors. The fundamental resource — chakra — is finite and skill-differentiated, creating a meritocracy that rewards talent concentration while village institutions route talent into predetermined roles. The counter-tree captures the core thesis: shinobi combat is a rock-paper-scissors game at the technique level where elemental matchups, Kekkei Genkai monopolies, and sage mode scaling determine outcomes before individual skill matters.",
+  "aiInsights": {
+    "casual": "Naruto looks like a coming-of-age story but it's actually a chakra economy where villages compete for talent, jutsu are jealously guarded IP, and your bloodline determines your celling more than hard work. The counter-tree makes the whole thing make sense.",
+    "deep": "The Naruto universe models shinobi conflict as an information warfare market. Kekkai Genkai are monopoly patents, Shadow Clones are parallel processing exploits, and the Hokage position is a CEO role managing village resources. Madara and Obito's plan to create Infinite Tsukuyomi is essentially a hostile market takeover of all human consciousness — they saw the current competitive equilibrium as fundamentally broken."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1141/142503l.jpg",
+  "themeColors": {
+    "primary": "#f97316",
+    "secondary": "#0f172a",
+    "accent": "#3b82f6",
+    "glow": "rgba(249,115,22,0.35)",
+    "tabActive": "#fb923c",
+    "badgeBg": "rgba(59,130,246,0.15)",
+    "badgeText": "#93c5fd",
+    "modeGlow": "rgba(249,115,22,0.3)",
+    "heroGradient": "rgba(15,23,42,0.94)"
+  },
+  "powerSystem": [
+    {
+      "name": "Chakra",
+      "subtitle": "Life Energy Operational Currency",
+      "loreDesc": "A mixture of spiritual and physical energy that every ninja can train and shape into supernatural techniques through hand seal programming.",
+      "systemDesc": "A capped personal resource that regenerates at varying rates — combat expenditure creates tactical windows where depleted ninjas become high-value targets.",
+      "icon": "Zap",
+      "color": "orange-400",
+      "signatureMoment": "Naruto running out of chakra against Gaara and almost dying, forcing him to learn chakra control.",
+      "loreSubtitle": "Life Energy Operational Currency",
+      "systemSubtitle": "Capped Regenerative Combat Resource"
+    },
+    {
+      "name": "Ninjutsu",
+      "subtitle": "Programmable Reality Manipulation",
+      "loreDesc": "The foundational shinobi art: shaping chakra into external techniques through hand seals, creating elemental output or environmental modification.",
+      "systemDesc": "A technique library that functions as installable software — different elemental affinities determine which jutsu a ninja can run.",
+      "icon": "Cpu",
+      "color": "blue-400",
+      "signatureMoment": "Kakashi using Chidori as a lightning-concentrated piercing attack that requires Sharingan to compensate for speed blindness.",
+      "loreSubtitle": "Programmable Reality Manipulation",
+      "systemSubtitle": "Installable Technique Operating System"
+    },
+    {
+      "name": "Kekkai Genkai",
+      "subtitle": "Bloodline Patent Monopoly",
+      "loreDesc": "Hereditary techniques that cannot be copied, learned, or transferred — owned exclusively by specific clans and passed through bloodlines.",
+      "systemDesc": "A genetic IP monopoly creating permanent competitive moats for certain clans. The Byakugan, Sharingan, and Mokuton represent irreplaceable technological advantages.",
+      "icon": "Dna",
+      "color": "purple-400",
+      "signatureMoment": "Itachi's Amaterasu — a fire that burns anything, cannot be extinguished, and is completely inextinguishable by normal means.",
+      "loreSubtitle": "Hereditary Technique Monopoly",
+      "systemSubtitle": "Genetic Competitive Moat"
+    },
+    {
+      "name": "Sage Mode",
+      "subtitle": "Environmental Exploitation Override",
+      "loreDesc": "Drawing natural energy from the environment to amplify all ninja capabilities beyond normal limits — toad, snake, and slug variants.",
+      "systemDesc": "A temporary capability multiplier that trades decision speed for raw power amplification — perfect for high-stakes engagements where finishing fast matters more than adaptability.",
+      "icon": "Eye",
+      "color": "green-400",
+      "signatureMoment": "Naruto entering Sage Mode against Pain, landing hits Pain couldn't even perceive with his normal sensory network.",
+      "loreSubtitle": "Natural Energy Amplification",
+      "systemSubtitle": "Environmental Power Multiplier"
+    }
+  ],
+  "rankings": {
+    "systemName": "Shinobi World Classification Hierarchy",
+    "topTierName": "Kage / Legendary Tier",
+    "topTierLore": "Five Kage and legendary S-rank ninjas whose individual power can shift geopolitical outcomes. These nodes operate outside normal market constraints.",
+    "topTierSystem": "Ultra-premium nodes with arbitrary capability stacks, institutional authority, and strategic information advantages that make them effectively non-counterable in 1v1 scenarios.",
+    "tiers": [
+      {
+        "name": "S-Rank / Jounin Commander",
+        "loreDesc": "Elite ninjas who lead major operations, command squads, and can independently contest S-rank missions.",
+        "systemDesc": "High-bandwidth operator nodes capable of multi-threaded tactical execution with full technique library access."
+      },
+      {
+        "name": "A-Rank / Special Jounin",
+        "loreDesc": "Combat specialists deployed against significant threats requiring coordinated response or individual excellence.",
+        "systemDesc": "Focused combat-optimized nodes with specialized technique stacks."
+      },
+      {
+        "name": "B-Rank / Chunnin",
+        "loreDesc": "Field operatives who lead squads and execute tactical operations at the standard operational level.",
+        "systemDesc": "Reliable baseline processing nodes with adequate technique execution and tactical coordination."
+      },
+      {
+        "name": "C-Rank / Genin",
+        "loreDesc": "Entry-level ninjas in training, deployed on low-threat missions as a learning experience.",
+        "systemDesc": "Minimal-capability nodes running basic processing with supervised execution."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Konohagakure (Hidden Leaf)",
+      "loreDesc": "The Village Hidden in the Leaves — the strongest ninja village, home to the Hokage and the origin of most of the story's protagonists. Known for producing exceptional ninja across all generations.",
+      "systemDesc": "The market-leading ninja corporation with the highest talent density, strongest IP portfolio (Uchiha, Sarutobi, Nara clans), and most defensible strategic position.",
+      "icon": "Leaf",
+      "color": "green-400"
+    },
+    {
+      "name": "Akatsuki",
+      "loreDesc": "An organization of S-rank rogue ninjas collecting tailed beasts for a goal of world domination through nuclear-level military leverage.",
+      "systemDesc": "A distributed network of high-capability rogue nodes forming a counter-institution that challenges the village monopoly on ninja labor.",
+      "icon": "Cloud",
+      "color": "red-400"
+    },
+    {
+      "name": "Orochimaru's Forces",
+      "loreDesc": "Orochimaru's independent research organization pursuing immortality, Kekkai Genkai acquisition, and forbidden jutsu development outside all village oversight.",
+      "systemDesc": "A dark-R&D lab that produces illegal but cutting-edge capability upgrades, operating entirely outside institutional constraints.",
+      "icon": "Snake",
+      "color": "purple-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Jutsu Patents are Clan Property",
+      "loreDesc": "Certain jutsu are restricted to specific clans — sharingan users can copy but not teach; Hiden jutsu cannot be learned without clan permission.",
+      "loreConsequence": "Non-clan members cannot legally develop or deploy protected techniques without licensing or theft.",
+      "systemEquivalent": "Intellectual property law that creates permanent competitive advantages for bloodline holders.",
+      "severity": "high",
+      "loreSubtitle": "Kekkai Genkai Licensing Restrictions",
+      "systemSubtitle": "Genetic IP Protection Monopoly"
+    },
+    {
+      "name": "Chakra is Finite Per Engagement",
+      "loreDesc": "Every ninja has a chakra pool that depletes with technique use — running out means certain death in combat.",
+      "loreConsequence": "Extended engagements favor stamina, regeneration, and efficiency over raw power.",
+      "systemEquivalent": "Resource-constrained combat where depletion creates permanent vulnerability windows.",
+      "severity": "fatal",
+      "loreSubtitle": "Chakra Pool Combat Constraints",
+      "systemSubtitle": "Finite Resource Depletion Risk"
+    },
+    {
+      "name": "Shadow Clone is a Chakra Tax",
+      "loreDesc": "Each shadow clone divides the user's chakra pool — too many clones and the user depletes themselves.",
+      "loreConsequence": "Shadow Clone is a high-risk jutsu for low-chakra ninjas — it can backfire catastrophically.",
+      "systemEquivalent": "Parallel processing has a proportional compute cost that can cause system failure on resource-constrained nodes.",
+      "severity": "high",
+      "loreSubtitle": "Clone Division Chakra Tax",
+      "systemSubtitle": "Resource Splitting Failure Risk"
+    },
+    {
+      "name": "Tailed Beasts are Strategic Assets",
+      "loreDesc": "The nine tailed beasts are living nuclear weapons — jinchuriki who host them are simultaneously the village's greatest asset and greatest liability.",
+      "loreConsequence": "The village that controls the jinchuriki controls massive military leverage; losing a jinchuriki shifts the power balance.",
+      "systemEquivalent": "Premium infrastructure nodes that can single-handedly change market dynamics but whose capture or loss destabilizes the entire organization.",
+      "severity": "high",
+      "loreSubtitle": "Tailed Beast Strategic Leverage",
+      "systemSubtitle": "High-Value Single Point of Failure"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Uzumaki Naruto",
+      "title": "Hokage / Nine-Tails Jinchuriki",
+      "rank": "Seventh Hokage",
+      "dangerLevel": 10,
+      "loreBio": "The orphan boy who became the most powerful ninja in history, carrying the Nine-Tails since birth and rising to lead his village through sheer stubborn will.",
+      "systemBio": "A high-resilience combat node with a permanent external resource stack (Kurama's chakra) that compensates for otherwise average baseline capabilities — the nine-tails creates a near-infinite late-game resource advantage.",
+      "gradientFrom": "orange-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "orange-400",
+      "icon": "Fox",
+      "signatureMoment": "Learning to access Kurama's chakra incrementally through trust rather than fear, culminating in Nine-Tails form against Pain.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/284121.jpg?s=3ebac88ad166bf105d8f04894f3fb469",
+      "malId": 17,
+      "systemRole": "protagonist",
+      "classificationTag": "jinchuriki",
+      "keyAbility": "Shadow Clones / Sage Mode / Nine-Tails Chakra"
+    },
+    {
+      "name": "Uchiha Sasuke",
+      "title": "Avenger / Last Uchiha",
+      "rank": "Shadow Kage",
+      "dangerLevel": 10,
+      "loreBio": "The prodigy who lost everything to his brother and dedicated his life to gaining enough power to destroy Itachi — then discovered the truth was more complicated.",
+      "systemBio": "A Sharingan-wielding combat node with perfect visual processing and the ability to copy any technique — the Uchiha platform's most capable implementation running on a personal-vendetta operating system.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "purple-900",
+      "accentColor": "blue-400",
+      "icon": "Eye",
+      "signatureMoment": "Using Kirin to obliterate Orochimaru's summon in a single strike — maximum damage from a natural disaster technique.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/131317.jpg?s=9705c17dba36c2edebded3a72dc1a46e",
+      "malId": 657,
+      "systemRole": "rival",
+      "classificationTag": "sharingan-user",
+      "keyAbility": "Sharingan / Chidori / Kirin / Susanoo"
+    },
+    {
+      "name": "Hatake Kakashi",
+      "title": "Kakashi of the Sharingan",
+      "rank": "Sixth Hokage",
+      "dangerLevel": 9,
+      "loreBio": "The Copycat Ninja who learned over 1,000 jutsu through his Sharingan — a man who became legendary for his speed, intelligence, and tragic past.",
+      "systemBio": "A high-efficiency combat node whose Sharingan allows technique replication without development costs, making him a universal counter-platform capable of adapting to any opponent's capability stack.",
+      "gradientFrom": "slate-800",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "Eye",
+      "signatureMoment": "Chidori vs. Sasuke's Chidori — two identical techniques colliding, with the emotional stakes of mentor against student.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/284129.jpg?s=b0a6b941fd427cbfd85657f316c0e309",
+      "malId": 704,
+      "systemRole": "mentor",
+      "classificationTag": "sharingan-user",
+      "keyAbility": "Chidori / Sharingan / 1000 Jutsu Library"
+    },
+    {
+      "name": "Uchiha Itachi",
+      "title": "Genius of the Uchiha",
+      "rank": "S-Rank Rogue",
+      "dangerLevel": 10,
+      "loreBio": "The brother who slaughtered his entire clan to prevent a coup, lived as a double agent, and died letting Sasuke kill him to give him the MS power.",
+      "systemBio": "A top-tier combat node running a guilt-driven guilt-optimization program, operating far below his actual capability ceiling to keep Sasuke safe while feeding false intelligence to Akatsuki.",
+      "gradientFrom": "red-900",
+      "gradientTo": "pink-900",
+      "accentColor": "red-400",
+      "icon": "Crow",
+      "signatureMoment": "Deploying Amaterasu against Sasuke — inextinguishable black flames that represent the Uchiha clan's most destructive offensive capability.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/131317.jpg?s=9705c17dba36c2edebded3a72dc1a46e",
+      "malId": 788,
+      "systemRole": "anti-hero",
+      "classificationTag": "sharingan-user",
+      "keyAbility": "Tsukuyomi / Amaterasu / Susanoo / Izamu"
+    },
+    {
+      "name": "Orochimaru",
+      "title": "Snake Sannin",
+      "rank": "S-Rank Rogue / Research Criminal",
+      "dangerLevel": 9,
+      "loreBio": "The village's most brilliant researcher who was expelled for illegal experimentation, now pursuing immortality and unlimited power through any means necessary.",
+      "systemBio": "A rogue R&D node that has escaped institutional oversight — his specialization in forbidden jutsu makes him simultaneously the most dangerous and most valuable ninja in the world.",
+      "gradientFrom": "purple-900",
+      "gradientTo": "slate-900",
+      "accentColor": "purple-400",
+      "icon": "Snake",
+      "signatureMoment": "Revealing his eight-headed snake form against the Fourth Hokage's seal, displaying power that required three Sannin to seal.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/284129.jpg?s=b0a6b941fd427cbfd85657f316c0e309",
+      "malId": 1017,
+      "systemRole": "villain",
+      "classificationTag": "snake-summoner",
+      "keyAbility": "Snake Summoning / Body Switching / Edo Tensei"
+    },
+    {
+      "name": "Jiraiya",
+      "title": "Toad Sage / Pervy Sage",
+      "rank": "Sannin / Legendary Sannin",
+      "dangerLevel": 9,
+      "loreBio": "The hermit toad summoner who trained Minato and Naruto, wrote erotica, and died fighting Pain to gather intelligence.",
+      "systemBio": "A toad-linked combat node whose Sage Mode and情报 gathering capabilities make him one of the highest-value information-warfare assets in the ninja world.",
+      "gradientFrom": "red-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Frog",
+      "signatureMoment": "Dying in the fight against Pain, his last act being to send a prophetic coded message that enabled Naruto's victory.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/284121.jpg?s=3ebac88ad166bf105d8f04894f3fb469",
+      "malId": 1289,
+      "systemRole": "mentor",
+      "classificationTag": "sage",
+      "keyAbility": "Sage Mode / Toad Summoning / Rasengan Evolution"
+    },
+    {
+      "name": "Tsunade",
+      "title": "Slug Princess / Fifth Hokage",
+      "rank": "Kage / Sannin",
+      "dangerLevel": 9,
+      "loreBio": "The greatest medical ninja in the world, a legendary fighter, and the Fifth Hokage who rebuilt Konoha after Pain's attack.",
+      "systemBio": "A support-specialist combat node whose medical ninjutsu creates a self-healing battlefield advantage — every strike taken can be recovered, making her a high-durability platform.",
+      "gradientFrom": "pink-900",
+      "gradientTo": "orange-900",
+      "accentColor": "pink-400",
+      "icon": "Heart",
+      "signatureMoment": "Breaking Madara's perfect Susanoo with a single punch — theSlug's strength technique, the most powerful offensive physical jutsu.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/69275.jpg?s=36c4ad9f4440d77918c34c49870e719c",
+      "malId": 1300,
+      "systemRole": "leader",
+      "classificationTag": "medical-ninja",
+      "keyAbility": "Medical Ninjutsu /Slug Summoning / Strength of a Hundred"
+    },
+    {
+      "name": "Shikamaru Nara",
+      "title": "The Calculative Genius",
+      "rank": "Jonin / Strategist",
+      "dangerLevel": 7,
+      "loreBio": "The genius who sees combat as a game of chess — if he can't find a winning strategy in thirty seconds, he gives up.",
+      "systemBio": "An intelligence-specialist combat node whose shadow techniques create long-range control links, and whose tactical processing far exceeds his physical combat capabilities.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-900",
+      "accentColor": "gray-400",
+      "icon": "Brain",
+      "signatureMoment": "Taking down Hidan with a elaborate scheme that exploited the immortality contract's one loophole — taking his blood and feeding it to bugs.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/105421.jpg?s=bbb2f94a4f15470a215358085358bc37",
+      "malId": 1408,
+      "systemRole": "strategist",
+      "classificationTag": "shadow-technique",
+      "keyAbility": "Shadow Possession / Shadow Strangle / Tactical Intelligence"
+    },
+    {
+      "name": "Gaara",
+      "title": "Kazekage / Sand Shield",
+      "rank": "Fifth Kazekage",
+      "dangerLevel": 9,
+      "loreBio": "The Jinchuriki who was hated and feared for housing the One-Tail, who became Kazekage and one of the most powerful ninja in the world.",
+      "systemBio": "A sand-based defensive combat node whose absolute defense makes him nearly impervious to physical attacks — his sand operates autonomously, making him effective even when overwhelmed.",
+      "gradientFrom": "yellow-900",
+      "gradientTo": "orange-900",
+      "accentColor": "yellow-400",
+      "icon": "Shield",
+      "signatureMoment": "Protecting the allied army from a meteor using his absolute defense — the sand of the Kazekage as ultimate shield.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/292449.jpg?s=f7b8f2084a65d22cd9381f25a55f8b2f",
+      "malId": 1512,
+      "systemRole": "ally",
+      "classificationTag": "jinchuriki",
+      "keyAbility": "Sand Control / Absolute Defense / Shukaku Chakra Mode"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Uzumaki Naruto",
+      "target": "Uchiha Sasuke",
+      "type": "ally",
+      "loreDesc": "Sworn rivals who push each other beyond limits — Naruto's defining relationship, driving his entire motivation to bring Sasuke back.",
+      "systemDesc": "A mutual capability amplification link where each node's optimization creates pressure on the other to exceed its own ceiling.",
+      "weight": 10,
+      "systemEdgeType": "mutual-escalation"
+    },
+    {
+      "source": "Uchiha Sasuke",
+      "target": "Uchiha Itachi",
+      "type": "enemy",
+      "loreDesc": "The brother-slayer relationship defined by Itachi's secret sacrifice — Sasuke's entire motivation was built on destroying someone who never wanted to be destroyed.",
+      "systemDesc": "A one-directional targeting graph where the target node (Itachi) had already optimized for being destroyed by this specific attacker.",
+      "weight": 10,
+      "systemEdgeType": "personal-vendetta"
+    },
+    {
+      "source": "Hatake Kakashi",
+      "target": "Uchiha Sasuke",
+      "type": "ally",
+      "loreDesc": "Teacher to Sasuke before Itachi, Kakashi trained Sasuke in Chidori — their bond made Kakashi's fight against Sasuke at the final valley emotionally devastating.",
+      "systemDesc": "A knowledge transfer edge that created an information mirror — Sasuke learned from the same teacher who trained the man he wanted to kill.",
+      "weight": 9,
+      "systemEdgeType": "mentorship"
+    },
+    {
+      "source": "Uchiha Itachi",
+      "target": "Uchiha Sasuke",
+      "type": "ally",
+      "loreDesc": "Itachi loved Sasuke more than the village, more than his duty — his entire post-massacre life was spent ensuring Sasuke would survive and eventually have the power to handle the truth.",
+      "systemDesc": "A protective subversion node — Itachi deliberately suppressed his own capability to route power to Sasuke through a path that required Sasuke to eventually understand the full truth.",
+      "weight": 10,
+      "systemEdgeType": "protective-subversion"
+    },
+    {
+      "source": "Orochimaru",
+      "target": "Uchiha Sasuke",
+      "type": "enemy",
+      "loreDesc": "Orochimaru wanted Sasuke's body as a vessel — Sasuke deliberately sought Orochimaru's power knowing it would be used against him eventually.",
+      "systemDesc": "A predatory acquisition attempt that was counteracted by the target using the predator's resources for their own capability stack.",
+      "weight": 8,
+      "systemEdgeType": "predatory-acquisition"
+    },
+    {
+      "source": "Uzumaki Naruto",
+      "target": "Jiraiya",
+      "type": "ally",
+      "loreDesc": "Grandmaster to student — Jiraiya trained Naruto in Sage Mode and was like a father, making his death at Pain's hands the most devastating loss Naruto experienced.",
+      "systemDesc": "A knowledge transfer link whose sudden severance created a capability ceiling limitation that Naruto had to overcome through self-optimization.",
+      "weight": 10,
+      "systemEdgeType": "mentorship"
+    },
+    {
+      "source": "Uzumaki Naruto",
+      "target": "Gaara",
+      "type": "ally",
+      "loreDesc": "Two jinchuriki who understood each other's isolation — Gaara went from wanting to kill Naruto to being one of his most loyal allies and fellow Kage.",
+      "systemDesc": "A shared-experience bonding edge between two high-value nodes who recognized each other's structural constraints from the inside.",
+      "weight": 9,
+      "systemEdgeType": "mutual-recognition"
+    },
+    {
+      "source": "Shikamaru Nara",
+      "target": "Uzumaki Naruto",
+      "type": "ally",
+      "loreDesc": "The strategist who recognized Naruto's true value when others dismissed him — Shikamaru's tactical support elevated Naruto's battlefield effectiveness.",
+      "systemDesc": "An intelligence-combat integration edge that compensated for Naruto's early tactical weaknesses through collaborative planning.",
+      "weight": 8,
+      "systemEdgeType": "tactical-support"
+    }
+  ],
+  "counterplay": [
+    {
+      "id": "ninja-cp-1",
+      "attacker": "Fire Release Jutsu",
+      "defender": "Water Release Jutsu",
+      "mechanic": "Water extinguishes fire in a straight elemental counter — superior water volume cancels fire jutsu proportionally.",
+      "loreDesc": "Sasuke's Fire Style jutsu are countered by sufficient water techniques, which absorb and cancel the thermal energy.",
+      "systemDesc": "An elemental type-advantage system that creates predictable counter-curves — fire jutsu below a certain power threshold are automatically cancelled by water jutsu above a certain volume threshold.",
+      "loreSubtitle": "Water Extinguishes Fire Release",
+      "systemSubtitle": "Elemental Type Advantage Counter"
+    },
+    {
+      "id": "ninja-cp-2",
+      "attacker": "Sharingan",
+      "defender": "Speed / No Visual Cue Attacks",
+      "mechanic": "Sharingan reads movement and copies techniques but has a reaction speed ceiling — attacks faster than the eye cannot be tracked even with Sharingan.",
+      "loreDesc": "Minato's Flying Raijin was too fast for Obito's Sharingan to track — teleportation bypasses visual processing entirely.",
+      "systemDesc": "A sensor-gap exploit: Sharingan is a visual-copy tool that fails against teleportation, phase shift, or any non-movement-based attack vector.",
+      "loreSubtitle": "Speed Bypasses Sharingan Tracking",
+      "systemSubtitle": "Visual Processing Ceiling Exploit"
+    },
+    {
+      "id": "ninja-cp-3",
+      "attacker": "Genjutsu",
+      "defender": "Chakra Chaos / Blind Breaker",
+      "mechanic": "Genjutsu works by disrupting chakra flow — disrupting your own chakra flow in a controlled way can break the genjutsu caster's hold.",
+      "loreDesc": "Kakashi and Naruto breaking Kabuto's genjutsu by disrupting their own chakra networks in a controlled cascade.",
+      "systemDesc": "A self-interruption counter that exploits the feedback loop between the caster's chakra and the target's — creating enough internal noise disrupts the external control signal.",
+      "loreSubtitle": "Self-Chakra Disruption Breaks Genjutsu",
+      "systemSubtitle": "Feedback Loop Disruption"
+    },
+    {
+      "id": "ninja-cp-4",
+      "attacker": "Susanoo",
+      "defender": "Fire / Wind / Amaterasu",
+      "mechanic": "Amaterasu is stated to be the one thing that can extinguish Amaterasu — Susanoo can block it temporarily but cannot permanently counter it.",
+      "loreDesc": "Sasuke's Susanoo armor can block Amaterasu but Itachi's Amaterasu will eventually burn through any defense given enough time.",
+      "systemDesc": "An asymmetric counter where one ability has no real counter except waiting out its duration — Amaterasu creates an inevitable-collision scenario.",
+      "loreSubtitle": "Susanoo vs Amaterasu Stalemate",
+      "systemSubtitle": "No-Counter Absolute Attack vs Shield"
+    },
+    {
+      "id": "ninja-cp-5",
+      "attacker": "Sage Mode",
+      "defender": "High-Speed Combat / Range Denial",
+      "mechanic": "Sage Mode requires stillness to gather natural energy — keeping the sage mode user in motion prevents gathering, disabling the mode entirely.",
+      "loreDesc": "Pain's deva path could repel Naruto from close range, preventing the Sage Mode gathering that was his primary advantage.",
+      "systemDesc": "A mode-lock denial attack that exploits the gathering condition of Sage Mode — sustained high-speed disruption prevents activation.",
+      "loreSubtitle": "Movement Disrupts Sage Gathering",
+      "systemSubtitle": "Mode Activation Denial"
+    }
+  ],
+  "causalEvents": [
+    {
+      "id": "ninja-ce1",
+      "name": "The Uchiha Massacre",
+      "trigger": "Uchiha clan begins planning a coup against Konoha leadership",
+      "consequence": "Danzo orders Itachi to massacre the entire Uchiha clan, with Itachi negotiating to spare Sasuke in exchange.",
+      "timelinePosition": "Approximately 15 years before main series — foundational trauma driving Sasuke's entire arc",
+      "loreDesc": "Itachi single-handedly killed his entire clan — parents, children, everyone — to prevent a civil war that would have destroyed Konoha.",
+      "systemDesc": "A state-sponsored market correction that removed a too-powerful competing faction through internal subversion.",
+      "loreSubtitle": "Itachi's Impossible Choice",
+      "systemSubtitle": "State-Sponsored Faction Removal"
+    },
+    {
+      "id": "ninja-ce2",
+      "name": "Naruto Becomes Jinchuriki",
+      "trigger": "Nine-Tails is sealed into newborn Naruto by Minato to save the village",
+      "consequence": "Naruto grows up ostracized while carrying the village's most powerful weapon — creating both his isolation and his ultimate capability advantage.",
+      "timelinePosition": "Birth — the inciting incident that defines the entire series' power structure",
+      "loreDesc": "Minato divided the Nine-Tails' chakra and sealed the bulk into his newborn son, sacrificing himself and his wife to stop Kurama's rampage.",
+      "systemDesc": "A forced capability integration at birth that created an asymmetric node — Naruto never had the option of being a normal ninja.",
+      "loreSubtitle": "The Nine-Tails Sealing",
+      "systemSubtitle": "Forced Capability Integration at Birth"
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Kaguya Otsutsuki",
+      "loreDesc": "The origin of all chakra on Earth — she arrived from another dimension, consumed the world's chakra fruit, and created the ninja world through her descendants before becoming the Ten-Tails itself.",
+      "systemDesc": "The system's original administrator node who was removed and fragmented into the tailed beasts — her return represents a system restore to pre-ninja-world conditions.",
+      "impact": "Her return threatens to undo the entire shinobi system and reset civilization to a pre-chakra state.",
+      "ruleViolated": "Shinjutsu — the power of the Gods, beyond any jutsu or Kekkai Genkai to counter",
+      "loreSubtitle": "The Chakra Origin Entity",
+      "systemSubtitle": "System-Origin Node Restoration"
+    },
+    {
+      "name": "Infinite Tsukuyomi",
+      "loreDesc": "Madara's final jutsu that casts the entire world into a genjutsu using the Moon as a lens, trapping every living being in a perfect dream.",
+      "systemDesc": "A complete market takeover of human consciousness — every node is forced into a single unified experience, eliminating all independent agency.",
+      "impact": "Complete enslavement of all ninja, village, and civilian nodes — total system takeover.",
+      "ruleViolated": "Genjutsu network effect — one caster controlling all nodes simultaneously",
+      "loreSubtitle": "World-Encompassing Genjutsu",
+      "systemSubtitle": "Universal Consciousness Override"
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "Why didn't Itachi just tell Sasuke the truth from the start?",
+      "answer": "Itachi believed Sasuke was too young and emotional to handle the political complexity — he calculated that the trauma of learning the truth would itself provide the motivation Sasuke needed to become strong enough to face the actual conspirators.",
+      "tabIndex": 0
+    },
+    {
+      "question": "What makes the Sharingan so much more powerful than other Kekkai Genkai?",
+      "answer": "The Sharingan is a complete sensory-capture and technique-mirroring system — it doesn't just see attacks, it reads chakra flow, copies jutsu, and can deploy genjutsu. Most Kekkai Genkai do one thing; Sharingan is a platform.",
+      "tabIndex": 1
+    },
+    {
+      "question": "Why does Naruto's hard work beat Sasuke's natural talent?",
+      "answer": "It doesn't — this is a misreading. Naruto's 'hard work' includes Kurama's infinite chakra resource, Jiraiya's elite training, Sage Mode from toads, and Hagoromo's chakra inheritance. His actual edge is resource stacking, not effort alone.",
+      "tabIndex": 0
+    },
+    {
+      "question": "What is the fundamental power scaling rule in Naruto?",
+      "answer": "The three-tier capability stack: Kekkai Genkai (irreplaceable genetic advantage) > Chakra Volume (resource ceiling) > Skill/Training (execution optimization). Talent determines starting point, resources determine ceiling, training determines how much of the ceiling you actually reach.",
+      "tabIndex": 2
+    }
+  ],
+  "hero": {
+    "systemType": "counterplay",
+    "microHook": "Every jutsu has a counter — find it first.",
+    "thesis": "Broken people with impossible resources can still choose connection — Kurama is a bomb, but Naruto chooses Hokage.",
+    "primarySystemType": "power_engine"
+  }
+}

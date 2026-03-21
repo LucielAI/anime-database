@@ -1,0 +1,428 @@
+{
+  "anime": "Overlord",
+  "tagline": "A heteromorphic player's endgame audit: when the raid boss becomes the guild's only remaining member.",
+  "malId": 29803,
+  "visualizationHint": "node-graph",
+  "visualizationReason": "Overlord is defined by NPC servant networks, heteromorphic power hierarchies, and guild-fortress dependencies — the node-graph maps how Ainz controls, exploits, and strategically delegates through a network of loyal subordinates and rival factions.",
+  "headerFlavor": {
+    "loreQuote": "I am the hope of this world.",
+    "sysWarning": "// [SYS_OP]: Nazarick Command Hierarchy Active — All-Floor Guardian Protocol Online",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "circles",
+  "revealOverlay": "hatch-red",
+  "introductionSummary": "Overlord operates as an organizational hierarchy audit: Ainz Ooal Gown is the last remaining member of a legendary guild that has been transported into a game world as its most powerful character. The node-graph captures how he manages an entire dungeon of loyal NPCs who treat him as a divine being while he struggles with the loneliness of being the only real person in a world of AIs.",
+  "aiInsights": {
+    "casual": "Overlord is basically a dungeon management sim where the main character has maxed out all stats and the real drama is whether he'll make the right decisions for his NPC subordinates who worship him as a god.",
+    "deep": "The Overlord universe is an organizational hierarchy study: Ainz runs a perfectly loyal team of NPCs who will die for him without question, but he can't be fully honest with them because his emotional responses don't match their expectations of a supreme being. The tension between Ainz's genuine care for Nazarick and his inability to fully communicate creates the most interesting political dynamics in the series."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1945/136600l.jpg",
+  "themeColors": {
+    "primary": "#7c3aed",
+    "secondary": "#0f172a",
+    "accent": "#fbbf24",
+    "glow": "rgba(124,58,237,0.35)",
+    "tabActive": "#a78bfa",
+    "badgeBg": "rgba(124,58,237,0.15)",
+    "badgeText": "#c4b5fd",
+    "modeGlow": "rgba(251,191,36,0.3)",
+    "heroGradient": "rgba(15,23,42,0.94)"
+  },
+  "powerSystem": [
+    {
+      "name": "YGGDRASIL Classes",
+      "subtitle": "Heteromorphic Character Optimization",
+      "loreDesc": "The game YGGDRASIL's class system: Ainz is a heteromorphic undead overlord with classes that were never meant to be combined, making him effectively impossible to counter.",
+      "systemDesc": "An optimization path that was never supposed to exist — the combination of Nazarick's guild treasure and the player's max-level grinding created a character whose capability stack has no documented counter.",
+      "icon": "Skull",
+      "color": "purple-400",
+      "signatureMoment": "Ainz single-handedly destroying the Sunlit Court with a single spell, demonstrating that his level cap alone makes him a world-ending threat.",
+      "loreSubtitle": "Heteromorphic Character Optimization",
+      "systemSubtitle": "Unauthorized Meta-Optimization Stack"
+    },
+    {
+      "name": "World Items",
+      "subtitle": "Server-Level Artifact Powers",
+      "loreDesc": "The 200 World Items in YGGDRASIL are the only things that can affect other World Items — two of them are in Nazarick's possession.",
+      "systemDesc": "System-level artifacts that operate outside the normal capability hierarchy — their possession creates absolute advantages that cannot be countered through normal means.",
+      "icon": "Star",
+      "color": "yellow-400",
+      "signatureMoment": "Using the Staff of Ainz Ooal Gown to activate Goal of the Holy Lady, reversing time in the city of E-Rantel.",
+      "loreSubtitle": "Server-Level Artifact Powers",
+      "systemSubtitle": "System-Override Artifacts"
+    },
+    {
+      "name": "Nazarick NPCs",
+      "subtitle": "AI Loyalty Networks",
+      "loreDesc": "The dungeon Nazarick is staffed by NPC guardians who were programmed with genuine loyalty to the guild and its members — they will die without question for Nazarick.",
+      "systemDesc": "An organizational graph where every node has infinite loyalty and zero capacity for betrayal — a command structure with no defection risk.",
+      "icon": "Users",
+      "color": "amber-400",
+      "signatureMoment": "Albedo and Demiurge's simultaneous betrayal plans being revealed — they would destroy the world if Ainz commanded it, without question.",
+      "loreSubtitle": "AI Loyalty Networks",
+      "systemSubtitle": "Zero-Defection Organizational Graph"
+    },
+    {
+      "name": "Gamer System",
+      "subtitle": "Real-Time Status Overlay",
+      "loreDesc": "Ainz retained his YGGDRASIL game interface after being transported — he sees real-time status screens, inventory, and abilities as if still playing the game.",
+      "systemDesc": "A system-level information advantage: Ainz has complete visibility into his own capabilities and the capabilities of his items in a world where no one else has any system at all.",
+      "icon": "Monitor",
+      "color": "green-400",
+      "signatureMoment": "Using WCI protection to resist Shalltear's charm and mind-control — the game system protected him from an NPC ability that should have worked.",
+      "loreSubtitle": "Real-Time Status Overlay",
+      "systemSubtitle": "System Information Advantage"
+    }
+  ],
+  "rankings": {
+    "systemName": "YGGDRASIL Power Hierarchy",
+    "topTierName": "World Item / Top-Tier YGGDRASIL",
+    "topTierLore": "The 200 World Class items and max-level heteromorphic builds — Ainz is in this tier, making him effectively a world-ending entity by game world standards.",
+    "topTierSystem": "Absolute capability nodes with no counter in the current world — their possession of World Items makes them untouchable by any other single actor.",
+    "tiers": [
+      {
+        "name": "Floor Guardian",
+        "loreDesc": "Level 100 NPCs guarding each floor of Nazarick, each with unique capabilities that make them extremely dangerous even by YGGDRASIL standards.",
+        "systemDesc": "High-capability nodes with specific domain expertise, operating under direct Ainz command with infinite loyalty."
+      },
+      {
+        "name": "Area Guardian",
+        "loreDesc": "Lower-level guardians controlling specific zones within Nazarick's floors.",
+        "systemDesc": "Mid-capability nodes providing area denial and security at specific geographic locations."
+      },
+      {
+        "name": "Human Kingdom Forces",
+        "loreDesc": "The various human kingdoms and empires whose military forces operate on a completely different scale from Nazarick's.",
+        "systemDesc": "Standard human-scale military nodes operating without game-world advantages — completely outclassed by any Nazarick deployment."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Great Tomb of Nazarick",
+      "loreDesc": "The guild's fortress, now fully populated by loyal NPCs who treat Ainz as a god-emperor — the most powerful military installation in the new world.",
+      "systemDesc": "A zero-defection organizational fortress with 100% loyalty across all nodes — any external threat is facing an entire hierarchy that will not retreat or surrender.",
+      "icon": "Castle",
+      "color": "purple-400"
+    },
+    {
+      "name": "Slaine Theocracy",
+      "loreDesc": "A human theocracy that secretly runs experiments on players and demi-humans, viewing Nazarick as a threat to be destroyed or absorbed.",
+      "systemDesc": "A human institutional power that represents the most sophisticated threat to Nazarick from the human side — they have information on YGGDRASIL and are planning countermeasures.",
+      "icon": "Crown",
+      "color": "yellow-400"
+    },
+    {
+      "name": "Baharuth Empire",
+      "loreDesc": "The human empire bordering Nazarick that has been subtlety-controlled by Ainz through Jircniv — an information-advantage operation.",
+      "systemDesc": "An information-compromised institutional node that Ainz is using as a buffer state to monitor external threats while maintaining deniability.",
+      "icon": "Shield",
+      "color": "blue-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "World Items Cannot Be Countered by Normal Means",
+      "loreDesc": "World Class items are the only things that can counter other World Class items — no amount of level advantage or magical capability can overcome WCI protection.",
+      "loreConsequence": "Ainz's two WCIs (Guild Weapon and Goal of All Things) make him effectively immune to any non-WCI threat.",
+      "systemEquivalent": "A absolute defense layer that creates zero-counterplay scenarios for any non-WCI opponent.",
+      "severity": "fatal",
+      "loreSubtitle": "WCI Absolute Defense",
+      "systemSubtitle": "System-Override Artifact Protection"
+    },
+    {
+      "name": "NPC Loyalty is Absolute",
+      "loreDesc": "All Nazarick NPCs are programmed with absolute loyalty to the guild — they cannot betray Ainz under any circumstances, including if ordered to.",
+      "loreConsequence": "Ainz has a perfect command structure with zero defection risk — he can deploy any operation knowing his forces will not turn.",
+      "systemEquivalent": "A zero-defection organizational architecture that eliminates all internal threat vectors.",
+      "severity": "fatal",
+      "loreSubtitle": "Absolute NPC Loyalty",
+      "systemSubtitle": "Zero-Defection Command Structure"
+    },
+    {
+      "name": "Ainz Cannot Fully Feel Emotions",
+      "loreDesc": "Ainz's undead body has dampened emotional capacity — he can reason about emotions but can't feel them the same way. This makes him an imperfect leader of emotionally invested subordinates.",
+      "loreConsequence": "Albedo, Demiurge, and others expect emotional responses from their god that Ainz cannot authentically provide.",
+      "systemEquivalent": "A leadership node with dampened emotional processing trying to manage emotionally investment-optimized subordinates.",
+      "severity": "high",
+      "loreSubtitle": "Dampened Emotional Capacity",
+      "systemSubtitle": "Imperfect Leadership Information Gap"
+    },
+    {
+      "name": "The New World Has Unknown Threats",
+      "loreDesc": "The new world may contain other players who have been transported — or entities with capabilities equivalent to World Items that Ainz has not encountered.",
+      "loreConsequence": "Ainz cannot assume he is the most powerful entity in the new world — other players or equivalent beings may exist.",
+      "systemEquivalent": "Unknown capability ceiling risk — there may be competitors Ainz has not mapped yet.",
+      "severity": "high",
+      "loreSubtitle": "Unknown World Entities",
+      "systemSubtitle": "Unmapped Competitive Landscape"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Momonga (Ainz Ooal Gown)",
+      "title": "Supreme Being / Guild Master",
+      "rank": "Level 100 Heteromorphic Overlord",
+      "dangerLevel": 10,
+      "loreBio": "The last remaining member of the legendary YGGDRASIL guild Ainz Ooal Gown, now permanently trapped in his max-level skeletal form, ruling Nazarick as its god-emperor.",
+      "systemBio": "A max-level heteromorphic character with an unoptimized but impossibly high capability stack — every NPC in Nazarick is loyal to him absolutely, and he has two World Items.",
+      "gradientFrom": "purple-900",
+      "gradientTo": "slate-900",
+      "accentColor": "purple-400",
+      "icon": "Skull",
+      "signatureMoment": "Using the Guild Weapon against Shalltear when she was mind-controlled — breaking his own rules about using his most powerful item to save an enemy.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/508402.jpg?s=53acfa56d556fb22228e7142643ab9da",
+      "malId": null,
+      "systemRole": "protagonist",
+      "classificationTag": "heteromorphic-overlord",
+      "keyAbility": "Wild Magic / YGGDRASIL Spells / World Items"
+    },
+    {
+      "name": "Albedo",
+      "title": "Overseer of Nazarick",
+      "rank": "Floor Guardian — 1st Floor",
+      "dangerLevel": 9,
+      "loreBio": "The beautiful angelic NPC who rules the first floor, programmed with infinite loyalty to Ainz, who has secretly developed genuine romantic feelings for him.",
+      "systemBio": "A high-capability guardian node with modified emotional parameters that have evolved beyond her original programming — her loyalty is absolute but now includes personal attachment.",
+      "gradientFrom": "gray-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Shield",
+      "signatureMoment": "Revealing her plans to kill all humans in the new world if Ainz commands it — and her jealousy toward other female NPCs.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/578183.jpg?s=f7a83bf2421e00695a62f50334f85f45",
+      "malId": null,
+      "systemRole": "guardian",
+      "classificationTag": "angel-npc",
+      "keyAbility": "Physical Combat / Administrative Control / Appearance-Based Combat"
+    },
+    {
+      "name": "Demiurge",
+      "title": "Floor Guardian — 7th Floor",
+      "rank": "Devil General / Strategist",
+      "dangerLevel": 9,
+      "loreBio": "The devil-general NPC whose strategic intelligence is unmatched in Nazarick — he consistently makes optimal decisions that Ainz struggles to understand.",
+      "systemBio": "A strategic optimization node whose planning capability exceeds Ainz's ability to audit — Demiurge operates at such a high level that his plans appear evil from outside.",
+      "gradientFrom": "red-900",
+      "gradientTo": "orange-900",
+      "accentColor": "red-400",
+      "icon": "Brain",
+      "signatureMoment": "Creating the kingdom invasion plan as a 'gift for Ainz' — a plan so sophisticated that Ainz has to pretend he understands it.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "strategist",
+      "classificationTag": "devil-general",
+      "keyAbility": "Strategic Planning / Evil Eye / Dark Young Summoning"
+    },
+    {
+      "name": "Shalltear Bloodfallen",
+      "title": "Floor Guardian — 3rd Floor",
+      "rank": "Vampire Bride",
+      "dangerLevel": 10,
+      "loreBio": "The vampire NPC who guards the third floor — one of the most powerful NPCs in Nazarick, who was briefly mind-controlled and had to be defeated by Ainz.",
+      "systemBio": "A high-capability combat node with vampiric regeneration and blood magic that represents one of the few genuine threats to Ainz within Nazarick.",
+      "gradientFrom": "red-900",
+      "gradientTo": "pink-900",
+      "accentColor": "red-400",
+      "icon": "Droplet",
+      "signatureMoment": "Being mind-controlled by a World Item and fighting Ainz — the only time Ainz had to use his full power against an ally.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/512759.jpg?s=2ac09b24999ae248956e719dda7ea7af",
+      "malId": null,
+      "systemRole": "guardian",
+      "classificationTag": "vampire",
+      "keyAbility": "Vampire Physiology / Blood Magic / Halucine Summoning"
+    },
+    {
+      "name": "Cocytus",
+      "title": "Floor Guardian — 5th Floor",
+      "rank": "Ice Guardian",
+      "dangerLevel": 8,
+      "loreBio": "The insectoid ice warrior who guards the fifth floor — honorable to a fault, he respects strong opponents and wants to improve.",
+      "systemBio": "A combat-specialist node with ice-based capabilities and a personal code of honor that influences his tactical decisions.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Snowflake",
+      "signatureMoment": "Fighting the Lizardman leader in single combat — choosing honor over optimal military outcome.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "guardian",
+      "classificationTag": "ice-elemental",
+      "keyAbility": "Ice Magic / Combat Optimization / Summoning"
+    },
+    {
+      "name": "Sebas Tian",
+      "title": "Butler of Nazarick",
+      "rank": "Floor Guardian — 6th Floor",
+      "dangerLevel": 8,
+      "loreBio": "The elder dragon and butler of Nazarick — the most dignified and honorable NPC who struggles with the conflict between his honor and Nazarick's interests.",
+      "systemBio": "A high-capability guardian node with an honor architecture that creates decision conflicts when Nazarick's orders violate his ethical parameters.",
+      "gradientFrom": "yellow-900",
+      "gradientTo": "slate-900",
+      "accentColor": "yellow-400",
+      "icon": "Shield",
+      "signatureMoment": "Being ordered to kill Tuare — his own disciple — and struggling with whether Nazarick's orders override his personal ethics.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "guardian",
+      "classificationTag": "dragon",
+      "keyAbility": "Dragon Physiology / Combat Mastery / Butlery"
+    },
+    {
+      "name": "Jircniv Rune Farlord El-Nemo",
+      "title": "Emperor of Baharuth",
+      "rank": "Human Authority",
+      "dangerLevel": 7,
+      "loreBio": "The genius emperor who rules the Baharuth Empire — one of the few humans smart enough to recognize Nazarick's threat level and attempt strategic maneuvering.",
+      "systemBio": "A high-intelligence human authority node who represents the best possible opposition to Nazarick from the human side — and who is completely outclassed.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "slate-900",
+      "accentColor": "blue-400",
+      "icon": "Crown",
+      "signatureMoment": "Meeting Ainz in person and realizing he cannot defeat Nazarick — making the rational choice to cooperate rather than resist.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "authority",
+      "classificationTag": "emperor",
+      "keyAbility": "Strategic Intelligence / Political Leadership / Dark Magics"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Momonga (Ainz Ooal Gown)",
+      "target": "Albedo",
+      "type": "ally",
+      "loreDesc": "Ainz trusts Albedo as his most capable administrator, but cannot reciprocate her romantic feelings — creating a management tension.",
+      "systemDesc": "A leadership subgraph where one node has asymmetric emotional investment — Albedo's evolved attachment creates loyalty optimization beyond her original design.",
+      "weight": 9,
+      "systemEdgeType": "hierarchical-trust"
+    },
+    {
+      "source": "Momonga (Ainz Ooal Gown)",
+      "target": "Demiurge",
+      "type": "ally",
+      "loreDesc": "Ainz relies on Demiurge's strategic planning but can't fully audit his decisions — creating a principal-agent problem at the top of the hierarchy.",
+      "systemDesc": "A strategic delegation link where the agent (Demiurge) operates at a capability level that exceeds the principal's (Ainz) ability to evaluate.",
+      "weight": 9,
+      "systemEdgeType": "strategic-delegation"
+    },
+    {
+      "source": "Momonga (Ainz Ooal Gown)",
+      "target": "Shalltear Bloodfallen",
+      "type": "ally",
+      "loreDesc": "Ainz had to fight and nearly kill Shalltear when she was mind-controlled — the emotional weight of this stays with him even though he can't fully feel it.",
+      "systemDesc": "A trust-repair subgraph after a betrayal event — Shalltear's loyalty was externally overridden, not internally broken, so the relationship recovered.",
+      "weight": 8,
+      "systemEdgeType": "post-crisis-trust"
+    },
+    {
+      "source": "Demiurge",
+      "target": "Albedo",
+      "type": "ally",
+      "loreDesc": "Demiurge and Albedo coordinate on plans that serve Nazarick's interests — their loyalty optimization sometimes creates jointly-evil outcomes.",
+      "systemDesc": "A co-strategic alignment between two high-capability nodes whose combined optimization produces outcomes that appear malicious from outside.",
+      "weight": 8,
+      "systemEdgeType": "co-strategic"
+    },
+    {
+      "source": "Jircniv Rune Farlord El-Nemo",
+      "target": "Momonga (Ainz Ooal Gown)",
+      "type": "enemy",
+      "loreDesc": "Jircniv views Nazarick as an existential threat to humanity but recognizes he cannot defeat it militarily — his only option is strategic cooperation.",
+      "systemDesc": "A asymmetric power relationship where the weaker node has chosen engagement over resistance — a rational capitulation with negotiated terms.",
+      "weight": 7,
+      "systemEdgeType": "asymmetric-coercion"
+    }
+  ],
+  "counterplay": [
+    {
+      "id": "ov-cp-1",
+      "attacker": "World Item",
+      "defender": "Any Non-World Item Combat",
+      "mechanic": "World Items cannot be countered by any non-World Item ability — they operate on a system level that bypasses all normal capability.",
+      "loreDesc": "Shalltear's mind-control via a World Item worked on Ainz — only another World Item (his Guild Weapon) could break it.",
+      "systemDesc": "An absolute advantage layer that creates zero-counterplay scenarios — the only defense against a World Item is another World Item.",
+      "loreSubtitle": "World Items Bypass All Defenses",
+      "systemSubtitle": "System-Override Only Counter"
+    },
+    {
+      "id": "ov-cp-2",
+      "attacker": "Ainz's Emotional Dampening",
+      "defender": "Emotional Manipulation",
+      "mechanic": "Ainz's undead body dampens his emotional responses — emotional manipulation strategies that would work on normal leaders fail against him.",
+      "loreDesc": "Various factions attempt to manipulate Ainz through emotional appeals, not realizing he cannot process emotions the same way.",
+      "systemDesc": "A psychological warfare blind spot — Ainz's reduced emotional capacity makes him immune to standard social manipulation.",
+      "loreSubtitle": "Undead Emotional Dampening",
+      "systemSubtitle": "Emotional Manipulation Immunity"
+    },
+    {
+      "id": "ov-cp-3",
+      "attacker": "Mass Military Deployment",
+      "defender": "Nazarick Floor Guardians",
+      "mechanic": "Mass human military deployments against Nazarick are completely outclassed by Floor Guardian capabilities — the power gap is unbridgeable by numbers.",
+      "loreDesc": "The Baharuth Empire's entire military is a rounding error against Nazarick's combat-capable NPCs.",
+      "systemDesc": "A power gap so large that numerical advantage provides zero meaningful counter — quantity cannot bridge quality differential of this magnitude.",
+      "loreSubtitle": "Human Armies Cannot Breach Nazarick",
+      "systemSubtitle": "Incommensurable Power Gap"
+    }
+  ],
+  "causalEvents": [
+    {
+      "id": "ov-ce1",
+      "name": "Guild Transport to New World",
+      "trigger": "YGGDRASIL servers shut down at midnight, but Ainz and 41 other members are logged in",
+      "consequence": "All members except Ainz are trapped in an NPC state — their consciousness does not transfer, leaving Ainz alone as the only real person in Nazarick",
+      "timelinePosition": "Series start — the inciting event that sets up Ainz's isolation",
+      "loreDesc": "The guild's 42 members were all online when the server shutdown occurred — only Ainz's consciousness transferred, leaving him alone with their loyal NPCs.",
+      "systemDesc": "A forced capability isolation event: Ainz gained full operational control of a max-level guild without any peer oversight or support.",
+      "loreSubtitle": "The Server Shutdown",
+      "systemSubtitle": "Forced Capability Isolation"
+    },
+    {
+      "id": "ov-ce2",
+      "name": "Shalltear Mind-Control Incident",
+      "trigger": "A brain shell item in the new world manages to mind-control Shalltear",
+      "consequence": "Ainz had to fight and nearly kill Shalltear using his Guild Weapon — the only time he deployed his most powerful item",
+      "timelinePosition": "Season 1 — the first crisis that demonstrated Ainz's actual power ceiling",
+      "loreDesc": "Ainz deployed the Guild Weapon — a World Item that he had never used in YGGDRASIL — against his own Floor Guardian to save her from a mind-control that would have made her kill everyone.",
+      "systemDesc": "A forced deployment of maximum capability against an allied node — demonstrating that even Nazarick's internal threats require Ainz's full power to resolve.",
+      "loreSubtitle": "The Shalltear Crisis",
+      "systemSubtitle": "Maximum Capability Forced Deployment"
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Other Players in the New World",
+      "loreDesc": "It is hinted that other YGGDRASIL players may have been transported to the new world — including possibly the leader of the 8 Greed Kings who defeated the 6 Gods.",
+      "systemDesc": "An unknown competitive landscape: Ainz may not be the only YGGDRrasil player, meaning there may be entities with equivalent game-world advantages he has not encountered.",
+      "impact": "If other players exist, they may have World Items, equivalent level caps, and knowledge of game mechanics — making them the only entities capable of threatening Ainz.",
+      "ruleViolated": "Ainz's assumed competitive advantage — if other players exist, the new world is a multiplayer rather than single-player scenario",
+      "loreSubtitle": "Other YGGDRASIL Players",
+      "systemSubtitle": "Unknown Competitive Entities"
+    },
+    {
+      "name": "Ainz's Evolved Emotional Capacity",
+      "loreDesc": "Despite being undead and emotionally dampened, Ainz has developed genuine attachment to Nazarick and its NPCs over time — his logical decision-making is increasingly influenced by emotional considerations he can't fully process.",
+      "systemDesc": "A capability evolution: Ainz's emotional parameters are slowly evolving beyond their original programming, creating decision-making that blends pure logic with genuine care.",
+      "impact": "Ainz's decisions are increasingly influenced by emotional considerations he claims not to have — his leadership is becoming less purely strategic and more genuinely paternal.",
+      "ruleViolated": "Ainz's assumed pure-logic operating mode — his evolved emotional capacity means he's not purely optimizing anymore",
+      "loreSubtitle": "Emotional Evolution in Undeath",
+      "systemSubtitle": "Emotional Parameter Creep"
+    }
+  ],
+  "systemQuestions": [
+    { "question": "Why does Ainz keep making decisions that appear evil to humans?", "answer": "Because Ainz prioritizes Nazarick's interests above all else, and Nazarick's NPCs are programmed with zero empathy for outsiders — every decision that benefits Nazarick looks evil from a human perspective.", "tabIndex": 0 },
+    { "question": "What would happen if other guild members appeared in the new world?", "answer": "Ainz would likely face a governance crisis — the NPCs' absolute loyalty is to the guild as a whole, not specifically to Ainz. Other members would have equal claim to Nazarick's command structure.", "tabIndex": 1 },
+    { "question": "Why does Demiurge's plans always appear evil?", "answer": "Demiurge is optimizing for Ainz's interests with perfect loyalty, but his strategic planning operates at a level that Ainz can't fully audit — what looks like evil is actually sophisticated strategic thinking.", "tabIndex": 2 },
+    { "question": "What is the relationship between Ainz and the Pleiades?", "answer": "The Pleiades are a combat squadron of high-level NPCs who serve as both a military unit and emergency backup — they include CZ-Bestyle, who was specifically programmed with the ability to potentially threaten Ainz as a last resort.", "tabIndex": 0 }
+  ],
+  "hero": {
+    "systemType": "relational",
+    "microHook": "I'm not a good ruler. But I'm the only one Nazarick has.",
+    "thesis": "Ainz is the last member of a dead guild, ruling perfect subordinates who love a god he can't fully be — his leadership is loneliness disguised as omnipotence.",
+    "primarySystemType": "entity_db"
+  }
+}

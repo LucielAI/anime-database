@@ -1,0 +1,510 @@
+{
+  "anime": "One Piece",
+  "tagline": "A world where ocean geography IS political economy, and whoever controls the seas controls civilization itself.",
+  "malId": 21,
+  "visualizationHint": "node-graph",
+  "visualizationReason": "One Piece is defined by shifting pirate alliances, faction dependencies, and geopolitical power grids — the node-graph maps how emperors, warlords, revolutionaries, and marines form, break, and rewire the world order.",
+  "headerFlavor": {
+    "loreQuote": "I don't want to conquer anything. I just think the guy with the most freedom in the whole sea is the Pirate King.",
+    "sysWarning": "// [SYS_OP]: GRAND LINE NAVIGATION ACTIVE — POLITICAL BOUNDARIES UNSTABLE",
+    "sysWarningColor": "cyan"
+  },
+  "backgroundMotif": "circles",
+  "revealOverlay": "glow-border-soft",
+  "aiInsights": {
+    "casual": "One Piece looks like a simple adventure, but it's actually a complex political and economic system where control of trade routes, Devil Fruits, and ancient weapons determines who runs the world. The node-graph shows how every crew, navy division, and secret organization is connected.",
+    "deep": "The One Piece world operates as a maritime hegemony system where sea lane control, military force projection, and ideological legitimacy (the Will of D.) compete simultaneously. Emperor-level power comes from overlapping layers: military might, economic chokeholds, and mythologized narrative control. The World Government maintains power not just through force but through historical narrative erasure (Void Century)."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1244/138851l.jpg",
+  "themeColors": {
+    "primary": "#1e40af",
+    "secondary": "#b91c1c",
+    "accent": "#f59e0b",
+    "glow": "rgba(30,64,175,0.35)",
+    "tabActive": "#3b82f6",
+    "badgeBg": "rgba(185,28,28,0.15)",
+    "badgeText": "#f87171",
+    "modeGlow": "rgba(245,158,11,0.3)",
+    "heroGradient": "rgba(5,10,25,0.94)"
+  },
+  "powerSystem": [
+    {
+      "name": "Devil Fruits",
+      "subtitle": "Paranormal Biology Marketplace",
+      "loreDesc": "Mysterious fruits that grant eaters superhuman abilities at the cost of permanent海水浸 swimming inability.",
+      "systemDesc": "A post-mythology economy of biological paranormal distinctiveness where supply is fixed and demand is infinite, creating a liquid market for unique capability acquisition.",
+      "icon": "Zap",
+      "color": "blue-400",
+      "signatureMoment": "Luffy awakening Gear 5 and turning the battlefield into a cartoon playground, defying all conventional power scaling.",
+      "loreSubtitle": "Paranormal Biology Marketplace",
+      "systemSubtitle": "Capability Monopoly Market"
+    },
+    {
+      "name": "Haki",
+      "subtitle": "Karmic Sovereignty Resistance",
+      "loreDesc": "A latent power lying dormant in all living beings, awakened through extreme willpower or battle, coming in three forms: Observation, Armament, and Conqueror's.",
+      "systemDesc": "An intrinsic permission layer that overrides Devil Fruit contracts and biological determinism, granting tiered access to environmental awareness, physical firewall piercing, and systemic authority overrides.",
+      "icon": "Eye",
+      "color": "purple-400",
+      "signatureMoment": "Luffy's Conqueror's Haki coating the Marineford battlefield, knocking out both allied and enemy soldiers simultaneously.",
+      "loreSubtitle": "Karmic Sovereignty Resistance",
+      "systemSubtitle": "Tiered Privilege Escalation Layer"
+    },
+    {
+      "name": "Pirate Crew Structure",
+      "subtitle": "Distributed Command Network",
+      "loreDesc": "A decentralized command hierarchy where the captain's dream sets the crew's direction and each member's role creates functional interdependence.",
+      "systemDesc": "An organizational graph where leadership legitimacy flows from narrative purpose rather than formal rank, making the captain's conviction a strategic asset.",
+      "icon": "Users",
+      "color": "amber-400",
+      "signatureMoment": "The Straw Hats collectively refusing to abandon any member even under threat from a Yonkou-level threat.",
+      "loreSubtitle": "Distributed Command Network",
+      "systemSubtitle": "Purpose-Driven Organizational Graph"
+    },
+    {
+      "name": "Three Great Powers",
+      "subtitle": "Hegemonic Balance Architecture",
+      "loreDesc": "The World Government's strategic equilibrium between the Seven Warlords, Yonkou, and Marines — a balance deliberately engineered to prevent any single faction from dominating the seas.",
+      "systemDesc": "A geopolitical deadlock protocol ensuring no single actor achieves market dominance in ocean trade, military projection, or revolutionary capacity.",
+      "icon": "Globe",
+      "color": "red-400",
+      "signatureMoment": "The system collapsing when Marineford escalates and the World Government is forced to expose its full military capacity.",
+      "loreSubtitle": "Hegemonic Balance Architecture",
+      "systemSubtitle": "Tripartite Market Deadlock"
+    }
+  ],
+  "rankings": {
+    "systemName": "Pirate Political Economy Hierarchy",
+    "loreName": "Bounty-Driven Social Credit",
+    "topTierName": "Yonkou",
+    "topTierLore": "Four emperors who each control a sea territory through military dominance, economic stranglehold, and mythological fear — any one of whom could trigger a world war.",
+    "topTierSystem": "Oligopolistic market leaders with territory-level pricing power, entry barrier creation, and systemic shock absorption capacity.",
+    "tiers": [
+      {
+        "name": "Warlord (Shichibukai)",
+        "loreDesc": "Government-sanctioned pirates operating with legal immunity in exchange for suppressing other pirates — a system later abolished.",
+        "systemDesc": "Government-contracted monopolists with regulatory capture advantages and state-protected market position."
+      },
+      {
+        "name": "Super Nova",
+        "loreDesc": "Eleven rookie pirates who arrived at Sabaody Archipelago each with bounties above 100 million — a generational disruption event.",
+        "systemDesc": "Disruptive market entrants bypassing traditional ladder progression through radical capability or novel business models."
+      },
+      {
+        "name": "Straw Hat Crew",
+        "loreDesc": "Luffy's distributed crew each commanding a domain specialty and loyal to a captain whose dream inspires irrational devotion.",
+        "systemDesc": "A high-cohesion startup crew where each member's functional specialization and belief alignment creates emergent organizational capability exceeding the sum of parts."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Straw Hat Pirates",
+      "loreDesc": "Luffy's crew of specialists, each with a personal dream that drives them past impossible odds. The crew's loyalty comes from genuine bonds, not fear or payment.",
+      "systemDesc": "A purpose-aligned distributed team where each node's intrinsic motivation creates self-sustaining high performance without external incentive structures.",
+      "icon": "Users",
+      "color": "amber-400"
+    },
+    {
+      "name": "Marines / World Government",
+      "loreDesc": "The global military and bureaucratic apparatus enforcing the Absolute Justice doctrine, controlling 170+ nations through military projection and historical narrative control.",
+      "systemDesc": "A hierarchical command-and-control institution with monopoly on legitimate violence and information asymmetry advantages, operating a distributed governance network.",
+      "icon": "Shield",
+      "color": "blue-400"
+    },
+    {
+      "name": "Four Emperors (Yonkou)",
+      "loreDesc": "The four most powerful pirate rulers who collectively divide the New World between them, maintaining a cold-war-style balance of power.",
+      "systemDesc": "An oligopoly structure where four dominant players set market terms, control entry points, and collectively resist disruption.",
+      "icon": "Crown",
+      "color": "red-400"
+    },
+    {
+      "name": "Revolutionary Army",
+      "loreDesc": "A global anti-government movement led by Dragon, dedicated to overthrowing the World Government and liberating oppressed nations.",
+      "systemDesc": "A distributed resistance network operating across multiple territory nodes, disrupting centralized authority through ideological propagation.",
+      "icon": "Flame",
+      "color": "green-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Devil Fruit Swimming Prohibition",
+      "loreDesc": "Once a Devil Fruit is eaten, the user permanently loses the ability to swim in any body of water — a biological impossibility enforced on their body.",
+      "systemDesc": "A permanent capability sacrifice that creates a permanent structural vulnerability in exchange for unique offensive or defensive properties.",
+      "loreConsequence": "Any ocean engagement renders the Devil Fruit user helpless and dependent on teammates for survival.",
+      "systemEquivalent": "Permanent externalized operational dependency in exchange for internal capability monopoly.",
+      "severity": "fatal",
+      "loreSubtitle": "Permanent Swimming Loss",
+      "systemSubtitle": "Irreversible Structural Dependency"
+    },
+    {
+      "name": "One Piece is Real",
+      "loreDesc": "The treasure at Laugh Tale is confirmed real by Roger, and finding it requires reaching Raftel and deciphering the Rio Poneglyph.",
+      "systemDesc": "The terminal objective is confirmed achievable, requiring both physical navigation capability and information asymmetry resolution.",
+      "loreConsequence": "Every major faction races to reach Laugh Tale first, knowing whoever claims the One Piece gains legitimate world-changing power.",
+      "systemEquivalent": "Verified achievable market capitalization target creating race conditions across all competitors.",
+      "severity": "fatal",
+      "loreSubtitle": "Confirmed Terminal Objective",
+      "systemSubtitle": "Verified Competitive End-State"
+    },
+    {
+      "name": "Haki Blooms Under Extreme Pressure",
+      "loreDesc": "Observation and Conqueror's Haki awaken most powerfully in life-or-death situations, not through training alone.",
+      "systemDesc": "Capability unlock requires high-stakes environmental pressure, creating a system where combat escalation is self-accelerating.",
+      "loreConsequence": "Weak pirates facing overwhelming odds sometimes awaken Haki that permanently upgrades their threat classification.",
+      "systemEquivalent": "Adversarial pressure as capability development catalyst, creating non-linear performance scaling.",
+      "severity": "high",
+      "loreSubtitle": "Combat-Driven Haki Evolution",
+      "systemSubtitle": "Pressure-Catalyzed Capability Unlocks"
+    },
+    {
+      "name": "Bounties Reflect Threat Level, Not Strength",
+      "loreDesc": "A pirate's bounty represents the political threat they pose to the World Government, not their raw combat power — though二者 correlate strongly.",
+      "systemDesc": "Social credit scoring system where perceived systemic disruption potential outweighs direct capability in determining market value.",
+      "loreConsequence": "Information specialists and revolutionaries may carry higher bounties than direct combat powerhouses.",
+      "systemEquivalent": "Market cap reflects disruption potential more than current revenue generation.",
+      "severity": "high",
+      "loreSubtitle": "Threat-Based Bounty Valuation",
+      "systemSubtitle": "Disruption-Indexed Market Value"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Monkey D. Luffy",
+      "title": "Straw Hat Captain",
+      "rank": "Yonkou (5th)",
+      "dangerLevel": 10,
+      "loreBio": "A rubber-boy with an impossible dream and an even more impossible crew, Luffy runs toward every fight with the word 'all' as his primary strategic concept.",
+      "systemBio": "The system's most powerful disruptor node: a non-rational actor whose behavioral pattern cannot be predicted by rational market models because he systematically rejects equilibrium-seeking behavior.",
+      "gradientFrom": "red-900",
+      "gradientTo": "orange-900",
+      "accentColor": "red-400",
+      "icon": "Heart",
+      "signatureMoment": "Gear 5 activation at Egghead, turning the entire Marineford war outcome into a personal playground.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/310307.jpg?s=3a27ab33bee665febfba970f24f203ba",
+      "malId": 23,
+      "systemRole": "protagonist",
+      "classificationTag": "rubber-human",
+      "keyAbility": "Gum-Gum Fruit / Haki / Gear Transformations"
+    },
+    {
+      "name": "Roronoa Zoro",
+      "title": "Swordsman",
+      "rank": "Straw Hat Combat Specialist",
+      "dangerLevel": 9,
+      "loreBio": "The world's greatest swordsman-in-training who swore to never lose again after Whitebeard Street, carrying the world's heaviest sword as training.",
+      "systemBio": "A precision offensive node optimized for singular devastating output — three-sword style creates a no-redundancy combat architecture where each strike must count.",
+      "gradientFrom": "green-900",
+      "gradientTo": "slate-800",
+      "accentColor": "green-400",
+      "icon": "Sword",
+      "signatureMoment": "Asura mode against Kuma at Sabaody, manifesting nine-sword attacks through pure willpower.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/334685.jpg?s=9b8b0efa67a7f85c3c0f4e2c0c9b79f",
+      "malId": 24,
+      "systemRole": "combat-specialist",
+      "classificationTag": "three-swordsman",
+      "keyAbility": "Three-Sword Style / Conqueror's Haki"
+    },
+    {
+      "name": "Marshall D. Teach (Blackbeard)",
+      "title": "Yonkou",
+      "rank": "Four Emperors",
+      "dangerLevel": 10,
+      "loreBio": "The man who stole Whitebeard's quake-quake fruit, created the Blackbeard Pirates, and fundamentally broke the established rules about Devil Fruit succession.",
+      "systemBio": "A systemic exploit node — Blackbeard discovered an undocumented protocol allowing dual Devil Fruit possession, creating a capability stack no competitor can replicate through normal market entry.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Moon",
+      "signatureMoment": "Absorbing the Gura Gura no Mi from Whitebeard's corpse at Marineford, completing his hostile capability acquisition.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/334795.jpg?s=6b6a6f8e5b23f76aef0aef8f0a7a7c5",
+      "malId": 579,
+      "systemRole": "antagonist",
+      "classificationTag": "dual-fruit-user",
+      "keyAbility": "Gura-Gura Fruit / Yami-Yami Fruit"
+    },
+    {
+      "name": "Sengoku",
+      "title": "Fleet Admiral",
+      "rank": "Marine Command",
+      "dangerLevel": 9,
+      "loreBio": "The former Fleet Admiral who led Marineford, a tactical genius who relied on strategic planning over raw power, retiring after the war to become an observer.",
+      "systemDesc": "The highest-capacity defensive coordinator in the Marine hierarchy, Sengoku represents the institutional memory and strategic depth of World Government military force.",
+      "systemBio": "A strategic coordinator node combining Buddha-form offensive scaling with intelligence network integration — the Marine institutional advantage distilled into a single leadership platform.",
+      "gradientFrom": "amber-900",
+      "gradientTo": "orange-900",
+      "accentColor": "amber-400",
+      "icon": "Shield",
+      "signatureMoment": "Deploying full military force coordination at Marineford while managing simultaneous Yonkou threat assessment.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/63269.jpg?s=8ad5fc3a3ef50fb7b2dc56a2f59ad3d5",
+      "malId": 400,
+      "systemRole": "command-node",
+      "classificationTag": "buddha-form",
+      "keyAbility": "Buddha Awakening / Tactical Coordination"
+    },
+    {
+      "name": "Shanks",
+      "title": "Red-Haired Shanks",
+      "rank": "Yonkou",
+      "dangerLevel": 10,
+      "loreBio": "The Yonkou who gave Luffy his straw hat and leads the most elite crew in the New World — his mere presence ends wars before they start.",
+      "systemBio": "The system's most efficient negotiation node: Shanks operates through reputation leverage and pre-negotiated authority rather than raw force projection, achieving outcomes that would require massive deployment for others.",
+      "gradientFrom": "red-900",
+      "gradientTo": "slate-900",
+      "accentColor": "red-400",
+      "icon": "Star",
+      "signatureMoment": "Meeting Whitebeard at Reverse Mountain to request he recall his son — a meeting that reshaped the entire power landscape of the New World.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/335060.jpg?s=6f4d38a01b19d9b8c9f0b1c0a0f0b0a0",
+      "malId": 300,
+      "systemRole": "stabilizer",
+      "classificationTag": "haki-master",
+      "keyAbility": "Supreme Conqueror's Haki / Swordsmanship"
+    },
+    {
+      "name": "Portgas D. Ace",
+      "title": "Whitebeard Commander",
+      "rank": "Yonkou Subordinate",
+      "dangerLevel": 9,
+      "loreBio": "Gol D. Roger's biological son, commander of the Whitebeard Pirates, whose existence itself challenged the World Government's legitimacy narrative.",
+      "systemBio": "A high-value targeting node whose lineage represents the Void Century's most dangerous secret — his capture triggered the system's largest military deployment.",
+      "gradientFrom": "orange-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "orange-400",
+      "icon": "Flame",
+      "signatureMoment": "Taking a Marine commander's bullet for Luffy at Marineford, dying with the words 'I was born into this world.'",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/335061.jpg?s=5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f",
+      "malId": 314,
+      "systemRole": "high-value-target",
+      "classificationTag": "roger-lineage",
+      "keyAbility": "Flame-Flame Fruit / Haki"
+    },
+    {
+      "name": "Nico Robin",
+      "title": "Archaeologist",
+      "rank": "Straw Hat Intel Specialist",
+      "dangerLevel": 7,
+      "loreBio": "The sole survivor of Ohara, Robin can read the Rio Poneglyph — the only person alive who can translate the Void Century's truth.",
+      "systemBio": "An information monopoly node whose capability creates exclusive access to the system's most destabilizing knowledge category — historical record manipulation.",
+      "gradientFrom": "slate-800",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "BookOpen",
+      "signatureMoment": "At Enies Lobby, declaring war on the World Government for the first time in history with the words '允许我活下去.'",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/335063.jpg?s=7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7",
+      "malId": 339,
+      "systemRole": "information-monopoly",
+      "classificationTag": "poneglyph-reader",
+      "keyAbility": "Hana-Hana Fruit / Archaeology"
+    },
+    {
+      "name": "Kaido",
+      "title": "Beast Pirate Emperor",
+      "rank": "Yonkou",
+      "dangerLevel": 10,
+      "loreBio": "The 'Strongest Creature on Earth' who has attempted suicide over 40 times and cannot be killed — the man who controls the New World's most powerful pirate army.",
+      "systemBio": "A durability-dominant market leader who maintains position through survivorship bias rather than strategic innovation — the Yonkou position as barrier to entry rather than capability excellence.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "slate-900",
+      "accentColor": "blue-400",
+      "icon": "Dragon",
+      "signatureMoment": "Flying into Marineford alone to challenge the Marines and Yonkou simultaneously, surviving every execution thrown at him.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/47/422103.jpg?s=8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c",
+      "malId": 396,
+      "systemRole": "market-leader",
+      "classificationTag": "fishman-king",
+      "keyAbility": "Uo-Uo Fruit (Dragon Form) / Advanced Haki"
+    },
+    {
+      "name": "World Government",
+      "title": "Global Governance Institution",
+      "rank": "Sovereign Authority",
+      "dangerLevel": 8,
+      "loreBio": "The coalition of 170+ nations led by the Tenryuubito, maintaining power through military projection, historical narrative control, and the Absolute Justice doctrine.",
+      "systemBio": "The dominant institutional monopoly controlling global maritime law, military force projection, and information asymmetry through the Elder Stars.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "slate-900",
+      "accentColor": "blue-400",
+      "icon": "Shield",
+      "signatureMoment": "Issuing the order to purge Ohara and annihilate every scholar to prevent the Void Century from being uncovered.",
+      "systemRole": "institutional-monopoly",
+      "classificationTag": "world-government",
+      "keyAbility": "Marine Military Command / Celestial Dragon Authority",
+      "imageUrl": null,
+      "_fetchFailed": true
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Monkey D. Luffy",
+      "target": "Shanks",
+      "type": "ally",
+      "loreDesc": "Shanks saved Luffy from a Sea King as a child and gave him his straw hat as a promise token — Luffy's entire dream is inspired by Shanks's example.",
+      "systemDesc": "Mentorship link where symbolic capital (the straw hat) transfers goal architecture from mentor to protégé.",
+      "weight": 10,
+      "systemEdgeType": "symbolic-investment"
+    },
+    {
+      "source": "Monkey D. Luffy",
+      "target": "Portgas D. Ace",
+      "type": "ally",
+      "loreDesc": "Sworn brother through the Mt. Colubo ritual, Luffy went to Marineford alone to save Ace and collapsed when Ace died in his arms.",
+      "systemDesc": "High-intensity emotional bonding node whose severing triggered the narrative's most significant cascade failure in the protagonist's operating graph.",
+      "weight": 10,
+      "systemEdgeType": "emotional-bond"
+    },
+    {
+      "source": "Marshall D. Teach (Blackbeard)",
+      "target": "Portgas D. Ace",
+      "type": "enemy",
+      "loreDesc": "Ace pursued Blackbeard after learning he betrayed Whitebeard and joined the crew specifically to hunt him — leading to his capture.",
+      "systemDesc": "Predator-prey dynamic where the hunter becomes the hunted through misread of capability differential.",
+      "weight": 10,
+      "systemEdgeType": "hunt-destabilization"
+    },
+    {
+      "source": "World Government",
+      "target": "Nico Robin",
+      "type": "enemy",
+      "loreDesc": "The World Government declared Robin a criminal for the crime of surviving Ohara and being able to read the Poneglyph — an existential threat to their historical narrative monopoly.",
+      "systemDesc": "Information monopoly vs. information access node conflict — the system's power depends on the contested resource Robin uniquely controls.",
+      "weight": 9,
+      "systemEdgeType": "information-monopoly-conflict"
+    },
+    {
+      "source": "Sengoku",
+      "target": "Monkey D. Luffy",
+      "type": "enemy",
+      "loreDesc": "The Fleet Admiral ordering Marineford forces to capture or kill Luffy as a rising threat — a decision that triggered the biggest war in history.",
+      "systemDesc": "Institutional authority node vs. disruptive innovation node conflict — the Marine's mandate to eliminate disruption creates the very instability they sought to prevent.",
+      "weight": 9,
+      "systemEdgeType": "authority-vs-disruption"
+    },
+    {
+      "source": "Shanks",
+      "target": "Marshall D. Teach (Blackbeard)",
+      "type": "enemy",
+      "loreDesc": "Shanks warned Whitebeard about Teach before Marineford and later confronted Blackbeard directly, losing his arm in the process — a grudge that remains unresolved.",
+      "systemDesc": "Competitive market entry conflict where Shanks represents incumbency defense against Blackbeard's disruptive positioning.",
+      "weight": 9,
+      "systemEdgeType": "incumbency-defense"
+    },
+    {
+      "source": "Nico Robin",
+      "target": "World Government",
+      "type": "enemy",
+      "loreDesc": "Ohara's sole survivor, Robin's existence represents the danger of allowing historical research — the Government would rather kill every child from the island than risk the Poneglyph knowledge spreading.",
+      "systemDesc": "Systemic information security conflict where the cost of a single data breach outweighs all other considerations.",
+      "weight": 9,
+      "systemEdgeType": "information-security-conflict"
+    },
+    {
+      "source": "Monkey D. Luffy",
+      "target": "Marshall D. Teach (Blackbeard)",
+      "type": "enemy",
+      "loreDesc": "Luffy swore to take down Blackbeard for Ace's death and everything he's done to the world — a personal grudge that drives major narrative arcs.",
+      "systemDesc": "Personal vendetta as narrative acceleration mechanism — Luffy's individual anger translates into system-level market disruption against Blackbeard's pirate empire.",
+      "weight": 10,
+      "systemEdgeType": "personal-vendetta"
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Im-sama",
+      "loreDesc": "The mysterious World Government sovereign whose true identity and power level are completely unknown — even the Yonkou treat them as a different class of entity.",
+      "systemDesc": "A zero-information node at the top of the institutional hierarchy — the existence of this entity creates indefinite uncertainty in the entire strategic environment.",
+      "impact": "All power calculations must include an unknown sovereign actor with arbitrary capability access.",
+      "loreSubtitle": "Unknown Sovereign Entity",
+      "systemSubtitle": "Zero-Information Strategic Uncertainty",
+      "ruleViolated": "Unknown — entity class undefined"
+    },
+    {
+      "name": "Void Century",
+      "loreDesc": "The 100-year gap in world history that Ohara's scholars died trying to uncover — erased from all records and punishable by death to research.",
+      "systemDesc": "The system's foundational secret: whoever controls the historical narrative controls the legitimacy of the current power structure.",
+      "impact": "The World Government's entire authority rests on concealing this information — its exposure would delegitimize the Marines, CDs, and WG structure.",
+      "loreSubtitle": "Erased Historical Century",
+      "systemSubtitle": "Legitimacy-Concealing Information Architecture",
+      "ruleViolated": "Unknown — entity class undefined"
+    }
+  ],
+  "hero": {
+    "systemType": "relational",
+    "microHook": "The ocean is not a barrier — it is the highway.",
+    "thesis": "One Piece deconstructs power as a function of freedom: the closer you get to the 'free' ideal, the more actual power you accumulate. Roge...",
+    "primarySystemType": "factions"
+  },
+  "causalEvents": [
+    {
+      "id": "op-ce1",
+      "name": "The Void Century Discovery",
+      "trigger": "Ohara scholars compile historical records and begin translating Poneglyph",
+      "consequence": "World Government authorizes complete annihilation of Ohara island and all its scholars",
+      "timelinePosition": "800 years ago (ancient) — triggered present-day knowledge suppression",
+      "loreDesc": "The World Government erases 100 years of history, hiding the true origin of the D. clan.",
+      "systemDesc": "A systemic narrative manipulation event that created the legal foundation for World Government authority.",
+      "loreSubtitle": "The 100 Missing Years",
+      "systemSubtitle": "Historical Narrative Erasure"
+    },
+    {
+      "id": "op-ce2",
+      "name": "Roger's Execution",
+      "trigger": "Gol D. Roger publicly executed by World Government",
+      "consequence": "His final words about the One Piece trigger the Great Pirate Era — mass market entry",
+      "timelinePosition": "24 years ago — present day catalyst",
+      "loreDesc": "The Pirate King's death becomes the spark that sends thousands into the Grand Line.",
+      "systemDesc": "A symbolic martyrdom event that created positive feedback loop attracting unlimited market entrants.",
+      "loreSubtitle": "The Spark of the Great Pirate Era",
+      "systemSubtitle": "Martyrdom-Driven Market Creation"
+    }
+  ],
+  "counterplay": [
+    {
+      "id": "cp-haki",
+      "attacker": "Haki Users",
+      "defender": "Devil Fruit Overwhelmers",
+      "mechanic": "Haki bypasses Devil Fruit biological advantages entirely — willpower overrides paranormal capability.",
+      "loreDesc": "Conqueror's Haki can physically overwhelm Devil Fruit users regardless of how powerful their abilities are.",
+      "systemDesc": "A hard-cancel protocol that voids biological/paranormal advantage stacks through sheer authority output.",
+      "loreSubtitle": "Haki Nullifies Fruit Overwhelming Force",
+      "systemSubtitle": "Willpower > Paranormal Biology"
+    },
+    {
+      "id": "cp-water",
+      "attacker": "Seawater / Kairiki",
+      "defender": "Devil Fruit Users",
+      "mechanic": "Seawater permanently cancels Devil Fruit abilities on contact, forcing DF users to avoid ocean combat.",
+      "loreDesc": "The ocean is the Devil Fruit user's greatest enemy — swimming becomes impossible and DF powers are nullified.",
+      "systemDesc": "A structural vulnerability that creates permanent geographic market segmentation for DF-capable operators.",
+      "loreSubtitle": "Ocean Cancels All Devil Fruit Powers",
+      "systemSubtitle": "Permanent Operational Dependency"
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "What makes Shanks different from other Yonkou?",
+      "answer": "Shanks operates through pre-existing reputation networks and diplomatic relationships rather than military dominance — he resolves conflicts before they start.",
+      "tabIndex": 0
+    },
+    {
+      "question": "Why did the World Government hide the Void Century?",
+      "answer": "The historical narrative monopoly is the source of their legal authority — exposure of the Ancient Kingdom would delegitimize the entire World Government structure.",
+      "tabIndex": 0
+    },
+    {
+      "question": "What is the ONE PIECE actually?",
+      "answer": "The physical treasure at Laugh Tale, confirmed real by Roger. Its nature remains the central unresolved mystery driving the entire narrative.",
+      "tabIndex": 1
+    },
+    {
+      "question": "How does Haki scaling work?",
+      "answer": "Observation Haki scales with combat experience, Armament Haki with training intensity, and Conqueror's Haki with the strength of the user's ambition and willpower.",
+      "tabIndex": 2
+    },
+    {
+      "question": "What is the relationship between the Revolutionary Army and the Yonkou?",
+      "answer": "The Revolutionary Army opposes the World Government fundamentally, while Yonkou compete with the Government for territorial control — a three-way cold war dynamic.",
+      "tabIndex": 2
+    }
+  ]
+}

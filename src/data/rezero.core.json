@@ -1,0 +1,493 @@
+{
+  "anime": "Re:Zero − Starting Life in Another World",
+  "tagline": "A death-loop economy where checkpoint saves, information asymmetry, and trauma compounding create the ultimate strategic survival market.",
+  "malId": 31240,
+  "visualizationHint": "timeline",
+  "visualizationReason": "Re:Zero is defined by checkpoint-based causality, Return by Death loops, and delayed-consequence decision trees — the timeline renderer maps how choices propagate through parallel futures.",
+  "headerFlavor": {
+    "loreQuote": "I won't give up. I'll keep trying until I find a way to save everyone.",
+    "sysWarning": "// [SYS_OP]: RETURN BY DEATH PROTOCOL ACTIVE — CHECKPOINT STATE ENABLED",
+    "sysWarningColor": "purple"
+  },
+  "backgroundMotif": "circles",
+  "revealOverlay": "glow-border",
+  "introductionSummary": "Re:Zero operates as a save-state economy where Subaru's Return by Death creates unlimited retry capacity at the cost of extreme psychological trauma accumulation. Every loop generates new information about the world and its characters while compounding emotional damage. The timeline renderer captures the core thesis: choices have delayed and cascading consequences that can't be undone, only survived.",
+  "aiInsights": {
+    "casual": "Re:Zero looks like a generic isekai but it's actually a masterclass in information economy. Subaru's only real advantage is loop knowledge, and every death teaches him something about the world that he has to act on without any guarantee it will work next time.",
+    "deep": "The Re:Zero power system is fundamentally an information arbitrage game. Subaru's Return by Death is a free retry mechanism that lets him probe the world's rules without permanent consequences — until he dies in a way that also kills the people he's trying to save. The real cost isn't the death, it's the accumulated trauma and the knowledge that his mistakes have permanent victims."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1522/128039l.jpg",
+  "themeColors": {
+    "primary": "#7c3aed",
+    "secondary": "#0f172a",
+    "accent": "#a855f7",
+    "glow": "rgba(124,58,237,0.35)",
+    "tabActive": "#a855f7",
+    "badgeBg": "rgba(124,58,237,0.15)",
+    "badgeText": "#d8b4fe",
+    "modeGlow": "rgba(168,85,247,0.3)",
+    "heroGradient": "rgba(15,23,42,0.94)"
+  },
+  "powerSystem": [
+    {
+      "name": "Return by Death",
+      "subtitle": "Checkpoint Suicide Loop",
+      "loreDesc": "An unseen, involuntary ability that sends Subaru back in time to a fixed checkpoint upon death — the only way to save people is to die first.",
+      "systemDesc": "A save-state retry mechanism with a fixed checkpoint that ignores all other death-prevention methods — the only way to escape death in this world is to die on purpose.",
+      "icon": "RotateCcw",
+      "color": "purple-400",
+      "signatureMoment": "Subaru dying repeatedly trying to save Emilia from the loot house, each death revealing new information about the opponents.",
+      "loreSubtitle": "Checkpoint Suicide Loop",
+      "systemSubtitle": "Involuntary Temporal Retry Protocol"
+    },
+    {
+      "name": "Contract Beasts",
+      "subtitle": "Spiritual Binding Agreements",
+      "loreDesc": "Beast spirits bound by contract to specific individuals, providing magical assistance in exchange for the bond — Puck is Emilia's contracted spirit.",
+      "systemDesc": "A partnership protocol where spiritual entities trade capability access for maintenance of the host's emotional stability.",
+      "icon": "PawPrint",
+      "color": "blue-400",
+      "signatureMoment": "Puck destroying a warehouse full of Witch Cult members to save Emilia — the contract providing devastating offensive capability.",
+      "loreSubtitle": "Spiritual Binding Agreements",
+      "systemSubtitle": "Partnership Capability Exchange"
+    },
+    {
+      "name": "Magic (Yin/Yang/Gate)",
+      "subtitle": "Mana-Type Combat System",
+      "loreDesc": "Standard magical system where individuals have varying mana pools and elemental affinities, with Gates determining potential for magical development.",
+      "systemDesc": "A capped resource system where mana regeneration rates and gate capacity determine magical combat ceiling.",
+      "icon": "Zap",
+      "color": "cyan-400",
+      "signatureMoment": " Emilia's ice magic freezing entire battlefields through sheer mana density.",
+      "loreSubtitle": "Mana-Type Combat System",
+      "systemSubtitle": "Capped Magical Resource"
+    },
+    {
+      "name": "Witch of Envy / Satella",
+      "subtitle": "Uncontrolled Chaos Variable",
+      "loreDesc": "The entity that killed half the world and gave Subaru his Return by Death ability — her love for Subaru drives her to unleash Envy upon the world if he's threatened.",
+      "systemDesc": "A zero-predictability variable that invalidates all strategic planning — her existence means any plan that puts Subaru at existential risk triggers an unspecified but catastrophic response.",
+      "icon": "Eye",
+      "color": "red-400",
+      "signatureMoment": "Satella appearing and consuming the Whale Witch — the most powerful entity in the world is in love with Subaru.",
+      "loreSubtitle": "Uncontrolled Chaos Variable",
+      "systemSubtitle": "Unpredictable Strategic Override"
+    }
+  ],
+  "rankings": {
+    "systemName": "Re:Zero World Hierarchy",
+    "topTierName": "Dragon / Archbishop",
+    "topTierLore": "The Dragon (the authority figure who sealed half the world) and the Witch of Envy (the existential threat) — both effectively untouchable by any mortal combatant.",
+    "topTierSystem": "System-level entities that exist outside the normal combat hierarchy — their actions define the rules rather than operate within them.",
+    "tiers": [
+      {
+        "name": "Royal Candidate",
+        "loreDesc": "The five candidates for the Kingdom's throne, each with unique magical affinities and political backing.",
+        "systemDesc": "Institutional authority nodes with legitimate claim to governance, each backed by different factional interests."
+      },
+      {
+        "name": "Knight / Sword Saint",
+        "loreDesc": "Elite combat specialists who protect Royal Candidates and represent the Kingdom's military elite.",
+        "systemDesc": "High-combat-capability nodes with institutional backing and political reach."
+      },
+      {
+        "name": "Witch Cult",
+        "loreDesc": "Fanatic worshippers of the Witch of Envy who operate across the kingdom committing atrocities for unclear purposes.",
+        "systemDesc": "Distributed adversarial network operating without clear central command, driven by theological ideology."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Roswaal L Mathers",
+      "loreDesc": "The Earl who sponsors Emilia as a Royal Candidate — his 'Gospel' (a book that predicts the future) drives all his actions toward his mysterious goal.",
+      "systemDesc": "An information-advantage node whose strategic decisions are guided by a predictive text that may or may not be reliable.",
+      "icon": "BookOpen",
+      "color": "purple-400"
+    },
+    {
+      "name": "Witch Cult",
+      "loreDesc": "A decentralized cult worshipping the Witch of Envy, operating in cells across the kingdom, each Archbishop leading a different Sloth/Gluttony/Greed faction.",
+      "systemDesc": "A distributed adversarial network without a central command structure — taking out one Archbishop doesn't disable the others.",
+      "icon": "Skull",
+      "color": "red-400"
+    },
+    {
+      "name": "Crush / Emilia Camp",
+      "loreDesc": " Emilia and her network of allies — Subaru, Beatrice, Ram, Rem, Otto, and others who form a loosely-aligned support network.",
+      "systemDesc": "A multi-capability alliance where each node provides different tactical advantages: Emilia is the political figure, Subaru is the loop information carrier, Beatrice is the magic specialist.",
+      "icon": "Heart",
+      "color": "blue-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Return by Death is Non-Negotiable",
+      "loreDesc": "Subaru cannot choose to not use Return by Death — it triggers automatically upon his death regardless of his will.",
+      "loreConsequence": "Every death is involuntary and resets to the same checkpoint — Subaru cannot choose a different save point.",
+      "systemEquivalent": "A mandatory retry mechanism that cannot be disabled or rerouted — the only exit is through the checkpoint.",
+      "severity": "fatal",
+      "loreSubtitle": "Involuntary Checkpoint Reset",
+      "systemSubtitle": "Non-Negotiable Retry Protocol"
+    },
+    {
+      "name": "Witch of Envy Love is a World Threat",
+      "loreDesc": "Satella's love for Subaru means that if he's threatened with death, she will unleash the Witch of Envy upon the world.",
+      "loreConsequence": "Any plan that risks Subaru's death has a secondary consequence of potentially destroying the world through Satella's response.",
+      "systemEquivalent": "A global mutually-assured-destruction trigger attached to a single node — his death triggers a system-wide cascade failure.",
+      "severity": "fatal",
+      "loreSubtitle": "World-Envy Lock",
+      "systemSubtitle": "Global MAD Trigger"
+    },
+    {
+      "name": "Knowledge Doesn't Transfer Between Loops",
+      "loreDesc": "Everything Subaru learns in a loop is reset — only emotional development and the information he shares with others before dying carries over.",
+      "loreConsequence": "Subaru must repeatedly die to learn information he can't learn any other way, and must convince others of what he knows without proof.",
+      "systemEquivalent": "A hard reset that preserves only subjective experience — every retry requires complete recontextualization of all other nodes.",
+      "severity": "fatal",
+      "loreSubtitle": "Information Loop Reset",
+      "systemSubtitle": "Knowledge State Compression"
+    },
+    {
+      "name": "Roswaal's Gospel Predicts but Controls",
+      "loreDesc": "Roswaal's Gospel shows him the future, but it requires him to follow its predictions exactly — deviation invalidates its guidance.",
+      "loreConsequence": "Roswaal is trapped by his own information advantage — the Gospel is both his greatest tool and his greatest constraint.",
+      "systemEquivalent": "A predictive model that only works if you follow its prescriptions — using the prediction changes its accuracy.",
+      "severity": "high",
+      "loreSubtitle": "Gospel Trap",
+      "systemSubtitle": "Self-Invalidating Prediction"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Natsuki Subaru",
+      "title": "Return by Death User",
+      "rank": " Emilia's Knight (self-appointed)",
+      "dangerLevel": 4,
+      "loreBio": "A teenager transported to a fantasy world with no special abilities except Return by Death — he uses his loop knowledge to protect the people he loves.",
+      "systemBio": "An information-arbitrage node whose only competitive advantage is loop knowledge — without Return by Death, he has no combat value whatsoever.",
+      "gradientFrom": "purple-900",
+      "gradientTo": "slate-900",
+      "accentColor": "purple-400",
+      "icon": "RotateCcw",
+      "signatureMoment": "Die over and over in the mansion loop, dying to Rem twice before realizing the real enemy was Elsa — culminating in the infamous 'RBD triple save' speech.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/315153.jpg?s=48e475fa71e56bb47eb93594fe10359d",
+      "malId": null,
+      "systemRole": "protagonist",
+      "classificationTag": "return-by-death",
+      "keyAbility": "Return by Death / Information Arbitrage / Persuasion",
+      "primaryAbility": "Return by Death / Information Arbitrage / Persuasion"
+    },
+    {
+      "name": "Emilia",
+      "title": "Silver Haired Half-Elf",
+      "rank": "Royal Candidate",
+      "dangerLevel": 9,
+      "loreBio": "A half-elf who looks exactly like the Witch of Envy, making her a political target — kind-hearted but naive about the world's hatred of her appearance.",
+      "systemBio": "A political-high-value node whose visual similarity to the Witch of Envy creates persistent institutional hostility, making every political victory a Pyrrhic achievement.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "purple-900",
+      "accentColor": "blue-400",
+      "icon": "Snowflake",
+      "signatureMoment": "Freezing Petelgeuse's entire Evangelion extension network — a display of ice magic power that revealed her as a serious combatant.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/551926.jpg?s=22728d0269f40fb353a31a54545ded00",
+      "malId": null,
+      "systemRole": "noble",
+      "classificationTag": "ice-magic",
+      "keyAbility": "Ice Magic / Spirit Contract (Puck)",
+      "primaryAbility": "Ice Magic / Spirit Contract (Puck)"
+    },
+    {
+      "name": "Satella",
+      "title": "Witch of Envy",
+      "rank": "Archbishop of Envy",
+      "dangerLevel": 10,
+      "loreBio": "The entity who consumed half the world three centuries ago and now exists inside Emilia — she loves Subaru and gave him Return by Death.",
+      "systemBio": "A zero-predictability strategic variable whose emotional attachment to Subaru means his death triggers a system-clearing event.",
+      "gradientFrom": "red-900",
+      "gradientTo": "stone-900",
+      "accentColor": "red-400",
+      "icon": "Eye",
+      "signatureMoment": "Appearing in the sky during the Witch Beast fight and consuming the Whale Witch in a single move — demonstrating power that dwarfs all other characters.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "world-threat",
+      "classificationTag": "witch",
+      "keyAbility": "Witch of Envy / Return by Death Grant / Shadow Hand",
+      "primaryAbility": "Witch of Envy / Return by Death Grant / Shadow Hand"
+    },
+    {
+      "name": "Rem",
+      "title": "Oni Maid",
+      "rank": "Mansion Maid (demon)",
+      "dangerLevel": 8,
+      "loreBio": "A blue oni who serves Roswaal, who has deep trauma from her past and a complicated relationship with her sister Ram.",
+      "systemBio": "A high-combat-support node whose vulnerability is the emotional attachment to those she's decided to protect — once committed, she's fully invested.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "gray-100",
+      "accentColor": "blue-400",
+      "icon": "Hammer",
+      "signatureMoment": "Killing Subaru three times in the mansion loop with terrifying efficiency — the scariest enemy in the entire series for how fast she moves.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "ally",
+      "classificationTag": "demon",
+      "keyAbility": "Morning Blue / Oni Physiology",
+      "primaryAbility": "Morning Blue / Oni Physiology"
+    },
+    {
+      "name": "Ram",
+      "title": "Oni Maid",
+      "rank": "Mansion Maid (demon)",
+      "dangerLevel": 7,
+      "loreBio": "Rem's older sister who lost her horn and most of her powers — brutally honest and sarcastic, she prioritizes her sister's life above everything.",
+      "systemBio": "A high-combat node with a permanent power reduction — her value comes from her ability to function at high efficiency despite permanent capability loss.",
+      "gradientFrom": "pink-900",
+      "gradientTo": "red-900",
+      "accentColor": "pink-400",
+      "icon": "Hammer",
+      "signatureMoment": "Taking on an entire Witch Cult cell by herself with one horn and the most brutal combat efficiency in the series.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "ally",
+      "classificationTag": "demon",
+      "keyAbility": "Oni Combat / Wind Magic / Dismantle",
+      "primaryAbility": "Oni Combat / Wind Magic / Dismantle"
+    },
+    {
+      "name": "Beatrice",
+      "title": "Beako / Librarian",
+      "rank": "Greater Spirit",
+      "dangerLevel": 9,
+      "loreBio": "A four-hundred-year-old spirit living in Roswaal's library, rejected every contractor until Subaru — a lonely entity who finally found someone worth bonding with.",
+      "systemBio": "A high-capability defensive node who functions as a force multiplier for whoever she's contracted to — her only vulnerability is emotional isolation.",
+      "gradientFrom": "purple-900",
+      "gradientTo": "blue-900",
+      "accentColor": "purple-400",
+      "icon": "BookOpen",
+      "signatureMoment": "Deploying the Shudrakian Rapier — a move that took out five Witch Cultists simultaneously with casual precision.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/591066.jpg?s=c8b21170c013b5b286d0ee1345052236",
+      "malId": null,
+      "systemRole": "ally",
+      "classificationTag": "spirit",
+      "keyAbility": "Spirit Magic / Greater Spirit Combat / Library Access",
+      "primaryAbility": "Spirit Magic / Greater Spirit Combat / Library Access"
+    },
+    {
+      "name": "Petelgeuse Romanée-Conti",
+      "title": "Bishop of Sloth",
+      "rank": "Witch Cult Archbishop",
+      "dangerLevel": 9,
+      "loreDesc": "The Archbishop of Sloth who controls the Witch Cult's action, obsessed with finding the 'second daughter' (Satella/Emilia).",
+      "systemBio": "A high-combat ideological node whose Witch of Envy worship creates irrational behavior patterns — he represents the threat of sincere belief.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "Skull",
+      "signatureMoment": "Killing Subaru and Rem in the mansion loop, then being defeated by Subaru's final act of desperation in the third loop.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "villain",
+      "classificationTag": "witch-cult",
+      "keyAbility": "Unseen Hand / Spirit Possession / Evangelion Extension",
+      "loreBio": "A high-combat ideological node whose Witch of Envy worship creates irrational behavior patterns — he represents the threat of sincere belief.",
+      "primaryAbility": "Unseen Hand / Spirit Possession / Evangelion Extension"
+    },
+    {
+      "name": "Puck",
+      "title": "Great Spirit",
+      "rank": " Emilia's Contract Spirit",
+      "dangerLevel": 10,
+      "loreBio": "A great spirit who contracted with Emilia as her 'mother figure' — appears as a small cat but has enough power to destroy the world.",
+      "systemBio": "A system-level capability node that is fully integrated into Emilia's operational stack — when Emilia is threatened, Puck can scale to world-ender levels.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "gray-100",
+      "accentColor": "blue-400",
+      "icon": "PawPrint",
+      "signatureMoment": "Threatening to unfreeze the dragon if Emilia dies, which would end civilization — his contract is simple: Emilia lives or the world burns.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "malId": null,
+      "systemRole": "ally",
+      "classificationTag": "great-spirit",
+      "keyAbility": "Ice Magic / Contract Enforcement / World-Class Combat",
+      "primaryAbility": "Ice Magic / Contract Enforcement / World-Class Combat"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Natsuki Subaru",
+      "target": "Emilia",
+      "type": "ally",
+      "loreDesc": "Subaru's love for Emilia is his primary motivation — he dies repeatedly to save her, often because of that love causing poor decisions.",
+      "systemDesc": "An emotional investment link that simultaneously motivates optimal loop strategy and causes catastrophic decision errors under stress.",
+      "weight": 10,
+      "systemEdgeType": "emotional-investment"
+    },
+    {
+      "source": "Natsuki Subaru",
+      "target": "Satella",
+      "type": "enemy",
+      "loreDesc": "Satella killed half the world, gave Subaru Return by Death, and loves him — the most complicated and terrifying relationship in the series.",
+      "systemDesc": "A dependency link where the entity that gives Subaru his only advantage is also the world's greatest threat — he literally cannot exist without her.",
+      "weight": 10,
+      "systemEdgeType": "dependency-trap"
+    },
+    {
+      "source": "Emilia",
+      "target": "Satella",
+      "type": "enemy",
+      "loreDesc": " Emilia looks exactly like Satella and is targeted because of it — the world conflates them, making her a perpetual political and social victim.",
+      "systemDesc": "A visual identity confusion that creates systemic hostility toward a specific node without any actual wrongdoing.",
+      "weight": 9,
+      "systemEdgeType": "identity-conflict"
+    },
+    {
+      "source": "Rem",
+      "target": "Natsuki Subaru",
+      "type": "ally",
+      "loreDesc": "Rem goes from killing Subaru in loop two to dying for him in loop three — her arc is the most devastating in the series.",
+      "systemDesc": "A trust-gain link that took only three loops to form — the most intense loyalty formation event in the series.",
+      "weight": 10,
+      "systemEdgeType": "loyalty-bond"
+    },
+    {
+      "source": "Petelgeuse Romanée-Conti",
+      "target": "Satella",
+      "type": "ally",
+      "loreDesc": "Petelgeuse worships Satella as the Witch of Envy and pursues her 'second daughter' (Emilia) in her name.",
+      "systemDesc": "An ideological devotion link that overrides all rational self-interest — he dies for a cause that doesn't even want him.",
+      "weight": 9,
+      "systemEdgeType": "ideological-devotion"
+    },
+    {
+      "source": "Beatrice",
+      "target": "Natsuki Subaru",
+      "type": "ally",
+      "loreDesc": "Betty spent 400 years waiting for the 'someone who would choose her' — Subaru's declaration that he chooses her broke that isolation.",
+      "systemDesc": "An emotional breakthrough that unlocked Beatrice's full combat capability — her contract with Subaru created an entirely new operational mode.",
+      "weight": 10,
+      "systemEdgeType": "contract-breakthrough"
+    }
+  ],
+  "counterplay": [
+    {
+      "id": "rezero-cp-1",
+      "attacker": "Witch of Envy / Satella",
+      "defender": "All Other Threats",
+      "mechanic": "Satella's existence as a hedge against Subaru's death means any fatal threat to Subaru triggers a maximum-retribution response.",
+      "loreDesc": "When the Whale Witch killed Subaru near Emilia, Satella appeared and consumed it — demonstrating that the world's greatest threat is also Subaru's protector.",
+      "systemDesc": "A mutually assured destruction trigger that makes killing Subaru strategically suicidal for any rational actor.",
+      "loreSubtitle": "Satella Protects Subaru",
+      "systemSubtitle": "MAD Trigger Defense"
+    },
+    {
+      "id": "rezero-cp-2",
+      "attacker": "Loop Death",
+      "defender": "Information Loss",
+      "mechanic": "Return by Death resets world state but preserves Subaru's emotional development — the psychological trauma accumulates and shapes his loop strategy.",
+      "loreDesc": "Subaru can learn from deaths without permanent consequences — each loop teaches him something about opponents he couldn't learn safely any other way.",
+      "systemDesc": "A training mechanism that uses death as the learning medium — every failure is an education if the node survives to use the information.",
+      "loreSubtitle": "Death as Teacher",
+      "systemSubtitle": "Respawn Learning Protocol"
+    }
+  ],
+  "causalEvents": [
+    {
+      "id": "rezero-ce1",
+      "name": "First Loop — Appa Stand Death",
+      "trigger": "Subaru encounters Emilia at the loot house and gets involved in a fight he has no combat ability to contribute to",
+      "consequence": "Subaru dies at the loot house, triggering Return by Death and beginning his loop knowledge accumulation",
+      "timelinePosition": "Episode 1 — the inciting event that establishes the loop mechanism",
+      "loreDesc": "Subaru's first death established the rules of the world: he can't fight, Return by Death is involuntary, and dying resets everything.",
+      "systemDesc": "A first-contact event that defined Subaru's operational constraints: no combat value, loop knowledge as sole advantage.",
+      "loreSubtitle": "First Loop Establishment",
+      "systemSubtitle": "Initial State Definition"
+    },
+    {
+      "id": "rezero-ce2",
+      "name": "Mansion Triple Loop",
+      "trigger": "Subaru dies three times across three loops — twice to Rem, once to the Great Rabbit",
+      "consequence": "Rem's death in loop three permanently alters Subaru's relationship with her — he now carries the knowledge of her sacrifice",
+      "timelinePosition": "Episode 18 — the emotional peak of season 1",
+      "loreDesc": "Subaru watches Rem die to the Great Rabbit, then has to let her kill him in the mansion to save her — the most brutal loop sequence.",
+      "systemDesc": "A multi-loop cascade failure event where Subaru's only path to victory required letting someone he cared about kill him.",
+      "loreSubtitle": "The Mansion Massacre",
+      "systemSubtitle": "Multi-Loop Cascade Failure"
+    },
+    {
+      "id": "rezero-ce3",
+      "name": "Roswaal Gospel Revelation",
+      "trigger": "Subaru discovers the Gospel is not future-predictive but history-recording",
+      "consequence": "Roswaal's entire strategic framework is revealed as a self-sealing trap",
+      "timelinePosition": "Season 2 — strategic framework collapse",
+      "loreDesc": "The Gospel Roswaal has been following turns out to be a recorded history, not a prediction.",
+      "systemDesc": "A self-fulfilling prophecy trap where following the document creates the conditions it predicts.",
+      "loreSubtitle": "The Gospel Trap",
+      "systemSubtitle": "Self-Sealing Information Artifact"
+    },
+    {
+      "id": "rezero-ce4",
+      "name": "Satella Reveal",
+      "trigger": "Subaru learns Satella and Emilia are not the same entity",
+      "consequence": "Emilia becomes a separate political target from Satella — doubling the threat surface",
+      "timelinePosition": "Season 2 — identity clarification",
+      "loreDesc": "Satella fused with the Witch of Envy 400 years ago, consuming her identity.",
+      "systemDesc": "A dual-identity conflict where one node has two contradictory operational modes.",
+      "loreSubtitle": "The Identity Fusion",
+      "systemSubtitle": "Dual-Entity Node Conflict"
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Satella's True Identity",
+      "loreDesc": "Satella is revealed to be a fusion of Emilia and the Witch of Envy — two personalities sharing one body. The Witch of Envy consumed Satella's identity three centuries ago.",
+      "systemDesc": "A system where the same node has two conflicting operational modes: Emilia (protective, growth-oriented) and Witch of Envy (destruction, obsessive love).",
+      "impact": "The entity protecting Subaru is also the world's greatest threat — they are the same node with contradictory objectives.",
+      "ruleViolated": "Return by Death non-negotiability — Satella grants it but the mechanism of how is unclear",
+      "loreSubtitle": "Dual Identity Fusion",
+      "systemSubtitle": "Conflicting Operational Modes"
+    },
+    {
+      "name": "The Gospel's True Nature",
+      "loreDesc": "Roswaal's Gospel appears to predict the future, but it's later revealed to be a recordered version of what has already happened — not actual future prediction.",
+      "systemDesc": "A backward-looking document that Roswaal interprets as forward prediction — his entire strategy is based on reading a history book as a prophecy.",
+      "impact": "Every decision Roswaal makes is based on a document whose accuracy depends on him following its prescriptions — a self-sealing predictive trap.",
+      "ruleViolated": "Information advantage — Roswaal's advantage may be an illusion he's trapped by",
+      "loreSubtitle": "False Prophecy Trap",
+      "systemSubtitle": "Self-Sealing Information Artifact"
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "Why does Subaru's Return by Death not transfer to other characters?",
+      "answer": "The Witch of Envy specifically chose Subaru as the carrier — the ability is tied to his relationship with Satella, not to any general mechanism of the world.",
+      "tabIndex": 0
+    },
+    {
+      "question": "What makes the Witch of Envy's love for Subaru so dangerous?",
+      "answer": "Because Satella's response to Subaru's death is to release the Witch of Envy — a being who already consumed half the world. The cost of Subaru dying is potentially civilization-ending.",
+      "tabIndex": 1
+    },
+    {
+      "question": "Why is Emilia constantly targeted?",
+      "answer": "Emilia looks exactly like Satella (the Witch of Envy), making her a political and religious target regardless of her actual identity. The world's hatred of the Witch extends to anyone who resembles her.",
+      "tabIndex": 0
+    },
+    {
+      "question": "What is the relationship between the Witch Cult and the individual Archbishops?",
+      "answer": "Each Archbishop has their own Sloth/Gluttony/Greed ideology and operates somewhat independently. Taking out one doesn't weaken the others — they're ideologically aligned but not hierarchically organized.",
+      "tabIndex": 2
+    }
+  ],
+  "hero": {
+    "systemType": "timeline",
+    "microHook": "Every death is a lesson. Every lesson has a cost.",
+    "thesis": "Subaru dies repeatedly to protect those he loves — the most powerful ability is the willingness to keep trying.",
+    "primarySystemType": "core_laws"
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "anime": "Mob Psycho 100",
+  "tagline": "A psychic ecosystem where spiritual energy flows from trauma, belief structures weaponize into combat power, and true strength comes from emotional honesty.",
+  "malId": 32182,
+  "visualizationHint": "node-graph",
+  "visualizationReason": "Mob Psycho 100 is structurally a dependency web: esper organizations, body-thief parasites, cult followings, and ego networks create a topology where psychic power, corruption, and spiritual authority determine the entire graph structure.",
+  "headerFlavor": {
+    "loreQuote": "I'll be the Esper Number One myself!",
+    "sysWarning": "// [SYS_OP]: PSYCHIC NETWORK MAPPING — ESPER DEPENDENCY GRAPH ACTIVE",
+    "sysWarningColor": "purple"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "pulse-purple",
+  "introductionSummary": "Mob Psycho 100 operates as a psychic economy where spiritual energy (psychic power) flows from emotional trauma and self-worth into exploitable resources. The core system thesis is that psychic power is a function of ego — the bigger your self-image, the more power you can channel, but the more vulnerable you are to its corruption. True altruistic power (Mob's 100% form) comes from emotional sincerity, while false power (Dimple's 'Cult Leader' mode, Koyama's body-thief) exploits psychological damage for parasitic energy extraction.",
+  "aiInsights": {
+    "casual": "Mob Psycho 100 looks like a comedy about a psychic kid but it's actually a deep exploration of ego, trauma, and what real strength is. The node-graph makes sense because every character's power comes from their mental state and relationships with others.",
+    "deep": "The universe's power system is an emotional energy economy: psychic power = ego × trauma. The bigger someone's self-image, the more power they have, but also the more fragile. Mob's 100% form is his only true power because it comes from complete emotional honesty rather than ego inflation. Dimple's 'evil spirit' power and the Claw esper network represent parasitic energy extraction — taking other people's emotional damage and converting it to combat capability."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/8/80356l.jpg",
+  "themeColors": {
+    "primary": "#ec4899",
+    "secondary": "#0f172a",
+    "accent": "#f472b6",
+    "glow": "rgba(236,72,153,0.35)",
+    "tabActive": "#f472b6",
+    "badgeBg": "rgba(236,72,153,0.15)",
+    "badgeText": "#fbcfe8",
+    "modeGlow": "rgba(244,114,182,0.3)",
+    "heroGradient": "rgba(15,23,42,0.94)"
+  },
+  "powerSystem": [
+    {
+      "name": "Psychic Energy",
+      "subtitle": "Emotional Power Currency",
+      "loreDesc": "A latent energy that resides in everyone, manifesting as telekinetic power when emotional concentration reaches critical mass.",
+      "systemDesc": "A capped personal resource where emotional state directly determines recharge rate and output ceiling — happiness, anger, and trauma all compound the available power differently.",
+      "icon": "Brain",
+      "color": "pink-400",
+      "signatureMoment": "Mob activating 100% power through pure emotional honesty rather than ego — the only time he accesses his true maximum.",
+      "loreSubtitle": "Emotional Power Currency",
+      "systemSubtitle": "Psychological State-Dependent Resource"
+    },
+    {
+      "name": "Esper Abilities",
+      "subtitle": "Telekinetic Combat Module",
+      "loreDesc": "The primary offensive application of psychic energy — telekinesis used to crush, throw, and destroy physical objects at a distance.",
+      "systemDesc": "A combat toolkit that scales with the esper's emotional investment in winning — ego directly amplifies output.",
+      "icon": "Zap",
+      "color": "purple-400",
+      "signatureMoment": "Ritsu activating her telekinetic abilities for the first time through desperate need to protect her brother.",
+      "loreSubtitle": "Telekinetic Combat Module",
+      "systemSubtitle": "Ego-Amplified Kinetic Output"
+    },
+    {
+      "name": "Spiritual parasites",
+      "subtitle": "Third-Party Energy Exploitation",
+      "loreDesc": "Disembodied spirits like Dimple can possess bodies, harvest emotional energy from believers, and accumulate power beyond normal esper limits.",
+      "systemDesc": "A parasitic platform model where a third-party entity extracts energy from a host network rather than generating it themselves.",
+      "icon": "Ghost",
+      "color": "green-400",
+      "signatureMoment": "Dimple becoming a 'god' by collecting emotional energy from thousands of followers, reaching a power level that threatened the entire city.",
+      "loreSubtitle": "Third-Party Energy Exploitation",
+      "systemSubtitle": "Parasitic Platform Energy Extraction"
+    },
+    {
+      "name": "Body Thief",
+      "subtitle": "Identity Replacement Protocol",
+      "loreDesc": "The ability to swap consciousness with another body, taking over the victim's physical form while the original consciousness is suppressed.",
+      "systemDesc": "A complete identity override operation that transfers all access credentials and capabilities from the original node to the intruder.",
+      "icon": "Copy",
+      "color": "red-400",
+      "signatureMoment": "Koyama body-thief swapping with an esper to access their powers while retaining his own malicious intent.",
+      "loreSubtitle": "Identity Replacement Protocol",
+      "systemSubtitle": "Consciousness Transfer Override"
+    }
+  ],
+  "rankings": {
+    "systemName": "Esper Classification Hierarchy",
+    "topTierName": "World-Level Threat",
+    "topTierLore": "Espers whose power can restructure city infrastructure or threaten population-scale outcomes through psychic output alone.",
+    "topTierSystem": "Premium nodes capable of infrastructure-level system manipulation — their psychic output exceeds normal civilizational defense thresholds.",
+    "tiers": [
+      {
+        "name": "Claw 7th Division",
+        "loreDesc": "Super espers recruited and weaponized by Claw for corporate intimidation and territory acquisition.",
+        "systemDesc": "Military-grade esper nodes operating under organizational command with full resource backing."
+      },
+      {
+        "name": "Claw Grunt Esper",
+        "loreDesc": "Low to mid-level espers used as disposable field units for Claw operations.",
+        "systemDesc": "Standard capacity esper nodes running basic offensive and defensive telekinetic protocols."
+      },
+      {
+        "name": "Natural Esper",
+        "loreDesc": "Individuals with latent psychic abilities who develop them through emotional catalyst events.",
+        "systemDesc": "Self-developed esper nodes whose capability ceiling depends on psychological profile and trauma resolution."
+      }
+    ]
+  },
+  "factions": [
+    {
+      "name": "Spirits and Such Consultancy",
+      "loreDesc": "Reigen's freelance spirits consultation business — nominally exorcising spirits, actually providing life advice while running on barely legitimate operations.",
+      "systemDesc": "A low-overhead freelance consultation network that monetizes emotional support disguised as supernatural services.",
+      "icon": "Briefcase",
+      "color": "pink-400"
+    },
+    {
+      "name": "Claw (Super Esper Organization)",
+      "loreDesc": "A corporate organization of espers led by Suzuki, seeking to create a psychic utopia by forcefully recruiting or eliminating non-esper threats.",
+      "systemDesc": "A top-down esper military corporation that treats psychic power as a resource to be monopolized and deployed for territorial control.",
+      "icon": "Shield",
+      "color": "red-400"
+    },
+    {
+      "name": "Hosoda / Urban Folklore Spirits",
+      "loreDesc": "Spiritual entities born from collective belief and urban legends — Dimple, the telepathy girls, and various local legends.",
+      "systemDesc": "Belief-generated entities whose power scales with the population's emotional investment in their mythos.",
+      "icon": "Ghost",
+      "color": "green-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Psychic Power Scales with Ego",
+      "loreDesc": "The bigger the esper's self-image and emotional investment in winning, the more psychic output they can generate.",
+      "loreConsequence": "Overconfidence creates vulnerability — esper power amplified by ego is fragile when that ego is challenged.",
+      "systemEquivalent": "A resource ceiling that is proportional to psychological investment rather than physical capability — emotionally invested nodes output more but have more exploitable weaknesses.",
+      "severity": "fatal",
+      "loreSubtitle": "Power Requires Ego Amplification",
+      "systemSubtitle": "Psychological Investment Increases Capability"
+    },
+    {
+      "name": "Mob's 100% is Uncontrollable",
+      "loreDesc": "When Mob reaches 100% psychic output, he loses all psychic control and becomes a pure destructive force.",
+      "loreConsequence": "Mob's ultimate power is simultaneously his greatest danger — his 100% form destroys everything around him.",
+      "systemEquivalent": "Maximum performance state that exceeds the operator's control bandwidth, causing system-wide cascade failure.",
+      "severity": "fatal",
+      "loreSubtitle": "Maximum Output Exceeds Control",
+      "systemSubtitle": "Peak Performance Destroys Operator"
+    },
+    {
+      "name": "Trauma Creates Psychic Vulnerability",
+      "loreDesc": "Espers who develop powers through trauma have power leaks — unresolved emotional damage creates exploitable openings.",
+      "loreConsequence": "A combatant's psychological profile is as important as their psychic output level.",
+      "systemEquivalent": "Unresolved technical debt creates security vulnerabilities that can be exploited in adversarial encounters.",
+      "severity": "high",
+      "loreSubtitle": "Psychic Leakage from Trauma",
+      "systemSubtitle": "Emotional Damage Creates Exploitable Vulnerabilities"
+    },
+    {
+      "name": "Belief Generates Spiritual Power",
+      "loreDesc": "The belief of a crowd in a spiritual entity gives that entity real power — Dimple's 'god' form was powered by thousands of believers.",
+      "loreConsequence": "Mass belief can create entities powerful enough to threaten city-level outcomes.",
+      "systemEquivalent": "Network effects generate emergent capability beyond any individual node — crowd belief is a multiplier that compounds psychic output.",
+      "severity": "high",
+      "loreSubtitle": "Crowd Belief Powers Spirits",
+      "systemSubtitle": "Network Faith Generates Emergent Power"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Kageyama Shigeo (Mob)",
+      "title": "Psychic Power 100%",
+      "rank": "Natural Esper / Spirits and Such Associate",
+      "dangerLevel": 10,
+      "loreBio": "A fifth-grader with overwhelming psychic power who runs a dubious spirits consultation business with his mentor Reigen, seeking personal growth rather than power.",
+      "systemBio": "The system's highest-capability node whose true ceiling (100%) is locked behind complete ego dissolution — he is most powerful when he is most emotionally honest, which paradoxically also makes him most dangerous.",
+      "gradientFrom": "pink-900",
+      "gradientTo": "orange-900",
+      "accentColor": "pink-400",
+      "icon": "Brain",
+      "signatureMoment": "Finally unlocking 100% against Koyama when his emotional walls broke completely — pure destructive force triggered by pure emotional honesty.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/343344.jpg?s=3e76e9f00b1e67cc81c526e89f162bf8",
+      "malId": 85085,
+      "systemRole": "protagonist",
+      "classificationTag": "natural-esper",
+      "keyAbility": "Telekinesis / 100% Form / Emotional Amplification"
+    },
+    {
+      "name": "Reigen Arataka",
+      "title": "The Greatest Con Artist",
+      "rank": "Spirits and Such CEO",
+      "dangerLevel": 3,
+      "loreBio": "A self-proclaimed spiritualist who runs Spirits and Such, exploiting people's emotional vulnerabilities for money while occasionally accidentally solving real problems.",
+      "systemBio": "A zero-psychic-capability social engineering node whose actual power is persuasion, manipulation, and emotional intelligence — he achieves outcomes through human psychology that espers can't match through force.",
+      "gradientFrom": "slate-800",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Briefcase",
+      "signatureMoment": "Single-handedly stopping Dimple's god form through sheer persuasion — convincing the crowd their belief was misplaced.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/308364.jpg?s=3fd34b01685c150ebd8572b2fcd26f40",
+      "malId": 85539,
+      "systemRole": "mentor",
+      "classificationTag": "non-esper",
+      "keyAbility": "Social Engineering / Persuasion / Emotional Intelligence"
+    },
+    {
+      "name": "Ekubo (Dimple)",
+      "title": "Opportunistic Evil Spirit",
+      "rank": "Neutral / Ex-Villain",
+      "dangerLevel": 7,
+      "loreBio": "A selfish evil spirit who keeps trying to become a 'god' by harvesting believer energy, repeatedly defeated by Mob, eventually becoming a reluctant ally.",
+      "systemBio": "A parasitic capability node that exploits belief networks rather than generating power through personal development — consistently outmatched by genuine emotional connections.",
+      "gradientFrom": "purple-900",
+      "gradientTo": "green-900",
+      "accentColor": "green-400",
+      "icon": "Ghost",
+      "signatureMoment": "Becoming a god and building a cult following — the fastest power growth path available but completely dependent on maintaining the illusion.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/299395.jpg?s=0857c68f6e2810f1c79eb22f9f8b9fa1",
+      "malId": 116750,
+      "systemRole": "anti-hero",
+      "classificationTag": "evil-spirit",
+      "keyAbility": "Spirit Possession / Belief Harvesting / Mass Manipulation"
+    },
+    {
+      "name": "Kageyama Ritsu",
+      "title": "Mob's Younger Brother",
+      "rank": "Natural Esper",
+      "dangerLevel": 6,
+      "loreBio": "Mob's introverted younger brother who awakens telekinetic powers after the Claw incident, struggling to process his emotions.",
+      "systemBio": "A developing esper node whose power emerged through psychological trauma — his emotional suppression creates a volatile output profile.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Brain",
+      "signatureMoment": "Awakening telekinesis through the shock of seeing Mob's powers — first demonstration was saving himself from drowning.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/306672.jpg?s=0865960b46255cb77b31097c14e8fbbf",
+      "malId": 118221,
+      "systemRole": "ally",
+      "classificationTag": "natural-esper",
+      "keyAbility": "Telekinesis / Emotional Trauma Amplification"
+    },
+    {
+      "name": "Suzuki (Claw Boss)",
+      "title": " esper Founder",
+      "rank": "Claw Supreme Leader",
+      "dangerLevel": 9,
+      "loreBio": "The charismatic leader of Claw who genuinely believes he's building a psychic paradise and can only see power in terms of dominance.",
+      "systemBio": "A high-capability esper node whose ideological framework prevents him from recognizing the value of emotional connection over combat output — he sees esper power as the only metric of worth.",
+      "gradientFrom": "red-900",
+      "gradientTo": "blue-900",
+      "accentColor": "red-400",
+      "icon": "Crown",
+      "signatureMoment": "Being defeated by Mob's honest emotional sincerity while having every physical advantage — power without ego proved superior.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/439116.jpg?s=95460c6cdc1408064e4ffbb05c2486e0",
+      "malId": 118222,
+      "systemRole": "villain",
+      "classificationTag": " esper-leader",
+      "keyAbility": " esper Combat / Telekinetic Assault / Ideological Conviction"
+    },
+    {
+      "name": "Mogami (Knife Psychic)",
+      "title": "Body Thief esper",
+      "rank": "Claw esper",
+      "dangerLevel": 8,
+      "loreBio": "A body-thief esper who swaps consciousness with victims, making him nearly impossible to fight since attacking means attacking an innocent host.",
+      "systemBio": "A polymorphic adversarial node that can swap identity contexts, making defensive positioning against him impossible without collateral damage.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "slate-900",
+      "accentColor": "blue-400",
+      "icon": "Copy",
+      "signatureMoment": "Switching bodies with an old woman to evade Mob's attacks, forcing an emotional rather than physical confrontation.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/337271.jpg?s=ef183e63e64ec4335b27680f30d77c34",
+      "malId": 118223,
+      "systemRole": "villain",
+      "classificationTag": "body-thief",
+      "keyAbility": "Body Thief / Consciousness Transfer / Psychological Warfare"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Kageyama Shigeo (Mob)",
+      "target": "Reigen Arataka",
+      "type": "ally",
+      "loreDesc": "Mob follows Reigen as a mentor despite knowing he's a fraud — valuing the emotional guidance over the supernatural claims.",
+      "systemDesc": "A high-trust mentorship link built on emotional compatibility rather than capability transfer — Mob's genuine need for human connection and Reigen's genuine care underneath the fraud.",
+      "weight": 10,
+      "systemEdgeType": "mentorship"
+    },
+    {
+      "source": "Ekubo (Dimple)",
+      "target": "Kageyama Shigeo (Mob)",
+      "type": "enemy",
+      "loreDesc": "Dimple repeatedly tries to use Mob for his own power accumulation, each time being defeated by Mob's sincerity.",
+      "systemDesc": "A parasitic exploitation link that consistently fails because Mob's genuine emotional output generates more power than Dimple's belief-harvesting.",
+      "weight": 7,
+      "systemEdgeType": "parasitic-exploitation"
+    },
+    {
+      "source": "Suzuki (Claw Boss)",
+      "target": "Kageyama Shigeo (Mob)",
+      "type": "enemy",
+      "loreDesc": "Suzuki sees Mob as either an asset to recruit or a threat to eliminate — his entire worldview requires espers to dominate non-espers.",
+      "systemDesc": "A fundamental ideological conflict node — Suzuki's entire value system is threatened by Mob's existence as proof that emotional sincerity beats combat power.",
+      "weight": 9,
+      "systemEdgeType": "ideological-conflict"
+    },
+    {
+      "source": "Kageyama Shigeo (Mob)",
+      "target": "Kageyama Ritsu",
+      "type": "ally",
+      "loreDesc": "Mob's protective love for his brother is a core emotional driver — every time Ritsu is threatened, Mob's emotional investment spikes.",
+      "systemDesc": "A capability amplification trigger: Mob's emotional investment in protecting Ritsu creates power spikes that exceed his normal operational ceiling.",
+      "weight": 10,
+      "systemEdgeType": "emotional-amplification"
+    },
+    {
+      "source": "Reigen Arataka",
+      "target": "Ekubo (Dimple)",
+      "type": "enemy",
+      "loreDesc": "Reigen publicly embarrassed Dimple in his god form, convincing the crowd their belief was misplaced — effectively killing Dimple's power source.",
+      "systemDesc": "A network attack that severed Dimple's belief-linked power supply through pure social engineering.",
+      "weight": 8,
+      "systemEdgeType": "network-destruction"
+    },
+    {
+      "source": "Mogami (Knife Psychic)",
+      "target": "Kageyama Shigeo (Mob)",
+      "type": "enemy",
+      "loreDesc": "Mogami traps Mob in an illusion to torture him psychologically, exploiting his one weakness: emotional vulnerability.",
+      "systemDesc": "A psychological warfare attack that targeted Mob's emotional investment rather than his psychic capabilities — exploiting the node's fundamental architecture.",
+      "weight": 8,
+      "systemEdgeType": "psychological-warfare"
+    },
+    {
+      "source": "Kageyama Shigeo (Mob)",
+      "target": "Suzuki (Claw Boss)",
+      "type": "enemy",
+      "loreDesc": "Mob refuses to join Claw because he rejects the premise that espers should dominate non-espers.",
+      "systemDesc": "Ideological rejection of the organizational power hierarchy.",
+      "weight": 9,
+      "systemEdgeType": "ideological-conflict"
+    },
+    {
+      "source": "Reigen Arataka",
+      "target": "Kageyama Ritsu",
+      "type": "ally",
+      "loreDesc": "Reigen helps Ritsu accept his psychic powers as part of who he is, not something to be ashamed of.",
+      "systemDesc": "A mentorship link for psychological integration of emergent capabilities.",
+      "weight": 7,
+      "systemEdgeType": "mentorship"
+    }
+  ],
+  "counterplay": [
+    {
+      "id": "mob-cp-1",
+      "attacker": " esper Combat",
+      "defender": "Non-Psychic Opponents",
+      "mechanic": " espers assume all threats can be addressed with psychic power — non-esper fighters using physical attacks, terrain, or psychological warfare bypass psychic defenses entirely.",
+      "loreDesc": "Reigen defeating psychic enemies through pure social engineering rather than combat — the esper's assumption that power comes from psychic output creates exploitable blind spots.",
+      "systemDesc": "An architectural exploit: espers optimize for psychic threat models and underweight non-psychic attack vectors.",
+      "loreSubtitle": " espers Underestimate Physical Combat",
+      "systemSubtitle": "Psychic Defense Blind Spot Exploit"
+    },
+    {
+      "id": "mob-cp-2",
+      "attacker": "Ego-Amplified Power",
+      "defender": "Emotional Sincerity",
+      "mechanic": " esper power is amplified by ego and emotional investment — confronting an esper with genuine emotional honesty disrupts their power output by undermining their ego structure.",
+      "loreDesc": "Mob's sincerity disrupting Koyama's esper network by showing genuine care for the esper children rather than fighting.",
+      "systemDesc": "A psychological attack vector that exploits the ego-dependency of esper power systems — genuine emotional engagement causes cascading failures in ego-structured capability stacks.",
+      "loreSubtitle": "Sincerity Disrupts Ego-Amplified Power",
+      "systemSubtitle": "Psychological Architecture Attack"
+    },
+    {
+      "id": "mob-cp-3",
+      "attacker": "Mob 100%",
+      "defender": "Containment Systems",
+      "mechanic": "Mob's 100% form is unstoppable through conventional means — no containment system has successfully contained maximum-output Mob.",
+      "loreDesc": "Every attempt to contain or control Mob's 100% form has failed — his emotional honesty creates a power ceiling that no defensive system can match.",
+      "systemDesc": "A maximum-performance denial-of-service attack against any containment protocol — the system cannot handle the load it generates.",
+      "loreSubtitle": "100% Power Exceeds All Containment",
+      "systemSubtitle": "Peak Output Overwhelms Defense Systems"
+    }
+  ],
+  "causalEvents": [
+    {
+      "id": "mob-ce1",
+      "name": "Mob's First 100% Awakening",
+      "trigger": "Mob's emotional walls break completely — seeing Ritsu in danger combined with complete ego dissolution",
+      "consequence": "Maximum psychic output destroys everything in range, including the opponent, regardless of who else is nearby",
+      "timelinePosition": "Early series (Claw arc) — the first demonstration that Mob's 100% form is both his greatest strength and most dangerous liability",
+      "loreDesc": "Mob's emotional state hit zero ego and maximum sincerity simultaneously, triggering his theoretical maximum psychic output — a wave of pure telekinetic force.",
+      "systemDesc": "A system-level event where emotional honesty caused the maximum-performance state to activate involuntarily, demonstrating the fundamental architecture of the power system.",
+      "loreSubtitle": "The Involuntary 100% Trigger",
+      "systemSubtitle": "Maximum Output Through Emotional Honesty"
+    },
+    {
+      "id": "mob-ce2",
+      "name": "Dimple's God Formation",
+      "trigger": "Dimple gathers thousands of believers through a self-help cult, gaining massive belief-fueled power",
+      "consequence": "Dimple becomes a genuine city-level threat, requiring Mob's intervention and Reigen's social engineering to defeat",
+      "timelinePosition": "Middle of series — demonstrates that belief networks generate emergent power beyond individual esper capabilities",
+      "loreDesc": "The collected belief of thousands of followers was converted into spiritual energy, giving Dimple power that rivaled the combined esper force of Claw's elite.",
+      "systemDesc": "A network-effect power amplification event: crowd belief generated an emergent capability that exceeded any single node's contribution.",
+      "loreSubtitle": "Cult Power Creates Urban God",
+      "systemSubtitle": "Belief Network Emergent Power Event"
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Mob's True 100%",
+      "loreDesc": "Mob's maximum psychic output (100%) occurs only through complete ego dissolution — the opposite of how other espers unlock power. His 'true' power is his most emotionally honest state.",
+      "systemDesc": "A capability architecture that inverts the normal ego-dependency rule: maximum output requires minimum self-investment.",
+      "impact": "Every other esper is weaker when emotionally vulnerable; Mob is only at maximum capability when fully emotionally honest.",
+      "ruleViolated": "Ego-Amplified Power rule — Mob's 100% bypasses this entirely",
+      "loreSubtitle": "Maximum Power Through Zero Ego",
+      "systemSubtitle": "Inverted Capability Architecture"
+    },
+    {
+      "name": "ONE Punch Man Universe Connection",
+      "loreDesc": "The manga author (ONE) previously created One Punch Man — Mob Psycho 100 exists in the same universe, with Saitama as a background joke character.",
+      "systemDesc": "A meta-commentary embedded in the universe's architecture: the 'strongest' character in the author's universe appears as a nobody, commenting on how strength without emotional investment is meaningless.",
+      "impact": "The universe's power system explicitly acknowledges that raw power (Saitama) is inherently hollow compared to genuine emotional growth (Mob).",
+      "ruleViolated": "Narrative expectation that protagonists achieve victory through escalation — Mob wins through emotional resolution, not power escalation",
+      "loreSubtitle": "Cross-Universe Meta Narrative",
+      "systemSubtitle": "Author Commentary Embedded in World"
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "Why is Mob more powerful at 0% ego than any other esper at maximum ego?",
+      "answer": "Because every other esper's power is a function of ego investment — their ceiling is determined by how much self-image they can project. Mob's power is intrinsic and only fully accessible when he completely stops trying to project a self-image.",
+      "tabIndex": 0
+    },
+    {
+      "question": "What makes Dimple's god form vulnerable to Reigen?",
+      "answer": "Dimple's power was belief-dependent, not intrinsic. Reigen disrupted the belief network by publicly humiliating the cult and exposing Dimple as a fraud — removing the followers' faith removed Dimple's power source.",
+      "tabIndex": 1
+    },
+    {
+      "question": "How does Claw's esper organization model work?",
+      "answer": "Claw recruits and militarizes espers, treating psychic power as a corporate resource. Their fundamental flaw is applying a dominance/control model to a capability that requires emotional honesty to reach its ceiling.",
+      "tabIndex": 2
+    },
+    {
+      "question": "What is the relationship between trauma and psychic power in this universe?",
+      "answer": "Trauma creates psychic vulnerability — espers who develop powers through emotional damage have exploitable psychological weaknesses. But trauma that is resolved can also be a source of strength, as shown by Mob's emotional growth.",
+      "tabIndex": 0
+    }
+  ],
+  "hero": {
+    "systemType": "relational",
+    "microHook": "100% power requires 0% ego.",
+    "thesis": "Emotional honesty is the ultimate power source — genuine connection beats ego.",
+    "primarySystemType": "entity_db"
+  }
+}
