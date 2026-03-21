@@ -1,10 +1,11 @@
 {
   "anime": "Bleach",
+  "id": "bleach",
   "tagline": "A spiritual pressure hierarchy where reiatsu tier overrides all technique matchups — and the king always wins.",
   "malId": 269,
   "visualizationHint": "counter-tree",
   "visualizationReason": "Bleach's combat system is a strict reiatsu dominance tree: superior spiritual pressure invalidates all lower-level abilities regardless of type matchup. The counter-tree maps how reiatsu tiers override technique-specific counters.",
-  "animeImageUrl": "https://myanimelist.net/images/anime/1541/147774l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1541/147774.jpg",
   "headerFlavor": {
     "loreQuote": "If you're going to be the light, you'd better not get burned.",
     "sysWarning": "// [SYS_OP]: REIATSU DETECTION ACTIVE — SPIRITUAL PRESSURE HIERARCHY ENFORCED",
@@ -24,60 +25,246 @@
   "stats": {
     "characters": 8,
     "powerSystem": 3,
-    "rules": 2
+    "rules": 3
   },
   "hero": {
     "systemType": "counterplay",
     "microHook": "Your blade reflects your soul — know yourself to know your power.",
-    "thesis": "Bleach is a reiatsu-dictated combat economy: spiritual pressure hierarchy overrides all technique counters, and only by transcending the reiatsu ceiling can one challenge the system itself.",
-    "primarySystemType": "power_system"
+    "thesis": "Bleach is a reiatsu-dictated combat economy: spiritual pressure hierarchy overrides all technique counters, and only transcending the cei...",
+    "primarySystemType": "power_engine"
+  },
+  "aiInsights": {
+    "casual": "Bleach is a spiritual pressure hierarchy — if your reiatsu is higher, you win. Simple rules, complex execution.",
+    "deep": "Bleach's combat system is a strict reiatsu dominance tree: spiritual pressure hierarchy overrides all technique counters, and only by transcending the ceiling can one challenge the Soul King."
   },
   "powerSystem": [
     {
-      "name": "Zanpakuto",
-      "subtitle": "Soul-Split Blade System",
-      "loreDesc": "Each Shinigami's sword has a unique name and personality that defines their combat style — bankai unlocks maximum output.",
-      "systemDesc": "A sealed-capability system: base state is restricted, bankai is the full power unlock, requiring soul-knowledge to activate.",
-      "icon": "Sword",
+      "name": "Primary Power",
+      "subtitle": "Main Ability System",
+      "loreDesc": "The main ability system of Bleach.",
+      "systemDesc": "Core mechanic that defines the power landscape.",
+      "icon": "Star",
       "color": "blue-400",
-      "signatureMoment": "Ichigo's first Getsuga Tenshou.",
-      "loreSubtitle": "Soul Blade",
-      "systemSubtitle": "Sealed Capability"
+      "signatureMoment": "First appearance of the power system.",
+      "loreSubtitle": "Main System",
+      "systemSubtitle": "Core Mechanic"
     },
     {
-      "name": "Hollowfication",
-      "subtitle": "Soul Corruption Power-Up",
-      "loreDesc": "Shinigami who merge with Hollow powers gain enhanced abilities but risk losing their humanity.",
-      "systemDesc": "A dual-state capability: corruption risk traded for power amplification, with Vizard representing stable hybrid nodes.",
-      "icon": "Moon",
+      "name": "Advanced Technique",
+      "subtitle": "High-Level Application",
+      "loreDesc": "Advanced applications of the core system.",
+      "systemDesc": "Elevated capability tier within the system.",
+      "icon": "Zap",
       "color": "purple-400",
-      "signatureMoment": "Ichigo's Hollow mask first appearing against Ulquiorra.",
-      "loreSubtitle": "Soul Corruption",
-      "systemSubtitle": "Dual Capability"
+      "signatureMoment": "First advanced technique shown.",
+      "loreSubtitle": "Advanced Tier",
+      "systemSubtitle": "High-Level Application"
     },
     {
-      "name": "Bankai",
-      "subtitle": "Maximum Blade Release",
-      "loreDesc": "The maximum output state of a Zanpakuto — using it drains significant spiritual energy and leaves the user vulnerable.",
-      "systemDesc": "A high-cost ultimate: maximum combat capability at the cost of sustained energy reserves.",
-      "loreSubtitle": "Full Release",
-      "systemSubtitle": "High-Cost Ultimate"
+      "name": "Ultimate Form",
+      "subtitle": "Maximum Output State",
+      "loreDesc": "The peak of the power system.",
+      "systemDesc": "Ceiling-capability state.",
+      "icon": "Crown",
+      "color": "orange-400",
+      "signatureMoment": "Ultimate form awakened.",
+      "loreSubtitle": "Apex State",
+      "systemSubtitle": "Peak Capability"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Kurosaki, Ichigo",
+      "title": "Main Character",
+      "rank": "Rank 1",
+      "dangerLevel": 10,
+      "loreBio": "Kurosaki, Ichigo is a Main character in Bleach.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-900",
+      "accentColor": "slate-400",
+      "icon": "Sword",
+      "signatureMoment": "Kurosaki, Ichigo's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/512788.jpg?s=55ff462576b32a74758448436f35dcbb",
+      "_fetchFailed": false,
+      "primaryAbility": "Kurosaki, Ichigo's signature technique."
+    },
+    {
+      "name": "Urahara, Kisuke",
+      "title": "Supporting Character",
+      "rank": "Rank 2",
+      "dangerLevel": 9,
+      "loreBio": "Urahara, Kisuke is a Supporting character in Bleach.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-900",
+      "accentColor": "gray-400",
+      "icon": "Star",
+      "signatureMoment": "Urahara, Kisuke's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/149491.jpg?s=0f14e8fbbf14dde646817cb8552e8908",
+      "_fetchFailed": false,
+      "primaryAbility": "Urahara, Kisuke's signature technique."
+    },
+    {
+      "name": "Zaraki, Kenpachi",
+      "title": "Supporting Character",
+      "rank": "Rank 3",
+      "dangerLevel": 8,
+      "loreBio": "Zaraki, Kenpachi is a Supporting character in Bleach.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "zinc-900",
+      "accentColor": "zinc-400",
+      "icon": "Star",
+      "signatureMoment": "Zaraki, Kenpachi's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/150265.jpg?s=a7bda35cc8518a68480cd334baa5e12a",
+      "_fetchFailed": false,
+      "primaryAbility": "Zaraki, Kenpachi's signature technique."
+    },
+    {
+      "name": "Aizen, Sousuke",
+      "title": "Supporting Character",
+      "rank": "Rank 4",
+      "dangerLevel": 7,
+      "loreBio": "Aizen, Sousuke is a Supporting character in Bleach.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "neutral-900",
+      "accentColor": "neutral-400",
+      "icon": "Star",
+      "signatureMoment": "Aizen, Sousuke's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/73909.jpg?s=1a450d31fd432b46314048dbb3915fc4",
+      "_fetchFailed": false,
+      "primaryAbility": "Aizen, Sousuke's signature technique."
+    },
+    {
+      "name": "Kuchiki, Rukia",
+      "title": "Main Character",
+      "rank": "Rank 5",
+      "dangerLevel": 6,
+      "loreBio": "Kuchiki, Rukia is a Main character in Bleach.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Star",
+      "signatureMoment": "Kuchiki, Rukia's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/78215.jpg?s=2a0f7f516f3e5b213833e9f9a9de4a51",
+      "_fetchFailed": false,
+      "primaryAbility": "Kuchiki, Rukia's signature technique."
+    },
+    {
+      "name": "Cifer, Ulquiorra",
+      "title": "Supporting Character",
+      "rank": "Rank 6",
+      "dangerLevel": 5,
+      "loreBio": "Cifer, Ulquiorra is a Supporting character in Bleach.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Star",
+      "signatureMoment": "Cifer, Ulquiorra's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/529323.jpg?s=701d2f9aa034abda278ca33c96b54030",
+      "_fetchFailed": false,
+      "primaryAbility": "Cifer, Ulquiorra's signature technique."
+    },
+    {
+      "name": "Hitsugaya, Toushirou",
+      "title": "Supporting Character",
+      "rank": "Rank 7",
+      "dangerLevel": 4,
+      "loreBio": "Hitsugaya, Toushirou is a Supporting character in Bleach.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Star",
+      "signatureMoment": "Hitsugaya, Toushirou's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/36579.jpg?s=fec37a5d08dbe1f8e806d3f9ce9d7f4f",
+      "_fetchFailed": false,
+      "primaryAbility": "Hitsugaya, Toushirou's signature technique."
+    },
+    {
+      "name": "Kuchiki, Byakuya",
+      "title": "Supporting Character",
+      "rank": "Rank 8",
+      "dangerLevel": 4,
+      "loreBio": "Kuchiki, Byakuya is a Supporting character in Bleach.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Sword",
+      "signatureMoment": "Kuchiki, Byakuya's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/100098.jpg?s=c184bfa12ef0b29cc48d31e986d011ad",
+      "_fetchFailed": false,
+      "primaryAbility": "Kuchiki, Byakuya's signature technique."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Bleach Protagonists",
+      "loreDesc": "The main group driving the narrative.",
+      "systemDesc": "Primary institutional node.",
+      "icon": "Star",
+      "color": "blue-400"
+    },
+    {
+      "name": "Bleach Antagonists",
+      "loreDesc": "Opposition forces.",
+      "systemDesc": "Counter-institutional node.",
+      "icon": "Shield",
+      "color": "red-400"
+    },
+    {
+      "name": "Neutral Parties",
+      "loreDesc": "Independent actors with their own agendas.",
+      "systemDesc": "Wildcard nodes in the system graph.",
+      "icon": "Globe",
+      "color": "gray-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Core System Rule",
+      "loreConsequence": "The Bleach system enforces specific constraints on how power operates.",
+      "systemEquivalent": "A fundamental constraint on capability expression.",
+      "severity": "high",
+      "loreSubtitle": "System Constraint",
+      "systemSubtitle": "Capability Limit"
+    },
+    {
+      "name": "Cost Mechanism",
+      "loreConsequence": "Using power carries a specific cost that limits casual deployment.",
+      "systemEquivalent": "Resource constraint on ability activation.",
+      "severity": "medium",
+      "loreSubtitle": "Resource Cost",
+      "systemSubtitle": "Deployment Limit"
+    },
+    {
+      "name": "Hierarchy Structure",
+      "loreConsequence": "Power determines social and combat position within the system.",
+      "systemEquivalent": "Tier-based dominance ordering.",
+      "severity": "high",
+      "loreSubtitle": "Power Hierarchy",
+      "systemSubtitle": "Dominance Ordering"
     }
   ],
   "rankings": {
     "systemName": "Bleach Power Hierarchy",
-    "topTierName": "Apex",
-    "topTierLore": "The supreme capability tier in Bleach.",
-    "topTierSystem": "Maximum capability across all measured dimensions.",
+    "topTierName": "Apex Tier",
+    "topTierLore": "The highest capability tier in the system.",
+    "topTierSystem": "Maximum power output and influence.",
     "tiers": [
       {
         "name": "A-Tier",
-        "loreDesc": "Exceptional capability holders with system-shaping influence.",
-        "systemDesc": "Top-tier combat/economic nodes."
+        "loreDesc": "Exceptional operators with system-shaping influence.",
+        "systemDesc": "Top-tier capability nodes."
       },
       {
         "name": "B-Tier",
-        "loreDesc": "Competent operators with meaningful impact potential.",
+        "loreDesc": "Competent operators with meaningful impact.",
         "systemDesc": "Mid-tier capability nodes."
       },
       {
@@ -87,181 +274,103 @@
       }
     ]
   },
-  "factions": [
-    {
-      "name": "Bleach Universe",
-      "loreDesc": "The primary world of the story.",
-      "systemDesc": "Central narrative environment.",
-      "icon": "Globe",
-      "color": "blue-400"
-    }
-  ],
-  "rules": [
-    {
-      "name": "Reiatsu Dictates Combat Outcomes",
-      "loreDesc": "In Bleach, superior Reiatsu effectively invalidates lower-level abilities — if your spiritual pressure is high enough, enemy attacks simply bounce off you.",
-      "systemDesc": "A tier-skipping dominance rule: capability ceiling determines matchups more than specific ability matchups.",
-      "loreSubtitle": "Spiritual Pressure Dominance",
-      "systemSubtitle": "Tier Override"
-    },
-    {
-      "name": "Bankai Cannot Be Used Casually",
-      "loreDesc": "Bankai is the maximum output state of a Zanpakuto — using it drains significant spiritual energy and leaves the user vulnerable.",
-      "systemDesc": "A resource constraint on ultimate abilities: high-risk deployment limits strategic options.",
-      "loreSubtitle": "Energy Drain",
-      "systemSubtitle": "Resource Constraint"
-    }
-  ],
-  "characters": [
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Bleach.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    }
-  ],
   "relationships": [
     {
-      "source": "Unknown",
-      "target": "Unknown",
+      "source": "Kurosaki, Ichigo",
+      "target": "Urahara, Kisuke",
+      "type": "rival",
+      "loreDesc": "Kurosaki, Ichigo and Urahara, Kisuke have a central rivalry in Bleach.",
+      "systemDesc": "Primary competitive edge in the system graph.",
+      "weight": 9,
+      "systemEdgeType": "rivalry"
+    },
+    {
+      "source": "Kurosaki, Ichigo",
+      "target": "Zaraki, Kenpachi",
       "type": "ally",
-      "loreDesc": "Primary cooperative relationship.",
-      "systemDesc": "Core alliance network."
+      "loreDesc": "Kurosaki, Ichigo forms a core alliance with Zaraki, Kenpachi.",
+      "systemDesc": "Cooperative network link.",
+      "weight": 8,
+      "systemEdgeType": "alliance"
+    },
+    {
+      "source": "Urahara, Kisuke",
+      "target": "Zaraki, Kenpachi",
+      "type": "counter",
+      "loreDesc": "Competing interests drive the central conflict.",
+      "systemDesc": "Counter-relationship in the system graph.",
+      "weight": 7,
+      "systemEdgeType": "counter"
     }
   ],
   "counterplay": [
     {
-      "id": "BL-cp-1",
-      "attacker": "Zanpakuto",
-      "defender": "Standard Opponents",
-      "mechanic": "Zanpakuto dominates standard opponents through sealed capability.",
-      "loreDesc": "Zanpakuto proves superior against standard threats.",
-      "systemDesc": "A sealed-capability system: base state is restricted, bankai is the full power unlock, requiring soul-knowledge to activate.",
-      "loreSubtitle": "Soul Blade",
-      "systemSubtitle": "Sealed Capability"
+      "id": "BL-cp1",
+      "attacker": "Kurosaki, Ichigo",
+      "defender": "Urahara, Kisuke",
+      "mechanic": "Primary combat matchup in the system.",
+      "loreDesc": "Kurosaki, Ichigo vs Urahara, Kisuke defines the central conflict.",
+      "systemDesc": "Top-tier capability matchup.",
+      "loreSubtitle": "Primary Matchup",
+      "systemSubtitle": "Core Dynamic"
     }
   ],
   "causalEvents": [
     {
       "id": "BL-ce1",
       "name": "Story Begins",
-      "trigger": "The inciting incident that sets the narrative in motion.",
-      "consequence": "Protagonist is forced to engage with the system.",
-      "timelinePosition": "Series start",
-      "loreDesc": "The initial condition that creates the narrative premise.",
-      "systemDesc": "A critical-path activation event.",
+      "trigger": "Kurosaki, Ichigo is drawn into the system.",
+      "consequence": "Forced to navigate the world rules.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The inciting incident sets everything in motion.",
+      "systemDesc": "Critical-path activation.",
       "loreSubtitle": "Inciting Incident",
       "systemSubtitle": "System Activation"
+    },
+    {
+      "id": "BL-ce2",
+      "name": "Conflict Emerges",
+      "trigger": "True nature of the system is revealed.",
+      "consequence": "Stakes escalate significantly.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Escalation forces adaptation.",
+      "systemDesc": "System stress-test.",
+      "loreSubtitle": "Rising Action",
+      "systemSubtitle": "Stress Test"
     }
   ],
   "anomalies": [
     {
-      "name": "Unique Capability",
-      "loreDesc": "The protagonist possesses a capability that transcends normal system rules.",
-      "systemDesc": "A system anomaly: Bleach is a reiatsu-dictated combat economy: spiri...",
-      "impact": "Creates asymmetric advantage against normal opponents.",
-      "ruleViolated": "Standard capability hierarchy",
-      "loreSubtitle": "System Anomaly",
-      "systemSubtitle": "Transcendence"
+      "name": "System Anomaly",
+      "ruleViolated": "Normal hierarchy rules",
+      "loreDesc": "Kurosaki, Ichigo is the anomaly that breaks the standard system rules.",
+      "systemDesc": "An outlier exploiting systemic vulnerabilities.",
+      "impact": "Creates asymmetric advantage.",
+      "loreSubtitle": "Rule Breaker",
+      "systemSubtitle": "Anomaly"
     }
   ],
   "systemQuestions": [
     {
-      "question": "What makes Bleach's system unique?",
+      "question": "How does the power system in Bleach work?",
       "answer": "A spiritual pressure hierarchy where reiatsu tier overrides all technique matchups — and the king always wins.",
       "tabIndex": 0
+    },
+    {
+      "question": "What makes Bleach's world unique?",
+      "answer": "Bleach's combat system is a strict reiatsu dominance tree: superior spiritual pressure invalidates all lower-level abilities regardless of type matchup. The counter-tree maps how reiatsu tiers overrid",
+      "tabIndex": 0
+    },
+    {
+      "question": "Who are the key players?",
+      "answer": "Kurosaki, Ichigo, Urahara, Kisuke, Zaraki, Kenpachi, Aizen, Sousuke",
+      "tabIndex": 1
+    },
+    {
+      "question": "What are the core rules?",
+      "answer": "Rules govern how abilities interact and who holds power.",
+      "tabIndex": 3
     }
   ],
-  "gradientTo": "blue-900",
-  "id": "bleach"
+  "gradientTo": "blue-900"
 }

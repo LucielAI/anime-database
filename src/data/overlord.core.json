@@ -414,38 +414,15 @@
     }
   ],
   "systemQuestions": [
-    {
-      "question": "Why does Ainz keep making decisions that appear evil to humans?",
-      "answer": "Because Ainz prioritizes Nazarick's interests above all else, and Nazarick's NPCs are programmed with zero empathy for outsiders — every decision that benefits Nazarick looks evil from a human perspective.",
-      "tabIndex": 0
-    },
-    {
-      "question": "What would happen if other guild members appeared in the new world?",
-      "answer": "Ainz would likely face a governance crisis — the NPCs' absolute loyalty is to the guild as a whole, not specifically to Ainz. Other members would have equal claim to Nazarick's command structure.",
-      "tabIndex": 1
-    },
-    {
-      "question": "Why does Demiurge's plans always appear evil?",
-      "answer": "Demiurge is optimizing for Ainz's interests with perfect loyalty, but his strategic planning operates at a level that Ainz can't fully audit — what looks like evil is actually sophisticated strategic thinking.",
-      "tabIndex": 2
-    },
-    {
-      "question": "What is the relationship between Ainz and the Pleiades?",
-      "answer": "The Pleiades are a combat squadron of high-level NPCs who serve as both a military unit and emergency backup — they include CZ-Bestyle, who was specifically programmed with the ability to potentially threaten Ainz as a last resort.",
-      "tabIndex": 0
-    }
+    { "question": "Why does Ainz keep making decisions that appear evil to humans?", "answer": "Because Ainz prioritizes Nazarick's interests above all else, and Nazarick's NPCs are programmed with zero empathy for outsiders — every decision that benefits Nazarick looks evil from a human perspective.", "tabIndex": 0 },
+    { "question": "What would happen if other guild members appeared in the new world?", "answer": "Ainz would likely face a governance crisis — the NPCs' absolute loyalty is to the guild as a whole, not specifically to Ainz. Other members would have equal claim to Nazarick's command structure.", "tabIndex": 1 },
+    { "question": "Why does Demiurge's plans always appear evil?", "answer": "Demiurge is optimizing for Ainz's interests with perfect loyalty, but his strategic planning operates at a level that Ainz can't fully audit — what looks like evil is actually sophisticated strategic thinking.", "tabIndex": 2 },
+    { "question": "What is the relationship between Ainz and the Pleiades?", "answer": "The Pleiades are a combat squadron of high-level NPCs who serve as both a military unit and emergency backup — they include CZ-Bestyle, who was specifically programmed with the ability to potentially threaten Ainz as a last resort.", "tabIndex": 0 }
   ],
   "hero": {
     "systemType": "relational",
     "microHook": "I'm not a good ruler. But I'm the only one Nazarick has.",
     "thesis": "Ainz is the last member of a dead guild, ruling perfect subordinates who love a god he can't fully be — his leadership is loneliness disguised as omnipotence.",
     "primarySystemType": "entity_db"
-  },
-  "id": "overlord",
-  "gradientTo": "purple-900",
-  "stats": {
-    "characters": 7,
-    "powerSystem": 4,
-    "rules": 4
   }
 }

@@ -489,12 +489,5 @@
     "microHook": "Every death is a lesson. Every lesson has a cost.",
     "thesis": "Subaru dies repeatedly to protect those he loves — the most powerful ability is the willingness to keep trying.",
     "primarySystemType": "core_laws"
-  },
-  "id": "rezero",
-  "gradientTo": "blue-900",
-  "stats": {
-    "characters": 8,
-    "powerSystem": 4,
-    "rules": 4
   }
 }

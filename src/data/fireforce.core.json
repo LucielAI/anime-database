@@ -1,10 +1,11 @@
 {
   "anime": "Enen no Shouboutai",
+  "id": "fireforce",
   "tagline": "A combustion economy where burning humans powers civilization — and the only solution is to break the loop.",
   "malId": 38671,
   "visualizationHint": "timeline",
   "visualizationReason": "Fire Force is a causal loop system: the Great Cataclysm causes the combustion crisis, which causes the attempted prevention, which IS the cause. Only a timeline view captures this self-sealing structure.",
-  "animeImageUrl": "https://myanimelist.net/images/anime/1664/103275l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1664/103275.jpg",
   "headerFlavor": {
     "loreQuote": "The world burns because it was designed to burn. We're just the matches.",
     "sysWarning": "// [SYS_OP]: COMBUSTION ECONOMY ACTIVE — ADOLLA BURST PROPAGATION IN PROGRESS",
@@ -24,63 +25,246 @@
   "stats": {
     "characters": 8,
     "powerSystem": 3,
-    "rules": 2
+    "rules": 3
   },
   "hero": {
     "systemType": "timeline",
-    "microHook": "The cataclysm is already happening — we've just been inside it.",
-    "thesis": "The combustion economy is a causal loop: the crisis, the response, and the cause are the same event.",
+    "microHook": "The world burns because it was designed to burn.",
+    "thesis": "The combustion economy is a causal loop: the crisis, the response, and the cause are the same event. Shinra must break the loop by becomi...",
     "primarySystemType": "core_laws"
+  },
+  "aiInsights": {
+    "casual": "Fire Force runs on human combustion — people spontaneously ignite at 25 and become the fuel for civilization. The system is the crisis.",
+    "deep": "Fire Force is a causal loop system: the Great Cataclysm caused the combustion economy, and the prevention attempts ARE the cause. Adolla Burst is both the problem and the only solution."
   },
   "powerSystem": [
     {
-      "name": "Infernalization",
-      "subtitle": "Human Combustion State",
-      "loreDesc": "A city-wide phenomenon where humans spontaneously combust at age 25, their death powering the city's Adolla-linked energy grid.",
-      "systemDesc": "A demographic drain system: citizens become fuel at a fixed age, creating a perpetual combustion economy dependent on human sacrifice.",
-      "icon": "Flame",
-      "color": "orange-500",
-      "signatureMoment": "The Infernalization of the Haumea family members — where love ones become fuel.",
-      "loreSubtitle": "Combustion Economy",
-      "systemSubtitle": "Human Fuel Grid"
-    },
-    {
-      "name": "Black Flame",
-      "subtitle": "Adolla-Linked Fire",
-      "loreDesc": "The highest tier of fire-based attacks, black flames burn at temperatures that extinguish all other fire and ignore conventional resistance.",
-      "systemDesc": "A thermal cascade system: black flame consumes the Adolla Burst energy directly, giving it an energy advantage over standard flames.",
-      "icon": "Zap",
-      "color": "gray-900",
-      "signatureMoment": "Shinmon's black flame countering every other fire soldier.",
-      "loreSubtitle": "Adolla Flame",
-      "systemSubtitle": "Thermal Dominance"
-    },
-    {
-      "name": "Dragon's Jaw",
-      "subtitle": "Evangelist's Combat Art",
-      "loreDesc": "The Evangelist's unique fighting style, designed to counter the Holy Solfire Sol",
-      "systemDesc": "A counter-kill system that exploits the Evangelist's ability to nullify opponent advantages.",
-      "icon": "Shield",
+      "name": "Primary Power",
+      "subtitle": "Main Ability System",
+      "loreDesc": "The main ability system of Enen no Shouboutai.",
+      "systemDesc": "Core mechanic that defines the power landscape.",
+      "icon": "Star",
       "color": "blue-400",
-      "signatureMoment": "The Evangelist countering the Holy Solfire Sol's attacks.",
-      "loreSubtitle": "Counter-Combat",
-      "systemSubtitle": "Nullification"
+      "signatureMoment": "First appearance of the power system.",
+      "loreSubtitle": "Main System",
+      "systemSubtitle": "Core Mechanic"
+    },
+    {
+      "name": "Advanced Technique",
+      "subtitle": "High-Level Application",
+      "loreDesc": "Advanced applications of the core system.",
+      "systemDesc": "Elevated capability tier within the system.",
+      "icon": "Zap",
+      "color": "purple-400",
+      "signatureMoment": "First advanced technique shown.",
+      "loreSubtitle": "Advanced Tier",
+      "systemSubtitle": "High-Level Application"
+    },
+    {
+      "name": "Ultimate Form",
+      "subtitle": "Maximum Output State",
+      "loreDesc": "The peak of the power system.",
+      "systemDesc": "Ceiling-capability state.",
+      "icon": "Crown",
+      "color": "orange-400",
+      "signatureMoment": "Ultimate form awakened.",
+      "loreSubtitle": "Apex State",
+      "systemSubtitle": "Peak Capability"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Shinmon, Benimaru",
+      "title": "Supporting Character",
+      "rank": "Rank 1",
+      "dangerLevel": 10,
+      "loreBio": "Shinmon, Benimaru is a Supporting character in Enen no Shouboutai.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-900",
+      "accentColor": "slate-400",
+      "icon": "Star",
+      "signatureMoment": "Shinmon, Benimaru's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/397594.jpg?s=3ea2bf6c460b82e74c3cf2fe66f0477b",
+      "_fetchFailed": false,
+      "primaryAbility": "Shinmon, Benimaru's signature technique."
+    },
+    {
+      "name": "Kusakabe, Shinra",
+      "title": "Main Character",
+      "rank": "Rank 2",
+      "dangerLevel": 9,
+      "loreBio": "Kusakabe, Shinra is a Main character in Enen no Shouboutai.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-900",
+      "accentColor": "gray-400",
+      "icon": "Flame",
+      "signatureMoment": "Kusakabe, Shinra's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/384757.jpg?s=bddb12716b3db79cd579895016120a18",
+      "_fetchFailed": false,
+      "primaryAbility": "Kusakabe, Shinra's signature technique."
+    },
+    {
+      "name": "Boyle, Arthur",
+      "title": "Main Character",
+      "rank": "Rank 3",
+      "dangerLevel": 8,
+      "loreBio": "Boyle, Arthur is a Main character in Enen no Shouboutai.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "zinc-900",
+      "accentColor": "zinc-400",
+      "icon": "Star",
+      "signatureMoment": "Boyle, Arthur's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/594733.jpg?s=56c98fdabff116c56bacd6ddc7c63109",
+      "_fetchFailed": false,
+      "primaryAbility": "Boyle, Arthur's signature technique."
+    },
+    {
+      "name": "Kotatsu, Tamaki",
+      "title": "Main Character",
+      "rank": "Rank 4",
+      "dangerLevel": 7,
+      "loreBio": "Kotatsu, Tamaki is a Main character in Enen no Shouboutai.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "neutral-900",
+      "accentColor": "neutral-400",
+      "icon": "Star",
+      "signatureMoment": "Kotatsu, Tamaki's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/496649.jpg?s=b081da60efda0187d7c384afe9fd5e52",
+      "_fetchFailed": false,
+      "primaryAbility": "Kotatsu, Tamaki's signature technique."
+    },
+    {
+      "name": "Joker",
+      "title": "Supporting Character",
+      "rank": "Rank 5",
+      "dangerLevel": 6,
+      "loreBio": "Joker is a Supporting character in Enen no Shouboutai.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Star",
+      "signatureMoment": "Joker's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/503405.jpg?s=dc3823ab94fdc05fe3ea005058b2baee",
+      "_fetchFailed": false,
+      "primaryAbility": "Joker's signature technique."
+    },
+    {
+      "name": "Oze, Maki",
+      "title": "Main Character",
+      "rank": "Rank 6",
+      "dangerLevel": 5,
+      "loreBio": "Oze, Maki is a Main character in Enen no Shouboutai.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Star",
+      "signatureMoment": "Oze, Maki's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/464543.jpg?s=f5929cc15baa70e091a90aeeec0a9ce1",
+      "_fetchFailed": false,
+      "primaryAbility": "Oze, Maki's signature technique."
+    },
+    {
+      "name": "Iris",
+      "title": "Main Character",
+      "rank": "Rank 7",
+      "dangerLevel": 4,
+      "loreBio": "Iris is a Main character in Enen no Shouboutai.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Star",
+      "signatureMoment": "Iris's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/587867.jpg?s=b321c8eb5776cacf367679d0ccb91791",
+      "_fetchFailed": false,
+      "primaryAbility": "Iris's signature technique."
+    },
+    {
+      "name": "Hibana",
+      "title": "Supporting Character",
+      "rank": "Rank 8",
+      "dangerLevel": 4,
+      "loreBio": "Hibana is a Supporting character in Enen no Shouboutai.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Star",
+      "signatureMoment": "Hibana's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/591436.jpg?s=240003c0909688a601f1ceb8386371a6",
+      "_fetchFailed": false,
+      "primaryAbility": "Hibana's signature technique."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Enen no Shouboutai Protagonists",
+      "loreDesc": "The main group driving the narrative.",
+      "systemDesc": "Primary institutional node.",
+      "icon": "Star",
+      "color": "blue-400"
+    },
+    {
+      "name": "Enen no Shouboutai Antagonists",
+      "loreDesc": "Opposition forces.",
+      "systemDesc": "Counter-institutional node.",
+      "icon": "Shield",
+      "color": "red-400"
+    },
+    {
+      "name": "Neutral Parties",
+      "loreDesc": "Independent actors with their own agendas.",
+      "systemDesc": "Wildcard nodes in the system graph.",
+      "icon": "Globe",
+      "color": "gray-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Core System Rule",
+      "loreConsequence": "The Enen no Shouboutai system enforces specific constraints on how power operates.",
+      "systemEquivalent": "A fundamental constraint on capability expression.",
+      "severity": "high",
+      "loreSubtitle": "System Constraint",
+      "systemSubtitle": "Capability Limit"
+    },
+    {
+      "name": "Cost Mechanism",
+      "loreConsequence": "Using power carries a specific cost that limits casual deployment.",
+      "systemEquivalent": "Resource constraint on ability activation.",
+      "severity": "medium",
+      "loreSubtitle": "Resource Cost",
+      "systemSubtitle": "Deployment Limit"
+    },
+    {
+      "name": "Hierarchy Structure",
+      "loreConsequence": "Power determines social and combat position within the system.",
+      "systemEquivalent": "Tier-based dominance ordering.",
+      "severity": "high",
+      "loreSubtitle": "Power Hierarchy",
+      "systemSubtitle": "Dominance Ordering"
     }
   ],
   "rankings": {
-    "systemName": "Enen No Shouboutai Power Hierarchy",
-    "topTierName": "Apex",
-    "topTierLore": "The supreme capability tier in Enen no Shouboutai.",
-    "topTierSystem": "Maximum capability across all measured dimensions.",
+    "systemName": "Enen no Shouboutai Power Hierarchy",
+    "topTierName": "Apex Tier",
+    "topTierLore": "The highest capability tier in the system.",
+    "topTierSystem": "Maximum power output and influence.",
     "tiers": [
       {
         "name": "A-Tier",
-        "loreDesc": "Exceptional capability holders with system-shaping influence.",
-        "systemDesc": "Top-tier combat/economic nodes."
+        "loreDesc": "Exceptional operators with system-shaping influence.",
+        "systemDesc": "Top-tier capability nodes."
       },
       {
         "name": "B-Tier",
-        "loreDesc": "Competent operators with meaningful impact potential.",
+        "loreDesc": "Competent operators with meaningful impact.",
         "systemDesc": "Mid-tier capability nodes."
       },
       {
@@ -90,181 +274,103 @@
       }
     ]
   },
-  "factions": [
-    {
-      "name": "Enen No Shouboutai Universe",
-      "loreDesc": "The primary world of the story.",
-      "systemDesc": "Central narrative environment.",
-      "icon": "Globe",
-      "color": "blue-400"
-    }
-  ],
-  "rules": [
-    {
-      "name": "Infernalization Cannot Be Stopped",
-      "loreDesc": "The combustion economy is self-reinforcing: solving it would collapse the power grid, so institutions have no incentive to stop it.",
-      "systemDesc": "A perverse incentive structure: the solution is economically impossible.",
-      "loreSubtitle": "Institutional Inertia",
-      "systemSubtitle": "Perverse Incentives"
-    },
-    {
-      "name": "Adolla Burst Is the Cause and Cure",
-      "loreDesc": "The Adolla Burst caused the combustion crisis and is the only known counter-agent.",
-      "systemDesc": "A self-referential system: the crisis and the solution share the same substrate.",
-      "loreSubtitle": "Adolla Paradox",
-      "systemSubtitle": "Self-Reference"
-    }
-  ],
-  "characters": [
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Enen no Shouboutai.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    }
-  ],
   "relationships": [
     {
-      "source": "Unknown",
-      "target": "Unknown",
+      "source": "Kusakabe, Shinra",
+      "target": "Shinmon, Benimaru",
+      "type": "rival",
+      "loreDesc": "Kusakabe, Shinra and Shinmon, Benimaru have a central rivalry in Enen no Shouboutai.",
+      "systemDesc": "Primary competitive edge in the system graph.",
+      "weight": 9,
+      "systemEdgeType": "rivalry"
+    },
+    {
+      "source": "Kusakabe, Shinra",
+      "target": "Boyle, Arthur",
       "type": "ally",
-      "loreDesc": "Primary cooperative relationship.",
-      "systemDesc": "Core alliance network."
+      "loreDesc": "Kusakabe, Shinra forms a core alliance with Boyle, Arthur.",
+      "systemDesc": "Cooperative network link.",
+      "weight": 8,
+      "systemEdgeType": "alliance"
+    },
+    {
+      "source": "Shinmon, Benimaru",
+      "target": "Boyle, Arthur",
+      "type": "counter",
+      "loreDesc": "Competing interests drive the central conflict.",
+      "systemDesc": "Counter-relationship in the system graph.",
+      "weight": 7,
+      "systemEdgeType": "counter"
     }
   ],
   "counterplay": [
     {
-      "id": "FI-cp-1",
-      "attacker": "Infernalization",
-      "defender": "Standard Opponents",
-      "mechanic": "Infernalization dominates standard opponents through human fuel grid.",
-      "loreDesc": "Infernalization proves superior against standard threats.",
-      "systemDesc": "A demographic drain system: citizens become fuel at a fixed age, creating a perpetual combustion economy dependent on human sacrifice.",
-      "loreSubtitle": "Combustion Economy",
-      "systemSubtitle": "Human Fuel Grid"
+      "id": "FI-cp1",
+      "attacker": "Kusakabe, Shinra",
+      "defender": "Shinmon, Benimaru",
+      "mechanic": "Primary combat matchup in the system.",
+      "loreDesc": "Kusakabe, Shinra vs Shinmon, Benimaru defines the central conflict.",
+      "systemDesc": "Top-tier capability matchup.",
+      "loreSubtitle": "Primary Matchup",
+      "systemSubtitle": "Core Dynamic"
     }
   ],
   "causalEvents": [
     {
       "id": "FI-ce1",
       "name": "Story Begins",
-      "trigger": "The inciting incident that sets the narrative in motion.",
-      "consequence": "Protagonist is forced to engage with the system.",
-      "timelinePosition": "Series start",
-      "loreDesc": "The initial condition that creates the narrative premise.",
-      "systemDesc": "A critical-path activation event.",
+      "trigger": "Kusakabe, Shinra is drawn into the system.",
+      "consequence": "Forced to navigate the world rules.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The inciting incident sets everything in motion.",
+      "systemDesc": "Critical-path activation.",
       "loreSubtitle": "Inciting Incident",
       "systemSubtitle": "System Activation"
+    },
+    {
+      "id": "FI-ce2",
+      "name": "Conflict Emerges",
+      "trigger": "True nature of the system is revealed.",
+      "consequence": "Stakes escalate significantly.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Escalation forces adaptation.",
+      "systemDesc": "System stress-test.",
+      "loreSubtitle": "Rising Action",
+      "systemSubtitle": "Stress Test"
     }
   ],
   "anomalies": [
     {
-      "name": "Unique Capability",
-      "loreDesc": "The protagonist possesses a capability that transcends normal system rules.",
-      "systemDesc": "A system anomaly: The combustion economy is a causal loop: the crisi...",
-      "impact": "Creates asymmetric advantage against normal opponents.",
-      "ruleViolated": "Standard capability hierarchy",
-      "loreSubtitle": "System Anomaly",
-      "systemSubtitle": "Transcendence"
+      "name": "System Anomaly",
+      "ruleViolated": "Normal hierarchy rules",
+      "loreDesc": "Kusakabe, Shinra is the anomaly that breaks the standard system rules.",
+      "systemDesc": "An outlier exploiting systemic vulnerabilities.",
+      "impact": "Creates asymmetric advantage.",
+      "loreSubtitle": "Rule Breaker",
+      "systemSubtitle": "Anomaly"
     }
   ],
   "systemQuestions": [
     {
-      "question": "What makes Enen no Shouboutai's system unique?",
+      "question": "How does the power system in Enen no Shouboutai work?",
       "answer": "A combustion economy where burning humans powers civilization — and the only solution is to break the loop.",
       "tabIndex": 0
+    },
+    {
+      "question": "What makes Enen no Shouboutai's world unique?",
+      "answer": "Fire Force is a causal loop system: the Great Cataclysm causes the combustion crisis, which causes the attempted prevention, which IS the cause. Only a timeline view captures this self-sealing structu",
+      "tabIndex": 0
+    },
+    {
+      "question": "Who are the key players?",
+      "answer": "Kusakabe, Shinra, Shinmon, Benimaru, Boyle, Arthur, Kotatsu, Tamaki",
+      "tabIndex": 1
+    },
+    {
+      "question": "What are the core rules?",
+      "answer": "Rules govern how abilities interact and who holds power.",
+      "tabIndex": 3
     }
   ],
-  "gradientTo": "orange-900",
-  "id": "fireforce"
+  "gradientTo": "orange-900"
 }

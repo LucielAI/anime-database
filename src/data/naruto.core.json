@@ -524,12 +524,5 @@
     "microHook": "Every jutsu has a counter — find it first.",
     "thesis": "Broken people with impossible resources can still choose connection — Kurama is a bomb, but Naruto chooses Hokage.",
     "primarySystemType": "power_engine"
-  },
-  "id": "naruto",
-  "gradientTo": "orange-900",
-  "stats": {
-    "characters": 9,
-    "powerSystem": 4,
-    "rules": 4
   }
 }

@@ -1,10 +1,11 @@
 {
   "anime": "Kiseijuu: Sei no Kakuritsu",
-  "tagline": "A parasite-host symbiosis system where consciousness negotiation determines survival — and Gotou's economic efficiency outpaces violence.",
+  "id": "parasyte",
+  "tagline": "A parasite-host symbiosis system where consciousness negotiation determines survival — and Gotou outcompetes everyone.",
   "malId": 22535,
   "visualizationHint": "standard-cards",
-  "visualizationReason": "Parasyte's core conflict is not combat but biological optimization: parasites and humans compete for the same resource (survival) through different strategies, with Gotou's economic approach being the ultimate threat.",
-  "animeImageUrl": "https://myanimelist.net/images/anime/3/73178l.jpg",
+  "visualizationReason": "Parasyte's core conflict is not combat but biological optimization: parasites and humans compete for survival through different strategies, with Gotous economic approach being the ultimate threat.",
+  "animeImageUrl": "https://myanimelist.net/images/anime/3/73178.jpg",
   "headerFlavor": {
     "loreQuote": "I'm Migi. And you're mine now.",
     "sysWarning": "// [SYS_OP]: PARASYTE DETECTION ACTIVE — CONSCIOUSNESS NEGOTIATION IN PROGRESS",
@@ -23,53 +24,247 @@
   },
   "stats": {
     "characters": 8,
-    "powerSystem": 2,
-    "rules": 2
+    "powerSystem": 3,
+    "rules": 3
   },
   "hero": {
-    "systemType": "standard-cards",
+    "systemType": "general",
     "microHook": "Neither ally nor enemy — we simply share the same body.",
-    "thesis": "Parasyte's thesis is symbiosis vs. competition: Migi and Shinichi's cooperative relationship represents the only successful partial integration model, while Gotou's hive-mind represents the competitive optimum.",
-    "primarySystemType": "characters"
+    "thesis": "Parasyte presents symbiosis vs competition as the core political question: Migi-Shinichi cooperation outperforms both full-host-takeover ...",
+    "primarySystemType": "entity_db"
+  },
+  "aiInsights": {
+    "casual": "Parasyte is a parasite-host symbiosis system — Migi and Shinichi share a body, and their cooperation is the only stable model.",
+    "deep": "Parasyte's core conflict is biological optimization: parasites and humans compete for survival, Gotous economic efficiency outpaces violence, and the Migi-Shinichi symbiosis is the only stable partial-integration model."
   },
   "powerSystem": [
     {
-      "name": "Parasite Physiology",
-      "subtitle": "Body-Hijack Capable Organism",
-      "loreDesc": "Parasytes are alien parasites that take over the right hand of hosts, granting enhanced physical capabilities.",
-      "systemDesc": "A body-control system: the parasite replaces motor control of a specific body part, granting superhuman physical stats.",
-      "icon": "Bug",
-      "color": "purple-400",
-      "signatureMoment": "Migi first manifesting to save Shinichi from the Yakuza.",
-      "loreSubtitle": "Body Hijack",
-      "systemSubtitle": "Physical Enhancement"
+      "name": "Primary Power",
+      "subtitle": "Main Ability System",
+      "loreDesc": "The main ability system of Kiseijuu: Sei no Kakuritsu.",
+      "systemDesc": "Core mechanic that defines the power landscape.",
+      "icon": "Star",
+      "color": "blue-400",
+      "signatureMoment": "First appearance of the power system.",
+      "loreSubtitle": "Main System",
+      "systemSubtitle": "Core Mechanic"
     },
     {
-      "name": "Migi Combat",
-      "subtitle": "Parasite Combat Intelligence",
-      "loreDesc": "Migi can analyze and counter other parasites' biological attack patterns using his own parasite physiology.",
-      "systemDesc": "A pattern-recognition combat system: real-time analysis of opponent biology to exploit weaknesses.",
+      "name": "Advanced Technique",
+      "subtitle": "High-Level Application",
+      "loreDesc": "Advanced applications of the core system.",
+      "systemDesc": "Elevated capability tier within the system.",
+      "icon": "Zap",
+      "color": "purple-400",
+      "signatureMoment": "First advanced technique shown.",
+      "loreSubtitle": "Advanced Tier",
+      "systemSubtitle": "High-Level Application"
+    },
+    {
+      "name": "Ultimate Form",
+      "subtitle": "Maximum Output State",
+      "loreDesc": "The peak of the power system.",
+      "systemDesc": "Ceiling-capability state.",
+      "icon": "Crown",
+      "color": "orange-400",
+      "signatureMoment": "Ultimate form awakened.",
+      "loreSubtitle": "Apex State",
+      "systemSubtitle": "Peak Capability"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Izumi, Shinichi",
+      "title": "Main Character",
+      "rank": "Rank 1",
+      "dangerLevel": 10,
+      "loreBio": "Izumi, Shinichi is a Main character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-900",
+      "accentColor": "slate-400",
+      "icon": "Star",
+      "signatureMoment": "Izumi, Shinichi's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/269013.jpg?s=1f0f49f662bd4f462b9c9b5f953ce11e",
+      "_fetchFailed": false,
+      "primaryAbility": "Izumi, Shinichi's signature technique."
+    },
+    {
+      "name": "Migi",
+      "title": "Main Character",
+      "rank": "Rank 2",
+      "dangerLevel": 9,
+      "loreBio": "Migi is a Main character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-900",
+      "accentColor": "gray-400",
+      "icon": "Bug",
+      "signatureMoment": "Migi's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/348176.jpg?s=c378b81123b922b107c831c2c8b8db51",
+      "_fetchFailed": false,
+      "primaryAbility": "Migi's signature technique."
+    },
+    {
+      "name": "Tamiya, Ryouko",
+      "title": "Supporting Character",
+      "rank": "Rank 3",
+      "dangerLevel": 8,
+      "loreBio": "Tamiya, Ryouko is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "zinc-900",
+      "accentColor": "zinc-400",
+      "icon": "Star",
+      "signatureMoment": "Tamiya, Ryouko's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/263735.jpg?s=8cbd9b114308acb40f8e6f4009bea0d9",
+      "_fetchFailed": false,
+      "primaryAbility": "Tamiya, Ryouko's signature technique."
+    },
+    {
+      "name": "Kimishima, Kana",
+      "title": "Supporting Character",
+      "rank": "Rank 4",
+      "dangerLevel": 7,
+      "loreBio": "Kimishima, Kana is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "neutral-900",
+      "accentColor": "neutral-400",
+      "icon": "Star",
+      "signatureMoment": "Kimishima, Kana's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/270587.jpg?s=31423bf402448af63297c8d8e8737c80",
+      "_fetchFailed": false,
+      "primaryAbility": "Kimishima, Kana's signature technique."
+    },
+    {
+      "name": "Murano, Satomi",
+      "title": "Supporting Character",
+      "rank": "Rank 5",
+      "dangerLevel": 6,
+      "loreBio": "Murano, Satomi is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Star",
+      "signatureMoment": "Murano, Satomi's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/268977.jpg?s=a38ff4a415be79ea273b70d004f34c1d",
+      "_fetchFailed": false,
+      "primaryAbility": "Murano, Satomi's signature technique."
+    },
+    {
+      "name": "Joe",
+      "title": "Supporting Character",
+      "rank": "Rank 6",
+      "dangerLevel": 5,
+      "loreBio": "Joe is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Star",
+      "signatureMoment": "Joe's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/274939.jpg?s=dd3fd331b00bbdd79b2167ade5921c3c",
+      "_fetchFailed": false,
+      "primaryAbility": "Joe's signature technique."
+    },
+    {
+      "name": "Gotou",
+      "title": "Supporting Character",
+      "rank": "Rank 7",
+      "dangerLevel": 4,
+      "loreBio": "Gotou is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Star",
+      "signatureMoment": "Gotou's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/271459.jpg?s=7b3e263fe274cebba676640cab4bb1b7",
+      "_fetchFailed": false,
+      "primaryAbility": "Gotou's signature technique."
+    },
+    {
+      "name": "Uragami",
+      "title": "Supporting Character",
+      "rank": "Rank 8",
+      "dangerLevel": 4,
+      "loreBio": "Uragami is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Star",
+      "signatureMoment": "Uragami's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/276460.jpg?s=833d293254f0154bb76a1ffb2c5f5fe6",
+      "_fetchFailed": false,
+      "primaryAbility": "Uragami's signature technique."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Kiseijuu: Sei no Kakuritsu Protagonists",
+      "loreDesc": "The main group driving the narrative.",
+      "systemDesc": "Primary institutional node.",
+      "icon": "Star",
+      "color": "blue-400"
+    },
+    {
+      "name": "Kiseijuu: Sei no Kakuritsu Antagonists",
+      "loreDesc": "Opposition forces.",
+      "systemDesc": "Counter-institutional node.",
       "icon": "Shield",
-      "color": "red-400",
-      "signatureMoment": "Migi analyzing Gotou's weaknesses mid-combat.",
-      "loreSubtitle": "Bio-Analysis",
-      "systemSubtitle": "Adaptive Combat"
+      "color": "red-400"
+    },
+    {
+      "name": "Neutral Parties",
+      "loreDesc": "Independent actors with their own agendas.",
+      "systemDesc": "Wildcard nodes in the system graph.",
+      "icon": "Globe",
+      "color": "gray-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Core System Rule",
+      "loreConsequence": "The Kiseijuu: Sei no Kakuritsu system enforces specific constraints on how power operates.",
+      "systemEquivalent": "A fundamental constraint on capability expression.",
+      "severity": "high",
+      "loreSubtitle": "System Constraint",
+      "systemSubtitle": "Capability Limit"
+    },
+    {
+      "name": "Cost Mechanism",
+      "loreConsequence": "Using power carries a specific cost that limits casual deployment.",
+      "systemEquivalent": "Resource constraint on ability activation.",
+      "severity": "medium",
+      "loreSubtitle": "Resource Cost",
+      "systemSubtitle": "Deployment Limit"
+    },
+    {
+      "name": "Hierarchy Structure",
+      "loreConsequence": "Power determines social and combat position within the system.",
+      "systemEquivalent": "Tier-based dominance ordering.",
+      "severity": "high",
+      "loreSubtitle": "Power Hierarchy",
+      "systemSubtitle": "Dominance Ordering"
     }
   ],
   "rankings": {
-    "systemName": "Kiseijuu: Sei No Kakuritsu Power Hierarchy",
-    "topTierName": "Apex",
-    "topTierLore": "The supreme capability tier in Kiseijuu: Sei no Kakuritsu.",
-    "topTierSystem": "Maximum capability across all measured dimensions.",
+    "systemName": "Kiseijuu: Sei no Kakuritsu Power Hierarchy",
+    "topTierName": "Apex Tier",
+    "topTierLore": "The highest capability tier in the system.",
+    "topTierSystem": "Maximum power output and influence.",
     "tiers": [
       {
         "name": "A-Tier",
-        "loreDesc": "Exceptional capability holders with system-shaping influence.",
-        "systemDesc": "Top-tier combat/economic nodes."
+        "loreDesc": "Exceptional operators with system-shaping influence.",
+        "systemDesc": "Top-tier capability nodes."
       },
       {
         "name": "B-Tier",
-        "loreDesc": "Competent operators with meaningful impact potential.",
+        "loreDesc": "Competent operators with meaningful impact.",
         "systemDesc": "Mid-tier capability nodes."
       },
       {
@@ -79,181 +274,103 @@
       }
     ]
   },
-  "factions": [
-    {
-      "name": "Kiseijuu: Sei No Kakuritsu Universe",
-      "loreDesc": "The primary world of the story.",
-      "systemDesc": "Central narrative environment.",
-      "icon": "Globe",
-      "color": "blue-400"
-    }
-  ],
-  "rules": [
-    {
-      "name": "Parasites Need Hosts to Survive",
-      "loreDesc": "Parasites cannot survive without a host body — they need human physiology to function in this world.",
-      "systemDesc": "A dependency constraint: parasite capability requires host integration.",
-      "loreSubtitle": "Host Dependency",
-      "systemSubtitle": "Integration Requirement"
-    },
-    {
-      "name": "Symbiosis Is Economically Optimal",
-      "loreDesc": "The Migi-Shinichi cooperative model produces better outcomes than competitive parasite approaches.",
-      "systemDesc": "A cooperative advantage: partial integration outperforms both full-host-takeover and pure-competition models.",
-      "loreSubtitle": "Symbiosis Advantage",
-      "systemSubtitle": "Cooperative Optimality"
-    }
-  ],
-  "characters": [
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Kiseijuu: Sei no Kakuritsu.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    }
-  ],
   "relationships": [
     {
-      "source": "Unknown",
-      "target": "Unknown",
+      "source": "Izumi, Shinichi",
+      "target": "Migi",
+      "type": "rival",
+      "loreDesc": "Izumi, Shinichi and Migi have a central rivalry in Kiseijuu.",
+      "systemDesc": "Primary competitive edge in the system graph.",
+      "weight": 9,
+      "systemEdgeType": "rivalry"
+    },
+    {
+      "source": "Izumi, Shinichi",
+      "target": "Tamiya, Ryouko",
       "type": "ally",
-      "loreDesc": "Primary cooperative relationship.",
-      "systemDesc": "Core alliance network."
+      "loreDesc": "Izumi, Shinichi forms a core alliance with Tamiya, Ryouko.",
+      "systemDesc": "Cooperative network link.",
+      "weight": 8,
+      "systemEdgeType": "alliance"
+    },
+    {
+      "source": "Migi",
+      "target": "Tamiya, Ryouko",
+      "type": "counter",
+      "loreDesc": "Competing interests drive the central conflict.",
+      "systemDesc": "Counter-relationship in the system graph.",
+      "weight": 7,
+      "systemEdgeType": "counter"
     }
   ],
   "counterplay": [
     {
-      "id": "PA-cp-1",
-      "attacker": "Parasite Physiology",
-      "defender": "Standard Opponents",
-      "mechanic": "Parasite Physiology dominates standard opponents through physical enhancement.",
-      "loreDesc": "Parasite Physiology proves superior against standard threats.",
-      "systemDesc": "A body-control system: the parasite replaces motor control of a specific body part, granting superhuman physical stats.",
-      "loreSubtitle": "Body Hijack",
-      "systemSubtitle": "Physical Enhancement"
+      "id": "PA-cp1",
+      "attacker": "Izumi, Shinichi",
+      "defender": "Migi",
+      "mechanic": "Primary combat matchup in the system.",
+      "loreDesc": "Izumi, Shinichi vs Migi defines the central conflict.",
+      "systemDesc": "Top-tier capability matchup.",
+      "loreSubtitle": "Primary Matchup",
+      "systemSubtitle": "Core Dynamic"
     }
   ],
   "causalEvents": [
     {
       "id": "PA-ce1",
       "name": "Story Begins",
-      "trigger": "The inciting incident that sets the narrative in motion.",
-      "consequence": "Protagonist is forced to engage with the system.",
-      "timelinePosition": "Series start",
-      "loreDesc": "The initial condition that creates the narrative premise.",
-      "systemDesc": "A critical-path activation event.",
+      "trigger": "Izumi, Shinichi is drawn into the system.",
+      "consequence": "Forced to navigate the world rules.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The inciting incident sets everything in motion.",
+      "systemDesc": "Critical-path activation.",
       "loreSubtitle": "Inciting Incident",
       "systemSubtitle": "System Activation"
+    },
+    {
+      "id": "PA-ce2",
+      "name": "Conflict Emerges",
+      "trigger": "True nature of the system is revealed.",
+      "consequence": "Stakes escalate significantly.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Escalation forces adaptation.",
+      "systemDesc": "System stress-test.",
+      "loreSubtitle": "Rising Action",
+      "systemSubtitle": "Stress Test"
     }
   ],
   "anomalies": [
     {
-      "name": "Unique Capability",
-      "loreDesc": "The protagonist possesses a capability that transcends normal system rules.",
-      "systemDesc": "A system anomaly: Parasyte's thesis is symbiosis vs. competition: Mi...",
-      "impact": "Creates asymmetric advantage against normal opponents.",
-      "ruleViolated": "Standard capability hierarchy",
-      "loreSubtitle": "System Anomaly",
-      "systemSubtitle": "Transcendence"
+      "name": "System Anomaly",
+      "ruleViolated": "Normal hierarchy rules",
+      "loreDesc": "Izumi, Shinichi is the anomaly that breaks the standard system rules.",
+      "systemDesc": "An outlier exploiting systemic vulnerabilities.",
+      "impact": "Creates asymmetric advantage.",
+      "loreSubtitle": "Rule Breaker",
+      "systemSubtitle": "Anomaly"
     }
   ],
   "systemQuestions": [
     {
-      "question": "What makes Kiseijuu: Sei no Kakuritsu's system unique?",
-      "answer": "A parasite-host symbiosis system where consciousness negotiation determines survival — and Gotou's economic efficiency outpaces violence.",
+      "question": "How does the power system in Kiseijuu work?",
+      "answer": "A parasite-host symbiosis system where consciousness negotiation determines survival — and Gotou outcompetes everyone.",
       "tabIndex": 0
+    },
+    {
+      "question": "What makes Kiseijuu's world unique?",
+      "answer": "Parasyte's core conflict is not combat but biological optimization: parasites and humans compete for survival through different strategies, with Gotous economic approach being the ultimate threat.",
+      "tabIndex": 0
+    },
+    {
+      "question": "Who are the key players?",
+      "answer": "Izumi, Shinichi, Migi, Tamiya, Ryouko, Kimishima, Kana",
+      "tabIndex": 1
+    },
+    {
+      "question": "What are the core rules?",
+      "answer": "Rules govern how abilities interact and who holds power.",
+      "tabIndex": 3
     }
   ],
-  "gradientTo": "purple-900",
-  "id": "parasyte"
+  "gradientTo": "purple-900"
 }

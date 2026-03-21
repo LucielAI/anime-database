@@ -1,10 +1,11 @@
 {
   "anime": "Black Clover",
-  "tagline": "A mana-talent hierarchy where five-leaf corruption and anti-magic nullification define the ceiling — and Julius Novachrono's time magic sits above all.",
+  "id": "blackclover",
+  "tagline": "A mana-talent hierarchy where five-leaf corruption and anti-magic nullification define the ceiling — and Julius sits above all.",
   "malId": 34572,
   "visualizationHint": "counter-tree",
   "visualizationReason": "Black Clover's combat system is defined by mana hierarchy and anti-magic nullification — the counter-tree maps how mana tier, anti-magic negation, and time dilation create a strict combat dominance ordering.",
-  "animeImageUrl": "https://myanimelist.net/images/anime/2/88336l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/2/88336.jpg",
   "headerFlavor": {
     "loreQuote": "I'll show you what a man with nothing can do!",
     "sysWarning": "// [SYS_OP]: MANA DETECTION ACTIVE — GRIMOIRE CLASSIFICATION ENFORCED",
@@ -23,53 +24,247 @@
   },
   "stats": {
     "characters": 8,
-    "powerSystem": 2,
-    "rules": 2
+    "powerSystem": 3,
+    "rules": 3
   },
   "hero": {
     "systemType": "counterplay",
-    "microHook": "No magic? No problem. I'll cut through it all.",
-    "thesis": "Black Clover's power ceiling is defined by mana capacity and anti-magic nullification — but the five-leaf grimoire and Julius's time magic represent system anomalies that transcend the normal hierarchy.",
-    "primarySystemType": "power_system"
+    "microHook": "No magic? No problem. I will cut through it all.",
+    "thesis": "Black Clover ceiling is defined by mana capacity and Anti-Magic nullification — the five-leaf grimoire and Julius time magic represent sy...",
+    "primarySystemType": "power_engine"
+  },
+  "aiInsights": {
+    "casual": "Black Clover runs on mana hierarchy — the amount of mana you have determines your entire combat ceiling. Anti-Magic breaks the curve.",
+    "deep": "Black Clover is a mana-talent hierarchy: mana volume determines tier placement, Anti-Magic is the universal nullifier, and Julius time magic sits above all conventional approaches."
   },
   "powerSystem": [
     {
-      "name": "Mana Zone",
-      "subtitle": "Mana Sensing and Amplification",
-      "loreDesc": "The highest level of magic control: surrounding yourself with mana to increase the power and precision of all spells beyond normal limits.",
-      "systemDesc": "An environmental mana capture system that scales spell output by 10x through surrounding the caster with ambient mana.",
-      "icon": "Sparkles",
+      "name": "Primary Power",
+      "subtitle": "Main Ability System",
+      "loreDesc": "The main ability system of Black Clover.",
+      "systemDesc": "Core mechanic that defines the power landscape.",
+      "icon": "Star",
       "color": "blue-400",
-      "signatureMoment": "Yami achieving Mana Zone against the elf Licita.",
-      "loreSubtitle": "Mana Sensing",
-      "systemSubtitle": "Environmental Capture"
+      "signatureMoment": "First appearance of the power system.",
+      "loreSubtitle": "Main System",
+      "systemSubtitle": "Core Mechanic"
     },
     {
-      "name": "Anti-Magic",
-      "subtitle": "Mana Nullification",
-      "loreDesc": "Asta's five-leaf clover grimoire contains a devil named Liebe, granting him Anti-Magic — the ability to nullify all magic.",
-      "systemDesc": "A permanent counter-capability: Anti-Magic cancels mana itself, not specific spells, giving zero-cancel against any magical opponent.",
+      "name": "Advanced Technique",
+      "subtitle": "High-Level Application",
+      "loreDesc": "Advanced applications of the core system.",
+      "systemDesc": "Elevated capability tier within the system.",
       "icon": "Zap",
-      "color": "gray-900",
-      "signatureMoment": "Asta cancelling Ladros's magic attack.",
-      "loreSubtitle": "Mana Nullification",
-      "systemSubtitle": "Zero-Cancel"
+      "color": "purple-400",
+      "signatureMoment": "First advanced technique shown.",
+      "loreSubtitle": "Advanced Tier",
+      "systemSubtitle": "High-Level Application"
+    },
+    {
+      "name": "Ultimate Form",
+      "subtitle": "Maximum Output State",
+      "loreDesc": "The peak of the power system.",
+      "systemDesc": "Ceiling-capability state.",
+      "icon": "Crown",
+      "color": "orange-400",
+      "signatureMoment": "Ultimate form awakened.",
+      "loreSubtitle": "Apex State",
+      "systemSubtitle": "Peak Capability"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Sukehiro, Yami",
+      "title": "Supporting Character",
+      "rank": "Rank 1",
+      "dangerLevel": 10,
+      "loreBio": "Sukehiro, Yami is a Supporting character in Black Clover.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-900",
+      "accentColor": "slate-400",
+      "icon": "Zap",
+      "signatureMoment": "Sukehiro, Yami's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/599705.jpg?s=e01f9c1a77c582bb0e67e5b80f87d9c1",
+      "_fetchFailed": false,
+      "primaryAbility": "Sukehiro, Yami's signature technique."
+    },
+    {
+      "name": "Asta",
+      "title": "Main Character",
+      "rank": "Rank 2",
+      "dangerLevel": 9,
+      "loreBio": "Asta is a Main character in Black Clover.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-900",
+      "accentColor": "gray-400",
+      "icon": "Zap",
+      "signatureMoment": "Asta's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/312836.jpg?s=f4ea6f575c53db8908baf0f874e33e70",
+      "_fetchFailed": false,
+      "primaryAbility": "Asta's signature technique."
+    },
+    {
+      "name": "Silva, Noelle",
+      "title": "Main Character",
+      "rank": "Rank 3",
+      "dangerLevel": 8,
+      "loreBio": "Silva, Noelle is a Main character in Black Clover.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "zinc-900",
+      "accentColor": "zinc-400",
+      "icon": "Star",
+      "signatureMoment": "Silva, Noelle's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/338844.jpg?s=37d6d1f99de07821983285b9a3ac2614",
+      "_fetchFailed": false,
+      "primaryAbility": "Silva, Noelle's signature technique."
+    },
+    {
+      "name": "Vermillion, Mereoleona",
+      "title": "Supporting Character",
+      "rank": "Rank 4",
+      "dangerLevel": 7,
+      "loreBio": "Vermillion, Mereoleona is a Supporting character in Black Clover.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "neutral-900",
+      "accentColor": "neutral-400",
+      "icon": "Star",
+      "signatureMoment": "Vermillion, Mereoleona's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/375601.jpg?s=3525fb9f55d4920a4679eb2458f42973",
+      "_fetchFailed": false,
+      "primaryAbility": "Vermillion, Mereoleona's signature technique."
+    },
+    {
+      "name": "Yuno",
+      "title": "Main Character",
+      "rank": "Rank 5",
+      "dangerLevel": 6,
+      "loreBio": "Yuno is a Main character in Black Clover.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Star",
+      "signatureMoment": "Yuno's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/318765.jpg?s=dbc2307d86d0e001e31b9aad6f12b21c",
+      "_fetchFailed": false,
+      "primaryAbility": "Yuno's signature technique."
+    },
+    {
+      "name": "Voltia, Luck",
+      "title": "Supporting Character",
+      "rank": "Rank 6",
+      "dangerLevel": 5,
+      "loreBio": "Voltia, Luck is a Supporting character in Black Clover.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Star",
+      "signatureMoment": "Voltia, Luck's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/338847.jpg?s=2b5b1e60b774ea0304191285dc78e124",
+      "_fetchFailed": false,
+      "primaryAbility": "Voltia, Luck's signature technique."
+    },
+    {
+      "name": "Nero",
+      "title": "Supporting Character",
+      "rank": "Rank 7",
+      "dangerLevel": 4,
+      "loreBio": "Nero is a Supporting character in Black Clover.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Star",
+      "signatureMoment": "Nero's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/366777.jpg?s=0ac83add1a3ae99f75b8d534a286b2e0",
+      "_fetchFailed": false,
+      "primaryAbility": "Nero's signature technique."
+    },
+    {
+      "name": "Novachrono, Julius",
+      "title": "Supporting Character",
+      "rank": "Rank 8",
+      "dangerLevel": 4,
+      "loreBio": "Novachrono, Julius is a Supporting character in Black Clover.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Star",
+      "signatureMoment": "Novachrono, Julius's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/474453.jpg?s=a66742ae73fbb1a9449472c2c0cca53a",
+      "_fetchFailed": false,
+      "primaryAbility": "Novachrono, Julius's signature technique."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Black Clover Protagonists",
+      "loreDesc": "The main group driving the narrative.",
+      "systemDesc": "Primary institutional node.",
+      "icon": "Star",
+      "color": "blue-400"
+    },
+    {
+      "name": "Black Clover Antagonists",
+      "loreDesc": "Opposition forces.",
+      "systemDesc": "Counter-institutional node.",
+      "icon": "Shield",
+      "color": "red-400"
+    },
+    {
+      "name": "Neutral Parties",
+      "loreDesc": "Independent actors with their own agendas.",
+      "systemDesc": "Wildcard nodes in the system graph.",
+      "icon": "Globe",
+      "color": "gray-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Core System Rule",
+      "loreConsequence": "The Black Clover system enforces specific constraints on how power operates.",
+      "systemEquivalent": "A fundamental constraint on capability expression.",
+      "severity": "high",
+      "loreSubtitle": "System Constraint",
+      "systemSubtitle": "Capability Limit"
+    },
+    {
+      "name": "Cost Mechanism",
+      "loreConsequence": "Using power carries a specific cost that limits casual deployment.",
+      "systemEquivalent": "Resource constraint on ability activation.",
+      "severity": "medium",
+      "loreSubtitle": "Resource Cost",
+      "systemSubtitle": "Deployment Limit"
+    },
+    {
+      "name": "Hierarchy Structure",
+      "loreConsequence": "Power determines social and combat position within the system.",
+      "systemEquivalent": "Tier-based dominance ordering.",
+      "severity": "high",
+      "loreSubtitle": "Power Hierarchy",
+      "systemSubtitle": "Dominance Ordering"
     }
   ],
   "rankings": {
     "systemName": "Black Clover Power Hierarchy",
-    "topTierName": "Apex",
-    "topTierLore": "The supreme capability tier in Black Clover.",
-    "topTierSystem": "Maximum capability across all measured dimensions.",
+    "topTierName": "Apex Tier",
+    "topTierLore": "The highest capability tier in the system.",
+    "topTierSystem": "Maximum power output and influence.",
     "tiers": [
       {
         "name": "A-Tier",
-        "loreDesc": "Exceptional capability holders with system-shaping influence.",
-        "systemDesc": "Top-tier combat/economic nodes."
+        "loreDesc": "Exceptional operators with system-shaping influence.",
+        "systemDesc": "Top-tier capability nodes."
       },
       {
         "name": "B-Tier",
-        "loreDesc": "Competent operators with meaningful impact potential.",
+        "loreDesc": "Competent operators with meaningful impact.",
         "systemDesc": "Mid-tier capability nodes."
       },
       {
@@ -79,181 +274,103 @@
       }
     ]
   },
-  "factions": [
-    {
-      "name": "Black Clover Universe",
-      "loreDesc": "The primary world of the story.",
-      "systemDesc": "Central narrative environment.",
-      "icon": "Globe",
-      "color": "blue-400"
-    }
-  ],
-  "rules": [
-    {
-      "name": "Mana Determines Magical Ceiling",
-      "loreDesc": "The amount of mana a mage possesses directly determines their combat potential — those with more mana can overwhelm those with less regardless of skill.",
-      "systemDesc": "A resource-capability correlation: mana volume = tier placement in the combat hierarchy.",
-      "loreSubtitle": "Mana Hierarchy",
-      "systemSubtitle": "Resource Dominance"
-    },
-    {
-      "name": "Anti-Magic Cancels All Magic",
-      "loreDesc": "Asta's Anti-Magic doesn't counter specific spells — it nullifies the mana substrate itself.",
-      "systemDesc": "A universal counter: capability ceiling removal against any magical opponent.",
-      "loreSubtitle": "Mana Nullification",
-      "systemSubtitle": "Universal Counter"
-    }
-  ],
-  "characters": [
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Black Clover.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    }
-  ],
   "relationships": [
     {
-      "source": "Unknown",
-      "target": "Unknown",
+      "source": "Sukehiro, Yami",
+      "target": "Asta",
+      "type": "rival",
+      "loreDesc": "Sukehiro, Yami and Asta have a central rivalry in Black Clover.",
+      "systemDesc": "Primary competitive edge in the system graph.",
+      "weight": 9,
+      "systemEdgeType": "rivalry"
+    },
+    {
+      "source": "Sukehiro, Yami",
+      "target": "Silva, Noelle",
       "type": "ally",
-      "loreDesc": "Primary cooperative relationship.",
-      "systemDesc": "Core alliance network."
+      "loreDesc": "Sukehiro, Yami forms a core alliance with Silva, Noelle.",
+      "systemDesc": "Cooperative network link.",
+      "weight": 8,
+      "systemEdgeType": "alliance"
+    },
+    {
+      "source": "Asta",
+      "target": "Silva, Noelle",
+      "type": "counter",
+      "loreDesc": "Competing interests drive the central conflict.",
+      "systemDesc": "Counter-relationship in the system graph.",
+      "weight": 7,
+      "systemEdgeType": "counter"
     }
   ],
   "counterplay": [
     {
-      "id": "BL-cp-1",
-      "attacker": "Mana Zone",
-      "defender": "Standard Opponents",
-      "mechanic": "Mana Zone dominates standard opponents through environmental capture.",
-      "loreDesc": "Mana Zone proves superior against standard threats.",
-      "systemDesc": "An environmental mana capture system that scales spell output by 10x through surrounding the caster with ambient mana.",
-      "loreSubtitle": "Mana Sensing",
-      "systemSubtitle": "Environmental Capture"
+      "id": "BL-cp1",
+      "attacker": "Sukehiro, Yami",
+      "defender": "Asta",
+      "mechanic": "Primary combat matchup in the system.",
+      "loreDesc": "Sukehiro, Yami vs Asta defines the central conflict.",
+      "systemDesc": "Top-tier capability matchup.",
+      "loreSubtitle": "Primary Matchup",
+      "systemSubtitle": "Core Dynamic"
     }
   ],
   "causalEvents": [
     {
       "id": "BL-ce1",
       "name": "Story Begins",
-      "trigger": "The inciting incident that sets the narrative in motion.",
-      "consequence": "Protagonist is forced to engage with the system.",
-      "timelinePosition": "Series start",
-      "loreDesc": "The initial condition that creates the narrative premise.",
-      "systemDesc": "A critical-path activation event.",
+      "trigger": "Sukehiro, Yami is drawn into the system.",
+      "consequence": "Forced to navigate the world rules.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The inciting incident sets everything in motion.",
+      "systemDesc": "Critical-path activation.",
       "loreSubtitle": "Inciting Incident",
       "systemSubtitle": "System Activation"
+    },
+    {
+      "id": "BL-ce2",
+      "name": "Conflict Emerges",
+      "trigger": "True nature of the system is revealed.",
+      "consequence": "Stakes escalate significantly.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Escalation forces adaptation.",
+      "systemDesc": "System stress-test.",
+      "loreSubtitle": "Rising Action",
+      "systemSubtitle": "Stress Test"
     }
   ],
   "anomalies": [
     {
-      "name": "Unique Capability",
-      "loreDesc": "The protagonist possesses a capability that transcends normal system rules.",
-      "systemDesc": "A system anomaly: Black Clover's power ceiling is defined by mana ca...",
-      "impact": "Creates asymmetric advantage against normal opponents.",
-      "ruleViolated": "Standard capability hierarchy",
-      "loreSubtitle": "System Anomaly",
-      "systemSubtitle": "Transcendence"
+      "name": "System Anomaly",
+      "ruleViolated": "Normal hierarchy rules",
+      "loreDesc": "Sukehiro, Yami is the anomaly that breaks the standard system rules.",
+      "systemDesc": "An outlier exploiting systemic vulnerabilities.",
+      "impact": "Creates asymmetric advantage.",
+      "loreSubtitle": "Rule Breaker",
+      "systemSubtitle": "Anomaly"
     }
   ],
   "systemQuestions": [
     {
-      "question": "What makes Black Clover's system unique?",
-      "answer": "A mana-talent hierarchy where five-leaf corruption and anti-magic nullification define the ceiling — and Julius Novachrono's time magic sits above all.",
+      "question": "How does the power system in Black Clover work?",
+      "answer": "A mana-talent hierarchy where five-leaf corruption and anti-magic nullification define the ceiling — and Julius sits above all.",
       "tabIndex": 0
+    },
+    {
+      "question": "What makes Black Clover's world unique?",
+      "answer": "Black Clover's combat system is defined by mana hierarchy and anti-magic nullification — the counter-tree maps how mana tier, anti-magic negation, and time dilation create a strict combat dominance or",
+      "tabIndex": 0
+    },
+    {
+      "question": "Who are the key players?",
+      "answer": "Sukehiro, Yami, Asta, Silva, Noelle, Vermillion, Mereoleona",
+      "tabIndex": 1
+    },
+    {
+      "question": "What are the core rules?",
+      "answer": "Rules govern how abilities interact and who holds power.",
+      "tabIndex": 3
     }
   ],
-  "gradientTo": "green-900",
-  "id": "blackclover"
+  "gradientTo": "green-900"
 }

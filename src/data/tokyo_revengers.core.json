@@ -1,10 +1,11 @@
 {
   "anime": "Tokyo Revengers",
-  "tagline": "A temporal arbitrage mechanism where one man's loyalty rewrites gang economics — and every rewrite costs someone their future.",
+  "id": "tokyo_revengers",
+  "tagline": "A temporal loyalty cascade where one man rewrites gang economics — and every rewrite costs someone their future.",
   "malId": 42249,
   "visualizationHint": "timeline",
-  "visualizationReason": "Tokyo Revengers is fundamentally a temporal feedback loop: each time leap changes the causal graph, creating new winners and losers in the gang hierarchy. Only a timeline renderer captures how intervention points cascade.",
-  "animeImageUrl": "https://myanimelist.net/images/anime/1839/122012l.jpg",
+  "visualizationReason": "Tokyo Revengers is fundamentally a temporal feedback loop: each time leap changes the causal graph, creating new winners and losers. Only a timeline renderer captures how intervention points cascade.",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1839/122012.jpg",
   "headerFlavor": {
     "loreQuote": "I'm gonna save you, Mikey. No matter how many times I have to jump.",
     "sysWarning": "// [SYS_OP]: TIME LEAP PROTOCOL ACTIVE — PARADOXICAL INTERVENTION IN PROGRESS",
@@ -23,53 +24,247 @@
   },
   "stats": {
     "characters": 8,
-    "powerSystem": 2,
-    "rules": 2
+    "powerSystem": 3,
+    "rules": 3
   },
   "hero": {
     "systemType": "timeline",
     "microHook": "I can travel through time — but only by watching people die.",
-    "thesis": "Takemichi's time leaps are a loyalty cascade: each intervention redistributes gang power toward Mikey, but the cost is always someone's future.",
+    "thesis": "Takemichi's time leaps are a loyalty cascade: each intervention redistributes gang power, but the cost is always someone else's future.",
     "primarySystemType": "factions"
+  },
+  "aiInsights": {
+    "casual": "Tokyo Revengers is a time-travel gang management sim — Takemichi jumps back to save Mikey, but each intervention reshuffles who wins.",
+    "deep": "Takemichi is a loyalty arbitrage mechanism: each time leap redistributes gang power toward Mikey, but the cost is always someone elses future."
   },
   "powerSystem": [
     {
-      "name": "Time Leap",
-      "subtitle": "Emotional-Trigger Temporal Jump",
-      "loreDesc": "Takemichi can travel 12 years into the past by gripping someone's hand at the moment of their death — emotional contact required.",
-      "systemDesc": "A point-intervention temporal system: can only jump to specific emotional anchor points, not arbitrary times.",
-      "icon": "Clock",
-      "color": "cyan-400",
-      "signatureMoment": "Takemichi's first time leap, gripping Hina as she dies.",
-      "loreSubtitle": "Emotional Anchor Jump",
-      "systemSubtitle": "Point Intervention"
+      "name": "Primary Power",
+      "subtitle": "Main Ability System",
+      "loreDesc": "The main ability system of Tokyo Revengers.",
+      "systemDesc": "Core mechanic that defines the power landscape.",
+      "icon": "Star",
+      "color": "blue-400",
+      "signatureMoment": "First appearance of the power system.",
+      "loreSubtitle": "Main System",
+      "systemSubtitle": "Core Mechanic"
     },
     {
-      "name": "Mikey's Invincibility",
-      "subtitle": "Dark Impulse Suppression",
-      "loreDesc": "Mikey is the most powerful fighter in Tokyo, but his \"dark impulse\" makes him a ticking time bomb.",
-      "systemDesc": "A latent-failure node: Mikey's capability ceiling is offset by a system-collapse risk that activates under specific triggers.",
+      "name": "Advanced Technique",
+      "subtitle": "High-Level Application",
+      "loreDesc": "Advanced applications of the core system.",
+      "systemDesc": "Elevated capability tier within the system.",
       "icon": "Zap",
-      "color": "red-400",
-      "signatureMoment": "Mikey single-handedly defeating all of Toman's enemies.",
-      "loreSubtitle": "Maximum Capability Node",
-      "systemSubtitle": "Latent Collapse Risk"
+      "color": "purple-400",
+      "signatureMoment": "First advanced technique shown.",
+      "loreSubtitle": "Advanced Tier",
+      "systemSubtitle": "High-Level Application"
+    },
+    {
+      "name": "Ultimate Form",
+      "subtitle": "Maximum Output State",
+      "loreDesc": "The peak of the power system.",
+      "systemDesc": "Ceiling-capability state.",
+      "icon": "Crown",
+      "color": "orange-400",
+      "signatureMoment": "Ultimate form awakened.",
+      "loreSubtitle": "Apex State",
+      "systemSubtitle": "Peak Capability"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Sano, Manjirou",
+      "title": "Main Character",
+      "rank": "Rank 1",
+      "dangerLevel": 10,
+      "loreBio": "Sano, Manjirou is a Main character in Tokyo Revengers.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-900",
+      "accentColor": "slate-400",
+      "icon": "Star",
+      "signatureMoment": "Sano, Manjirou's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/514406.jpg?s=1165265ce055037dbff9c95d878bd5ab",
+      "_fetchFailed": false,
+      "primaryAbility": "Sano, Manjirou's signature technique."
+    },
+    {
+      "name": "Matsuno, Chifuyu",
+      "title": "Supporting Character",
+      "rank": "Rank 2",
+      "dangerLevel": 9,
+      "loreBio": "Matsuno, Chifuyu is a Supporting character in Tokyo Revengers.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "gray-900",
+      "accentColor": "gray-400",
+      "icon": "Star",
+      "signatureMoment": "Matsuno, Chifuyu's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/387987.jpg?s=cca3df0122ed09c6ad1bc25922d630b3",
+      "_fetchFailed": false,
+      "primaryAbility": "Matsuno, Chifuyu's signature technique."
+    },
+    {
+      "name": "Ryuuguuji, Ken",
+      "title": "Main Character",
+      "rank": "Rank 3",
+      "dangerLevel": 8,
+      "loreBio": "Ryuuguuji, Ken is a Main character in Tokyo Revengers.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "zinc-900",
+      "accentColor": "zinc-400",
+      "icon": "Star",
+      "signatureMoment": "Ryuuguuji, Ken's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/388001.jpg?s=17cf9999ca02eeceb460bd3c911cf158",
+      "_fetchFailed": false,
+      "primaryAbility": "Ryuuguuji, Ken's signature technique."
+    },
+    {
+      "name": "Baji, Keisuke",
+      "title": "Supporting Character",
+      "rank": "Rank 4",
+      "dangerLevel": 7,
+      "loreBio": "Baji, Keisuke is a Supporting character in Tokyo Revengers.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "neutral-900",
+      "accentColor": "neutral-400",
+      "icon": "Star",
+      "signatureMoment": "Baji, Keisuke's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/387998.jpg?s=c6e1a161f58cfc3a0287efa7d8bf8546",
+      "_fetchFailed": false,
+      "primaryAbility": "Baji, Keisuke's signature technique."
+    },
+    {
+      "name": "Hanagaki, Takemichi",
+      "title": "Main Character",
+      "rank": "Rank 5",
+      "dangerLevel": 6,
+      "loreBio": "Hanagaki, Takemichi is a Main character in Tokyo Revengers.",
+      "systemBio": "System role: Main archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Star",
+      "signatureMoment": "Hanagaki, Takemichi's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/448782.jpg?s=489a6af4eb5a382b8e77fd8c557ae217",
+      "_fetchFailed": false,
+      "primaryAbility": "Hanagaki, Takemichi's signature technique."
+    },
+    {
+      "name": "Mitsuya, Takashi",
+      "title": "Supporting Character",
+      "rank": "Rank 6",
+      "dangerLevel": 5,
+      "loreBio": "Mitsuya, Takashi is a Supporting character in Tokyo Revengers.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Star",
+      "signatureMoment": "Mitsuya, Takashi's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/388013.jpg?s=f0963df25b2db31612f36edb06eb387e",
+      "_fetchFailed": false,
+      "primaryAbility": "Mitsuya, Takashi's signature technique."
+    },
+    {
+      "name": "Hanemiya, Kazutora",
+      "title": "Supporting Character",
+      "rank": "Rank 7",
+      "dangerLevel": 4,
+      "loreBio": "Hanemiya, Kazutora is a Supporting character in Tokyo Revengers.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Star",
+      "signatureMoment": "Hanemiya, Kazutora's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/387997.jpg?s=2d58c17b6dda4ae464ea386acfd9c6b8",
+      "_fetchFailed": false,
+      "primaryAbility": "Hanemiya, Kazutora's signature technique."
+    },
+    {
+      "name": "Hanma, Shuuji",
+      "title": "Supporting Character",
+      "rank": "Rank 8",
+      "dangerLevel": 4,
+      "loreBio": "Hanma, Shuuji is a Supporting character in Tokyo Revengers.",
+      "systemBio": "System role: Supporting archetype in the system hierarchy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "Star",
+      "signatureMoment": "Hanma, Shuuji's defining scene.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/457022.jpg?s=758e9e37f5aaf00d6d8136cedd595f8f",
+      "_fetchFailed": false,
+      "primaryAbility": "Hanma, Shuuji's signature technique."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Tokyo Revengers Protagonists",
+      "loreDesc": "The main group driving the narrative.",
+      "systemDesc": "Primary institutional node.",
+      "icon": "Star",
+      "color": "blue-400"
+    },
+    {
+      "name": "Tokyo Revengers Antagonists",
+      "loreDesc": "Opposition forces.",
+      "systemDesc": "Counter-institutional node.",
+      "icon": "Shield",
+      "color": "red-400"
+    },
+    {
+      "name": "Neutral Parties",
+      "loreDesc": "Independent actors with their own agendas.",
+      "systemDesc": "Wildcard nodes in the system graph.",
+      "icon": "Globe",
+      "color": "gray-400"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Core System Rule",
+      "loreConsequence": "The Tokyo Revengers system enforces specific constraints on how power operates.",
+      "systemEquivalent": "A fundamental constraint on capability expression.",
+      "severity": "high",
+      "loreSubtitle": "System Constraint",
+      "systemSubtitle": "Capability Limit"
+    },
+    {
+      "name": "Cost Mechanism",
+      "loreConsequence": "Using power carries a specific cost that limits casual deployment.",
+      "systemEquivalent": "Resource constraint on ability activation.",
+      "severity": "medium",
+      "loreSubtitle": "Resource Cost",
+      "systemSubtitle": "Deployment Limit"
+    },
+    {
+      "name": "Hierarchy Structure",
+      "loreConsequence": "Power determines social and combat position within the system.",
+      "systemEquivalent": "Tier-based dominance ordering.",
+      "severity": "high",
+      "loreSubtitle": "Power Hierarchy",
+      "systemSubtitle": "Dominance Ordering"
     }
   ],
   "rankings": {
     "systemName": "Tokyo Revengers Power Hierarchy",
-    "topTierName": "Apex",
-    "topTierLore": "The supreme capability tier in Tokyo Revengers.",
-    "topTierSystem": "Maximum capability across all measured dimensions.",
+    "topTierName": "Apex Tier",
+    "topTierLore": "The highest capability tier in the system.",
+    "topTierSystem": "Maximum power output and influence.",
     "tiers": [
       {
         "name": "A-Tier",
-        "loreDesc": "Exceptional capability holders with system-shaping influence.",
-        "systemDesc": "Top-tier combat/economic nodes."
+        "loreDesc": "Exceptional operators with system-shaping influence.",
+        "systemDesc": "Top-tier capability nodes."
       },
       {
         "name": "B-Tier",
-        "loreDesc": "Competent operators with meaningful impact potential.",
+        "loreDesc": "Competent operators with meaningful impact.",
         "systemDesc": "Mid-tier capability nodes."
       },
       {
@@ -79,181 +274,103 @@
       }
     ]
   },
-  "factions": [
-    {
-      "name": "Tokyo Revengers Universe",
-      "loreDesc": "The primary world of the story.",
-      "systemDesc": "Central narrative environment.",
-      "icon": "Globe",
-      "color": "blue-400"
-    }
-  ],
-  "rules": [
-    {
-      "name": "Time Leap Requires Emotional Connection",
-      "loreDesc": "Takemichi can only leap by experiencing someone's future death through physical contact — he can't leap arbitrarily.",
-      "systemDesc": "A constraint on temporal intervention: emotional proximity limits control.",
-      "loreSubtitle": "Contact Dependency",
-      "systemSubtitle": "Intervention Constraint"
-    },
-    {
-      "name": "Gang Loyalty Is the Currency",
-      "loreDesc": "Each gang member's loyalty creates network stability — betrayal cascades destabilize the entire system.",
-      "systemDesc": "A loyalty-weighted graph: gang strength is the sum of member commitment edges.",
-      "loreSubtitle": "Loyalty Network",
-      "systemSubtitle": "Graph Stability"
-    }
-  ],
-  "characters": [
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Main",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Main character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    },
-    {
-      "name": "Unknown",
-      "title": "Supporting",
-      "rank": "Unknown",
-      "dangerLevel": 5,
-      "loreBio": "Unknown is a Supporting character in Tokyo Revengers.",
-      "systemRole": "antagonist",
-      "classificationTag": "Human",
-      "animeImageUrl": "",
-      "imageUrl": null,
-      "_fetchFailed": true
-    }
-  ],
   "relationships": [
     {
-      "source": "Unknown",
-      "target": "Unknown",
+      "source": "Sano, Manjirou",
+      "target": "Matsuno, Chifuyu",
+      "type": "rival",
+      "loreDesc": "Sano, Manjirou and Matsuno, Chifuyu have a central rivalry in Tokyo Revengers.",
+      "systemDesc": "Primary competitive edge in the system graph.",
+      "weight": 9,
+      "systemEdgeType": "rivalry"
+    },
+    {
+      "source": "Sano, Manjirou",
+      "target": "Ryuuguuji, Ken",
       "type": "ally",
-      "loreDesc": "Primary cooperative relationship.",
-      "systemDesc": "Core alliance network."
+      "loreDesc": "Sano, Manjirou forms a core alliance with Ryuuguuji, Ken.",
+      "systemDesc": "Cooperative network link.",
+      "weight": 8,
+      "systemEdgeType": "alliance"
+    },
+    {
+      "source": "Matsuno, Chifuyu",
+      "target": "Ryuuguuji, Ken",
+      "type": "counter",
+      "loreDesc": "Competing interests drive the central conflict.",
+      "systemDesc": "Counter-relationship in the system graph.",
+      "weight": 7,
+      "systemEdgeType": "counter"
     }
   ],
   "counterplay": [
     {
-      "id": "TO-cp-1",
-      "attacker": "Time Leap",
-      "defender": "Standard Opponents",
-      "mechanic": "Time Leap dominates standard opponents through point intervention.",
-      "loreDesc": "Time Leap proves superior against standard threats.",
-      "systemDesc": "A point-intervention temporal system: can only jump to specific emotional anchor points, not arbitrary times.",
-      "loreSubtitle": "Emotional Anchor Jump",
-      "systemSubtitle": "Point Intervention"
+      "id": "TO-cp1",
+      "attacker": "Sano, Manjirou",
+      "defender": "Matsuno, Chifuyu",
+      "mechanic": "Primary combat matchup in the system.",
+      "loreDesc": "Sano, Manjirou vs Matsuno, Chifuyu defines the central conflict.",
+      "systemDesc": "Top-tier capability matchup.",
+      "loreSubtitle": "Primary Matchup",
+      "systemSubtitle": "Core Dynamic"
     }
   ],
   "causalEvents": [
     {
       "id": "TO-ce1",
       "name": "Story Begins",
-      "trigger": "The inciting incident that sets the narrative in motion.",
-      "consequence": "Protagonist is forced to engage with the system.",
-      "timelinePosition": "Series start",
-      "loreDesc": "The initial condition that creates the narrative premise.",
-      "systemDesc": "A critical-path activation event.",
+      "trigger": "Sano, Manjirou is drawn into the system.",
+      "consequence": "Forced to navigate the world rules.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The inciting incident sets everything in motion.",
+      "systemDesc": "Critical-path activation.",
       "loreSubtitle": "Inciting Incident",
       "systemSubtitle": "System Activation"
+    },
+    {
+      "id": "TO-ce2",
+      "name": "Conflict Emerges",
+      "trigger": "True nature of the system is revealed.",
+      "consequence": "Stakes escalate significantly.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Escalation forces adaptation.",
+      "systemDesc": "System stress-test.",
+      "loreSubtitle": "Rising Action",
+      "systemSubtitle": "Stress Test"
     }
   ],
   "anomalies": [
     {
-      "name": "Unique Capability",
-      "loreDesc": "The protagonist possesses a capability that transcends normal system rules.",
-      "systemDesc": "A system anomaly: Takemichi's time leaps are a loyalty cascade: each...",
-      "impact": "Creates asymmetric advantage against normal opponents.",
-      "ruleViolated": "Standard capability hierarchy",
-      "loreSubtitle": "System Anomaly",
-      "systemSubtitle": "Transcendence"
+      "name": "System Anomaly",
+      "ruleViolated": "Normal hierarchy rules",
+      "loreDesc": "Sano, Manjirou is the anomaly that breaks the standard system rules.",
+      "systemDesc": "An outlier exploiting systemic vulnerabilities.",
+      "impact": "Creates asymmetric advantage.",
+      "loreSubtitle": "Rule Breaker",
+      "systemSubtitle": "Anomaly"
     }
   ],
   "systemQuestions": [
     {
-      "question": "What makes Tokyo Revengers's system unique?",
-      "answer": "A temporal arbitrage mechanism where one man's loyalty rewrites gang economics — and every rewrite costs someone their future.",
+      "question": "How does the power system in Tokyo Revengers work?",
+      "answer": "A temporal loyalty cascade where one man rewrites gang economics — and every rewrite costs someone their future.",
       "tabIndex": 0
+    },
+    {
+      "question": "What makes Tokyo Revengers's world unique?",
+      "answer": "Tokyo Revengers is fundamentally a temporal feedback loop: each time leap changes the causal graph, creating new winners and losers. Only a timeline renderer captures how intervention points cascade.",
+      "tabIndex": 0
+    },
+    {
+      "question": "Who are the key players?",
+      "answer": "Sano, Manjirou, Matsuno, Chifuyu, Ryuuguuji, Ken, Baji, Keisuke",
+      "tabIndex": 1
+    },
+    {
+      "question": "What are the core rules?",
+      "answer": "Rules govern how abilities interact and who holds power.",
+      "tabIndex": 3
     }
   ],
-  "gradientTo": "blue-900",
-  "id": "tokyo_revengers"
+  "gradientTo": "blue-900"
 }
