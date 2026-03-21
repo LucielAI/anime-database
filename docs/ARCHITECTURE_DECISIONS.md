@@ -174,3 +174,17 @@ Decision:
 Static `/public/feed.xml` with atom link in `index.html` for RSS reader subscribers and SEO.
 Why:
 RSS feeds signal to search engines that content is updated regularly. Some users still use RSS readers for site updates. Low maintenance cost for a static file.
+
+## ADR-022 — Blog Hub (2026-03-21)
+Decision:
+Static blog hub at `/blog` with post index at `/blog-index.json` and individual posts at `/blog/:slug`. Blog posts are authored as structured JSON in `content/blog/` and copied to `public/blog/` at build time. The homepage "Latest Analysis" section surfaces the 3 most recent posts. Thematic pages link to relevant blog posts in their footer.
+Why:
+Deep analysis content (power system rankings, worldbuilding comparisons) belongs outside the universe pages as long-form articles. Blog format enables proper article SEO (BlogPosting schema), authorship attribution, and chronological publication.
+Tradeoff:
+Requires separate authoring workflow from universe JSON payloads. Blog posts are static JSON, not generated from structured data.
+
+## ADR-023 — Blog Homepage Entry Point (2026-03-21)
+Decision:
+Homepage renders a "Latest Analysis" section with the 3 most recent blog posts as cards. Each card links to the post URL. A "All posts →" link navigates to `/blog`. Blog data is fetched client-side from `/blog-index.json`.
+Why:
+The blog existed but was undiscoverable — only reachable from thematic page footer links. Homepage section provides a clear, prominent entry point for editorial content.

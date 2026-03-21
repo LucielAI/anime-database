@@ -17,6 +17,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 | Field schema, enums, themeColors shape | `playbooks/06-payload-field-reference.md` |
 | Homepage architecture/data-contract updates | `playbooks/07-homepage-system-hub.md` |
 | Keyboard shortcuts, Compare route, llms.txt, RSS | `docs/ARCHITECTURE_DECISIONS.md` (ADR-018–021) |
+| Blog hub, homepage blog entry | `docs/ARCHITECTURE_DECISIONS.md` (ADR-022–023) |
 | Renderer selection logic | `docs/RENDERER_CONTRACT.md` |
 | Pipeline stages reference | `docs/UNIVERSE_PIPELINE.md` |
 | Repo-native universe build prompt | `docs/MASTER_UNIVERSE_BUILD_PROMPT.md` |
@@ -56,6 +57,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 - Universe pages support keyboard shortcuts (`j/k` prev/next tab, `t` system mode, `s` share, `r` share frame, `h/c/u` nav, `?` overlay) — see ADR-018.
 - Compare route at `/compare` accepts `?left=` and `?right=` params — see ADR-019.
 - Community feedback at `/api/feedback` and suggestions at `/api/suggest` — Supabase-backed, no login required — see ADR-010.
+- Blog posts live in `content/blog/*.json` and render at `/blog/:slug`. Homepage "Latest Analysis" section auto-surfaces 3 latest posts. Author new posts in `content/blog/` directory following existing schema.
 - Every entity needs both lore and system voice fields. Missing one silently breaks the LORE/SYS toggle.
 
 ---
