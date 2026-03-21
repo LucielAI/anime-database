@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo, useRef } from 'react'
+import { useEffect, useState, useMemo, useRef, useTransition, useDeferredValue } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { loadNavState, saveNavState } from './utils/navState.js'
 import { throttle } from './utils/throttle.js'
@@ -85,7 +85,9 @@ export default function Dashboard({ data }) {
   const navigate = useNavigate()
   const heroRef = useRef(null)
   const [isHeroVisible, setIsHeroVisible] = useState(true)
-  const [showMonetizationBar, setShowMonetizationBar] = useState(false)
+  const deferredIsHeroVisible = useDeferredValue(isHeroVisible)
+  const showMonetizationBar = !deferredIsHeroVisible
+  const [, startTransition] = useTransition()
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [showShortcuts, setShowShortcuts] = useState(false)
 
@@ -99,12 +101,16 @@ export default function Dashboard({ data }) {
 
     const nav = loadNavState(data.id);
     if (nav && Number.isInteger(nav.tabIndex)) {
-      setActiveTab(Math.max(0, Math.min(3, nav.tabIndex)));
+      startTransition(() => {
+        setActiveTab(Math.max(0, Math.min(3, nav.tabIndex)));
+      });
       requestAnimationFrame(() => {
         window.scrollTo({ top: nav.scrollY || 0, behavior: 'auto' });
       });
     } else {
-      setActiveTab(bestEntry.tabIndex);
+      startTransition(() => {
+        setActiveTab(bestEntry.tabIndex);
+      });
     }
   }, [data?.id, bestEntry.tabIndex]);
 
@@ -155,16 +161,6 @@ export default function Dashboard({ data }) {
     observer.observe(heroRef.current)
     return () => observer.disconnect()
   }, [data?.id])
-
-  useEffect(() => {
-    if (isHeroVisible) {
-      setShowMonetizationBar(false)
-      return undefined
-    }
-
-    const timeoutId = window.setTimeout(() => setShowMonetizationBar(true), 150)
-    return () => window.clearTimeout(timeoutId)
-  }, [isHeroVisible])
 
   // Track hero visibility
   useEffect(() => {

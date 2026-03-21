@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback, useRef, memo } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 
-export default memo(function CounterTree({ counterplay = [], characters = [], isRevealing, revealStep }) {
+export default function CounterTree({ counterplay = [], characters = [], isRevealing, revealStep }) {
   const [selectedEdge, setSelectedEdge] = useState(null)
   const [hasInteracted, setHasInteracted] = useState(false)
   const timerRef = useRef(null)
@@ -11,7 +11,7 @@ export default memo(function CounterTree({ counterplay = [], characters = [], is
     if (timerRef.current) clearTimeout(timerRef.current)
     if (clearRef.current) clearTimeout(clearRef.current)
     timerRef.current = setTimeout(() => {
-      if (!hasInteracted && selectedEdge === null && counterplay.length > 0) {
+      if (!hasInteracted && counterplay.length > 0) {
         const targetIndex = 0
         setSelectedEdge(targetIndex)
         clearRef.current = setTimeout(() => {
@@ -20,7 +20,7 @@ export default memo(function CounterTree({ counterplay = [], characters = [], is
       }
     }, delay)
     return () => { clearTimeout(timerRef.current); clearTimeout(clearRef.current) }
-  }, [counterplay, hasInteracted, selectedEdge])
+  }, [counterplay, hasInteracted])
 
   useEffect(() => {
     if (!isRevealing) return triggerPulse(600)
@@ -104,4 +104,4 @@ export default memo(function CounterTree({ counterplay = [], characters = [], is
       )}
     </div>
   )
-})
+}

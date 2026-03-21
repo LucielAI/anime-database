@@ -1,10 +1,11 @@
-import { useState, useCallback, useRef, useEffect, useMemo, memo } from 'react'
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react'
+import { flushSync } from 'react-dom'
 import { resolveColor } from '../utils/resolveColor'
 import { RELATIONSHIP_COLORS } from '../config/relationshipColors'
 import { computeRadialPositions } from '../utils/radialLayout'
 import { useAutoHighlight } from '../hooks/useAutoHighlight'
 
-export default memo(function NodeGraph({ relationships = [], characters = [], isRevealing, revealStep }) {
+export default function NodeGraph({ relationships = [], characters = [], isRevealing, revealStep }) {
   const svgRef = useRef(null)
   const [nodes, setNodes] = useState([])
   const [selected, setSelected] = useState(null)
@@ -22,7 +23,7 @@ export default memo(function NodeGraph({ relationships = [], characters = [], is
 
   // Sync auto-highlight into selected state (only when user hasn't manually selected)
   useEffect(() => {
-    if (highlighted && !selected) setSelected(highlighted)
+    if (highlighted && !selected) flushSync(() => setSelected(highlighted))
   }, [highlighted, selected])
 
   useEffect(() => {
@@ -169,4 +170,4 @@ export default memo(function NodeGraph({ relationships = [], characters = [], is
       )}
     </div>
   )
-})
+}

@@ -1,7 +1,7 @@
 import { useEffect, lazy, Suspense, useMemo, useState, useRef } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug, warmUniverseBySlug } from './data/index.js'
-import { ExternalLink, ArrowRight, Star, ListFilter, Search, Compass, Route as RouteIcon, LibraryBig, Network, ShieldAlert, Clock3, Landmark, Repeat2, Coins } from 'lucide-react'
+import { ExternalLink, ArrowRight, Star, ListFilter, Search, Compass, Route as RouteIcon, LibraryBig, Network, ShieldAlert, Clock3, Landmark, Repeat2, Coins, BookOpen } from 'lucide-react'
 import { getClassificationLabel } from './utils/getClassificationLabel'
 import SeoHead from './components/SeoHead'
 import {
@@ -90,17 +90,15 @@ function UniverseLinkCard({ data, compact = false, density = 'default', priority
   const classLabel = getClassificationLabel(data.visualizationHint)
   const isCatalogDense = density === 'catalog'
   const [imageFailed, setImageFailed] = useState(false)
-  const [viewCount, setViewCount] = useState(0)
+  const [viewCount] = useState(() => {
+    if (typeof window === 'undefined') return 0
+    const stored = JSON.parse(window.localStorage.getItem('archive:views') || '{}')
+    return Number(stored[data.id] || 0)
+  })
 
   // Prefetch universe data on hover
   const linkRef = useRef(null)
   const handleMouseEnter = () => warmUniverseBySlug(data.id)
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    const stored = JSON.parse(window.localStorage.getItem('archive:views') || '{}')
-    setViewCount(Number(stored[data.id] || 0))
-  }, [data.id])
 
   return (
     <Link
@@ -213,17 +211,23 @@ function Home() {
   const [sortMode, setSortMode] = useState('latest')
   const [deferSecondary, setDeferSecondary] = useState(false)
   const [compareLeftId, setCompareLeftId] = useState(UNIVERSE_CATALOG[0]?.id || '')
-  const [lastViewed, setLastViewed] = useState(null)
+  const [lastViewed] = useState(() => {
+    if (typeof window === 'undefined') return null
+    const last = String(window.localStorage.getItem('anime-archive:last-viewed:v1') || '').trim().toLowerCase()
+    return last && UNIVERSE_CATALOG_MAP[last] ? UNIVERSE_CATALOG_MAP[last] : null
+  })
+  const [compareRightId, setCompareRightId] = useState(UNIVERSE_CATALOG[1]?.id || '')
+  const [blogPosts, setBlogPosts] = useState([])
 
-  // Get last viewed universe for returning visitor
   useEffect(() => {
     if (typeof window === 'undefined') return
-    const last = String(window.localStorage.getItem('anime-archive:last-viewed:v1') || '').trim().toLowerCase()
-    if (last && UNIVERSE_CATALOG_MAP[last]) {
-      setLastViewed(UNIVERSE_CATALOG_MAP[last])
-    }
+    fetch('/blog-index.json')
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (data?.posts) setBlogPosts(data.posts.slice(0, 3))
+      })
+      .catch(() => {})
   }, [])
-  const [compareRightId, setCompareRightId] = useState(UNIVERSE_CATALOG[1]?.id || '')
 
   useEffect(() => {
     if (typeof window === 'undefined') return undefined
@@ -396,6 +400,30 @@ function Home() {
             >
               <p className="text-[10px] text-cyan-200 uppercase tracking-[0.16em] mb-2">{item.anime}</p>
               <p className="text-xs text-gray-200 leading-relaxed">“{item.insight}”</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <div className="max-w-6xl mx-auto px-6"><div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" /></div>
+
+      <section className="max-w-6xl mx-auto px-6 pt-8 pb-7" aria-labelledby="latest-analysis-heading">
+        <div className="flex items-center justify-between gap-3 mb-4">
+          <div className="flex items-center gap-2">
+            <BookOpen className="w-4 h-4 text-cyan-300" />
+            <h2 id="latest-analysis-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Latest Analysis</h2>
+          </div>
+          <Link to="/blog" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white">All posts →</Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {blogPosts.map((post) => (
+            <Link
+              key={post.slug}
+              to={`/blog/${post.slug}`}
+              className="group flex flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan-400/30 hover:bg-white/[0.04] transition-all duration-200 p-4"
+            >
+              <p className="text-[10px] text-gray-500 uppercase tracking-[0.16em]">{post.date}</p>
+              <h3 className="text-xs font-bold text-white leading-snug group-hover:text-cyan-100 transition-colors line-clamp-3">{post.title}</h3>
+              <p className="text-[11px] text-gray-400 leading-relaxed line-clamp-2 mt-auto">{post.description}</p>
             </Link>
           ))}
         </div>
@@ -591,10 +619,6 @@ function UniversesCatalogRoute() {
 
   const visible = filtered.slice(0, visibleCount)
   const canLoadMore = visibleCount < filtered.length
-
-  useEffect(() => {
-    setVisibleCount(12)
-  }, [search, sortMode, activeCluster])
 
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono px-6 py-14">
