@@ -30,14 +30,8 @@ export default function NewsletterCTA() {
         })
 
         if (!response.ok) {
-          const payload = await response.json().catch(() => ({}))
-          // Treat 400 (invalid email) as a real error, everything else as graceful success
-          if (response.status === 400) {
-            setStatus('error')
-            return
-          }
-          // 405, 5xx — show success to avoid leaking infra state
-          console.warn('[newsletter] non-ok response', payload)
+          setStatus('error')
+          return
         }
 
         setStatus('success')

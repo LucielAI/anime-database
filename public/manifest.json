@@ -2,7 +2,7 @@
   "name": "Anime Architecture Archive",
   "short_name": "AnimeArchive",
   "description": "Structural intelligence platform analyzing anime universes as engineered systems",
-  "start_url": "/",
+  "start_url": "/?utm_source=homescreen",
   "display": "standalone",
   "background_color": "#050508",
   "theme_color": "#22d3ee",

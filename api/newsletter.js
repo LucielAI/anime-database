@@ -46,8 +46,7 @@ export default async function handler(req, res) {
       missingUrl: supabase.missing.url,
       missingKey: supabase.missing.key,
     })
-    // Graceful degradation — don't expose config state to the client
-    return res.status(200).json({ ok: true, requestId })
+    return res.status(503).json({ error: 'Newsletter temporarily unavailable', requestId })
   }
 
   try {
@@ -86,8 +85,7 @@ export default async function handler(req, res) {
         error: parsed || raw,
       })
 
-      // Graceful degradation for table_missing and other infra issues
-      return res.status(200).json({ ok: true, requestId })
+      return res.status(502).json({ error: 'Signup failed, please try again later', requestId })
     }
 
     return res.status(200).json({ ok: true, requestId })
@@ -97,7 +95,6 @@ export default async function handler(req, res) {
       name: error?.name,
       message: error?.message,
     })
-    // Graceful degradation — network issues shouldn't surface as errors to the user
-    return res.status(200).json({ ok: true, requestId })
+    return res.status(502).json({ error: 'Signup failed, please try again later', requestId })
   }
 }
