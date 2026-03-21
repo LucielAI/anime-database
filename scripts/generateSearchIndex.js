@@ -149,7 +149,7 @@ function buildIndex() {
         title: rule.severity || '',
         ability: '',
         description: truncate(rule.loreDesc || '', 200),
-        url: `/universe/${slug}/rule/${index}`,
+        url: `/universe/${slug}`,
       })
       stats.rules++
     })
