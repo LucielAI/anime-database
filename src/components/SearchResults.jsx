@@ -146,7 +146,7 @@ export default function SearchResults() {
       <SeoHead
         title={seoTitle}
         description={seoDescription}
-        canonicalUrl={`https://hashiai.com/search${q ? `?q=${encodeURIComponent(q)}` : ''}`}
+        canonicalUrl={`https://animearchive.app/search${q ? `?q=${encodeURIComponent(q)}` : ''}`}
       />
 
       <main className="max-w-3xl mx-auto">

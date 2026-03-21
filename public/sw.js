@@ -1,10 +1,6 @@
 const CACHE_NAME = 'anime-archive-v1'
-const OFFLINE_URL = '/'
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll([OFFLINE_URL]))
-  )
   self.skipWaiting()
 })
 
@@ -20,24 +16,27 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
 
-  // Cache-first for JSON data files
-  if (url.pathname.includes('/src/data/') && url.pathname.endsWith('.json')) {
+  // Only handle same-origin GET requests — never intercept cross-origin (images, analytics, etc.)
+  if (event.request.method !== 'GET' || url.origin !== self.location.origin) return
+
+  // Skip navigation requests — let the browser handle SPA routing normally
+  if (event.request.mode === 'navigate') return
+
+  // Cache-first for built assets (hashed filenames)
+  if (url.pathname.startsWith('/assets/')) {
     event.respondWith(
       caches.open(CACHE_NAME).then((cache) =>
         cache.match(event.request).then((cached) => {
-          const fetched = fetch(event.request).then((response) => {
+          if (cached) return cached
+          return fetch(event.request).then((response) => {
             if (response.ok) cache.put(event.request, response.clone())
             return response
           })
-          return cached || fetched
         })
       )
     )
     return
   }
 
-  // Network-first for everything else
-  event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
-  )
+  // Network-only for everything else — don't cache HTML, JSON indexes, etc.
 })

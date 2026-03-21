@@ -929,19 +929,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      {/* Floating search button */}
-      <button
-        onClick={() => setSearchOpen(true)}
-        aria-label="Open search (press /)"
-        title="Search (press /)"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 rounded-full bg-[#0d0d18] border border-cyan-400/30 hover:border-cyan-400/70 hover:bg-cyan-400/10 shadow-lg shadow-black/50 transition-all group md:px-3 md:py-3"
-      >
-        <Search className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-cyan-400 group-hover:text-cyan-300 transition-colors md:hidden">Search</span>
-        <kbd className="hidden md:inline-flex items-center px-1.5 py-0.5 rounded bg-white/10 text-[9px] text-gray-400 font-mono">/</kbd>
-      </button>
-
-      {/* Global search modal */}
+      {/* Global search modal — triggered by "/" keyboard shortcut only */}
       <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
       {telemetry.SpeedInsights && <telemetry.SpeedInsights />}
