@@ -100,15 +100,10 @@ function ContentBlock({ block }) {
 
 export default function BlogPost() {
   const { slug } = useParams()
-  const [post, setPost] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [state, setState] = useState({ post: null, loading: true, error: null, loadedSlug: null })
 
   useEffect(() => {
     let cancelled = false
-    setLoading(true)
-    setError(null)
-    setPost(null)
 
     fetch(`/blog/${slug}.json`)
       .then((res) => {
@@ -117,17 +112,17 @@ export default function BlogPost() {
       })
       .then((data) => {
         if (cancelled) return
-        setPost(data)
-        setLoading(false)
+        setState({ post: data, loading: false, error: null, loadedSlug: slug })
       })
       .catch((err) => {
         if (cancelled) return
-        setError(err.message)
-        setLoading(false)
+        setState({ post: null, loading: false, error: err.message, loadedSlug: slug })
       })
 
     return () => { cancelled = true }
   }, [slug])
+
+  const { post, loading, error } = state.loadedSlug === slug ? state : { post: null, loading: true, error: null }
 
   const canonicalUrl = `${SITE_URL}/blog/${slug}`
   const seoTitle = post ? `${post.title} | ${SITE_NAME}` : `Blog | ${SITE_NAME}`
