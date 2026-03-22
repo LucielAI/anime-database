@@ -43,14 +43,14 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
     <div className="space-y-6 font-mono">
       <section aria-labelledby="entity-database-heading">
         <h2 id="entity-database-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Entity Database</h2>
-        <p className="text-xs text-gray-500 leading-relaxed mb-5">
+        <p className="text-xs text-gray-400 leading-relaxed mb-5">
           The entity graph maps key actors and their links so you can inspect control flow, dependencies, and conflict pressure without needing prior story context.
         </p>
-        <p className="text-[11px] text-cyan-200/85 tracking-[0.12em] uppercase mb-3">
+        <p className="text-[11px] text-cyan-200/85 mb-3">
           Start here: inspect how control flows between key actors.
         </p>
       {/* Main visualization */}
-      <p className="text-[10px] text-gray-500 mb-3" id="entity-graph-caption">
+      <p className="text-[10px] text-gray-400 mb-3" id="entity-graph-caption">
         {visualizationCaption}
       </p>
       <figure aria-labelledby="entity-database-heading" aria-describedby="entity-graph-caption">
@@ -83,7 +83,7 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
                   {a.name}
                 </span>
                 <p className="text-[10px] text-orange-300/70 mb-1">VIOLATION: {a.ruleViolated || a.ruleViolation}</p>
-                <p className="text-[10px] text-gray-500">{isSystemMode ? a.systemDesc : a.loreDesc}</p>
+                <p className="text-[10px] text-gray-400">{isSystemMode ? a.systemDesc : a.loreDesc}</p>
               </div>
             ))}
           </div>

@@ -30,7 +30,7 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
       {rules.length > 0 && (
         <section aria-labelledby="rules-heading">
           <h2 id="rules-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Rules</h2>
-          <p className="text-xs text-gray-500 leading-relaxed mb-5">
+          <p className="text-xs text-gray-400 leading-relaxed mb-5">
             Core laws define non-negotiable constraints. These are the universe-level conditions that shape viable strategies and punish illegal moves.
           </p>
         <div className="grid grid-cols-1 gap-6">
@@ -65,7 +65,7 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
       {anomalies.length > 0 && (
         <section aria-labelledby="anomalies-heading" className="mt-16">
           <h2 id="anomalies-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Anomalies</h2>
-          <p className="text-xs text-gray-500 leading-relaxed mb-5">
+          <p className="text-xs text-gray-400 leading-relaxed mb-5">
             Anomalies expose edge cases where normal laws fail, are bypassed, or are intentionally exploited. They are crucial for understanding where the system is brittle.
           </p>
         <div className="pt-8 border-t border-dashed" style={{ borderColor: `${theme?.accent || '#f59e0b'}50` }}>
@@ -94,7 +94,7 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
       {causalEvents.length > 0 && (
         <section aria-labelledby="causal-events-heading">
           <h2 id="causal-events-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Causal Events</h2>
-          <p className="text-xs text-gray-500 leading-relaxed mb-4">
+          <p className="text-xs text-gray-400 leading-relaxed mb-4">
             This timeline captures high-leverage events and their trigger-consequence chains so the system can be read as an evolving mechanism rather than isolated moments.
           </p>
         <div>
@@ -129,7 +129,7 @@ export default function CoreLawsTab({ data, isSystemMode, theme }) {
                           </span>
                         </td>
                         <td className="py-2 px-3 text-gray-500 hidden sm:table-cell">{evt.trigger}</td>
-                        <td className="py-2 px-3 text-gray-500">{evt.consequence}</td>
+                        <td className="py-2 px-3 text-gray-400">{evt.consequence}</td>
                       </tr>
                     )
                   })}

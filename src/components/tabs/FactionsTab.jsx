@@ -44,7 +44,7 @@ export default function FactionsTab({ data, isSystemMode, theme }) {
     <div className="animate-fade-in font-mono">
       <section aria-labelledby="factions-heading">
         <h2 id="factions-heading" className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white mb-2">Factions</h2>
-        <p className="text-xs text-gray-500 leading-relaxed mb-5">
+        <p className="text-xs text-gray-400 leading-relaxed mb-5">
           Factions represent institutional power: who can mobilize people, enforce doctrine, and sustain strategic campaigns over time.
         </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

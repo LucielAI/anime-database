@@ -496,8 +496,8 @@ export default function Dashboard({ data }) {
       {/* Desktop Subtle Link - End of Page (Solo Leveling only) */}
       {data?.id === 'sololeveling' && (
         <div className="max-w-6xl mx-auto px-6 mt-8 mb-12 mb-16 md:mb-24">
-          <p className="text-center text-xs text-gray-500">
-            <span className="text-gray-500">Continue your watch:</span>
+          <p className="text-center text-xs text-gray-400">
+            <span className="text-gray-400">Continue your watch:</span>
             <a
               href="https://www.amazon.com/dp/B0G3PC5LX2/ref=cm_sw_r_as_gl_apa_gl_i_4B03CWS4T2XWERHGFR58?linkCode=ml1&tag=hashiai-20&linkId=2377a03ae811e823cf9ba44a6d6df18a"
               target="_blank"
@@ -544,8 +544,8 @@ export default function Dashboard({ data }) {
       {/* Desktop Subtle Link - Jujutsu Kaisen */}
       {data?.id === 'jjk' && (
         <div className="max-w-6xl mx-auto px-6 mt-8 mb-12 mb-16 md:mb-24">
-          <p className="text-center text-xs text-gray-500">
-            <span className="text-gray-500">Continue your watch:</span>
+          <p className="text-center text-xs text-gray-400">
+            <span className="text-gray-400">Continue your watch:</span>
             <a
               href="https://www.amazon.com/dp/B0BP8Z6C52/ref=cm_sw_r_as_gl_apa_gl_i_CWK2N3JQY2M09VFD8XA1?linkCode=ml1&tag=hashiai-20&linkId=715f5e7c6b7b543316cb761fbcbaab77"
               target="_blank"
@@ -591,8 +591,8 @@ export default function Dashboard({ data }) {
       {/* Desktop Subtle Link - My Hero Academia */}
       {data?.id === 'mha' && (
         <div className="max-w-6xl mx-auto px-6 mt-8 mb-12 mb-16 md:mb-24">
-          <p className="text-center text-xs text-gray-500">
-            <span className="text-gray-500">Continue your watch:</span>
+          <p className="text-center text-xs text-gray-400">
+            <span className="text-gray-400">Continue your watch:</span>
             <a
               href="https://www.amazon.com/dp/B01MR7O5UT/ref=cm_sw_r_as_gl_apa_gl_i_T2DG0N7B4VN7X0E7VPJD?linkCode=ml1&tag=hashiai-20&linkId=17aed0c66cb05488cfb934cccbc0a1ee"
               target="_blank"

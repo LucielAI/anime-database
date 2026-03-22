@@ -202,12 +202,12 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
 }
 
 const STRUCTURE_VISUALS = {
-  'relational-systems': { icon: Network, tone: 'border-cyan-300/30 hover:border-cyan-300/60 shadow-[0_0_0_1px_rgba(34,211,238,0.08)]', badge: 'text-cyan-200 bg-cyan-400/10' },
-  'counterplay-systems': { icon: ShieldAlert, tone: 'border-amber-300/30 hover:border-amber-300/60 shadow-[0_0_0_1px_rgba(251,191,36,0.08)]', badge: 'text-amber-200 bg-amber-400/10' },
-  'timeline-systems': { icon: Clock3, tone: 'border-purple-300/30 hover:border-purple-300/60 shadow-[0_0_0_1px_rgba(196,181,253,0.08)]', badge: 'text-purple-200 bg-purple-400/10' },
-  'control-systems': { icon: Landmark, tone: 'border-rose-300/30 hover:border-rose-300/60 shadow-[0_0_0_1px_rgba(251,113,133,0.08)]', badge: 'text-rose-200 bg-rose-400/10' },
-  'closed-loop-systems': { icon: Repeat2, tone: 'border-emerald-300/30 hover:border-emerald-300/60 shadow-[0_0_0_1px_rgba(16,185,129,0.08)]', badge: 'text-emerald-200 bg-emerald-400/10' },
-  'power-economy-systems': { icon: Coins, tone: 'border-indigo-300/30 hover:border-indigo-300/60 shadow-[0_0_0_1px_rgba(129,140,248,0.08)]', badge: 'text-indigo-200 bg-indigo-400/10' },
+  'relational-systems': { icon: Network, tone: 'border-cyan-400/50 hover:border-cyan-400/80 shadow-[0_0_0_1px_rgba(34,211,238,0.15)]', badge: 'text-cyan-200 bg-cyan-400/10' },
+  'counterplay-systems': { icon: ShieldAlert, tone: 'border-amber-400/50 hover:border-amber-400/80 shadow-[0_0_0_1px_rgba(251,191,36,0.15)]', badge: 'text-amber-200 bg-amber-400/10' },
+  'timeline-systems': { icon: Clock3, tone: 'border-purple-400/50 hover:border-purple-400/80 shadow-[0_0_0_1px_rgba(196,181,253,0.15)]', badge: 'text-purple-200 bg-purple-400/10' },
+  'control-systems': { icon: Landmark, tone: 'border-rose-400/50 hover:border-rose-400/80 shadow-[0_0_0_1px_rgba(251,113,133,0.15)]', badge: 'text-rose-200 bg-rose-400/10' },
+  'closed-loop-systems': { icon: Repeat2, tone: 'border-emerald-400/50 hover:border-emerald-400/80 shadow-[0_0_0_1px_rgba(16,185,129,0.15)]', badge: 'text-emerald-200 bg-emerald-400/10' },
+  'power-economy-systems': { icon: Coins, tone: 'border-indigo-400/50 hover:border-indigo-400/80 shadow-[0_0_0_1px_rgba(129,140,248,0.15)]', badge: 'text-indigo-200 bg-indigo-400/10' },
 }
 
 function Home() {
@@ -636,7 +636,16 @@ function UniversesCatalogRoute() {
           <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">Universe Catalog</h1>
           <Link to="/" className="px-3 py-2 text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white rounded-lg border border-white/10 hover:border-white/20 transition-colors">← Back Home</Link>
         </div>
-        <p className="text-xs text-gray-300/80 max-w-3xl mb-6">Search and sort the archive using lightweight catalog metadata only. Universe payloads still lazy-load when you open a route.</p>
+        <p className="text-xs text-gray-300/80 max-w-3xl mb-4">Search and sort the archive using lightweight catalog metadata only. Universe payloads still lazy-load when you open a route.</p>
+
+        {/* Archive stats bar */}
+        <div className="mb-6 flex flex-wrap justify-start gap-4 text-[10px] text-gray-400 tracking-widest uppercase">
+          <span>{UNIVERSE_CATALOG.length} Universes</span>
+          <span className="text-white/10">·</span>
+          <span>{UNIVERSE_CATALOG.reduce((s, a) => s + (a.stats?.characters || 0), 0)} Characters</span>
+          <span className="text-white/10">·</span>
+          <span>{new Set(UNIVERSE_CATALOG.map((a) => a.visualizationHint)).size} System Types</span>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
           <label className="md:col-span-2 flex items-center gap-2 border border-white/10 rounded-lg px-3 bg-white/5">
