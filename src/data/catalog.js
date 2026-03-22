@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'dragonballz', 'one-piece']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'one-piece']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -90,6 +90,11 @@ export const UNIVERSE_CATALOG = [
   {
     id: 'dragonballz', anime: 'Dragon Ball Z', tagline: 'A vertical ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome', malId: 813, visualizationHint: 'counter-tree', visualizationReason: 'Dragon Ball Z is a ki-based power scaling system organized as a vertical combat hierarchy. The counter-tree captures the core structural thesis: power levels as the root, transformation tiers as branching nodes, and specific matchups determining which fighter counters which.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1277/142022.jpg',
     themeColors: { primary: '#f97316', secondary: '#1e3a5f', accent: '#facc15', glow: 'rgba(249,115,22,0.35)', tabActive: '#f97316', badgeBg: 'rgba(30,58,95,0.18)', badgeText: '#facc15', modeGlow: 'rgba(250,204,21,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
+    stats: { characters: 10, powerSystem: 5, rules: 5 }
+  },
+  {
+    id: 'bleach', anime: 'Bleach', tagline: 'A multi-faction spiritual network where Reiatsu dominance, Zanpakuto resonance, and dimensional boundaries between Soul Society, Hueco Mundo, and the Human World determine survival', malId: 269, visualizationHint: 'node-graph', visualizationReason: 'Bleach is a faction-network universe where Soul Society, Hueco Mundo, the Human World, and the Quincy domain exist as distinct but interacting spiritual layers.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1541/147774l.jpg',
+    themeColors: { primary: '#1e3a8a', secondary: '#0f172a', accent: '#dc2626', glow: 'rgba(30,58,138,0.35)', tabActive: '#1e3a8a', badgeBg: 'rgba(220,38,38,0.12)', badgeText: '#dc2626', modeGlow: 'rgba(30,58,138,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
     stats: { characters: 10, powerSystem: 5, rules: 5 }
   },
   {

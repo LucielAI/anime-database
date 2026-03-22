@@ -1,0 +1,626 @@
+{
+  "anime": "Bleach",
+  "tagline": "A multi-faction spiritual network where Reiatsu dominance, Zanpakuto resonance, and dimensional boundaries between Soul Society, Hueco Mundo, and the Human World determine survival",
+  "malId": 269,
+  "themeColors": {
+    "primary": "#1e3a8a",
+    "secondary": "#0f172a",
+    "accent": "#dc2626",
+    "glow": "rgba(30,58,138,0.35)",
+    "tabActive": "#1e3a8a",
+    "badgeBg": "rgba(220,38,38,0.12)",
+    "badgeText": "#dc2626",
+    "modeGlow": "rgba(30,58,138,0.25)",
+    "heroGradient": "rgba(5,10,20,0.95)"
+  },
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
+  "visualizationHint": "node-graph",
+  "visualizationReason": "Bleach is a faction-network universe where Soul Society, Hueco Mundo, the Human World, and the Quincy domain exist as distinct but interacting spiritual layers. The node-graph captures the structural thesis: each faction is a node, dimensional gateways are edges, and key individuals (Ichigo, Aizen, the Royal Guard) serve as bridge nodes connecting otherwise separate domains.",
+  "headerFlavor": {
+    "loreQuote": "If you are not going to cut it with that sword, throw it away and become a human!",
+    "sysWarning": "// [SYSTEM STATUS]: REIATSU DETECTION — SOUL SOCIETY NETWORK UNREACHABLE",
+    "sysWarningColor": "blue"
+  },
+  "backgroundMotif": "radial",
+  "revealOverlay": "gradient-border",
+  "introductionSummary": "Bleach operates as a multi-faction network where spiritual energy (Reiatsu) flows between distinct organizational domains — Soul Society, Hueco Mundo, the Human World, and the realm of the Quincy. The analytical lens is relational: power derives not just from individual Reiatsu levels but from factional allegiance, Quincy-Hollow hybridity, and the Zanpakuto resonance relationship between Shinigami and their sword. The system's core tension is dimensional — conflicts cross-realm boundaries, and survival requires understanding the interaction rules between spiritually adjacent domains.",
+  "hero": {
+    "systemType": "relational",
+    "microHook": "Reiatsu is dominance; Zanpakuto is identity; dimensional boundaries are the firewall.",
+    "thesis": "A faction-network where Reiatsu dominance and cross-dimensional allegiance determine survival.",
+    "primarySystemType": "factions"
+  },
+  "aiInsights": {
+    "casual": "Bleach is about a teenager who can see ghosts who gets a sword, accidentally becomes a death god, and then spends the rest of the series fighting progressively more powerful people from the afterlife while his friends try not to get killed. It's basically an elaborate bureaucracy of the dead with really sharp swords, where the real villain was a nice guy all along who just wanted to become a god because he was lonely.",
+    "deep": "Bleach's system is a spiritual energy network model where Reiatsu functions as a dominance metric — the person with more spiritual pressure automatically wins any confrontation, making it a pure hierarchy system. The genius of the worldbuilding is the Zanpakuto as a character-within-a-character: each Shinigami's sword is a literal manifestation of their inner self with its own name, personality, and combat style. This makes the weapon-fighter relationship deeply personal rather than instrumental. The Hollowfication pathway represents a corruption of the spiritual network — when you consume too much, you lose the self. Aizen's Hogyoku represents the ultimate hack: a device that fulfills desires, making the system itself exploitable through will rather than training. The Quincy extinction by the Soul Society represents institutional violence against a rival power paradigm, and Uryuu's survival and revenge arc is the system's acknowledgment that institutional memory of violence persists."
+  },
+  "powerSystem": [
+    {
+      "name": "Reiatsu",
+      "subtitle": "Spiritual Pressure Dominance",
+      "loreDesc": "The fundamental spiritual energy that powers all combat. Higher Reiatsu means automatic压制 lower Reiatsu — a pure dominance hierarchy where overwhelming spiritual pressure makes fights deterministic regardless of technique.",
+      "systemDesc": "The spiritual dominance metric — Reiatsu is not just a resource but an absolute hierarchy. In any Reiatsu-vs-Reiatsu confrontation, the higher always wins regardless of technique or strategy. This creates a system where growth means raising one's absolute Reiatsu ceiling, not developing better techniques.",
+      "loreSubtitle": "Spiritual Pressure Dominance",
+      "systemSubtitle": "Absolute Hierarchy Metric",
+      "icon": "Zap",
+      "color": "blue-400",
+      "signatureMoment": "Yamamoto's Reiatsu threatening to burn all of Soul Society — a single Shinigami's spiritual pressure that could destroy an entire realm."
+    },
+    {
+      "name": "Zanpakuto",
+      "subtitle": "Sword-Soul Resonance",
+      "loreDesc": "Each Shinigami's sword contains a unique spiritual entity called a Zanpakuto spirit. The sword and the Shinigami are partners whose resonance determines combat power. Shikai (first release) and Bankai (second release) are the two expression tiers.",
+      "systemDesc": "The identity-as-weapon system — each Shinigami's sword is a literal manifestation of their inner self. This means growth requires self-understanding, not just training. Zanka no Tachi is as unique as its owner (a fire-based sword that burns everything including the wielder's lifespan), demonstrating that Zanpakuto personalities directly determine tactical constraints.",
+      "loreSubtitle": "Sword-Soul Resonance",
+      "systemSubtitle": "Identity-Linked Combat Form",
+      "icon": "Swords",
+      "color": "indigo-400",
+      "signatureMoment": "Ichigo and Zangetsu's final Bankai clash — the sword and wielder becoming fully synchronized after years of relationship conflict."
+    },
+    {
+      "name": "Hollowfication",
+      "subtitle": "Spiritual Corruption Pathway",
+      "loreDesc": "When Hollows consume too many souls or Shinigami suppress their Hollow nature, corruption occurs. The boundary between Shinigami and Hollow is permeable — Inner Hollows represent the contained corruption that makes Ichigo simultaneously more powerful and more dangerous.",
+      "systemDesc": "The corruption mechanic — Hollowfication represents the cost of the spiritual energy system. Power has a mental health price: the more spiritual energy you use, the more likely you are to lose your identity. The Visored are those who integrated the corruption rather than fighting it.",
+      "loreSubtitle": "Spiritual Corruption Pathway",
+      "systemSubtitle": "Power-Identity Trade-off",
+      "icon": "Skull",
+      "color": "purple-400",
+      "signatureMoment": "Ichigo's Hollowfication against Ulquiorra — the moment his Inner Hollow saves him by taking over, demonstrating that his power is contingent on accepting the monster inside."
+    },
+    {
+      "name": "Quincy Powers",
+      "subtitle": "Reishi Absorption Paradigm",
+      "loreDesc": "Quincy draw Reishi (spiritual matter) directly from the air rather than generating their own Reiatsu. This makes them independent of Soul Society's infrastructure but vulnerable to Hollow-based attacks since Hollows consume Reishi-based materials.",
+      "systemDesc": "The alternative power paradigm — Quincy represent a fundamentally different relationship with spiritual energy that doesn't require institutional infrastructure. Uryuu's survival after the Quincy genocide demonstrates that decentralized power models can persist after institutional collapse.",
+      "loreSubtitle": "Reishi Absorption Paradigm",
+      "systemSubtitle": "Institutional-Independent Power",
+      "icon": "Crosshair",
+      "color": "cyan-400",
+      "signatureMoment": "Uryuu using his Quincy bow to pierce through Mayuri's bankai — proving the Quincy paradigm can defeat Soul Society's most advanced techniques."
+    },
+    {
+      "name": "Fullbring",
+      "subtitle": "Human Spiritual Heritage",
+      "loreDesc": "Fullbringers are humans born with Hollow powers inherited from near-death experiences where a Hollow's chain of fate was partially absorbed. Their powers express through objects of personal significance — Chad's arms are his link to his mother's spiritual protection.",
+      "systemDesc": "The human potential pathway — Fullbring represents what happens when the spiritual network touches human consciousness without institutional mediation. It's the system's most democratic power model: any human with the right experience can access spiritual combat.",
+      "loreSubtitle": "Human Spiritual Heritage",
+      "systemSubtitle": "Democratized Spiritual Power",
+      "icon": "Sparkles",
+      "color": "amber-400",
+      "signatureMoment": "Chad's Fullbring activating for the first time — the proof that humans can participate in the spiritual network without dying or becoming Shinigami."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Higher Reiatsu dominates lower Reiatsu absolutely",
+      "subtitle": "The Reiatsu Hierarchy Theorem",
+      "loreConsequence": "A captain-level Shinigami can defeat thousands of lower-level fighters without technique — their spiritual pressure alone压倒s all opposition. This makes the Gotei 13's hierarchy a pure power hierarchy, not a skill hierarchy.",
+      "systemEquivalent": "A complete hierarchy dominance rule — the spiritual energy metric is not just a resource but an absolute ordering. Higher Reiatsu means you cannot be defeated by lower Reiatsu regardless of technique, strategy, or numbers.",
+      "severity": "fatal",
+      "loreSubtitle": "The Reiatsu Hierarchy Theorem",
+      "systemSubtitle": "Absolute Dominance Protocol"
+    },
+    {
+      "name": "Zanpakuto and Shinigami are one entity split in two",
+      "subtitle": "The Resonant Identity Rule",
+      "loreConsequence": "A Shinigami cannot achieve Bankai without understanding their Zanpakuto's true nature. This means self-knowledge is the prerequisite for the highest combat power — the sword is not a tool but a mirror.",
+      "systemEquivalent": "An identity-as-power gate — the highest tier of combat ability requires psychological integration with an aspect of the self. This makes the upgrade path introspective rather than purely physical.",
+      "severity": "high",
+      "loreSubtitle": "The Resonant Identity Rule",
+      "systemSubtitle": "Identity Integration Gate"
+    },
+    {
+      "name": "The boundary between Hollow and Shinigami is permeable",
+      "subtitle": "The Corruption Threshold",
+      "loreConsequence": "Hollowfication occurs when the balance shifts toward the Hollow side. Shinigami who Hollowfy either become Visored (integrated) or lose their identity entirely (become Menos). The inner Hollow is a constant threat and potential resource.",
+      "systemEquivalent": "A power-corrupts mechanism — spiritual power accumulation increases the probability of identity dissolution. The more power you gain, the more you risk losing the self that wields it.",
+      "severity": "high",
+      "loreSubtitle": "The Corruption Threshold",
+      "systemSubtitle": "Identity Dissolution Risk"
+    },
+    {
+      "name": "Quincy powers are incompatible with Hollow-based techniques",
+      "subtitle": "The Quincy-Hollow Incompatibility Theorem",
+      "loreConsequence": "Quincy Reishi absorption cannot coexist with Hollow consumption — Uryuu's spiritweapon cannot be used alongside Hollow powers. This creates a permanent trade-off between Quincy and Hollow-based combat paths.",
+      "systemEquivalent": "A paradigm incompatibility — two valid spiritual power models are mutually exclusive at the individual level. This means the system has no unified spiritual framework and no character can access both Quincy and Hollow powers simultaneously.",
+      "severity": "medium",
+      "loreSubtitle": "The Quincy-Hollow Incompatibility Theorem",
+      "systemSubtitle": "Paradigm Exclusion Rule"
+    },
+    {
+      "name": "Aizen's Hogyoku fulfills desires unconditionally",
+      "subtitle": "The Desire Hack",
+      "loreConsequence": "The Hogyoku is a device that reads conscious and unconscious desires and makes them real. This means Aizen's power is fundamentally different — not training, not Reiatsu growth, but desire-fulfillment.",
+      "systemEquivalent": "A system exploit — the Hogyoku bypasses all normal Reiatsu constraints by operating on psychological rather than physiological inputs. This is the only known mechanism for a Shinigami to achieve Captain-level power without standard Zanpakuto integration.",
+      "severity": "fatal",
+      "loreSubtitle": "The Desire Hack",
+      "systemSubtitle": "Desire-Based System Access"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Ichigo Kurosaki",
+      "title": "Substitute Shinigami",
+      "rank": "Bridge Node / Universal Hybrid",
+      "dangerLevel": 10,
+      "loreBio": "A human who can see ghosts until he becomes a Shinigami by accident. Ichigo's unique power comes from being simultaneously connected to every spiritual network — Shinigami, Hollow, Quincy, and Fullbringer — making him the only character who can cross all dimensional boundaries.",
+      "systemBio": "The hub node of the entire Bleach network — Ichigo's structural position is unique because he is connected to every faction simultaneously. His Reiatsu is the sum of four spiritual networks, making him a bridge node that connects Soul Society, Hueco Mundo, the Human World, and the Quincy domain. No other character has this cross-domain connectivity.",
+      "gradientFrom": "orange-950",
+      "gradientTo": "red-900",
+      "accentColor": "orange-400",
+      "icon": "Zap",
+      "signatureMoment": "Achieving Bankai for the first time against Renji — his Reiatsu overwhelmed an entire Soul Society barracks, proving he was never just a human.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/512788.jpg",
+      "_fetchFailed": false,
+      "malId": 5,
+      "role": "Main"
+    },
+    {
+      "name": "Sosuke Aizen",
+      "title": "Captain of the 5th Division",
+      "rank": "System Architect / True Antagonist",
+      "dangerLevel": 10,
+      "loreBio": "A perfectly composed Shinigami captain who orchestrated his own betrayal, murder, and exile. His entire plan was to use the Hogyoku to transcend Shinigami, Hollow, and Quincy into something new. He was so perfectly composed that no one suspected him for over a century.",
+      "systemBio": "The system architect — Aizen's structural position is unique: he is the only character who understood the system well enough to design its replacement. His 100+ years of planning represent the longest-running strategic operation in the series, demonstrating that institutional knowledge is itself a power.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "indigo-900",
+      "accentColor": "blue-400",
+      "icon": "Eye",
+      "signatureMoment": "Revealing his true form after being sealed — he transcended Shinigami, Hollow, and Quincy categories entirely, becoming the thing the system had no defense against.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/73909.jpg",
+      "_fetchFailed": false,
+      "malId": 1086,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Ulquiorra Cifer",
+      "title": "Fourth Espada",
+      "rank": "Emotionless Apex / Espada Tier",
+      "dangerLevel": 9,
+      "loreBio": "The fourth strongest Arrancar, Ulquiorra represents pure emptiness as a philosophy. He genuinely cannot understand emotions, which makes him the most dangerous fighter because he has nothing to lose and no emotional investment in outcomes.",
+      "systemBio": "The zero-emotion node — Ulquiorra's structural advantage is that he has no psychological constraints on combat effectiveness. While other fighters are motivated by fear, anger, or love, Ulquiorra fights with pure calculation.",
+      "gradientFrom": "emerald-950",
+      "gradientTo": "green-900",
+      "accentColor": "green-400",
+      "icon": "Skull",
+      "signatureMoment": "Releasing his Resurreccion and revealing a second Hollow form — proving that even among Espada, he had powers no one knew about.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/258963.jpg",
+      "_fetchFailed": false,
+      "malId": 1200,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Byakuya Kuchiki",
+      "title": "Captain of the 6th Division",
+      "rank": "Noble Tier / Technical Apex",
+      "dangerLevel": 8,
+      "loreBio": "A noble Shinigami who represents duty over emotion. He married Rukia to protect her from execution but couldn't save her without violating Soul Society law. His Bankai, Senbonzakura, scatters into thousands of blade petals — the most technically precise power in the series.",
+      "systemBio": "The institutional node — Byakuya's structural position represents the tension between institutional loyalty and personal morality. He follows the law until the law demands something unconscionable, then he breaks it. His Zanpakuto reflects this: rigid discipline that scatters into perfect, beautiful, deadly precision.",
+      "gradientFrom": "pink-950",
+      "gradientTo": "rose-900",
+      "accentColor": "pink-400",
+      "icon": "Flower2",
+      "signatureMoment": "Using Senbonzakura Kageyoshi against Zommari — a thousand blade petals each moving independently, turning a technique into a battlefield control tool.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/78215.jpg",
+      "_fetchFailed": false,
+      "malId": 6,
+      "role": "Main"
+    },
+    {
+      "name": "Kenpachi Zaraki",
+      "title": "Captain of the 11th Division",
+      "rank": "Berserker Tier / Unrefined Apex",
+      "dangerLevel": 9,
+      "loreBio": "The strongest raw fighter in Soul Society who never uses his full power because it makes fights boring. He deliberately handicaps himself with an unsealed Zanpakuto to find interesting opponents. His joy in combat is purely aesthetic — he doesn't care about winning, only about how beautiful the fight is.",
+      "systemBio": "The unoptimized apex — Kenpachi is structurally the most powerful Shinigami but the least developed in terms of technique. His power ceiling is never shown because he always fights below his actual limit. This makes him the series' most ambiguous power node.",
+      "gradientFrom": "gray-950",
+      "gradientTo": "slate-800",
+      "accentColor": "gray-400",
+      "icon": "Swords",
+      "signatureMoment": "Finally sealing his eye patch (which suppressed his power) and fighting Nnoitra — the moment the world's strongest raw fighter finally used everything he had.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/1/1211.jpg",
+      "_fetchFailed": false,
+      "malId": 1211,
+      "role": "Main"
+    },
+    {
+      "name": "Grimmjow Jaggerjack",
+      "title": "Sixth Espada",
+      "rank": "Aggression Tier / Pure Combatant",
+      "dangerLevel": 8,
+      "loreBio": "The sixth Espada represents pure aggression without agenda. Unlike Ulquiorra's cold emptiness, Grimmjow is passionately angry — he fights because he loves fighting, and he hates Ichigo because Ichigo represents a rival for that love.",
+      "systemBio": "The pure-combat node — Grimmjow's structural position is purely about the fight, not ideology, loyalty, or revenge. He's the series' most straightforward fighter: stronger opponents are better, fighting is good, losing to weaker opponents is unacceptable.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "cyan-900",
+      "accentColor": "blue-400",
+      "icon": "Zap",
+      "signatureMoment": "Declaring Ichigo his rival and fighting to the death — an Arrancar treating a mortal enemy as an equal because only equal opponents make fights worth having.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/1/1199.jpg",
+      "_fetchFailed": false,
+      "malId": 1199,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Rukia Kuchiki",
+      "title": "Shinigami of the 13th Division",
+      "rank": "Institutional Node / Emotional Anchor",
+      "dangerLevel": 5,
+      "loreBio": "The Shinigami who gave Ichigo his powers and became his emotional anchor. Rukia represents the human cost of Soul Society's institutional hierarchy — she was sentenced to death for giving a human her powers, which broke the most fundamental rule.",
+      "systemBio": "The institutional-outlier node — Rukia's structural position is defined by her violation of the Shinigami-human boundary. Her execution sentence represents institutional enforcement of dimensional separation, which Ichigo's existence fundamentally challenges.",
+      "gradientFrom": "purple-950",
+      "gradientTo": "violet-900",
+      "accentColor": "purple-400",
+      "icon": "Moon",
+      "signatureMoment": "Receiving Ichigo's powers back and achieving Bankai — the moment she became strong enough to save herself rather than be saved.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/78215.jpg",
+      "_fetchFailed": false,
+      "malId": 6,
+      "role": "Main"
+    },
+    {
+      "name": "Uryuu Ishida",
+      "title": "Last Quincy",
+      "rank": "Lone Wolf / Quincy Heritage",
+      "dangerLevel": 7,
+      "loreBio": "The last Quincy, Uryuu fights alone because the Quincy were exterminated by Soul Society. His father's survival represents the system's failure to completely eliminate a rival paradigm. Uryuu's arc is about choosing to fight even when there's no hope.",
+      "systemBio": "The anti-institutional node — Uryuu's structural position represents the system's failure to fully eliminate alternative power models. His survival and revenge arc prove that institutional genocide cannot destroy an idea.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "indigo-900",
+      "accentColor": "blue-400",
+      "icon": "Crosshair",
+      "signatureMoment": "Using the Silver Arrow — a Quincy technique that exists specifically to kill Aizen, proving that a lone survivor of genocide can be the one thing the system cannot defend against.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/139189.jpg",
+      "_fetchFailed": false,
+      "malId": 564,
+      "role": "Main"
+    },
+    {
+      "name": "Orihime Inoue",
+      "title": "The Shield",
+      "rank": "Event Rejection / Human Tier",
+      "dangerLevel": 6,
+      "loreBio": "A human with powers that reject events entirely, not just deflect attacks. Her ability (Shun Shun Rikka) can reject and nullify phenomena, making her effectively immune to any attack she sees coming. She is the system's proof that defense is more powerful than offense.",
+      "systemBio": "The absolute defense node — Orihime's structural advantage is that her powers don't interact with the Reiatsu hierarchy at all. She doesn't defeat opponents; she simply makes their attacks never have happened. This makes her simultaneously the most powerful support character and the most limited combatant.",
+      "gradientFrom": "orange-950",
+      "gradientTo": "amber-900",
+      "accentColor": "orange-400",
+      "icon": "Shield",
+      "signatureMoment": "Rejecting the death of a person she loved — the moment she demonstrated that her powers operate at the level of events rather than matter.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/505076.jpg",
+      "_fetchFailed": false,
+      "malId": 7,
+      "role": "Main"
+    },
+    {
+      "name": "Renji Abarai",
+      "title": "Lieutenant of the 6th Division",
+      "rank": "Mid-Tier Institutional / Alternative Path",
+      "dangerLevel": 6,
+      "loreBio": "A former street thug who rose through Soul Society's ranks to become Byakuya's lieutenant. Renji represents what Ichigo could have become if he'd joined Soul Society — a powerful but institutionally constrained fighter.",
+      "systemBio": "The institutional ladder node — Renji's structural position demonstrates that Soul Society has genuine social mobility (unlike most anime bureaucracies). His rise from poverty to lieutenant proves the system can reward merit, even as it maintains rigid hierarchy.",
+      "gradientFrom": "red-950",
+      "gradientTo": "orange-900",
+      "accentColor": "red-400",
+      "icon": "Swords",
+      "signatureMoment": "Fighting Byakuya with his Bankai, Zabimaru (a serpentine blade construct) — the lieutenant whose ambition to surpass his captain drove him to Bankai.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/171877.jpg",
+      "_fetchFailed": false,
+      "malId": 906,
+      "role": "Main"
+    }
+  ],
+  "factions": [
+    {
+      "name": "Soul Society (Gotei 13)",
+      "description": "The governing body of souls in the afterlife. 13 captain-level divisions with hierarchical command structure. The institutional power of the spiritual world.",
+      "role": "neutral",
+      "icon": "Building",
+      "loreDesc": "Soul Society is the bureaucratic afterlife — souls live there after dying, Shinigami maintain order. The Gotei 13 (13 captain-level divisions) are the military enforcement arm. It represents institutional power with genuine moral ambiguity: it executes traitors but also protects the innocent.",
+      "systemDesc": "A rigid hierarchical institution with genuine power (captains can defeat armies with Reiatsu alone) but limited adaptability. Soul Society's response to new threats ( Quincy resurgence, Aizen's betrayal) is consistently reactive rather than proactive."
+    },
+    {
+      "name": "Espada (Arrancar Army)",
+      "description": "Hollows who shed their masks to gain humanoid form and greater power through Resurreccion. Ruled by Aizen from Hueco Mundo.",
+      "role": "antagonist",
+      "icon": "Skull",
+      "loreDesc": "The Espada are the top 10 Arrancar who have achieved humanoid form. Each carries a fraction of Aizen's Hogyoku-enhanced power. They represent the Hollow side of the spiritual network — power without morality.",
+      "systemDesc": "A hierarchical army organized around Espada rank (1-10, with 1 being strongest). Each Espada's released form (Resurreccion) represents a unique expression of their Hollow nature, making them individually powerful but organizationally weaker than Soul Society."
+    },
+    {
+      "name": "Visored (Hollowfied Shinigami)",
+      "description": "Shinigami who have merged with Hollow powers, gaining both Shinigami techniques and Hollow abilities. The integration model of corruption management.",
+      "role": "neutral",
+      "icon": "Eye",
+      "loreDesc": "The Visored are Shinigami who underwent Hollowfication and survived by integrating rather than fighting the corruption. They represent the first successful hybrid of Shinigami and Hollow power paradigms.",
+      "systemDesc": "The integrated corruption model — Visored prove that Hollow power can be used without identity dissolution if the integration is complete. They are the system's proof-of-concept for cross-paradigm power combination."
+    },
+    {
+      "name": "Quincy",
+      "description": "Humans who absorb Reishi from the air rather than generating Reiatsu. Historically hunted Hollows before the Soul Society exterminated them.",
+      "role": "neutral",
+      "icon": "Crosshair",
+      "loreDesc": "The Quincy were a tradition of spiritually-gifted humans who hunted Hollows using bow-and-arrow techniques. Soul Society exterminated them to prevent Quincy from destabilizing the soul cycle balance. Only Uryuu survived.",
+      "systemDesc": "A fundamentally different spiritual paradigm based on absorption rather than generation. The Quincy-Soul Society conflict is the system's oldest and most violent institutional rivalry, proving that even after victory, rival paradigms can survive through a single survivor."
+    },
+    {
+      "name": "Fullbringers",
+      "description": "Humans born with Hollow powers inherited from their parents' near-death experiences. Their powers express through objects of personal significance.",
+      "role": "neutral",
+      "icon": "Sparkles",
+      "loreDesc": "Fullbringers are humans whose parents survived Hollow attacks because a Hollow's chain of fate was partially absorbed during the attack. This gives their children the ability to manipulate the spiritual essence of objects.",
+      "systemDesc": "The democratized power model — Fullbring represents spiritual power accessible to humans without institutional infrastructure. Chad and his Fullbring powers demonstrate that the spiritual network is not exclusively Shinigami territory."
+    },
+    {
+      "name": "Royal Guard",
+      "description": "The elite guardians of the Soul King, who exist above the Gotei 13 captain level. The highest authority in the spiritual world.",
+      "role": "neutral",
+      "icon": "Crown",
+      "loreDesc": "The Royal Guard consists of 4 members who protect the Soul King — the being who sits at the center of the spiritual world's power structure. They represent the tier above captain-level Shinigami.",
+      "systemDesc": "The apex tier of Soul Society's power hierarchy. Royal Guard members are individually more powerful than any Gotei 13 captain, making them the ultimate institutional power nodes."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Ichigo Kurosaki",
+      "target": "Rukia Kuchiki",
+      "type": "ally",
+      "weight": 10,
+      "description": "The bond that drove the entire series — Ichigo's fight to save Rukia from execution created the entire spiritual conflict"
+    },
+    {
+      "source": "Ichigo Kurosaki",
+      "target": "Ulquiorra Cifer",
+      "type": "enemy",
+      "weight": 9,
+      "description": "The fight that forced Ichigo to confront his Inner Hollow and accept his hybrid nature"
+    },
+    {
+      "source": "Byakuya Kuchiki",
+      "target": "Rukia Kuchiki",
+      "type": "dependent",
+      "weight": 9,
+      "description": "Byakuya married Rukia to protect her; his violation of Soul Society law for her defines his character arc"
+    },
+    {
+      "source": "Grimmjow Jaggerjack",
+      "target": "Ichigo Kurosaki",
+      "type": "rival",
+      "weight": 8,
+      "description": "Grimmjow sees Ichigo as the rival he must defeat to prove his own worth as a fighter"
+    },
+    {
+      "source": "Kenpachi Zaraki",
+      "target": "Ichigo Kurosaki",
+      "type": "rival",
+      "weight": 9,
+      "description": "The fight that pushed both fighters to their absolute limits — pure combat desire vs. hybrid power"
+    },
+    {
+      "source": "Orihime Inoue",
+      "target": "Ichigo Kurosaki",
+      "type": "ally",
+      "weight": 9,
+      "description": "Orihime's powers exist to protect what she loves; her shield saved Ichigo multiple times"
+    },
+    {
+      "source": "Renji Abarai",
+      "target": "Ichigo Kurosaki",
+      "type": "ally",
+      "weight": 8,
+      "description": "Former friends from childhood who became rivals in Soul Society before reconciling"
+    },
+    {
+      "source": "Orihime Inoue",
+      "target": "Ulquiorra Cifer",
+      "type": "counter",
+      "weight": 7,
+      "description": "The shield vs. the spear — Orihime's rejection powers against Ulquiorra's absolute offense"
+    }
+  ],
+  "rankings": {
+    "description": "Reiatsu-based hierarchy — power levels determine dominance absolutely",
+    "tiers": [
+      {
+        "name": "Soul King Tier",
+        "members": [
+          "Soul King"
+        ],
+        "description": "The being at the center of the spiritual world's power structure — above all Shinigami"
+      },
+      {
+        "name": "Royal Guard Tier",
+        "members": [
+          "Ichibei",
+          "Senjumaru",
+          "Kirio",
+          "Ichigo (post-training)"
+        ],
+        "description": "Above captain level — individually capable of defeating any Gotei 13 captain"
+      },
+      {
+        "name": "Captain Tier",
+        "members": [
+          "Yamamoto",
+          "Aizen (pre-reveal)",
+          "Byakuya",
+          "Kenpachi",
+          "Unohana"
+        ],
+        "description": "Gotei 13 captain level — can defeat armies with Reiatsu alone"
+      },
+      {
+        "name": "Lieutenant Tier",
+        "members": [
+          "Renji",
+          "Hisagi",
+          "Momo",
+          "Ikkaku"
+        ],
+        "description": "Second-tier combat power — can hold lines against weaker Hollows and Arrancar"
+      },
+      {
+        "name": "Espada Tier (Top 4)",
+        "members": [
+          "Ulquiorra",
+          "Yammy",
+          " Starrk",
+          "Baraggan"
+        ],
+        "description": "Arrancar elite — comparable to captain-level Shinigami"
+      },
+      {
+        "name": "Espada Tier (Mid)",
+        "members": [
+          " Grimmjow",
+          " Nelliel",
+          " Harribel"
+        ],
+        "description": "Upper-tier Arrancar — stronger than most lieutenant-level Shinigami"
+      },
+      {
+        "name": "Fullbring Tier",
+        "members": [
+          "Chad",
+          "Ginjo"
+        ],
+        "description": "Human spiritual power — competitive with weaker Shinigami but not captain-level"
+      },
+      {
+        "name": "Base Shinigami Tier",
+        "members": [
+          "Generic Seated Officers"
+        ],
+        "description": "Standard Soul Society combat power — outnumbered by Hollows without captain intervention"
+      }
+    ]
+  },
+  "systemQuestions": [
+    {
+      "question": "Why is Ichigo simultaneously connected to every spiritual faction?",
+      "answer": "Ichigo's mother was a Quincy, his father was a Shinigami with Hollow powers, and he was born with Fullbring potential. His unique genetic and experiential combination means he literally cannot belong to one faction — he is the network's bridge node.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "What makes Aizen's plan fundamentally different from other villains?",
+      "answer": "Aizen's 100+ year plan was not about conquest or revenge — it was about transcending the system entirely. He wanted to use the Hogyoku to become something beyond Shinigami, Hollow, and Quincy. He wasn't trying to win the game; he was trying to become a different game.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "Why does Orihime's power work differently from everything else?",
+      "answer": "Orihime's powers reject events rather than deflect attacks. She doesn't make things bounce off her shield — she makes the attack's existence null. This is the only power that operates at the level of causality rather than physics, making her defenses theoretically absolute.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "Why did Soul Society exterminate the Quincy?",
+      "answer": "Soul Society's core function is maintaining the soul cycle — Quincy hunting Hollows disrupts this balance by destroying souls permanently rather than allowing them to return to Soul Society. The genocide was institutional self-preservation disguised as moral righteousness.",
+      "tabIndex": 2,
+      "sectionId": "factions",
+      "tabLabel": "Factions"
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Isshin's Secret Marriage",
+      "trigger": "A Shinigami captain (Isshin) falls in love with a Quincy (Masaki) and hides his powers to live with her",
+      "consequence": "Ichigo is born with hybrid spiritual genetics; Aizen identifies the hybrid as key to his transcendence plan",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The hidden marriage that created the hybrid — Isshin's choice to abandon Shinigami power for love directly created the conditions for Ichigo's existence.",
+      "systemDesc": "An institutional defection event — the strongest Shinigami choosing human life over duty creates a new spiritual lineage that Aizen identifies as a system exploit."
+    },
+    {
+      "name": "Rukia's Execution Sentence",
+      "trigger": "Rukia is sentenced to death for giving Ichigo her Shinigami powers — violating the fundamental boundary between realms",
+      "consequence": "Ichigo invades Soul Society to save her; the entire first arc's conflict emerges from this single institutional ruling",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The institutional event that triggered everything — Soul Society's rigid enforcement of dimensional separation creates the conditions for the largest Shinigami-Human interaction in history.",
+      "systemDesc": "An institutional enforcement cascade — the execution sentence reveals Soul Society's structural inability to accommodate cross-dimensional relationships, forcing Ichigo to challenge institutional authority directly."
+    },
+    {
+      "name": "Aizen's Betrayal Revealed",
+      "trigger": "Aizen removes his hypnosis and reveals he controlled the entire invasion from the beginning",
+      "consequence": "Ichigo's fight to save Rukia was part of Aizen's plan; the Gotei 13 realizes they were all manipulated for 100+ years",
+      "timelinePosition": "Mid Arc",
+      "loreDesc": "The reveal that reframes the entire series — Aizen's manipulation of everyone simultaneously proves that institutional hierarchy can be compromised at every level.",
+      "systemDesc": "A system integrity failure — the Gotei 13's entire command structure was compromised without any individual captain suspecting anything. This proves that institutional trust is itself a vulnerability."
+    },
+    {
+      "name": "Ichigo's Fullbring Arc",
+      "trigger": "Ichigo loses his Shinigami powers after defeating Aizen; Xcution offers to restore them through Fullbring",
+      "consequence": "Ichigo becomes a Fullbringer — proving that even without Shinigami powers, the spiritual network is accessible to him",
+      "timelinePosition": "Late Arc",
+      "loreDesc": "The moment Ichigo's hybrid nature is fully revealed — he doesn't need any single faction's power because he can access them all independently.",
+      "systemDesc": "A power redundancy proof — Ichigo's multiple spiritual pathways mean losing one doesn't eliminate him. This structural resilience is what makes him unique in the spiritual network."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Orihime's Event Rejection",
+      "ruleViolated": "All spiritual powers operate within the framework of spiritual energy manipulation",
+      "loreDesc": "Orihime's Shun Shun Rikka rejects events entirely, not just attacks. She nullifies the attack rather than blocking it. This is the only power in the system that operates at the level of causality.",
+      "systemDesc": "A causality-level exception — Orihime's power doesn't interact with Reiatsu hierarchies, physical durability, or spiritual defense. She simply decides the event didn't happen, making her theoretically the most powerful character."
+    },
+    {
+      "name": "Aizen's Hogyoku Transcendence",
+      "ruleViolated": "All Shinigami are bound by the Reiatsu hierarchy and the limits of their Zanpakuto",
+      "loreDesc": "Aizen used the Hogyoku to transcend Shinigami, Hollow, and Quincy categories entirely. He became something the system had no framework to categorize or defend against.",
+      "systemDesc": "A category-violating event — Aizen's transcendence means he literally exits the Reiatsu hierarchy. He cannot be compared to other characters because he no longer belongs to their category."
+    },
+    {
+      "name": "Ichigo's Hybrid Apex",
+      "ruleViolated": "Each spiritual faction has a distinct power paradigm incompatible with others",
+      "loreDesc": "Ichigo is simultaneously Shinigami, Hollow, Quincy, and Fullbringer. No other character in the series has multiple faction access simultaneously.",
+      "systemDesc": "A node-bridging anomaly — Ichigo's unique genetics and experience create a single point of failure (or strength) that connects otherwise separated network domains."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Reiatsu Dominance",
+      "defender": "Kido (Soul Society Magic)",
+      "mechanic": "High-level Kido spells can create barriers that resist Reiatsu pressure — Hikone's Ginjo's Fullbring demonstrated that sufficient concentrated spiritual energy can temporarily match Captain-level Reiatsu.",
+      "loreDesc": "The institutional technique layer — Kido represents the formalized, study-based approach to spiritual combat that doesn't rely on raw Reiatsu."
+    },
+    {
+      "attacker": "Zanpakuto Shikai",
+      "defender": "Sound-Based Attacks",
+      "mechanic": "Shinigami rely heavily on visual and physical combat — Lilienne's sound-based Vollständig forced the Gotei 13 into retreat because their Zanpakuto couldn't interact with sound attacks.",
+      "loreDesc": "The sensory-vulnerability layer — Shinigami combat assumes physical confrontation that can be seen and blocked."
+    },
+    {
+      "attacker": "Resurreccion",
+      "defender": "Shadow Step / Positioning",
+      "mechanic": "Arrancar Resurreccion requires releasing the Hollow mask — this takes time and creates a vulnerability window. Sufficient speed can prevent the release before it completes.",
+      "loreDesc": "The release-time vulnerability — Arrancar who rely on Resurreccion are vulnerable during the transformation window."
+    },
+    {
+      "attacker": "Quincy Bow",
+      "defender": "Hollow Consumption",
+      "mechanic": "Quincy Reishi absorption creates vulnerability to Hollow-based attacks — if a Hollow is present, Quincy powers become unreliable because the Hollow consumes the same Reishi.",
+      "loreDesc": "The Quincy-Hollow incompatibility in practice — Uryuu's powers degrade in high-Hollow environments."
+    },
+    {
+      "attacker": "Orihime's Shield",
+      "defender": "Simultaneous Multi-Angle Attack",
+      "mechanic": "Orihime's Santen Keshimmu creates three shield petals that must divide coverage — overwhelming simultaneous attacks from multiple angles can exceed her simultaneous rejection capacity.",
+      "loreDesc": "The capacity limit — even absolute defense has practical throughput limits."
+    }
+  ],
+  "tags": [
+    "reiryoku",
+    "zanpakuto",
+    "shinigami",
+    "hollow",
+    "arrancar",
+    "quincy",
+    "fullbring",
+    "soul-society",
+    "hueco-mundo",
+    "espada"
+  ]
+}

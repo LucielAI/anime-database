@@ -1,0 +1,49 @@
+# Bleach — Research File
+
+**malId:** 269
+**System Type:** Node-Graph (faction network)
+**Renderer:** NodeGraphExplorer
+
+---
+
+## System Thesis
+
+Bleach operates as a multi-faction network where spiritual energy (Reiryoku) flows between distinct organizational domains — Soul Society, Hueco Mundo, the Human World, and the realm of the Quincy. The analytical lens is relational: power derives not just from individual Reiatsu levels but from factional allegiance, Quincy-Hollow hybridity, and the Zampakuto (sword) resonance relationship between Shinigami and their blade. The system's core tension is dimensional — conflicts cross-realm boundaries, and survival requires understanding the interaction rules between spiritually adjacent domains.
+
+---
+
+## Power System Architecture
+
+- **Reiatsu:** The spiritual energy that powers all combat abilities. Higher Reiatsu means压制 lower Reiatsu — a pure dominance hierarchy where overwhelming spiritual pressure makes fights deterministic.
+- **Shikai/Bankai:** The two-stage Zanpakuto release. Shikai is the first release that gives the sword its unique power. Bankai is the second, exponentially more powerful release that represents the Shinigami's true combat identity.
+- **Hollowfication:** The corruption pathway — when Hollows consume too much, they lose identity. When Quincy become Hollows, they become the most powerful Arrancar. The boundary between human and monster is the system's most contested edge.
+- **Quincy Powers:** The anti-Hollow arsenal — Quincy absorb Reishi from the air rather than using inherent Reiatsu. This makes them independent of the Soul Society's power structure but vulnerable to Hollow-based attacks.
+- **Fullbring:** The human power pathway — humans with Hollow heritage can manifest Hollow powers without transformation. Chad's powers represent the most peaceful coexistence of human and spiritual energy.
+- **Resurreccion:** The Arrancar equivalent of Shikai/Bankai — releasing the Hollow mask to regain power lost by suppressing Hollow nature.
+
+---
+
+## Key Characters
+
+1. **Ichigo Kurosaki** — The protagonist hub; a human with Shinigami, Hollow, Quincy, and Fullbringer heritage. His power is the sum of four spiritual networks.
+2. **Rukia Kuchiki** — The Shinigami who gave Ichigo his powers; the emotional anchor of the story.
+3. **Sosuke Aizen** — The mastermind; a Shinigami captain who orchestrated his own betrayal. His power comes from the Hogyoku, a device that fulfills desires.
+4. **Ulquiorra** — The fourth Espada; represents emotional emptiness as a combat philosophy. He's the system's argument that caring is weakness.
+5. **Grimmjow Jaggerjack** — The sixth Espada; pure aggression without agenda. The counterpart to Ulquiorra's coldness.
+6. **Byakuya Kuchiki** — The noble captain; represents duty over emotion. His Bankai (Senbonzakura) is the most technically precise power in the series.
+7. **Kenpachi Zaraki** — The berserker captain; the strongest raw fighter who deliberately limits himself for interesting fights.
+8. **Renji Abarai** — The lieutenant; represents Ichigo's alternative path through the Soul Society ranks.
+9. **Uryuu Ishida** — The Quincy; represents the lone-wolf anti-institutional power path.
+10. **Sado (Chad)** — The human with Fullbring powers; represents the human potential pathway.
+11. **Orihime Inoue** — The rejection shield; her powers can reject events entirely, not just deflect attacks.
+
+---
+
+## Key Factions
+
+1. **Soul Society (Gotei 13)** — The governing body of souls in the afterlife. 13 captain-level divisions with hierarchical command. Represents institutional power with moral ambiguity.
+2. **Espada (Arrancar Army)** — Hollows who shed their masks to gain humanoid form and greater power. Ruled by Aizen from Hueco Mundo.
+3. **Visored (Hollowfied Shinigami)** — Shinigami who have merged with Hollow powers, giving them both Shinigami techniques and Hollow abilities.
+4. **Quincy** — Humans who absorb Reishi from the air. Historically hunted Hollows before the Soul Society exterminated them.
+5. **Fullbringers** — Humans born with Hollow powers inherited from their parents' near-death experiences with Hollows.
+6. **Xcution** — A secret organization of Fullbringers who planned to steal Ichigo's Fullbring powers.
