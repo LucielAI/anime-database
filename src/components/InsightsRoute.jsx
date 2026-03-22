@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2, Twitter } from 'lucide-react'
+import { ArrowRight, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2 } from 'lucide-react'
+import SeoHead from './SeoHead'
 
 const INSIGHTS = [
   {
@@ -134,6 +135,12 @@ export default function InsightsRoute() {
 
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono">
+      <SeoHead
+        title="System Breakdowns — Anime Intelligence Archive"
+        description="Deep dives into how anime worlds actually work. Power mechanics, causal logic, and the systems behind the fights."
+        url="https://animearchive.app/insights"
+        image="https://animearchive.app/og-default.png"
+      />
       {/* Header */}
       <header className="w-full py-16 px-6 text-center border-b border-white/5" style={{ background: 'radial-gradient(ellipse at center, #101634 0%, #050508 100%)' }}>
         <p className="text-[10px] text-cyan-300/80 tracking-[0.24em] uppercase font-bold mb-3">Deep Dives & Analysis</p>

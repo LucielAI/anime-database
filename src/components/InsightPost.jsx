@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2 } from 'lucide-react'
+import SeoHead from './SeoHead'
 
 const ICON_MAP = { Network, Zap, Users, BookOpen }
 
@@ -247,7 +248,14 @@ export default function InsightPost() {
 
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono">
-      {/* Header */}
+      {insight && (
+        <SeoHead
+          title={`${insight.title} — Anime Archive`}
+          description={insight.content.find(b => b.type === 'thesis')?.text?.slice(0, 160) || insight.title}
+          url={`https://animearchive.app/insights/${slug}`}
+          image="https://animearchive.app/og-default.png"
+        />
+      )}
       <div className="w-full px-6 py-12 border-b border-white/5" style={{ background: 'radial-gradient(ellipse at 20% 50%, #0a1628 0%, #050508 70%)' }}>
         <div className="max-w-2xl mx-auto">
           <Link to="/insights" className="inline-flex items-center gap-1.5 text-[10px] text-gray-500 hover:text-white uppercase tracking-widest mb-8 transition-colors">

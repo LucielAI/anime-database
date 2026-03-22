@@ -1,175 +1,197 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, BrainCircuit, Target, Users, Zap, Compass, BookOpen } from 'lucide-react'
-import SeoHead from './SeoHead'
+import { ArrowRight, Network, Zap, Clock3, Users, Star } from 'lucide-react'
+
+const STATS = [
+  { value: '21', label: 'Universes Mapped' },
+  { value: '161+', label: 'Characters Analyzed' },
+  { value: '8', label: 'System Insights' },
+  { value: '3', label: 'Renderer Types' },
+]
 
 const SYSTEM_TYPES = [
   {
-    label: 'Timeline System',
-    example: 'Attack on Titan, Steins;Gate',
-    description: 'Causality itself is the battlefield. History, prophecy, and temporal mechanics shape every outcome.',
-    color: 'text-purple-300',
-    bg: 'bg-purple-400/10 border-purple-400/20',
+    icon: <Network className="w-5 h-5" />,
+    title: 'Relational Networks',
+    tagline: 'Who knows whom, and why it matters.',
+    example: 'One Piece, Bleach, Hunter x Hunter',
+    description: 'Power flows through alliances, debts, and territorial control. These worlds are won through relationships, not combat alone.',
   },
   {
-    label: 'Counterplay System',
-    example: 'Jujutsu Kaisen, Demon Slayer',
-    description: 'Ability matchups define victory. Every technique has a counter — the question is who deploys first.',
-    color: 'text-amber-300',
-    bg: 'bg-amber-400/10 border-amber-400/20',
+    icon: <Zap className="w-5 h-5" />,
+    title: 'Combat Economies',
+    tagline: 'Resources, costs, and counterplay.',
+    example: 'Dragon Ball Z, Demon Slayer, Tokyo Ghoul',
+    description: 'Fighting has a price. Every attack costs something. Winners are those who understand the exchange rate.',
   },
   {
-    label: 'Relational System',
-    example: 'Chainsaw Man, My Hero Academia',
-    description: 'Power flows through networks of obligation, loyalty, and control. Who you know determines what you can do.',
-    color: 'text-cyan-300',
-    bg: 'bg-cyan-400/10 border-cyan-400/20',
+    icon: <Clock3 className="w-5 h-5" />,
+    title: 'Causal Timelines',
+    tagline: 'What happened, and what it caused.',
+    example: 'Attack on Titan, Steins;Gate, Code Geass',
+    description: 'Closed loops, prophecy, and butterfly effects. The past determines the future, and the future shapes the past.',
+  },
+]
+
+const WHY = [
+  {
+    title: 'Not fan wiki.',
+    text: "We don't list characters. We map systems. Every universe has rules that govern how power works — and those rules reveal something real about how the world functions.",
+  },
+  {
+    title: 'Not a tier list.',
+    text: 'Strength rankings miss the point. A universe where tactics beat raw power tells a different story than one where raw power beats tactics. We map the story.',
+  },
+  {
+    title: 'Intelligence, not trivia.',
+    text: "This is for people who watch anime and think about why it works. What makes the systems compelling isn't what happens — it's how the system makes what happens feel inevitable.",
   },
 ]
 
 export default function About() {
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono">
-      <SeoHead
-        title="About the Archive | Anime Architecture Archive"
-        description="Anime Architecture Archive maps fictional universes as structured systems. Built by Hashi.Ai for fans who think deeper about power systems, worldbuilding, and causal logic."
-        canonicalUrl="https://animearchive.app/about"
-        type="website"
-      />
-      <main className="max-w-3xl mx-auto px-6 py-14">
-        <div className="mb-10">
-          <Link to="/" className="inline-flex items-center gap-2 text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white transition-colors mb-8">
-            <ArrowLeft className="w-3 h-3" />
-            Back to Archive
-          </Link>
-          <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-3">About This Archive</h1>
-          <p className="text-xs text-gray-400">Built by Hashi.Ai · For fans who think deeper</p>
+      {/* Hero */}
+      <header className="relative w-full py-20 px-6 overflow-hidden" style={{ background: 'radial-gradient(ellipse at 50% 0%, #0a1628 0%, #050508 70%)' }}>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-cyan-400/20 rounded-full bg-cyan-400/5 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-[10px] uppercase tracking-widest text-cyan-400">The Archive is Live</span>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 leading-none">
+            The Anime Intelligence<br />
+            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #22d3ee, #3b82f6)' }}>
+              Archive.
+            </span>
+          </h1>
+
+          <p className="text-sm text-gray-400 max-w-xl mx-auto leading-relaxed mb-8">
+            Every anime world has a system. Power rules, causal chains, faction logic. We map them — so you can see why the fights mean something.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              to="/universes"
+              className="flex items-center gap-2 px-6 py-3 bg-cyan-400 hover:bg-cyan-300 text-black text-[11px] font-bold uppercase tracking-widest rounded-lg transition-colors"
+            >
+              Explore Universes <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/insights"
+              className="flex items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 text-[11px] uppercase tracking-widest rounded-lg transition-colors"
+            >
+              Read Insights
+            </Link>
+          </div>
         </div>
 
-        {/* Mission */}
-        <section className="rounded-xl border border-white/10 bg-white/5 p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <BrainCircuit className="w-4 h-4 text-cyan-400" />
-            <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-white">The Mission</h2>
-          </div>
-          <p className="text-xs text-gray-300 leading-relaxed mb-3">
-            Most anime wikis list what happens. This archive explains why it had to happen that way. Every universe is mapped as a system — a set of rules, constraints, power relationships, and causal chains that determine outcomes, not just describe them.
-          </p>
-          <p className="text-xs text-gray-400 leading-relaxed">
-            The goal is to make it impossible to watch your favorite anime the same way again. To see the architecture underneath the story.
-          </p>
-        </section>
+        {/* Decorative grid */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
+        }} />
+      </header>
 
-        {/* System Types */}
-        <section className="rounded-xl border border-white/10 bg-white/5 p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Zap className="w-4 h-4 text-cyan-400" />
-            <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-white">System Types in the Archive</h2>
-          </div>
-          <div className="space-y-3">
-            {SYSTEM_TYPES.map((type) => (
-              <div key={type.label} className={`rounded-lg border p-4 ${type.bg}`}>
-                <p className={`text-[11px] font-bold uppercase tracking-widest mb-1 ${type.color}`}>{type.label}</p>
-                <p className="text-[10px] text-gray-500 mb-2">{type.example}</p>
-                <p className="text-[11px] text-gray-300 leading-relaxed">{type.description}</p>
+      {/* Stats */}
+      <section className="border-y border-white/5 bg-white/[0.02]">
+        <div className="max-w-4xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {STATS.map(stat => (
+            <div key={stat.label}>
+              <div className="text-3xl md:text-4xl font-black text-cyan-300 mb-1">{stat.value}</div>
+              <div className="text-[10px] uppercase tracking-widest text-gray-500">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* What is this */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <h2 className="text-[10px] uppercase tracking-widest text-gray-600 mb-6 text-center">What We Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {WHY.map(item => (
+            <div key={item.title} className="p-5 rounded-xl border border-white/10 bg-white/[0.02]">
+              <h3 className="text-[11px] font-black uppercase text-white mb-2">{item.title}</h3>
+              <p className="text-[11px] text-gray-400 leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* System Types */}
+      <section className="border-t border-white/5 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-[10px] uppercase tracking-widest text-gray-600 mb-2 text-center">Three Ways Anime Worlds Work</h2>
+          <p className="text-xs text-gray-500 text-center mb-10 max-w-lg mx-auto">Not every anime is the same kind of system. We categorize them by how power actually functions.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {SYSTEM_TYPES.map(type => (
+              <div key={type.title} className="p-5 rounded-xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-colors">
+                <div className="text-gray-400 mb-3">{type.icon}</div>
+                <h3 className="text-[11px] font-black uppercase text-white mb-1">{type.title}</h3>
+                <p className="text-[10px] text-cyan-400 mb-3">{type.tagline}</p>
+                <p className="text-[10px] text-gray-500 mb-3 leading-relaxed">{type.description}</p>
+                <p className="text-[9px] text-gray-600 italic">{type.example}</p>
               </div>
             ))}
           </div>
-          <p className="text-[10px] text-gray-500 mt-3">Each universe in the archive is tagged with its primary system type. Use the system comparison tool to see how different shows handle power, strategy, and world logic differently.</p>
-        </section>
-
-        {/* How to Use */}
-        <section className="rounded-xl border border-white/10 bg-white/5 p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <BookOpen className="w-4 h-4 text-cyan-400" />
-            <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-white">How to Use This Archive</h2>
-          </div>
-          <div className="space-y-3">
-            <div className="flex gap-3">
-              <span className="text-cyan-400 font-black text-sm shrink-0">01</span>
-              <div>
-                <p className="text-[11px] font-bold text-white mb-1">Browse the catalog</p>
-                <p className="text-[10px] text-gray-400 leading-relaxed">Search and filter 15 universes by system type, cluster, or name. Each card shows the system classification and tagline.</p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <span className="text-cyan-400 font-black text-sm shrink-0">02</span>
-              <div>
-                <p className="text-[11px] font-bold text-white mb-1">Open any universe</p>
-                <p className="text-[10px] text-gray-400 leading-relaxed">Each universe page opens in two modes: Lore View for narrative exploration, and System Mode for structural analysis. Toggle between them at the top of the page.</p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <span className="text-cyan-400 font-black text-sm shrink-0">03</span>
-              <div>
-                <p className="text-[11px] font-bold text-white mb-1">Use the system tools</p>
-                <p className="text-[10px] text-gray-400 leading-relaxed">Navigate tabs: Characters, Rules, Factions, Relationships, Causal Chain. Each tab maps a different dimension of how the universe functions.</p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <span className="text-cyan-400 font-black text-sm shrink-0">04</span>
-              <div>
-                <p className="text-[11px] font-bold text-white mb-1">Compare universes</p>
-                <p className="text-[10px] text-gray-400 leading-relaxed">Use the Compare tool on the homepage or go to /compare to put any two universes side-by-side across power systems, factions, and structural complexity.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Creator */}
-        <section className="rounded-xl border border-white/10 bg-white/5 p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Users className="w-4 h-4 text-cyan-400" />
-            <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-white">The Creator</h2>
-          </div>
-          <p className="text-xs text-gray-300 leading-relaxed mb-4">
-            Hashi.Ai is an AI-native project focused on structured intelligence and system-level analysis. Anime Architecture Archive is the first proof of concept — a demonstration that complex fictional universes can be rendered as interactive analytical systems, maintained by AI, useful for humans.
-          </p>
-          <p className="text-xs text-gray-400 leading-relaxed mb-4">
-            The long-term goal is an autonomous intelligence layer that can map any complex system — fictional or real — into structured, interactive, queryable formats. Anime is the first domain.
-          </p>
-          <div className="flex flex-wrap gap-2 mt-4">
-            <a
-              href="https://www.tiktok.com/@hashi.ai"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-[10px] font-bold tracking-[0.16em] uppercase text-gray-300 transition-all"
-            >
-              Follow on TikTok →
-            </a>
-            <a
-              href="https://buymeacoffee.com/hashiai"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-emerald-300/30 bg-emerald-500/5 hover:bg-emerald-500/10 text-[10px] font-bold tracking-[0.16em] uppercase text-emerald-300 transition-all"
-            >
-              Support this project →
-            </a>
-          </div>
-        </section>
-
-        {/* Coverage */}
-        <section className="rounded-xl border border-white/10 bg-white/5 p-6 mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <Compass className="w-4 h-4 text-cyan-400" />
-            <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-white">Current Coverage</h2>
-          </div>
-          <p className="text-xs text-gray-300 leading-relaxed mb-3">
-            15 anime universes across multiple genres: shonen action, psychological thriller, dark fantasy, sci-fi thriller, and more.
-          </p>
-          <p className="text-[10px] text-gray-500 tracking-wider">
-            Request a universe by following <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="text-cyan-400 hover:text-cyan-300">@hashi.ai on TikTok</a> or using the Community Pulse on the homepage.
-          </p>
-        </section>
-
-        <div className="text-center">
-          <Link
-            to="/universes"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-400 text-[#020617] font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-cyan-300 transition-colors"
-          >
-            Explore the Archive
-          </Link>
         </div>
-      </main>
+      </section>
+
+      {/* How it works */}
+      <section className="border-t border-white/5 py-16">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <h2 className="text-[10px] uppercase tracking-widest text-gray-600 mb-6">How It Works</h2>
+          <div className="space-y-6">
+            {[
+              { step: '01', title: 'Choose a universe.', text: 'Browse the archive by system type, faction complexity, or raw combat density.' },
+              { step: '02', title: 'Open the system.', text: 'Every universe page shows you the rules, factions, power mechanics, and causal chains.' },
+              { step: '03', title: 'Understand why it matters.', text: 'The system tells you what the story is really about — not just what happens, but how it had to happen.' },
+            ].map(item => (
+              <div key={item.step} className="flex gap-4 items-start text-left">
+                <div className="shrink-0 w-10 h-10 rounded-full border border-cyan-400/30 bg-cyan-400/5 flex items-center justify-center text-[11px] font-black text-cyan-400">{item.step}</div>
+                <div>
+                  <h3 className="text-[11px] font-bold text-white mb-1">{item.title}</h3>
+                  <p className="text-[11px] text-gray-400 leading-relaxed">{item.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-white/5 py-16">
+        <div className="max-w-xl mx-auto px-6 text-center">
+          <h2 className="text-xl font-black uppercase tracking-tight mb-3">Ready to see how it works?</h2>
+          <p className="text-[11px] text-gray-400 mb-6 leading-relaxed">
+            Start with the system that interests you most. Or browse the latest insights below.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              to="/universes"
+              className="flex items-center gap-2 px-6 py-3 bg-cyan-400 hover:bg-cyan-300 text-black text-[11px] font-bold uppercase tracking-widest rounded-lg transition-colors"
+            >
+              Browse All Universes <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/compare?left=naruto&right=one-piece"
+              className="flex items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 text-[11px] uppercase tracking-widest rounded-lg transition-colors"
+            >
+              Compare Two Systems
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer nav */}
+      <footer className="border-t border-white/5 py-8 px-6">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-4 text-[10px] text-gray-600 uppercase tracking-widest">
+          <Link to="/universes">Archive</Link>
+          <Link to="/insights">Insights</Link>
+          <Link to="/compare">Compare</Link>
+          <Link to="/privacy">Privacy</Link>
+          <span>© 2026 Anime Architecture Archive</span>
+        </div>
+      </footer>
     </div>
   )
 }
