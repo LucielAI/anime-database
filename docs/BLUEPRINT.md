@@ -79,6 +79,8 @@ A dynamic navigation system that encourages cross-archive discovery.
 - Solo Leveling
 - Goblin Slayer
 - Mushoku Tensei: Jobless Reincarnation
+- Naruto
+- One Piece
 
 ## Product Goals
 The archive serves multiple simultaneous goals:

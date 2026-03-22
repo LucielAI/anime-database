@@ -117,6 +117,8 @@ Payloads should follow **scope-fit density**: tight universes remain compact, wh
 - Solo Leveling
 - Goblin Slayer
 - Mushoku Tensei: Jobless Reincarnation
+- Naruto
+- One Piece
 
 ## Tech Stack
 

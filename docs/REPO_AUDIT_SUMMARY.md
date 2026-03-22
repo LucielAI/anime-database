@@ -16,6 +16,8 @@
 - Solo Leveling
 - Goblin Slayer
 - Mushoku Tensei: Jobless Reincarnation
+- Naruto
+- One Piece
 
 ## Current Renderers
 - TimelineExplorer

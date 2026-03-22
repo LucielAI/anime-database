@@ -93,6 +93,18 @@ const UNIVERSE_MAP = {
     tagline: 'A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.',
     visualizationHint: 'timeline',
     themeColors: { primary: '#0f766e' }
+  },
+  naruto: {
+    anime: 'Naruto',
+    tagline: 'A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome.',
+    visualizationHint: 'node-graph',
+    themeColors: { primary: '#f59e0b' }
+  },
+  'one-piece': {
+    anime: 'One Piece',
+    tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas.',
+    visualizationHint: 'node-graph',
+    themeColors: { primary: '#dc2626' }
   }
 }
 
