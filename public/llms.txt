@@ -28,6 +28,7 @@ Each universe is structured as a dual-mode experience:
 ### Naruto | /universe/naruto | A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome
 ### Dragon Ball Z | /universe/dragonballz | A vertical ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome
 ### Bleach | /universe/bleach | A multi-faction spiritual network where Reiatsu dominance, Zanpakuto resonance, and dimensional boundaries between Soul Society, Hueco Mundo, and the Human World determine survival
+### Mob Psycho 100 | /universe/mob-psycho-100 | An affinity-matrix where psychic power distribution, spiritual resonance, and emotional pressure determine outcomes more than raw esper ability
 ### Tokyo Ghoul | /universe/tokyo-ghoul | A predator-prey economy where the ghoul/human biological boundary defines every alliance, motivation, and moral position
 ### One Piece | /universe/one-piece | An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas
 

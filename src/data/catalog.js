@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'tokyo-ghoul', 'one-piece']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'mob-psycho-100', 'tokyo-ghoul', 'one-piece']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -95,6 +95,11 @@ export const UNIVERSE_CATALOG = [
   {
     id: 'bleach', anime: 'Bleach', tagline: 'A multi-faction spiritual network where Reiatsu dominance, Zanpakuto resonance, and dimensional boundaries between Soul Society, Hueco Mundo, and the Human World determine survival', malId: 269, visualizationHint: 'node-graph', visualizationReason: 'Bleach is a faction-network universe where Soul Society, Hueco Mundo, the Human World, and the Quincy domain exist as distinct but interacting spiritual layers.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1541/147774l.jpg',
     themeColors: { primary: '#1e3a8a', secondary: '#0f172a', accent: '#dc2626', glow: 'rgba(30,58,138,0.35)', tabActive: '#1e3a8a', badgeBg: 'rgba(220,38,38,0.12)', badgeText: '#dc2626', modeGlow: 'rgba(30,58,138,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
+    stats: { characters: 10, powerSystem: 5, rules: 5 }
+  },
+  {
+    id: 'mob-psycho-100', anime: 'Mob Psycho 100', tagline: 'An affinity-matrix where psychic power distribution, spiritual resonance, and emotional pressure determine outcomes more than raw esper ability', malId: 32182, visualizationHint: 'affinity-matrix', visualizationReason: 'Mob Psycho 100 is a psychic power network organized as an affinity-matrix. The affinity-matrix captures the core structural thesis: each character has a psychic power level and an emotional intelligence level, and the relationship between these two dimensions determines the character arc.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/8/80356l.jpg',
+    themeColors: { primary: '#f97316', secondary: '#0f172a', accent: '#fbbf24', glow: 'rgba(249,115,22,0.35)', tabActive: '#f97316', badgeBg: 'rgba(15,23,42,0.5)', badgeText: '#fbbf24', modeGlow: 'rgba(251,191,36,0.25)', heroGradient: 'rgba(20,10,5,0.95)' },
     stats: { characters: 10, powerSystem: 5, rules: 5 }
   },
   {

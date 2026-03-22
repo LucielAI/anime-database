@@ -146,6 +146,12 @@ export const DISCOVERY_METADATA = {
     appealTags: ['high-stakes-escalation', 'power-scaling'],
     systemProfile: { factionComplexity: 2, causalDensity: 2, powerStructure: 'matchup' }
   },
+  'mob-psycho-100': {
+    addedAt: '2026-03-22', popularityBaseline: 88, classification: 'combat', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for psychic counterplay and emotional pressure dynamics.',
+    clusterTags: ['combat-systems', 'hierarchy-heavy', 'anomaly-driven'],
+    appealTags: ['high-stakes-escalation', 'power-scaling'],
+    systemProfile: { factionComplexity: 1, causalDensity: 2, powerStructure: 'matchup' }
+  },
   'one-piece': {
     addedAt: '2026-03-20', popularityBaseline: 99, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS to map the pirate-yonko-maritime power grid.',
     clusterTags: ['faction-heavy', 'hierarchy-heavy', 'anomaly-driven'],

@@ -118,6 +118,12 @@ const UNIVERSE_MAP = {
     visualizationHint: 'counter-tree',
     themeColors: { primary: '#dc2626' }
   },
+  'mob-psycho-100': {
+    anime: 'Mob Psycho 100',
+    tagline: 'An affinity-matrix where psychic power and emotional intelligence determine outcomes more than raw esper ability.',
+    visualizationHint: 'affinity-matrix',
+    themeColors: { primary: '#f97316' }
+  },
   'one-piece': {
     anime: 'One Piece',
     tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas.',
