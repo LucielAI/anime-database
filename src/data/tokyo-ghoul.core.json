@@ -1,0 +1,617 @@
+{
+  "anime": "Tokyo Ghoul",
+  "tagline": "A predator-prey economy where the ghoul/human biological boundary defines every alliance, motivation, and moral position",
+  "malId": 22319,
+  "themeColors": {
+    "primary": "#dc2626",
+    "secondary": "#0f172a",
+    "accent": "#f43f5e",
+    "glow": "rgba(220,38,38,0.35)",
+    "tabActive": "#dc2626",
+    "badgeBg": "rgba(15,23,42,0.6)",
+    "badgeText": "#f43f5e",
+    "modeGlow": "rgba(220,38,38,0.25)",
+    "heroGradient": "rgba(20,5,10,0.95)"
+  },
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1498/134443l.jpg",
+  "visualizationHint": "counter-tree",
+  "visualizationReason": "Tokyo Ghoul is a ghoul/human predator-prey system organized as a counter-tree. The counter-tree captures the core structural thesis: the ghoul/human binary as the root divide, ghoul factions and CCG hierarchies as branching nodes, and specific character matchups determining which fighter counters which in the biological arms race between species.",
+  "headerFlavor": {
+    "loreQuote": "In this world, it is eat or be eaten. You were simply too weak to survive.",
+    "sysWarning": "// [SYSTEM STATUS]: KAKUGAN DETECTED — RC-CELL COUNT: ANOMALOUS",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "jagged",
+  "revealOverlay": "glow-border",
+  "introductionSummary": "Tokyo Ghoul operates as a predator-prey economy where the ghoul/human boundary is the only meaningful organizational axis. The analytical lens is dietary: ghouls must consume human flesh to survive, CCG (Commission of Counter Ghoul) exists to eliminate ghouls, and every character's moral position is determined by which side of this biological divide they stand on. The system's core tension is the one-eyed ghoul (half-human, half-ghoul) — an anomaly that threatens to collapse the binary entirely.",
+  "hero": {
+    "systemType": "counterplay",
+    "microHook": "Ghouls eat humans; CCG kills ghouls; one-eyed ghouls threaten the binary.",
+    "thesis": "A biological predator-prey economy where the ghoul/human boundary is the only axis that matters.",
+    "primarySystemType": "power_engine"
+  },
+  "aiInsights": {
+    "casual": "Tokyo Ghoul is about a college student who gets eaten by a ghoul on a date, survives by having her organs transplanted into him, and then has to figure out how to be half-monster while still eating. It's basically a monster movie where the monster is trying to hold down a job and go to class. Kaneki gets tortured, goes insane, becomes a king, and the whole thing is incredibly sad.",
+    "deep": "Tokyo Ghoul's system is a predator-prey economy where the biological boundary between species IS the political system. Ghouls are a minority that must kill to survive — this makes their 'crime' fundamentally different from other anime antagonists because their existence is the crime. The genius of the worldbuilding is making the CCG use ghoul biology as weaponry: quinques are forged from kakuhou (ghoul organs), meaning the CCG literally weaponizes minority bodies. Kaneki's one-eyed ghoul status represents the system's binary boundary being violated — he is proof that the ghoul/human distinction is a spectrum, not a wall. This makes him simultaneously the most powerful ghoul and the greatest existential threat to both communities."
+  },
+  "powerSystem": [
+    {
+      "name": "Kakugan",
+      "subtitle": "Red Eye Activation",
+      "loreDesc": "The ghoul's combat form activated by releasing the kakuhou's grip on the eye. Kakugan grants access to the full Rc-type system — increased physicals, kagune manifestation, and kakuji/ukaku combat techniques.",
+      "systemDesc": "The ghoul combat activation gate — without Kakugan, a ghoul has roughly human-level physical capability. With Kakugan, all ghoul combat parameters increase dramatically. This creates a clear binary: the transformation is the fight.",
+      "loreSubtitle": "The Red Eye Awakening",
+      "systemSubtitle": "Combat Activation Gate",
+      "icon": "Eye",
+      "color": "red-400",
+      "signatureMoment": "Kaneki's first Kakugan activation against Tsukiyama — the moment he fully accepts his ghoul nature."
+    },
+    {
+      "name": "Kagune",
+      "subtitle": "Flesh Weapon Manifestation",
+      "loreDesc": "A ghoul's primary weapon — a fleshy tentacle-like appendage that manifests from the kakuhou. Each ghoul's kagune is unique and categorized by Rc-type. Kankei's rinkaku kagune manifests as centipede-like multiple limbs from his back.",
+      "systemDesc": "The identity-as-weapon system — like Zanpakuto in Bleach but more visceral, each ghoul's kagune reflects their personality and combat style. This makes kagune type prediction a strategic advantage: rinkaku types are powerful but unstable, ukaku types are fast but weak, etc.",
+      "loreSubtitle": "The Flesh Weapon",
+      "systemSubtitle": "Identity-Linked Combat Form",
+      "icon": "Zap",
+      "color": "rose-400",
+      "signatureMoment": "Kaneki's centipede kagune manifesting for the first time — a rinkaku from the kakuhou of a bikaku user (Rize)."
+    },
+    {
+      "name": "Quinque",
+      "subtitle": "Ghoul-Organ Forged Weapons",
+      "loreDesc": "CCG weapons forged from extracted ghoul kakuhou. Investigators carry quinques as their primary weapons, using ghoul biology as a tool against ghouls. Arima's quinque is so powerful it can one-shot any ghoul.",
+      "systemDesc": "The minority-body-as-weapon system — CCG's entire arsenal is built from the bodies of killed ghouls. This creates a structural incentive to hunt ghouls and a horrifying parallel to the ghouls' own consumption of humans.",
+      "loreSubtitle": "Ghoul Biology Weaponized",
+      "systemSubtitle": "Institutionalized Body Consumption",
+      "icon": "Crosshair",
+      "color": "gray-400",
+      "signatureMoment": "Arima's quinque effortlessly cutting through ghouls — the weapon is so powerful it creates psychological terror beyond its physical capability."
+    },
+    {
+      "name": "Rc-Type System",
+      "subtitle": "Cell-Type Classification",
+      "loreDesc": "All ghouls have an Rc-type that determines their kagune form and combat style. Bikaku (尾赫, tail type) is for tail/blade kagune. Rinkaku (鱗鯨, scale-whale type) is for multiple limb kagune. Ukaku (甲赫, shell type) is for projectile kagune. Koukaku (甲赫, shell type) is for heavy armor kagune.",
+      "systemDesc": "The ghoul class system — Rc-type determines kagune form and combat role. This creates a rock-paper-scissors dynamic: rinkaku beats ukaku (power vs. speed), ukaku beats koukaku (speed vs. defense), koukaku beats rinkaku (armor vs. multiple limbs). No type is universally superior.",
+      "loreSubtitle": "Cell-Type Classification",
+      "systemSubtitle": "Ghoul Combat Class System",
+      "icon": "GitBranch",
+      "color": "orange-400",
+      "signatureMoment": "Yoshimura's koukaku kagune manifesting as a massive armored hammer — the tank class destroying entire buildings."
+    },
+    {
+      "name": "One-Eyed Ghoul",
+      "subtitle": "Hybrid Apex",
+      "loreDesc": "Half-ghoul, half-human. One-eyed ghouls have access to both ghoul and human food sources, making them the only ghouls who don't need to kill to survive. Kaneki is the most powerful one-eyed ghoul.",
+      "systemDesc": "The biological boundary violation — one-eyed ghouls represent a collapse of the ghoul/human binary. They have ghoul physicals and regeneration plus human adaptability. This makes them simultaneously the most powerful ghoul type and an existential threat to both communities' identities.",
+      "loreSubtitle": "The Hybrid Anomaly",
+      "systemSubtitle": "Species Boundary Collapse",
+      "icon": "Sparkles",
+      "color": "yellow-400",
+      "signatureMoment": "Kaneki's full kagune manifesting against Arima — when he finally accepted being a ghoul, he became capable of standing against the strongest investigator."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Ghouls must consume human flesh to survive",
+      "subtitle": "The Dietary Necessity",
+      "loreConsequence": "Ghoul survival requires killing humans. This makes ghoul existence inherently criminal regardless of individual morality — the biological requirement IS the crime. Ghouls who try to live on human food (like Touka at Café Anteiku) are the exception that proves the rule.",
+      "systemEquivalent": "A biological crime-creation mechanism — the system defines ghouls as criminals by biological necessity, not by choice. This makes the ghoul civil rights argument genuinely compelling: can you judge a species for a requirement they didn't choose?",
+      "severity": "fatal",
+      "loreSubtitle": "The Dietary Necessity",
+      "systemSubtitle": "Biological Crime Creation"
+    },
+    {
+      "name": "The CCG uses ghoul biology as weaponry",
+      "subtitle": "The Quinque Paradox",
+      "loreConsequence": "Every quinque is forged from a dead ghoul's kakuhou. CCG's power is literally built from minority bodies, creating a horrifying parallel between CCG's mission and the ghouls they hunt.",
+      "systemEquivalent": "An institutional body consumption mechanism — CCG replicates the ghoul predation model at the institutional level by converting killed ghouls into weapons.",
+      "severity": "high",
+      "loreSubtitle": "The Quinque Paradox",
+      "systemSubtitle": "Institutional Body Consumption"
+    },
+    {
+      "name": "One-eyed ghouls can eat human food",
+      "subtitle": "The Hybrid Diet Exemption",
+      "loreConsequence": "Kaneki can survive on both human and ghoul food — making him the only ghoul who can choose not to kill. This creates a moral dilemma unique to the hybrid: is choosing ghoul food a moral failure?",
+      "systemEquivalent": "A biological exemption mechanism — the hybrid's dietary flexibility means it can exist outside the predator-prey economy. This makes the one-eyed ghoul both the most powerful ghoul type and the only one with genuine moral agency.",
+      "severity": "medium",
+      "loreSubtitle": "The Hybrid Diet Exemption",
+      "systemSubtitle": "Moral Agency Through Biology"
+    },
+    {
+      "name": "Kagune type determines combat matchup",
+      "subtitle": "The Rc-Type Counter System",
+      "loreConsequence": "Rinkaku (multiple limbs) beats Ukaku (projectiles) through sheer volume. Ukaku beats Koukaku (armor) through speed. Koukaku beats Rinkaku through raw power. Bikaku (blade) is neutral. No type dominates universally.",
+      "systemEquivalent": "A rock-paper-scissors combat system — Rc-type determines matchup outcome. A skilled fighter of the right type can defeat a more powerful opponent of the wrong type. This creates skill expression within the biological constraint.",
+      "severity": "medium",
+      "loreSubtitle": "The Rc-Type Counter System",
+      "systemSubtitle": "Type-Based Counter Economy"
+    },
+    {
+      "name": "Arima can kill any ghoul",
+      "subtitle": "The Apex Predator Rule",
+      "loreConsequence": "The CCG's strongest investigator has a 100% kill rate against ghouls. He is the only human who has never lost a fight to a ghoul. This creates a structural ceiling that only the one-eyed ghoul can breach.",
+      "systemEquivalent": "A hard counter ceiling — Arima represents the maximum threat level for any single ghoul. His existence sets the upper bound of CCG capability. Only Kaneki at full power can challenge him.",
+      "severity": "fatal",
+      "loreSubtitle": "The Apex Predator Rule",
+      "systemSubtitle": "Hard Counter Ceiling"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Ken Kaneki",
+      "title": "One-Eyed King",
+      "rank": "Hybrid Apex / King of Ghouls",
+      "dangerLevel": 10,
+      "loreBio": "A college student who survived a ghoul attack by receiving Rize's organs. Kaneki spends the series trying to maintain his humanity while being forced to consume human flesh to survive. His arc is a slow motion breakdown of identity under impossible biological constraints.",
+      "systemBio": "The hybrid hub node — Kaneki's structural position is the only character who can exist in both communities simultaneously. His one-eyed status makes him simultaneously a symbol of ghoul liberation and the most existential threat to both ghoul and human identity. He is the system's proof that the binary is a spectrum.",
+      "gradientFrom": "gray-950",
+      "gradientTo": "red-900",
+      "accentColor": "gray-400",
+      "icon": "Crown",
+      "signatureMoment": "Taking Arima's quinque through his eye and surviving — the moment he proved he was truly one-eyed, powerful enough to stand against the strongest investigator.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/307255.jpg",
+      "_fetchFailed": false,
+      "malId": 87275,
+      "role": "Main"
+    },
+    {
+      "name": "Kishou Arima",
+      "title": "CCG's Reaper",
+      "rank": "Human Apex / One-Eyed King (False)",
+      "dangerLevel": 10,
+      "loreBio": "The CCG's strongest investigator who has never lost to a ghoul. Arima is feared as the 'CCG's Reaper' and holds the position of being the only human who can reliably kill any ghoul. He is secretly working with Eto and Kaneki to create a new ghoul king.",
+      "systemBio": "The human apex predator node — Arima's structural position is the hard ceiling of the ghoul/human power differential. He represents what human institutional power can achieve when maximally optimized. His defeat of Kaneki multiple times establishes the upper bound of single-ghoul combat capability.",
+      "gradientFrom": "gray-950",
+      "gradientTo": "slate-800",
+      "accentColor": "gray-400",
+      "icon": "Skull",
+      "signatureMoment": "Defeating Kaneki in their first major confrontation with a single quinque strike — proving that human institutional power at its peak can dominate ghoul biology.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/257935.jpg",
+      "_fetchFailed": false,
+      "malId": 111767,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Touka Kirishima",
+      "title": "Nurse / Ghoul Fighter",
+      "rank": "Ghoul Elite / Moral Ghoul",
+      "dangerLevel": 7,
+      "loreBio": "A ghoul who works at Café Anteiku and fights to protect her community. Touka represents the moral ghoul — someone who kills only to survive and desperately wants coexistence. Her arc is the humanization of the ghoul community through individual character.",
+      "systemBio": "The moral exemplar node — Touka's structural position represents the potential for ghoul/human coexistence. Her existence proves that ghouls can develop ethics within the biological constraint, making the ghoul/human binary more complicated than pure predator/prey.",
+      "gradientFrom": "red-950",
+      "gradientTo": "rose-900",
+      "accentColor": "red-400",
+      "icon": "Coffee",
+      "signatureMoment": "Choosing to fight the CCG to protect Anteiku's clients rather than running — proving that ghouls can have community loyalty beyond biological necessity.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/234699.jpg",
+      "_fetchFailed": false,
+      "malId": 87277,
+      "role": "Main"
+    },
+    {
+      "name": "Rize Kamishiro",
+      "title": "The Gourmet",
+      "rank": "Bikaku Apex / Kaneki's Origin",
+      "dangerLevel": 8,
+      "loreBio": "A powerful ghoul who was crushed by falling steel beams just as Kaneki was about to be eaten. Her kakuhou was transplanted into Kaneki, making him a one-eyed ghoul. She still exists within Kaneki as a voice in his mind.",
+      "systemBio": "The origin anomaly — Rize's death created Kaneki; her kakuhou lives on inside him. This makes Rize simultaneously dead and the most influential character in the series. Her voice in Kaneki's mind represents the ghoul nature he can never fully suppress.",
+      "gradientFrom": "purple-950",
+      "gradientTo": "fuchsia-900",
+      "accentColor": "purple-400",
+      "icon": "Skull",
+      "signatureMoment": "The café date where she revealed her true nature and attacked Kaneki — the event that created the entire series.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/307347.jpg",
+      "_fetchFailed": false,
+      "malId": 87391,
+      "role": "Main"
+    },
+    {
+      "name": "Eto Yoshimura",
+      "title": "The One-Eyed King's Creator",
+      "rank": "Koukaku Apex / False One-Eyed King",
+      "dangerLevel": 9,
+      "loreBio": "A powerful one-eyed ghoul who can pass as human. Eto created the one-eyed king legend to unite ghouls against CCG. Her true goal is the destruction of both the ghoul and human worlds to create something new.",
+      "systemBio": "The manipulator node — Eto's structural position is that of a political architect working from outside any faction's awareness. She used Arima, Kaneki, and the entire ghoul resistance as instruments toward her goal of creating a new world order.",
+      "gradientFrom": "green-950",
+      "gradientTo": "emerald-900",
+      "accentColor": "green-400",
+      "icon": "Eye",
+      "signatureMoment": "Manifesting her full koukaku kagune — a massive armored kagune that represented the physical manifestation of her political power.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/276501.jpg",
+      "_fetchFailed": false,
+      "malId": 112997,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Koutarou Amon",
+      "title": "Dove Investigator",
+      "rank": "Human Elite / Questioning Human",
+      "dangerLevel": 7,
+      "loreBio": "A CCG investigator who carries a half-ghoul's quinque. Amon represents the human who questions the institution — he knows something is wrong with the ghoul/human binary but lacks the framework to articulate it.",
+      "systemBio": "The institutional outsider node — Amon's structural position is that of someone inside the CCG who is developing the conceptual framework to question it. His half-ghoul quinque (from his father) makes him literally connected to the ghoul world through institutional infrastructure.",
+      "gradientFrom": "gray-950",
+      "gradientTo": "blue-900",
+      "accentColor": "gray-400",
+      "icon": "Shield",
+      "signatureMoment": "Facing Kaneki in combat and recognizing something of himself in the half-ghoul — the moment the human/ghoul binary started to break down for him.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/251453.jpg",
+      "_fetchFailed": false,
+      "malId": 99671,
+      "role": "Main"
+    },
+    {
+      "name": "Juuzou Suzuya",
+      "title": "CCG's Angel of Death",
+      "rank": "Human Elite / Former Quinque Subject",
+      "dangerLevel": 8,
+      "loreBio": "A CCG investigator who was a former human experiment subject — made into a quinque-human hybrid. Juuzou is the CCG's most effective investigator despite being mentally unstable. He uses custom quinque weapons in a style that resembles ghoul combat.",
+      "systemBio": "The institutional hybrid node — Juuzou represents what happens when the CCG's body consumption goes too far. He is a human who has been so modified that he functions more like a ghoul than a human investigator, making the boundary between CCG and ghouls blur at the individual level.",
+      "gradientFrom": "pink-950",
+      "gradientTo": "rose-900",
+      "accentColor": "pink-400",
+      "icon": "Zap",
+      "signatureMoment": "Cutting through an entire raid group alone using his custom quinque array — the CCG's most effective investigator who fights like the ghouls he kills.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/268355.jpg",
+      "_fetchFailed": false,
+      "malId": 115869,
+      "role": "Main"
+    },
+    {
+      "name": "Hinami Fueguchi",
+      "title": "Young Ghoul",
+      "rank": "Ghoul Civilian / Innocent",
+      "dangerLevel": 4,
+      "loreBio": "A young ghoul who Kaneki mentors. Hinami represents the innocence within the ghoul/human conflict — she just wants to live and learn, but the conflict forces her to become a fighter.",
+      "systemBio": "The civilizational node — Hinami represents the ghoul civilian population caught between the CCG's extermination campaigns and the violent resistance. Her mentorship by Kaneki demonstrates the inter-generational transmission of political consciousness.",
+      "gradientFrom": "orange-950",
+      "gradientTo": "amber-900",
+      "accentColor": "orange-400",
+      "icon": "BookOpen",
+      "signatureMoment": "Learning to read and studying ghoul-human history — the refusal to accept the binary as inevitable.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/263269.jpg",
+      "_fetchFailed": false,
+      "malId": 99675,
+      "role": "Main"
+    },
+    {
+      "name": "Shuu Tsukiyama",
+      "title": "The Gourmet",
+      "rank": "Ghoul Elite / Gourmet",
+      "dangerLevel": 6,
+      "loreBio": "A wealthy ghoul who considers himself a connoisseur of human cuisine. Tsukiyama is the opposite of a survival predator — he views ghoul/human eating as a fine dining experience rather than a grim necessity.",
+      "systemBio": "The aesthetic predator node — Tsukiyama's structural position represents the ghoul who has monetized predation. He is wealthy, cultured, and chose the ghoul world for pleasure rather than necessity. This makes him simultaneously the most refined and most morally culpable ghoul.",
+      "gradientFrom": "purple-950",
+      "gradientTo": "violet-900",
+      "accentColor": "purple-400",
+      "icon": "UtensilsCrossed",
+      "signatureMoment": "His elaborate ghoul restaurant and collection of rare human cuisines — the aestheticization of predation as fine dining.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/258499.jpg",
+      "_fetchFailed": false,
+      "malId": 112687,
+      "role": "Main"
+    },
+    {
+      "name": "Koma Ihei",
+      "title": "Anteiku Barista",
+      "rank": "Ghoul Elite / Peaceful Ghoul",
+      "dangerLevel": 5,
+      "loreBio": "An Anteiku ally who represents the peaceful ghoul — someone who just wants to live without hurting anyone. Koma and his partner Ihei were killed during the CCG raid on Anteiku, demonstrating that peace is not a defense.",
+      "systemBio": "The peaceful coexistence node — Koma represents what the ghoul world could be if the predator-prey economy could be transcended. His death proves that the biological constraint makes peaceful ghoul existence always contingent on CCG tolerance.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "indigo-900",
+      "accentColor": "blue-400",
+      "icon": "Coffee",
+      "signatureMoment": "His elegant barista technique at Anteiku — the performance of normalcy in an abnormal existence.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/257941.jpg",
+      "_fetchFailed": false,
+      "malId": 110241,
+      "role": "Main"
+    }
+  ],
+  "factions": [
+    {
+      "name": "CCG (Commission of Counter Ghoul)",
+      "description": "The government agency dedicated to ghoul elimination. CCG's investigators use quinques (ghoul-organ weapons) to hunt ghouls. It represents institutional power deployed in service of species-level conflict.",
+      "role": "antagonist",
+      "icon": "Shield",
+      "loreDesc": "The CCG is the institutional expression of human fear and survival instinct. Their methods (forging quinques from dead ghouls) replicate the ghoul predation model at the institutional level.",
+      "systemDesc": "A species-level enforcement institution with genuine investigative sophistication but a fundamentally circular worldview: ghouls are criminals by biological necessity, therefore all ghouls must be eliminated."
+    },
+    {
+      "name": "Ghoul Underground",
+      "description": "The hidden ghoul community in Tokyo. Ghouls live among humans by day, hunt by night, and maintain secret communities centered around places like Café Anteiku.",
+      "role": "neutral",
+      "icon": "Users",
+      "loreDesc": "The ghoul community is a parallel society hidden within human civilization. Most ghouls are ordinary people who happened to be born with dietary requirements that make them criminal.",
+      "systemDesc": "A minority community structured around survival in hostile territory. Anteiku represents the institutional infrastructure of this community — a safe space, information network, and support system for ghoul civilians."
+    },
+    {
+      "name": "Aogiri Tree",
+      "description": "The violent ghoul resistance movement. Aogiri uses terror tactics against humans to achieve ghoul liberation. They represent the 'fight back' faction of the ghoul community.",
+      "role": "antagonist",
+      "icon": "TreePine",
+      "loreDesc": "Aogiri Tree is the violent resistance arm of the ghoul rights movement. They believe ghouls should not hide but should fight openly for territory and recognition.",
+      "systemDesc": "The militant resistance node — Aogiri represents the ghoul equivalent of revolutionary movements. Their violence, while understandable, alienates human moderates and provides CCG with propaganda."
+    },
+    {
+      "name": "White Suits (V)",
+      "description": "A mysterious organization pulling strings behind both CCG and ghoul factions. V represents the true power structure beneath the visible ghoul/human conflict.",
+      "role": "neutral",
+      "icon": "Users",
+      "loreDesc": "V is the shadow organization that has been manipulating the ghoul/human conflict for unknown purposes. They work with both CCG and Aogiri, suggesting the conflict itself is managed.",
+      "systemDesc": "The shadow operator node — V's existence suggests the ghoul/human conflict is not organic but managed. If the conflict serves someone's interests, that changes the entire analytical framework."
+    },
+    {
+      "name": "Clowns",
+      "description": "A mysterious group of ghouls who operate as neutral agents. The Clowns' goal is chaos, not liberation or extermination.",
+      "role": "chaotic",
+      "icon": "Smile",
+      "loreDesc": "The Clowns are a philosophical ghoul organization that believes the ghoul/human conflict is a performance. They manipulate events for entertainment rather than political goals.",
+      "systemDesc": "The chaos agent node — the Clowns represent the system's disruption layer. They prove that not all ghouls are motivated by survival or politics — some are motivated by pure nihilistic entertainment."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Ken Kaneki",
+      "target": "Rize Kamishiro",
+      "type": "dependent",
+      "weight": 10,
+      "description": "Rize's kakuhou is inside Kaneki — he literally carries her biological legacy inside him"
+    },
+    {
+      "source": "Ken Kaneki",
+      "target": "Touka Kirishima",
+      "type": "ally",
+      "weight": 9,
+      "description": "The love that makes Kaneki choose the ghoul world over human society"
+    },
+    {
+      "source": "Ken Kaneki",
+      "target": "Kishou Arima",
+      "type": "enemy",
+      "weight": 10,
+      "description": "The predator-prey relationship that defines the entire series — Kaneki vs Arima is species-level conflict"
+    },
+    {
+      "source": "Eto Yoshimura",
+      "target": "Ken Kaneki",
+      "type": "dependent",
+      "weight": 9,
+      "description": "Eto created the one-eyed king legend specifically to use Kaneki as a tool"
+    },
+    {
+      "source": "Ken Kaneki",
+      "target": "Hinami Fueguchi",
+      "type": "mentor",
+      "weight": 8,
+      "description": "Kaneki mentors Hinami — the inter-generational transmission of ghoul consciousness"
+    },
+    {
+      "source": "Koutarou Amon",
+      "target": "Ken Kaneki",
+      "type": "counter",
+      "weight": 8,
+      "description": "Human investigator vs hybrid ghoul — Amon's half-ghoul quinque makes him literally connected to Kaneki's world"
+    },
+    {
+      "source": "Touka Kirishima",
+      "target": "Koma Ihei",
+      "type": "ally",
+      "weight": 7,
+      "description": "Fellow Anteiku members — both represent the peaceful coexistence faction"
+    },
+    {
+      "source": "Shuu Tsukiyama",
+      "target": "Ken Kaneki",
+      "type": "counter",
+      "weight": 7,
+      "description": "Tsukiyama's gourmet interest in Kaneki creates an uncomfortable predator-prey tension"
+    },
+    {
+      "source": "Eto Yoshimura",
+      "target": "Kishou Arima",
+      "type": "ally",
+      "weight": 9,
+      "description": "Eto and Arima's secret alliance to create a new ghoul king — the manipulation of both factions"
+    },
+    {
+      "source": "Juuzou Suzuya",
+      "target": "Koutarou Amon",
+      "type": "ally",
+      "weight": 7,
+      "description": "Fellow CCG investigators who develop genuine friendship despite institutional roles"
+    }
+  ],
+  "rankings": {
+    "description": "Ghoul/human power hierarchy based on Rc-type and quinque quality",
+    "tiers": [
+      {
+        "name": "One-Eyed King Tier",
+        "members": [
+          "Ken Kaneki (post-arc 2)",
+          "Kishou Arima"
+        ],
+        "description": "The only two beings who can fight at true apex level — Kaneki with hybrid power, Arima with perfect quinque"
+      },
+      {
+        "name": "Ghoul S+ Tier",
+        "members": [
+          "Eto Yoshimura",
+          "Kishou Arima"
+        ],
+        "description": "Above normal ghoul and human investigator limits — can defeat any standard investigator or ghoul"
+      },
+      {
+        "name": "Ghoul Elite Tier",
+        "members": [
+          "Touka",
+          "Tsukiyama",
+          "Koma",
+          "Yamori"
+        ],
+        "description": "Ghoul investigators who can fight multiple CCG investigators or elite investigators"
+      },
+      {
+        "name": "CCG Elite Tier",
+        "members": [
+          "Juuzou Suzuya",
+          "Koutarou Amon",
+          "Mado"
+        ],
+        "description": "Human investigators with superior quinque who can match mid-tier ghouls"
+      },
+      {
+        "name": "One-Eyed Ghoul Tier",
+        "members": [
+          "Ken Kaneki (early)",
+          "Eto Yoshimura"
+        ],
+        "description": "Half-ghouls with ghoul physicals and human adaptability — the hybrid advantage"
+      },
+      {
+        "name": "Standard Ghoul Tier",
+        "members": [
+          "Anteiku members",
+          "Aogiri foot soldiers"
+        ],
+        "description": "Average ghouls — can defeat one CCG investigator but not elite"
+      },
+      {
+        "name": "Human Tier",
+        "members": [
+          "CCG rookies",
+          "Kaneki (pre-attack)"
+        ],
+        "description": "Without quinques or kagune, humans are prey for any ghoul"
+      }
+    ]
+  },
+  "systemQuestions": [
+    {
+      "question": "Can you judge a species for a biological requirement they didn't choose?",
+      "answer": "The entire moral framework of Tokyo Ghoul depends on this answer. Ghouls must eat humans to survive — does that make all ghouls inherently evil? CCG's answer is yes; Kaneki's answer is no. The series never fully resolves this, which is its most interesting intellectual contribution.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "What does Kaneki's one-eyed status mean for the binary?",
+      "answer": "Kaneki is proof that the ghoul/human distinction is a spectrum, not a wall. He can eat human food, ghoul food, and use both ghoul and human combat styles. This makes him simultaneously the most powerful ghoul type and the greatest existential threat to both communities' sense of identity.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "Why does CCG forge quinques from dead ghouls?",
+      "answer": "Quinques represent the institutionalization of the same body consumption that defines ghoul predation. CCG kills ghouls to protect humans, then converts ghoul bodies into weapons against other ghouls. This creates a structural parallel between CCG and the ghouls they hunt.",
+      "tabIndex": 2,
+      "sectionId": "rules",
+      "tabLabel": "Rules"
+    },
+    {
+      "question": "Why is Arima undefeated against ghouls?",
+      "answer": "Arima's perfect quinque and combat technique represent the maximum optimization of the human fighting against ghoul biology. He has been killing ghouls long enough to have seen every kagune type, developed counters for each, and refined his quinque to be unconditionally superior.",
+      "tabIndex": 2,
+      "sectionId": "rules",
+      "tabLabel": "Rules"
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Kaneki Survives Rize's Attack",
+      "trigger": "Rize Kamishiro attacks Kaneki on their date; falling steel separates them; surgeons transplant Rize's kakuhou into Kaneki",
+      "consequence": "Kaneki becomes a one-eyed ghoul — the hybrid that threatens both ghoul and human identity",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The founding event — Kaneki's survival transforms him from victim to participant. His new biology forces him into the ghoul world, making the dietary choice (human food vs. human flesh) his first existential decision.",
+      "systemDesc": "An accidental hybrid creation event — the transplantation of Rize's kakuhou creates the first major one-eyed ghoul in the series, establishing the biological boundary violation that drives the central conflict."
+    },
+    {
+      "name": "Kaneki Becomes the One-Eyed King",
+      "trigger": "Kaneki accepts his ghoul nature and takes the title of One-Eyed King after being defeated by Arima",
+      "consequence": "Kaneki shifts from victim to agent — he now leads the ghoul resistance rather than being buffeted by events",
+      "timelinePosition": "Mid Arc",
+      "loreDesc": "The identity pivot — Kaneki's acceptance of the One-Eyed King role means he's no longer trying to return to human society. He chooses the ghoul world as his home and begins actively shaping its politics.",
+      "systemDesc": "A leadership transition event — the one-eyed ghoul becoming the leader of the ghoul resistance shifts the power structure of the entire community."
+    },
+    {
+      "name": "Kaneki vs Arima Final Fight",
+      "trigger": "Kaneki, fully accepting his ghoul nature, fights Arima as the One-Eyed King",
+      "consequence": "Kaneki takes Arima's quinque through his eye and survives — proving the one-eyed ghoul is superior to the best human",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "The apex resolution — the final fight between Kaneki and Arima is a proxy war between ghoul and human biological potential. Kaneki's victory proves that the hybrid is superior.",
+      "systemDesc": "A biological supremacy event — Kaneki's victory over Arima establishes that the one-eyed ghoul represents the apex of the combined ghoul/human potential."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Kaneki's One-Eyed Kagune",
+      "ruleViolated": "Kagune type is determined by the kakuhou Rc-type — one type per ghoul",
+      "loreDesc": "Kaneki's rinkaku kagune manifests from Rize's bikaku kakuhou — the kagune type doesn't match the kakuhou type. This is unprecedented. Additionally, his kagune has properties from multiple Rc-types.",
+      "systemDesc": "A kagune type anomaly — Kaneki's kagune doesn't match his kakuhou, suggesting that the one-eyed ghoul's hybrid nature allows cross-type kagune manifestation."
+    },
+    {
+      "name": "Kaneki Can Eat Human Food",
+      "ruleViolated": "Ghouls must consume human flesh — they cannot survive on human food",
+      "loreDesc": "The one-eyed ghoul's hybrid nature allows them to derive nutrition from both human and ghoul food. Kaneki is the only ghoul who can choose not to kill.",
+      "systemDesc": "A dietary exemption — the one-eyed ghoul's ability to eat human food makes them the only ghoul with genuine moral agency about the predator-prey relationship."
+    },
+    {
+      "name": "Rize Lives Inside Kaneki",
+      "ruleViolated": "Dead is dead — consciousness does not persist in another body",
+      "loreDesc": "Rize's consciousness persists within Kaneki as a voice in his mind. She exists inside another person's body as a separate consciousness.",
+      "systemDesc": "A consciousness transfer anomaly — Rize's persistence inside Kaneki suggests that the ghoul's kakuhou carries some form of consciousness or identity imprint that survives death."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Ukaku Projectiles",
+      "defender": "Rinkaku Volume",
+      "mechanic": "Ukaku's speed and range advantage against a single opponent is countered by rinkaku's multiple limb count — enough limbs create a physical barrier that catches the fast projectiles.",
+      "loreDesc": "The type advantage in action — rinkaku users can overwhelm ukaku users through sheer volume of attack surface."
+    },
+    {
+      "attacker": "Koukaku Armor",
+      "defender": "Rinkaku Power",
+      "mechanic": "Koukaku's heavy armored kagune is designed to absorb and deflect, but rinkaku's raw mechanical force can penetrate through armor thickness.",
+      "loreDesc": "The power vs. defense trade-off — the heaviest armor has a limit to how much force it can absorb."
+    },
+    {
+      "attacker": "Quinque",
+      "defender": "Kagune Regeneration",
+      "mechanic": "Quinque forged from a specific ghoul's kakuhou has enhanced effectiveness against that same ghoul. But ghoul regeneration means quinque wounds close faster than normal.",
+      "loreDesc": "The body consumption paradox — quinques are made from dead ghouls, but living ghouls' regeneration can partially resist quinque damage."
+    },
+    {
+      "attacker": "Bikaku Blade",
+      "defender": "Multiple Attacker Coordination",
+      "mechanic": "Bikaku's single-target blade focus means a coordinated multi-attacker approach forces division of attention that degrades bikaku effectiveness.",
+      "loreDesc": "The focus disadvantage — a single powerful blade is less effective when facing coordinated team attacks."
+    },
+    {
+      "attacker": "Arima's Quinque",
+      "defender": "Nothing (Absolute Counter)",
+      "mechanic": "Arima's quinque has never failed to kill a ghoul. There is no counterplay documented — only Kaneki's survival through sheer hybrid power.",
+      "loreDesc": "The apex predator has no known counters — only the one-eyed ghoul at maximum power has demonstrated survivability."
+    },
+    {
+      "attacker": "Kakujaku (Kakugan suppression)",
+      "defender": "Kaneki's Dual-Nature",
+      "mechanic": "Kaneki can suppress his Kakugan to pass as human, allowing infiltration and surprise attacks against CCG investigators.",
+      "loreDesc": "The hybrid advantage — only one-eyed ghouls can pass as human and ghoul, giving them strategic flexibility no pure-ghoul has."
+    }
+  ],
+  "tags": [
+    "ghoul",
+    "ccg",
+    "kakugan",
+    "kagune",
+    "quinque",
+    "one-eyed",
+    "rc-type",
+    "predator-prey",
+    "human",
+    "tokyo"
+  ]
+}

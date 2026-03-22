@@ -106,12 +106,19 @@ const UNIVERSE_MAP = {
     visualizationHint: 'counter-tree',
     themeColors: { primary: '#f97316' }
   },
-    bleach: {
+  bleach: {
     anime: 'Bleach',
     tagline: 'A multi-faction spiritual network where Reiatsu dominance and Zanpakuto resonance define survival.',
     visualizationHint: 'node-graph',
     themeColors: { primary: '#1e3a8a' }
-  },  'one-piece': {
+  },
+    tokyo-ghoul: {
+    anime: 'Tokyo Ghoul',
+    tagline: 'A predator-prey economy where the ghoul/human biological boundary defines every alliance and moral position.',
+    visualizationHint: 'counter-tree',
+    themeColors: { primary: '#dc2626' }
+  },
+  'one-piece': {
     anime: 'One Piece',
     tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas.',
     visualizationHint: 'node-graph',

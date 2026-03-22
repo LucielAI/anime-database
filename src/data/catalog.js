@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'one-piece']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'tokyo-ghoul', 'one-piece']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -95,6 +95,11 @@ export const UNIVERSE_CATALOG = [
   {
     id: 'bleach', anime: 'Bleach', tagline: 'A multi-faction spiritual network where Reiatsu dominance, Zanpakuto resonance, and dimensional boundaries between Soul Society, Hueco Mundo, and the Human World determine survival', malId: 269, visualizationHint: 'node-graph', visualizationReason: 'Bleach is a faction-network universe where Soul Society, Hueco Mundo, the Human World, and the Quincy domain exist as distinct but interacting spiritual layers.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1541/147774l.jpg',
     themeColors: { primary: '#1e3a8a', secondary: '#0f172a', accent: '#dc2626', glow: 'rgba(30,58,138,0.35)', tabActive: '#1e3a8a', badgeBg: 'rgba(220,38,38,0.12)', badgeText: '#dc2626', modeGlow: 'rgba(30,58,138,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
+    stats: { characters: 10, powerSystem: 5, rules: 5 }
+  },
+  {
+    id: 'tokyo-ghoul', anime: 'Tokyo Ghoul', tagline: 'A predator-prey economy where the ghoul/human biological boundary defines every alliance, motivation, and moral position', malId: 22319, visualizationHint: 'counter-tree', visualizationReason: 'Tokyo Ghoul is a ghoul/human predator-prey system organized as a counter-tree. The counter-tree captures the core structural thesis: the ghoul/human binary as the root divide, ghoul factions and CCG hierarchies as branching nodes, and specific character matchups determining which fighter counters which.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1498/134443l.jpg',
+    themeColors: { primary: '#dc2626', secondary: '#0f172a', accent: '#f43f5e', glow: 'rgba(220,38,38,0.35)', tabActive: '#dc2626', badgeBg: 'rgba(15,23,42,0.6)', badgeText: '#f43f5e', modeGlow: 'rgba(220,38,38,0.25)', heroGradient: 'rgba(20,5,10,0.95)' },
     stats: { characters: 10, powerSystem: 5, rules: 5 }
   },
   {

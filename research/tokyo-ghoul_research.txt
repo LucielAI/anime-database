@@ -1,0 +1,36 @@
+# Tokyo Ghoul — Research File
+
+**malId:** 22319
+**System Type:** Counter-Tree (ghoul/human system)
+**Renderer:** CounterTreeExplorer
+
+---
+
+## System Thesis
+
+Tokyo Ghoul operates as a predator-prey economy where the ghoul/human boundary is the only meaningful organizational axis. The analytical lens is dietary: ghouls must consume human flesh to survive, CCG (Commission of Counter Ghoul) exists to eliminate ghouls, and every character's moral position is determined by which side of this biological divide they stand on. The system's core tension is the one-eyed ghoul (half-human, half-ghoul) — an anomaly that threatens to collapse the binary entirely.
+
+---
+
+## Power System Architecture
+
+- **Kakugan:** The ghoul's red-eyed combat form. Activating kakugan gives access to kakuji ( Rc-Type spread control) and ukaku ( Rc-Type projectile), plus increased physicals.
+- **Kakuji/Ukaku:** Ghoul combat techniques using the Rc-type system — kakuji is close-range physical attack, ukaku is ranged projectile attacks.
+- **Quinque:** CCG weapons forged from ghoul kakuhou ( Rc-type cells). Human investigators use ghoul biology as weaponry against ghouls.
+- **Rize's Kakuhou:** Rize's kakuhou was transplanted into Kaneki, making him a unique one-eyed ghoul with exceptional Rc-type capabilities.
+- **Kagune:** A ghoul's primary weapon — a fleshy tentacle-like appendage that manifests from the kakuhou. Each ghoul's kagune is unique.
+
+---
+
+## Key Characters
+
+1. **Ken Kaneki** — Half-ghoul protagonist; the one-eyed king who bridges both worlds.
+2. **Kishou Arima** — CCG's strongest investigator; holds the unique position of being able to kill any ghoul.
+3. **Touka Kirishima** — Ghoul ally; represents the moral ghoul who fights for coexistence.
+4. **Rize Kamishiro** — The kakuhou donor; her death and resurrection as part of Kaneki drives the entire narrative.
+5. **Koutarou Amon** — CCG investigator; represents the human who questions his institution.
+6. **Eto Yoshimura** — The one-eyed king's creator; a ghoul who can pass as human.
+7. **Juuzou Suzuya** — CCG's most effective sadistic investigator; a former quinque subject.
+8. **Hinami Fueguchi** — Young ghoul that Kaneki mentors; represents innocence in the conflict.
+9. **Shuu Tsukiyama** — The gourmet; a ghoul who considers humans a fine dining experience.
+10. **Koma Ihei** — Anteiku ally; represents the peaceful ghoul who just wants to live.

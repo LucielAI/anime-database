@@ -134,12 +134,19 @@ export const DISCOVERY_METADATA = {
     appealTags: ['power-scaling', 'technical-counterplay'],
     systemProfile: { factionComplexity: 2, causalDensity: 2, powerStructure: 'matchup' }
   },
-    bleach: {
+      bleach: {
     addedAt: '2026-03-22', popularityBaseline: 92, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS to map the Soul Society-Hueco Mundo dimensional network.',
     clusterTags: ['faction-heavy', 'hierarchy-heavy', 'anomaly-driven'],
     appealTags: ['high-stakes-escalation', 'strategy-network'],
     systemProfile: { factionComplexity: 3, causalDensity: 3, powerStructure: 'exchange' }
-  },  'one-piece': {
+  },
+  'tokyo-ghoul': {
+    addedAt: '2026-03-22', popularityBaseline: 89, classification: 'combat', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for ghoul/human counter-matchups.',
+    clusterTags: ['combat-systems', 'hierarchy-heavy', 'anomaly-driven'],
+    appealTags: ['high-stakes-escalation', 'power-scaling'],
+    systemProfile: { factionComplexity: 2, causalDensity: 2, powerStructure: 'matchup' }
+  },
+  'one-piece': {
     addedAt: '2026-03-20', popularityBaseline: 99, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS to map the pirate-yonko-maritime power grid.',
     clusterTags: ['faction-heavy', 'hierarchy-heavy', 'anomaly-driven'],
     appealTags: ['high-stakes-escalation', 'strategy-network'],
