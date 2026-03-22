@@ -135,7 +135,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default', priority
       </div>
 
       <div className={`grow flex flex-col justify-end p-4 md:p-6`}>
-        <div className="inline-flex items-center self-start px-2 py-0.5 rounded text-[8px] font-bold tracking-[0.2em] uppercase mb-2 border" style={{ color: theme.primary, borderColor: `${theme.primary}40`, backgroundColor: `${theme.primary}10` }}>
+        <div className="inline-flex items-center self-start px-2 py-0.5 rounded text-[10px] font-bold tracking-[0.15em] uppercase mb-2 border" style={{ color: theme.primary, borderColor: `${theme.primary}40`, backgroundColor: `${theme.primary}10` }}>
           {classLabel}
         </div>
         <h3 className={`font-bold uppercase text-white truncate ${isCatalogDense ? 'text-base' : 'text-lg'}`}>{data.anime}</h3>
