@@ -168,7 +168,7 @@
     },
     {
       "name": "Tsunade",
-      "title": "TheSlug Princess",
+      "title": "The Slug Princess",
       "rank": "Fifth Hokage",
       "dangerLevel": 8,
       "loreBio": "A legendary medical ninja who created the rule that medical ninja must be protected in combat. She became Hokage after Orochimaru's attack and demonstrated that real strength is about protecting others rather than destroying them.",
@@ -210,7 +210,7 @@
       "gradientFrom": "slate-900",
       "gradientTo": "orange-900",
       "accentColor": "orange-400",
-      "icon": "Crown",
+      "icon": "Shield",
       "signatureMoment": "His final act: using the Dead Demon Consuming Seal to take Orochimaru's arms to his grave — sacrificing his own afterlife to prevent Orochimaru from using his full power against the village.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/68520.jpg?s=7d6e5e92c4a665933686d4ece2cbdbe1",
       "_fetchFailed": false,
@@ -303,7 +303,7 @@
       "gradientFrom": "yellow-950",
       "gradientTo": "emerald-900",
       "accentColor": "yellow-400",
-      "icon": "Skull",
+      "icon": "Bug",
       "signatureMoment": "Being trapped by his own Izanami — forced to relive his true identity after years of constructing a false one.",
       "description": "Edo Tensei orchestrator; sage mode user; Fourth Shinobi War catalyst"
     },
