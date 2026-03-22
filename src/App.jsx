@@ -35,6 +35,8 @@ import { trackExternalLink } from './utils/analytics'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
+import NewsletterCTA from './components/NewsletterCTA'
+import InsightsRoute from './components/InsightsRoute'
 const SearchResults = lazy(() => import('./components/SearchResults'))
 const ThematicPage = lazy(() => import('./components/ThematicPage'))
 const BlogIndex = lazy(() => import('./components/BlogIndex'))
@@ -568,7 +570,10 @@ function Home() {
         </Suspense>
       )}
 
-      <footer className="mt-12 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
+      {/* Newsletter */}
+      <NewsletterCTA />
+
+      <footer className="pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <div className="max-w-4xl text-center px-6">
           <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-300/80">Compare. Discover. Rewatch Smarter.</p>
           <p className="text-[11px] text-gray-400 mt-2">See how your favorite anime worlds handle power, strategy, and big turning points.</p>
@@ -585,6 +590,8 @@ function Home() {
         </div>
         <div className="flex flex-wrap justify-center gap-4 text-[10px] tracking-[0.14em] uppercase text-gray-600">
           <a href="/about" className="hover:text-gray-400 transition-colors">About</a>
+          <span className="text-gray-700">·</span>
+          <a href="/insights" className="hover:text-gray-400 transition-colors">Insights</a>
           <span className="text-gray-700">·</span>
           <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</a>
           <span className="text-gray-700">·</span>
@@ -923,6 +930,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/universes" element={<UniversesCatalogRoute />} />
+        <Route path="/insights" element={<InsightsRoute />} />
         <Route path="/universe/:id" element={<UniverseRoute />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
