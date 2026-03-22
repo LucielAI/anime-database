@@ -41,12 +41,23 @@ Each universe is structured as a dual-mode experience:
 ### Closed-Loop Systems | /systems/closed-loop-systems | Universes with self-reinforcing rules that create inescapable cycles.
 ### Power Economy Systems | /systems/power-economy-systems | Universes where abilities are resources that can be earned, spent, traded, or permanently lost.
 
-## Blog
+## Insights
 
-Blog Index: https://animearchive.app/blog
+Insights Index: https://animearchive.app/insights
 ### Anime Power Systems Ranked | /blog/anime-power-systems-ranked
+### The Most Complex Anime Power Systems, Ranked by Structure | /insights/anime-power-systems-ranked
+### The Determinism Engine in Attack on Titan | /insights/aot-determinism-chaos
 ### Best Anime Worldbuilding | /blog/best-anime-worldbuilding
+### Best Anime Worldbuilding: 5 Universes Where the World Is the Main Character | /insights/best-anime-worldbuilding
+### Why Devil Contracts Are a Raw Deal | /insights/chainsawman-devil-economy
+### Death Note as a Tool Critique | /insights/death-note-killing-archetype
+### Breathing Forms as Weaponized Poetry | /insights/demonslayer-breathing-economics
+### Why Nen Is the Best Magic System in Anime | /insights/hxh-nen-specialization
+### Cursed Energy as an Inverse Heat Engine | /insights/jjk-cursed-energy-thermodynamics
 ### Lore Vs Sys Explained | /blog/lore-vs-sys-explained
+### LORE vs SYS Mode: How the Archive Sees Anime Differently | /insights/lore-vs-sys-explained
+### Chakra as a Bureaucratic Resource | /insights/naruto-chakra-meritocracy
+### Why the One Piece World Is Designed Like an Economy | /insights/one-piece-power-economy
 
 ## Entity Pages
 

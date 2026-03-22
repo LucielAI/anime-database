@@ -140,7 +140,7 @@ export default function InsightsRoute() {
         title="System Breakdowns — Anime Intelligence Archive"
         description="Deep dives into how anime worlds actually work. Power mechanics, causal logic, and the systems behind the fights."
         url="https://animearchive.app/insights"
-        image="https://animearchive.app/og-default.png"
+        image="https://animearchive.app/api/og?id=insights"
       />
       {/* Header */}
       <header className="w-full py-16 px-6 text-center border-b border-white/5" style={{ background: 'radial-gradient(ellipse at center, #101634 0%, #050508 100%)' }}>

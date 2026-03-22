@@ -70,7 +70,27 @@ function buildSitemap(slugs) {
     { loc: `${BASE_URL}/search`, priority: '0.7', changefreq: 'weekly', lastmod },
     { loc: `${BASE_URL}/about`, priority: '0.5', changefreq: 'monthly', lastmod },
     { loc: `${BASE_URL}/privacy`, priority: '0.3', changefreq: 'yearly', lastmod },
+    { loc: `${BASE_URL}/insights`, priority: '0.8', changefreq: 'weekly', lastmod },
   ]
+
+  // Insights/post slugs — from public/blog/ directory
+  const PUBLIC_BLOG_DIR = path.join(__dirname, '../public/blog')
+  let insightSlugs = []
+  try {
+    insightSlugs = fs
+      .readdirSync(PUBLIC_BLOG_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => f.replace(/\.json$/, ''))
+      .filter(Boolean)
+  } catch {
+    insightSlugs = []
+  }
+  const insightUrls = insightSlugs.map(slug => ({
+    loc: `${BASE_URL}/insights/${slug}`,
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod,
+  }))
 
   // Blog pages
   const blogUrls = blogSlugs.length > 0
@@ -144,6 +164,7 @@ function buildSitemap(slugs) {
     ...blogUrls,
     ...thematicUrls,
     ...universeUrls,
+    ...insightUrls,
     ...entityUrls,
   ]
 
@@ -162,4 +183,9 @@ const xml = buildSitemap(slugs)
 fs.writeFileSync(OUT_FILE, xml, 'utf8')
 
 const blogSlugs = getBlogSlugs()
-console.log(`[sitemap] ${slugs.length} universe(s), ${THEMATIC_SLUGS.length} thematic page(s), ${blogSlugs.length} blog post(s) → public/sitemap.xml`)
+const PUBLIC_BLOG_DIR = path.join(__dirname, '../public/blog')
+let insightSlugs = []
+try {
+  insightSlugs = fs.readdirSync(PUBLIC_BLOG_DIR).filter(f => f.endsWith('.json')).map(f => f.replace(/\.json$/, ''))
+} catch {}
+console.log(`[sitemap] ${slugs.length} universe(s), ${THEMATIC_SLUGS.length} thematic page(s), ${insightSlugs.length} insight(s), ${blogSlugs.length} blog post(s) → public/sitemap.xml`)

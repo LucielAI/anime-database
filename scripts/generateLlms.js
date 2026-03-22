@@ -3,7 +3,7 @@
  * Generate llms.txt — a lightweight text sitemap for AI crawlers.
  * Run at build time: node scripts/generateLlms.js
  */
-import { writeFileSync, readdirSync, existsSync } from 'fs'
+import { writeFileSync, readdirSync, readFileSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { UNIVERSE_CATALOG } from '../src/data/catalog.js'
@@ -13,6 +13,7 @@ const root = join(__dirname, '..')
 
 const SITE_URL = 'https://animearchive.app'
 const BLOG_DIR = join(root, 'content', 'blog')
+const PUBLIC_BLOG_DIR = join(root, 'public', 'blog')
 
 // Thematic/systems pages — mirrors src/config/thematicPages.js
 const THEMATIC_PAGES = [
@@ -25,19 +26,29 @@ const THEMATIC_PAGES = [
 ]
 
 function getBlogPosts() {
-  if (!existsSync(BLOG_DIR)) return []
-  return readdirSync(BLOG_DIR)
-    .filter(f => f.endsWith('.md') || f.endsWith('.mdx') || f.endsWith('.json'))
-    .map(f => {
-      const slug = f.replace(/\.(md|mdx|json)$/, '')
-      // Convert slug to a readable title (kebab-case → Title Case)
-      const title = slug
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ')
-      return { slug, title }
-    })
-    .sort((a, b) => a.slug.localeCompare(b.slug))
+  const fromContent = existsSync(BLOG_DIR)
+    ? readdirSync(BLOG_DIR)
+        .filter(f => f.endsWith('.md') || f.endsWith('.mdx') || f.endsWith('.json'))
+        .map(f => {
+          const slug = f.replace(/\.(md|mdx|json)$/, '')
+          const title = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+          return { slug, title, source: 'blog' }
+        })
+    : []
+  const fromPublic = existsSync(PUBLIC_BLOG_DIR)
+    ? readdirSync(PUBLIC_BLOG_DIR)
+        .filter(f => f.endsWith('.json'))
+        .map(f => {
+          try {
+            const content = JSON.parse(readFileSync(join(PUBLIC_BLOG_DIR, f), 'utf8'))
+            return { slug: content.slug || f.replace(/\.json$/, ''), title: content.title || '', source: 'insights' }
+          } catch {
+            return null
+          }
+        })
+        .filter(Boolean)
+    : []
+  return [...fromContent, ...fromPublic].sort((a, b) => a.slug.localeCompare(b.slug))
 }
 
 const blogPosts = getBlogPosts()
@@ -67,10 +78,13 @@ const LINES = [
   '',
   ...(blogPosts.length > 0
     ? [
-        '## Blog',
+        '## Insights',
         '',
-        `Blog Index: ${SITE_URL}/blog`,
-        ...blogPosts.map((p) => `### ${p.title} | /blog/${p.slug}`),
+        `Insights Index: ${SITE_URL}/insights`,
+        ...blogPosts.map((p) => {
+          const url = p.source === 'insights' ? `/insights/${p.slug}` : `/blog/${p.slug}`
+          return `### ${p.title} | ${url}`
+        }),
         '',
       ]
     : []),
