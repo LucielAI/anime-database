@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Clock3, Network, Zap, Users, BookOpen, ChevronRight } from 'lucide-react'
+import { ArrowRight, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2, Twitter } from 'lucide-react'
 
 const INSIGHTS = [
   {
@@ -142,14 +142,27 @@ export default function InsightsRoute() {
           How anime worlds actually work — power mechanics, causal logic, and the systems behind the fights.
         </p>
         {/* Search */}
-        <div className="mt-6 max-w-md mx-auto">
+        <div className="mt-6 max-w-md mx-auto flex gap-2">
           <input
             type="search"
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             placeholder="Search insights..."
-            className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-[11px] text-white placeholder-gray-600 outline-none focus:border-cyan-400/40 transition-colors"
+            className="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-[11px] text-white placeholder-gray-600 outline-none focus:border-cyan-400/40 transition-colors"
           />
+          <button
+            onClick={() => {
+              if (navigator.share) {
+                navigator.share({ title: 'System Breakdowns — Anime Archive', url: window.location.href })
+              } else {
+                navigator.clipboard.writeText(window.location.href)
+              }
+            }}
+            className="flex items-center gap-1.5 px-3 py-2.5 border border-white/10 rounded-xl hover:border-cyan-400/40 transition-colors text-gray-400 hover:text-white"
+            title="Share insights"
+          >
+            <Share2 className="w-3.5 h-3.5" />
+          </button>
         </div>
       </header>
 

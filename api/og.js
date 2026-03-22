@@ -100,6 +100,12 @@ const UNIVERSE_MAP = {
     visualizationHint: 'node-graph',
     themeColors: { primary: '#f59e0b' }
   },
+  dragonballz: {
+    anime: 'Dragon Ball Z',
+    tagline: 'A vertical ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome.',
+    visualizationHint: 'counter-tree',
+    themeColors: { primary: '#f97316' }
+  },
   'one-piece': {
     anime: 'One Piece',
     tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas.',

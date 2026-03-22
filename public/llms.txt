@@ -26,6 +26,7 @@ Each universe is structured as a dual-mode experience:
 ### Goblin Slayer | /universe/goblinslayer | A low-prestige extermination niche becomes the hidden maintenance layer that keeps a fantasy civilization from collapsing.
 ### Mushoku Tensei: Jobless Reincarnation | /universe/mushokutensei | A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.
 ### Naruto | /universe/naruto | A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome
+### Dragon Ball Z | /universe/dragonballz | A vertical ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome
 ### One Piece | /universe/one-piece | An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas
 
 ## Systems / Thematic Pages

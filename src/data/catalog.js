@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'one-piece']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'dragonballz', 'one-piece']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -86,6 +86,11 @@ export const UNIVERSE_CATALOG = [
     id: 'naruto', anime: 'Naruto', tagline: 'A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome', malId: 20, visualizationHint: 'node-graph', visualizationReason: 'Naruto is a village/clan network where political loyalty, inter-village competition, and bloodline hierarchies are the primary analytical dimensions. The node-graph captures the structural thesis: villages as nodes, alliances as edges, and shinobi as the human capital flowing between them.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1141/142503l.jpg',
     themeColors: { primary: '#f59e0b', secondary: '#1e3a8a', accent: '#0ea5e9', glow: 'rgba(245,158,11,0.35)', tabActive: '#f59e0b', badgeBg: 'rgba(30,58,138,0.18)', badgeText: '#0ea5e9', modeGlow: 'rgba(14,165,233,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
     stats: { characters: 15, powerSystem: 4, rules: 6 }
+  },
+  {
+    id: 'dragonballz', anime: 'Dragon Ball Z', tagline: 'A vertical ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome', malId: 813, visualizationHint: 'counter-tree', visualizationReason: 'Dragon Ball Z is a ki-based power scaling system organized as a vertical combat hierarchy. The counter-tree captures the core structural thesis: power levels as the root, transformation tiers as branching nodes, and specific matchups determining which fighter counters which.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1277/142022.jpg',
+    themeColors: { primary: '#f97316', secondary: '#1e3a5f', accent: '#facc15', glow: 'rgba(249,115,22,0.35)', tabActive: '#f97316', badgeBg: 'rgba(30,58,95,0.18)', badgeText: '#facc15', modeGlow: 'rgba(250,204,21,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
+    stats: { characters: 10, powerSystem: 5, rules: 5 }
   },
   {
     id: 'one-piece', anime: 'One Piece', tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas', malId: 21, visualizationHint: 'node-graph', visualizationReason: 'One Piece operates as an empire/faction node-graph: Yonko territories, Warlord networks, Revolutionary Army cells, and Marine hierarchy form a maritime power grid where allegiances shift constantly and pirate crews function as independent business units with their own chains of command.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1244/138851l.jpg',
