@@ -1,0 +1,103 @@
+# One Piece — Research File
+
+**malId:** 21
+**System Type:** Node-Graph (empire/faction network)
+**Renderer:** NodeGraphExplorer
+
+---
+
+## System Thesis
+
+One Piece's world is defined by the平衡 of power between maritime empires, pirate crews, revolutionary movements, and the World Government. The analytical lens is relational: influence flows through alliances, debts, territorial control, and historical secrets rather than through combat alone. The "One Piece" itself is an unknown variable — the entire system is shaped by competing agents chasing an unknowable prize. This makes the network itself the object of study, not any individual node.
+
+---
+
+## Power System Architecture
+
+One Piece has no hard magic system but features several power frameworks:
+
+- **Devil Fruits:** Categorized into Paramecia (alter environment), Zoan (body transformation), and Logia (elemental intangibility). Each user can only eat one; sea and seawater negate abilities.
+- **Haki:** Spiritual energy observable in three forms — Observation (future/presence sensing), Armament (defensive/offensive armor), and Conqueror's (dominates weak-willed). Haki is trainable and rare.
+- **Doubles as system:** Devil Fruits are inherent game-piece limitations; Haki is the skill ceiling that transcends them. The system rewards both innate talent and disciplined training.
+
+---
+
+## Key Characters (Structural Hubs)
+
+1. **Monkey D. Luffy** — Crew hub; straw hat bearer; allied with every major faction through personal bonds. Has 5+ direct faction-adjacent relationships.
+2. **Marshall D. Teach (Blackbeard)** — Antagonist hub; dual Devil Fruit user; drives the series' central conflict through opportunistic power grabs.
+3. **Red-Haired Shanks** — Political hub; Yonko whose influence bridges the Yonko alliance system and the World Government.
+4. **Silvers Rayleigh** — Historical hub; first mate of Roger; connects the Void Century secret to present-day power players.
+5. **Nico Robin** — Intelligence hub; only person who can read Poneglyphs; key to the Void Century and Ancient Weapon knowledge.
+6. **Buggy the Clown** — Faction hub; runs a massive worldwide crew post-timeskip; unexpected structural broker.
+7. **Dracule Mihawk** — Swordsmanship apex; World's Strongest Swordsman; neutral hub connecting multiple factions through personal history.
+8. **Sengoku** — Former Fleet Admiral; connects the World Government to the history of the Void Century and Roger.
+9. **Monkey D. Garp** — Naval hub; bridges the Marines, Revolutionaries, and Luffy's lineage.
+10. **Whitebeard (Edward Newgate)** — Deceased apex; his death triggered the power vacuum that defines the current era.
+
+---
+
+## Key Factions
+
+1. **Four Emperors (Yonko)** — Four independent power centers controlling the New World. Currently: Luffy, Blackbeard, Shanks, and one more seat in flux.
+2. **World Government / Marines** — Central authority; controls the six Absolute Justice naval powers and Cipher Pol covert divisions.
+3. **Seven Warlords of the Sea (Disbanded)** — Former Government contractors; Crocodile, Hancock, and others remain systemically relevant.
+4. **Straw Hat Grand Fleet** — Luffy's nominal allies; eleven captain-crews sworn to his flag; massive distributed node network.
+5. **Revolutionary Army** — Dragon's organization; aims to topple the World Government; connected to Luffy through personal lineage.
+6. **Big Mom Pirates** — One of the former Yonko crews; complex family/faction dynamics; political marriage alliances.
+
+---
+
+## Core Rules (Unbreakable Laws)
+
+1. **Devil Fruit consumers cannot swim.** Seastone (Kairoseki) nullifies abilities on contact.
+2. **Only one Devil Fruit per person.** The Yami Yami no Mi allows absorption of a second, creating Blackbeard's unique exception — a system anomaly, not a rule change.
+3. **Haki eclipses Devil Fruit power at sufficient mastery.** Observation Haki can predict Logia element attacks; Armament can damage intangibility.
+4. **The Will of the D.** Carries the "Will of the Creator." bearers are cosmically drawn to historic confrontations — structural destiny pattern.
+5. **Poneglyphs cannot be destroyed by any known force.** Robin's ability to read them is the only path to the Void Century truth.
+6. **The World Government erases history.** The Void Century was systematically scrubbed; the Ohara incident demonstrates the state's willingness to commit genocide to preserve the secret.
+
+---
+
+## Key Relationships (Meaningful Edges)
+
+1. Luffy ↔ Shanks — Mentor bond; Shanks gave Luffy his hat and inspiration.
+2. Luffy ↔ Boa Hancock — Romantic alliance; Hancock's Warlord position bridges Government and Luffy.
+3. Luffy ↔ Crocodile — Former enemy turned uneasy ally; Crocodile holds keys to Alabasta history.
+4. Luffy ↔ Jinbei — Cross-faction bond bridging Fish-Man Island, Pirates, and Marines.
+5. Blackbeard ↔ Whitebeard — Student-becoming-killer; Blackbeard killed his mentor for the Yami Yami no Mi.
+6. Blackbeard ↔ Shanks — Bountied nemesis; Shanks bears the scar; drives Blackbeard's rise narrative.
+7. Shanks ↔ Marine HQ — Non-aggression pact with Sengoku; maintains balance through implicit threat.
+8. Rayleigh ↔ Roger — First mate bond; Rayleigh carries all of Roger's final secrets.
+9. Robin ↔ World Government — Agent of destruction for their central secret; a living weapon against their power.
+10. Dragon ↔ Garp — Father-son ideological split; Revolutionary leader vs. Naval hero.
+11. Buggy ↔ World Government — Clown holds Warlord status via connections; a structural comedy that masks real power routing.
+12. Mihawk ↔ Shanks — Former rivals; Mihawk hunts Shanks but respects him; cross-Yonko tension edge.
+13. Sengoku ↔ Teach — Government is actively hunting Blackbeard; institutional enemy relationship.
+14. Big Mom ↔ Kaido — Political marriage alliance (Oden flashback); briefly creates a combined power bloc against Wano.
+15. Law ↔ Luffy — Alliance of opportunity; Roombas; forms the worst generation coalition that took down Kaido.
+
+---
+
+## Causal Events
+
+- **Roger execution** — Released the information that One Piece exists, triggering the Great Pirate Era.
+- **Battle of Marineford** — Whitebeard's death ended an era; opened the power vacuum Blackbeard exploited.
+- **Ohara incident** — World Government's willingness to massacre scholars; Robin escaped as the sole survivor.
+- **Enies Lobby assault** — Luffy declared war on the World Government; first major crack in their perceived invincibility.
+- **Ace's death** — Triggered Luffy's 2-year training; reset Luffy's power ceiling via Rayleigh.
+
+---
+
+## Anomalies
+
+- **Blackbeard dual Devil Fruit** — Breaks the "one fruit per person" rule; possible Yami Yami no Mi special property or external cause.
+- **Impossible crew compositions** — Buggy's Grand Fleet aggregates absurd diversity; structural joke with real political weight.
+- **Void Century** — A complete century of history erased by an institutional act; the central unresolved system anomaly.
+- **Luffy's Gear 5** — Awakening of the Gomu Gomu no Mi revealed it was always a Mythical Zoan (Hito Hito no Mi, Model: Nika); rewrites the power ceiling paradigm.
+
+---
+
+## Renderer Recommendation
+
+**NodeGraphExplorer** — One Piece is a distributed empire/faction network where influence, alliances, and territorial control are the primary analytical dimensions. Combat outcomes are secondary to relational positioning. The archive already uses NodeGraphExplorer for Hunter x Hunter, Vinland Saga, and Code Geass; One Piece's network topology fits squarely in that tradition. A timeline view would obscure the relational dynamics; a counter-tree would misframe the power system as combat-centric. NodeGraphExplorer captures the system thesis: who knows whom, who owes whom, and who controls what territory.

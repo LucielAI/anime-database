@@ -1,0 +1,107 @@
+# Naruto — Research File
+
+**malId:** 20
+**System Type:** Node-Graph (village/clan network)
+**Renderer:** NodeGraphExplorer
+
+---
+
+## System Thesis
+
+Naruto's world is organized around the village as the fundamental unit of power, with shinobi as the human capital within a feudal market of military services. The analytical lens is structural: political loyalty, inter-village competition, clan hierarchies, and the economics of ninja contracts define the system more than any individual combat outcome. Chakra is the resource; villages are the firms; shinobi are the workforce. The entire narrative tension stems from the instability of the village-state equilibrium.
+
+---
+
+## Power System Architecture
+
+- **Chakra:** Universal energy drawn from physical + spiritual energy. Every shinobi uses it; it is the basis of all jutsu.
+- **Jutsu Types:**
+  - *Ninjutsu* — Channeled through hand seals; most common technique category.
+  - *Genjutsu* — Chakra-based illusion; disrupts opponent's nervous system.
+  - *Taijutsu* — Pure physical combat; no hand seals; the baseline.
+  - *Dojutsu* — Kekkei Genkai tied to eyes: Sharingan, Byakugan, Rinnegan — each fundamentally warps combat economy.
+- **Sage Mode** — Natural energy absorption; elevated state with drastically enhanced stats; extremely rare to maintain.
+- **Chakra Nature Affinity** — Five elemental affinities; user specialization creates combat matchup trees.
+- **The Rinnegan** — Derived from the Sage of Six Paths; allows all five chakra nature transformations and jutsu categories simultaneously. Apex power system element.
+
+---
+
+## Key Characters (Structural Hubs)
+
+1. **Naruto Uzumaki** — Village hub; jinchūriki of Nine-Tails; bridges the entire shinobi world through the Allied Shinobi Forces. Has relationships spanning all major factions.
+2. **Sasuke Uchiha** — Ideological hub; sole surviving Uchiha; his path from revenge to redemption mirrors the system's internal conflict between village loyalty and personal justice.
+3. **Kakashi Hatake** — Intelligence hub; student of the Fourth; sharingan bearer; connects the old generation's trauma to the new generation's resolution.
+4. **Shikamaru Nara** — Strategic hub; the clearest analytical mind in the series; his shadow possession makes him a unique force-multiplier node.
+5. **Orochimaru** — Anomaly hub; immortality through jutsu research; operated outside every faction while manipulating all of them.
+6. **Tsunade** — Medical hub; creates the rule that medical ninja must be protected; her presence reshapes battlefield economics.
+7. **Jiraiya** — Spy/mentor hub; connected to Akatsuki, the Fourth Hokage, and the Akatsuki founder (Nagato); a multi-faction broker.
+8. **Pain (Nagato)** — Akatsuki leader; former student of Jiraiya; his attack on Konoha is the series' systemic rupture event.
+9. **Madara Uchiha** — Historical apex; the shinobi system's original architect; his resurrection destabilizes everything.
+10. **Hiruzen Sarutobi** — Village hub; three-time Hokage; institutional continuity connecting the clan politics of the early era to the modern system.
+
+---
+
+## Key Factions
+
+1. **Five Great Shinobi Villages (Hidden Villages)** — Konoha, Suna, Kiri, Kumo, Iwa. Each is a sovereign military state with a Kage as head.
+2. **Akatsuki** — Rogue organization of S-rank criminals; originally created by Nagato to bring peace; captured all nine tailed beasts. Primary antagonist faction.
+3. **Uchiha Clan** — The most politically significant clan in Konoha; erased by the village state in a single night; Madara and Sasuke are survivors.
+4. **Allied Shinobi Forces (formed during the Fourth Shinobi War)** — First-ever coalition of all five villages against a common existential threat.
+5. **Otogakure / Sound Village** — Orochimaru's private project; parasitic faction built around his experiments.
+6. **Grass Country / Minor Villages** — Peripheral states caught between Great Village competition; often supply mercenary ninjas or serve as proxy war zones.
+
+---
+
+## Core Rules (Unbreakable Laws)
+
+1. **Jinchūriki are weapons.** The tailed beasts are captured, extracted, and sealed; the host dies without them. This is the economic logic driving Akatsuki's entire operation.
+2. **Medical ninja must not be killed in combat.** Tsunade's rule: medical ninjas are force multipliers; breaking this convention destabilizes the entire battlefield economy.
+3. **The Sharingan cannot copy Kekkei Genkai.** It can see and replicate ninjutsu and taijutsu, but not bloodline-limit techniques — creating a ceiling on what intel alone can achieve.
+4. **The Sage of Six Paths power is the ceiling.** Rinnegan + Sharingan + Wood Release = Ōtsutsuki-level power. No character below this ceiling can defeat one above it in a direct matchup.
+5. **Village loyalty supersedes personal loyalty.** The shinobi system is built on the village as the primary contractor; individual shinobi who break this contract (Sasuke, Orochimaru) become system enemies.
+6. **The Akai Eye / Ocular jutsu have hard counters.** Tsukuyomi requires physical contact; Amaterasu requires line of sight; Kamui requires sustained focus. No ocular jutsu is unconditional.
+
+---
+
+## Key Relationships (Meaningful Edges)
+
+1. Naruto ↔ Sasuke — The fundamental rivalry; their conflict defines the entire series' thematic arc; from enemies to brothers.
+2. Naruto ↔ Pain — The confrontation that forced Naruto to choose between revenge and forgiveness; Pain's destruction of Konoha as systemic rupture.
+3. Sasuke ↔ Itachi — Brother conflict; Itachi's massacre of the Uchiha clan as the foundational trauma; truth revealed late in the narrative.
+4. Kakashi ↔ Obito — teammate-turned-enemy; Kakashi's sharingan origin; Obito's transformation into the series' true antagonist (Madara's vessel).
+5. Jiraiya ↔ Nagato — Mentor-student bond; Jiraiya trained the future Pain; his death triggered the attack on Konoha.
+6. Orochimaru ↔ Sasuke — Master-apprentice exploitation; Orochimaru gave Sasuke power in exchange for his body; Sasuke consumed Orochimaru.
+7. Konoha ↔ Suna — Inter-village rivalry but alliance of necessity; notably in the Sasuke Retrieval arc and the Fourth War.
+8. Tsunade ↔ Orochimaru — Former teammates under the Third Hokage; Orochimaru's betrayal created Tsunade's fear of blood; her healing resolves Orochimaru's hand damage.
+9. Madara ↔ Hashirama — Founder rivalry; Madara and Hashirama created the village system; their descendants inherit the conflict.
+10. Itachi ↔ Kabuto — Kabuto resurrected Itachi via Edo Tensei; Itachi's countermeasures through Kabuto's own revived body were a rare counter-ed-tensei victory.
+11. Shikamaru ↔ Asuma — Teacher-student bond; Asuma's death in the Sasuke Retrieval arc drove Shikamaru's strategic maturation.
+12. Naruto ↔ Killer Bee — Jinchūriki bond; Bee helped Naruto master Nine-Tails chakra; political connection between Kumo and Konoha.
+13. Sasuke ↔ Taka — His initial team after leaving Konoha; Sasuke used them to attack Bee and later abandoned them.
+14. Hiruzen ↔ Danzo — Institutional rivalry; Hiruzen was the moderate, Danzo was the hardliner; Danzo'sRoot faction operated as Hiruzen's shadow.
+15. Kabuto ↔ the Five Kage — Orchestrated the Fourth Shinobi War through controlling the edo tensei of past Kage; turned institutional history against the present.
+
+---
+
+## Causal Events
+
+- **Uchiha Clan Massacre** — Itachi eliminated his own clan on Government orders; the foundational trauma that created Sasuke, Tobi, and the entire Uchiha revenge arc.
+- **Attack of the Pain** — Pain destroyed Konoha; killed Kakashi and the other Kage-level defenders; forced Naruto to master Nine-Tails chakra and choose forgiveness over revenge.
+- **Fourth Shinobi War** — Kabuto's edo tensei forced all five villages into the first-ever Allied Shinobi Forces; resolved the power ceiling question (Ōtsutsuki) permanently.
+- **Sasuke's defection** — He left Konoha to pursue Itachi; the village's response (Sasuke Retrieval arc) revealed how far the system would go to reclaim an apostate.
+- **Five Kage vs. Madara** — Madara single-handedly defeated all five current Kage; demonstrated the absolute power gap between Kage-level and Sage of Six Paths-level entities.
+
+---
+
+## Anomalies
+
+- **Kaguya Ōtsutsuki** — The original chakra source; emerged from nowhere in the final arc as the true cosmic antagonist; retroactively reframes the entire series' power hierarchy as Ōtsutsuki derivative.
+- **Kabuto's sage mode / body modification** — Orochimaru's research created a being that could use Perfect Sage Mode and had the White Snake form; hard to classify within standard shinobi categories.
+- **Infinite Tsukuyomi** — World-wide genjutsu cast by the Rinne Sharingan; caught everyone including the tailed beasts; only counter was Naruto and Sasuke's combined charka and the subsequent intervention.
+- **Sasuke's Rinnegan + Eternal Mangekyō** — Unique combination that shouldn't theoretically be possible; gave him all six paths jutsu + space-time abilities simultaneously.
+
+---
+
+## Renderer Recommendation
+
+**NodeGraphExplorer** — Naruto is a village/clan network where political loyalty, inter-village competition, and bloodline hierarchies are the primary analytical dimensions. Chakra system mechanics exist but the system thesis is relational: who controls which village, which clan dominates within that village, and how inter-village contracts define the geopolitical equilibrium. The four shinobi wars are studied as network cascade failures, not just battles. NodeGraphExplorer captures the structural logic: villages as nodes, alliances as edges, and shinobi as the human capital flowing between them. This aligns with the archive's established pattern for complex relational systems.
