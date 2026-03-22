@@ -157,7 +157,7 @@ export default function CompareRoute() {
 
         {/* Quick Links to Both Universes */}
         {left && right && (
-          <div className="grid grid-cols-2 gap-3 mb-8">
+          <div className="grid grid-cols-2 gap-3 mb-6">
             <Link
               to={`/universe/${left.id}`}
               className="flex items-center justify-between px-4 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
@@ -180,6 +180,10 @@ export default function CompareRoute() {
             </Link>
           </div>
         )}
+
+        <p className="text-[10px] text-gray-600 text-center mb-4 leading-relaxed">
+          Counts reflect the full universe data — characters, factions, rules, relationships, and events mapped in the archive.
+        </p>
 
         {/* Comparison Tables */}
         {loading ? (

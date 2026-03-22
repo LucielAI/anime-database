@@ -139,7 +139,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default', priority
           {classLabel}
         </div>
         <h3 className={`font-bold uppercase text-white truncate ${isCatalogDense ? 'text-base' : 'text-lg'}`}>{data.anime}</h3>
-        <p className={`text-gray-500 leading-relaxed mt-1 ${isCatalogDense ? 'text-[10px] line-clamp-2' : 'text-[11px] line-clamp-2'}`}>{data.tagline}</p>
+        <p className={`text-gray-500 leading-relaxed mt-1 ${isCatalogDense ? 'text-[10px] line-clamp-3' : 'text-[11px] line-clamp-2'}`}>{data.tagline}</p>
       </div>
     </Link>
   )
@@ -279,6 +279,10 @@ function Home() {
           </a>
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white transition-colors">Browse all universes →</Link>
+            <button onClick={() => setSearchOpen(true)} className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase text-gray-500 hover:text-cyan-400 transition-colors">
+              <Search className="w-3.5 h-3.5" />
+              Search
+            </button>
             <a
               href="https://www.tiktok.com/@hashi.ai"
               target="_blank"
@@ -641,7 +645,7 @@ function UniversesCatalogRoute() {
           </label>
         </div>
 
-        <div className="mb-6 flex flex-wrap gap-2">
+        <div className="mb-6 flex flex-nowrap md:flex-wrap gap-2 overflow-x-auto snap-x [&>*]:shrink-0">
           <Link
             to="/universes"
             className={`px-3 py-2.5 rounded-full text-[10px] uppercase tracking-[0.16em] border transition-colors ${activeCluster ? 'text-gray-400 border-white/10 bg-white/5 hover:text-white' : 'text-white border-cyan-300/60 bg-cyan-400/10'}`}

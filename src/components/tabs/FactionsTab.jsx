@@ -36,7 +36,7 @@ export default function FactionsTab({ data, isSystemMode, theme }) {
   const roleColors = {
     antagonist: theme?.accent || '#f59e0b',
     protagonist: theme?.secondary || '#8b5cf6',
-    neutral: theme?.primary || '#22d3ee',
+    neutral: '#6b7280',
     chaotic: theme?.accent || '#f59e0b',
   }
 
