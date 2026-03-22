@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2 } from 'lucide-react'
 import SeoHead from './SeoHead'
 import NewsletterCTA from './NewsletterCTA'
+import { SITE_URL, SITE_NAME } from '../utils/seo'
 
 const INSIGHTS = [
   {
@@ -134,13 +135,40 @@ export default function InsightsRoute() {
   const featured = INSIGHTS.find(i => i.featured)
   const rest = filtered.filter(i => !i.featured)
 
+  const canonicalUrl = `${SITE_URL}/insights`
+
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `${SITE_NAME} Insights`,
+      description: 'Deep dives into how anime worlds actually work. Power mechanics, causal logic, and the systems behind the fights.',
+      url: canonicalUrl,
+      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'System Breakdowns',
+      description: 'Anime universe system analysis insights',
+      numberOfItems: INSIGHTS.length,
+      itemListElement: INSIGHTS.map((insight, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: insight.title,
+        url: `${SITE_URL}/insights/${insight.slug}`,
+      })),
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono">
       <SeoHead
         title="System Breakdowns — Anime Intelligence Archive"
         description="Deep dives into how anime worlds actually work. Power mechanics, causal logic, and the systems behind the fights."
-        url="https://animearchive.app/insights"
+        url={canonicalUrl}
         image="https://animearchive.app/api/og?id=insights"
+        structuredData={structuredData}
       />
       {/* Header */}
       <header className="w-full py-16 px-6 text-center border-b border-white/5" style={{ background: 'radial-gradient(ellipse at center, #101634 0%, #050508 100%)' }}>

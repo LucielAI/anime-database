@@ -210,6 +210,74 @@ const STRUCTURE_VISUALS = {
   'power-economy-systems': { icon: Coins, tone: 'border-indigo-400/50 hover:border-indigo-400/80 shadow-[0_0_0_1px_rgba(129,140,248,0.15)]', badge: 'text-indigo-200 bg-indigo-400/10' },
 }
 
+// CRO: Newsletter CTA Hero - compact inline version for above-fold conversion
+function NewsletterCTAHero() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState('idle')
+  const lastSubmitTime = useRef(0)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const now = Date.now()
+    if (now - lastSubmitTime.current < 5000) return
+    lastSubmitTime.current = now
+
+    const trimmed = email.trim()
+    if (!trimmed.includes('@')) return
+
+    setStatus('loading')
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: trimmed }),
+      })
+      if (res.ok) {
+        setStatus('success')
+        setEmail('')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <div className="flex items-center gap-2 px-4 py-3 rounded-xl border border-emerald-400/30 bg-emerald-400/10">
+        <div className="w-5 h-5 rounded-full bg-emerald-400/20 flex items-center justify-center">
+          <svg className="w-3 h-3 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p className="text-[11px] font-mono tracking-wider text-emerald-300 uppercase">You&apos;re in. New universes drop first.</p>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 w-full">
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => { setEmail(e.target.value); if (status === 'error') setStatus('idle') }}
+        placeholder="your@email.com"
+        maxLength={254}
+        disabled={status === 'loading'}
+        className="flex-1 min-h-[44px] bg-white/5 border border-white/20 focus:border-cyan-400/60 rounded-full px-4 py-2.5 text-xs text-gray-200 placeholder:text-gray-500 outline-none transition-colors font-mono"
+      />
+      <button
+        type="submit"
+        disabled={status === 'loading' || !email.trim()}
+        className="min-h-[44px] px-5 py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-[#020617] text-[10px] font-bold tracking-[0.18em] uppercase transition-colors disabled:opacity-40 whitespace-nowrap font-mono"
+      >
+        {status === 'loading' ? '...' : 'Get Notified'}
+      </button>
+    </form>
+  )
+}
+
 function Home() {
   const [sortMode, setSortMode] = useState('latest')
   const [deferSecondary, setDeferSecondary] = useState(false)
@@ -273,30 +341,32 @@ function Home() {
         <p className="mt-6 text-xs md:text-sm text-gray-300/80 max-w-2xl leading-relaxed">
           Find the best anime systems, compare anime power systems side-by-side, and explore the mechanics behind each world in minutes.
         </p>
-        <div className="mt-7 flex flex-col items-center gap-3">
-          <a
-            href="#explore-system-structure"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-cyan-300/40 bg-cyan-400/10 px-5 py-2 text-[10px] font-bold tracking-[0.2em] uppercase text-cyan-100 hover:border-cyan-300/70 hover:bg-cyan-400/15 transition-colors"
-          >
-            Explore System Structures
-          </a>
+        <div className="mt-7 flex flex-col items-center gap-4">
+          {/* Primary CTA: Newsletter Signup - CRO: "impossible to miss" */}
+          <div className="w-full max-w-md">
+            <NewsletterCTAHero />
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 flex-wrap justify-center">
+            <Link
+              to="/compare"
+              className="flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-full border border-emerald-400/40 bg-emerald-400/10 hover:bg-emerald-400/20 text-[10px] font-bold tracking-[0.18em] uppercase text-emerald-300 hover:text-emerald-200 transition-colors"
+            >
+              <Network className="w-3.5 h-3.5" />
+              Compare Two Systems
+            </Link>
+            <a
+              href="#explore-system-structure"
+              className="flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-full border border-cyan-300/40 bg-cyan-400/10 hover:bg-cyan-400/15 text-[10px] font-bold tracking-[0.18em] uppercase text-cyan-100 hover:text-white transition-colors"
+            >
+              Explore System Structures
+            </a>
+          </div>
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white transition-colors">Browse all universes →</Link>
             <button onClick={() => setSearchOpen(true)} className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase text-gray-500 hover:text-cyan-400 transition-colors">
               <Search className="w-3.5 h-3.5" />
               Search
             </button>
-            <a
-              href="https://www.tiktok.com/@hashi.ai"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase text-gray-500 hover:text-cyan-400 transition-colors"
-            >
-              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.63a8.23 8.23 0 004.79 1.53V6.71a4.85 4.85 0 01-1.03-.02z"/>
-              </svg>
-              Follow @hashi.ai
-            </a>
           </div>
 
           {/* Returning visitor: pick up where you left off */}

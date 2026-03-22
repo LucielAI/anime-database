@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo, useRef, useTransition, useDeferredValue }
 import { Link, useNavigate } from 'react-router-dom'
 import { loadNavState, saveNavState } from './utils/navState.js'
 import { throttle } from './utils/throttle.js'
-import { ExternalLink, Camera, X, Network, HeartHandshake } from 'lucide-react'
+import { ExternalLink, Camera, X, Network, HeartHandshake, ArrowRight } from 'lucide-react'
 import Toggle from './components/Toggle'
 import TabContent from './components/TabContent'
 import SystemSummary from './components/SystemSummary'
@@ -13,6 +13,7 @@ import ShareButton from './components/ShareButton'
 import FeedbackBlock from './components/FeedbackBlock'
 import SystemQuestionsPanel from './components/SystemQuestionsPanel'
 import KeyboardShortcutsOverlay from './components/KeyboardShortcutsOverlay'
+import NewsletterCTA from './components/NewsletterCTA'
 import { useSystemReveal } from './hooks/useSystemReveal'
 import { useShareFrame } from './hooks/useShareFrame'
 import { getClassificationLabel } from './utils/getClassificationLabel'
@@ -420,6 +421,14 @@ export default function Dashboard({ data }) {
               >
                 Open System
               </button>
+              {/* CRO: Secondary CTA - Compare with another universe */}
+              <Link
+                to={`/compare?left=${data?.id}`}
+                className="flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border border-emerald-400/40 bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-300 hover:text-emerald-200 transition-all duration-300"
+              >
+                <Network className="w-3.5 h-3.5" />
+                Compare with Another
+              </Link>
             </div>
             <p className="text-[10px] text-gray-400 tracking-[0.18em] uppercase">
               Primary path: {TABS[heroContract.primaryTabIndex]}
@@ -497,7 +506,7 @@ export default function Dashboard({ data }) {
       {data?.id === 'sololeveling' && (
         <div className="max-w-6xl mx-auto px-6 mt-8 mb-12 mb-16 md:mb-24">
           <p className="text-center text-xs text-gray-400">
-            <span className="text-gray-400">Continue your watch:</span>
+            <span className="text-gray-400">Now that you understand the system — experience it:</span>{' '}
             <a
               href="https://www.amazon.com/dp/B0G3PC5LX2/ref=cm_sw_r_as_gl_apa_gl_i_4B03CWS4T2XWERHGFR58?linkCode=ml1&tag=hashiai-20&linkId=2377a03ae811e823cf9ba44a6d6df18a"
               target="_blank"
@@ -505,7 +514,7 @@ export default function Dashboard({ data }) {
               onClick={() => trackAffiliateClick('sololeveling-amazon', 'sololeveling', 'amazon')}
               className="text-cyan-400 hover:text-cyan-300 font-bold tracking-wide"
             >
-              Get Solo Leveling on Amazon →
+              Watch Solo Leveling on Amazon →
             </a>
           </p>
         </div>
@@ -545,7 +554,7 @@ export default function Dashboard({ data }) {
       {data?.id === 'jjk' && (
         <div className="max-w-6xl mx-auto px-6 mt-8 mb-12 mb-16 md:mb-24">
           <p className="text-center text-xs text-gray-400">
-            <span className="text-gray-400">Continue your watch:</span>
+            <span className="text-gray-400">Now that you understand the system — experience it:</span>{' '}
             <a
               href="https://www.amazon.com/dp/B0BP8Z6C52/ref=cm_sw_r_as_gl_apa_gl_i_CWK2N3JQY2M09VFD8XA1?linkCode=ml1&tag=hashiai-20&linkId=715f5e7c6b7b543316cb761fbcbaab77"
               target="_blank"
@@ -553,7 +562,7 @@ export default function Dashboard({ data }) {
               onClick={() => trackAffiliateClick('jjk-amazon', 'jujutsu-kaisen', 'amazon')}
               className="text-cyan-400 hover:text-cyan-300 font-bold tracking-wide"
             >
-              Get Jujutsu Kaisen on Amazon →
+              Watch Jujutsu Kaisen on Amazon →
             </a>
           </p>
         </div>
@@ -600,13 +609,18 @@ export default function Dashboard({ data }) {
               onClick={() => trackAffiliateClick('mha-amazon', 'mha', 'amazon')}
               className="text-cyan-400 hover:text-cyan-300 font-bold tracking-wide"
             >
-              Get My Hero Academia on Amazon →
+              Watch My Hero Academia on Amazon →
             </a>
           </p>
         </div>
       )}
       {/* Why This Lens? */}
       <WhyThisRenderer data={data} isSystemMode={isSystemMode} theme={theme} revealStep={revealStep} isRevealing={isRevealing} />
+
+      {/* CRO: Newsletter CTA on universe page - builds email list */}
+      <div className="max-w-4xl mx-auto px-6 mt-8 mb-4">
+        <NewsletterCTA />
+      </div>
 
       {/* Action Buttons */}
       <div className="max-w-6xl mx-auto px-6 mb-4 flex flex-wrap justify-center md:justify-end gap-3 relative z-50 share-frame-hide">

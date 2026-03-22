@@ -3,6 +3,7 @@ import { useSearchParams, Link, useNavigate } from 'react-router-dom'
 import { Search, User, Zap, Users, ShieldAlert, Globe, ArrowLeft } from 'lucide-react'
 import { useSearch } from '../hooks/useSearch'
 import SeoHead from './SeoHead'
+import { SITE_URL, SITE_NAME } from '../utils/seo'
 
 const TYPE_META = {
   universe: {
@@ -141,12 +142,26 @@ export default function SearchResults() {
     ? `${totalResults} result${totalResults !== 1 ? 's' : ''} for "${q}" across all anime universes.`
     : 'Search across all 15 anime universes for characters, power systems, factions, and rules.'
 
+  const canonicalUrl = `https://animearchive.app/search${q ? `?q=${encodeURIComponent(q)}` : ''}`
+
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'SearchResultsPage',
+      name: seoTitle,
+      description: seoDescription,
+      url: canonicalUrl,
+      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono px-6 py-14">
       <SeoHead
         title={seoTitle}
         description={seoDescription}
-        canonicalUrl={`https://animearchive.app/search${q ? `?q=${encodeURIComponent(q)}` : ''}`}
+        canonicalUrl={canonicalUrl}
+        structuredData={structuredData}
       />
 
       <main className="max-w-3xl mx-auto">

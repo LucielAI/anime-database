@@ -101,11 +101,52 @@ export default function CompareRoute() {
       ? `Compare ${left.anime} and ${right.anime} side-by-side. Power systems, factions, combat mechanics, and structural analysis.`
       : `Compare anime universe systems side-by-side.`,
     canonicalUrl: `${SITE_URL}/compare?left=${leftId}&right=${rightId}`,
+    keywords: 'anime comparison, universe comparison, anime power systems, side-by-side anime analysis',
   }
+
+  const structuredData = left && right ? [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemPage',
+      name: `${left.anime} vs ${right.anime} — System Comparison`,
+      description: seo.description,
+      url: `${SITE_URL}/compare?left=${leftId}&right=${rightId}`,
+      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: `${left.anime} vs ${right.anime} Universe Comparison`,
+      description: `Side-by-side system comparison of ${left.anime} and ${right.anime} power mechanics, factions, and world logic.`,
+      numberOfItems: 2,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: `${left.anime} System Analysis`,
+          url: `${SITE_URL}/universe/${leftId}`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: `${right.anime} System Analysis`,
+          url: `${SITE_URL}/universe/${rightId}`,
+        },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Compare', item: `${SITE_URL}/compare` },
+      ],
+    },
+  ] : []
 
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono">
-      <SeoHead {...seo} />
+      <SeoHead {...seo} structuredData={structuredData} />
       <div className="max-w-5xl mx-auto px-6 py-10">
         {/* Header */}
         <div className="mb-6">

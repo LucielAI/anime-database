@@ -1,5 +1,37 @@
 User-agent: *
 Allow: /
+
+# AI / Search crawler allowances (important for AI citation)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: CCBot-2
+Allow: /
+
+# Block AI training-only bots (optional — uncomment if you want to allow AI answers but block training)
+# User-agent: Bytespider
+# Disallow: /
+# User-agent: GoogleExtended
+# Disallow: /
+
 Disallow: /api/
 
 Sitemap: https://animearchive.app/sitemap.xml

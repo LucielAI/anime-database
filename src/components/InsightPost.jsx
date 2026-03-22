@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2 } from 'lucide-react'
 import SeoHead from './SeoHead'
+import { SITE_URL, SITE_NAME } from '../utils/seo'
 
 const ICON_MAP = { Network, Zap, Users, BookOpen }
 
@@ -246,14 +247,49 @@ export default function InsightPost() {
     )
   }
 
+  const pageUrl = `${SITE_URL}/insights/${slug}`
+  const description = insight.content.find(b => b.type === 'thesis')?.text?.slice(0, 160) || insight.title
+
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ScholarlyArticle',
+      name: insight.title,
+      description,
+      url: pageUrl,
+      about: {
+        '@type': 'Thing',
+        name: insight.universeAnime,
+      },
+      genre: 'System Analysis',
+      keywords: insight.tags?.join(', '),
+      datePublished: '2026-01-01',
+      author: { '@type': 'Organization', name: 'Hashi.Ai' },
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
+      isPartOf: { '@type': 'Blog', name: `${SITE_NAME} Insights`, url: `${SITE_URL}/insights` },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Insights', item: `${SITE_URL}/insights` },
+        { '@type': 'ListItem', position: 3, name: insight.title, item: pageUrl },
+      ],
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono">
       {insight && (
         <SeoHead
           title={`${insight.title} — Anime Archive`}
-          description={insight.content.find(b => b.type === 'thesis')?.text?.slice(0, 160) || insight.title}
-          url={`https://animearchive.app/insights/${slug}`}
+          description={description}
+          url={pageUrl}
           image="https://animearchive.app/og-default.png"
+          type="article"
+          keywords={insight.tags?.join(', ')}
+          structuredData={structuredData}
         />
       )}
       <div className="w-full px-6 py-12 border-b border-white/5" style={{ background: 'radial-gradient(ellipse at 20% 50%, #0a1628 0%, #050508 70%)' }}>
