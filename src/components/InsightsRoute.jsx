@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2 } from 'lucide-react'
 import SeoHead from './SeoHead'
+import NewsletterCTA from './NewsletterCTA'
 
 const INSIGHTS = [
   {
@@ -262,15 +263,13 @@ export default function InsightsRoute() {
         )}
       </div>
 
-      {/* Bottom CTA */}
-      <div className="max-w-xl mx-auto px-6 pb-16 text-center">
-        <p className="text-[10px] text-gray-600 uppercase tracking-widest mb-4">Want new insights every week?</p>
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-[10px] font-bold uppercase tracking-widest text-cyan-300 hover:bg-cyan-400/20 transition-colors"
-        >
-          Subscribe to the newsletter
-        </Link>
+      {/* Bottom CTA with Newsletter */}
+      <div className="max-w-xl mx-auto px-6 pb-8">
+        <div className="rounded-2xl border border-cyan-400/20 bg-gradient-to-b from-cyan-400/5 to-transparent p-6 mb-6">
+          <p className="text-[10px] uppercase tracking-widest text-cyan-400/70 mb-2 font-bold">Get new insights every week</p>
+          <p className="text-[11px] text-gray-500 mb-4 leading-relaxed">Weekly dives into anime system mechanics. No fluff, just architecture.</p>
+          <NewsletterCTA />
+        </div>
       </div>
     </div>
   )
