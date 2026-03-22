@@ -113,7 +113,7 @@ const INSIGHTS = {
     ]
   },
   'hxh-nen-specialization': {
-    universe: 'hxg',
+    universe: 'hxh',
     universeAnime: 'Hunter x Hunter',
     title: 'Why Nen Is the Best Magic System in Anime',
     readTime: '7 min',

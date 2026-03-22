@@ -135,6 +135,15 @@ export default function InsightsRoute() {
   const featured = INSIGHTS.find(i => i.featured)
   const rest = filtered.filter(i => !i.featured)
 
+  // Show featured insight when: no filters (always show), OR featured matches the active category/term
+  const featuredMatches =
+    !featured ||
+    (activeCategory === 'all' && !searchQuery) ||
+    activeCategory === featured.category ||
+    featured.tags?.some(t => t.toLowerCase() === activeCategory.toLowerCase()) ||
+    (searchQuery && featured.title.toLowerCase().includes(searchQuery.toLowerCase()))
+  const showFeatured = featured && featuredMatches
+
   const canonicalUrl = `${SITE_URL}/insights`
 
   const structuredData = [
@@ -221,7 +230,7 @@ export default function InsightsRoute() {
         </div>
 
         {/* Featured insight */}
-        {featured && activeCategory === 'all' && !searchQuery && (
+        {showFeatured && (
           <Link
             to={`/insights/${featured.slug}`}
             className="block mb-10 group"
