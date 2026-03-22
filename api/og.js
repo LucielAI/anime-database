@@ -127,7 +127,7 @@ const UNIVERSE_MAP = {
     visualizationHint: 'node-graph',
     themeColors: { primary: '#1e3a8a' }
   },
-    tokyo-ghoul: {
+  'tokyo-ghoul': {
     anime: 'Tokyo Ghoul',
     tagline: 'A predator-prey economy where the ghoul/human biological boundary defines every alliance and moral position.',
     visualizationHint: 'counter-tree',
