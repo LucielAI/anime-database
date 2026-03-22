@@ -163,7 +163,7 @@ export default function CompareRoute() {
             >
               <div>
                 <p className="text-[10px] uppercase tracking-[0.14em] text-gray-500 mb-1">{left.anime}</p>
-                <p className="text-xs font-bold text-white">{left.tagline?.slice(0, 60)}…</p>
+                <p className="text-xs font-bold text-white line-clamp-2">{left.tagline}</p>
               </div>
               <ArrowRight className="w-4 h-4 text-gray-500" />
             </Link>
@@ -173,7 +173,7 @@ export default function CompareRoute() {
             >
               <div>
                 <p className="text-[10px] uppercase tracking-[0.14em] text-gray-500 mb-1">{right.anime}</p>
-                <p className="text-xs font-bold text-white">{right.tagline?.slice(0, 60)}…</p>
+                <p className="text-xs font-bold text-white line-clamp-2">{right.tagline}</p>
               </div>
               <ArrowRight className="w-4 h-4 text-gray-500" />
             </Link>
