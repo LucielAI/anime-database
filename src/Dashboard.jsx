@@ -375,11 +375,12 @@ export default function Dashboard({ data }) {
         <div className="absolute inset-0 bg-linear-to-b from-[#050508]/10 via-[#050508]/60 to-[#050508] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative z-10 w-full">
           <div className="max-w-3xl flex flex-col gap-6 md:gap-7">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <Link to="/universes" className="text-[10px] uppercase tracking-widest text-gray-500 hover:text-white transition-colors">← Catalog</Link>
+            <div className="flex flex-wrap items-center gap-2">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/10 rounded-full text-[10px] tracking-[0.28em] font-bold text-white/65 bg-white/5 backdrop-blur-xl uppercase">
-                <span className={`w-1.5 h-1.5 rounded-full ${isSystemMode ? 'bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.6)]' : 'bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.6)]'}`} />
-                Archive Active · {heroContract.systemType} system
+                <span className={`w-1.5 h-1.5 rounded-full ${isSystemMode ? 'bg-cyan-400' : 'bg-emerald-400'}`} style={{ boxShadow: `0 0 6px ${isSystemMode ? 'rgba(34,211,238,0.6)' : 'rgba(74,222,128,0.6)'}` }} />
+                {heroContract.systemType} system
+                <span className="text-white/30">·</span>
+                {isSystemMode ? 'System' : 'Lore'}
               </div>
             </div>
 

@@ -1,9 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
+export default defineConfig(({ command, mode }) => ({
+  plugins: [
+    react(),
+    mode === 'production' && process.env.ANALYZE === 'true' && visualizer({
+      filename: 'dist/bundle-report.html',
+      open: true,
+      gzipSize: true,
+    }),
+  ].filter(Boolean),
   test: {
     environment: 'node',
   },
@@ -29,4 +37,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))

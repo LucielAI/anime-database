@@ -35,9 +35,9 @@ import { trackExternalLink } from './utils/analytics'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
-import NewsletterCTA from './components/NewsletterCTA'
-import InsightsRoute from './components/InsightsRoute'
-import InsightPost from './components/InsightPost'
+const NewsletterCTA = lazy(() => import('./components/NewsletterCTA'))
+const InsightsRoute = lazy(() => import('./components/InsightsRoute'))
+const InsightPost = lazy(() => import('./components/InsightPost'))
 const SearchResults = lazy(() => import('./components/SearchResults'))
 const ThematicPage = lazy(() => import('./components/ThematicPage'))
 const BlogIndex = lazy(() => import('./components/BlogIndex'))
