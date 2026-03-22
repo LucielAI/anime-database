@@ -37,6 +37,7 @@ const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
 import NewsletterCTA from './components/NewsletterCTA'
 import InsightsRoute from './components/InsightsRoute'
+import InsightPost from './components/InsightPost'
 const SearchResults = lazy(() => import('./components/SearchResults'))
 const ThematicPage = lazy(() => import('./components/ThematicPage'))
 const BlogIndex = lazy(() => import('./components/BlogIndex'))
@@ -931,6 +932,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/universes" element={<UniversesCatalogRoute />} />
         <Route path="/insights" element={<InsightsRoute />} />
+        <Route path="/insights/:slug" element={<InsightPost />} />
         <Route path="/universe/:id" element={<UniverseRoute />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
