@@ -1,0 +1,713 @@
+{
+  "anime": "Naruto",
+  "tagline": "A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome",
+  "malId": 20,
+  "themeColors": {
+    "primary": "#f59e0b",
+    "secondary": "#1e3a8a",
+    "accent": "#0ea5e9",
+    "glow": "rgba(245,158,11,0.35)",
+    "tabActive": "#f59e0b",
+    "badgeBg": "rgba(30,58,138,0.18)",
+    "badgeText": "#0ea5e9",
+    "modeGlow": "rgba(14,165,233,0.25)",
+    "heroGradient": "rgba(5,10,20,0.95)"
+  },
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1141/142503l.jpg",
+  "visualizationHint": "node-graph",
+  "visualizationReason": "Naruto is a village/clan network where political loyalty, inter-village competition, and bloodline hierarchies are the primary analytical dimensions. The node-graph captures the structural thesis: villages as nodes, alliances as edges, and shinobi as the human capital flowing between them.",
+  "headerFlavor": {
+    "loreQuote": "I don't want to conquer anything. I'll protect what's important to me.",
+    "sysWarning": "// [SYSTEM STATUS]: SHINOBI WAR TENSION — TAILED BEAST NETWORK UNSTABLE",
+    "sysWarningColor": "amber"
+  },
+  "backgroundMotif": "jagged",
+  "revealOverlay": "glow-border",
+  "introductionSummary": "Naruto's world is organized around the village as the fundamental unit of power, with shinobi as the human capital within a feudal market of military services. The analytical lens is structural: political loyalty, inter-village competition, clan hierarchies, and the economics of ninja contracts define the system more than any individual combat outcome. The entire narrative tension stems from the instability of the village-state equilibrium.",
+  "hero": {
+    "systemType": "relational",
+    "microHook": "Chakra is the resource; villages are the firms; shinobi are the workforce.",
+    "thesis": "A village-state network where political loyalty, bloodline hierarchies, and inter-village competition define the system.",
+    "primarySystemType": "factions"
+  },
+  "aiInsights": {
+    "casual": "Naruto is about a world where everyone is defined by their job — shinobi are basically mercenaries working for villages that act like companies, and the whole system runs on contracts, loyalty rankings, and political alliances. Naruto himself is an orphan with a monster sealed inside him who everyone hates, but he becomes the most important person in the world not through strength but by being the one person who actually wants to protect everyone, even his enemies.",
+    "deep": "The Naruto system operates as a village-state equilibrium model where five Great Villages function as sovereign military firms competing for contracts, territory, and political influence. The shinobi job market routes human capital through village hierarchies, with bloodline specialization (Kekkei Genkai) representing competitive moats. The Akatsuki organization represents a hostile takeover attempt of the entire tailed beast economy — they are not criminals in the traditional sense but the supply chain for a shadow government that controls the world's energy resources (tailed beasts). Naruto's structural advantage is his unique position as both a jinchuriki (tailed beast host) and the Allied Shinobi Forces commander — he is simultaneously the asset being captured AND the force being mobilized to prevent capture. This dual positioning makes him the most structurally important node in the entire network."
+  },
+  "powerSystem": [
+    {
+      "name": "Chakra",
+      "subtitle": "Shinobi Energy Economy",
+      "loreDesc": "The fundamental energy that powers all jutsu. Drawn from physical and spiritual energy combined, chakra flows through the body's chakra network and can be shaped into jutsu through hand seals. The five elemental affinities create a rock-paper-scissors combat economy.",
+      "systemDesc": "The universal resource token of the shinobi system — chakra is the economic input that every shinobi converts into operational output (jutsu). The five-nature system creates a balanced combat economy where no single element dominates, ensuring that intelligence and adaptability outperform raw power.",
+      "loreSubtitle": "The Shinobi Energy Economy",
+      "systemSubtitle": "Universal Resource Token",
+      "icon": "Zap",
+      "color": "amber-400",
+      "signatureMoment": "Naruto finally gaining Senjutsu chakra from Sage Mode — accessing a completely different energy economy that doesn't come from his own chakra reserves."
+    },
+    {
+      "name": "Dojutsu",
+      "subtitle": "Ocular System Exploits",
+      "loreDesc": "Kekkei Genkai tied to the eyes: Sharingan sees and copies jutsu, tracks movement, and casts genjutsu; Byakugan provides 360-degree vision and chakra pathway access; Rinnegan allows all five chakra natures and access to the six paths of pain. Each represents a fundamental combat economy shift.",
+      "systemDesc": "Hardware-level system exploits that bypass the normal jutsu learning curve. The Sharingan is an information capture device; the Byakugan is a network diagnostic tool; the Rinnegan is a complete system override. Each represents a different category of structural advantage.",
+      "loreSubtitle": "Ocular System Exploits",
+      "systemSubtitle": "Hardware-Level Access",
+      "icon": "Eye",
+      "color": "purple-400",
+      "signatureMoment": "Obito's Kamui — a space-time jutsu that removes targets from normal existence entirely, making them effectively invulnerable to conventional attack."
+    },
+    {
+      "name": "Sage Mode",
+      "subtitle": "Natural Energy Override",
+      "loreDesc": "Natural energy from the environment absorbed into the body to create senjutsu. Extremely difficult to balance — too much natural energy turns the user into a frog statue. When mastered, it provides drastically enhanced physical stats and sensory capabilities beyond normal chakra.",
+      "systemDesc": "An alternative energy economy that draws from environmental rather than internal chakra reserves. Sage Mode represents the system's built-in ceiling escape valve — characters who achieve it bypass the normal resource constraints of the village-based chakra economy entirely.",
+      "loreSubtitle": "Natural Energy Override",
+      "systemSubtitle": "Environmental Energy Economy",
+      "icon": "Flame",
+      "color": "green-400",
+      "signatureMoment": "Jiraiya entering Sage Mode against Pain — the first time the technique is shown in the series and demonstrates the gap between toad sage training and normal shinobi capability."
+    },
+    {
+      "name": "Jinchuriki Bonds",
+      "subtitle": "Tailed Beast Host Economics",
+      "loreDesc": "The nine tailed beasts are massive chakra entities captured and sealed into human hosts. The host gains access to enormous power but is also hunted by organizations seeking to extract the beast — making every jinchuriki a high-value target with a target on their back.",
+      "systemDesc": "A power-as-a-service model where the tailed beast functions as an external compute resource embedded in a human host. The extraction risk creates a negative externality that makes jinchuriki simultaneously powerful and structurally vulnerable — they are assets with a built-in deactivation threat.",
+      "loreSubtitle": "Tailed Beast Host Economics",
+      "systemSubtitle": "Outsourced Power Compute",
+      "icon": "Target",
+      "color": "orange-400",
+      "signatureMoment": "Naruto meeting the Nine-Tails properly for the first time and forming an alliance rather than fighting the chakra — his willingness to understand the beast's loneliness is what unlocks full cooperation."
+    }
+  ],
+  "characters": [
+    {
+      "name": "Naruto Uzumaki",
+      "title": "Seventh Hokage",
+      "rank": "Jinchuriki of the Nine-Tails / Village Leader",
+      "dangerLevel": 10,
+      "loreBio": "An orphan jinchuriki who was hated and feared by his entire village until he became its leader. His journey is about transforming from the village's greatest burden into its greatest hero through perseverance, friendship, and an almost irrational commitment to never giving up on anyone.",
+      "systemBio": "The system's ultimate convergence node — Naruto's structural position as both jinchuriki (the asset Akatsuki hunts) and Allied Shinobi Forces commander (the force that prevents the hunt) makes him simultaneously the most valuable capture target AND the most important node in the defensive network. His ability to form genuine alliances with former enemies creates edges that the existing institutional network cannot model.",
+      "gradientFrom": "orange-950",
+      "gradientTo": "yellow-900",
+      "accentColor": "orange-400",
+      "icon": "Crown",
+      "signatureMoment": "Choosing forgiveness over revenge against Pain — destroying Konoha and killing Kakashi, then walking away from the opportunity to kill Pain because killing him wouldn't bring anyone back.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/284121.jpg?s=3ebac88ad166bf105d8f04894f3fb469",
+      "_fetchFailed": false,
+      "malId": 17,
+      "role": "Main"
+    },
+    {
+      "name": "Sasuke Uchiha",
+      "title": "The Trauma Wanderer",
+      "rank": "Last Uchiha / Shadow Hokage",
+      "dangerLevel": 10,
+      "loreBio": "The sole surviving Uchiha after his brother Itachi massacred the clan on Government orders. Sasuke's quest for revenge consumed him until he learned the truth — that Itachi sacrificed everything, including his own life, to protect Sasuke and prevent a civil war.",
+      "systemBio": "The system's most volatile node — Sasuke's trajectory from village loyalist to apostate to avenger to defender represents a complete cycle of institutional alienation and reconciliation. His final form as Shadow Hokage represents an accommodation with the village system that he once sought to destroy.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "Flame",
+      "signatureMoment": "Learning the truth about Itachi — the moment the revenge narrative collapses and Sasuke must rebuild his entire worldview from scratch.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/131317.jpg?s=9705c17dba36c2edebded3a72dc1a46e",
+      "_fetchFailed": false,
+      "malId": 13,
+      "role": "Main"
+    },
+    {
+      "name": "Kakashi Hatake",
+      "title": "The Copy Ninja",
+      "rank": "Sixth Hokage",
+      "dangerLevel": 8,
+      "loreBio": "A legendary shinobi who awakened his Sharingan from Obito's transplanted eye. Kakashi served three Hokage, led Team 7, and repeatedly sacrificed his own wellbeing for his students. His arc is about learning to value connections after years of isolated grief.",
+      "systemBio": "An institutional continuity node — Kakashi's career spanned four Hokage and he trained three of them, making him the living connective tissue between the clan's founding trauma and its eventual resolution. His Sharingan represents an unauthorized hardware upgrade that he was never supposed to keep.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Eye",
+      "signatureMoment": "His father Sakumo's suicide destroying his faith in the shinobi system — Kakashi's entire arc is a 200-episode recovery from the moment the system told him his greatest weapon was worthless.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/284129.jpg?s=b0a6b941fd427cbfd85657f316c0e309",
+      "_fetchFailed": false,
+      "malId": 85,
+      "role": "Supporting"
+    },
+    {
+      "name": "Shikamaru Nara",
+      "title": "The Strategist",
+      "rank": "Advisor to the Hokage",
+      "dangerLevel": 6,
+      "loreBio": "A genius strategist who views most people as笨蛋 (fools). Despite his laziness and disinterest in conventional success, he consistently produces the most effective tactical analysis in the series and serves as the primary strategic advisor to multiple Hokage.",
+      "systemBio": "The system's analytical processing node — Shikamaru's value lies in his ability to model complex multi-agent scenarios and identify the critical leverage point that resolves them. His strategic role is to the village what a trading algorithm is to a market: the thing that prevents emotional decision-making from causing cascade failures.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "zinc-800",
+      "accentColor": "zinc-400",
+      "icon": "Brain",
+      "signatureMoment": "His quiet '算了' (let it be) after Asuma's death — accepting grief as information rather than allowing it to drive suboptimal tactical decisions.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/131315.jpg?s=a800fe970f638eae38b1e50d3471121d",
+      "_fetchFailed": false,
+      "malId": 2007,
+      "role": "Supporting"
+    },
+    {
+      "name": "Orochimaru",
+      "title": "The Serpent",
+      "rank": "S-rank Criminal / Science Operator",
+      "dangerLevel": 10,
+      "loreBio": "A genius medical researcher who rejected the village system's limitations and pursued forbidden jutsu to achieve immortality. He operated outside every faction while manipulating all of them. His experiments created some of the series' most powerful and unstable entities.",
+      "systemBio": "The system's unauthorized research and development division — Orochimaru represents what happens when an agent optimizes for knowledge acquisition without institutional constraints. His value to the overall system is real (Kabuto's edo tensei army, Sasuke's power) even though he operates entirely outside the normal power network.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Skull",
+      "signatureMoment": "Discovering that his immortality research was itself a dead end — facing the one problem that all his genius couldn't solve.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/162089.jpg?s=77b65c6a4dfa133ef211d805af39d986",
+      "_fetchFailed": false,
+      "malId": 2455,
+      "role": "Main"
+    },
+    {
+      "name": "Tsunade",
+      "title": "TheSlug Princess",
+      "rank": "Fifth Hokage",
+      "dangerLevel": 8,
+      "loreBio": "A legendary medical ninja who created the rule that medical ninja must be protected in combat. She became Hokage after Orochimaru's attack and demonstrated that real strength is about protecting others rather than destroying them.",
+      "systemBio": "A force multiplier node — Tsunade's medical jutsu and combat capability are both top-tier, but her systemic impact comes from the institutional rule she created. The medical ninja protection rule reshapes battlefield economics by making every medical ninja a high-priority target whose survival determines entire army effectiveness.",
+      "gradientFrom": "pink-950",
+      "gradientTo": "rose-900",
+      "accentColor": "pink-400",
+      "icon": "Heart",
+      "signatureMoment": "Refusing to heal herself of her haemophobia — choosing to face her deepest fear to save others is the ultimate demonstration of the strength she teaches.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/523646.jpg?s=6e76b1e4adef34cd1698c91947542cc5",
+      "_fetchFailed": false,
+      "malId": 2767,
+      "role": "Supporting"
+    },
+    {
+      "name": "Jiraiya",
+      "title": "The Toad Sage",
+      "rank": "Sannin / Spy Master",
+      "dangerLevel": 8,
+      "loreBio": "One of the legendary Sannin and the writer of the Tale of the Gallant Ninja. He trained three of the most important figures in the series: Nagato, Naruto, and Minato. His death at the hands of his own student represents the ultimate cost of mentorship gone wrong.",
+      "systemBio": "A multi-generational knowledge transfer node — Jiraiya's deliberate distribution of his teachings across three divergent paths (Akatsuki founder, village Hokage, and future village Hokage) represents a portfolio strategy for institutional continuity that his death ironically made more effective by forcing rapid Naruto maturation.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "BookOpen",
+      "signatureMoment": "His final message to Naruto: 'The true measure of a shinobi is not how they live, but how they die' — written from his own impending death as the ultimate teaching moment.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/68618.jpg?s=ec35c8f49aa4cd7389bfc36d30cda3d7",
+      "_fetchFailed": false,
+      "malId": 2423,
+      "role": "Supporting"
+    },
+    {
+      "name": "Hiruzen Sarutobi",
+      "title": "The Professor",
+      "rank": "Third Hokage",
+      "dangerLevel": 7,
+      "loreBio": "The longest-serving Hokage who led Konoha through its most formative decades. He struggled to balance institutional moderation against hardliner factions like Danzo's Root, ultimately dying to protect the village from Orochimaru's attack.",
+      "systemDesc": "An institutional moderation node — Hiruzen's value to the village system was his ability to maintain equilibrium between competing internal factions. His death created a power vacuum that accelerated multiple parallel conflicts simultaneously.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Crown",
+      "signatureMoment": "His final act: using the Dead Demon Consuming Seal to take Orochimaru's arms to his grave — sacrificing his own afterlife to prevent Orochimaru from using his full power against the village.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/68520.jpg?s=7d6e5e92c4a665933686d4ece2cbdbe1",
+      "_fetchFailed": false,
+      "systemBio": "An institutional continuity node — Hiruzen's value was his ability to maintain equilibrium between competing internal factions. His death created a power vacuum that accelerated multiple parallel conflicts simultaneously.",
+      "malId": 7571,
+      "role": "Supporting"
+    },
+    {
+      "name": "Itachi Uchiha",
+      "title": "The Martyr",
+      "rank": "Former Anbu Captain / S-rank Criminal",
+      "dangerLevel": 10,
+      "loreBio": "Sole survivor of the Uchiha massacre — forced to kill his entire clan on Government orders to prevent civil war. He lived as a criminal to protect Sasuke, died at Sasuke's hands to trigger his brother's awakening.",
+      "systemBio": "A sacrificial institution node — Itachi's entire existence was engineered to prevent a specific failure mode (Uchiha coup → civil war → Konoha collapse). His willingness to absorb institutional violence for the village represents the ultimate loyalty enforcement mechanism.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Skull",
+      "signatureMoment": "Telling Sasuke the truth about the massacre before dying — giving Sasuke the choice that Itachi was never given by the village.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/284122.jpg?s=11eac9672b208175831a0da62f188622",
+      "_fetchFailed": false,
+      "malId": 14,
+      "role": "Main"
+    },
+    {
+      "name": "Sakura Haruno",
+      "title": "The Crimson Bloom",
+      "rank": "Medical Ninja / Kage Advisor",
+      "dangerLevel": 5,
+      "malId": 145,
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/69275.jpg?s=36c4ad9f4440d77918c34c49870e719c",
+      "role": "Main",
+      "_fetchFailed": false,
+      "loreBio": "A medical ninja who started as the weakest member of Team 7 and grew into one of the most powerful combat medics in the world. Her arc is about transforming from someone who defined herself through a boy into someone who defines herself through her own capability and choices.",
+      "systemBio": "A force multiplication node — Tsunade's apprentice and the inheritor of the medical ninja rule. Sakura's battlefield contributions extend beyond healing to direct combat capability that can shift the outcome of Kage-level engagements.",
+      "gradientFrom": "pink-950",
+      "gradientTo": "rose-900",
+      "accentColor": "pink-400",
+      "icon": "Heart",
+      "signatureMoment": "Landing the final blow against Kaguya — the moment that proved she was never just 'the one who needed protecting' on Team 7.",
+      "description": "Medical ninja; Tsunade's apprentice; arc from civilian liability to battlefield determinant"
+    },
+    {
+      "name": "Rock Lee",
+      "title": "The Fighting Filly",
+      "rank": "Elite Taijutsu Specialist",
+      "dangerLevel": 7,
+      "malId": 306,
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/433353.jpg?s=c2099a6532ecf14f4cf233c4cbd6532f",
+      "role": "Supporting",
+      "_fetchFailed": false,
+      "loreBio": "A shinobi who cannot use ninjutsu or genjutsu, only taijutsu. Lee's dream is to become a respected shinobi through pure hard work, and his Eight Gates system represents the ultimate expression of physical capability within human limits.",
+      "systemBio": "A talent-overcoming edge case — Lee's existence proves that institutional measurement systems (which rank ninjutsu above taijutsu) can miss the actual peak of human capability in a given domain.",
+      "gradientFrom": "green-950",
+      "gradientTo": "emerald-900",
+      "accentColor": "green-400",
+      "icon": "Zap",
+      "signatureMoment": "Opening the Seventh Gate against Gaara — the moment he proved that the system had no category for what he was about to become.",
+      "description": "Taijutsu-only specialist; Eight Gates system; proves hard work exceeds natural talent"
+    },
+    {
+      "name": "Gaara",
+      "title": "The Sand Shadow",
+      "rank": "Fifth Kazekage",
+      "dangerLevel": 8,
+      "malId": 1662,
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/293375.jpg?s=ceeb8ed1578737104c8e347ab7a52101",
+      "role": "Supporting",
+      "_fetchFailed": false,
+      "loreBio": "A tailed beast host who was rejected by his own father and almost killed by his uncle. Gaara's arc is about finding something worth living for beyond being a weapon — his sand is both his weapon and his soul.",
+      "systemBio": "A redemption pathway node — Gaara went from being the most isolated jinchuriki (feared by his own village) to the Kazekage, demonstrating that institutional alienation can be overcome through demonstrated value.",
+      "gradientFrom": "orange-950",
+      "gradientTo": "amber-900",
+      "accentColor": "orange-400",
+      "icon": "Shield",
+      "signatureMoment": "Choosing to protect the village that tried to kill him as a child — the ultimate act of redefining your relationship to the system that rejected you.",
+      "description": "Kazekage; sand/water tailed beast host; redemption arc from weapon to leader"
+    },
+    {
+      "name": "Kabuto Yakushi",
+      "title": "The Serpent's Son",
+      "rank": "Edo Tensei Master",
+      "dangerLevel": 9,
+      "malId": 2405,
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/82459.jpg?s=81d3435c2ca60c6acbea9da7bc7ba6c4",
+      "role": "Supporting",
+      "_fetchFailed": false,
+      "loreBio": "An orphan taken in by Orochimaru who became the most technically proficient Edo Tensei user in history. Kabuto's sage mode and body modifications made him one of the most dangerous combatants in the Fourth Shinobi War.",
+      "systemBio": "An unauthorized R&D node — Kabuto represents what happens when institutional knowledge systems (academy training, medical research) are reconstructed outside institutional frameworks with no ethical constraints.",
+      "gradientFrom": "yellow-950",
+      "gradientTo": "emerald-900",
+      "accentColor": "yellow-400",
+      "icon": "Skull",
+      "signatureMoment": "Being trapped by his own Izanami — forced to relive his true identity after years of constructing a false one.",
+      "description": "Edo Tensei orchestrator; sage mode user; Fourth Shinobi War catalyst"
+    },
+    {
+      "name": "Neji Hyuga",
+      "title": "The Fate Reader",
+      "rank": "Elite Jonin / Branch Seal Bearer",
+      "dangerLevel": 7,
+      "malId": 1694,
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/105538.jpg?s=7603e3986722997b66259d9fea83a3b2",
+      "role": "Supporting",
+      "_fetchFailed": false,
+      "loreBio": "A Byakugan bearer born into the Hyuga branch family who was told his entire life that his fate was sealed as a servant to the main family. His arc is about whether destiny is fixed or can be changed.",
+      "systemBio": "A systemic inequality node — the Hyuga branch seal system represents institutional stratification encoded into biological infrastructure, making caste barriers literally heritable.",
+      "gradientFrom": "stone-50",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Eye",
+      "signatureMoment": "Dying to protect Hinata and Naruto — choosing to use his 'fate' position to enable others rather than accept it as a limitation.",
+      "description": "Byakugan bearer; branch seal system; fate debate culminating in war contribution"
+    },
+    {
+      "name": "Pain (Nagato)",
+      "title": "The Threat",
+      "rank": "Akatsuki Leader / Jinchuriki of the Deva Path",
+      "dangerLevel": 10,
+      "malId": 3180,
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/73473.jpg?s=5c41288db6aa7a2339a4ff90ea211d49",
+      "role": "Supporting",
+      "_fetchFailed": false,
+      "loreBio": "Nagato, a war orphan who grew up to found Akatsuki and pursue radical peace through overwhelming force. His attack on Konoha killed thousands to prove his thesis about pain and war — and was proven wrong by Naruto's choice to forgive him.",
+      "systemBio": "The system's crisis node — Pain represents the predictable outcome when trauma outpaces institutional protection. His philosophy is a logically coherent response to the world he experienced. His attack is the system's most significant cascade failure.",
+      "gradientFrom": "red-950",
+      "gradientTo": "orange-900",
+      "accentColor": "red-400",
+      "icon": "Target",
+      "signatureMoment": "Destroying Konoha to prove his thesis — and being proven wrong by Naruto's choice to forgive.",
+      "description": "Akatsuki leader; former student of Jiraiya; attack on Konoha as systemic rupture"
+    }
+  ],
+  "factions": [
+    {
+      "name": "Five Great Shinobi Villages",
+      "role": "systemic",
+      "loreDesc": "Konoha, Suna, Kiri, Kumo, and Iwa — each a sovereign military state with a Kage as its head. They compete for contracts, territory, and political influence while occasionally forming alliances against existential threats.",
+      "systemDesc": "A five-node market structure with no central coordinator — the village-states operate as competing firms in a shinobi services economy, routing human capital through institutional hierarchies that have existed for generations."
+    },
+    {
+      "name": "Akatsuki",
+      "role": "antagonist",
+      "loreDesc": "A rogue organization originally created by Nagato to bring peace, later corrupted and rebuilt as a tool for capturing all nine tailed beasts. Each member is an S-rank criminal with specialized capabilities.",
+      "systemDesc": "A hostile supply chain acquisition network — Akatsuki's actual mission is to monopolize the world's tailed beast energy resources, giving them overwhelming power to dictate terms to all five village-states simultaneously."
+    },
+    {
+      "name": "Uchiha Clan",
+      "role": "neutral",
+      "loreDesc": "The most politically significant clan in Konoha, erased by the village state in a single night on Government orders. Madara and Sasuke are the only survivors — their respective paths define the Uchiha's legacy.",
+      "systemDesc": "A cautionary tale about institutional betrayal — the Uchiha were erased because they were becoming too powerful within the village system, proving that institutional loyalty provides no protection when the institution itself feels threatened."
+    },
+    {
+      "name": "Allied Shinobi Forces",
+      "role": "protagonist",
+      "loreDesc": "The first-ever coalition of all five villages formed during the Fourth Shinobi War to fight Madara and Obito's unified enemy. A temporary alliance that proved inter-village cooperation was possible.",
+      "systemDesc": "An emergency network failover — when the existing five-node equilibrium collapsed under external pressure, the villages demonstrated the capability for instant federation. This proves the infrastructure for permanent peace existed all along."
+    },
+    {
+      "name": "Otogakure / Sound Village",
+      "role": "chaotic",
+      "loreDesc": "Orochimaru's private research project — a village built around his experiments rather than traditional shinobi values. It serves as his base of operations and the source of some of the series' most powerful modified ninja.",
+      "systemDesc": "An unauthorized R&D facility operating outside the normal village framework — Sound represents the innovation that happens when institutional constraints are removed, with all the ethical compromises that entails."
+    },
+    {
+      "name": "Root / Foundation",
+      "role": "systemic",
+      "loreDesc": "Danzo's covert operations division that operated in the shadows, outside the normal chain of command. Root agents were conditioned to have no personal loyalties or emotional attachments, making them highly effective but fundamentally broken.",
+      "systemDesc": "An institutional dark operations layer — Root represents the village's willingness to maintain a shadow hierarchy that can do what the official hierarchy cannot. Its existence proves the village's public values are incomplete."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Jinchuriki are weapons",
+      "subtitle": "Tailed Beast Extraction Protocol",
+      "loreConsequence": "When a tailed beast is extracted from its host, the host dies within days. Akatsuki's entire operation is built around this — capturing jinchuriki and extracting the beasts to use as weapons.",
+      "systemEquivalent": "A power-as-a-service contract with a fatal termination clause — the jinchuriki's survival is always subordinate to the asset's value, making them simultaneously the most powerful and most vulnerable nodes in the system.",
+      "severity": "fatal",
+      "loreSubtitle": "Tailed Beast Extraction Protocol",
+      "systemSubtitle": "Asset Value Override"
+    },
+    {
+      "name": "Medical ninja must not be killed in combat",
+      "subtitle": "Tsunade's Battlefield Economics Rule",
+      "loreConsequence": "Breaking this rule destabilizes the entire battlefield economy — medical ninja are force multipliers whose survival determines how many other ninja can continue fighting.",
+      "systemEquivalent": "A force multiplier protection protocol — the rule creates a strategic value hierarchy where medical ninja are worth more alive than their individual combat capability suggests.",
+      "severity": "high",
+      "loreSubtitle": "Tsunade's Battlefield Economics Rule",
+      "systemSubtitle": "Force Multiplier Protection"
+    },
+    {
+      "name": "The Sharingan cannot copy Kekkei Genkai",
+      "subtitle": "Bloodline Integrity Constraint",
+      "loreConsequence": "The Sharingan can see and replicate ninjutsu and taijutsu but cannot replicate bloodline-limit techniques, preventing intelligence from completely substituting for inherent capability.",
+      "systemEquivalent": "A hardware ceiling on information-based power — the Kekkei Genkai represents an insurmountable competitive moat that ensures bloodline-elite families maintain structural advantages regardless of training investment.",
+      "severity": "medium",
+      "loreSubtitle": "Bloodline Integrity Constraint",
+      "systemSubtitle": "Competitive Moat Protection"
+    },
+    {
+      "name": "The Sage of Six Paths power is the absolute ceiling",
+      "subtitle": "Power Ceiling Theorem",
+      "loreConsequence": "No character below the Ōtsutsuki/higher plane can defeat one at or above this ceiling in direct combat. Rinnegan + Sharingan + Wood Release equals Ōtsutsuki-level power.",
+      "systemEquivalent": "A hard power ceiling that prevents any conventional optimization strategy from reaching the top tier — only access to external or transcendent power sources can breach this level.",
+      "severity": "fatal",
+      "loreSubtitle": "Power Ceiling Theorem",
+      "systemSubtitle": "Transcendence Gate"
+    },
+    {
+      "name": "Village loyalty supersedes personal loyalty",
+      "subtitle": "Institutional Loyalty Override",
+      "loreConsequence": "Shinobi who prioritize personal loyalty over village loyalty become system enemies — Sasuke, Orochimaru, and others who broke this rule were hunted by the village they served.",
+      "systemEquivalent": "An institutional security protocol that treats apostasy as a greater threat than external enemies — the village system cannot tolerate agents who might route their capabilities to competing networks.",
+      "severity": "high",
+      "loreSubtitle": "Institutional Loyalty Override",
+      "systemSubtitle": "Systemic Loyalty Enforcement"
+    },
+    {
+      "name": "Ocular jutsu have hard trigger conditions",
+      "subtitle": "Dojutsu Activation Constraints",
+      "loreConsequence": "Tsukuyomi requires physical eye contact; Amaterasu requires line of sight; Kamui requires sustained focus. No ocular jutsu is unconditional — each has a vulnerability window that skilled opponents can exploit.",
+      "systemEquivalent": "A balanced implementation of overwhelming capabilities — even the most powerful ocular jutsu have built-in constraints that prevent them from being unconditional win buttons and maintain combat as a strategic rather than deterministic exercise.",
+      "severity": "medium",
+      "loreSubtitle": "Dojutsu Activation Constraints",
+      "systemSubtitle": "Capability Constraint Balancing"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Naruto Uzumaki",
+      "target": "Sasuke Uchiha",
+      "type": "rival",
+      "weight": 10,
+      "loreDesc": "The fundamental rivalry that defines the series — from childhood rivals to enemies to eventual brothers.",
+      "systemDesc": "A co-evolution edge where each node's growth accelerates the other's."
+    },
+    {
+      "source": "Sasuke Uchiha",
+      "target": "Itachi Uchiha",
+      "type": "betrayal",
+      "weight": 10,
+      "loreDesc": "Itachi massacred the Uchiha on Government orders; truth emerges years later.",
+      "systemDesc": "A manufactured conflict — Government created the Sasuke-Itachi trajectory to prevent a coup."
+    },
+    {
+      "source": "Orochimaru",
+      "target": "Sasuke Uchiha",
+      "type": "dependent",
+      "weight": 8,
+      "loreDesc": "Orochimaru gave Sasuke power; Sasuke eventually consumed Orochimaru.",
+      "systemDesc": "A parasitic-partnership where the host becomes the parasite."
+    },
+    {
+      "source": "Tsunade",
+      "target": "Orochimaru",
+      "type": "enemy",
+      "weight": 7,
+      "loreDesc": "Former teammates — Orochimaru's betrayal created Tsunade's haemophobia.",
+      "systemDesc": "A traumatic bond edge."
+    },
+    {
+      "source": "Hiruzen Sarutobi",
+      "target": "Orochimaru",
+      "type": "mentor",
+      "weight": 8,
+      "loreDesc": "Third Hokage vs former student; died containing Orochimaru's escape.",
+      "systemDesc": "Continuity node vs unauthorized R&D."
+    },
+    {
+      "source": "Rock Lee",
+      "target": "Gaara",
+      "type": "rival",
+      "weight": 6,
+      "loreDesc": "Chunin exam rivalry; hard work vs natural talent.",
+      "systemDesc": "Capability comparison edge."
+    },
+    {
+      "source": "Shikamaru Nara",
+      "target": "Naruto Uzumaki",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Strategic coordinator; Sasuke Retrieval arc.",
+      "systemDesc": "Analytical processing node."
+    },
+    {
+      "source": "Itachi Uchiha",
+      "target": "Kabuto Yakushi",
+      "type": "counter",
+      "weight": 8,
+      "loreDesc": "Itachi's Izanami countered Kabuto's Edo Tensei.",
+      "systemDesc": "Counter-system edge."
+    },
+    {
+      "source": "Kabuto Yakushi",
+      "target": "Hiruzen Sarutobi",
+      "type": "counter",
+      "weight": 7,
+      "loreDesc": "Kabuto used Edo Tensei on former Hokage.",
+      "systemDesc": "A desecration edge."
+    },
+    {
+      "source": "Naruto Uzumaki",
+      "target": "Jiraiya",
+      "type": "mentor",
+      "weight": 9,
+      "loreDesc": "Jiraiya's death catalyzed Naruto's final maturation.",
+      "systemDesc": "Critical knowledge transfer."
+    },
+    {
+      "source": "Neji Hyuga",
+      "target": "Naruto Uzumaki",
+      "type": "rival",
+      "weight": 6,
+      "loreDesc": "Fate debate at Chunin exams; Neji's worldview challenged by Naruto's trajectory.",
+      "systemDesc": "Fixed vs growth mindset collision."
+    },
+    {
+      "source": "Sakura Haruno",
+      "target": "Naruto Uzumaki",
+      "type": "ally",
+      "weight": 6,
+      "loreDesc": "Team 7 member; medical support; arc from dependency to battlefield determinant.",
+      "systemDesc": "Force multiplication node."
+    },
+    {
+      "source": "Sakura Haruno",
+      "target": "Sasuke Uchiha",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Lifelong attachment to Sasuke; her most controversial and defining relationship.",
+      "systemDesc": "An emotional dependency edge."
+    },
+    {
+      "source": "Naruto Uzumaki",
+      "target": "Pain (Nagato)",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Pain destroyed Konoha — Naruto's confrontation forces revenge vs forgiveness.",
+      "systemDesc": "Crisis node intersection."
+    },
+    {
+      "source": "Jiraiya",
+      "target": "Pain (Nagato)",
+      "type": "mentor",
+      "weight": 9,
+      "loreDesc": "Jiraiya trained Nagato; his death triggered Konoha attack.",
+      "systemDesc": "Inverted knowledge transfer."
+    }
+  ],
+  "rankings": {
+    "systemName": "Shinobi Power Hierarchy",
+    "loreName": "The Ninja Ranking System",
+    "topTierName": "Kage / Ōtsutsuki Level",
+    "topTierLore": "The five village leaders plus transcendent entities like Madara and the Ōtsutsuki. At this level, individual combat capability can reshape the geopolitical landscape independently of institutional backing.",
+    "topTierSystem": "A network layer above the normal five-village equilibrium — these nodes operate at a scale where institutional constraints (village loyalty, resources, politics) become irrelevant compared to individual capability.",
+    "tiers": [
+      {
+        "name": "Sannin / Elite Jonin",
+        "loreDesc": "The legendary Sannin and equivalent elite operators who represent the peak of conventional shinobi capability.",
+        "systemDesc": "High-capability nodes that serve as institutional anchors — their existence provides stability to their respective villages and serves as a reference point for measuring all other shinobi."
+      },
+      {
+        "name": "Anbu / Special Jonin",
+        "loreDesc": "Elite operatives who handle sensitive missions including assassinations, intelligence gathering, and covert operations.",
+        "systemDesc": "Institutional dark operations nodes — these shinobi are the village's capability for deniable action that cannot be attributed to the official hierarchy."
+      },
+      {
+        "name": "Genin / Chunin",
+        "loreDesc": "The working-level shinobi who execute the village's operational mandate — missions, patrols, and support roles.",
+        "systemDesc": "The distributed workforce layer — these nodes provide the actual operational capacity that the village uses to generate revenue and maintain relevance in the shinobi services market."
+      }
+    ]
+  },
+  "systemQuestions": [
+    {
+      "question": "Why does the village system produce both its greatest heroes and its worst traitors?",
+      "answer": "The village system routes all shinobi through the same institutional pipeline — Naruto and Sasuke both emerged from Konoha, but institutional failure (Uchiha massacre, being treated as a weapon rather than a person) can redirect even loyal nodes toward system rejection.",
+      "tabIndex": 2,
+      "sectionId": "factions",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "What makes the Uchiha clan a systemic threat?",
+      "answer": "The Sharingan is an information-gathering and technique-copying capability that compounds with bloodline specialization — the Uchiha's political power within Konoha was becoming proportionally dangerous as their capability grew, leading to the massacre.",
+      "tabIndex": 1,
+      "sectionId": "characters",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "How does the Allied Shinobi Forces represent a systemic breakthrough?",
+      "answer": "The villages had always competed as five independent firms, but Madara's attack forced a federation response in hours — proving the infrastructure for permanent cooperation existed all along but only activates under existential threat.",
+      "tabIndex": 2,
+      "sectionId": "factions",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "Why is the tailed beast economy central to the entire conflict?",
+      "answer": "Akatsuki's real goal was monopolizing all nine tailed beasts — controlling this energy resource would give them leverage over all five village-states simultaneously, making the jinchuriki capture operation the highest-stakes economic action in the world.",
+      "tabIndex": 0,
+      "sectionId": "power-system",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What does Pain's attack on Konoha reveal about the system?",
+      "answer": "The destruction demonstrated that even the most important village (the one that founded the system) has no structural protection against a sufficiently determined attacker — institutional legitimacy provides no physical defense.",
+      "tabIndex": 3,
+      "sectionId": "rules",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Why is Madara the true systemic threat rather than a conventional villain?",
+      "answer": "Madara co-designed the village system — his attack on it represents a hostile takeover by the system's own creator using two centuries of accumulated institutional knowledge. No external enemy could replicate this kind of structural penetration.",
+      "tabIndex": 3,
+      "sectionId": "rules",
+      "tabLabel": "Core Laws"
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Uchiha Clan Massacre",
+      "trigger": "Government order for the Uchiha to be eliminated to prevent a coup",
+      "consequence": "Itachi forced to kill his entire clan; Sasuke orphaned with a false narrative; Tobi created from the trauma",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The foundational trauma of the entire series — the Government's solution to the Uchiha coup created more danger than the coup ever would have.",
+      "systemDesc": "An institutional violence cascade — the massacre created the Uchiha revenge trajectory that eventually threatened the entire village system."
+    },
+    {
+      "name": "Pain's Attack on Konoha",
+      "trigger": "Nagato's decision to destroy Konoha to demonstrate his thesis about pain and war",
+      "consequence": "Konoha destroyed; Kakashi and several Kage-level defenders killed; Naruto forced to choose between revenge and his principles",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "The most significant single event in Naruto's maturation — Pain's attack forced the village to confront what it had become.",
+      "systemDesc": "A cascade failure of the village-as-protected-node model — the institution designed to protect its citizens was itself destroyed, proving no node is immune."
+    },
+    {
+      "name": "Fourth Shinobi War",
+      "trigger": "Kabuto's Edo Tensei forcing all five villages into the first Allied Shinobi Forces",
+      "consequence": "All villages forced into cooperation for the first time in history; Madara and Obito defeated; Kaguya emerged",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "The war that proved inter-village cooperation was possible when existential stakes were high enough.",
+      "systemDesc": "An emergency federation event — external threat forced the network to activate its latent integration protocol, demonstrating the system had peaceful coexistence infrastructure all along."
+    },
+    {
+      "name": "Sasuke's Defection",
+      "trigger": "Learning the truth about Itachi and the village's role in the massacre",
+      "consequence": "Sasuke left Konoha to pursue Itachi; the Sasuke Retrieval arc revealed how far the village would go to reclaim an apostate",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Sasuke's departure represented the first time the village system had to confront the fact that it had created its own enemy.",
+      "systemDesc": "An institutional alienation cascade — the village's treatment of Sasuke (and the Uchihas before him) proved that institutional loyalty cannot be one-directional."
+    },
+    {
+      "name": "Kaguya's Emergence",
+      "trigger": "Black Zetsu manifesting as Madara's will to perform the Infinite Tsukuyomi ritual",
+      "consequence": "The Ōtsutsuki progenitor appeared and became the true final antagonist — retroactive reframing of all previous conflicts as derivative of her arrival",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "Kaguya was the true origin of chakra on Earth and the source of the Hagoromo/Hamura split that created the shinobi world.",
+      "systemDesc": "A system provenance reveal — all conflicts were ultimately derived from an external source (Ōtsutsuki) that predated and subsumed the institutional frameworks built on top of it."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Tsukuyomi",
+      "defender": "Kage Bunshin / Resistance",
+      "mechanic": "Tsukuyomi requires eye contact and creates a psychological prison — enough physical resistance or distraction can break the visual lock.",
+      "loreDesc": "A genjutsu requiring visual confirmation means combatants who can create enough chaos can avoid the initial lock."
+    },
+    {
+      "attacker": "Amaterasu",
+      "defender": "Sage Mode / Speed",
+      "mechanic": "Amaterasu requires line of sight and tracks for a set duration — Sage Mode's enhanced reflexes allow dodging, and sufficient speed can create separation.",
+      "loreDesc": "The tracking nature of Amaterasu is countered by movement speed and terrain manipulation that exceeds the tracking window."
+    },
+    {
+      "attacker": "Kamui",
+      "defender": "Shadow Possession / Multiple Opponents",
+      "mechanic": "Kamui requires sustained focus on a single target — coordinated multiple-attacker strategies force division of attention that degrades accuracy.",
+      "loreDesc": "The space-time jutsu's single-target focus creates vulnerability when facing team-based combat where attention must be distributed."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Kaguya Ōtsutsuki",
+      "ruleViolated": "The shinobi system has internal origins",
+      "loreDesc": "The original chakra source emerged from nowhere as the true cosmic antagonist — retroactively reframing all power hierarchies (Kage, Uchiha, Senju) as Ōtsutsuki derivatives.",
+      "systemDesc": "A provenance anomaly — the entire institutional hierarchy of the shinobi world turns out to be built on top of an external system's infrastructure."
+    },
+    {
+      "name": "Infinite Tsukuyomi",
+      "ruleViolated": "Individual will can resist system-wide control",
+      "loreDesc": "A global genjutsu cast by the Rinne Sharingan that caught all living things simultaneously — only those with sufficient chakra or Hagoromo's blessing could resist.",
+      "systemDesc": "A complete network takeover event — the only defenses were pre-existing immunity infrastructure (Hagoromo's lineage) rather than individual capability."
+    },
+    {
+      "name": "Kabuto's Sage Mode",
+      "ruleViolated": "Standard shinobi category constraints",
+      "loreDesc": "Kabuto achieved Perfect Sage Mode through Orochimaru's research combined with body modifications — a unique profile that doesn't fit within standard shinobi classification.",
+      "systemDesc": "A hybrid capability that the institutional training system cannot replicate — Kabuto represents unauthorized R&D producing results outside the normal capability envelope."
+    }
+  ]
+}

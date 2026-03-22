@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'one-piece']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -81,6 +81,16 @@ export const UNIVERSE_CATALOG = [
     id: 'mushokutensei', anime: 'Mushoku Tensei: Jobless Reincarnation', tagline: 'A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.', malId: 39535, visualizationHint: 'timeline', visualizationReason: 'Mushoku Tensei is fundamentally a delayed-causality system: ancient god-war fallout, Laplace-era fragmentation, and present-era choices all compound across centuries, so the timeline renderer captures the thesis best.', animeImageUrl: 'https://myanimelist.net/images/anime/1530/117776l.jpg',
     themeColors: { primary: '#0f766e', secondary: '#1e293b', accent: '#7c3aed', glow: 'rgba(15,118,110,0.32)', tabActive: '#14b8a6', badgeBg: 'rgba(124,58,237,0.14)', badgeText: '#a78bfa', modeGlow: 'rgba(20,184,166,0.28)', heroGradient: 'rgba(4,14,27,0.94)' },
     stats: { characters: 10, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'naruto', anime: 'Naruto', tagline: 'A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome', malId: 20, visualizationHint: 'node-graph', visualizationReason: 'Naruto is a village/clan network where political loyalty, inter-village competition, and bloodline hierarchies are the primary analytical dimensions. The node-graph captures the structural thesis: villages as nodes, alliances as edges, and shinobi as the human capital flowing between them.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1141/142503l.jpg',
+    themeColors: { primary: '#f59e0b', secondary: '#1e3a8a', accent: '#0ea5e9', glow: 'rgba(245,158,11,0.35)', tabActive: '#f59e0b', badgeBg: 'rgba(30,58,138,0.18)', badgeText: '#0ea5e9', modeGlow: 'rgba(14,165,233,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
+    stats: { characters: 15, powerSystem: 4, rules: 6 }
+  },
+  {
+    id: 'one-piece', anime: 'One Piece', tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas', malId: 21, visualizationHint: 'node-graph', visualizationReason: 'One Piece operates as an empire/faction node-graph: Yonko territories, Warlord networks, Revolutionary Army cells, and Marine hierarchy form a maritime power grid where allegiances shift constantly and pirate crews function as independent business units with their own chains of command.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1244/138851l.jpg',
+    themeColors: { primary: '#dc2626', secondary: '#1e3a8a', accent: '#f59e0b', glow: 'rgba(220,38,38,0.30)', tabActive: '#dc2626', badgeBg: 'rgba(30,58,138,0.18)', badgeText: '#f59e0b', modeGlow: 'rgba(245,158,11,0.25)', heroGradient: 'rgba(5,10,20,0.95)' },
+    stats: { characters: 10, powerSystem: 3, rules: 6 }
   }
 ]
 

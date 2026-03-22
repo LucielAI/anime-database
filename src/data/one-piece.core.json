@@ -1,0 +1,598 @@
+{
+  "anime": "One Piece",
+  "tagline": "A world of maritime empires, ancient secrets, and the infinite chase for the ultimate treasure — where the network of alliances and debts is the actual power structure",
+  "malId": 21,
+  "themeColors": {
+    "primary": "#dc2626",
+    "secondary": "#0f172a",
+    "accent": "#f59e0b",
+    "glow": "rgba(220,38,38,0.35)",
+    "tabActive": "#dc2626",
+    "badgeBg": "rgba(220,38,38,0.15)",
+    "badgeText": "#fbbf24",
+    "modeGlow": "rgba(245,158,11,0.25)",
+    "heroGradient": "rgba(10,5,5,0.95)"
+  },
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1244/138851l.jpg",
+  "_fetchFailed": false,
+  "visualizationHint": "node-graph",
+  "visualizationReason": "One Piece is a distributed empire/faction network where influence, alliances, territorial control, and historical debts are the primary analytical dimensions. The node-graph captures the structural thesis: who controls whom, who owes whom, and which nodes hold the secrets that can reshape the entire topology.",
+  "headerFlavor": {
+    "loreQuote": "I am going to be the King of the Pirates.",
+    "sysWarning": "// [NETWORK STATUS]: YONKO EQUILIBRIUM UNSTABLE — VOID CENTURY DATA STILL ENCRYPTED",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "hatch-red",
+  "introductionSummary": "One Piece's world operates as a maritime power network where the Four Emperors, World Government, Revolutionary Army, and disbanded Warlords form a contested equilibrium. The analytical lens is relational — Devil Fruits and Haki are power tools, but the system is governed by alliances, debts, historical secrets, and territorial control. The One Piece itself is an unknowable variable: an undefined end goal that keeps every major actor maneuvering for position.",
+  "hero": {
+    "systemType": "relational",
+    "microHook": "The One Piece is unknowable — the chase is the system.",
+    "thesis": "One Piece's power structure is a distributed network where influence flows through alliances and territorial control — not combat outcomes.",
+    "primarySystemType": "factions"
+  },
+  "aiInsights": {
+    "casual": "One Piece is about a world where everyone is chasing the same treasure but the real power comes from who knows whom, who owes whom, and who controls the flow of information. Luffy doesn't win by being the strongest — he wins by making impossible alliances with people who then choose him because he believes in them.",
+    "deep": "The One Piece system operates as a post-Void-Century geopolitical equilibrium where five power centers maintain a contested balance. The Void Century is the system's fundamental anomaly — a complete historical data wipe that the World Government enforces through genocide. Robin's ability to read Poneglyphs makes her the only person who can reconstruct erased data, rendering her a living structural threat to Government legitimacy. The Yonkō system functions as a distributed trust network: each Emperor holds territory through personal strength, crew loyalty, and alliance depth. Blackbeard's rise exploits a specific vulnerability — the Yami Yami no Mi's ability to absorb a second Devil Fruit breaks the system's hard constraint and positions him as an anomaly the existing network cannot contain."
+  },
+  "powerSystem": [
+    {
+      "name": "Devil Fruits",
+      "subtitle": "Categorized System Exploits",
+      "loreDesc": "Paramecia alter the user's body or environment; Zoan transform the user into a specific species; Logia make the user intangible elemental matter. One fruit per person — except for Blackbeard's unique exception via the Yami Yami no Mi. All users are weakened by seastone and sea water.",
+      "systemDesc": "A three-class ability system with hard execution constraints: Logia intangibility requires Armament Haki to hit; Zoan transformation requires specific countering; Paramecia are limited by imagination. The one-fruit-per-user rule is a system integrity constraint that Blackbeard's Yami Yami no Mi exploits as a design vulnerability.",
+      "loreSubtitle": "Devil Fruit Categories",
+      "systemSubtitle": "Categorized System Exploits",
+      "icon": "Zap",
+      "color": "amber-400",
+      "signatureMoment": "Blackbeard explicitly taking a second Devil Fruit — the only known system violation."
+    },
+    {
+      "name": "Haki",
+      "subtitle": "Spiritual Energy Override Protocol",
+      "loreDesc": "Observation Haki senses presence and future intent; Armament Haki hardens the body into armor that can hit Logia users; Conqueror's Haki overwhelms weak-willed individuals with sheer presence. Haki can be trained without limit and is the true ceiling of power beyond Devil Fruit variety.",
+      "systemDesc": "A trainable spiritual energy system providing three distinct override capabilities: sensory resolution, physical penetration, and network cascade rejection. At sufficient mastery, Haki eclipses Devil Fruit advantages by providing universally applicable countermeasures.",
+      "loreSubtitle": "The True Power Ceiling",
+      "systemSubtitle": "Spiritual Energy Override Protocol",
+      "icon": "Flame",
+      "color": "orange-400",
+      "signatureMoment": "Luffy's Gear 5 awakening — Haki exceeding all prior limits and physically affecting even the world's most powerful entities."
+    },
+    {
+      "name": "Poneglyph Reading",
+      "subtitle": "Historical Data Reconstruction Protocol",
+      "loreDesc": "Only Nico Robin can read the Poneglyphs — ancient stones written in a dead language that encode the Void Century's true history. These are the only path to finding One Piece and understanding the Ancient Weapons.",
+      "systemDesc": "A cryptographic reconstruction system where historical data is distributed across geographically dispersed, physically indestructible storage media. The data becomes accessible only through a specific decryption key, making the reader the most strategically valuable node in the entire network.",
+      "loreSubtitle": "The Path to Truth",
+      "systemSubtitle": "Historical Data Reconstruction Protocol",
+      "icon": "BookOpen",
+      "color": "emerald-400",
+      "signatureMoment": "Robin reading her first Poneglyph and realizing the Ohara scholars died for knowledge she now carries alone."
+    }
+  ],
+  "characters": [
+    {
+      "name": "Monkey D. Luffy",
+      "title": "Straw Hat Emperor",
+      "rank": "Four Emperors — Yonko",
+      "dangerLevel": 10,
+      "loreBio": "A rubber-bodied pirate captain whose dream is to find One Piece and become King of the Pirates. His Gear 5 Awakening rewrites the rules of his rubber body, turning the environment itself into an extension of his abilities. He builds impossible alliances through pure belief in people.",
+      "systemBio": "The system's primary equilibrium disruptor — his value lies not in raw power but in alliance-building capability. Luffy's structural advantage is his inability to be status-motivated: he refuses to play the power consolidation game, which paradoxically makes every alliance he forms genuinely voluntary and therefore more stable under pressure.",
+      "gradientFrom": "red-950",
+      "gradientTo": "orange-900",
+      "accentColor": "red-400",
+      "icon": "Crown",
+      "signatureMoment": "Gear 5 awakening against Kaido — Luffy's rubber body becomes reality-warping, turning the entire battlefield into an extension of his will.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Marshall D. Teach",
+      "title": "Blackbeard",
+      "rank": "Four Emperors — Yonko",
+      "dangerLevel": 10,
+      "loreBio": "The only person in history to wield two Devil Fruits, acquired by killing his mentor Whitebeard. He exploited the Whitebeard succession crisis to build his own empire and claim the title of Yonko. His driving motive is to find One Piece and become the most ruthless pirate in history.",
+      "systemBio": "A system vulnerability exploit — Blackbeard's dual Devil Fruit capability represents a design flaw in the world's power equilibrium that existing network nodes cannot model or counter. His rise from nobody to Yonko demonstrates that in sufficiently complex systems, identity masquerading as weakness can penetrate any security layer.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "neutral-900",
+      "accentColor": "neutral-600",
+      "icon": "Skull",
+      "signatureMoment": "Killing Whitebeard in cold blood to take his Gura Gura no Mi — the ultimate mentor betrays the system's implicit trust network.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Red-Haired Shanks",
+      "title": "Red-Haired",
+      "rank": "Four Emperors — Yonko",
+      "dangerLevel": 9,
+      "loreBio": "One of the Four Emperors who abandoned his quest for One Piece to become a stabilizing force in the New World. His non-aggression pact with Marine HQ maintains the current balance of power. He gave Luffy his straw hat and inspired his dream.",
+      "systemBio": "A network hub that provides equilibrium maintenance through implicit threat rather than explicit force. Shanks functions as a broker node — his relationship with both Marine HQ and the Pirate Emperors allows him to route influence in ways that prevent cascade failures in the broader power network.",
+      "gradientFrom": "red-900",
+      "gradientTo": "amber-900",
+      "accentColor": "red-400",
+      "icon": "Anchor",
+      "signatureMoment": "Walking into Marineford to personally halt the war — the only person whose presence alone ends the Battle of Marineford.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Silvers Rayleigh",
+      "title": "Dark King",
+      "rank": "Roger Pirates First Mate",
+      "dangerLevel": 8,
+      "loreBio": "The first mate of the Roger Pirates who can use all three types of Haki at master level. After Roger's execution, he became a coatings specialist in Sabaody. He trained Luffy in Haki for two years after Marineford.",
+      "systemBio": "The historical memory node of the system — Rayleigh carries the operational context of the Roger era that connects the Void Century secret to present-day power players. His decision to train Luffy is a deliberate routing of institutional knowledge to a specific successor node.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Eye",
+      "signatureMoment": "Blocking Kizaru at Sabaody with Conqueror's Haki — proving he is still a top-tier operator despite his age.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Nico Robin",
+      "title": "Devil Child",
+      "rank": "Straw Hat Crew Archaeologist",
+      "dangerLevel": 7,
+      "loreBio": "The only person in the world who can read Poneglyphs, making her the key to discovering the Void Century history and locating One Piece. She was nearly killed by the World Government at age 8 for this knowledge and has been hunted her entire life.",
+      "systemBio": "The cryptographic keystone of the entire system — Robin's decryption capability makes her the singular high-value target that the World Government cannot allow to operate freely, while simultaneously being the node whose survival is necessary for any reconstruction of the erased historical record.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "BookOpen",
+      "signatureMoment": "Declaring to the World Government at Enies Lobby that she will read every Poneglyph in the world — turning her death sentence into a declaration of war.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Buggy the Clown",
+      "title": "Cross Guild Founder",
+      "rank": "Yonko-level Operator",
+      "dangerLevel": 6,
+      "loreBio": "A pirate captain who accidentally stumbled into massive influence after the timeskip by founding Cross Guild — an organization that has turned the tables on pirates hunting bounties by putting bounties on Marines. His unexpected rise demonstrates that in complex networks, social proof can produce influence entirely decoupled from capability.",
+      "systemBio": "A meme-node in the network — Buggy's rise is a demonstration that reputation routing in sufficiently complex systems can produce influence that vastly exceeds the operator's actual capability. His position as a Yonko-level figure is structurally real even though his personal power is not.",
+      "gradientFrom": "red-950",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Star",
+      "signatureMoment": "Being named a Yonko by the World Government — accidentally becoming one of the most powerful figures in the world through misidentification.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Dracule Mihawk",
+      "title": "Hawk-Eyes",
+      "rank": "World's Strongest Swordsman",
+      "dangerLevel": 9,
+      "loreBio": "The holder of the title 'World's Strongest Swordsman' who operates alone and considers Shanks his rival. He was a Warlord of the Sea and has repeatedly crossed paths with Zoro, seeing in him the potential to surpass Shanks.",
+      "systemBio": "A neutral operating node whose neutrality is itself a strategic asset — Mihawk's refusal to join any faction means his allegiance is always available as a variable, making him simultaneously a potential swing vote in any conflict and an independent reference point for power measurement.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "zinc-900",
+      "accentColor": "zinc-400",
+      "icon": "Sword",
+      "signatureMoment": "Training Zoro for two years — transferring combat capability to the next generation's potential最强的剑士.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Sengoku",
+      "title": "Buddha",
+      "rank": "Former Fleet Admiral",
+      "dangerLevel": 8,
+      "loreBio": "The former Fleet Admiral of the Marines who led the pursuit of the Roger Pirates and later commanded the hunt for Whitebeard. He retired after the Marineford War and now operates as a headquarters commander, connecting the World Government to historical intelligence.",
+      "systemDesc": "An institutional memory node — Sengoku's value lies in his institutional knowledge of the Void Century, the Roger era, and the long-term strategic calculations of the World Government. His position bridges the current era's conflicts with the historical data that drives them.",
+      "gradientFrom": "amber-950",
+      "gradientTo": "orange-900",
+      "accentColor": "amber-400",
+      "icon": "Crown",
+      "signatureMoment": "Revealing Blackbeard's treachery to the Marines — converting historical pattern recognition into actionable intelligence.",
+      "imageUrl": null,
+      "_fetchFailed": true,
+      "systemBio": "An institutional memory node — Sengoku's value lies in his institutional knowledge of the Void Century, the Roger era, and the long-term strategic calculations of the World Government. His position bridges the current era's conflicts with the historical data that drives them."
+    },
+    {
+      "name": "Monkey D. Garp",
+      "title": "Hero of the Marines",
+      "rank": "Vice Admiral",
+      "dangerLevel": 8,
+      "loreBio": "A legendary Vice Admiral who refused the promotion to Admiral multiple times. He raised Luffy and Ace as his own grandchildren while serving the Marines, creating a structural bridge between the Revolutionary Army, the Marines, and the next generation of pirates.",
+      "systemBio": "A structural bridge node connecting three major factions — Garp's refusal to fully commit to the Marine hierarchy makes him an information routing point between the World Government, the Revolutionary Army, and the emerging Yonko generation. His personal relationships are the actual network edges.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "cyan-900",
+      "accentColor": "blue-400",
+      "icon": "Shield",
+      "signatureMoment": "Refusing to capture Dragon despite orders — choosing familial relationship over institutional loyalty at the cost of his own career.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    },
+    {
+      "name": "Whitebeard",
+      "title": "Edward Newgate",
+      "rank": "Deceased Yonko",
+      "dangerLevel": 10,
+      "loreBio": "The strongest man in the world and the closest person to finding One Piece before Roger himself. His death at Marineford triggered the power vacuum that defined the current era. He was called the closest thing to a father by his crew.",
+      "systemBio": "The system's former equilibrium anchor — Whitebeard's death removed the primary stabilizing force in the New World power network. His territory, crew, and political relationships were all absorbed by competing nodes, most significantly Blackbeard, who exploited the succession gap to acquire both his fruits and his territory.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "neutral-800",
+      "accentColor": "neutral-500",
+      "icon": "Skull",
+      "signatureMoment": "His final stand at Marineford, declaring One Piece exists — confirming the system goal that drives every other actor.",
+      "imageUrl": null,
+      "_fetchFailed": true
+    }
+  ],
+  "factions": [
+    {
+      "name": "Four Emperors",
+      "role": "neutral",
+      "loreDesc": "The four most powerful pirate crews controlling the New World. Currently including Luffy, Blackbeard, Shanks, and a contested fourth seat. Each commands enough power to challenge the World Government directly.",
+      "systemDesc": "A distributed authority network with no central coordinator — the Yonko system maintains equilibrium through mutual deterrence rather than hierarchy. Any single Emperor's attempt to consolidate power triggers defensive alliance formation among the others."
+    },
+    {
+      "name": "World Government / Marines",
+      "role": "antagonist",
+      "loreDesc": "The centralized global authority controlling the six Great Navy Powers and the Cipher Pol intelligence division. Enforces the Absolute Justice doctrine and protects the secret of the Void Century through any means necessary.",
+      "systemDesc": "The system's primary institutional node — a hierarchical enforcement structure whose legitimacy depends on preserving a historical secret. This creates a hard constraint: the Government cannot allow free information flow about the Void Century regardless of the cost, making it structurally incapable of true transparency."
+    },
+    {
+      "name": "Seven Warlords of the Sea",
+      "role": "neutral",
+      "loreDesc": "A disbanded group of powerful pirates granted legal immunity in exchange for serving the World Government. Former members including Crocodile, Hancock, and Mihawk remain systemically relevant despite the group's dissolution.",
+      "systemDesc": "A contractor network that gave the Government access to pirate capabilities without integrating them into the hierarchy. The group's disbandment created a distributed set of independent high-capability nodes whose allegiance is now fully negotiable."
+    },
+    {
+      "name": "Straw Hat Grand Fleet",
+      "role": "protagonist",
+      "loreDesc": "Eleven pirate crews who swore allegiance to Luffy after the Dressrosa arc. Together they form a distributed network spanning multiple oceans and representing enormous navigational and combat diversity.",
+      "systemDesc": "A voluntary alliance network built on personal loyalty rather than contractual obligation — the most stable form of network edge because it has no expiration condition. Luffy's refusal to issue orders means each node operates autonomously but responds to his personal signal."
+    },
+    {
+      "name": "Revolutionary Army",
+      "role": "chaotic",
+      "loreDesc": "Dragon's global organization dedicated to toppling the World Government. Active across multiple nations and connected to Luffy through his father Dragon, making it a structurally relevant faction even without direct narrative focus.",
+      "systemDesc": "An ideological replacement network — the Revolutionary Army doesn't just oppose the current system; it represents an alternative institutional model. Its existence proves that the Government's legitimacy deficit has produced a credible challenger."
+    },
+    {
+      "name": "Big Mom Pirates",
+      "role": "antagonist",
+      "loreDesc": "One of the former Yonko crews led by Charlotte Linlin. Complex family dynamics drive both faction cohesion and internal instability. Political marriage alliances were used as a tool of territorial expansion.",
+      "systemDesc": "A family-structured empire with institutional fragility — Big Mom's crew's strength comes from blood relationship routing, but this same structure creates exploitable vulnerabilities when family bonds are disrupted, as demonstrated in the Whole Cake Island arc."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Devil Fruit consumers cannot swim",
+      "subtitle": "Sea Weakness Protocol",
+      "loreConsequence": "Contact with seawater or seastone (Kairoseki) nullifies all Devil Fruit abilities and weakens the user to the point of drowning.",
+      "systemEquivalent": "A hard system constraint that creates specific terrain-based counters — the ocean itself functions as a neutralization layer for any Devil Fruit operator, making maritime navigation a structural vulnerability for the pirate network.",
+      "severity": "high",
+      "loreSubtitle": "Sea Weakness Protocol",
+      "systemSubtitle": "Environmental Neutralization Layer"
+    },
+    {
+      "name": "Only one Devil Fruit per person",
+      "subtitle": "Single-Fruit Integrity Constraint",
+      "loreConsequence": "Eating a second Devil Fruit causes death — except in Blackbeard's case via the Yami Yami no Mi, an unexplained anomaly.",
+      "systemEquivalent": "A system integrity constraint that prevents capability stacking and maintains balance. Blackbeard's exception suggests either a design flaw being exploited or a external override mechanism not yet fully explained.",
+      "severity": "fatal",
+      "loreSubtitle": "Single-Fruit Integrity Constraint",
+      "systemSubtitle": "Capability Stacking Prohibition"
+    },
+    {
+      "name": "Haki eclipses Devil Fruit power at sufficient mastery",
+      "subtitle": "Skill Ceiling Override",
+      "loreConsequence": "Observation Haki predicts Logia attacks; Armament Haki damages otherwise intangible bodies. At peak mastery, Haki users can defeat Devil Fruit users through pure skill.",
+      "systemEquivalent": "A ceiling function that prevents Devil Fruit advantages from being insurmountable — Haki is the great equalizer that ensures the system rewards training and discipline over innate ability acquisition.",
+      "severity": "medium",
+      "loreSubtitle": "Skill Ceiling Override",
+      "systemSubtitle": "Training-Based Counter-Hierarchy"
+    },
+    {
+      "name": "The Will of the D.",
+      "subtitle": "Cosmically-Drawn Destiny Pattern",
+      "loreConsequence": "Bearers of the D. are cosmically drawn to historic confrontations — a pattern observable across Roger, Luffy, Blackbeard, and others that suggests a deterministic element in an otherwise chaotic system.",
+      "systemEquivalent": "A narrative convergence mechanism that ensures D. bearers appear at structurally critical junctures — the system appears to route its highest-stakes events through D. bearer intersections.",
+      "severity": "low",
+      "loreSubtitle": "Cosmically-Drawn Destiny Pattern",
+      "systemSubtitle": "Convergence Routing Mechanism"
+    },
+    {
+      "name": "Poneglyphs cannot be destroyed by any known force",
+      "subtitle": "Indestructible Historical Record",
+      "loreConsequence": "The Void Century's record is physically indestructible — no known force in the One Piece world can damage a Poneglyph, making the historical truth permanently accessible to anyone who can read it.",
+      "systemEquivalent": "An immutable storage layer that ensures historical data cannot be censored regardless of institutional power — Robin's safety is the only barrier between the Government and permanent historical reconstruction.",
+      "severity": "fatal",
+      "loreSubtitle": "Indestructible Historical Record",
+      "systemSubtitle": "Permanent Data Integrity Layer"
+    },
+    {
+      "name": "The World Government erases history",
+      "subtitle": "Institutional Memory Destruction",
+      "loreConsequence": "The Ohara incident demonstrates the Government's willingness to commit genocide to preserve the Void Century secret — killing every scholar on the island to prevent any Poneglyph research.",
+      "systemEquivalent": "A self-preservation constraint that takes precedence over all other institutional values — the Government will destroy any threat to its legitimacy narrative regardless of cost, proving the Void Century secret is worth any price to protect.",
+      "severity": "fatal",
+      "loreSubtitle": "Institutional Memory Destruction",
+      "systemSubtitle": "Legitimacy-Protection Override"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Monkey D. Luffy",
+      "target": "Red-Haired Shanks",
+      "type": "ally",
+      "weight": 10,
+      "loreDesc": "Mentor bond — Shanks gave Luffy his straw hat and inspired his dream of becoming King of the Pirates.",
+      "systemDesc": "A routing edge that transfers historical legitimacy from the previous generation's most principled Yonko to the next generation's primary disruptor."
+    },
+    {
+      "source": "Marshall D. Teach",
+      "target": "Whitebeard",
+      "type": "betrayal",
+      "weight": 10,
+      "loreDesc": "Blackbeard was a member of Whitebeard's crew who killed his mentor to take the Yami Yami no Mi.",
+      "systemDesc": "The system's most significant trust violation — a student exploiting the implicit safety of a crew to acquire capabilities that break the fundamental one-fruit rule."
+    },
+    {
+      "source": "Red-Haired Shanks",
+      "target": "Marshall D. Teach",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Shanks bears the scar Blackbeard gave him and considers him a serious threat to the current equilibrium.",
+      "systemDesc": "A threat-assessment edge connecting the system's stabilizer to its most dangerous destabilizer — Shanks's concern about Blackbeard is a leading indicator of the system's primary vulnerability."
+    },
+    {
+      "source": "Silvers Rayleigh",
+      "target": "Whitebeard",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "First mate bond from the Roger era — Rayleigh and Whitebeard were contemporaries and allies in the final era of the previous age.",
+      "systemDesc": "An institutional memory edge connecting two eras of the power network — the only surviving high-value link between the Roger era and the current Yonko era."
+    },
+    {
+      "source": "Nico Robin",
+      "target": "Sengoku",
+      "type": "enemy",
+      "weight": 10,
+      "loreDesc": "The World Government has hunted Robin since age 8 for her ability to read Poneglyphs — she represents their existential threat.",
+      "systemDesc": "A keystone threat edge — Robin's survival is incompatible with the Government's core legitimacy interest, making any alliance between them structurally impossible."
+    },
+    {
+      "source": "Monkey D. Garp",
+      "target": "Monkey D. Garp",
+      "type": "dependent",
+      "weight": 7,
+      "loreDesc": "Garp's son Dragon leads the Revolutionary Army — Garp's institutional position creates a structural dependency edge between the Marines and the anti-government movement.",
+      "systemDesc": "A family-based information routing vulnerability — Garp's personal loyalty to his son creates a potential intelligence leak in the Government's own hierarchy."
+    },
+    {
+      "source": "Buggy the Clown",
+      "target": "Sengoku",
+      "type": "rival",
+      "weight": 6,
+      "loreDesc": "Cross Guild has turned the power structure upside down by putting bounties on Marines, making Buggy a structural enemy of the Government despite being a pirate.",
+      "systemDesc": "An unexpected routing inversion — Buggy's accidental influence has created a counter-hierarchy that threatens the Government's enforcement capability."
+    },
+    {
+      "source": "Dracule Mihawk",
+      "target": "Red-Haired Shanks",
+      "type": "rival",
+      "weight": 9,
+      "loreDesc": "Former rivals whose duels ended when Shanks lost his arm — Mihawk continues to hunt Shanks but respects him deeply.",
+      "systemDesc": "A deferred contest edge — Mihawk's rivalry with Shanks is the primary reason he takes interest in Zoro, making it an indirect connection to the next generation."
+    },
+    {
+      "source": "Sengoku",
+      "target": "Marshall D. Teach",
+      "type": "enemy",
+      "weight": 8,
+      "loreDesc": "The Government is actively hunting Blackbeard — his growing power represents a direct threat to Marine authority.",
+      "systemDesc": "An institutional threat response — Blackbeard's dual Devil Fruit capability represents a novel threat vector that the Government's existing framework cannot properly model or counter."
+    },
+    {
+      "source": "Whitebeard",
+      "target": "Marshall D. Teach",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Whitebeard considered Blackbeard a son before the betrayal — the murder of Whitebeard is the defining event of Blackbeard's arc.",
+      "systemDesc": "A corrupted succession edge — Blackbeard's inheritance of Whitebeard's territory and power was achieved through betrayal rather than legitimate succession."
+    },
+    {
+      "source": "Buggy the Clown",
+      "target": "Red-Haired Shanks",
+      "type": "ally",
+      "weight": 5,
+      "loreDesc": "Buggy and Shanks were crewmates on the Roger Pirates — their childhood bond is one of the few genuinely warm edges in the network.",
+      "systemDesc": "A legacy connection edge between the current Yonko generation and the unexpected Cross Guild rise — Shanks's tolerance of Buggy suggests strategic calculation beyond personal sentiment."
+    },
+    {
+      "source": "Nico Robin",
+      "target": "Silvers Rayleigh",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Rayleigh trained Robin's mother and connected her to the Roger era knowledge network — their bond is intellectual as much as personal.",
+      "systemDesc": "An information transfer edge — Rayleigh's connection to Robin represents the passing of historical context from the Roger era to the next generation's Poneglyph reader."
+    },
+    {
+      "source": "Monkey D. Luffy",
+      "target": "Nico Robin",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Luffy swore to his crew at Enies Lobby that he would never forgive anyone who hurts Robin — a personal protection edge.",
+      "systemDesc": "A loyalty routing edge — Luffy's protective commitment to Robin means the system's most valuable informational node is embedded in the most unpredictable power network."
+    },
+    {
+      "source": "Whitebeard",
+      "target": "Silvers Rayleigh",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Whitebeard and Rayleigh were close friends from the Roger era — their bond represented the last connection to the generation that found One Piece.",
+      "systemDesc": "A peer-network edge between the two primary successor organizations — the Roger Pirates' legacy is split between Rayleigh's mentorship role and Whitebeard's territorial power."
+    },
+    {
+      "source": "Marshall D. Teach",
+      "target": "Silvers Rayleigh",
+      "type": "enemy",
+      "weight": 6,
+      "loreDesc": "Blackbeard hunted Devil Fruit users aggressively after gaining his powers — Rayleigh was on his list of targets.",
+      "systemDesc": "A predator-prey edge in the Devil Fruit acquisition network — Blackbeard's systematic hunting of strong Devil Fruit users represents a structural threat to all such operators."
+    }
+  ],
+  "rankings": {
+    "systemName": "Pirate Power Hierarchy",
+    "loreName": "The Road to One Piece",
+    "topTierName": "Yonko (Four Emperors)",
+    "topTierLore": "The four most powerful pirates controlling the New World. Each commands enough crew strength, territorial holdings, and political influence to challenge the World Government directly. Currently includes Luffy, Blackbeard, Shanks, and a contested fourth seat.",
+    "topTierSystem": "A distributed power network with no central coordinator. The Yonko system maintains equilibrium through mutual deterrence — any consolidation attempt by one Emperor triggers defensive alignment among the others.",
+    "tiers": [
+      {
+        "name": "Emperor Commanders (Yonko Upper)",
+        "loreDesc": "The first commanders of each Yonko crew — individuals who can challenge Admirals and hold their own.",
+        "systemDesc": "High-capability nodes that serve as force multipliers and independent operational units within the larger crew network."
+      },
+      {
+        "name": "Warlord-Level Operators",
+        "loreDesc": "Former Warlords and top-tier pirates who operate with near-Yonko capability but without a crew structure.",
+        "systemDesc": "Independent high-capability nodes not embedded in crew hierarchies — their allegiance is fully negotiable and represents the most flexible routing points in the network."
+      },
+      {
+        "name": "Super Nova (Worst Generation)",
+        "loreDesc": "The 11 pirates who arrived at Sabaody simultaneously, each with bounties over 100 million berries.",
+        "systemDesc": "The next-generation disruptor cohort — these nodes are the primary sources of structural instability in the current New World equilibrium."
+      }
+    ]
+  },
+  "systemQuestions": [
+    {
+      "question": "How does the Yonko system maintain equilibrium?",
+      "answer": "The Four Emperors maintain balance through mutual deterrence rather than hierarchy. No single Emperor can consolidate power without triggering defensive alliances from the others — similar to a nuclear deterrence model.",
+      "tabIndex": 2,
+      "sectionId": "factions",
+      "tabLabel": "Factions"
+    },
+    {
+      "question": "What makes Robin the most dangerous person in the world?",
+      "answer": "She is the only person alive who can read Poneglyphs — the only surviving record of the Void Century. This knowledge threatens the World Government's foundational legitimacy.",
+      "tabIndex": 1,
+      "sectionId": "power-system",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why is Blackbeard a system anomaly?",
+      "answer": "He wields two Devil Fruits, the only known person to achieve this. The Yami Yami no Mi's ability to absorb a second fruit breaks the world's fundamental power constraint.",
+      "tabIndex": 1,
+      "sectionId": "power-system",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What was the Void Century?",
+      "answer": "A 100-year period erased from all official history by the World Government. The Poneglyphs are the only surviving record of what actually happened.",
+      "tabIndex": 3,
+      "sectionId": "rules",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How does Haki function as the great equalizer?",
+      "answer": "At sufficient mastery, Observation Haki predicts attacks and Armament Haki damages otherwise intangible bodies. This ensures Devil Fruit advantages can always be countered by sufficient skill.",
+      "tabIndex": 0,
+      "sectionId": "power-system",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "What triggered the current power vacuum?",
+      "answer": "Whitebeard's death at Marineford removed the primary stabilizing force in the New World. Blackbeard exploited the succession gap to acquire both his fruits and territory.",
+      "tabIndex": 3,
+      "sectionId": "rules",
+      "tabLabel": "Core Laws"
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Roger Execution",
+      "trigger": "Gol D. Roger's public execution by the World Government",
+      "consequence": "Released the information that One Piece exists, triggering the Great Pirate Era and setting the current system in motion.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "Roger chose to be executed rather than hide, using his death to announce that the treasure is real and findable.",
+      "systemDesc": "A system initialization event — Roger's execution is the seed event that launched the current power equilibrium and set every subsequent actor in motion."
+    },
+    {
+      "name": "Whitebeard Death at Marineford",
+      "trigger": "Blackbeard killing Whitebeard and the Marine response with full Admiral deployment",
+      "consequence": "Killed the primary stabilizing force in the New World; opened the power vacuum that Blackbeard exploited for the Yami Yami no Mi and territory.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Whitebeard's death broke the existing balance of power and triggered the most significant naval mobilization in history.",
+      "systemDesc": "A primary node failure — removing the network's main stabilizer causes a rapid redistribution of edges to competing nodes."
+    },
+    {
+      "name": "Enies Lobby Declaration",
+      "trigger": "Luffy's decision to declare war on the World Government to save Robin",
+      "consequence": "The first time a pirate crew directly challenged the World Government and won; Robin became a permanent enemy of the state.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "Luffy burned the World Government's flag and announced they would never accept any more of the Government's interference.",
+      "systemDesc": "A legitimacy challenge edge — Luffy's victory proved the Government's enforcement capability had limits, establishing him as a regime challenger."
+    },
+    {
+      "name": "Ace's Death",
+      "trigger": "Marineford Summit War — Ace's death at Akainu's hands while protecting Luffy",
+      "consequence": "Triggered Luffy's complete breakdown and two-year training period under Rayleigh — a forced system reset.",
+      "timelinePosition": "Mid-Narrative",
+      "loreDesc": "The loss of his brother forced Luffy to stop and rebuild from a higher foundation rather than continue with insufficient power.",
+      "systemDesc": "A forced maturation event — external loss forcing a node to upgrade before it would otherwise have chosen to."
+    },
+    {
+      "name": "Gear 5 Awakening",
+      "trigger": "Luffy's Gomu Gomu no Mi revealed as Mythical Zoan (Hito Hito no Mi, Model: Nika)",
+      "consequence": "Rewrote the power ceiling of the entire system — the 'rubber' body was always a Mythical Zoan with reality-warping awakening capability.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "The Joy Boy awakening turned Luffy's rubber body into something that can cartoonishly affect the environment around him.",
+      "systemDesc": "A system reclassification event — revealing the rubber body's true classification changes every prior analysis of Luffy's power ceiling."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Blackbeard Dual Devil Fruit",
+      "ruleViolated": "Only one Devil Fruit per person",
+      "loreDesc": "The only known exception to the one-fruit rule. The Yami Yami no Mi allows absorption of a second fruit — how and why is still not fully explained.",
+      "systemDesc": "A design vulnerability being actively exploited — the Yami Yami no Mi's special property creates a class of capability that the existing network cannot model or counter."
+    },
+    {
+      "name": "Buggy's Yonko-level Influence",
+      "ruleViolated": "Power derives from capability",
+      "loreDesc": "Buggy is accidentally positioned as a Yonko-level operator despite having relatively modest individual power — purely through social proof and reputation routing.",
+      "systemDesc": "A reputation exploit — in sufficiently complex networks, social proof can route influence to nodes with minimal actual capability, proving the system is not purely capability-based."
+    },
+    {
+      "name": "The Void Century",
+      "ruleViolated": "Historical records are controllable",
+      "loreDesc": "A complete century of history erased by the World Government. The Poneglyphs are the only surviving record of what actually happened — and they cannot be destroyed.",
+      "systemDesc": "An institutional memory wipe that was intended to be permanent but created the very instability it sought to prevent — Robin is living proof that the data cannot be fully suppressed."
+    },
+    {
+      "name": "Gear 5 Awakening",
+      "ruleViolated": "Rubber body has physical limits",
+      "loreDesc": "Luffy's 'rubber' body was actually the Mythical Zoan Hito Hito no Mi Model: Nika — allowing him to awaken and affect the environment around him like a cartoon.",
+      "systemDesc": "A misclassified system resource — the entire understanding of Luffy's power system was based on incorrect categorization of his fruit type."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Haki (Armament)",
+      "defender": "Devil Fruit (Logia)",
+      "mechanic": "Observation Haki predicts elemental intangibility; Armament Haki allows physical damage to otherwise untouchable Logia users.",
+      "loreDesc": "A Logia user's intangibility is countered by sufficient Haki mastery — the system has a built-in equalizer for elemental invulnerability."
+    },
+    {
+      "attacker": "Observation Haki",
+      "defender": "Speed / Feint Attacks",
+      "mechanic": "Observation Haki predicts immediate threats, but faster opponents or layered feints can create predictions that Haki cannot distinguish from real threats.",
+      "loreDesc": "Haki is not perfect prediction — sufficiently advanced combat intelligence can create false signals that degrade Haki accuracy."
+    },
+    {
+      "attacker": "Seastone (Kairoseki)",
+      "defender": "Devil Fruit Powers",
+      "mechanic": "Seastone nullifies Devil Fruit abilities on contact, making seastone weapons the universal Devil Fruit counter.",
+      "loreDesc": "The ocean itself is the great equalizer against Devil Fruit users — seastone weapons leverage this environmental weakness directly."
+    }
+  ]
+}
