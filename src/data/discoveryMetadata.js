@@ -123,13 +123,13 @@ export const DISCOVERY_METADATA = {
     systemProfile: { factionComplexity: 2, causalDensity: 3, powerStructure: 'causal' }
   },
   naruto: {
-    addedAt: '2025-01-15', popularityBaseline: 98, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS to map the village-clan network that defines the shinobi world.',
+    addedAt: '2026-03-20', popularityBaseline: 98, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS to map the village-clan network that defines the shinobi world.',
     clusterTags: ['faction-heavy', 'hierarchy-heavy', 'anomaly-driven'],
     appealTags: ['high-stakes-escalation', 'strategy-network'],
     systemProfile: { factionComplexity: 3, causalDensity: 3, powerStructure: 'exchange' }
   },
   'one-piece': {
-    addedAt: '2025-01-15', popularityBaseline: 99, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS to map the pirate-yonko-maritime power grid.',
+    addedAt: '2026-03-20', popularityBaseline: 99, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS to map the pirate-yonko-maritime power grid.',
     clusterTags: ['faction-heavy', 'hierarchy-heavy', 'anomaly-driven'],
     appealTags: ['high-stakes-escalation', 'strategy-network'],
     systemProfile: { factionComplexity: 3, causalDensity: 3, powerStructure: 'exchange' }
