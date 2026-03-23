@@ -154,7 +154,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/307255.jpg",
       "_fetchFailed": false,
       "malId": 87275,
-      "role": "Main"
+      "role": "Main",
+      "slug": "ken-kaneki",
+      "description": "Ken Kaneki is a Main from Tokyo Ghoul."
     },
     {
       "name": "Kishou Arima",
@@ -171,7 +173,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/257935.jpg",
       "_fetchFailed": false,
       "malId": 111767,
-      "role": "Antagonist"
+      "role": "Antagonist",
+      "slug": "kishou-arima",
+      "description": "Kishou Arima is a Antagonist from Tokyo Ghoul."
     },
     {
       "name": "Touka Kirishima",
@@ -188,7 +192,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/234699.jpg?s=10ef474344779135236911013b0925fc",
       "_fetchFailed": false,
       "malId": 87277,
-      "role": "Main"
+      "role": "Main",
+      "slug": "touka-kirishima",
+      "description": "Touka Kirishima is a Main from Tokyo Ghoul."
     },
     {
       "name": "Rize Kamishiro",
@@ -205,7 +211,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/251965.jpg?s=57d66947438e9fc0d9935c61be760a70",
       "_fetchFailed": false,
       "malId": 87391,
-      "role": "Main"
+      "role": "Main",
+      "slug": "rize-kamishiro",
+      "description": "Rize Kamishiro is a Main from Tokyo Ghoul."
     },
     {
       "name": "Eto Yoshimura",
@@ -222,7 +230,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/276501.jpg",
       "_fetchFailed": false,
       "malId": 112997,
-      "role": "Antagonist"
+      "role": "Antagonist",
+      "slug": "eto-yoshimura",
+      "description": "Eto Yoshimura is a Antagonist from Tokyo Ghoul."
     },
     {
       "name": "Koutarou Amon",
@@ -239,7 +249,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/251453.jpg",
       "_fetchFailed": false,
       "malId": 99671,
-      "role": "Main"
+      "role": "Main",
+      "slug": "koutarou-amon",
+      "description": "Koutarou Amon is a Main from Tokyo Ghoul."
     },
     {
       "name": "Juuzou Suzuya",
@@ -256,7 +268,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/275843.jpg?s=a56227409808edb48f5e9cb3c85211b0",
       "_fetchFailed": false,
       "malId": 115869,
-      "role": "Main"
+      "role": "Main",
+      "slug": "juuzou-suzuya",
+      "description": "Juuzou Suzuya is a Main from Tokyo Ghoul."
     },
     {
       "name": "Hinami Fueguchi",
@@ -273,7 +287,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/263269.jpg?s=847a2a380804cf8e0c70b2dc2d5e2f17",
       "_fetchFailed": false,
       "malId": 99675,
-      "role": "Main"
+      "role": "Main",
+      "slug": "hinami-fueguchi",
+      "description": "Hinami Fueguchi is a Main from Tokyo Ghoul."
     },
     {
       "name": "Shuu Tsukiyama",
@@ -290,7 +306,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/296873.jpg?s=775d67102b007899c75d8d76490bd0c7",
       "_fetchFailed": false,
       "malId": 112687,
-      "role": "Main"
+      "role": "Main",
+      "slug": "shuu-tsukiyama",
+      "description": "Shuu Tsukiyama is a Main from Tokyo Ghoul."
     },
     {
       "name": "Koma Ihei",
@@ -307,7 +325,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/257941.jpg",
       "_fetchFailed": false,
       "malId": 110241,
-      "role": "Main"
+      "role": "Main",
+      "slug": "koma-ihei",
+      "description": "Koma Ihei is a Main from Tokyo Ghoul."
     }
   ],
   "factions": [

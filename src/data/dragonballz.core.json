@@ -154,7 +154,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/72546.jpg?s=c434a442d8ad1212885a8d02dbcbbee0",
       "_fetchFailed": false,
       "malId": 1831,
-      "role": "Main"
+      "role": "Main",
+      "slug": "goku",
+      "description": "Goku is a Main from Dragon Ball Z."
     },
     {
       "name": "Vegeta",
@@ -171,7 +173,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/86185.jpg?s=145f25d852734f70db55a92cab54b27b",
       "_fetchFailed": false,
       "malId": 1855,
-      "role": "Main"
+      "role": "Main",
+      "slug": "vegeta",
+      "description": "Vegeta is a Main from Dragon Ball Z."
     },
     {
       "name": "Frieza",
@@ -188,7 +192,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/359258.jpg?s=1de6c9d4e2a1b1f8c8d3a54b3a7d03e",
       "_fetchFailed": false,
       "malId": 1877,
-      "role": "Antagonist"
+      "role": "Antagonist",
+      "slug": "frieza",
+      "description": "Frieza is a Antagonist from Dragon Ball Z."
     },
     {
       "name": "Cell",
@@ -205,7 +211,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/108594.jpg?s=11c75ff4c82ecb2c957dfebede7ab260",
       "_fetchFailed": false,
       "malId": 1879,
-      "role": "Antagonist"
+      "role": "Antagonist",
+      "slug": "cell",
+      "description": "Cell is a Antagonist from Dragon Ball Z."
     },
     {
       "name": "Majin Buu",
@@ -222,7 +230,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/94545.jpg?s=e94f09be98d06f74ce14862c58394224",
       "_fetchFailed": false,
       "malId": 1893,
-      "role": "Antagonist"
+      "role": "Antagonist",
+      "slug": "majin-buu",
+      "description": "Majin Buu is a Antagonist from Dragon Ball Z."
     },
     {
       "name": "Gohan",
@@ -239,7 +249,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/72715.jpg?s=886561eebbd32941685b470ff9ed78a2",
       "_fetchFailed": false,
       "malId": 1845,
-      "role": "Main"
+      "role": "Main",
+      "slug": "gohan",
+      "description": "Gohan is a Main from Dragon Ball Z."
     },
     {
       "name": "Piccolo",
@@ -256,7 +268,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/45628.jpg?s=7f3263916ca42434072fb20a7590c277",
       "_fetchFailed": false,
       "malId": 914,
-      "role": "Main"
+      "role": "Main",
+      "slug": "piccolo",
+      "description": "Piccolo is a Main from Dragon Ball Z."
     },
     {
       "name": "Trunks",
@@ -273,7 +287,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/375125.jpg?s=dfee723daa759ba6480fa09fe6903b00",
       "_fetchFailed": false,
       "malId": 1925,
-      "role": "Main"
+      "role": "Main",
+      "slug": "trunks",
+      "description": "Trunks is a Main from Dragon Ball Z."
     },
     {
       "name": "Krillin",
@@ -290,7 +306,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/48517.jpg?s=19014a6433cd36c32f3661b21b38dad3",
       "_fetchFailed": false,
       "malId": 1833,
-      "role": "Main"
+      "role": "Main",
+      "slug": "krillin",
+      "description": "Krillin is a Main from Dragon Ball Z."
     },
     {
       "name": "Broly",
@@ -307,7 +325,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/275050.jpg",
       "_fetchFailed": false,
       "malId": 22865,
-      "role": "Antagonist"
+      "role": "Antagonist",
+      "slug": "broly",
+      "description": "Broly is a Antagonist from Dragon Ball Z."
     }
   ],
   "factions": [

@@ -85,7 +85,9 @@
       "signatureMoment": "His confrontation with Orsted exposes the ceiling gap between elite classes and forces a full strategic reorientation.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/423667.jpg?s=6b182cf752969a2d5a6d75c278f4ce2f",
       "malId": 111245,
-      "primaryAbility": "Silent Casting / High-Capacity Elemental Magic"
+      "primaryAbility": "Silent Casting / High-Capacity Elemental Magic",
+      "slug": "rudeus-greyrat",
+      "description": "Rudeus Greyrat is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Orsted",
@@ -101,7 +103,9 @@
       "signatureMoment": "His overwhelming duel with Rudeus demonstrates why raw talent cannot bypass world-power tier differentials.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/457289.jpg?s=384f31cb80fd7e0017eb8e5a5396bf89",
       "malId": 115175,
-      "primaryAbility": "Dragon God Combat Mastery / Loop Knowledge"
+      "primaryAbility": "Dragon God Combat Mastery / Loop Knowledge",
+      "slug": "orsted",
+      "description": "Orsted is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Hitogami",
@@ -117,7 +121,9 @@
       "signatureMoment": "He continuously redirects humans through selective guidance, making trust itself a strategic liability.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/297091.jpg?s=e235658795a2b5dc89e7bbca111b7b32",
       "malId": 118253,
-      "primaryAbility": "Dream Oracle Manipulation / Apostle Routing"
+      "primaryAbility": "Dream Oracle Manipulation / Apostle Routing",
+      "slug": "hitogami",
+      "description": "Hitogami is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Eris Boreas Greyrat",
@@ -133,7 +139,9 @@
       "signatureMoment": "Her post-teleport growth arc transforms her from impulsive fighter into elite close-range deterrence.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/324594.jpg?s=3648ce18134882a5f934130607f69548",
       "malId": 111335,
-      "primaryAbility": "Sword God Style Burst Assault"
+      "primaryAbility": "Sword God Style Burst Assault",
+      "slug": "eris-boreas-greyrat",
+      "description": "Eris Boreas Greyrat is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Roxy Migurdia",
@@ -149,7 +157,9 @@
       "signatureMoment": "Her tutoring phase establishes silent casting habits and confidence scaffolding that persist into late-game conflicts.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/552605.jpg?s=77b5b2dfd526c9ec5563c372a4dac111",
       "malId": 111341,
-      "primaryAbility": "Water Magic Doctrine / Instruction"
+      "primaryAbility": "Water Magic Doctrine / Instruction",
+      "slug": "roxy-migurdia",
+      "description": "Roxy Migurdia is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Sylphiette",
@@ -165,7 +175,9 @@
       "signatureMoment": "Her survival and later reunion with Rudeus demonstrate strong-fate clustering around key timeline actors.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/423669.jpg?s=858da1787027ca0290e9833fc9b32e02",
       "malId": 111337,
-      "primaryAbility": "Support Casting / Barrier and Healing Utility"
+      "primaryAbility": "Support Casting / Barrier and Healing Utility",
+      "slug": "sylphiette",
+      "description": "Sylphiette is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Ruijerd Superdia",
@@ -181,7 +193,9 @@
       "signatureMoment": "His escort across the Demon Continent turns survival logistics into a long-form trust reconstruction campaign.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/490046.jpg?s=b16b9af0cd4aea5ad5f72b1ec3f398e7",
       "malId": 111739,
-      "primaryAbility": "Superd Spear Combat / Detection Instinct"
+      "primaryAbility": "Superd Spear Combat / Detection Instinct",
+      "slug": "ruijerd-superdia",
+      "description": "Ruijerd Superdia is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Kishirika Kishirisu",
@@ -197,7 +211,9 @@
       "signatureMoment": "Granting Rudeus a demon eye introduces prediction and perception leverage into otherwise losing exchanges.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/267699.jpg?s=5355204ba6feae9ee5bd7c339f3ad6c9",
       "malId": 111745,
-      "primaryAbility": "Demon Eye Grant / Ancient Authority"
+      "primaryAbility": "Demon Eye Grant / Ancient Authority",
+      "slug": "kishirika-kishirisu",
+      "description": "Kishirika Kishirisu is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Perugius Dola",
@@ -213,7 +229,9 @@
       "signatureMoment": "His conditional cooperation policy filters who gains access to strategic-grade support infrastructure.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/460706.jpg?s=722e675fae2d861d4e9e6f91d85f74f1",
       "malId": 118279,
-      "primaryAbility": "Summoning and Fortress Control"
+      "primaryAbility": "Summoning and Fortress Control",
+      "slug": "perugius-dola",
+      "description": "Perugius Dola is a  from Mushoku Tensei: Jobless Reincarnation."
     },
     {
       "name": "Badigadi",
@@ -229,7 +247,9 @@
       "signatureMoment": "His historical collision with Laplace and armor-linked escalation reshapes macro-level risk modeling for entire eras.",
       "imageUrl": "https://myanimelist.net/images/characters/8/460171.jpg",
       "primaryAbility": "Immortal Demon Physiology / Armor Synchronization",
-      "malId": 118211
+      "malId": 118211,
+      "slug": "badigadi",
+      "description": "Badigadi is a  from Mushoku Tensei: Jobless Reincarnation."
     }
   ],
   "relationships": [

@@ -110,7 +110,9 @@
       "icon": "Target",
       "signatureMoment": "Switching from bone-breaking bursts to distributed Full Cowl and auxiliary quirks to avoid hardware collapse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/299404.jpg?s=6a448d3702c1d3185ed7ad8f0b8484f0",
-      "malId": 117909
+      "malId": 117909,
+      "slug": "izuku-midoriya",
+      "description": "Izuku Midoriya is a  from My Hero Academia."
     },
     {
       "name": "All Might",
@@ -125,7 +127,9 @@
       "icon": "Star",
       "signatureMoment": "His final stand at Kamino ends his era and removes the system's primary stabilizer.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/310613.jpg?s=2bb273c38247c38003176367645e6488",
-      "malId": 117921
+      "malId": 117921,
+      "slug": "all-might",
+      "description": "All Might is a  from My Hero Academia."
     },
     {
       "name": "All For One",
@@ -140,7 +144,9 @@
       "icon": "Lock",
       "signatureMoment": "Engineering Shigaraki as a vessel while preserving his own continuity through transfer strategy.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/370136.jpg?s=9a8bbc134d9c1719cacb71c58d863e72",
-      "malId": 141358
+      "malId": 141358,
+      "slug": "all-for-one",
+      "description": "All For One is a  from My Hero Academia."
     },
     {
       "name": "Tomura Shigaraki",
@@ -155,7 +161,9 @@
       "icon": "Flame",
       "signatureMoment": "His upgraded Decay spreads in cascading waves, converting city-scale infrastructure into instant collapse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/272139.jpg?s=ee7d051f5ff04bd4fe6830e0d268cb10",
-      "malId": 122103
+      "malId": 122103,
+      "slug": "tomura-shigaraki",
+      "description": "Tomura Shigaraki is a  from My Hero Academia."
     },
     {
       "name": "Enji Todoroki",
@@ -170,7 +178,9 @@
       "icon": "Sword",
       "signatureMoment": "Publicly inheriting the number one position while the Dabi revelation detonates his legitimacy.",
       "imageUrl": "https://myanimelist.net/images/characters/4/414269.jpg",
-      "malId": 141624
+      "malId": 141624,
+      "slug": "enji-todoroki",
+      "description": "Enji Todoroki is a  from My Hero Academia."
     },
     {
       "name": "Keigo Takami",
@@ -185,7 +195,9 @@
       "icon": "Eye",
       "signatureMoment": "Infiltrating the PLF command chain while balancing hero celebrity optics.",
       "imageUrl": "https://myanimelist.net/images/characters/10/438645.jpg",
-      "malId": 195199
+      "malId": 195199,
+      "slug": "keigo-takami",
+      "description": "Keigo Takami is a  from My Hero Academia."
     },
     {
       "name": "Chizome Akaguro",
@@ -200,7 +212,9 @@
       "icon": "Zap",
       "signatureMoment": "His Hosu actions trigger mass ideological recruitment among future villain cells.",
       "imageUrl": "https://myanimelist.net/images/characters/15/331442.jpg",
-      "malId": 132691
+      "malId": 132691,
+      "slug": "chizome-akaguro",
+      "description": "Chizome Akaguro is a  from My Hero Academia."
     },
     {
       "name": "Rikiya Yotsubashi",
@@ -215,7 +229,9 @@
       "icon": "Crown",
       "signatureMoment": "Merging MLA structures into the Paranormal Liberation Front under Shigaraki.",
       "imageUrl": "https://myanimelist.net/images/characters/16/454752.jpg",
-      "malId": 174410
+      "malId": 174410,
+      "slug": "rikiya-yotsubashi",
+      "description": "Rikiya Yotsubashi is a  from My Hero Academia."
     },
     {
       "name": "Shouta Aizawa",
@@ -230,7 +246,9 @@
       "icon": "Shield",
       "signatureMoment": "Holding front-line control in the war despite catastrophic injury because Erasure is strategically irreplaceable.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/301855.jpg?s=30bde8aa7f840805f22ab894a1eca521",
-      "malId": 117915
+      "malId": 117915,
+      "slug": "shouta-aizawa",
+      "description": "Shouta Aizawa is a  from My Hero Academia."
     },
     {
       "name": "Touya Todoroki",
@@ -245,7 +263,9 @@
       "icon": "Flame",
       "signatureMoment": "Broadcasting his identity to fuse private abuse evidence with national legitimacy shock.",
       "imageUrl": "https://myanimelist.net/images/characters/6/454749.jpg",
-      "malId": 139262
+      "malId": 139262,
+      "slug": "touya-todoroki",
+      "description": "Touya Todoroki is a  from My Hero Academia."
     }
   ],
   "relationships": [

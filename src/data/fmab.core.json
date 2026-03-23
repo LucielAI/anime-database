@@ -116,7 +116,9 @@
       "icon": "Zap",
       "signatureMoment": "Sacrificing his own Gate of Truth to retrieve Alphonse's body — trading his ability to perform alchemy forever, the only toll Truth accepts with approval.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/72533.jpg?s=d38cf4e2e5cbb46ddaf2b23345a03eae",
-      "malId": 11
+      "malId": 11,
+      "slug": "edward-elric",
+      "description": "Edward Elric is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "Alphonse Elric",
@@ -131,7 +133,9 @@
       "icon": "Shield",
       "signatureMoment": "Sacrificing his own soul to restore Edward's arm during the final battle — trusting that his brother will find a way to bring him back, mirroring their original transmutation in reverse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/54265.jpg?s=65c1a674adae3d7c5740d5711517285a",
-      "malId": 12
+      "malId": 12,
+      "slug": "alphonse-elric",
+      "description": "Alphonse Elric is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "Father",
@@ -149,7 +153,9 @@
       "jikanAliases": [
         "Homunculus"
       ],
-      "malId": 15542
+      "malId": 15542,
+      "slug": "father",
+      "description": "Father is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "Roy Mustang",
@@ -164,7 +170,9 @@
       "icon": "Flame",
       "signatureMoment": "Incinerating Lust through repeated, unbroken cycles of flame — burning through her Philosopher's Stone regeneration cycle by cycle until her soul reservoir is completely depleted.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/510227.jpg?s=a9880198a26475fa0555f4690bab8cd3",
-      "malId": 68
+      "malId": 68,
+      "slug": "roy-mustang",
+      "description": "Roy Mustang is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "King Bradley",
@@ -179,7 +187,9 @@
       "icon": "Eye",
       "signatureMoment": "Single-handedly storming the front gate of Central Command during the coup — cutting through dozens of soldiers while aging and wounded, demonstrating that his mortal body fights with conviction rather than regeneration.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/62053.jpg?s=181ba72d4c6ba5605bbfb63f1812f876",
-      "malId": 5103
+      "malId": 5103,
+      "slug": "king-bradley",
+      "description": "King Bradley is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "Scar",
@@ -194,7 +204,9 @@
       "icon": "Target",
       "signatureMoment": "Activating the reverse Nationwide Transmutation Circle using his brother's research — turning the weapon designed to destroy Amestris into the mechanism that saves it, completing the work of a dead man's faith.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/31591.jpg?s=0f4cfb335f3a86eede76abc630a3fe9e",
-      "malId": 66
+      "malId": 66,
+      "slug": "scar",
+      "description": "Scar is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "Van Hohenheim",
@@ -209,7 +221,9 @@
       "icon": "Star",
       "signatureMoment": "Confronting Father on the Promised Day — activating the counter-circle at the exact moment of the Nationwide Transmutation, releasing the stolen Amestrian souls from Father's container through a network of Stone fragments planted over centuries.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/80676.jpg?s=9ea1723c8b75fa22716cabfd858d2497",
-      "malId": 9792
+      "malId": 9792,
+      "slug": "van-hohenheim",
+      "description": "Van Hohenheim is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "Ling Yao",
@@ -224,7 +238,9 @@
       "icon": "Crown",
       "signatureMoment": "Greed's final act — using his Ultimate Shield to carbonize Father's body from the inside, sacrificing his own Stone to create the structural weakness that allows Edward to deliver the final blow.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/62602.jpg?s=c1c34cb6b91640be0fc8a4c4aadc14a1",
-      "malId": 3293
+      "malId": 3293,
+      "slug": "ling-yao",
+      "description": "Ling Yao is a  from Fullmetal Alchemist: Brotherhood."
     },
     {
       "name": "May Chang",
@@ -243,7 +259,9 @@
         "Mei Chang",
         "Chang, Mei"
       ],
-      "malId": 15532
+      "malId": 15532,
+      "slug": "may-chang",
+      "description": "May Chang is a  from Fullmetal Alchemist: Brotherhood."
     }
   ],
   "relationships": [

@@ -118,7 +118,9 @@
       "signatureMoment": "Swearing an oath of absolute non-violence after navigating a metaphysical processing nightmare representing his accumulated kills.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/309871.jpg",
       "_fetchFailed": false,
-      "malId": 10138
+      "malId": 10138,
+      "slug": "thorfinn-karlsefni",
+      "description": "Thorfinn Karlsefni is a  from Vinland Saga."
     },
     {
       "name": "Askeladd",
@@ -134,7 +136,9 @@
       "dangerLevel": 9,
       "signatureMoment": "Assassinating King Sweyn in a suicidal gambit to force Canute's ascension and permanently shield Wales from the Danish invasion.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/401940.jpg?s=738c36550f7afd3f402a32a5bbef66c8",
-      "malId": 13020
+      "malId": 13020,
+      "slug": "askeladd",
+      "description": "Askeladd is a  from Vinland Saga."
     },
     {
       "name": "King Canute",
@@ -151,7 +155,9 @@
       "signatureMoment": "Realizing God has abandoned humanity, and declaring his intent to build paradise on Earth through absolute, authoritarian control.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/395761.jpg",
       "_fetchFailed": false,
-      "malId": 17438
+      "malId": 17438,
+      "slug": "king-canute",
+      "description": "King Canute is a  from Vinland Saga."
     },
     {
       "name": "Thors Snorresson",
@@ -168,7 +174,9 @@
       "signatureMoment": "Dismantling an entire mercenary crew bare-handed without inflicting a single lethal injury, proving his total dominance over the violence economy.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/437128.jpg",
       "_fetchFailed": false,
-      "malId": 13021
+      "malId": 13021,
+      "slug": "thors-snorresson",
+      "description": "Thors Snorresson is a  from Vinland Saga."
     },
     {
       "name": "Thorkell the Tall",
@@ -185,7 +193,9 @@
       "signatureMoment": "Casually tossing massive, sharpened logs like javelins to impale multiple heavily armored men simultaneously from incredible distances.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/437129.jpg",
       "_fetchFailed": false,
-      "malId": 17440
+      "malId": 17440,
+      "slug": "thorkell-the-tall",
+      "description": "Thorkell the Tall is a  from Vinland Saga."
     },
     {
       "name": "Einar",
@@ -201,7 +211,9 @@
       "dangerLevel": 2,
       "signatureMoment": "Pulling Thorfinn out of his catatonic nightmares and affirming that even hands stained with blood can be used to grow wheat.",
       "imageUrl": "https://myanimelist.net/images/characters/16/501347.jpg",
-      "malId": 28030
+      "malId": 28030,
+      "slug": "einar",
+      "description": "Einar is a  from Vinland Saga."
     }
   ],
   "relationships": [

@@ -84,7 +84,9 @@
       "signatureMoment": "Gear 5 awakening against Kaido — Luffy's rubber body becomes reality-warping, turning the entire battlefield into an extension of his will.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/310307.jpg?s=3a27ab33bee665febfba970f24f203ba",
       "_fetchFailed": false,
-      "malId": 40
+      "malId": 40,
+      "slug": "monkey-d.-luffy",
+      "description": "Monkey D. Luffy is a  from One Piece."
     },
     {
       "name": "Marshall D. Teach",
@@ -100,7 +102,9 @@
       "signatureMoment": "Killing Whitebeard in cold blood to take his Gura Gura no Mi — the ultimate mentor betrays the system's implicit trust network.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/109536.jpg?s=85059e538bfbb1e609787c63cdc8c31e",
       "_fetchFailed": false,
-      "malId": 3331
+      "malId": 3331,
+      "slug": "marshall-d.-teach",
+      "description": "Marshall D. Teach is a  from One Piece."
     },
     {
       "name": "Red-Haired Shanks",
@@ -116,7 +120,9 @@
       "signatureMoment": "Walking into Marineford to personally halt the war — the only person whose presence alone ends the Battle of Marineford.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/307639.jpg?s=175776bc9b9338bdc8f64520b1699548",
       "_fetchFailed": false,
-      "malId": 727
+      "malId": 727,
+      "slug": "red-haired-shanks",
+      "description": "Red-Haired Shanks is a  from One Piece."
     },
     {
       "name": "Silvers Rayleigh",
@@ -132,7 +138,9 @@
       "signatureMoment": "Blocking Kizaru at Sabaody with Conqueror's Haki — proving he is still a top-tier operator despite his age.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/141861.jpg?s=6007c12796bddfe07abbfbdce1b95c46",
       "_fetchFailed": false,
-      "malId": 17142
+      "malId": 17142,
+      "slug": "silvers-rayleigh",
+      "description": "Silvers Rayleigh is a  from One Piece."
     },
     {
       "name": "Nico Robin",
@@ -148,7 +156,9 @@
       "signatureMoment": "Declaring to the World Government at Enies Lobby that she will read every Poneglyph in the world — turning her death sentence into a declaration of war.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/363700.jpg?s=3e7fa6074c0d30c8bede3905680e983c",
       "_fetchFailed": false,
-      "malId": 61
+      "malId": 61,
+      "slug": "nico-robin",
+      "description": "Nico Robin is a  from One Piece."
     },
     {
       "name": "Buggy the Clown",
@@ -164,7 +174,9 @@
       "signatureMoment": "Being named a Yonko by the World Government — accidentally becoming one of the most powerful figures in the world through misidentification.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/69112.jpg?s=2bb908ba252c0eaafa779c6d868f379a",
       "_fetchFailed": false,
-      "malId": 725
+      "malId": 725,
+      "slug": "buggy-the-clown",
+      "description": "Buggy the Clown is a  from One Piece."
     },
     {
       "name": "Dracule Mihawk",
@@ -180,7 +192,9 @@
       "signatureMoment": "Training Zoro for two years — transferring combat capability to the next generation's potential最强的剑士.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/69747.jpg?s=b65e6e98b004f965b7c3783b34cdccb6",
       "_fetchFailed": false,
-      "malId": 2064
+      "malId": 2064,
+      "slug": "dracule-mihawk",
+      "description": "Dracule Mihawk is a  from One Piece."
     },
     {
       "name": "Sengoku",
@@ -197,7 +211,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/88938.jpg?s=8cda4ed56cc7d0aad3f06d55887d95cf",
       "_fetchFailed": false,
       "systemBio": "An institutional memory node — Sengoku's value lies in his institutional knowledge of the Void Century, the Roger era, and the long-term strategic calculations of the World Government. His position bridges the current era's conflicts with the historical data that drives them.",
-      "malId": 13018
+      "malId": 13018,
+      "slug": "sengoku",
+      "description": "Sengoku is a  from One Piece."
     },
     {
       "name": "Monkey D. Garp",
@@ -213,7 +229,9 @@
       "signatureMoment": "Refusing to capture Dragon despite orders — choosing familial relationship over institutional loyalty at the cost of his own career.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/509073.jpg?s=8b287628076463de432fb5aedc5b9882",
       "_fetchFailed": false,
-      "malId": 8064
+      "malId": 8064,
+      "slug": "monkey-d.-garp",
+      "description": "Monkey D. Garp is a  from One Piece."
     },
     {
       "name": "Whitebeard",
@@ -229,7 +247,9 @@
       "signatureMoment": "His final stand at Marineford, declaring One Piece exists — confirming the system goal that drives every other actor.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/100236.jpg?s=7d8b2cff3cdb3b4cae84ff79ddf906cf",
       "_fetchFailed": false,
-      "malId": 2751
+      "malId": 2751,
+      "slug": "whitebeard",
+      "description": "Whitebeard is a  from One Piece."
     }
   ],
   "factions": [

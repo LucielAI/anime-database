@@ -118,7 +118,9 @@
       "signatureMoment": "Stating 'Throughout Heaven and Earth, I alone am the honored one' while floating in the sky.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/422168.jpg?s=7c1dfc26a9b3a6652da616a0fec7af01",
       "_fetchFailed": false,
-      "malId": 164471
+      "malId": 164471,
+      "slug": "satoru-gojo",
+      "description": "Satoru Gojo is a  from Jujutsu Kaisen."
     },
     {
       "name": "Ryomen Sukuna",
@@ -135,7 +137,9 @@
       "signatureMoment": "Activating Malevolent Shrine in Shibuya to vaporize a massive radius of the city into dust.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/431152.jpg?s=776045fc0fe9f2ecf8923f0f9c20f288",
       "_fetchFailed": false,
-      "malId": 175198
+      "malId": 175198,
+      "slug": "ryomen-sukuna",
+      "description": "Ryomen Sukuna is a  from Jujutsu Kaisen."
     },
     {
       "name": "Kenjaku",
@@ -152,7 +156,9 @@
       "signatureMoment": "Removing his cranial cap to reveal a terrifying, teeth-baring brain orchestrating the sealing of Satoru Gojo.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/619361.jpg?s=f44b1c92fcebfa466ee403e1d77b5d45",
       "_fetchFailed": false,
-      "malId": 175542
+      "malId": 175542,
+      "slug": "kenjaku",
+      "description": "Kenjaku is a  from Jujutsu Kaisen."
     },
     {
       "name": "Yuta Okkotsu",
@@ -169,7 +175,9 @@
       "signatureMoment": "Kissing the horrifying curse Rika to fully manifest her boundless power against Suguru Geto.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/461503.jpg?s=dda1109b054b3b2e6198d91527cfc7ac",
       "_fetchFailed": false,
-      "malId": 168067
+      "malId": 168067,
+      "slug": "yuta-okkotsu",
+      "description": "Yuta Okkotsu is a  from Jujutsu Kaisen."
     },
     {
       "name": "Toji Fushiguro",
@@ -186,7 +194,9 @@
       "signatureMoment": "Bypassing the Six Eyes' perception entirely, plunging a blade through Gojo's chest.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/517123.jpg?s=7b002cb822d74411930ef33c0004fb85",
       "_fetchFailed": false,
-      "malId": 175543
+      "malId": 175543,
+      "slug": "toji-fushiguro",
+      "description": "Toji Fushiguro is a  from Jujutsu Kaisen."
     },
     {
       "name": "Maki Zenin",
@@ -202,7 +212,9 @@
       "dangerLevel": 9,
       "signatureMoment": "Massacring the entirety of the corrupt Zenin Clan single-handedly after unlocking her true physical potential.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/423949.jpg?s=72edfa936ac89421e8d16970762d8b5b",
-      "malId": 164482
+      "malId": 164482,
+      "slug": "maki-zenin",
+      "description": "Maki Zenin is a  from Jujutsu Kaisen."
     },
     {
       "name": "Yuji Itadori",
@@ -222,7 +234,9 @@
       "jikanAliases": [
         "Yuuji Itadori",
         "Itadori, Yuuji"
-      ]
+      ],
+      "slug": "yuji-itadori",
+      "description": "Yuji Itadori is a  from Jujutsu Kaisen."
     },
     {
       "name": "Megumi Fushiguro",
@@ -238,7 +252,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Summoning the uncontrollable Mahoraga as a last resort against Sukuna — a shikigami so powerful that no Ten Shadows user in history had ever tamed it — willing to die if it meant taking his enemy down with him.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/392689.jpg?s=2395a10b59bb54ec9891c74ef214fea1",
-      "malId": 164470
+      "malId": 164470,
+      "slug": "megumi-fushiguro",
+      "description": "Megumi Fushiguro is a  from Jujutsu Kaisen."
     },
     {
       "name": "Mahito",
@@ -254,7 +270,9 @@
       "dangerLevel": 9,
       "signatureMoment": "Callously transfiguring Junpei in front of Yuji, proving that in the curse economy, innocence provides zero defense against foundational corruption.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/446508.jpg?s=8cfa45381097f1e9a720982061ec087d",
-      "malId": 164481
+      "malId": 164481,
+      "slug": "mahito",
+      "description": "Mahito is a  from Jujutsu Kaisen."
     },
     {
       "name": "Kento Nanami",
@@ -270,7 +288,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Loosening his tie precisely at 5:30 PM, triggering his Overtime vow and systematically destroying Mahito's transfigured humans with overwhelming, budgeted force.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/581424.jpg?s=78de007092c9e32f3555753de4999ee6",
-      "malId": 164473
+      "malId": 164473,
+      "slug": "kento-nanami",
+      "description": "Kento Nanami is a  from Jujutsu Kaisen."
     }
   ],
   "factions": [
