@@ -166,9 +166,9 @@ export default function Dashboard({ data }) {
   // Track hero visibility
   useEffect(() => {
     if (typeof window === 'undefined') return
+    if (!isHeroVisible) return
     const startTime = Date.now()
-    trackHeroVisibility(isHeroVisible, (Date.now() - startTime) / 1000)
-    return () => trackHeroVisibility(isHeroVisible, (Date.now() - startTime) / 1000)
+    return () => trackHeroVisibility(false, (Date.now() - startTime) / 1000)
   }, [isHeroVisible])
 
   // Keyboard shortcuts
