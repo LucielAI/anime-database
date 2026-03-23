@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'mob-psycho-100', 'tokyo-ghoul', 'one-piece']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'mob-psycho-100', 'tokyo-ghoul', 'one-piece', 'black-clover', 're-zero', 'blue-lock', 'sword-art-online']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -111,6 +111,26 @@ export const UNIVERSE_CATALOG = [
     id: 'one-piece', anime: 'One Piece', tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas', malId: 21, visualizationHint: 'node-graph', visualizationReason: 'One Piece operates as an empire/faction node-graph: Yonko territories, Warlord networks, Revolutionary Army cells, and Marine hierarchy form a maritime power grid where allegiances shift constantly and pirate crews function as independent business units with their own chains of command.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1244/138851l.jpg',
     themeColors: { primary: '#dc2626', secondary: '#0f172a', accent: '#f59e0b', glow: 'rgba(220,38,38,0.35)', tabActive: '#dc2626', badgeBg: 'rgba(220,38,38,0.15)', badgeText: '#fbbf24', modeGlow: 'rgba(245,158,11,0.25)', heroGradient: 'rgba(10,5,5,0.95)' },
     stats: { characters: 10, powerSystem: 3, rules: 6 }
+  },
+  {
+    id: 'black-clover', anime: 'Black Clover', tagline: 'Anti-magic versus elemental sovereignty — a kingdom bets on the underdog', malId: 34572, visualizationHint: 'affinity-matrix', visualizationReason: "Black Clover's magic system is an affinity matrix: five elements organize spell interactions, four-leaf grimoires create rare nodes, and anti-magic represents a null-edge that breaks the entire grid.", animeImageUrl: 'https://myanimelist.net/images/anime/2/88336.jpg',
+    themeColors: { primary: '#1e3a5f', secondary: '#0f172a', accent: '#a855f7', glow: 'rgba(30,58,95,0.4)', tabActive: '#a855f7', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#a855f7', modeGlow: 'rgba(168,85,247,0.3)', heroGradient: 'rgba(10,15,30,0.95)' },
+    stats: { characters: 25, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 're-zero', anime: 'Re:Zero - Starting Life in Another World', tagline: 'Save-scum your way to victory - if you are willing to die enough times', malId: 31240, visualizationHint: 'counter-tree', visualizationReason: 'Re:Zero Return by Death creates a counter-tree where each death branches the exploration graph. Witch factors add competing authority nodes, and the witch cult forms a counter-coalition.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1522/128039.jpg',
+    themeColors: { primary: '#7c3aed', secondary: '#0f172a', accent: '#a855f7', glow: 'rgba(124,58,237,0.35)', tabActive: '#8b5cf6', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#c4b5fd', modeGlow: 'rgba(168,85,247,0.3)', heroGradient: 'rgba(15,10,25,0.95)' },
+    stats: { characters: 20, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'blue-lock', anime: 'Blue Lock', tagline: "300 forwards. One egoist survives. Japan's national team reborn through ruthless self-optimization", malId: 49186, visualizationHint: 'counter-tree', visualizationReason: 'Blue Lock is structurally a counter-tree: each striker\'s ego vision competes as an individual optimization path, and the Blue Lock project eliminates collaborative paths until only pure individual capability remains.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/7/126929.jpg',
+    themeColors: { primary: '#1d4ed8', secondary: '#0f172a', accent: '#3b82f6', glow: 'rgba(29,78,216,0.35)', tabActive: '#3b82f6', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#93c5fd', modeGlow: 'rgba(59,130,246,0.3)', heroGradient: 'rgba(10,15,35,0.95)' },
+    stats: { characters: 6, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'sword-art-online', anime: 'Sword Art Online', tagline: 'A death-game locks 10,000 players inside a virtual sword world — the only way out is to win', malId: 11757, visualizationHint: 'node-graph', visualizationReason: 'SAO is structurally a dependency graph: sword skills link to weapon type nodes, guilds create party coordination networks, and the death-game condition makes every clearing decision a matter of survival.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/11/39717.jpg',
+    themeColors: { primary: '#0ea5e9', secondary: '#0f172a', accent: '#06b6d4', glow: 'rgba(14,165,233,0.35)', tabActive: '#0ea5e9', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#7dd3fc', modeGlow: 'rgba(6,182,212,0.3)', heroGradient: 'rgba(5,15,25,0.95)' },
+    stats: { characters: 8, powerSystem: 4, rules: 4 }
   }
 ]
 

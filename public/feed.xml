@@ -5,154 +5,182 @@
     <link>https://animearchive.app</link>
     <description>Fictional Universe Intelligence System — power mechanics, factions, and system analysis for anime worlds.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Mar 2026 11:12:28 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 17:42:05 GMT</lastBuildDate>
     <atom:link href="https://animearchive.app/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>Steins;Gate</title>
     <link>https://animearchive.app/universe/steinsgate</link>
     <guid isPermaLink="true">https://animearchive.app/universe/steinsgate</guid>
     <description>A deterministic attractor-field prison where convergence cannot be outrun — only rewritten</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Sword Art Online</title>
+    <link>https://animearchive.app/universe/sword-art-online</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/sword-art-online</guid>
+    <description>A death-game locks 10,000 players inside a virtual sword world — the only path out is clearing 100 floors.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Tokyo Ghoul</title>
     <link>https://animearchive.app/universe/tokyo-ghoul</link>
     <guid isPermaLink="true">https://animearchive.app/universe/tokyo-ghoul</guid>
     <description>A predator-prey economy where the ghoul/human biological boundary defines every alliance, motivation, and moral position</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Vinland Saga</title>
     <link>https://animearchive.app/universe/vinlandsaga</link>
     <guid isPermaLink="true">https://animearchive.app/universe/vinlandsaga</guid>
     <description>A deterministic economy of retributive violence</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Naruto</title>
     <link>https://animearchive.app/universe/naruto</link>
     <guid isPermaLink="true">https://animearchive.app/universe/naruto</guid>
     <description>A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>One Piece</title>
     <link>https://animearchive.app/universe/one-piece</link>
     <guid isPermaLink="true">https://animearchive.app/universe/one-piece</guid>
     <description>A world of maritime empires, ancient secrets, and the infinite chase for the ultimate treasure — where the network of alliances and debts is the actual power structure</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Re:Zero - Starting Life in Another World</title>
+    <link>https://animearchive.app/universe/re-zero</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/re-zero</guid>
+    <description>Save-scum your way to victory — if you&apos;re willing to die enough times to find the winning timeline.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Solo Leveling</title>
     <link>https://animearchive.app/universe/sololeveling</link>
     <guid isPermaLink="true">https://animearchive.app/universe/sololeveling</guid>
     <description>A fixed-rank hunter economy is broken by one player running an infinite growth protocol.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
-  </item>
-  <item>
-    <title>My Hero Academia</title>
-    <link>https://animearchive.app/universe/mha</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/mha</guid>
-    <description>Mutating biological power collides with state-managed hero capitalism.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
-  </item>
-  <item>
-    <title>Mob Psycho 100</title>
-    <link>https://animearchive.app/universe/mob-psycho-100</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/mob-psycho-100</guid>
-    <description>An affinity-matrix where psychic power distribution, spiritual resonance, and emotional pressure determine outcomes more than raw esper ability</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
-  </item>
-  <item>
-    <title>Mushoku Tensei: Jobless Reincarnation</title>
-    <link>https://animearchive.app/universe/mushokutensei</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/mushokutensei</guid>
-    <description>A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
-  </item>
-  <item>
-    <title>Goblin Slayer</title>
-    <link>https://animearchive.app/universe/goblinslayer</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/goblinslayer</guid>
-    <description>A low-prestige extermination niche becomes the hidden maintenance layer that keeps a fantasy civilization from collapsing.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
-  </item>
-  <item>
-    <title>Hunter x Hunter</title>
-    <link>https://animearchive.app/universe/hxh</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/hxh</guid>
-    <description>Contractual Power Economy &amp; Asymmetric Information Warfare</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Jujutsu Kaisen</title>
     <link>https://animearchive.app/universe/jjk</link>
     <guid isPermaLink="true">https://animearchive.app/universe/jjk</guid>
     <description>Negative Energy Economy &amp; Algorithmic Combat</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
-    <title>Sousou no Frieren</title>
-    <link>https://animearchive.app/universe/frieren</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/frieren</guid>
-    <description>A post-war fantasy where mana deception, lifespan asymmetry, and visualization limits decide who survives.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <title>My Hero Academia</title>
+    <link>https://animearchive.app/universe/mha</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/mha</guid>
+    <description>Mutating biological power collides with state-managed hero capitalism.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
-    <title>Demon Slayer: Kimetsu no Yaiba</title>
-    <link>https://animearchive.app/universe/demonslayer</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/demonslayer</guid>
-    <description>A nocturnal immortality network versus humans burning their own lifespan for solar-grade kill windows.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <title>Mob Psycho 100</title>
+    <link>https://animearchive.app/universe/mob-psycho-100</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/mob-psycho-100</guid>
+    <description>An affinity-matrix where psychic power distribution, spiritual resonance, and emotional pressure determine outcomes more than raw esper ability</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
-    <title>Dragon Ball Z</title>
-    <link>https://animearchive.app/universe/dragonballz</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/dragonballz</guid>
-    <description>A ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <title>Mushoku Tensei: Jobless Reincarnation</title>
+    <link>https://animearchive.app/universe/mushokutensei</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/mushokutensei</guid>
+    <description>A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Fullmetal Alchemist: Brotherhood</title>
     <link>https://animearchive.app/universe/fmab</link>
     <guid isPermaLink="true">https://animearchive.app/universe/fmab</guid>
     <description>A closed thermodynamic system where every act of creation demands an equal destruction — and a 400-year parasite has been rigging the ledger from beneath the earth</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
-    <title>Code Geass: Hangyaku no Lelouch</title>
-    <link>https://animearchive.app/universe/codegeass</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/codegeass</guid>
-    <description>An occupied nation becomes a control-war between imperial hierarchy, masked insurgency, and a will-hacking anomaly that turns strategy into governance engineering.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <title>Sousou no Frieren</title>
+    <link>https://animearchive.app/universe/frieren</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/frieren</guid>
+    <description>A post-war fantasy where mana deception, lifespan asymmetry, and visualization limits decide who survives.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
-    <title>Death Note</title>
-    <link>https://animearchive.app/universe/deathnote</link>
-    <guid isPermaLink="true">https://animearchive.app/universe/deathnote</guid>
-    <description>An asymmetric information war where anonymous execution power collides with probabilistic deanonymization — and psychology leaks what cryptography cannot</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <title>Goblin Slayer</title>
+    <link>https://animearchive.app/universe/goblinslayer</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/goblinslayer</guid>
+    <description>A low-prestige extermination niche becomes the hidden maintenance layer that keeps a fantasy civilization from collapsing.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Hunter x Hunter</title>
+    <link>https://animearchive.app/universe/hxh</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/hxh</guid>
+    <description>Contractual Power Economy &amp; Asymmetric Information Warfare</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Demon Slayer: Kimetsu no Yaiba</title>
+    <link>https://animearchive.app/universe/demonslayer</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/demonslayer</guid>
+    <description>A nocturnal immortality network versus humans burning their own lifespan for solar-grade kill windows.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Dragon Ball Z</title>
+    <link>https://animearchive.app/universe/dragonballz</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/dragonballz</guid>
+    <description>A ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Chainsaw Man</title>
     <link>https://animearchive.app/universe/chainsawman</link>
     <guid isPermaLink="true">https://animearchive.app/universe/chainsawman</guid>
     <description>A fear-fed devil economy where control networks weaponize trauma, contracts, and identity erasure.</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Code Geass: Hangyaku no Lelouch</title>
+    <link>https://animearchive.app/universe/codegeass</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/codegeass</guid>
+    <description>An occupied nation becomes a control-war between imperial hierarchy, masked insurgency, and a will-hacking anomaly that turns strategy into governance engineering.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Death Note</title>
+    <link>https://animearchive.app/universe/deathnote</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/deathnote</guid>
+    <description>An asymmetric information war where anonymous execution power collides with probabilistic deanonymization — and psychology leaks what cryptography cannot</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Blue Lock</title>
+    <link>https://animearchive.app/universe/blue-lock</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/blue-lock</guid>
+    <description>300 forwards. One egoist survives. Japan&apos;s national team rebuilds around the most ruthless striker selection ever designed.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Black Clover</title>
+    <link>https://animearchive.app/universe/black-clover</link>
+    <guid isPermaLink="true">https://animearchive.app/universe/black-clover</guid>
+    <description>Anti-magic versus elemental sovereignty — a kingdom bets on raw willpower over inherited bloodline.</description>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Bleach</title>
     <link>https://animearchive.app/universe/bleach</link>
     <guid isPermaLink="true">https://animearchive.app/universe/bleach</guid>
     <description>A multi-faction spiritual network where Reiatsu dominance, Zanpakuto resonance, and dimensional boundaries between Soul Society, Hueco Mundo, and the Human World determine survival</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>Attack on Titan</title>
     <link>https://animearchive.app/universe/aot</link>
     <guid isPermaLink="true">https://animearchive.app/universe/aot</guid>
     <description>A brutal deterministic closed-loop temporal matrix</description>
-    <pubDate>Mon, 23 Mar 2026 11:12:28 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2026 17:42:05 GMT</pubDate>
   </item>
   <item>
     <title>The Determinism Engine in Attack on Titan</title>
