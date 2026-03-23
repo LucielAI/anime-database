@@ -159,7 +159,7 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
       className={`group rounded-xl border border-white/10 bg-white/5 overflow-hidden transition-all hover:border-cyan-400/40 ${className}`}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[320px]">
-        <div className="relative h-full min-h-[220px] md:min-h-[320px]" style={{ aspectRatio: '4/3' }}>
+        <div className="relative h-full overflow-hidden">
           {entry.animeImageUrl && !imageFailed ? (
             <>
               <img
