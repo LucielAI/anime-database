@@ -373,36 +373,6 @@
           "severity": "medium"
         }
       ]
-    },
-    {
-      "name": "Baro Veldan",
-      "title": "The Foreign Egoist",
-      "rank": "International Rival",
-      "dangerLevel": 7,
-      "loreBio": "Swedish egoist with strong individual skills representing Team White. Baro's ego drive pushes pure individual optimization — he's the benchmark for whether Japan's domestic striker pool can produce world-class output.",
-      "systemBio": "External benchmark node representing global striker standards. His physical dominance and direct ego style test whether Blue Lock's analytical approach can match raw international talent.",
-      "gradientFrom": "slate-950",
-      "gradientTo": "blue-900",
-      "accentColor": "slate-300",
-      "icon": "Skull",
-      "signatureMoment": "Physically dominating the Blue Lock defenders to score — demonstrating that some advantages can't be out-thought.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/484003.jpg",
-      "malId": 74397,
-      "slug": "baro-veldana",
-      "description": "Swedish egoist relying on physical dominance.",
-      "faction": "Team White",
-      "abilities": [
-        {
-          "name": "Physical Dominance",
-          "description": "Raw body advantage that overwhelms technical skill through force — wins 1v1 duels without tactical complexity.",
-          "severity": "high"
-        },
-        {
-          "name": "Direct Ego Attack",
-          "description": "Baro's style is maximum offensive pressure — no passiveness, no waiting, always the most aggressive option.",
-          "severity": "medium"
-        }
-      ]
     }
   ],
   "systemQuestions": [
