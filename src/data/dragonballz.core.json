@@ -13,7 +13,7 @@
     "modeGlow": "rgba(250,204,21,0.25)",
     "heroGradient": "rgba(5,10,20,0.95)"
   },
-  "animeImageUrl": "https://myanimelist.net/images/anime/1277/142022.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1277/142022.jpg",
   "visualizationHint": "counter-tree",
   "visualizationReason": "Dragon Ball Z is a ki-based power scaling system organized as a vertical combat hierarchy. The counter-tree captures the core structural thesis: power levels as the root, transformation tiers as branching nodes, and specific matchups determining which fighter counters which. Every fight is ultimately a question of whether the protagonist can close the gap between their current transformation tier and the threat level before the countdown ends.",
   "headerFlavor": {
@@ -151,7 +151,7 @@
       "accentColor": "orange-400",
       "icon": "Zap",
       "signatureMoment": "Achieving Ultra Instinct against Jiren — the state where the body moves without thought, transcending the need for power levels entirely.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/72546.jpg?s=c434a442d8ad1212885a8d02dbcbbee0",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/114728.jpg",
       "_fetchFailed": false,
       "malId": 1831,
       "role": "Main"
@@ -168,7 +168,7 @@
       "accentColor": "blue-400",
       "icon": "Crown",
       "signatureMoment": "Choosing to self-destruct against Majin Buu rather than let the monster kill anyone else — the moment his pride transforms from selfishness to genuine heroism.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/86185.jpg?s=145f25d852734f70db55a92cab54b27b",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/78764.jpg",
       "_fetchFailed": false,
       "malId": 1855,
       "role": "Main"
@@ -185,7 +185,7 @@
       "accentColor": "fuchsia-400",
       "icon": "Skull",
       "signatureMoment": "Surviving his own planet's explosion at 100% power and returning as Mecha-Frieza — proving that his cruelty is matched only by his refusal to die.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/114520.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/359258.jpg",
       "_fetchFailed": false,
       "malId": 1877,
       "role": "Antagonist"
@@ -202,7 +202,7 @@
       "accentColor": "green-400",
       "icon": "Bug",
       "signatureMoment": "Achieving Perfect Form and demonstrating that his power exceeds Gohan's Super Saiyan 2 — the only time a villain has genuinely surpassed the protagonist's ceiling mid-arc.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/108594.jpg?s=11c75ff4c82ecb2c957dfebede7ab260",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/114519.jpg",
       "_fetchFailed": false,
       "malId": 1879,
       "role": "Antagonist"
@@ -219,7 +219,7 @@
       "accentColor": "pink-400",
       "icon": "Flame",
       "signatureMoment": "Absorbing Gohan and gaining his power — the system's most dangerous mechanic turned into an unstoppable acquisition engine.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/94545.jpg?s=e94f09be98d06f74ce14862c58394224",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/33246.jpg",
       "_fetchFailed": false,
       "malId": 1893,
       "role": "Antagonist"
@@ -236,7 +236,7 @@
       "accentColor": "cyan-400",
       "icon": "BookOpen",
       "signatureMoment": "Achieving SSJ2 and destroying Cell with a single Father-Son Kamehameha — the moment his dormant potential became the dominant power in the universe.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/110722.jpg?s=c5e2fe0a3cd616e8ed016fca54806054",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/72715.jpg",
       "_fetchFailed": false,
       "malId": 1845,
       "role": "Main"
@@ -253,7 +253,7 @@
       "accentColor": "teal-400",
       "icon": "Target",
       "signatureMoment": "Fusing with Nail to fight Frieza at full power — a Namekian's desperate act that temporarily creates a node strong enough to withstand the galactic emperor.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/45628.jpg?s=7f3263916ca42434072fb20a7590c277",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/45628.jpg",
       "_fetchFailed": false,
       "malId": 914,
       "role": "Main"
@@ -270,7 +270,7 @@
       "accentColor": "indigo-400",
       "icon": "Clock",
       "signatureMoment": "Arriving from the future to reveal the Android threat — his single piece of intelligence fundamentally reshapes the entire timeline's power trajectory.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/312402.jpg?s=efbeab2505cea4065c04d7cb9c313e31",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/89255.jpg",
       "_fetchFailed": false,
       "malId": 1925,
       "role": "Main"
@@ -287,7 +287,7 @@
       "accentColor": "gray-400",
       "icon": "Shield",
       "signatureMoment": "Standing up to Frieza's full power with nothing but courage and a destructo disk — proving the system has room for human bravery at any tier.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/89932.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/48517.jpg",
       "_fetchFailed": false,
       "malId": 1833,
       "role": "Main"
@@ -304,7 +304,7 @@
       "accentColor": "yellow-400",
       "icon": "Flame",
       "signatureMoment": "Transforming into the Legendary Super Saiyan for the first time — a power so immense it bends the surrounding environment and makes every other fighter on the field irrelevant.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/103024.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/275050.jpg",
       "_fetchFailed": false,
       "malId": 22865,
       "role": "Antagonist"
@@ -353,152 +353,29 @@
     }
   ],
   "relationships": [
-    {
-      "source": "Goku",
-      "target": "Vegeta",
-      "type": "rival",
-      "weight": 10,
-      "description": "Eternal rivals whose competition drives both to new power heights"
-    },
-    {
-      "source": "Goku",
-      "target": "Gohan",
-      "type": "successor",
-      "weight": 9,
-      "description": "Father-son bond where Gohan's potential is the family's ace in the hole"
-    },
-    {
-      "source": "Vegeta",
-      "target": "Frieza",
-      "type": "enemy",
-      "weight": 10,
-      "description": "Historical master-servant relationship; Frieza's genocide of the Saiyans defines Vegeta's pride"
-    },
-    {
-      "source": "Goku",
-      "target": "Frieza",
-      "type": "enemy",
-      "weight": 10,
-      "description": "Existential enemies; Frieza's near-extinction of the Saiyans drives the series' core conflict"
-    },
-    {
-      "source": "Gohan",
-      "target": "Cell",
-      "type": "enemy",
-      "weight": 10,
-      "description": "The son must surpass the father figure through his own strength"
-    },
-    {
-      "source": "Goku",
-      "target": "Majin Buu",
-      "type": "counter",
-      "weight": 10,
-      "description": "The existential threat that even Ultra Instinct barely manages"
-    },
-    {
-      "source": "Vegeta",
-      "target": "Trunks",
-      "type": "dependent",
-      "weight": 9,
-      "description": "Father-son; the future warrior represents Vegeta's legacy and redemption"
-    },
-    {
-      "source": "Piccolo",
-      "target": "Gohan",
-      "type": "mentor",
-      "weight": 9,
-      "description": "Mentor bond; Piccolo trained Gohan when no one else could"
-    },
-    {
-      "source": "Goku",
-      "target": "Krillin",
-      "type": "ally",
-      "weight": 8,
-      "description": "Best friends since childhood; Krillin is Goku's most consistent ally"
-    },
-    {
-      "source": "Vegeta",
-      "target": "Broly",
-      "type": "enemy",
-      "weight": 9,
-      "description": "The Legendary Super Saiyan threatens Vegeta's claim to elite Saiyan status"
-    }
+    { "source": "Goku", "target": "Vegeta", "type": "rival", "weight": 10, "description": "Eternal rivals whose competition drives both to new power heights" },
+    { "source": "Goku", "target": "Gohan", "type": "successor", "weight": 9, "description": "Father-son bond where Gohan's potential is the family's ace in the hole" },
+    { "source": "Vegeta", "target": "Frieza", "type": "enemy", "weight": 10, "description": "Historical master-servant relationship; Frieza's genocide of the Saiyans defines Vegeta's pride" },
+    { "source": "Goku", "target": "Frieza", "type": "enemy", "weight": 10, "description": "Existential enemies; Frieza's near-extinction of the Saiyans drives the series' core conflict" },
+    { "source": "Gohan", "target": "Cell", "type": "enemy", "weight": 10, "description": "The son must surpass the father figure through his own strength" },
+    { "source": "Goku", "target": "Majin Buu", "type": "counter", "weight": 10, "description": "The existential threat that even Ultra Instinct barely manages" },
+    { "source": "Vegeta", "target": "Trunks", "type": "dependent", "weight": 9, "description": "Father-son; the future warrior represents Vegeta's legacy and redemption" },
+    { "source": "Piccolo", "target": "Gohan", "type": "mentor", "weight": 9, "description": "Mentor bond; Piccolo trained Gohan when no one else could" },
+    { "source": "Goku", "target": "Krillin", "type": "ally", "weight": 8, "description": "Best friends since childhood; Krillin is Goku's most consistent ally" },
+    { "source": "Vegeta", "target": "Broly", "type": "enemy", "weight": 9, "description": "The Legendary Super Saiyan threatens Vegeta's claim to elite Saiyan status" }
   ],
   "rankings": {
     "description": "Vertical power hierarchy — tiers represent exponential transformation multipliers rather than linear gaps",
     "tiers": [
-      {
-        "name": "Zeno Tier",
-        "members": [
-          "Zeno"
-        ],
-        "description": "Can erase universes with a thought; above all combat systems"
-      },
-      {
-        "name": "Angel Tier",
-        "members": [
-          "Whis",
-          "Vados"
-        ],
-        "description": "Assistants to gods; their power exceeds what most mortals can achieve"
-      },
-      {
-        "name": "God Tier",
-        "members": [
-          "Beerus",
-          "Goku (SSG/SSB)",
-          "Vegeta (SSB)"
-        ],
-        "description": "Deity-level fighters capable of universe-threatening combat"
-      },
-      {
-        "name": "Ultra Instinct",
-        "members": [
-          "Goku (MUI)"
-        ],
-        "description": "Body moves without conscious thought; the ultimate combat technique"
-      },
-      {
-        "name": "Super Saiyan Blue",
-        "members": [
-          "Goku",
-          "Vegeta",
-          "Trunks"
-        ],
-        "description": "Godly ki with Super Saiyan power; the top mortal tier"
-      },
-      {
-        "name": "Super Saiyan 3",
-        "members": [
-          "Goku",
-          "Gotenks"
-        ],
-        "description": "400x multiplier; massive power with extreme ki drain"
-      },
-      {
-        "name": "Super Saiyan 2",
-        "members": [
-          "Gohan",
-          "Vegeta"
-        ],
-        "description": "100x multiplier; the standard serious fight baseline"
-      },
-      {
-        "name": "Super Saiyan",
-        "members": [
-          "Most fighters"
-        ],
-        "description": "50x multiplier; the iconic transformation"
-      },
-      {
-        "name": "Base Tier",
-        "members": [
-          "Krillin",
-          "Piccolo",
-          "Yamcha"
-        ],
-        "description": "Pre-transformation power; the human ceiling"
-      }
+      { "name": "Zeno Tier", "members": ["Zeno"], "description": "Can erase universes with a thought; above all combat systems" },
+      { "name": "Angel Tier", "members": ["Whis", "Vados"], "description": "Assistants to gods; their power exceeds what most mortals can achieve" },
+      { "name": "God Tier", "members": ["Beerus", "Goku (SSG/SSB)", "Vegeta (SSB)"], "description": "Deity-level fighters capable of universe-threatening combat" },
+      { "name": "Ultra Instinct", "members": ["Goku (MUI)"], "description": "Body moves without conscious thought; the ultimate combat technique" },
+      { "name": "Super Saiyan Blue", "members": ["Goku", "Vegeta", "Trunks"], "description": "Godly ki with Super Saiyan power; the top mortal tier" },
+      { "name": "Super Saiyan 3", "members": ["Goku", "Gotenks"], "description": "400x multiplier; massive power with extreme ki drain" },
+      { "name": "Super Saiyan 2", "members": ["Gohan", "Vegeta"], "description": "100x multiplier; the standard serious fight baseline" },
+      { "name": "Super Saiyan", "members": ["Most fighters"], "description": "50x multiplier; the iconic transformation" },
+      { "name": "Base Tier", "members": ["Krillin", "Piccolo", "Yamcha"], "description": "Pre-transformation power; the human ceiling" }
     ]
   },
   "systemQuestions": [
@@ -639,16 +516,5 @@
       "loreDesc": "The system's equalizer — Destructo Disc is a technique that has no power ceiling, only precision requirement. It can theoretically cut anything."
     }
   ],
-  "tags": [
-    "ki",
-    "saiyan",
-    "power-scaling",
-    "transformation",
-    "super-saiyan",
-    "z-fighters",
-    "frieza",
-    "cell",
-    "buu",
-    "cosmic"
-  ]
+  "tags": ["ki", "saiyan", "power-scaling", "transformation", "super-saiyan", "z-fighters", "frieza", "cell", "buu", "cosmic"]
 }
