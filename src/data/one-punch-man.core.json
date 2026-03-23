@@ -119,7 +119,7 @@
       "malId": 73935,
       "slug": "saitama",
       "description": "Bored hero who defeats any opponent with one punch — the tragedy is that winning effortlessly means he can never experience the challenge of combat. Sits at B-Class because he only does hero work as a hobby.",
-      "faction": "Hero Association (C-Class)",
+      "faction": "Hero Association (B-Class)",
       "abilities": [
         {
           "name": "One-Punch Lethality",
@@ -154,7 +154,7 @@
       "malId": 73979,
       "slug": "genos",
       "description": "S-Class cyborg disciple of Saitama. Spends every waking moment upgrading and hunting for meaning in his existence. Sits at the top of the Hero Association rankings through raw power output.",
-      "faction": "Hero Association (B-Class)",
+      "faction": "Hero Association (S-Class)",
       "abilities": [
         {
           "name": "Incinerator Blasts",

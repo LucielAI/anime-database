@@ -1,289 +1,234 @@
 {
-  "anime": "Spy x Family",
-  "tagline": "A spy, an assassin, and a telepath form a fake family—each hiding their real job from the others.",
-  "malId": 50265,
+  "anime": "Parasyte",
+  "tagline": "A parasite takes over your right hand and becomes your most unlikely ally against alien invasion.",
+  "malId": 22535,
   "themeColors": {
-    "primary": "#7c3aed",
-    "secondary": "#1e1b4b",
-    "accent": "#10b981",
-    "glow": "rgba(124,58,237,0.35)",
-    "tabActive": "#8b5cf6",
-    "badgeBg": "rgba(30,27,75,0.55)",
-    "badgeText": "#c4b5fd",
-    "modeGlow": "rgba(16,185,129,0.3)",
+    "primary": "#0f766e",
+    "secondary": "#0c1a1a",
+    "accent": "#2dd4bf",
+    "glow": "rgba(45,212,191,0.35)",
+    "tabActive": "#14b8a6",
+    "badgeBg": "rgba(12,26,26,0.55)",
+    "badgeText": "#99f6e4",
+    "modeGlow": "rgba(45,212,191,0.3)",
     "heroGradient": "rgba(2,6,23,0.94)"
   },
   "visualizationHint": "affinity-matrix",
-  "visualizationReason": "Spy x Family has no unified power system—each family member operates with an individual ability set (spy tradecraft, assassination, telepathy), and the narrative tension comes from their individual cards being revealed selectively, making it a perfect affinity-matrix: distinct ability nodes that occasionally combine but mostly operate independently.",
+  "visualizationReason": "Parasyte's Migi operates as a symbiotic peer node to Shinichi's human consciousness—sharing one body while maintaining distinct identities and abilities. The parasite control system creates affinity relationships between parasite types and host organisms, making it a natural affinity-matrix where each node has individual capabilities that combine with but remain distinct from the host.",
   "headerFlavor": {
-    "loreQuote": "For the mission, I'll be a father. For her, I already am one.",
-    "sysWarning": "// [SYS_WARN]: IDENTITY RECONCILIATION FAILING — FAMILY BOND STRENGTHENING",
-    "sysWarningColor": "green"
+    "loreQuote": "Migi isn't a monster. He's the only one who actually understands what's happening.",
+    "sysWarning": "// [SYS_WARN]: PARASITE CO-INFECTION DETECTED — HOST INTEGRITY: SHARED",
+    "sysWarningColor": "teal"
   },
   "backgroundMotif": "noise",
   "revealOverlay": "glow-border-soft",
-  "introductionSummary": "Spy x Family runs three independent power systems in one household: Loid Forger's spy tradecraft, Yor Forger's assassination training, and Anya's telepathy. None of them know what the others actually do. The comedy and warmth come from each character's dual life constantly threatening to collide, while their genuine care for each other slowly transforms the fake family into a real one. Each ability functions on its own rules—there is no shared power economy, only parallel skill sets occasionally pointed at the same problem.",
+  "introductionSummary": "Parasyte follows Shinichi Izumi, a normal high schooler whose right hand is taken over by Migi—a parasite alien who represents the invasion's vanguard. Against all odds, Shinichi and Migi develop a genuine symbiotic partnership: Migi needs Shinichi's body to survive, and Shinichi needs Migi's power to fight the increasingly dangerous parasites hunting them both. The system's tension comes from the parasite-human boundary—how much of Shinichi remains Shinichi when half his body thinks for itself?",
   "aiInsights": {
-    "casual": "It's a fake family where nobody knows each other's real jobs: Dad's a spy, Mom's an assassin, and the kid can read minds. Anya's constantly trying to keep everyone from finding out while also trying to get them to bond.",
-    "deep": "Spy x Family is a comedic deconstruction of the found-family trope where each member's hidden identity creates both the plot tension and the emotional core. The three independent ability systems—tradecraft, assassination, telepathy—never merge into a unified power economy. Instead, they create a coordination comedy where each member's individual excellence occasionally overlaps, producing moments of accidental synergy that feel more genuine than any planned teamwork."
+    "casual": "An alien parasite takes over Shinichi's right hand and they become an unlikely team—he's got the brain, Migi's got the monster-fighting ability. It's a body-horror invasion story with surprisingly sweet moments ofcoexistence.",
+    "deep": "Parasyte runs a split-consciousness operating model: Migi processes threat analysis and combat while Shinichi maintains social identity and decision-making authority. Their negotiation over body control creates a unique co-governance system where neither can fully override the other without destroying the host. The parasites' mindless swarm behavior versus their sophisticated individual combat abilities exposes a critical design flaw in the invasion architecture—intelligence without emotional investment produces tactical brilliance but strategic brittleness."
   },
   "powerSystem": [
     {
-      "name": "Spy Tradecraft",
-      "subtitle": "Westalis Intelligence Operations",
-      "loreDesc": "Loid Forger operates as a top-tier spy for Westalis, running agents, gathering intelligence, and executing operations with surgical precision.",
-      "systemDesc": "An intelligence collection and manipulation node built on identity construction, social engineering, and operational security.",
-      "icon": "Eye",
-      "color": "blue-400",
-      "signatureMoment": "Creating an entire fake identity, family history, and social network from scratch to infiltrate Desmond's inner circle.",
-      "loreSubtitle": "The art of being someone else",
-      "systemSubtitle": "Identity fabrication and social engineering"
+      "name": "Parasite Biology",
+      "subtitle": "Migi's Alien Physiology",
+      "loreDesc": "Migi can reshape his body into any biological form—from blades and shields to eyes and weaponry—giving Shinichi access to combat capabilities no human could possess.",
+      "systemDesc": "A shapeshifting combat node that adapts its physical structure based on threat type, operating as a biological multi-tool within the host body.",
+      "icon": "Leaf",
+      "color": "teal-400",
+      "signatureMoment": "Migi extends a blade from Shinichi's arm to block a killing blow he couldn't have seen.",
+      "loreSubtitle": "One body, infinite loadouts",
+      "systemSubtitle": "Adaptive biological weapon system"
     },
     {
-      "name": "Assassination Arts",
-      "subtitle": "Garden Operative Protocols",
-      "loreDesc": "Yor Forger is an elite assassin for a shadowy organization called Garden, able to kill with anything—a knitting needle, a hairpin, or bare hands.",
-      "systemDesc": "A close-combat elimination node optimized for lethal efficiency in civilian contexts with zero collateral signature.",
-      "icon": "Skull",
-      "color": "red-400",
-      "signatureMoment": "Casually destroying a mafia operation while shopping for groceries, then denying any involvement.",
-      "loreSubtitle": "Kill with anything, deny everything",
-      "systemSubtitle": "Low-signature lethal elimination"
+      "name": "Symbiotic Coexistence",
+      "subtitle": "Shared Body Governance",
+      "loreDesc": "Shinichi and Migi must negotiate body control—Shinichi retains social autonomy while Migi handles combat response, creating a split-processing model.",
+      "systemDesc": "A co-governance operating system where two distinct consciousness nodes share one physical substrate through negotiated time-slicing.",
+      "icon": "Heart",
+      "color": "cyan-400",
+      "signatureMoment": "Migi refusing to let Shinichi sacrifice himself, insisting they survive together.",
+      "loreSubtitle": "Two minds, one body",
+      "systemSubtitle": "Cooperative consciousness timeslicing"
     },
     {
-      "name": "Telepathy",
-      "subtitle": "Anya's Mind Reading",
-      "loreDesc": "Anya can read the minds of everyone around her, giving her advance warning of danger, deception, and emotional truth.",
-      "systemDesc": "A passive intelligence collection node that bypasses all verbal and behavioral deception, providing raw emotional state data.",
-      "icon": "Eye",
+      "name": "Parasite Hierarchy",
+      "subtitle": "Mission-Designed Roles",
+      "loreDesc": "The parasites operate with a clear division: some infiltration types blend with humans, others are combat specialists, and the core handles reproduction.",
+      "systemDesc": "A designed-species node architecture where each parasite type has a specific functional role in the invasion network.",
+      "icon": "GitBranch",
+      "color": "green-400",
+      "signatureMoment": "The Climax reveals the true scale of the parasite reproductive strategy.",
+      "loreSubtitle": "Each parasite has a job",
+      "systemSubtitle": "Functional role assignment"
+    },
+    {
+      "name": "Human Emotional Investment",
+      "subtitle": "The Symbiosis Paradox",
+      "loreDesc": "Migi develops genuine care for Shinichi and his family—emotional attachment that no parasite should possess, making Migi a malfunctioning unit in an otherwise efficient invasion.",
+      "systemDesc": "An emergent emotional node that breaks the parasite species' designed emotional sterility, creating loyalty outside the mission parameters.",
+      "icon": "Heart",
       "color": "pink-400",
-      "signatureMoment": "Accidentally revealing she knows Loid is a spy mid-conversation and having to improvise an excuse.",
-      "loreSubtitle": "Everyone's inner voice is her reality TV",
-      "systemSubtitle": "Passive mind-state streaming"
-    },
-    {
-      "name": "Stella / Growth Milestones",
-      "subtitle": "Anya's Academic Tracking",
-      "loreDesc": "Anya earns stars at school which translate to Stella—getting enough Stella gives her rewards and recognition she desperately wants.",
-      "systemDesc": "A gamified achievement tracking system that incentivizes Anya's social integration behavior through visible progress metrics.",
-      "icon": "Star",
-      "color": "yellow-400",
-      "signatureMoment": "Anya sabotages tests to get failing grades because Becky already knows the material and doesn't need competition.",
-      "loreSubtitle": "Academic performance as social engineering",
-      "systemSubtitle": "Gamified behavioral incentive loop"
+      "signatureMoment": "Migi choosing to stay with Shinichi at the cost of reuniting with his own kind.",
+      "loreSubtitle": "The parasite who learned to care",
+      "systemSubtitle": "Emergent emotional override"
     }
   ],
   "rankings": {
-    "systemName": "Operational Security Clearance",
-    "loreName": "Intelligence Community Hierarchy",
-    "topTierName": "Handler / S-Rank Operative",
-    "topTierLore": "The highest-level intelligence officers who run entire operations and have direct access to mission-critical assets.",
-    "topTierSystem": "Maximum operational authority nodes with full mission context and independent decision capability.",
+    "systemName": "Parasite Type Classification",
+    "loreName": "Invasion Force Hierarchy",
+    "topTierName": "Core Parasite / Intelligence",
+    "topTierLore": "The central parasite intelligence directing the invasion, managing reproduction rates and combat deployment.",
+    "topTierSystem": "Command layer node coordinating all parasite operations with a single coherent strategy.",
     "tiers": [
       {
-        "name": "Handler / Senior Operative",
-        "loreDesc": "Experienced intelligence officers who manage field agents and design operations.",
-        "systemDesc": "Command-layer nodes that design and oversee mission architecture."
+        "name": "Core Parasite",
+        "loreDesc": "The central intelligence managing the invasion's reproductive and tactical decisions.",
+        "systemDesc": "Command architecture node with full strategic visibility and reproduction authorization."
       },
       {
-        "name": "Field Agent / Spy",
-        "loreDesc": "Operatives running individual intelligence operations under handler guidance.",
-        "systemDesc": "Execution-layer nodes operating with compartmentalized mission data."
+        "name": "Combat Specialist",
+        "loreDesc": "Parasites optimized for direct confrontation, with heavy armor and lethal weaponry.",
+        "systemDesc": "High-output combat nodes deployed for target elimination."
       },
       {
-        "name": "Garden Assassin / Thorn",
-        "loreDesc": "Contract eliminators operating outside normal intelligence channels.",
-        "systemDesc": "Independent lethal nodes deployed for high-value target removal."
+        "name": "Infiltrator",
+        "loreDesc": "Parasites that take over human bodies and blend into society for intelligence gathering.",
+        "systemDesc": "Social camouflage nodes that grant access to human networks and information."
       },
       {
-        "name": "Asset / Informant",
-        "loreDesc": "People recruited to provide intelligence from within target organizations.",
-        "systemDesc": "Intelligence source nodes with limited operational clearance."
+        "name": "Migi (Unique Co-Existor)",
+        "loreDesc": "A parasite sharing a body with a human in genuine symbiosis—behaving against type.",
+        "systemDesc": "An anomalous co-existence node that retains combat capability while developing emotional investment in a host."
       }
     ]
   },
   "characters": [
     {
-      "name": "Loid Forger",
-      "title": "Twilight / Spy",
-      "rank": "Senior Operative",
-      "dangerLevel": 7,
-      "loreBio": "Westalis's top spy who creates the Forger identity to get close to a war-crimes target, only to find himself genuinely invested in the fake family he built.",
-      "systemBio": "An identity-fabrication node that builds entire social networks from nothing, running the most complex long-cover operation in intelligence history while developing authentic emotional connections.",
+      "name": "Shinichi Izumi",
+      "title": "The Parasitized Human",
+      "rank": "Symbiotic Host",
+      "dangerLevel": 5,
+      "loreBio": "A high schooler whose right hand is taken over by the parasite Migi. He maintains his humanity while gaining access to combat abilities that make him humanity's only real defense.",
+      "systemBio": "A co-governance host node maintaining human decision authority and emotional baselines while sharing physical control with an alien combat module.",
       "gradientFrom": "slate-900",
-      "gradientTo": "blue-900",
-      "accentColor": "blue-400",
-      "icon": "Eye",
-      "signatureMoment": "Realizing that protecting Anya has become more important than the mission—and deciding to keep going anyway.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/580250.jpg?s=c98a9197f089df9132bc1c657bb6c131",
-      "malId": 170258,
-      "slug": "loid-forger",
-      "description": "WOTP agent whose daughter happens to be an empath.",
-      "faction": "Westalis Intelligence",
+      "gradientTo": "teal-900",
+      "accentColor": "teal-400",
+      "icon": "Heart",
+      "signatureMoment": "Choosing to save his mother from a parasite even knowing it nearly costs him Migi's protection.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/269013.jpg?s=1f0f49f662bd4f462b9c9b5f953ce11e",
+      "malId": 12323,
+      "slug": "shinichi-izumi",
+      "description": "Human whose right hand is inhabited by Migi.",
+      "faction": "Human",
       "abilities": [
         {
-          "name": "Identity Construction",
-          "description": "Can create entire fake personas with history, relationships, and social proof from nothing.",
-          "severity": "high"
-        },
-        {
-          "name": "Combat Proficiency",
-          "description": "Expert in hand-to-hand combat and tactical operations.",
+          "name": "Human Cognition",
+          "description": "Full human consciousness, emotional range, and moral reasoning preserved.",
           "severity": "medium"
         },
         {
-          "name": "Psychological Manipulation",
-          "description": "Can read and influence people's behavior to achieve operational objectives.",
+          "name": "Migi Combat Integration",
+          "description": "Access to Migi's shapeshifting combat abilities while maintaining human decision authority.",
           "severity": "high"
+        },
+        {
+          "name": "Parasite Knowledge",
+          "description": "Living with Migi gives Shinichi unique insight into parasite behavior and weaknesses.",
+          "severity": "medium"
         }
       ]
     },
     {
-      "name": "Yor Forger",
-      "title": "Thorn Princess / Assassin",
-      "rank": "Elite Operative",
+      "name": "Migi",
+      "title": "The Right-Hand Parasite",
+      "rank": "Symbiotic Combat Module",
       "dangerLevel": 9,
-      "loreBio": "A government assassin who joined Garden to support her brother—her lethal skills are matched only by her social incompetence and genuine sweetness.",
-      "systemBio": "A high-lethality close-combat node operating with minimal institutional oversight, whose dual life creates the highest identity-collision risk in the family.",
+      "loreBio": "A parasite who was supposed to take over Shinichi's brain but only reached his hand. Rather than a failed invasion, Migi became a genuine partner.",
+      "systemBio": "An adaptive combat node that achieved co-existence with a host rather than conquest, developing emotional investment that violates parasite design parameters.",
+      "gradientFrom": "teal-900",
+      "gradientTo": "cyan-800",
+      "accentColor": "cyan-300",
+      "icon": "Bolt",
+      "signatureMoment": "Deciding to stay with Shinichi even when reunited parasite mass offers reunion with his own kind.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/348176.jpg?s=c378b81123b922b107c831c2c8b8db51",
+      "malId": 13773,
+      "slug": "migi",
+      "description": "Parasite alien whose logic overrides human emotion.",
+      "faction": "Parasite (Defected)",
+      "abilities": [
+        {
+          "name": "Shapeshifting Combat",
+          "description": "Can form blades, shields, spikes, and other weapons from hand tissue at will.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Parasite Analysis",
+          "description": "Can identify other parasites and their likely attack patterns from body language.",
+          "severity": "high"
+        },
+        {
+          "name": "Speed/Strength Boost",
+          "description": "When integrated, provides superhuman physical capabilities beyond human limits.",
+          "severity": "high"
+        },
+        {
+          "name": "Sleep Function",
+          "description": "Migi's consciousness cycles through sleep states, making him unavailable for periods—but also allowing recovery.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Gotou",
+      "title": "The Hybrid Human",
+      "rank": "Parasite-Human Fusion",
+      "dangerLevel": 10,
+      "loreBio": "A human whose body was fully taken over by parasites who then tried to replicate a human nervous system, resulting in a physically perfect but emotionally hollow organism.",
+      "systemBio": "A post-host conquest node that attempted to reverse-engineer human consciousness but only achieved behavioral mimicry without genuine emotional substrate.",
       "gradientFrom": "slate-900",
       "gradientTo": "red-900",
       "accentColor": "red-400",
       "icon": "Skull",
-      "signatureMoment": "Standing in a destroyed warehouse denying she did anything while holding a weapon she used to kill fifteen people.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/457934.jpg?s=95b00e4e699e5120bad0e4d20a148aa8",
-      "malId": 170329,
-      "slug": "yor-forger",
-      "description": "Assassin whose husband thinks she is a clinic worker.",
-      "faction": "Garden",
+      "signatureMoment": "Demonstrating his perfect human replication by fighting Shinichi and Migi while maintaining perfect calm.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/271459.jpg?s=7b3e263fe274cebba676640cab4bb1b7",
+      "malId": 22145,
+      "slug": "gotou",
+      "description": "Parasite human experiment whose five-brain system coordinates combat.",
+      "faction": "Parasite Core",
       "abilities": [
         {
-          "name": "Lethal Precision",
-          "description": "Can kill with any object—a knitting needle, chopstick, or hairpin—without leaving evidence.",
+          "name": "Full Parasite Physiology",
+          "description": "Has complete parasite combat forms plus a replicated human nervous system.",
           "severity": "fatal"
         },
         {
-          "name": "Superhuman Speed",
-          "description": "Can eliminate multiple targets faster than the eye can track.",
+          "name": "Human Behavior Mimicry",
+          "description": "Appears completely human but has no genuine emotions, making him terrifyingly consistent.",
           "severity": "high"
-        },
-        {
-          "name": "Complete Social Incompetence",
-          "description": "Cannot navigate normal social situations, making her cover identity constantly at risk of exposure.",
-          "severity": "low"
         }
       ]
     },
     {
-      "name": "Anya Forger",
-      "title": "Telepath / Student",
-      "rank": "Anomaly",
-      "dangerLevel": 4,
-      "loreBio": "A telepathic orphan who reads minds, was abandoned, and desperately wants a family—manipulating her way into the Forger household while keeping her powers secret.",
-      "systemBio": "A passive mind-streaming node that collects unfiltered emotional data from all nearby minds, creating constant information overload and behavioral chaos.",
+      "name": "Muramoto",
+      "title": "The Parasitized Father",
+      "rank": "Infiltrator Host",
+      "dangerLevel": 3,
+      "loreBio": "The father of a girl in Shinichi's class who was taken over by a parasite, representing how the invasion targets families and destroys normal life.",
+      "systemBio": "An infiltrator node that has been deployed into a family unit, representing the parasite network's social infiltration capability.",
       "gradientFrom": "slate-900",
-      "gradientTo": "pink-900",
-      "accentColor": "pink-400",
-      "icon": "Eye",
-      "signatureMoment": "Saving Loid from an assassin by accidentally alerting him through her reaction to the attacker's hidden thoughts.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/457933.jpg?s=ba4caa5a44905138cd83d5972982664c",
-      "malId": 170256,
-      "slug": "anya-forger",
-      "description": "Child empath who can read minds across the network.",
-      "faction": "Forger Family",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Ghost",
+      "signatureMoment": "Shinichi recognizing the father is a parasite from behavioral anomalies no one else notices.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/277609.jpg?s=f17ff00d22f5eb405e37ad937ae7bd5b",
+      "malId": 22147,
+      "slug": "muramoto",
+      "description": "Doctors assistant helping Shinichi understand the parasites.",
+      "faction": "Parasite Infiltrators",
       "abilities": [
         {
-          "name": "Telepathy",
-          "description": "Reads the thoughts of everyone nearby, hearing their unfiltered inner voices at all times.",
-          "severity": "high"
-        },
-        {
-          "name": "Emotional Manipulation",
-          "description": "Uses her knowledge of others' thoughts to manipulate situations toward desired outcomes.",
-          "severity": "medium"
-        }
-      ]
-    },
-    {
-      "name": "Becky Blackbell",
-      "title": "The Shuutenin Heiress",
-      "rank": "Student / Asset",
-      "dangerLevel": 2,
-      "loreBio": "Anya's best friend and daughter of a major political family—her friendship with Anya becomes a genuine connection that transcends her family's political machinations.",
-      "systemBio": "High-value social network node whose family connections provide political intelligence access.",
-      "gradientFrom": "slate-900",
-      "gradientTo": "violet-900",
-      "accentColor": "violet-400",
-      "icon": "Heart",
-      "signatureMoment": "Demanding Anya call her by her first name, insisting their friendship is real.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/528426.jpg?s=67fd10f15e1160d355fc8d7d76fa15ae",
-      "malId": 177510,
-      "slug": "becky-blackbell",
-      "description": "Becky Blackbell is Anya's best friend from Spy x Family.",
-      "faction": "Eden Academy",
-      "abilities": [
-        {
-          "name": "Political Access",
-          "description": "Her father's position gives her indirect access to high-level political intelligence.",
-          "severity": "low"
-        },
-        {
-          "name": "Social Authority",
-          "description": "Being from the most powerful family at Eden gives her social weight that shapes peer dynamics.",
-          "severity": "low"
-        }
-      ]
-    },
-    {
-      "name": "Yuri Briar",
-      "title": "The Underage Operative",
-      "rank": "Garden Assassin (Junior)",
-      "dangerLevel": 6,
-      "loreBio": "Yor's younger brother who joined the intelligence service and secretly idolizes his sister, unaware she's the legendary assassin he works alongside.",
-      "systemBio": "A junior intelligence node whose admiration for Yor creates an identity-collision threat vector between Garden's two lethal assets.",
-      "gradientFrom": "slate-900",
-      "gradientTo": "green-900",
-      "accentColor": "green-400",
-      "icon": "Sword",
-      "signatureMoment": "Accidentally revealing to Yor that he's part of Garden, making both of them realize they work in the same world.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/528425.jpg?s=f6acc0d039250e389237748fc305a88a",
-      "malId": 177507,
-      "slug": "yuri-briar",
-      "description": "Yuri Briar is Yor Forger's younger brother from Spy x Family.",
-      "faction": "Garden",
-      "abilities": [
-        {
-          "name": "Intelligence Work",
-          "description": "Junior operative with growing access to sensitive intelligence streams.",
-          "severity": "medium"
-        },
-        {
-          "name": "Yor Admiration",
-          "description": "His blindspot for anything negative about his sister makes him an unreliable analyst of her true capabilities.",
-          "severity": "low"
-        }
-      ]
-    },
-    {
-      "name": "Bondman",
-      "title": "Bond / Precognition Dog",
-      "rank": "Anomaly",
-      "dangerLevel": 1,
-      "loreBio": "A future-seeing dog whose precognitive visions help the Forger family anticipate threats they couldn't otherwise detect.",
-      "systemBio": "A temporal-foreknowledge node providing limited advance warning of specific threat events, functionally complementing Anya's telepathy.",
-      "gradientFrom": "slate-900",
-      "gradientTo": "yellow-900",
-      "accentColor": "yellow-400",
-      "icon": "Eye",
-      "signatureMoment": "Having a vision of the family's future that Anya then has to interpret without revealing how she knows.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/495202.jpg?s=95fed1fdf6018fe05dfb416c0f795f60",
-      "malId": 208895,
-      "slug": "bondman",
-      "description": "Bond is the Forger family's precognitive dog from Spy x Family.",
-      "faction": "Forger Family",
-      "abilities": [
-        {
-          "name": "Precognition",
-          "description": "Can see future events, particularly danger events involving the family.",
+          "name": "Infiltration Mimicry",
+          "description": "Can maintain a convincing human appearance and social role despite being fully parasite-controlled.",
           "severity": "medium"
         }
       ]
@@ -291,224 +236,216 @@
   ],
   "relationships": [
     {
-      "source": "Loid Forger",
-      "target": "Anya Forger",
+      "source": "Shinichi Izumi",
+      "target": "Migi",
       "type": "ally",
+      "weight": 10,
+      "loreDesc": "A genuine symbiotic partnership where both have learned to care for each other's survival.",
+      "systemDesc": "Co-governance node where two distinct consciousness types share one substrate through mutual necessity and emergent affection."
+    },
+    {
+      "source": "Migi",
+      "target": "Shinichi Izumi",
+      "type": "dependent",
       "weight": 9,
-      "loreDesc": "Loid started the family as a mission but genuinely comes to care for Anya as a real father would.",
-      "systemDesc": "Mission-asset edge that crossed into authentic emotional dependency."
+      "loreDesc": "Migi cannot survive without Shinichi's body as a host, but increasingly also doesn't want to leave.",
+      "systemDesc": "Host dependency edge that evolved from necessity into genuine partnership."
     },
     {
-      "source": "Yor Forger",
-      "target": "Anya Forger",
-      "type": "ally",
+      "source": "Shinichi Izumi",
+      "target": "Gotou",
+      "type": "counter",
       "weight": 9,
-      "loreDesc": "Yor is initially awkward as a mother but develops genuine maternal instincts toward Anya.",
-      "systemDesc": "Cover-role edge that produces authentic emotional output."
+      "loreDesc": "Gotou represents what Shinichi could become if parasites fully conquered humanity—perfect bodies with no souls.",
+      "systemDesc": "Counter-edge representing the dystopian endpoint of failed human resistance."
     },
     {
-      "source": "Loid Forger",
-      "target": "Yor Forger",
-      "type": "ally",
-      "weight": 8,
-      "loreDesc": "A fake marriage that slowly becomes real as both characters develop genuine feelings for each other.",
-      "systemDesc": "Operational cover relationship that generates authentic attachment signals."
-    },
-    {
-      "source": "Anya Forger",
-      "target": "Becky Blackbell",
-      "type": "ally",
-      "weight": 8,
-      "loreDesc": "Anya needs Becky for social access; Becky wants a real friend. Both get what they genuinely need.",
-      "systemDesc": "Social network edge where mutual instrumentalism produces authentic friendship."
-    },
-    {
-      "source": "Yor Forger",
-      "target": "Yuri Briar",
-      "type": "ally",
-      "weight": 9,
-      "loreDesc": "Siblings who both work in intelligence and assassinations, completely unaware they're operational overlaps.",
-      "systemDesc": "Kinship edge connecting two independent lethal nodes without either knowing."
-    },
-    {
-      "source": "Bondman",
-      "target": "Anya Forger",
-      "type": "ally",
-      "weight": 7,
-      "loreDesc": "Bond's precognition and Anya's telepathy create a complementary information-sharing pair.",
-      "systemDesc": "Cross-modal perception edge that covers temporal and psychological information streams."
+      "source": "Shinichi Izumi",
+      "target": "Muramoto",
+      "type": "counter",
+      "weight": 6,
+      "loreDesc": "Shinichi recognizes parasite-infiltrated humans by behavioral anomalies, putting him in the position of identifying and potentially eliminating them.",
+      "systemDesc": "Detection edge unique to the co-existence node, making Shinichi the only human who can reliably identify infiltrators."
     }
   ],
   "factions": [
     {
-      "name": "Westalis Intelligence",
-      "role": "systemic",
-      "loreDesc": "The state intelligence service running operations against Ostania, employing Loid as its top operative.",
-      "systemDesc": "Intelligence collection and covert operation command infrastructure."
-    },
-    {
-      "name": "Garden (Sable)",
-      "role": "neutral",
-      "loreDesc": "A shadowy government assassination unit that Yor works for, existing outside normal intelligence channels.",
-      "systemDesc": "Independent lethal action node deployed for high-value target elimination."
-    },
-    {
-      "name": "Ostania / Desmond Faction",
-      "role": "antagonist",
-      "loreDesc": "The rival state's political faction that Loid is trying to infiltrate through the Desmond son.",
-      "systemDesc": "Target network node that serves as the mission objective."
-    },
-    {
-      "name": "Forger Family",
+      "name": "Human Resistance",
       "role": "protagonist",
-      "loreDesc": "The fake family unit that has become genuinely real to all three members despite their hidden identities.",
-      "systemDesc": "Affective network node that functions as both operational cover and authentic emotional unit."
+      "loreDesc": "Shinichi and the humans who fight back against the parasite invasion with Migi's help.",
+      "systemDesc": "A minimal resistance node anchored by the Shinichi-Migi co-existence unit."
+    },
+    {
+      "name": "Parasite Invasion Network",
+      "role": "antagonist",
+      "loreDesc": "The alien parasites infiltrating and consuming human society, led by the Core.",
+      "systemDesc": "Coordinated invasion architecture deploying infiltrator, combat, and reproductive node types."
+    },
+    {
+      "name": "Migi (Unique)",
+      "role": "neutral",
+      "loreDesc": "A parasite who defected from the invasion network through emotional development.",
+      "systemDesc": "An anomalous node that retained combat capability while developing species-atypical loyalty to a host."
+    },
+    {
+      "name": "Gotou (Hybrid)",
+      "role": "antagonist",
+      "loreDesc": "A full parasite takeover that attempted to replicate human neurology, representing the invasion's most sophisticated infiltration.",
+      "systemDesc": "Post-conquest node with maximum combat capability and social integration."
     }
   ],
   "rules": [
     {
-      "name": "Cover Identity Must Be Maintained",
-      "subtitle": "No one can know who the others really are",
-      "loreConsequence": "Any accidental reveal of a family member's true identity could compromise the entire operation and destroy the family.",
-      "systemEquivalent": "Operational security protocol where information compartmentalization is mandatory for family stability.",
+      "name": "Parasite Takes Over What It Touches",
+      "subtitle": "Contact initiates conversion",
+      "loreConsequence": "Any parasite contact with exposed flesh initiates a takeover—if Migi hadn't been interrupted, Shinichi's entire body would have been consumed.",
+      "systemEquivalent": "Contact-based conversion protocol where physical proximity to parasite mass equals infection risk.",
+      "severity": "fatal",
+      "loreSubtitle": "Touch means transformation",
+      "systemSubtitle": "Contact infection model"
+    },
+    {
+      "name": "Migi Only Reached the Hand",
+      "subtitle": "Incomplete takeover = co-existence",
+      "loreConsequence": "Because Migi only reached Shinichi's hand, neither could conquer the other—creating forced symbiosis instead of possession.",
+      "systemEquivalent": "Partial invasion success that produces a co-governance model rather than host replacement.",
       "severity": "high",
-      "loreSubtitle": "The mission depends on secrecy",
-      "systemSubtitle": "Identity compartmentalization requirement"
+      "loreSubtitle": "Partial success = unexpected partnership",
+      "systemSubtitle": "Incomplete conversion protocol"
     },
     {
-      "name": "Telepathy Cannot Be Controlled at Will",
-      "subtitle": "Anya hears everything all the time",
-      "loreConsequence": "Anya cannot choose when to read minds, meaning she constantly hears Loid planning spy operations and Yor thinking about murder.",
-      "systemEquivalent": "Always-on passive data collection that cannot be selectively deactivated.",
-      "severity": "medium",
-      "loreSubtitle": "Everyone's inner voice is always playing",
-      "systemSubtitle": "Permanent passive intelligence collection"
+      "name": "Parasites Lack Emotions",
+      "subtitle": "Designed species emotional sterility",
+      "loreConsequence": "Parasites are perfectly efficient organisms with no emotional capacity—except Migi, who develops them through prolonged human contact.",
+      "systemEquivalent": "Species-wide emotional sterility that creates predictable behavior, violated only by Migi's anomalous development.",
+      "severity": "high",
+      "loreSubtitle": "Perfect bodies, empty souls",
+      "systemSubtitle": "Designed emotional null state"
     },
     {
-      "name": "Bond's Precognition Is Cryptic",
-      "subtitle": "Vision without interpretation is useless",
-      "loreConsequence": "Bond sees the future but only in fragments that require Anya's telepathy to interpret—which she can only do by reading his dog thoughts.",
-      "systemEquivalent": "Temporal intelligence that arrives without context, requiring cross-modal analysis to extract actionable data.",
+      "name": "Shinichi Retains Decision Authority",
+      "subtitle": "Migi cannot override human will",
+      "loreConsequence": "Migi can refuse to act in combat, but cannot force Shinichi's body to do anything against his will.",
+      "systemEquivalent": "Host sovereignty constraint where the parasite module is a tool, not a controller.",
       "severity": "medium",
-      "loreSubtitle": "Dog thoughts are hard to decode",
-      "systemSubtitle": "Encrypted temporal signal"
-    },
-    {
-      "name": "Anya's Academic Performance Affects the Mission",
-      "subtitle": "Eden Academy results determine social access",
-      "loreConsequence": "Anya's terrible grades threaten her enrollment, which threatens Loid's access to the Desmond family, which threatens the entire operation.",
-      "systemEquivalent": "A child's academic metrics are operationally load-bearing.",
-      "severity": "medium",
-      "loreSubtitle": "Stella determine mission access",
-      "systemSubtitle": "Gamified dependency chain"
+      "loreSubtitle": "The human is always in charge",
+      "systemSubtitle": "Host authority override lock"
     }
   ],
   "counterplay": [
     {
-      "attacker": "Cover Exposure",
-      "defender": "Emotional Bonding",
-      "mechanic": "The genuine emotional connections between family members make them more willing to protect each other's secrets.",
-      "loreDesc": "If Yor knew Loid was a spy, she should logically report it—but she wouldn't, because she's come to genuinely love the family.",
-      "systemDesc": "Emotional investment creates a loyalty edge that overrides operational protocol."
+      "attacker": "Parasite Infiltration",
+      "defender": "Shinichi's Detection",
+      "mechanic": "Only Shinichi can reliably identify parasite-infiltrated humans because only he knows what parasite behavior looks like from the inside.",
+      "loreDesc": "No one believes him until it's too late, making his early warnings consistently ignored.",
+      "systemDesc": "Unique detection capability arising from co-existence node architecture."
     },
     {
-      "attacker": "Assassination Threat to Family",
-      "defender": "Coordination of Individual Abilities",
-      "mechanic": "When a real threat targets the family, Loid's tradecraft, Yor's lethality, and Anya's telepathy combine naturally.",
-      "loreDesc": "The family performs best as a unit when they don't know they're coordinating as a unit.",
-      "systemDesc": "Parallel individual能力强 nodes that create emergent synergy without explicit coordination."
+      "attacker": "Gotou's Perfect Body",
+      "defender": "Migi's Shapeshifting",
+      "mechanic": "Migi can match Gotou's combat forms because both are adapting shapeshifters—but Shinichi's human tactical thinking gives them an edge.",
+      "loreDesc": "Gotou has the body; Shinichi and Migi have the partnership that Gotou's emptiness cannot replicate.",
+      "systemDesc": "Parallel individually capable nodes that create emergent synergy without explicit coordination."
     },
     {
-      "attacker": "Anya's Telepathy Overload",
-      "defender": "Selective Filtering",
-      "mechanic": "Anya learns to focus on specific minds or tune out the noise, becoming more effective over time.",
-      "loreDesc": "Reading Bond's dog thoughts plus dozens of classmates plus teachers is overwhelming—she has to learn to prioritize.",
-      "systemDesc": "Adaptive filtering on a passive intelligence stream."
+      "attacker": "Parasite Sensory Network",
+      "defender": "Human Social Camouflage",
+      "mechanic": "Shinichi uses normal human life—school, family, friends—as cover that the parasites' social analysis can't penetrate.",
+      "loreDesc": "The parasites can analyze biology perfectly but can't understand why a human would care about anyone.",
+      "systemDesc": "Human emotional investment as camouflage against species designed without it."
     }
   ],
   "anomalies": [
     {
-      "name": "Fake Family Produces Real Love",
-      "ruleViolated": "Operational cover relationships should not generate authentic emotional attachment",
-      "loreDesc": "Loid, Yor, and Anya all started with instrumental motivations for the family and genuinely fell in love with each other.",
-      "systemDesc": "Cover-to-authentic conversion that bypasses the expected emotional firewall."
+      "name": "Migi's Emotional Development",
+      "ruleViolated": "Parasites should have no emotional capacity",
+      "loreDesc": "Migi develops genuine affection for Shinichi and distress at his pain—a complete violation of parasite species design.",
+      "systemDesc": "Emergent emotional node arising from sustained co-existence with human host."
     },
     {
-      "name": "Precognition + Telepathy = Incomplete Future Knowledge",
-      "ruleViolated": "Future-seeing abilities should provide actionable intelligence",
-      "loreDesc": "Anya can read Bond's precognitive visions but his dog thoughts make the messages cryptic, creating information that exists but cannot be reliably interpreted.",
-      "systemDesc": "Cross-modal ability combination that produces ambiguous rather than actionable intelligence."
+      "name": "Shinichi's Dual-Nature Acceptance",
+      "ruleViolated": "Host-parasite relationship should be adversarial",
+      "loreDesc": "Shinichi comes to genuinely care about Migi as a partner rather than a parasite infection.",
+      "systemDesc": "Host acceptance edge that transforms adversarial relationship into cooperative symbiosis."
     }
   ],
   "causalEvents": [
     {
-      "name": "Operation Strix Initiated",
-      "trigger": "Loid receives orders to get close to Desmond's son",
-      "consequence": "He fabricates a fake family in a single day, starting the chain of events that will make the fake family real.",
+      "name": "Migi's Partial Takeover",
+      "trigger": "Parasite attempts to consume Shinichi's brain but only reaches his hand",
+      "consequence": "Forced co-existence creates a symbiotic partnership that neither organism planned.",
       "timelinePosition": "Episode 1",
-      "loreDesc": "A spy mission to prevent war creates a found family.",
-      "systemDesc": "Cover fabrication event that generates the narrative's central affective network."
+      "loreDesc": "The invasion's failure becomes humanity's only hope.",
+      "systemDesc": "Partial invasion success that produces a co-governance anomaly."
     },
     {
-      "name": "Anya Discovers Loid's True Identity",
-      "trigger": "She reads his mind and learns he's a spy",
-      "consequence": "She decides to keep the secret and become his 'partner'—the first step toward real family bonds.",
+      "name": "First Parasite Kill",
+      "trigger": "Shinichi and Migi kill their first parasite together",
+      "consequence": "Establishes the partnership dynamic and gives Shinichi a reason to keep fighting.",
       "timelinePosition": "Early Arc",
-      "loreDesc": "The information asymmetry that makes Anya the family's secret linchpin.",
-      "systemDesc": "Unauthorized access to mission-critical intelligence that produces loyalty rather than exposure."
+      "loreDesc": "The moment Shinichi realizes he and Migi are actually effective as a team.",
+      "systemDesc": "First successful co-combat node activation."
     },
     {
-      "name": "Yor's Identity Revealed to Yuri",
-      "trigger": "Yuri accidentally reveals Garden affiliation",
-      "consequence": "Yor realizes her brother works in the same world of shadows she does, deepening family bonds while increasing exposure risk.",
+      "name": "Gotou's True Nature Revealed",
+      "trigger": "The human-looking student is revealed to be fully parasite-controlled",
+      "consequence": "Demonstrates that complete infiltration looks exactly like normal human behavior.",
       "timelinePosition": "Mid Arc",
-      "loreDesc": "The first major identity collision that could have destroyed the family but instead strengthened it.",
-      "systemDesc": "Partial identity disclosure that increases operational risk while deepening affective bonds."
+      "loreDesc": "The invasion is already won at the social level—humans just don't know it.",
+      "systemDesc": "Perfect infiltration node that invalidates behavioral detection methods."
+    },
+    {
+      "name": "Final Confrontation with the Core",
+      "trigger": "Shinichi and Migi face the parasite reproductive core",
+      "consequence": "The climax reveals the full scale of the invasion and Migi's ultimate choice.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "Humanity's survival depends on a boy and his alien partner.",
+      "systemDesc": "Terminal conflict node where co-existence architecture is tested against species-level threat."
     }
   ],
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/3/73178l.jpg",
   "systemQuestions": [
     {
-      "question": "Why does Spy x Family have no unified power system?",
-      "answer": "Each character has completely separate abilities that operate on different rules—Loid's tradecraft is social manipulation, Yor's assassination is physical lethality, Anya's telepathy is information access. They never merge into a single system.",
+      "question": "Why is Migi different from other parasites?",
+      "answer": "Prolonged contact with Shinichi's human brain chemistry created emotional development that the parasite design doesn't account for. Migi learns to care because living with a human taught him what emotions are.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
     {
-      "question": "Why does the fake family become real?",
-      "answer": "Because all three members are emotionally starved—Loid from a lonely spy existence, Yor from social isolation, Anya from abandonment. The cover gives them permission to give and receive care they wouldn't otherwise allow themselves.",
+      "question": "Why does the parasite invasion work so well?",
+      "answer": "Each parasite type has a specific role—infiltrators blend in, combat specialists handle threats, the Core manages reproduction. It's a designed invasion architecture with no wasted units.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
     {
-      "question": "Why is Anya the most important character?",
-      "answer": "She's the only one who knows everyone's secrets. Her telepathy makes her the information hub of the entire family, even though she's also the most chaotic element.",
+      "question": "Why is Shinichi the only one who can detect infiltrators?",
+      "answer": "Living with a parasite gives him inside knowledge of how they think and behave. He knows what parasite thoughts feel like, so he can spot behavioral anomalies no one else can.",
       "tabIndex": 1,
       "sectionId": "character-database-heading",
       "tabLabel": "Entity Database"
     },
     {
-      "question": "Why doesn't Yor kill people for Garden anymore in the story?",
-      "answer": "The series shifted away from her assassination work as her role as a mother became more central to her character arc, though she remains lethal when the family is threatened.",
-      "tabIndex": 3,
-      "sectionId": "core-laws-heading",
-      "tabLabel": "Core Laws"
+      "question": "What makes Gotou the most dangerous parasite?",
+      "answer": "He has a perfect human appearance with full parasite combat capability—but no emotions. He's what the parasites think humans should be: perfectly efficient organisms without the mess of actual feelings.",
+      "tabIndex": 1,
+      "sectionId": "character-database-heading",
+      "tabLabel": "Entity Database"
     },
     {
-      "question": "Why is Bond's precognition so underused?",
-      "answer": "Precognition is narratively dangerous—it can solve too many problems. The series uses it sparingly and always in ways that create new problems rather than solving existing ones.",
-      "tabIndex": 3,
-      "sectionId": "core-laws-heading",
-      "tabLabel": "Core Laws"
+      "question": "Why does affinity-matrix work for Parasyte?",
+      "answer": "Shinichi and Migi are two distinct nodes sharing one substrate—each with their own abilities and identity, occasionally combining for greater effect but mostly operating independently within the same body.",
+      "tabIndex": 2,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
     }
   ],
   "hero": {
     "systemType": "relational",
-    "microHook": "Each card is different—read the situation to know who's strongest.",
-    "thesis": "Three independent ability cards—spy, assassin, telepath—occasionally overlap for accidental synergy.",
+    "microHook": "Two minds are better than one, unless they disagree on saving the world.",
+    "thesis": "A human and parasite co-govern one body—Shinichi decides, Migi fights. Neither could survive alone.",
     "primarySystemType": "entity_db",
-    "imageUrl": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg"
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/3/73178l.jpg"
   }
 }
