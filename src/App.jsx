@@ -35,6 +35,9 @@ import { trackExternalLink } from './utils/analytics'
 
 const Dashboard = lazy(() => import('./Dashboard'))
 const CommunityPulse = lazy(() => import('./components/CommunityPulse'))
+const NewsletterCTA = lazy(() => import('./components/NewsletterCTA'))
+const InsightsRoute = lazy(() => import('./components/InsightsRoute'))
+const InsightPost = lazy(() => import('./components/InsightPost'))
 const SearchResults = lazy(() => import('./components/SearchResults'))
 const ThematicPage = lazy(() => import('./components/ThematicPage'))
 const BlogIndex = lazy(() => import('./components/BlogIndex'))
@@ -199,12 +202,80 @@ function FeaturedPrimaryCard({ entry, className = '', priority = false }) {
 }
 
 const STRUCTURE_VISUALS = {
-  'relational-systems': { icon: Network, tone: 'border-cyan-300/30 hover:border-cyan-300/60 shadow-[0_0_0_1px_rgba(34,211,238,0.08)]', badge: 'text-cyan-200 bg-cyan-400/10' },
-  'counterplay-systems': { icon: ShieldAlert, tone: 'border-amber-300/30 hover:border-amber-300/60 shadow-[0_0_0_1px_rgba(251,191,36,0.08)]', badge: 'text-amber-200 bg-amber-400/10' },
-  'timeline-systems': { icon: Clock3, tone: 'border-purple-300/30 hover:border-purple-300/60 shadow-[0_0_0_1px_rgba(196,181,253,0.08)]', badge: 'text-purple-200 bg-purple-400/10' },
-  'control-systems': { icon: Landmark, tone: 'border-rose-300/30 hover:border-rose-300/60 shadow-[0_0_0_1px_rgba(251,113,133,0.08)]', badge: 'text-rose-200 bg-rose-400/10' },
-  'closed-loop-systems': { icon: Repeat2, tone: 'border-emerald-300/30 hover:border-emerald-300/60 shadow-[0_0_0_1px_rgba(16,185,129,0.08)]', badge: 'text-emerald-200 bg-emerald-400/10' },
-  'power-economy-systems': { icon: Coins, tone: 'border-indigo-300/30 hover:border-indigo-300/60 shadow-[0_0_0_1px_rgba(129,140,248,0.08)]', badge: 'text-indigo-200 bg-indigo-400/10' },
+  'relational-systems': { icon: Network, tone: 'border-cyan-400/50 hover:border-cyan-400/80 shadow-[0_0_0_1px_rgba(34,211,238,0.15)]', badge: 'text-cyan-200 bg-cyan-400/10' },
+  'counterplay-systems': { icon: ShieldAlert, tone: 'border-amber-400/50 hover:border-amber-400/80 shadow-[0_0_0_1px_rgba(251,191,36,0.15)]', badge: 'text-amber-200 bg-amber-400/10' },
+  'timeline-systems': { icon: Clock3, tone: 'border-purple-400/50 hover:border-purple-400/80 shadow-[0_0_0_1px_rgba(196,181,253,0.15)]', badge: 'text-purple-200 bg-purple-400/10' },
+  'control-systems': { icon: Landmark, tone: 'border-rose-400/50 hover:border-rose-400/80 shadow-[0_0_0_1px_rgba(251,113,133,0.15)]', badge: 'text-rose-200 bg-rose-400/10' },
+  'closed-loop-systems': { icon: Repeat2, tone: 'border-emerald-400/50 hover:border-emerald-400/80 shadow-[0_0_0_1px_rgba(16,185,129,0.15)]', badge: 'text-emerald-200 bg-emerald-400/10' },
+  'power-economy-systems': { icon: Coins, tone: 'border-indigo-400/50 hover:border-indigo-400/80 shadow-[0_0_0_1px_rgba(129,140,248,0.15)]', badge: 'text-indigo-200 bg-indigo-400/10' },
+}
+
+// CRO: Newsletter CTA Hero - compact inline version for above-fold conversion
+function NewsletterCTAHero() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState('idle')
+  const lastSubmitTime = useRef(0)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const now = Date.now()
+    if (now - lastSubmitTime.current < 5000) return
+    lastSubmitTime.current = now
+
+    const trimmed = email.trim()
+    if (!trimmed.includes('@')) return
+
+    setStatus('loading')
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: trimmed }),
+      })
+      if (res.ok) {
+        setStatus('success')
+        setEmail('')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <div className="flex items-center gap-2 px-4 py-3 rounded-xl border border-emerald-400/30 bg-emerald-400/10">
+        <div className="w-5 h-5 rounded-full bg-emerald-400/20 flex items-center justify-center">
+          <svg className="w-3 h-3 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p className="text-[11px] font-mono tracking-wider text-emerald-300 uppercase">You&apos;re in. New universes drop first.</p>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 w-full">
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => { setEmail(e.target.value); if (status === 'error') setStatus('idle') }}
+        placeholder="your@email.com"
+        maxLength={254}
+        disabled={status === 'loading'}
+        className="flex-1 min-h-[44px] bg-white/5 border border-white/20 focus:border-cyan-400/60 rounded-full px-4 py-2.5 text-xs text-gray-200 placeholder:text-gray-500 outline-none transition-colors font-mono"
+      />
+      <button
+        type="submit"
+        disabled={status === 'loading' || !email.trim()}
+        className="min-h-[44px] px-5 py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-[#020617] text-[10px] font-bold tracking-[0.18em] uppercase transition-colors disabled:opacity-40 whitespace-nowrap font-mono"
+      >
+        {status === 'loading' ? '...' : 'Get Notified'}
+      </button>
+    </form>
+  )
 }
 
 function Home() {
@@ -270,30 +341,32 @@ function Home() {
         <p className="mt-6 text-xs md:text-sm text-gray-300/80 max-w-2xl leading-relaxed">
           Find the best anime systems, compare anime power systems side-by-side, and explore the mechanics behind each world in minutes.
         </p>
-        <div className="mt-7 flex flex-col items-center gap-3">
-          <a
-            href="#explore-system-structure"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-cyan-300/40 bg-cyan-400/10 px-5 py-2 text-[10px] font-bold tracking-[0.2em] uppercase text-cyan-100 hover:border-cyan-300/70 hover:bg-cyan-400/15 transition-colors"
-          >
-            Explore System Structures
-          </a>
+        <div className="mt-7 flex flex-col items-center gap-4">
+          {/* Primary CTA: Newsletter Signup - CRO: "impossible to miss" */}
+          <div className="w-full max-w-md">
+            <NewsletterCTAHero />
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 flex-wrap justify-center">
+            <Link
+              to="/compare"
+              className="flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-full border border-emerald-400/40 bg-emerald-400/10 hover:bg-emerald-400/20 text-[10px] font-bold tracking-[0.18em] uppercase text-emerald-300 hover:text-emerald-200 transition-colors"
+            >
+              <Network className="w-3.5 h-3.5" />
+              Compare Two Systems
+            </Link>
+            <a
+              href="#explore-system-structure"
+              className="flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-full border border-cyan-300/40 bg-cyan-400/10 hover:bg-cyan-400/15 text-[10px] font-bold tracking-[0.18em] uppercase text-cyan-100 hover:text-white transition-colors"
+            >
+              Explore System Structures
+            </a>
+          </div>
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white transition-colors">Browse all universes →</Link>
             <button onClick={() => setSearchOpen(true)} className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase text-gray-500 hover:text-cyan-400 transition-colors">
               <Search className="w-3.5 h-3.5" />
               Search
             </button>
-            <a
-              href="https://www.tiktok.com/@hashi.ai"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase text-gray-500 hover:text-cyan-400 transition-colors"
-            >
-              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.63a8.23 8.23 0 004.79 1.53V6.71a4.85 4.85 0 01-1.03-.02z"/>
-              </svg>
-              Follow @hashi.ai
-            </a>
           </div>
 
           {/* Returning visitor: pick up where you left off */}
@@ -568,7 +641,10 @@ function Home() {
         </Suspense>
       )}
 
-      <footer className="mt-12 pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
+      {/* Newsletter */}
+      <NewsletterCTA />
+
+      <footer className="pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <div className="max-w-4xl text-center px-6">
           <p className="text-[10px] tracking-[0.2em] uppercase text-cyan-300/80">Compare. Discover. Rewatch Smarter.</p>
           <p className="text-[11px] text-gray-400 mt-2">See how your favorite anime worlds handle power, strategy, and big turning points.</p>
@@ -585,6 +661,8 @@ function Home() {
         </div>
         <div className="flex flex-wrap justify-center gap-4 text-[10px] tracking-[0.14em] uppercase text-gray-600">
           <a href="/about" className="hover:text-gray-400 transition-colors">About</a>
+          <span className="text-gray-700">·</span>
+          <a href="/insights" className="hover:text-gray-400 transition-colors">Insights</a>
           <span className="text-gray-700">·</span>
           <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</a>
           <span className="text-gray-700">·</span>
@@ -628,7 +706,16 @@ function UniversesCatalogRoute() {
           <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">Universe Catalog</h1>
           <Link to="/" className="px-3 py-2 text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white rounded-lg border border-white/10 hover:border-white/20 transition-colors">← Back Home</Link>
         </div>
-        <p className="text-xs text-gray-300/80 max-w-3xl mb-6">Search and sort the archive using lightweight catalog metadata only. Universe payloads still lazy-load when you open a route.</p>
+        <p className="text-xs text-gray-300/80 max-w-3xl mb-4">Search and sort the archive using lightweight catalog metadata only. Universe payloads still lazy-load when you open a route.</p>
+
+        {/* Archive stats bar */}
+        <div className="mb-6 flex flex-wrap justify-start gap-4 text-[10px] text-gray-400 tracking-widest uppercase">
+          <span>{UNIVERSE_CATALOG.length} Universes</span>
+          <span className="text-white/10">·</span>
+          <span>{UNIVERSE_CATALOG.reduce((s, a) => s + (a.stats?.characters || 0), 0)} Characters</span>
+          <span className="text-white/10">·</span>
+          <span>{new Set(UNIVERSE_CATALOG.map((a) => a.visualizationHint)).size} System Types</span>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
           <label className="md:col-span-2 flex items-center gap-2 border border-white/10 rounded-lg px-3 bg-white/5">
@@ -923,6 +1010,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/universes" element={<UniversesCatalogRoute />} />
+        <Route path="/insights" element={<InsightsRoute />} />
+        <Route path="/insights/:slug" element={<InsightPost />} />
         <Route path="/universe/:id" element={<UniverseRoute />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />

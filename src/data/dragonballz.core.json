@@ -1,0 +1,520 @@
+{
+  "anime": "Dragon Ball Z",
+  "tagline": "A ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome",
+  "malId": 813,
+  "themeColors": {
+    "primary": "#f97316",
+    "secondary": "#1e3a5f",
+    "accent": "#facc15",
+    "glow": "rgba(249,115,22,0.35)",
+    "tabActive": "#f97316",
+    "badgeBg": "rgba(30,58,95,0.18)",
+    "badgeText": "#facc15",
+    "modeGlow": "rgba(250,204,21,0.25)",
+    "heroGradient": "rgba(5,10,20,0.95)"
+  },
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1277/142022.jpg",
+  "visualizationHint": "counter-tree",
+  "visualizationReason": "Dragon Ball Z is a ki-based power scaling system organized as a vertical combat hierarchy. The counter-tree captures the core structural thesis: power levels as the root, transformation tiers as branching nodes, and specific matchups determining which fighter counters which. Every fight is ultimately a question of whether the protagonist can close the gap between their current transformation tier and the threat level before the countdown ends.",
+  "headerFlavor": {
+    "loreQuote": "Over 9,000? What, do you just shout numbers?!",
+    "sysWarning": "// [SYSTEM STATUS]: POWER LEVEL DETECTION — KAIOSCANNER RANGE EXCEEDED",
+    "sysWarningColor": "orange"
+  },
+  "backgroundMotif": "jagged",
+  "revealOverlay": "glow-border",
+  "introductionSummary": "Dragon Ball Z operates as a vertical power hierarchy where ki — the universal life energy — is the sole determinant of combat outcomes. The analytical lens is quantitative: power levels, transformation stages, and the brutal arithmetic of who can destroy what. The entire narrative tension comes from escalating threats that force protagonists up the transformation ladder, with the core mechanic being that ki can be sensed, suppressed, and exponentially amplified through training. The system is fundamentally a climbing problem — can our heroes train fast enough to match the next extinction-level threat?",
+  "hero": {
+    "systemType": "counterplay",
+    "microHook": "Ki is the resource; transformation tiers are the multipliers; power levels are the scoreboard.",
+    "thesis": "A vertical ki hierarchy where exponential transformation tiers define who survives and who becomes cosmic dust.",
+    "primarySystemType": "power_engine"
+  },
+  "aiInsights": {
+    "casual": "Dragon Ball Z is about a guy who loves fighting so much he'll train with the dead, fly around in super speed, and turn his hair gold just to punch the next guy who wants to destroy the planet. It's basically a climbing simulator where every new enemy is stronger than the last, and the only way to win is to get a bigger power-up and scream really loudly. Goku doesn't want to rule anything or marry anyone — he just wants to fight the strongest people in the universe, and somehow that always ends up saving the world.",
+    "deep": "The Dragon Ball Z system is a power-level equilibrium model where ki functions as both the economic input and the combat output currency. The series' genius is the systematic dismantling and reconstruction of its own measurement system: scouts introduce numeric power levels (creating false precision), then transformation tiers shatter them (making numbers meaningless), then Ultra Instinct removes the need for conscious decision entirely (replacing strategy with pure reflex). The Saiyan zenkai boost is the system's built-in post-failure reward that turns near-death into competitive advantage — a mechanic that makes fighting actually beneficial for growth. The Android/Cell arc represents a corruption of the system through forced hybridization, while the Buu arc represents an entity so chaotic that no structured power model can predict it. Goku's structural advantage is his complete lack of attachment to outcomes — he doesn't fight to win, he fights to find the limit, which paradoxically makes him more likely to win because he never taps out of a fight early."
+  },
+  "powerSystem": [
+    {
+      "name": "Ki",
+      "subtitle": "Universal Life Energy",
+      "loreDesc": "The fundamental energy that powers all combat abilities. Drawn from the body and spirit, ki can be sensed by trained individuals, allowing strategic assessment of opponents before combat begins. Suppressing ki (zenkai) is a core tactical skill.",
+      "systemDesc": "The universal resource token of the combat system — ki is the input that every fighter converts into operational output (physical power, energy attacks, speed). Ki sensing is the information layer that makes power hierarchies legible. The key constraint is that ki reserves are finite; extended combat depletes resources and forces strategic decisions about when to escalate.",
+      "loreSubtitle": "Universal Life Energy",
+      "systemSubtitle": "Combat Resource Token",
+      "icon": "Zap",
+      "color": "orange-400",
+      "signatureMoment": "Goku's first use of Kaioken against Vegeta — a technique that multiplies his ki output at the cost of extreme physical strain, proving that raw power amplification can overcome superior numbers."
+    },
+    {
+      "name": "Super Saiyan Transformations",
+      "subtitle": "Exponential Power Multipliers",
+      "loreDesc": "The signature power multiplication of the Saiyan race. Each tier represents an order-of-magnitude leap: Super Saiyan (50x), Super Saiyan 2 (100x), Super Saiyan 3 (400x), Super Saiyan God (planetary+), Super Saiyan Blue (godly ki control), Ultra Instinct (complete combat autonomy).",
+      "systemDesc": "The core upgrade path — transformations are the game's leveling system. Each tier is gated by emotional triggers (rage, love, desperation) rather than pure training time, making the system psychology-dependent. The progression from Super Saiyan to Ultra Instinct represents a shift from emotional amplification to pure technique mastery.",
+      "loreSubtitle": "The Legendary Power Multiplier",
+      "systemSubtitle": "Exponential Tier System",
+      "icon": "Flame",
+      "color": "yellow-400",
+      "signatureMoment": "Goku achieving Super Saiyan for the first time against Frieza — the first time the multiplier is unlocked and the entire power balance of the universe shifts permanently."
+    },
+    {
+      "name": "Ki Sensing",
+      "subtitle": "Power Level Detection",
+      "loreDesc": "Trained fighters can sense ki signatures, allowing them to assess threat levels, track opponents, and identify power fluctuations during combat. This makes surprise attacks nearly impossible and creates a transparent power hierarchy.",
+      "systemDesc": "The information system of the DBZ combat economy. Ki sensing eliminates strategic ambiguity — you always know who the biggest threat is. This forces fights to be decided by power differentials rather than tactical deception, making it a pure power-vs-power system.",
+      "loreSubtitle": "The Information Layer",
+      "systemSubtitle": "Threat Assessment System",
+      "icon": "Radio",
+      "color": "blue-400",
+      "signatureMoment": "Goku sensing Frieza's ki at full power on Namek and realizing the gap is even larger than the scouter read — the moment power becomes truly incomprehensible."
+    },
+    {
+      "name": "Energy Attacks",
+      "subtitle": "Ki Materialization",
+      "loreDesc": "Ki can be shaped into ranged attacks: Kamehameha, Final Flash, Special Beam Cannon, Solar Flare, and hundreds of named techniques. Each represents a fighter's skill expression beyond raw power — precision ki control that turns energy into weapons.",
+      "systemDesc": "The skill expression layer — energy attacks allow smaller fighters to threaten larger ones through technique. The Kamehameha is the foundational example: it's not about who has the most ki, it's about who can project it more efficiently. This creates a rock-paper-scissors dynamic between power, speed, and technique.",
+      "loreSubtitle": "Ki Materialized as Weapons",
+      "systemSubtitle": "Technique Over Raw Power",
+      "icon": "Crosshair",
+      "color": "sky-400",
+      "signatureMoment": "Piccolo's Special Beam Cannon piercing through Cell's regeneration — technique finding the gap in overwhelming physical power."
+    },
+    {
+      "name": "Fusion Techniques",
+      "subtitle": "Temporary Power Addition",
+      "loreDesc": "Potara earrings and Fusion Dance allow two beings to become one, combining their power levels. The result exceeds either component — Goku and Vegeta's Vegito is stronger than both individually.",
+      "systemDesc": "The system's only explicit addition mechanic — normally ki scales multiplicatively (transformations) or exponentially (Super Saiyan tiers), but fusion is additive. This makes it a special case rather than a primary upgrade path, and the time limit creates inherent risk (potential defusion mid-battle).",
+      "loreSubtitle": "Two Become One",
+      "systemSubtitle": "Temporary Node Combination",
+      "icon": "Merge",
+      "color": "purple-400",
+      "signatureMoment": "Goku and Vegeta's first successful Fusion into Vegito — two rivals combining into a single fighter that even a powered-up Buu couldn't defeat through conventional means."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Ki sensing reveals true power hierarchy",
+      "subtitle": "The Transparency Rule",
+      "loreConsequence": "Trained fighters always know who is the biggest threat nearby. This makes surprise attacks nearly impossible and forces confrontations to be decided by raw power differentials.",
+      "systemEquivalent": "A complete information symmetry rule — in a system where everyone's power level is always visible to trained sensors, strategic deception is impossible and combat outcomes are determined by comparative ki output before the fight begins.",
+      "severity": "high",
+      "loreSubtitle": "The Transparency Rule",
+      "systemSubtitle": "Information Symmetry Protocol"
+    },
+    {
+      "name": "Transformation tiers multiply power exponentially",
+      "subtitle": "The Multiplier Theorem",
+      "loreConsequence": "Each Super Saiyan tier represents an order-of-magnitude leap. A base-level fighter at 10,000 power becomes 500,000 in Super Saiyan. This means transformation access is worth more than any amount of base-level training.",
+      "systemEquivalent": "An exponential upgrade path that makes base statistics nearly irrelevant compared to transformation access. The entire competitive advantage of a fighter can be reduced to which transformation tier they can access — base power becomes a rounding error at higher tiers.",
+      "severity": "fatal",
+      "loreSubtitle": "The Multiplier Theorem",
+      "systemSubtitle": "Exponential Advantage Gate"
+    },
+    {
+      "name": "Emotional triggers unlock transformation",
+      "subtitle": "The Psychology Gate",
+      "loreConsequence": "Rage, desperation, and love are the keys to Super Saiyan transformation. This means the system's most powerful state is gated by emotional state rather than training — making psychological manipulation a viable combat strategy.",
+      "systemEquivalent": "A psychology-dependent upgrade lock — the system's most powerful combat states require specific emotional conditions rather than measurable training milestones. This creates a strategic dimension around controlling emotional states.",
+      "severity": "medium",
+      "loreSubtitle": "The Psychology Gate",
+      "systemSubtitle": "Emotional Access Control"
+    },
+    {
+      "name": "Near-death amplifies Saiyan power",
+      "subtitle": "The Zenkai Boost Rule",
+      "loreConsequence": "Saiyans who survive near-death experiences emerge significantly stronger than before. This creates a perverse incentive: the harder a Saiyan fights and nearly loses, the stronger they become.",
+      "systemEquivalent": "A post-failure reward mechanism unique to the Saiyan race that turns combat losses into competitive advantages. This explains the Saiyan warrior culture's embrace of high-risk combat — every near-death is a training session.",
+      "severity": "high",
+      "loreSubtitle": "The Zenkai Boost Rule",
+      "systemSubtitle": "Post-Failure Reward Mechanic"
+    },
+    {
+      "name": "Pure force cannot defeat Ultra Instinct",
+      "subtitle": "The Reflex Override",
+      "loreConsequence": "Ultra Instinct allows the body to move without conscious thought — attacks are dodged reflexively before the conscious mind registers the threat. This means raw power cannot land on a MUI user, no matter how overwhelming.",
+      "systemEquivalent": "A complete bypass of the reaction-time constraint — by removing conscious decision from the combat loop, Ultra Instinct creates a state where physical power advantages become irrelevant because they cannot connect.",
+      "severity": "fatal",
+      "loreSubtitle": "The Reflex Override",
+      "systemSubtitle": "Consciousness Bypass Protocol"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Goku",
+      "title": "Saiyan Warrior",
+      "rank": "Apex Tier / Ultra Instinct Master",
+      "dangerLevel": 10,
+      "loreBio": "A Saiyan warrior raised on Earth who loves fighting more than anything else in the universe. He fights to find the limit, not to win trophies — and somehow this obsession with combat always ends up saving the planet. His greatest power isn't his ki, it's his ability to inspire everyone around him to become stronger.",
+      "systemBio": "The protagonist node whose entire combat philosophy breaks the system. Goku doesn't fight to win — he fights to find the limit of his ability, then exceeds it. Ultra Instinct is the culmination of this philosophy: instead of powering up more, he learns to stop thinking entirely and let his body fight on pure reflex. This makes him the only character whose power ceiling is genuinely unknowable.",
+      "gradientFrom": "orange-950",
+      "gradientTo": "yellow-900",
+      "accentColor": "orange-400",
+      "icon": "Zap",
+      "signatureMoment": "Achieving Ultra Instinct against Jiren — the state where the body moves without thought, transcending the need for power levels entirely.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/114728.jpg",
+      "_fetchFailed": false,
+      "malId": 1831,
+      "role": "Main"
+    },
+    {
+      "name": "Vegeta",
+      "title": "Prince of all Saiyans",
+      "rank": "Elite Tier / Second-Class Saiyan",
+      "dangerLevel": 9,
+      "loreBio": "The Prince of a genocided race, Vegeta's entire identity is built on the superiority of his bloodline. His pride is both his greatest strength and his deepest wound — he'll train harder than anyone to never be surpassed by Goku, but that same pride drives him to acts of recklessness that nearly kill him.",
+      "systemBio": "The rivalry node — Vegeta's structural position is defined entirely in relation to Goku. He represents the path of pride and hatred as a power source rather than love and friendship. His transformation into Super Saiyan Blue through anger rather than calm focus demonstrates that the system's emotional triggers are not exclusive to positive emotions.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "purple-900",
+      "accentColor": "blue-400",
+      "icon": "Crown",
+      "signatureMoment": "Choosing to self-destruct against Majin Buu rather than let the monster kill anyone else — the moment his pride transforms from selfishness to genuine heroism.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/78764.jpg",
+      "_fetchFailed": false,
+      "malId": 1855,
+      "role": "Main"
+    },
+    {
+      "name": "Frieza",
+      "title": "Galactic Emperor",
+      "rank": "Galactic Tier / Former Dominant Species",
+      "dangerLevel": 10,
+      "loreBio": "A cold, calculating emperor who conquered worlds for profit and genocided the Saiyan race because they were too dangerous to leave alive. He's never trained a day in his life — all his power is pure biological talent. He represents cruelty elevated to an art form.",
+      "systemBio": "The systemic villain node — Frieza represents institutional power without ethical constraint. His power structure (Frieza Force) is the counter-model to the Z Fighters: conquest and fear rather than protection and training. His near-extinction of the Saiyans is the founding trauma of the entire DBZ narrative.",
+      "gradientFrom": "purple-950",
+      "gradientTo": "fuchsia-900",
+      "accentColor": "fuchsia-400",
+      "icon": "Skull",
+      "signatureMoment": "Surviving his own planet's explosion at 100% power and returning as Mecha-Frieza — proving that his cruelty is matched only by his refusal to die.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/114520.jpg",
+      "_fetchFailed": false,
+      "malId": 1877,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Cell",
+      "title": "Perfect Warrior",
+      "rank": "Bio-Engineered Apex",
+      "dangerLevel": 9,
+      "loreBio": "A living laboratory created by Dr. Gero — Cell incorporated the DNA of Earth's greatest fighters including Goku, Vegeta, and Frieza. He exists to achieve his 'perfect form' by absorbing Android 17 and 18, which would make him unstoppable.",
+      "systemBio": "The system corruption node — Cell represents forced hybridization as a power path. By incorporating the genetic material of multiple fighters, he becomes the only character whose power system is a portfolio rather than a lineage. His absorption mechanic is the system's first explicit counter: he literally grows stronger every time he eats a stronger fighter.",
+      "gradientFrom": "green-950",
+      "gradientTo": "emerald-900",
+      "accentColor": "green-400",
+      "icon": "Bug",
+      "signatureMoment": "Achieving Perfect Form and demonstrating that his power exceeds Gohan's Super Saiyan 2 — the only time a villain has genuinely surpassed the protagonist's ceiling mid-arc.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/114519.jpg",
+      "_fetchFailed": false,
+      "malId": 1879,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Majin Buu",
+      "title": "Innocence",
+      "rank": "Cosmic Tier / Pure Chaos",
+      "dangerLevel": 10,
+      "loreBio": "An ancient magical entity of pure destructive potential, Buu has no logic, no strategy, and no upper bound on his power. He absorbs fighters to become stronger and changes personality with each absorption. He is the system without rules.",
+      "systemBio": "The chaos node — Buu represents the only fighter in the system who cannot be analyzed by ki sensing, transformation tier, or power level. His magic-based physiology means he doesn't follow the ki rules at all. This makes him the most existential threat before Zeno because no existing framework can predict his actions or limit his power.",
+      "gradientFrom": "pink-950",
+      "gradientTo": "rose-900",
+      "accentColor": "pink-400",
+      "icon": "Flame",
+      "signatureMoment": "Absorbing Gohan and gaining his power — the system's most dangerous mechanic turned into an unstoppable acquisition engine.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/33246.jpg",
+      "_fetchFailed": false,
+      "malId": 1893,
+      "role": "Antagonist"
+    },
+    {
+      "name": "Gohan",
+      "title": "Hidden Potential",
+      "rank": "Dormant Apex / Scholar",
+      "dangerLevel": 8,
+      "loreBio": "Goku's eldest son has more latent potential than any mortal in the universe. Unlike his father, Gohan has no love of fighting — he wants to be a scholar. But when pushed to the limit, that dormant power erupts and surpasses even Goku's.",
+      "systemBio": "The unused potential node — Gohan's structural advantage is that his power ceiling is never reached, meaning his true capability remains unknown. His rejection of the fighting path means the system's most powerful node is often offline. This makes him the ultimate swing factor: when Gohan fights at full power, the outcome shifts permanently.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "BookOpen",
+      "signatureMoment": "Achieving SSJ2 and destroying Cell with a single Father-Son Kamehameha — the moment his dormant potential became the dominant power in the universe.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/117802.jpg",
+      "_fetchFailed": false,
+      "malId": 1845,
+      "role": "Main"
+    },
+    {
+      "name": "Piccolo",
+      "title": "Namekian Fusion Master",
+      "rank": "Elite Support Tier",
+      "dangerLevel": 7,
+      "loreBio": "A Namekian who started as a villain but became Earth's greatest defender through his bond with Gohan. He represents the path of disciplined training, strategic fusion, and mentorship.",
+      "systemBio": "The fusion node — Piccolo's strategic use of Namekian fusion makes him the most consistently effective support fighter. He cannot match Goku's raw power but through targeted fusions he becomes the critical mid-tier fighter who holds the line until the Saiyans arrive.",
+      "gradientFrom": "teal-950",
+      "gradientTo": "green-900",
+      "accentColor": "teal-400",
+      "icon": "Target",
+      "signatureMoment": "Fusing with Nail to fight Frieza at full power — a Namekian's desperate act that temporarily creates a node strong enough to withstand the galactic emperor.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/45628.jpg",
+      "_fetchFailed": false,
+      "malId": 914,
+      "role": "Main"
+    },
+    {
+      "name": "Trunks",
+      "title": "Future Warrior",
+      "rank": "Hybrid Tier / Timeline Anomaly",
+      "dangerLevel": 8,
+      "loreBio": "Born in an alternate future where the Androids destroyed everything, Trunks traveled back in time to warn the Z Fighters. His grim experience makes him a more serious fighter than his young age suggests.",
+      "systemBio": "The timeline anomaly node — Trunks represents the system's failure state. His existence proves that the ki-based power model can fail catastrophically if the right threat emerges without enough time to train. His presence in the main timeline actively changes its outcome.",
+      "gradientFrom": "indigo-950",
+      "gradientTo": "violet-900",
+      "accentColor": "indigo-400",
+      "icon": "Clock",
+      "signatureMoment": "Arriving from the future to reveal the Android threat — his single piece of intelligence fundamentally reshapes the entire timeline's power trajectory.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/89255.jpg",
+      "_fetchFailed": false,
+      "malId": 1925,
+      "role": "Main"
+    },
+    {
+      "name": "Krillin",
+      "title": "Strongest Human",
+      "rank": "Human Baseline / Overachiever",
+      "dangerLevel": 6,
+      "loreBio": "The strongest human on Earth, Krillin started as Goku's rival and became his best friend. He dies more than anyone else in the series and keeps coming back. His continued existence against god-tier threats is itself a form of power.",
+      "systemBio": "The human baseline node — Krillin represents what the system looks like at its floor. Every time he survives against fighters who could destroy planets, he's proving that the ki system isn't exclusively about bloodline. His Destructo Disc is the one technique that bypasses power levels entirely.",
+      "gradientFrom": "gray-950",
+      "gradientTo": "slate-800",
+      "accentColor": "gray-400",
+      "icon": "Shield",
+      "signatureMoment": "Standing up to Frieza's full power with nothing but courage and a destructo disk — proving the system has room for human bravery at any tier.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/89932.jpg",
+      "_fetchFailed": false,
+      "malId": 1833,
+      "role": "Main"
+    },
+    {
+      "name": "Broly",
+      "title": "Legendary Super Saiyan",
+      "rank": "Berserker Apex / Uncontrollable Force",
+      "dangerLevel": 10,
+      "loreBio": "A Saiyan born with such overwhelming power that he was imprisoned on a remote planet. His entire existence is a living weapon — when he loses control, he becomes the Legendary Super Saiyan, a force of pure destruction that doesn't distinguish between ally and enemy.",
+      "systemBio": "The berserker node — Broly represents what happens when the ki system has no psychological governor. Without emotional control, power becomes indistinguishable from destruction. He is the system's argument that strength without discipline is a liability.",
+      "gradientFrom": "amber-950",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Flame",
+      "signatureMoment": "Transforming into the Legendary Super Saiyan for the first time — a power so immense it bends the surrounding environment and makes every other fighter on the field irrelevant.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/103024.jpg",
+      "_fetchFailed": false,
+      "malId": 22865,
+      "role": "Antagonist"
+    }
+  ],
+  "factions": [
+    {
+      "name": "Z Fighters",
+      "description": "The protagonist coalition united by Goku's influence. A loose alliance of Earth-based warriors who fight to protect rather than conquer. The defining trait is moral restraint — they only use their power when necessary.",
+      "role": "protagonist",
+      "icon": "Shield",
+      "loreDesc": "The Z Fighters are bound by Goku's philosophy rather than any formal structure — they fight because they have power and responsibility, not because they are ordered to.",
+      "systemDesc": "A protagonist coalition organized around the principle that power exists to protect, not to rule. Unlike formal military hierarchies, the Z Fighters have no institutional enforcement mechanism — membership is voluntary and loyalty is earned through demonstrated character."
+    },
+    {
+      "name": "Saiyan Remnants",
+      "description": "Goku, Vegeta, and their hybrid offspring. The surviving members of a genocided warrior race whose bloodline carries the system's most powerful nodes.",
+      "role": "protagonist",
+      "icon": "Zap",
+      "loreDesc": "The surviving Saiyans carry the trauma of genocide and the pride of a warrior culture. Their bloodline grants access to the system's highest transformation tiers.",
+      "systemDesc": "A bloodline aristocracy — the Saiyan race's genetic advantage means their surviving members (and their hybrids) occupy the top tiers of the power hierarchy regardless of training."
+    },
+    {
+      "name": "Frieza Force",
+      "description": "The galactic military empire built on conquest and fear. A hierarchical organization that subjugated worlds for profit under Frieza's rule.",
+      "role": "antagonist",
+      "icon": "Skull",
+      "loreDesc": "The Frieza Force is an institutional power structure built entirely on fear and profit. Its soldiers fight because they are ordered to, not because they believe in anything.",
+      "systemDesc": "A military-industrial hierarchy where power is used to expand power — conquest generates resources, resources fund more conquest. Unlike the Z Fighters, the Frieza Force has clear command structures and institutional loyalty."
+    },
+    {
+      "name": "Godly Beings",
+      "description": "Angels, Kaioshins, and Zeno — the cosmic oversight layer that exists above mortal conflict but intervenes when threats become universe-ending.",
+      "role": "neutral",
+      "icon": "Sparkles",
+      "loreDesc": "The divine layer operates on a different timeline and set of priorities than mortal conflicts. They intervene only when threats become existential to the universe itself.",
+      "systemDesc": "The cosmic oversight layer — beings whose power exceeds the ki-based combat system entirely. Zeno can erase universes without using ki at all."
+    },
+    {
+      "name": "Buu Entities",
+      "description": "Majin Buu and his absorbed forms — pure chaos factors that cannot be reasoned with or predicted through ki sensing.",
+      "role": "chaotic",
+      "icon": "Flame",
+      "loreDesc": "Buu is an ancient magical entity unbound by any rule — his absorption mechanic means every fight he wins makes him more powerful and more dangerous.",
+      "systemDesc": "The system's chaos variable — Buu's physiology doesn't follow ki rules at all. He is the proof that the ki hierarchy has limits and that sufficiently ancient power can bypass it entirely."
+    }
+  ],
+  "relationships": [
+    { "source": "Goku", "target": "Vegeta", "type": "rival", "weight": 10, "description": "Eternal rivals whose competition drives both to new power heights" },
+    { "source": "Goku", "target": "Gohan", "type": "successor", "weight": 9, "description": "Father-son bond where Gohan's potential is the family's ace in the hole" },
+    { "source": "Vegeta", "target": "Frieza", "type": "enemy", "weight": 10, "description": "Historical master-servant relationship; Frieza's genocide of the Saiyans defines Vegeta's pride" },
+    { "source": "Goku", "target": "Frieza", "type": "enemy", "weight": 10, "description": "Existential enemies; Frieza's near-extinction of the Saiyans drives the series' core conflict" },
+    { "source": "Gohan", "target": "Cell", "type": "enemy", "weight": 10, "description": "The son must surpass the father figure through his own strength" },
+    { "source": "Goku", "target": "Majin Buu", "type": "counter", "weight": 10, "description": "The existential threat that even Ultra Instinct barely manages" },
+    { "source": "Vegeta", "target": "Trunks", "type": "dependent", "weight": 9, "description": "Father-son; the future warrior represents Vegeta's legacy and redemption" },
+    { "source": "Piccolo", "target": "Gohan", "type": "mentor", "weight": 9, "description": "Mentor bond; Piccolo trained Gohan when no one else could" },
+    { "source": "Goku", "target": "Krillin", "type": "ally", "weight": 8, "description": "Best friends since childhood; Krillin is Goku's most consistent ally" },
+    { "source": "Vegeta", "target": "Broly", "type": "enemy", "weight": 9, "description": "The Legendary Super Saiyan threatens Vegeta's claim to elite Saiyan status" }
+  ],
+  "rankings": {
+    "description": "Vertical power hierarchy — tiers represent exponential transformation multipliers rather than linear gaps",
+    "tiers": [
+      { "name": "Zeno Tier", "members": ["Zeno"], "description": "Can erase universes with a thought; above all combat systems" },
+      { "name": "Angel Tier", "members": ["Whis", "Vados"], "description": "Assistants to gods; their power exceeds what most mortals can achieve" },
+      { "name": "God Tier", "members": ["Beerus", "Goku (SSG/SSB)", "Vegeta (SSB)"], "description": "Deity-level fighters capable of universe-threatening combat" },
+      { "name": "Ultra Instinct", "members": ["Goku (MUI)"], "description": "Body moves without conscious thought; the ultimate combat technique" },
+      { "name": "Super Saiyan Blue", "members": ["Goku", "Vegeta", "Trunks"], "description": "Godly ki with Super Saiyan power; the top mortal tier" },
+      { "name": "Super Saiyan 3", "members": ["Goku", "Gotenks"], "description": "400x multiplier; massive power with extreme ki drain" },
+      { "name": "Super Saiyan 2", "members": ["Gohan", "Vegeta"], "description": "100x multiplier; the standard serious fight baseline" },
+      { "name": "Super Saiyan", "members": ["Most fighters"], "description": "50x multiplier; the iconic transformation" },
+      { "name": "Base Tier", "members": ["Krillin", "Piccolo", "Yamcha"], "description": "Pre-transformation power; the human ceiling" }
+    ]
+  },
+  "systemQuestions": [
+    {
+      "question": "Why does Goku keep training even after becoming the strongest?",
+      "answer": "Because Goku's motivation isn't to be the strongest — it's to find the limit and then exceed it. His satisfaction comes from the process of growth, not the destination of power. This philosophy is what makes him perpetually dangerous.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "Why is Gohan stronger than Goku but fights less?",
+      "answer": "Gohan's structural position is 'unused potential.' His power ceiling is never reached because he doesn't want to fight. When he does fight at full capacity, he exceeds Goku because his latent potential was always greater. The system rewards desire, and Gohan's desire is to study, not fight.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "What makes Ultra Instinct different from other transformations?",
+      "answer": "Every other transformation amplifies power output — more ki, more destruction. Ultra Instinct removes the thinking from combat entirely. Instead of deciding to dodge and then dodging, the body dodges before the decision is made. This is fundamentally different: it's optimization of existing power rather than multiplication of it.",
+      "tabIndex": 1,
+      "sectionId": "power",
+      "tabLabel": "Power System"
+    },
+    {
+      "question": "Why does the Zenkai Boost only apply to Saiyans?",
+      "answer": "The Zenkai Boost is the system's post-failure reward mechanic for the Saiyan race. It turns near-death into competitive advantage, which means Saiyans who fight harder and lose more actually grow faster. This creates a structural incentive toward aggressive, high-risk combat that explains the Saiyan reputation for warrior culture.",
+      "tabIndex": 2,
+      "sectionId": "rules",
+      "tabLabel": "Rules"
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Saiyan Genocide",
+      "trigger": "Frieza orders the destruction of the Saiyan homeworld to prevent a potential uprising",
+      "consequence": "Most Saiyans are killed; Goku is sent to Earth as an infant and survives; Vegeta's trauma defines his entire character arc",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The founding trauma of DBZ — the near-extinction of the Saiyan race by their galactic employer sets the entire power hierarchy in motion and creates the conditions for every subsequent conflict.",
+      "systemDesc": "A preemptive institutional violence event — the most powerful military contractor in the galaxy eliminating its most dangerous employees to prevent future competition. This founding violence creates the system's most persistent antagonist (Vegeta's hatred of Frieza) and protagonist (Goku's existence as a surviving weapon)."
+    },
+    {
+      "name": "Goku Achieves Super Saiyan",
+      "trigger": "Frieza kills Krillin; Goku's rage triggers the legendary transformation",
+      "consequence": "The first transformation permanently shifts the power balance; Frieza's numerical superiority becomes irrelevant",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The first Super Saiyan transformation in centuries — Goku's rage at seeing his best friend murdered unlocks a power multiplier that fundamentally changes the series' power ceiling.",
+      "systemDesc": "A single emotional trigger that permanently unlocks an exponential tier — this event proves the psychology-gating mechanism of the transformation system and establishes the emotional anchor that defines every subsequent transformation in the series."
+    },
+    {
+      "name": "Cell Achieves Perfect Form",
+      "trigger": "Cell absorbs Android 18 and completes his biological perfection",
+      "consequence": "Cell becomes the most dangerous mid-tier threat; forces Gohan's hidden potential into the open",
+      "timelinePosition": "Mid Arc",
+      "loreDesc": "The absorption mechanic — Cell literally consuming the Androids to achieve his perfect form — demonstrates that growth in this system isn't just about training, it's about acquisition.",
+      "systemDesc": "A hybrid acquisition event — Cell's perfect form is achieved not through training but through forced combination of external components. This represents a corruption of the power system through biological engineering."
+    },
+    {
+      "name": "Majin Buu Released",
+      "trigger": "Babidi's magic frees the ancient Buu from his containment",
+      "consequence": "The most chaotic entity in the cosmos begins absorbing fighters; no ki-based analysis can predict his behavior",
+      "timelinePosition": "Mid-Late Arc",
+      "loreDesc": "Buu's release represents the system's upper bound before divine intervention — an entity whose power follows no rules and whose behavior follows no logic.",
+      "systemDesc": "A chaos variable entering the equilibrium — Buu's magic-based physiology bypasses the ki sensing system entirely, making him invisible to the information layer that normally governs all combat decisions."
+    },
+    {
+      "name": "Goku Achieves Super Saiyan God",
+      "trigger": "Goku channels godly ki from five pure-hearted Saiyans",
+      "consequence": "First mortal to reach divine tier; permanently raises the power ceiling; angers Beerus",
+      "timelinePosition": "Late Arc",
+      "loreDesc": "The first time a mortal achieves god-level power — the God transformation permanently expands what is possible within the system and opens the door to god-level combat.",
+      "systemDesc": "A ceiling breach event — the Super Saiyan God transformation proves that the mortal/divine boundary is permeable, fundamentally changing the system's power ceiling."
+    },
+    {
+      "name": "Goku Masters Ultra Instinct",
+      "trigger": "Goku pushes past his limit against Jiren in the Tournament of Power",
+      "consequence": "The first mortal to achieve complete combat autonomy; removes conscious thought from the combat equation",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "Ultra Instinct is the logical endpoint of the ki system — by removing the thinking from fighting, Goku transcends the need for power comparisons entirely.",
+      "systemDesc": "A system convergence event — Ultra Instinct represents the point where the ki system's final constraint (reaction time) is removed, achieving the theoretical maximum effectiveness of any given power level."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Ultra Instinct",
+      "ruleViolated": "All combat requires conscious decision — reaction time is a hard constraint",
+      "loreDesc": "A state where the body moves without conscious thought — the only technique that bypasses reaction time entirely. An anomaly in the ki system since it doesn't amplify power, it optimizes usage.",
+      "systemDesc": "A consciousness bypass protocol — Ultra Instinct removes the decision from combat entirely, making it the only state where power level doesn't determine hit probability."
+    },
+    {
+      "name": "Zenkai Boost",
+      "ruleViolated": "Combat results in net power loss through injury and exhaustion",
+      "loreDesc": "The only power-up that requires near-death — a post-failure reward unique to Saiyans that makes losing beneficial. Saiyans who survive near-death emerge stronger than before.",
+      "systemDesc": "A post-failure reward mechanic that inverts the normal cost of combat — instead of depleting resources, high-intensity near-death experiences actually increase a Saiyan's power ceiling."
+    },
+    {
+      "name": "Potara Fusion",
+      "ruleViolated": "Total power is determined by individual ki reserves and training",
+      "loreDesc": "Two beings become one; the system's only explicit power addition rather than multiplication. Goku and Vegeta's Vegito exceeds both individuals but has a time limit.",
+      "systemDesc": "A node combination event — fusion is the only way to add two fighters' power levels rather than multiply them, making it a special-case upgrade path that creates temporary nodes stronger than any individual."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Ki Sensing",
+      "defender": "Ki Suppression",
+      "mechanic": "Fighters can suppress their ki signature to appear weaker than they are, creating ambush opportunities against opponents who rely on power level assessment.",
+      "loreDesc": "The most basic tactical layer — by hiding true power, weaker fighters can set up stronger first strikes against overconfident opponents."
+    },
+    {
+      "attacker": "Raw Power",
+      "defender": "Speed and Technique",
+      "mechanic": "Sufficient speed allows dodging attacks that have already been launched — Goku vs. Jiren demonstrates that speed can overcome superior power through evasion rather than confrontation.",
+      "loreDesc": "The counter to the power hierarchy — speed and precision energy attacks like the Kamehameha allow fighters to score hits against opponents who are nominally stronger."
+    },
+    {
+      "attacker": "Physical Strength",
+      "defender": "Energy Shield",
+      "mechanic": "Ki can be projected outward to create defensive barriers — Tien's Solar Flare creates a light-based flash that disrupts attack coordination.",
+      "loreDesc": "The defensive layer — ki barriers and sensory disruption techniques like Solar Flare create temporary protection against overwhelming physical power."
+    },
+    {
+      "attacker": "Emotional State",
+      "defender": "Psychological Control",
+      "mechanic": "Since transformations require emotional triggers, manipulating a fighter's emotional state can prevent or force transformation access.",
+      "loreDesc": "The psychology layer — by controlling emotional triggers (keeping enemies calm to prevent SSJ, or forcing rage to unlock it), opponents can manipulate the system's upgrade path."
+    },
+    {
+      "attacker": "Fusion",
+      "defender": "Time Limit",
+      "mechanic": "Fusion has a built-in duration — sufficiently extended combat can cause defusion mid-battle, returning both fighters to their individual (and now exhausted) base forms.",
+      "loreDesc": "The risk of the power-addition mechanic — Fusion Dance and Potara both have time limits that create a strategic pressure to end fights before defusion occurs."
+    },
+    {
+      "attacker": "Destructo Disc",
+      "defender": "Regeneration",
+      "mechanic": "Krillin's signature technique bypasses physical power entirely — it cuts through anything regardless of ki level, making it effective against regenerators who rely on durability.",
+      "loreDesc": "The system's equalizer — Destructo Disc is a technique that has no power ceiling, only precision requirement. It can theoretically cut anything."
+    }
+  ],
+  "tags": ["ki", "saiyan", "power-scaling", "transformation", "super-saiyan", "z-fighters", "frieza", "cell", "buu", "cosmic"]
+}

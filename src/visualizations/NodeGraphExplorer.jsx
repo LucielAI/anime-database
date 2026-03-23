@@ -477,6 +477,8 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
                   src={selectedChar.imageUrl}
                   alt={`${selectedChar.name} portrait — ${selectedChar.title}`}
                   className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
                   onError={() => setImgFailed(prev => ({ ...prev, [selectedChar.name]: true }))}
                 />
               ) : (

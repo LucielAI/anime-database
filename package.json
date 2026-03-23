@@ -15,7 +15,9 @@
     "test:watch": "vitest",
     "validate:all": "node scripts/auditPayloads.js && node scripts/validateCatalogCoverage.js && node scripts/validateIndexing.js",
     "validate:indexing": "node scripts/validateIndexing.js",
-    "validate:catalog": "node scripts/validateCatalogCoverage.js"
+    "validate:catalog": "node scripts/validateCatalogCoverage.js",
+    "pipeline": "node scripts/runPipeline.js",
+    "pipeline:check": "node scripts/runPipeline.js --dry-run"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.98.0",
@@ -34,7 +36,7 @@
     "@tailwindcss/postcss": "^4.2.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.2.0",
+    "@vitejs/plugin-react": "^6.0.1",
     "autoprefixer": "^10.4.27",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -42,8 +44,9 @@
     "globals": "^16.5.0",
     "playwright": "^1.58.2",
     "postcss": "^8.5.8",
+    "rollup-plugin-visualizer": "^7.0.1",
     "tailwindcss": "^4.2.1",
-    "vite": "^7.3.1",
+    "vite": "^8.0.1",
     "vitest": "^4.0.18"
   }
 }

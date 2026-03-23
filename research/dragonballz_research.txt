@@ -1,0 +1,98 @@
+# Dragon Ball Z — Research File
+
+**malId:** 813
+**System Type:** Counter-Tree (ki-based power scaling)
+**Renderer:** CounterTreeExplorer
+
+---
+
+## System Thesis
+
+Dragon Ball Z operates as a vertical power hierarchy where ki — the universal life energy — is the sole determinant of combat outcomes. The analytical lens is quantitative: power levels, transformation stages, and the brutal arithmetic of who can destroy what. The entire narrative tension comes from escalating threats that force protagonists up the transformation ladder, with the core mechanic being that ki can be sensed, suppressed, and exponentially amplified through training. The system is fundamentally a climbing problem — can our heroes train fast enough to match the next extinction-level threat?
+
+---
+
+## Power System Architecture
+
+- **Ki:** The universal life energy that powers all combat abilities. Drawn from the body and spirit, ki can be sensed by trained individuals, allowing strategic assessment of opponents before combat begins. Suppressing ki (zenkai) is a core tactical skill.
+- **Power Levels:** Quantified combat capability — the series famously introduced the scouter's numeric power level system before dismantling it when numbers became meaningless against transformation tiers.
+- **Transformations:** The primary power multiplication mechanic. Each transformation tier (Super Saiyan, Super Saiyan 2, Super Saiyan 3, Super Saiyan God, Super Saiyan Blue, Ultra Instinct) represents an order-of-magnitude leap in ki output.
+- **Ki Sensing:** The information-gathering system — fighters who can sense ki know exactly who is the biggest threat, allowing strategic targeting of high-value nodes.
+- **Energy Attacks:** Ki materialized as ranged weapons (Kamehameha, Final Flash, Special Beam Cannon) — the skill expression layer that separates trained fighters from raw power brutes.
+- **Zenkai Boost:** A post-near-death power amplification unique to Saiyans — the system's built-in comeback mechanic that rewards near-defeat with exponential growth.
+
+---
+
+## Key Characters (Combat Power Nodes)
+
+1. **Goku** — The protagonist hub; Saiyan with unprecedented ki control; master of MUI (Ultra Instinct). His role is to reach the next transformation tier before the threat becomes existential.
+2. **Vegeta** — The rival node; Prince of all Saiyans; driven by the need to never be beneath Goku. Represents the alternative path to power through pride and hatred.
+3. **Frieza** — The systemic threat; a galactic warlord whose power-to cruelty ratio is unmatched. His existence forced the Saiyans to the brink of extinction.
+4. **Cell** — The absorption node; a bio-engineered perfect warrior incorporating Saiyan, Namekian, and Frieza's DNA. Represents the system's corruption through forced hybridization.
+5. **Majin Buu** — The chaos node; an ancient magical entity of pure destructive potential with no logical upper bound. The most existential threat before Zeno.
+6. **Gohan** — The dormant apex; possesses more latent potential than any other mortal. His reluctance to train represents the system's tension between capability and will.
+7. **Piccolo** — The Namekian fusion node; through strategic fusions he becomes a critical support fighter and Gohan's mentor.
+8. **Trunks** — The timeline anomaly; a future warrior whose existence represents the system's branching failure states.
+9. **Krillin** — The human baseline; the strongest non-Saiyan mortal whose continued survival against god-tier threats is itself a form of power.
+10. **Broly** — The berserker apex; a Legendary Super Saiyan whose power exceeds rational control — the system without discipline.
+
+---
+
+## Key Factions
+
+1. **Z Fighters** — The protagonist coalition; a loose alliance of Earth-based warriors united by Goku's influence. The defining trait is moral restraint — they fight to protect, not conquer.
+2. **Saiyan Remnants** — Goku, Vegeta, and their offspring; the surviving members of a genocided warrior race whose bloodline carries the system's most powerful nodes.
+3. **Frieza Force** — The galactic empire; a hierarchical military organization that subjugated worlds for profit. Represents institutional power without ethical constraint.
+4. **Godly Beings** — Angels, Kaioshins, and Zeno; the cosmic oversight layer that exists above mortal conflict but intervenes when threats become universe-threatening.
+5. **Buu Entities** — Majin Buu and his various forms; pure chaos factors that cannot be reasoned with or predicted through ki sensing.
+
+---
+
+## Relationships
+
+- Goku ↔ Vegeta: rivals who push each other to new power heights
+- Goku ↔ Gohan: father-son; Gohan's potential is the family's ace in the hole
+- Vegeta ↔ Frieza: historical master-servant relationship; Vegeta's trauma defines his pride
+- Goku ↔ Frieza: existential enemies; Frieza's near-extinction of the Saiyans drives the entire series
+- Gohan ↔ Cell: the son must surpass the father figure through his own strength
+- Goku ↔ Majin Buu: the existential threat that even Ultra Instinct barely manages
+- Vegeta ↔ Trunks: father-son; the future warrior represents Vegeta's legacy
+
+---
+
+## Causal Events (Key System Shifts)
+
+1. **Saiyan Genocide** — Frieza destroys the Saiyan homeworld; the founding trauma that sets the entire power hierarchy in motion.
+2. **Frieza's First Arrival on Earth** — Goku achieves Super Saiyan; the transformation that shifts the balance from Frieza's numerical superiority to Saiyan potential.
+3. **Cell's Perfect Form** — Absorption of #18 makes Cell the most dangerous mid-tier threat; forces Gohan's hidden potential into the open.
+4. **Majin Buu's Release** — The most chaotic entity in the cosmos breaks free; represents the system's upper bound before divine intervention.
+5. **Battle of Gods** — Goku achieves Super Saiyan God; the first time a mortal reaches divine tier, permanently raising the power ceiling.
+6. **Zeno Summoning** — Goku's casual summoning of the universe's ultimate authority represents the system's final failsafe.
+
+---
+
+## Anomalies
+
+- Ultra Instinct: A state where the body moves without conscious thought — the only technique that bypasses reaction time entirely. An anomaly in the ki system since it doesn't amplify power, it optimizes usage.
+- Zenkai Boost: The only power-up that requires near-death; a mechanic that rewards punishment.
+- Potara Fusion: Two beings become one; the system's only explicit power addition rather than multiplication.
+
+---
+
+## System Rules
+
+1. **Ki sensing reveals power hierarchy** — You always know who is strongest nearby. Information is power.
+2. **Transformation multiplies power exponentially** — Each tier is an order of magnitude stronger, not linear.
+3. **Emotional triggers unlock latent potential** — Rage, desperation, and love are the keys to transformation.
+4. **Training beats talent long-term** — The protagonists always win through harder training, not raw gifts.
+5. **Near-death amplifies Saiyan power** — The zenkai boost rewards failure with growth.
+
+---
+
+## Counterplay
+
+- Ki suppression hides true power from sensors
+- Speed kills brute force (Goku vs. Jiren demonstrates this)
+- Energy attacks can overcome physical power disparities
+- Transformation requires emotional trigger — manipulate emotions to prevent or force it
+- Fusion creates a temporary node stronger than either component

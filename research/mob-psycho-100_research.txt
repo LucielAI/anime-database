@@ -1,0 +1,32 @@
+# Mob Psycho 100 — Research File
+
+**malId:** 32182
+**System Type:** Affinity-Matrix (psychic power system)
+**Renderer:** AffinityMatrixExplorer
+
+---
+
+## System Thesis
+
+Mob Psycho 100 operates as an affinity-matrix where psychic power is distributed across individuals with radically different relationships to the spiritual world. The analytical lens is psychological: power level doesn't determine outcome — emotional state, acceptance, and genuine human connection determine it. The series' thesis is that overwhelming psychic power is meaningless without the emotional intelligence to use it responsibly. The core mechanic is emotional pressure — Mob suppresses his power to avoid hurting others, and when that pressure exceeds his threshold, catastrophic psychic events occur.
+
+---
+
+## Power System Architecture
+
+- **Psychic Powers (Esper):** The primary power system — telekinesis, telepathy, and psychic projection. Power levels vary wildly from street-level psychics to reality-warping apexes.
+- **Spiritual Affinity:** The connection between espers and spirits. High spiritual affinity means stronger psychic resonance and more powerful spirit interactions.
+- **Body Improvement:** The anti-esper path — physical training that achieves comparable results to psychic powers through discipline alone. Represents the human potential counter to supernatural gifts.
+- **Emotional Suppression:** Mob's unique power management technique — he suppresses 99% of his psychic output to avoid harming others, keeping his emotional pressure at 0%.
+- **100% Emotional Release:** When Mob's suppressed emotions exceed his threshold, he releases 100% psychic power — the system's nuclear option.
+
+---
+
+## Key Characters
+
+1. **Mob (Shigeo Kageyama)** — The protagonist with 100% psychic potential; emotional suppression as a way of life.
+2. **Reigen** — The con-artist psychic mentor who actually understands human psychology better than any esper.
+3. **Ekubo (Dimple)** — A powerful spirit who sees Mob as the key to his own ambitions but gradually becomes genuinely loyal.
+4. **Ritsu Kageyama** — Mob's brother with latent psychic powers; represents the younger sibling's inferiority/superiority dynamic.
+5. **Teruki Hanazawa** — The most naturally talented psychic who learns that power without emotional intelligence is meaningless.
+6. **The Claw President** — A psychic so powerful he believes he deserves to rule non-psychics.

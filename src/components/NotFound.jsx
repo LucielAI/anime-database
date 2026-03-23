@@ -41,7 +41,7 @@ export default function NotFound() {
           <p className="text-xs text-gray-400 leading-relaxed mb-4">
             This universe doesn't exist in the archive yet — or the path you followed led somewhere that collapsed.
           </p>
-          <p className="text-[11px] text-gray-500 leading-relaxed">
+          <p className="text-[11px] text-gray-400 leading-relaxed">
             The archive currently covers {UNIVERSE_CATALOG.length} universes. Every path not taken is a system waiting to be mapped.
           </p>
         </div>
