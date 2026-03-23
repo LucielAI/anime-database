@@ -73,8 +73,8 @@ function buildSitemap(slugs) {
     { loc: `${BASE_URL}/insights`, priority: '0.8', changefreq: 'weekly', lastmod },
   ]
 
-  // Insights/post slugs — from INSIGHTS object keys in InsightPost.jsx
-  const INSIGHT_SRC = path.join(__dirname, '../src/components/InsightPost.jsx')
+  // Insights/post slugs — from INSIGHTS_BY_SLUG keys in src/data/insights-content.js
+  const INSIGHT_SRC = path.join(__dirname, '../src/data/insights-content.js')
   let insightSlugs = []
   try {
     const s = fs.readFileSync(INSIGHT_SRC, 'utf8')
@@ -182,7 +182,7 @@ const xml = buildSitemap(slugs)
 fs.writeFileSync(OUT_FILE, xml, 'utf8')
 
 const blogSlugs = getBlogSlugs()
-const INSIGHT_SRC = path.join(__dirname, '../src/components/InsightPost.jsx')
+const INSIGHT_SRC = path.join(__dirname, '../src/data/insights-content.js')
 let insightSlugs = []
 try {
   const s = fs.readFileSync(INSIGHT_SRC, 'utf8')

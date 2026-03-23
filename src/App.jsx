@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense, useMemo, useState, useRef } from 'react'
+import React, { useEffect, lazy, Suspense, useMemo, useState, useRef } from 'react'
 import { Routes, Route, useNavigate, useParams, Link, useLocation, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug, warmUniverseBySlug } from './data/index.js'
 import { ExternalLink, ArrowRight, Star, ListFilter, Search, Compass, Route as RouteIcon, LibraryBig, Network, ShieldAlert, Clock3, Landmark, Repeat2, Coins, BookOpen } from 'lucide-react'
@@ -95,7 +95,7 @@ function UniverseLinkCard({ data, compact = false, density = 'default', priority
   const [imageFailed, setImageFailed] = useState(false)
   const [viewCount] = useState(() => {
     if (typeof window === 'undefined') return 0
-    const stored = JSON.parse(window.localStorage.getItem('archive:views') || '{}')
+    const stored = JSON.parse(window.localStorage.getItem('anime-archive:view-counts:v1') || '{}')
     return Number(stored[data.id] || 0)
   })
 
@@ -666,6 +666,8 @@ function Home() {
           <span className="text-gray-700">·</span>
           <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</a>
           <span className="text-gray-700">·</span>
+          <a href="/search" className="hover:text-gray-400 transition-colors">Search</a>
+          <span className="text-gray-700">·</span>
           <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="hover:text-gray-400 transition-colors">Contact</a>
         </div>
         <p className="text-[10px] tracking-[0.2em] uppercase text-gray-300">Created by Hashi.Ai</p>
@@ -804,6 +806,30 @@ function UniversesCatalogRoute() {
   )
 }
 
+class DashboardErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-[#050508] text-white font-mono flex items-center justify-center">
+          <div className="text-center px-6">
+            <p className="text-[10px] tracking-[0.25em] uppercase text-red-400/80 mb-2">Failed to Load</p>
+            <p className="text-sm text-gray-400">Something went wrong displaying this universe.</p>
+            <a href="/" className="mt-4 inline-block text-[10px] tracking-[0.2em] uppercase text-cyan-400/60 hover:text-cyan-400 transition-colors">← Return to Archive</a>
+          </div>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
+
 function UniverseRoute() {
   const navigate = useNavigate()
   const { id } = useParams()
@@ -886,9 +912,11 @@ function UniverseRoute() {
       <Link to="/universes" className="fixed top-6 left-6 z-50 px-4 py-2 bg-black/60 hover:bg-white/10 border border-white/10 rounded-lg text-[10px] text-gray-300 tracking-[0.2em] uppercase">
         ← Catalog
       </Link>
-      <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
-        <Dashboard data={data} />
-      </Suspense>
+      <DashboardErrorBoundary>
+        <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
+          <Dashboard data={data} />
+        </Suspense>
+      </DashboardErrorBoundary>
     </div>
   )
 }
