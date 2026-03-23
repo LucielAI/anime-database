@@ -123,7 +123,7 @@ export const UNIVERSE_CATALOG = [
     stats: { characters: 20, powerSystem: 4, rules: 4 }
   },
   {
-    id: 'blue-lock', anime: 'Blue Lock', tagline: '300 forwards enter Blue Lock. Only one egoist survives.', malId: 49186, visualizationHint: 'counter-tree', visualizationReason: 'Blue Lock is structurally a counter-tree: each striker\'s ego vision competes as an individual optimization path, and the Blue Lock project eliminates collaborative paths until only pure individual capability remains.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/7/126929.jpg',
+    id: 'blue-lock', anime: 'Blue Lock', tagline: '300 forwards enter Blue Lock. Only one egoist survives.', malId: 49596, visualizationHint: 'counter-tree', visualizationReason: 'Blue Lock is structurally a counter-tree: each striker\'s ego vision competes as an individual optimization path, and the Blue Lock project eliminates collaborative paths until only pure individual capability remains.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/1258/126929.jpg',
     themeColors: { primary: '#1d4ed8', secondary: '#0f172a', accent: '#3b82f6', glow: 'rgba(29,78,216,0.35)', tabActive: '#3b82f6', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#93c5fd', modeGlow: 'rgba(59,130,246,0.3)', heroGradient: 'rgba(10,15,35,0.95)' },
     stats: { characters: 6, powerSystem: 4, rules: 4 }
   },
