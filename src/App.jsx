@@ -363,7 +363,7 @@ function Home() {
           </div>
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <Link to="/universes" className="text-[10px] tracking-[0.16em] uppercase text-gray-400 hover:text-white transition-colors">Browse all universes →</Link>
-            <button onClick={() => setSearchOpen(true)} className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase text-gray-500 hover:text-cyan-400 transition-colors">
+            <button onClick={() => setSearchOpen(true)} className="flex items-center gap-1.5 text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-full border border-white/10 hover:border-cyan-400/40 text-gray-400 hover:text-cyan-400 bg-white/5 hover:bg-cyan-400/10 transition-all">
               <Search className="w-3.5 h-3.5" />
               Search
             </button>
