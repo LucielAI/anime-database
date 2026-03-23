@@ -1,571 +1,589 @@
 {
-  "anime": "One Punch Man",
-  "tagline": "A hero who defeats everything with one punch comedically breaks the entire power-scaling economy.",
-  "malId": 30276,
+  "anime": "Fire Force",
+  "tagline": "Spontaneous combustion meets Breathing arts — Company 8 fights to save Tokyo.",
+  "malId": 38671,
   "themeColors": {
-    "primary": "#ca8a04",
+    "primary": "#dc2626",
     "secondary": "#1c1917",
-    "accent": "#ef4444",
-    "glow": "rgba(239,68,68,0.35)",
-    "tabActive": "#eab308",
+    "accent": "#f97316",
+    "glow": "rgba(249,115,22,0.35)",
+    "tabActive": "#ef4444",
     "badgeBg": "rgba(28,25,23,0.55)",
-    "badgeText": "#fef08a",
-    "modeGlow": "rgba(239,68,68,0.3)",
+    "badgeText": "#fecaca",
+    "modeGlow": "rgba(220,38,38,0.3)",
     "heroGradient": "rgba(2,6,23,0.94)"
   },
-  "visualizationHint": "node-graph",
-  "visualizationReason": "The Hero Association creates a rigid command-and-rank hierarchy where hero performance metrics determine class placement, resource allocation, and crisis routing—a pure node-graph where edges represent institutional authority and response coordination.",
+  "visualizationHint": "counter-tree",
+  "visualizationReason": "Fire Force's power system revolves around Fire Breathing forms that directly counter each other in rock-paper-scissors relationships, and the Adolla Burst reveals create a branching counter-tree of elemental advantages—perfect for a counter-tree visualization where each Breathing type branches into its weaknesses and strengths.",
   "headerFlavor": {
-    "loreQuote": "I became a hero for fun. Now I'm bored.",
-    "sysWarning": "// [SYS_WARN]: CLASS-S OVERRIDE DETECTED — ALLOCATION MODEL UNRESPONSIVE",
+    "loreQuote": "When you play with fire, you get burned. When I play with fire, someone else gets burned.",
+    "sysWarning": "// [SYS_WARN]: SPONTANEOUS COMBUSTION PROTOCOL ACTIVE — INFERNAL BREACH COUNT: UNKNOWN",
     "sysWarningColor": "red"
   },
   "backgroundMotif": "noise",
   "revealOverlay": "glow-border-soft",
-  "introductionSummary": "One Punch Man inverts the entire shonen power fantasy: Saitama trains so intensely that he gains the ability to defeat any opponent with a single blow, completely breaking the hero-villain escalation ladder. The comedy and drama both emerge from the same source—his overwhelming power makes every fight meaningless, which is the cruelest joke in a genre built on fight escalation. Meanwhile the Hero Association's bureaucratic rank system tries and fails to categorize him.",
+  "introductionSummary": "Fire Force is set in a world where spontaneous human combustion creates 'Infernals'—monsters made of living flame—and only special fire departments with pyrokinetic abilities can contain them. Shinra Kusakabe joins Company 8 to find the truth about his mother's death and his own mysterious Blue Fire feet. The power system is Breathing—each Fire Soldier develops a specific flame type that has defined strengths and weaknesses against other types, creating a tactical counter-tree where knowing your opponent's Breath type determines whether you live or die.",
   "aiInsights": {
-    "casual": "Saitama is so stupidly strong that he beats every villain with one punch, which sounds awesome but actually makes him depressed because there's no challenge left. The show is really about what happens to a guy who wins at everything before the story even starts.",
-    "deep": "One Punch Man runs a zero-challenge terminal state: Saitama's power curve flatlines the entire threat-response economy. The Hero Association's ranking infrastructure becomes irrelevant for the one actor who can override every classification, creating a system paradox where institutional categorization cannot contain the phenomenon it's designed to measure. Every subsequent hero and villain exists in the shadow of this pre-existing ceiling."
+    "casual": "People randomly explode into fire monsters, and only teams of firefighters who can also shoot fire can stop them. Shinra's got blue foot-fires that are somehow special, and the whole thing ties back to some ancient burning god.",
+    "deep": "Fire Force runs a rock-paper-scissors power system where each of the eight Fire Breathing types directly counters another, creating a closed-loop counter balance. The Great Cataclysm and the Evangelist's plan exploit this by forcing a predetermined combat outcome through type-matching. Shinra's Adolla Burst—the elusive 'ninth' Breath—breaks the counter logic by operating outside the established type chart, which is why he's simultaneously the most valuable and most dangerous person in the system."
   },
   "powerSystem": [
     {
-      "name": "Absolute Strength",
-      "subtitle": "One-Punch Lethal Output",
-      "loreDesc": "Saitama's training produced physical output that exceeds every opponent's total durability—a pure power ceiling that no combat technique can overcome.",
-      "systemDesc": "A terminal-state combat node where damage output permanently exceeds all known defense values in the universe.",
+      "name": "Fire Breathing",
+      "subtitle": "Pyrokinetic Combat Classification",
+      "loreDesc": "Fire Soldiers manifest specific flame types through training, each with unique properties that determine combat matchups.",
+      "systemDesc": "A typed-elemental combat system where each type has defined advantage/disadvantage relationships against other types, creating tactical rock-paper-scissors dynamics.",
+      "icon": "Flame",
+      "color": "orange-400",
+      "signatureMoment": "Arthur Boyle discovers he has a 'Sword' Breath type that's completely useless until it isn't.",
+      "loreSubtitle": "Eight types, one answer",
+      "systemSubtitle": "Typed elemental counter system"
+    },
+    {
+      "name": "Adolla Burst",
+      "subtitle": "The Ninth Breathing / Blue Fire",
+      "loreDesc": "A legendary ninth flame type associated with the Great Cataclysm and the Evangelist's true plan—manifesting as pure white-blue fire.",
+      "systemDesc": "An anomaly node that operates outside the established type counter-chart, making it impossible to counter with standard Fire Breathing doctrine.",
       "icon": "Zap",
-      "color": "yellow-400",
-      "signatureMoment": "Defeating Lord Boros with a single Serious Series: Serious Punch after Boros expected an actual fight.",
-      "loreSubtitle": "The ceiling that ends all ceilings",
-      "systemSubtitle": "Flatlined power curve"
+      "color": "blue-400",
+      "signatureMoment": "Shinra manifests Blue Fire for the first time, revealing he's connected to the Great Cataclysm.",
+      "loreSubtitle": "The flame that breaks the system",
+      "systemSubtitle": "Counter-immune fire type"
     },
     {
-      "name": "Serious Series",
-      "subtitle": "Reserved Combat Protocol",
-      "loreDesc": "Saitama holds back in every fight. The 'Serious' series represents the small fraction of his power he occasionally bothers to use.",
-      "systemDesc": "Output throttling mechanism that maintains narrative stakes by keeping Saitama's true ceiling conceptually vague.",
-      "icon": "Shield",
-      "color": "amber-400",
-      "signatureMoment": "Using a Serious Headbutt against Garou that cracks the atmosphere.",
-      "loreSubtitle": "The fraction he bothers to show",
-      "systemSubtitle": "Throttled output protocol"
-    },
-    {
-      "name": "Hero Association Ranking",
-      "subtitle": "Bureaucratic Power Classification",
-      "loreDesc": "The Hero Association classifies heroes by combat test performance, public appeal, and mission completion, creating S/A/B/C class hierarchies.",
-      "systemDesc": "Institutional ranking infrastructure that fails to correctly classify Saitama despite repeated evidence of his supremacy.",
-      "icon": "Star",
+      "name": "Infernalization",
+      "subtitle": "Spontaneous Human Combustion",
+      "loreDesc": "When combustion activates internally rather than through Breathing, humans become Infernals—monsters of living flame that attack indiscriminately.",
+      "systemDesc": "A corruption event that converts human nodes into hostile fire-based entities, representing the catastrophic failure state of the combustion system.",
+      "icon": "Skull",
       "color": "red-400",
-      "signatureMoment": "Saitama placed in C-Class after a physical test where he crushed the metrics so thoroughly the machine broke.",
-      "loreSubtitle": "The system that can't measure the system-breaker",
-      "systemSubtitle": "Classificatory failure state"
+      "signatureMoment": "A familiar face turning into an Infernal, forcing Company 8 to fight someone they knew.",
+      "loreSubtitle": "When humans become fuel",
+      "systemSubtitle": "Internal combustion corruption"
     },
     {
-      "name": "Competitive Destruction",
-      "subtitle": "The Boredom Spiral",
-      "loreDesc": "Having no equal produces existential depression. Saitama's real enemy is not any villain—it's the meaninglessness of absolute victory.",
-      "systemDesc": "A psychological terminal state where victory becomes mechanized and therefore valueless.",
-      "icon": "Moon",
-      "color": "slate-400",
-      "signatureMoment": "Admitting to King that he's forgotten what victory feels like.",
-      "loreSubtitle": "The cost of winning everything",
-      "systemSubtitle": "Post-victory depression state"
+      "name": "Great Cataclysm",
+      "subtitle": "The Founding Fire Event",
+      "loreDesc": "An ancient disaster 250 years ago created the current world and is directly connected to the Evangelist's plan to recreate it.",
+      "systemDesc": "The origin-state event that established the current combustion system's parameters and created the conditions for the Evangelist's end-goal.",
+      "icon": "Flame",
+      "color": "amber-400",
+      "signatureMoment": "The revelation that the Great Cataclysm was intentional—and is being planned again.",
+      "loreSubtitle": "The fire that made the world",
+      "systemSubtitle": "Founding corruption event"
     }
   ],
   "rankings": {
-    "systemName": "Hero Association Class Hierarchy",
-    "loreName": "Hero Association Combat & Popularity Ladder",
-    "topTierName": "S-Class Hero",
-    "topTierLore": "The world's most powerful heroes who handle Dragon-level and above threats.",
-    "topTierSystem": "Maximum institutional throughput nodes allocated to civilization-scale threat response.",
+    "systemName": "Fire Soldier Company Hierarchy",
+    "loreName": "Tokyo Imperial Fire Defense Network",
+    "topTierName": "Company Captain / 2nd Generation",
+    "topTierLore": "Company leaders who possess 2nd Generation pyrokinetic abilities, giving them additional fire manipulation beyond standard Breathing.",
+    "topTierSystem": "High-output combat nodes with elemental type advantage and company-level command authority.",
     "tiers": [
       {
-        "name": "S-Class Hero",
-        "loreDesc": "Top-tier heroes handling Dragon-level threats and above. Each has a unique overwhelming specialty.",
-        "systemDesc": "Peak institutional response nodes with maximum resource allocation and independent operational authority."
+        "name": "Company Captain (2nd Generation)",
+        "loreDesc": "Veterans with second-generation pyrokinetic abilities and company command authority.",
+        "systemDesc": "Command-layer nodes combining tactical expertise with superior fire type output."
       },
       {
-        "name": "A-Class Hero",
-        "loreDesc": "Strong heroes who handle Tiger-level threats and serve as S-Class backup.",
-        "systemDesc": "High-throughput secondary response nodes below the elite tier."
+        "name": "Active Fire Soldier (1st Generation)",
+        "loreDesc": "Standard Fire Soldiers who use the eight standard Breathing types.",
+        "systemDesc": "Core response nodes operating within the typed counter-system."
       },
       {
-        "name": "B-Class Hero",
-        "loreDesc": "Competent heroes building reputation toward A-Class promotion.",
-        "systemDesc": "Mid-tier institutional nodes with growth potential toward higher classification."
+        "name": "Rookie / Provisional",
+        "loreDesc": "New recruits still learning their Breath type and company procedures.",
+        "systemDesc": "Entry-level nodes with unconfirmed type designation."
       },
       {
-        "name": "C-Class Hero",
-        "loreDesc": "Low-tier heroes handling Tiger and below threats. Saitama starts here.",
-        "systemDesc": "Entry-level institutional nodes with minimal resource allocation."
+        "name": "Infernal (Corrupted)",
+        "loreDesc": "Former humans who underwent spontaneous combustion corruption.",
+        "systemDesc": "Hostile corrupted nodes requiring immediate termination."
       }
     ]
   },
   "characters": [
     {
-      "name": "Saitama",
-      "title": "The Caped Baldy / Class-S Anomaly",
-      "rank": "Unrankable",
-      "dangerLevel": 10,
-      "loreBio": "Dropped out of the hero circuit after becoming too powerful to find an opponent. Joined the Hero Association as a B-Class hero purely to find someone who can challenge him. His power level breaks every combat optimization model.",
-      "systemBio": "Saitama represents the upper ceiling of OPMs power hierarchy — his raw capability makes every other hero's strategic planning irrelevant. He's the answer to \"what if power scaling had no upper bound?\"",
-      "gradientFrom": "slate-900",
-      "gradientTo": "yellow-900",
-      "accentColor": "yellow-300",
-      "icon": "Zap",
-      "signatureMoment": "Defeating Lord Boros with a single punch after the latter expected the fight of his life.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/294388.jpg?s=a56fc5484b23811f3308aad1dc7b8b2e",
-      "malId": 73935,
-      "slug": "saitama",
-      "description": "Bored hero who defeats any opponent with one punch — the tragedy is that winning effortlessly means he can never experience the challenge of combat. Sits at B-Class because he only does hero work as a hobby.",
-      "faction": "Hero Association (B-Class)",
-      "abilities": [
-        {
-          "name": "One-Punch Lethality",
-          "description": "Any opponent can be defeated with a single decisive blow regardless of their power level.",
-          "severity": "fatal"
-        },
-        {
-          "name": "Superhuman Speed",
-          "description": "Can move at speeds that make him effectively invisible to most opponents.",
-          "severity": "high"
-        },
-        {
-          "name": "Superhuman Durability",
-          "description": "Has survived attacks from planetary-level opponents with minimal visible damage.",
-          "severity": "high"
-        }
-      ]
-    },
-    {
-      "name": "Genos",
-      "title": "The Demon Cyborg / S-Class Candidate",
-      "rank": "S-Class (Unofficial)",
-      "dangerLevel": 8,
-      "loreBio": "Severely damaged in a cyborg attack as a teenager. Saved by Dr. Kuseno who rebuilt him as a combat cyborg. Has been searching for the monster responsible ever since, and now serves as Saitama's student.",
-      "systemBio": "Genos runs a maximum-output combat optimization path. Every upgrade increases his power draw, meaning each battle is a test of whether his current specs are sufficient. He continuously self-destructs toward higher capability thresholds.",
-      "gradientFrom": "slate-900",
-      "gradientTo": "orange-900",
-      "accentColor": "orange-400",
-      "icon": "Bolt",
-      "signatureMoment": "Upgrading continuously with each defeat, always returning stronger to pursue Saitama.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/297329.jpg?s=1dd6cf2edbb45d8bd1e654541226901d",
-      "malId": 73979,
-      "slug": "genos",
-      "description": "S-Class cyborg disciple of Saitama. Spends every waking moment upgrading and hunting for meaning in his existence. Sits at the top of the Hero Association rankings through raw power output.",
-      "faction": "Hero Association (S-Class)",
-      "abilities": [
-        {
-          "name": "Incinerator Blasts",
-          "description": "High-temperature directed energy weapons capable of leveling city blocks.",
-          "severity": "high"
-        },
-        {
-          "name": "Adaptive Combat",
-          "description": "After each defeat, Genos analyzes the opponent and upgrades to counter them.",
-          "severity": "high"
-        },
-        {
-          "name": "Cyborg Body",
-          "description": "70% mechanical body providing superhuman strength, speed, and sensor capability.",
-          "severity": "medium"
-        }
-      ]
-    },
-    {
-      "name": "Lord Boros",
-      "title": "Lord Boros / Alien Overlord",
-      "rank": "God-Level Threat",
-      "dangerLevel": 10,
-      "loreBio": "The alien warlord who invades Earth with his berserker crew, seeking a worthy opponent and finding exactly one in Saitama.",
-      "systemBio": "The highest recorded threat-level node whose Meteoric Burst mode still falls catastrophically short of Saitama's base output.",
-      "gradientFrom": "slate-900",
-      "gradientTo": "violet-900",
-      "accentColor": "violet-400",
-      "icon": "Flame",
-      "signatureMoment": "His Meteoric Burst form activates, believing he finally has a fight—and Saitama uses a Serious Punch to end it instantly.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/296541.jpg?s=c2d400466e2fbf37437894ace7c0cc86",
-      "malId": 108235,
-      "slug": "lord-boros",
-      "description": "Alien conqueror seeking Saitama who finally met his match.",
-      "faction": "Alien Invader",
-      "abilities": [
-        {
-          "name": "Meteoric Burst",
-          "description": "Releases energy that propels him at planet-surface-devastating speeds.",
-          "severity": "fatal"
-        },
-        {
-          "name": "Regenerative Collapse",
-          "description": "His body collapses faster than he can regenerate once pushed past his limit.",
-          "severity": "high"
-        }
-      ]
-    },
-    {
-      "name": "Bang",
-      "title": "Silver Fang / S-Class Hero",
-      "rank": "S-Class Hero",
-      "dangerLevel": 8,
-      "loreBio": "The oldest active S-Class hero, a martial arts master whose Water Stream Rock Smashing Fist technique represents the pinnacle of hand-to-hand combat.",
-      "systemBio": "Peak conventional combat node whose martial arts mastery represents the ceiling of technique-based fighting without supernatural augmentation.",
+      "name": "Shinra Kusakabe",
+      "title": "Soleil / Blue Fire User",
+      "rank": "Rookie (Special)",
+      "dangerLevel": 7,
+      "loreBio": "A rookie firefighter with Blue Fire feet who joins Company 8 to find the truth about his mother's involvement in the Great Cataclysm.",
+      "systemBio": "An Adolla Burst node that manifests outside the established type counter-system, making him simultaneously the system's greatest asset and greatest threat.",
       "gradientFrom": "slate-900",
       "gradientTo": "blue-900",
       "accentColor": "blue-400",
-      "icon": "Sword",
-      "signatureMoment": "Teaching Saitama that martial arts fundamentals still matter even when you can one-punch everything.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/492973.jpg?s=15c64fa6b5bb2b6f7eb680ea7febc551",
-      "malId": 81141,
-      "slug": "bang",
-      "description": "Water-stream rock-smashing fist master training martial artists.",
-      "faction": "Hero Association (S-Class)",
+      "icon": "Flame",
+      "signatureMoment": "His Blue Fire activates for the first time, burning away an Infernal's flames with his foot.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/384757.jpg?s=bddb12716b3db79cd579895016120a18",
+      "malId": 133767,
+      "slug": "shinra-kusakabe",
+      "description": "Devil Foot pyrokinetic whose smile covers trauma.",
+      "faction": "Company 8",
       "abilities": [
         {
-          "name": "Water Stream Rock Smashing Fist",
-          "description": "A martial arts technique that redirects opponent force and delivers devastating counter-strikes.",
+          "name": "Adolla Burst (Blue Fire)",
+          "description": "Pure white-blue fire that operates outside the standard type counter-system.",
           "severity": "high"
         },
         {
-          "name": "Martial Arts Mastery",
-          "description": "Decades of combat experience creating instincts that compensate for age-related speed loss.",
+          "name": "Foot Fire Boost",
+          "description": "Can propel himself at high speed using flames expelled from his feet.",
           "severity": "medium"
         }
       ]
     },
     {
-      "name": "Atomic Samurai",
-      "title": "Atomic Samurai / S-Class Hero",
-      "rank": "S-Class Hero",
-      "dangerLevel": 8,
-      "loreBio": "A legendary swordsman whose atomic slash technique can cut anything at the molecular level, serving as the Hero Association's premier bladed-weapon response.",
-      "systemBio": "Precision-throughput combat node optimized for maximum damage delivery through technique rather than raw power.",
+      "name": "Arthur Boyle",
+      "title": "Ecclesius / Sword Breath User",
+      "rank": "Fire Soldier",
+      "dangerLevel": 6,
+      "loreBio": "A self-described 'sword' expert whose Breath type manifests as actual swords made of fire—useless in most situations, devastating in the right one.",
+      "systemBio": "A specialist node with extremely narrow use cases that becomes a critical counter against specific Infernal types.",
       "gradientFrom": "slate-900",
-      "gradientTo": "red-900",
-      "accentColor": "red-400",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
       "icon": "Sword",
-      "signatureMoment": "His atomic slash is effortlessly deflected by a creature Saitama flicks away.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/296431.jpg?s=cfa2df2f41a128a0cb8f2cb98da32194",
-      "malId": 127453,
-      "slug": "atomic-samurai",
-      "description": "Atomic Samurai is an S-Class hero from One Punch Man.",
-      "faction": "Hero Association (S-Class)",
+      "signatureMoment": "His supposedly useless Sword Breath cuts through a monster that was completely immune to everyone else's fire.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/594733.jpg?s=56c98fdabff116c56bacd6ddc7c63109",
+      "malId": 134151,
+      "slug": "arthur-boyle",
+      "description": "Justice-obsessed knight who fights with real firepower.",
+      "faction": "Company 8",
       "abilities": [
         {
-          "name": "Atomic Slash",
-          "description": "Cuts through any material at the molecular level with unmatched sword speed.",
-          "severity": "high"
-        }
-      ]
-    },
-    {
-      "name": "King",
-      "title": "King / S-Class Hero (Fraud)",
-      "rank": "S-Class Hero",
-      "dangerLevel": 1,
-      "loreBio": "Ranked S-Class despite being entirely ordinary—his fearsome reputation comes from being present at Saitama's accidental kills, making everyone assume he defeated the monsters.",
-      "systemBio": "A reputation-based node with zero actual combat ability but maximum perceived threat level in the enemy intelligence network.",
-      "gradientFrom": "slate-900",
-      "gradientTo": "rose-900",
-      "accentColor": "rose-400",
-      "icon": "Skull",
-      "signatureMoment": "His King Engine heartbeat sounds like an engine of death, terrifying all monsters who hear it.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/295547.jpg?s=8cd20c7942e901e44f2a05d55c025ee9",
-      "malId": 86049,
-      "slug": "king",
-      "description": "S-rank hero who has never won a fight — pure reputation.",
-      "faction": "Hero Association (S-Class)",
-      "abilities": [
+          "name": "Sword Breath",
+          "description": "Creates sword-shaped fire constructs that can cut through fire-resistant materials.",
+          "severity": "medium"
+        },
         {
-          "name": "King Engine",
-          "description": "A heartbeat sound so intense it psychologically paralyzes opponents with fear.",
+          "name": "Sword Expert Delusion",
+          "description": "Believes himself to be the greatest swordsman alive, which somehow makes him more effective.",
           "severity": "low"
-        },
-        {
-          "name": "Reputation Override",
-          "description": "Everyone in the hero world believes he is the strongest, giving him maximum deterrent value with zero actual power.",
-          "severity": "medium"
         }
       ]
     },
     {
-      "name": "Garou",
-      "title": "The Hero Hunter",
-      "rank": "Monster-Level Threat",
-      "dangerLevel": 10,
-      "loreBio": "A human who becomes a monster out of resentment toward hero culture, hunting S-Class heroes to prove that 'justice' is just organized violence.",
-      "systemBio": "A monster-tier combat node whose growth rate approaches Saitama's pre-training trajectory, making him the only genuine threat Saitama has faced.",
+      "name": "Maki Oze",
+      "title": "Company 8 Vice-Captain",
+      "rank": "Vice-Captain",
+      "dangerLevel": 5,
+      "loreBio": "A disciplined vice-captain whose fire manipulation specializes in containment rather than destruction, making her essential for civilian rescue operations.",
+      "systemBio": "A support-optimized combat node whose fire output is tuned for protective applications rather than offensive engagement.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Shield",
+      "signatureMoment": "Using her flame barrier to protect trapped civilians while others fight.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/472215.jpg?s=5d911840594a55990fe15ebbba32246f",
+      "malId": 133768,
+      "slug": "maki-oze",
+      "description": "Force captain whose strength exceeds her pyrokinetic output.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Flame Barrier",
+          "description": "Creates protective flame walls that shield civilians from Infernal attacks.",
+          "severity": "medium"
+        },
+        {
+          "name": "Fire Analysis",
+          "description": "Can quickly identify the Breath type of any Infernal to guide team counter-selection.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Takehisa Hinawa",
+      "title": "Flame Soldier / Lance Type",
+      "rank": "Fire Soldier",
+      "dangerLevel": 5,
+      "loreBio": "Company 8's reconnaissance specialist who uses a lance-type fire manipulation to engage Infernals at medium range.",
+      "systemBio": "A precision-strike node optimized for targeted Infernal weak-point engagement.",
       "gradientFrom": "slate-900",
       "gradientTo": "green-900",
       "accentColor": "green-400",
-      "icon": "Skull",
-      "signatureMoment": "Achieving Monster Form and fighting Saitama as an equal for the first time in the series.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/607281.jpg",
-      "malId": 280150,
-      "slug": "garou",
-      "description": "Garou is the Hero Hunter from One Punch Man.",
-      "faction": "Monster Association",
+      "icon": "Bolt",
+      "signatureMoment": "Identifying an Infernal's type in seconds and calling out the counter strategy before it attacks.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/393747.jpg?s=595d01d6fe122a9cc82a2de3c9f7da0a",
+      "malId": 133771,
+      "slug": "takehisa-hinawa",
+      "description": "Company 8s explosives specialist and team strategist. Designs custom detonation sequences that counter Infernal physiology. His analytical mind turns battles into engineering problems.",
+      "faction": "Company 8",
       "abilities": [
         {
-          "name": "Water Stream Rock Smashing Fist",
-          "description": "Counter-based martial arts that exploits any opening in an opponent's technique.",
-          "severity": "high"
+          "name": "Lance Fire Type",
+          "description": "Medium-range flame lance strikes effective against specific Infernal types.",
+          "severity": "medium"
         },
         {
-          "name": "Monster Transformation",
-          "description": "Monsterization amplifies all his physical parameters to near-S-class levels.",
-          "severity": "fatal"
-        },
-        {
-          "name": "Growth Rate",
-          "description": "Can adapt and grow stronger during combat faster than any normal human.",
-          "severity": "fatal"
+          "name": "Reconnaissance",
+          "description": "Fast deployment and battlefield observation skills for tactical intelligence.",
+          "severity": "low"
         }
       ]
     },
     {
-      "name": "Baro Veldan",
-      "slug": "baro-veldan",
-      "title": "The Egotistical Swordsman",
-      "role": "Rival",
-      "rank": "B-Class",
-      "dangerLevel": 4,
-      "loreBio": "A B-Class hero from Sweden who challenged Saitama to a duel. His sword style focuses on overwhelming aggression and ego-driven combat. Baro believes he is the strongest, making him Saitamas rarest opponent.",
-      "systemBio": "Baro runs an ego-amplification combat strategy — his arrogance makes him attack without hesitation, which paradoxically makes him more effective than calculated fighters in some matchups.",
-      "gradientFrom": "blue-900",
-      "gradientTo": "red-900",
-      "accentColor": "blue-400",
-      "icon": "Sword",
-      "signatureMoment": "Challenging Saitama to a duel and being defeated in a single blow while maintaining his conviction of victory.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/241727.jpg",
-      "malId": null,
-      "description": "Baro Veldan: B-Class hero who challenged Saitama.",
-      "faction": "Heroes",
+      "name": "Akitaru Obi",
+      "title": "Company 8 Captain / Ash Breath",
+      "rank": "Company Captain",
+      "dangerLevel": 6,
+      "loreBio": "Company 8 Captain who fights with brute force and hot-blooded determination. Former professional boxer who joined the Fire Force after witnessing his brothers death in a spontaneous combustion incident. Commands Company 8 with reckless courage.",
+      "systemBio": "A command node with no elemental type advantage but maximum tactical experience, leading through strategy rather than power.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Crown",
+      "signatureMoment": "Fighting Infernals with nothing but a fire axe and human courage, inspiring everyone who watches.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/384685.jpg?s=b60a687a61b47e1d0fbe350a18fbfd20",
+      "malId": 133770,
+      "slug": "akitaru-obi",
+      "description": "Company 8 captain whose boxing roots anchor tactical decisions.",
+      "faction": "Company 8",
       "abilities": [
         {
-          "name": "Sword Strike",
-          "description": "Aggressive sword swing.",
+          "name": "Tactical Command",
+          "description": "No elemental power, but unmatched ability to coordinate team Breathing combinations.",
           "severity": "medium"
         },
         {
-          "name": "Ego Rush",
-          "description": "Full-commitment attack with no defensive consideration.",
-          "severity": "high"
+          "name": "Ash Breath",
+          "description": "Creates ash-based flames that obscure vision and smother fires.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Tamaki Kotatsu",
+      "title": "Company 8 / Hot Spring User",
+      "rank": "Fire Soldier",
+      "dangerLevel": 4,
+      "loreBio": "A Fire Soldier whose hot spring ability creates steam-based attacks—unfortunately, her ability activation causes her clothes to fall off.",
+      "systemBio": "A steam-based combat node whose effectiveness is undermined by a critical social vulnerability mechanism.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Droplet",
+      "signatureMoment": "Using steam to save teammates while accidentally causing chaos, then being blamed for it.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/496649.jpg?s=b081da60efda0187d7c384afe9fd5e52",
+      "malId": 135798,
+      "slug": "tamaki-kotatsu",
+      "description": "Third Generation pyrokinetic whose flexibility lets her adapt to any combat situation. Company 8s wildcard — her improvisation forces opponents to recalibrate mid-fight.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Hot Spring Steam",
+          "description": "Creates powerful steam bursts that can extinguish flames and disorient Infernals.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Iris",
+      "title": "Company 8 / Nun",
+      "rank": "Fire Soldier",
+      "dangerLevel": 3,
+      "loreBio": "A nun who fights Infernals alongside Company 8, driven by faith that was shaken by witnessing the truth of the Great Cataclysm. Her combat effectiveness comes from Third Generation pyrokinetic ability combined with religious conviction.",
+      "systemBio": "A faith-based combat node whose spiritual conviction provides psychological resilience under Infernal encounter stress.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Star",
+      "signatureMoment": "Continuing to fight Infernals even after discovering the Church was complicit in the Great Cataclysm cover-up.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/587867.jpg?s=b321c8eb5776cacf367679d0ccb91791",
+      "malId": 133769,
+      "slug": "iris",
+      "description": "Third Generation pyrokinetic who fights Infernals alongside Company 8 as a nun. Her faith drives her combat choices but she has shaken trust in institutional answers.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Faith Healing",
+          "description": "Can soothe the burning pain of Infernal corruption, buying time for treatment.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Leonardo Burns",
+      "title": "Demon / Infernal Knight Commander",
+      "rank": "Demon-Class Infernal",
+      "dangerLevel": 10,
+      "loreBio": "The Knight Commander who became the most powerful Infernal, retaining his intelligence and leading the Infernal armies against humanity.",
+      "systemBio": "A corruption-success node that retained command-layer functionality while operating at maximum hostile output.",
+      "gradientFrom": "red-900",
+      "gradientTo": "orange-800",
+      "accentColor": "red-300",
+      "icon": "Skull",
+      "signatureMoment": "Fighting Shinra as a fully-aware Infernal commander, demonstrating that Infernals can retain their minds.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/387864.jpg?s=95300cca80a20647bff56a4ddff7a082",
+      "malId": 136047,
+      "slug": "leonardo-burns",
+      "description": "Third Generation whose white flames exceed normal output.",
+      "faction": "Infernal Army",
+      "abilities": [
+        {
+          "name": "Infernal Command",
+          "description": "Commands Infernal armies while retaining full intelligence and tactical capability.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Superior Fire Power",
+          "description": "Dragon-level fire output that exceeds all standard Company Captains.",
+          "severity": "fatal"
         }
       ]
     }
   ],
   "relationships": [
     {
-      "source": "Saitama",
-      "target": "Genos",
-      "type": "mentor",
-      "weight": 9,
-      "loreDesc": "Genos desperately wants to be Saitama's disciple; Saitama mostly ignores him but occasionally offers surprisingly profound advice.",
-      "systemDesc": "Disciple dependency edge where the less-powerful node actively routes combat data toward the terminal node."
-    },
-    {
-      "source": "Genos",
-      "target": "Saitama",
+      "source": "Shinra Kusakabe",
+      "target": "Arthur Boyle",
       "type": "ally",
       "weight": 8,
-      "loreDesc": "Genos provides Saitama with social context and purpose while benefiting from his mentor's raw power example.",
-      "systemDesc": "Support edge that keeps the terminal node emotionally engaged with the system."
+      "loreDesc": "Rivals who push each other to be better, with Arthur's delusion and Shinra's seriousness creating constant friction.",
+      "systemDesc": "Competitive growth edge between two nodes with complementary weaknesses."
     },
     {
-      "source": "Saitama",
-      "target": "King",
+      "source": "Shinra Kusakabe",
+      "target": "Akitaru Obi",
       "type": "ally",
-      "weight": 7,
-      "loreDesc": "Saitama is one of the few people who knows King's secret, and the two form a genuine friendship over gaming and food.",
-      "systemDesc": "Peer relationship edge between the only two people in the hero system with honest self-assessments."
+      "weight": 9,
+      "loreDesc": "Captain Obi is the father figure who gives Shinra purpose and tactical guidance.",
+      "systemDesc": "Command guidance edge providing strategic framework for Shinra's raw output."
     },
     {
-      "source": "Bang",
-      "target": "Garou",
-      "type": "counter",
-      "weight": 7,
-      "loreDesc": "Bang's adopted pupil Garou betrays his teachings and becomes the hero-hunter, representing the failure of Bang's martial arts philosophy.",
-      "systemDesc": "Mentorship failure edge where a node's own output produces its counter."
+      "source": "Shinra Kusakabe",
+      "target": "Maki Oze",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Maki's discipline balances Shinra's impulsiveness, making them an effective combat pair.",
+      "systemDesc": "Complementary tactical pairing where Maki's protective output covers Shinra's offensive gaps."
     },
     {
-      "source": "Lord Boros",
-      "target": "Saitama",
-      "type": "counter",
-      "weight": 10,
-      "loreDesc": "Boros sought a worthy fight across the galaxy and finally found it—and then immediately lost it.",
-      "systemDesc": "Terminal conflict edge that ends in immediate system override."
-    },
-    {
-      "source": "Garou",
-      "target": "Saitama",
+      "source": "Leonardo Burns",
+      "target": "Shinra Kusakabe",
       "type": "counter",
       "weight": 9,
-      "loreDesc": "Garou's growth rate makes him the only opponent who can pressure Saitama, creating genuine combat stakes for the first time.",
-      "systemDesc": "Adaptive growth edge approaching the terminal node's output ceiling."
+      "loreDesc": "Burns represents the worst-case outcome of Infernalization—and the possibility that Shinra could become the same.",
+      "systemDesc": "Counter-edge representing the terminal corruption state that Shinra's Adolla Burst must prevent."
+    },
+    {
+      "source": "Iris",
+      "target": "Shinra Kusakabe",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Iris's faith and Shinra's determination support each other through the investigation's darkest revelations.",
+      "systemDesc": "Psychological resilience edge linking emotional conviction with tactical purpose."
     }
   ],
   "factions": [
     {
-      "name": "Hero Association",
-      "role": "systemic",
-      "loreDesc": "The global organization that registers, ranks, and deploys heroes to handle monster threats.",
-      "systemDesc": "Institutional command-and-rank infrastructure that coordinates hero deployment against threat nodes."
-    },
-    {
-      "name": "Heroes (S/A/B/C Classes)",
+      "name": "Company 8",
       "role": "protagonist",
-      "loreDesc": "Registered heroes across all class tiers responding to monster and alien threats.",
-      "systemDesc": "Distributed combat node network with tiered resource allocation."
+      "loreDesc": "A special fire company investigating the truth behind spontaneous combustion and the Great Cataclysm.",
+      "systemDesc": "Investigation node pursuing the system's origin event while maintaining standard Infernal response.",
+      "description": "Elite Special Fire Force unit operating in Tokyo. Fights infernals caused by spontaneous combustion and investigates the phenomenon. Akitaru Obi captains the 8th. Mixed-technique composition gives structural flexibility that single-element units lack."
     },
     {
-      "name": "Monster Association",
-      "role": "antagonist",
-      "loreDesc": "An organization of powerful monsters that threatens human civilization and draws out the full hero response.",
-      "systemDesc": "Hostile node cluster representing escalated threat output in the post-Saitama environment."
+      "name": "Tokyo Imperial Fire Defense",
+      "role": "systemic",
+      "loreDesc": "The official fire defense network with eight companies each specializing in different fire types.",
+      "systemDesc": "Institutional response infrastructure implementing the typed counter-system."
     },
     {
-      "name": "Alien Invaders",
+      "name": "Holy Soly D领",
+      "role": "neutral",
+      "loreDesc": "The Church whose leadership is revealed to be complicit in the Great Cataclysm cover-up.",
+      "systemDesc": "Institutional node with information access to the system's founding events that must be protected."
+    },
+    {
+      "name": "Infernal Army",
       "role": "antagonist",
-      "loreDesc": "Boros's crew represents the cosmic-scale threats that exist beyond Earth-level monster classification.",
-      "systemDesc": "External threat layer that tests the upper bounds of hero network response capacity."
+      "loreDesc": "An army of Infernalized humans led by Leonardo Burns, representing the catastrophic failure state of spontaneous combustion.",
+      "systemDesc": "Hostile node cluster representing the corruption cascade that threatens to overwhelm the human response network."
+    },
+    {
+      "name": "The Evangelist",
+      "role": "antagonist",
+      "loreDesc": "A mysterious figure planning to recreate the Great Cataclysm, whose true goals remain unclear.",
+      "systemDesc": "Root manipulation node controlling the cascade of Infernalization events toward a predetermined endpoint."
     }
   ],
   "rules": [
     {
-      "name": "Hero Rankings Determine Resource Allocation",
-      "subtitle": "Rank equals institutional priority",
-      "loreConsequence": "A hero's class placement controls their budget, mission assignments, and public platform.",
-      "systemEquivalent": "Classification determines throughput and deployment priority in the institutional response network.",
-      "severity": "medium",
-      "loreSubtitle": "Rank is everything",
-      "systemSubtitle": "Class-based allocation model"
-    },
-    {
-      "name": "Monster Threats Scale Without Ceiling",
-      "subtitle": "Every defeat reveals a bigger threat",
-      "loreConsequence": "The Monster Association's leadership is so powerful that even multiple S-Class heroes struggle.",
-      "systemEquivalent": "Hostile node output escalates faster than the hero network's aggregate response can scale.",
-      "severity": "fatal",
-      "loreSubtitle": "The escalation never ends",
-      "systemSubtitle": "Unbounded threat scaling"
-    },
-    {
-      "name": "Saitama's Power Cannot Be Measured",
-      "subtitle": "One punch ends all measurements",
-      "loreConsequence": "Every time someone tries to quantify Saitama's strength, the test becomes meaningless because the fight ends before data can be collected.",
-      "systemEquivalent": "Terminal output state that prevents measurement by collapsing the measurement apparatus.",
+      "name": "Breathing Types Counter Each Other",
+      "subtitle": "Rock-paper-scissors fire combat",
+      "loreConsequence": "Each of the eight fire types has a specific advantage against another and weakness against a third—choosing the wrong type matchup can be fatal.",
+      "systemEquivalent": "Typed counter-system where elemental advantage determines combat outcome before engagement begins.",
       "severity": "high",
-      "loreSubtitle": "You can't measure infinity",
-      "systemSubtitle": "Measurement failure state"
+      "loreSubtitle": "Know your type, know your fate",
+      "systemSubtitle": "Closed-loop elemental counter"
+    },
+    {
+      "name": "Spontaneous Combustion Is Contagious",
+      "subtitle": "Infernal corruption spreads",
+      "loreConsequence": "When someone becomes an Infernal, nearby combustion events can trigger chain reactions of additional Infernalizations.",
+      "systemEquivalent": "Corruption propagation mechanism where one node failure can cascade into cluster-wide failure.",
+      "severity": "fatal",
+      "loreSubtitle": "One spark, many fires",
+      "systemSubtitle": "Contagious corruption cascade"
+    },
+    {
+      "name": "Adolla Burst Ignores All Counters",
+      "subtitle": "The ninth flame breaks the system",
+      "loreConsequence": "Shinra's Blue Fire doesn't follow the type chart—it simply overpowers any fire it encounters.",
+      "systemEquivalent": "Anomaly node that bypasses the established counter-system's rules entirely.",
+      "severity": "fatal",
+      "loreSubtitle": "Some fires can't be countered",
+      "systemSubtitle": "Counter-immune output"
+    },
+    {
+      "name": "Infernalization Retains Consciousness (Rare)",
+      "subtitle": "Some Infernals keep their minds",
+      "loreConsequence": "Extremely rare cases like Leonardo Burns show that Infernals can retain their intelligence, raising questions about whether the corruption can be reversed.",
+      "systemEquivalent": "Corruption node that maintains high-level command functionality rather than descending to pure feral state.",
+      "severity": "high",
+      "loreSubtitle": "Mind intact in the flames",
+      "systemSubtitle": "Consciousness-preserving corruption"
     }
   ],
   "counterplay": [
     {
-      "attacker": "Any Monster Threat",
-      "defender": "Saitama",
-      "mechanic": "No threat can survive more than one punch from Saitama, making every fight a foregone conclusion.",
-      "loreDesc": "The hero economy would collapse if Saitama solved every problem instantly.",
-      "systemDesc": "Terminal override that eliminates entire threat tiers from the response requirement list."
+      "attacker": "Any Fire Type",
+      "defender": "Type Counter Selection",
+      "mechanic": "Knowing the opponent's Breath type lets you select the correct counter type, negating their fire advantage.",
+      "loreDesc": "Hinawa's reconnaissance is critical because getting the type wrong means the fight is already lost.",
+      "systemDesc": "Intelligence-gathering as primary combat multiplier in a rock-paper-scissors system."
     },
     {
-      "attacker": "Saitama's Boredom",
-      "defender": "Genuine Challenge",
-      "mechanic": "Only an opponent who can genuinely pressure Saitama can restore his combat motivation.",
-      "loreDesc": "Garou comes closest to being a real fight, which is why the stakes feel higher during their confrontation.",
-      "systemDesc": "The only input that can re-engage the terminal node with the combat system."
+      "attacker": "Adolla Burst (Blue Fire)",
+      "defender": "Nothing (Uncounterable)",
+      "mechanic": "Blue Fire operates outside the counter system, meaning no type can defensively counter it.",
+      "loreDesc": "The only defense against Shinra's Blue Fire is to not be in its way.",
+      "systemDesc": "Systemic counter-immunity that makes the Adolla Burst node the ultimate offensive asset."
     },
     {
-      "attacker": "Conventional Hero Doctrine",
-      "defender": "Team Coordination",
-      "mechanic": "S-Class heroes compensate for individual gaps by combining their unique abilities against overwhelming monsters.",
-      "loreDesc": "No single S-Class can handle Dragon-level threats alone—coordination is required.",
-      "systemDesc": "Distributed response architecture that compensates for individual node ceiling gaps."
+      "attacker": "Infernal Corruption Spread",
+      "defender": "Rapid Infernal Termination",
+      "mechanic": "Company teams must quickly terminate Infernals before their burning presence triggers secondary Infernalizations.",
+      "loreDesc": "Every second an Infernal burns, the chance of more people combusting increases.",
+      "systemDesc": "Race-condition defense where slow response compounds the threat exponentially."
+    },
+    {
+      "id": "fire-vs-water-counter",
+      "name": "Water Breath Counters Fire Breath",
+      "attacker": "Water Breather",
+      "defender": "Fire Breather",
+      "mechanic": "Type advantage: Water Breath cancels Fire Breath on contact",
+      "loreDesc": "The rock-paper-scissors Breath type chart gives Water a direct advantage over Fire, making water-type users the optimal counter against fire-based opponents.",
+      "systemDesc": "Type-advantage counter-tree: Water Breath occupies the counter position against Fire Breath in the eight-type chart. Ignition timing and output level determine whether the counter succeeds.",
+      "tabIndex": 1,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
+    },
+    {
+      "id": "third-gen-vs-second-gen",
+      "name": "Third Gen Ignition Advantage",
+      "attacker": "Third Generation Pyrokinetic",
+      "defender": "Second Generation Infernal",
+      "mechanic": "Faster ignition at 25% output enables pre-emptive strikes",
+      "loreDesc": "Third Generation pyrokinetics ignite faster but at lower peak power than Second Generation, giving them tactical advantage in battles where reaction time matters more than raw output.",
+      "systemDesc": "Speed-vs-power trade-off: Third Generation sacrifices maximum damage for ignition speed, creating a tactical window that Second Generation opponents cannot exploit without knowing the matchup intimately.",
+      "tabIndex": 1,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
     }
   ],
   "anomalies": [
     {
-      "name": "Saitama's Unexplained Power",
-      "ruleViolated": "Power should scale proportionally with training intensity across all beings",
-      "loreDesc": "Saitama's training was intense but not impossibly so—yet his power vastly exceeds beings who have trained for centuries.",
-      "systemDesc": "Input-output ratio that violates the established power scaling model."
+      "name": "Shinra's Blue Fire Exists Outside the Type System",
+      "ruleViolated": "All fire types should follow the eight-type counter chart",
+      "loreDesc": "The Adolla Burst doesn't counter any type and isn't countered by any type—it simply overwrites.",
+      "systemDesc": "Counter-system anomaly that exposes the type chart as a constructed rather than fundamental rule."
     },
     {
-      "name": "King's S-Class Ranking with Zero Power",
-      "ruleViolated": "Institutional ranking should reflect actual combat capability",
-      "loreDesc": "King holds S-Class rank purely through accumulated reputation and coincidence, representing a complete system failure.",
-      "systemDesc": "Reputation value completely decoupled from actual throughput parameters."
+      "name": "Infernalization Preserves Intelligence in Some Cases",
+      "ruleViolated": "Infernal corruption should destroy cognitive function",
+      "loreDesc": "Leonardo Burns and others retain full intelligence as Infernals, contradicting the assumption that corruption destroys the mind.",
+      "systemDesc": "Consciousness preservation edge in a system designed to produce feral corruption nodes."
+    },
+    {
+      "name": "The Great Cataclysm Was Intentional",
+      "ruleViolated": "Natural disaster should be accidental",
+      "loreDesc": "The founding event that established the current combustion system was deliberately caused, meaning the current system was designed rather than evolved.",
+      "systemDesc": "Constructed origin event that means the system's 'natural laws' are actually a predetermined architecture."
     }
   ],
   "causalEvents": [
     {
-      "name": "Saitama's Training",
-      "trigger": "Saitama commits to 100 push-ups, 100 sit-ups, 100 squats, and a 10km run every day",
-      "consequence": "He breaks his body's limits and becomes the strongest being in the universe—but loses the capacity to feel challenge.",
+      "name": "The Great Cataclysm",
+      "trigger": "An ancient civilization deliberately triggered a global combustion event",
+      "consequence": "Created the current world where spontaneous combustion produces Infernals, fire types counter each other, and the Evangelist wants to do it again.",
+      "timelinePosition": "250 Years Before Narrative",
+      "loreDesc": "The founding catastrophe that established all current system rules.",
+      "systemDesc": "Designed origin event that means all current system parameters are constructed, not natural."
+    },
+    {
+      "name": "Shinra's Mother and the Cataclysm",
+      "trigger": "Shinra's mother was connected to the Great Cataclysm",
+      "consequence": "Her death and her role in the Great Cataclysm become the mystery that drives Shinra's investigation.",
       "timelinePosition": "Pre-Narrative",
-      "loreDesc": "The event that created the terminal node and broke the power-scaling economy.",
-      "systemDesc": "Input protocol that produced an output exceeding all calibration parameters."
+      "loreDesc": "Personal connection to the system origin event that makes Shinra's Adolla Burst not random but inherited.",
+      "systemDesc": "Bloodline node connecting current protagonist to founding event architecture."
     },
     {
-      "name": "Lord Boros's Invasion",
-      "trigger": "An alien warlord arrives seeking a worthy fight",
-      "consequence": "The first and only opponent who came close to Saitama's level is defeated with a single Serious Punch.",
-      "timelinePosition": "Episode 1-12",
-      "loreDesc": "The event that confirmed Saitama's ceiling and began his existential boredom arc.",
-      "systemDesc": "First near-ceiling collision that established the terminal state's upper bounds."
+      "name": "Shinra's First Adolla Burst",
+      "trigger": "Shinra manifests Blue Fire against an Infernal",
+      "consequence": "Reveals his connection to the Great Cataclysm and marks him as both the system's greatest hope and the Evangelist's primary target.",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The event that transforms Shinra from a normal Fire Soldier into a system-level anomaly.",
+      "systemDesc": "Adolla Burst activation event that establishes the protagonist as a counter-systemic node."
     },
     {
-      "name": "Garou's Monster Transformation",
-      "trigger": "Garou fully monsterizes and hunts the heroes",
-      "consequence": "The only opponent with growth rate comparable to Saitama's emerges, creating the first genuine combat stakes.",
-      "timelinePosition": "Current Arc",
-      "loreDesc": "A human achieves monster-level power through pure hatred of hero culture.",
-      "systemDesc": "Adaptive node that approaches the terminal state's output ceiling through recursive self-improvement."
+      "name": "Company 8 Discovers the Evangelist's Plan",
+      "trigger": "Investigation traces Infernalization back to a deliberate source",
+      "consequence": "The fight against Infernals transforms into a fight against whoever is engineering the combustion events.",
+      "timelinePosition": "Mid Arc",
+      "loreDesc": "Investigation node uncovers the manipulation architecture behind apparent chaos.",
+      "systemDesc": "Intelligence convergence event that redirects mission priority from symptom management to root cause."
     }
   ],
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/10/72281l.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1664/103275l.jpg",
   "systemQuestions": [
     {
-      "question": "Why does Saitama's power break the show's power scaling?",
-      "answer": "Because he achieved a terminal state—he can defeat any opponent with one punch before any escalation can develop. This means every fight's outcome is predetermined, eliminating dramatic tension.",
+      "question": "Why does the Three-Quarter Breath counter system paradoxically make Company 8 more effective at stopping Infernals than any single specialized unit?",
+      "answer": "The Three-Quarter Breath system means no single Breath type dominates all others. Company 8's mixed composition—where each member has a different fire type—lets them counter any Infernal formation. Getting the wrong type matchup can be fatal, so having all eight types available ensures Company 8 can always deploy the correct counter.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
     {
-      "question": "Why is Saitama depressed despite being the strongest?",
-      "answer": "Because victory without challenge has no meaning. His depression is the psychological consequence of having no equal—there's no growth, no suspense, no payoff.",
-      "tabIndex": 0,
-      "sectionId": "power-system-heading",
-      "tabLabel": "Power Engine"
+      "question": "How does Adolla Burst break the Three-Quarter Breath counter system?",
+      "answer": "Adolla Burst—Shinra's Blue Fire—operates completely outside the eight-type counter chart. While normal fire types follow the Infernals → Ignition → Ghost → Flash Fire → Blue progression, Adolla Burst doesn't counter any type and isn't countered by any type. It simply overwrites, making it the ultimate offensive asset and the Evangelist's primary target.",
+      "tabIndex": 1,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
     },
     {
-      "question": "Why does the Hero Association ranking system matter if Saitama exists?",
-      "answer": "For everyone except Saitama, rank determines everything—mission assignment, resources, and survival odds against monster threats. The system only fails for the one actor it can't measure.",
+      "question": "Why does Shinra's tactical positioning with Devil's Footprints actually make him more effective against Infernals?",
+      "answer": "Shinra's Blue Fire feet let him maneuver at high speed and attack from angles no other Fire Soldier can match. His foot-based fire propulsion creates unpredictability that disrupts Infernal attack patterns, while his Adolla Burst simply overpowers any flame it encounters—bypassing the type chart entirely.",
       "tabIndex": 2,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How does Company 8's mixed-composition structure exploit the Evangelist's plan to remake humanity?",
+      "answer": "The Evangelist seeks to trigger another Great Cataclysm using Adolla Burst to remake humanity. Company 8's diverse Breath type composition lets them rapidly identify and counter Infernal threats before spontaneous combustion spreads. Every second an Infernal burns increases chain-reaction risk, making Company 8's balanced response essential to stopping the Evangelist's endgame.",
+      "tabIndex": 3,
       "sectionId": "faction-map-heading",
       "tabLabel": "Faction Map"
-    },
-    {
-      "question": "Why is Garou the most interesting character in the show?",
-      "answer": "He's the only opponent with a growth rate that can genuinely pressure Saitama, making him the first real fight in years. His monsterization represents the show asking: what if someone from the hero system's opposite side grew as fast as Saitama?",
-      "tabIndex": 1,
-      "sectionId": "character-database-heading",
-      "tabLabel": "Entity Database"
-    },
-    {
-      "question": "Why is King's fraud actually the most realistic commentary on the system?",
-      "answer": "He exposes how reputation, fear, and narrative assumption can create power without any actual ability—his S-Class ranking is pure social construction, which is more honest about how institutions actually work than any power level number.",
-      "tabIndex": 1,
-      "sectionId": "character-database-heading",
-      "tabLabel": "Entity Database"
     }
   ],
   "hero": {
     "systemType": "relational",
-    "microHook": "Check the rank before assuming who wins.",
-    "thesis": "Hero Association's rank hierarchy tries to categorize Saitama, who simply overrides every edge in the network.",
+    "microHook": "Spontaneous combustion meets Breathing arts — Company 8 fights to save Tokyo.",
+    "thesis": "Eight Breathing types form a closed counter-tree; Adolla Burst breaks it. Great Cataclysm was designed.",
     "primarySystemType": "entity_db",
-    "imageUrl": "https://cdn.myanimelist.net/images/anime/10/72281l.jpg"
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/1664/103275l.jpg"
   }
 }

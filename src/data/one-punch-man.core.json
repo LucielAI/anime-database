@@ -1,6 +1,6 @@
 {
   "anime": "One Punch Man",
-  "tagline": "A hero who defeats everything with one punch comedically breaks the entire power-scaling economy.",
+  "tagline": "One Punch Man — a hero defeats everything with one punch, comedically breaking the entire power-scaling economy.",
   "malId": 30276,
   "themeColors": {
     "primary": "#ca8a04",
@@ -324,35 +324,23 @@
       ]
     },
     {
-      "name": "Baro Veldan",
-      "slug": "baro-veldan",
-      "title": "The Egotistical Swordsman",
-      "role": "Rival",
-      "rank": "B-Class",
-      "dangerLevel": 4,
-      "loreBio": "A B-Class hero from Sweden who challenged Saitama to a duel. His sword style focuses on overwhelming aggression and ego-driven combat. Baro believes he is the strongest, making him Saitamas rarest opponent.",
-      "systemBio": "Baro runs an ego-amplification combat strategy — his arrogance makes him attack without hesitation, which paradoxically makes him more effective than calculated fighters in some matchups.",
-      "gradientFrom": "blue-900",
-      "gradientTo": "red-900",
-      "accentColor": "blue-400",
-      "icon": "Sword",
-      "signatureMoment": "Challenging Saitama to a duel and being defeated in a single blow while maintaining his conviction of victory.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/241727.jpg",
-      "malId": null,
-      "description": "Baro Veldan: B-Class hero who challenged Saitama.",
-      "faction": "Heroes",
-      "abilities": [
-        {
-          "name": "Sword Strike",
-          "description": "Aggressive sword swing.",
-          "severity": "medium"
-        },
-        {
-          "name": "Ego Rush",
-          "description": "Full-commitment attack with no defensive consideration.",
-          "severity": "high"
-        }
-      ]
+      "id": "mumen-rider",
+      "name": "Mumen Rider",
+      "title": "The Caged Fighter",
+      "rank": "C-Class",
+      "dangerLevel": 3,
+      "loreBio": "C-Class hero who fights on a bicycle. Consistently outmatched but never backs down. His presence in battles is informational — if Mumen Rider can fight you, you are not a threat to the top tiers.",
+      "systemDesc": "Zero-combat-capability hero whose only value is informational: battles that involve him reveal the opponent is low-tier.",
+      "systemBio": "Mumen Rider demonstrates that in OPMs power hierarchy, determination without capability produces a specific failure mode. His losses reveal how far below every other combatant the opponent operates.",
+      "gradientFrom": "gray-800",
+      "gradientTo": "gray-700",
+      "accentColor": "gray-400",
+      "icon": "Bike",
+      "signatureMoment": "Riding directly into battle on his bicycle against a Dragon-level threat and somehow surviving.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/344059.jpg",
+      "malId": 344059,
+      "description": "C-Class hero on a bicycle who compensates for zero combat ability with pure willpower and determination.",
+      "faction": "Hero Association (C-Class)"
     }
   ],
   "relationships": [
@@ -563,7 +551,7 @@
   ],
   "hero": {
     "systemType": "relational",
-    "microHook": "Check the rank before assuming who wins.",
+    "microHook": "Check the rank before assuming who wins — OPM runs on serious comedy logic.",
     "thesis": "Hero Association's rank hierarchy tries to categorize Saitama, who simply overrides every edge in the network.",
     "primarySystemType": "entity_db",
     "imageUrl": "https://cdn.myanimelist.net/images/anime/10/72281l.jpg"
