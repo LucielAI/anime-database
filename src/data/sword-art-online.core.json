@@ -1,0 +1,532 @@
+{
+  "slug": "sword-art-online",
+  "anime": "Sword Art Online",
+  "tagline": "A death-game locks 10,000 players inside a virtual sword world — the only path out is clearing 100 floors.",
+  "malId": 11757,
+  "themeColors": {
+    "primary": "#0ea5e9",
+    "secondary": "#0c0f1a",
+    "accent": "#a855f7",
+    "glow": "rgba(14,165,233,0.35)",
+    "tabActive": "#38bdf8",
+    "badgeBg": "rgba(12,15,26,0.55)",
+    "badgeText": "#bae6fd",
+    "modeGlow": "rgba(168,85,247,0.3)",
+    "heroGradient": "rgba(2,6,23,0.94)"
+  },
+  "visualizationHint": "node-graph",
+  "visualizationReason": "SAO is structurally a dependency graph: sword skills link to weapon types, players cluster into guild factions, and Kirito's solo path exploits structural gaps between clearing-party coordination networks.",
+  "headerFlavor": {
+    "loreQuote": "In this world, death is real. The only way out is forward.",
+    "sysWarning": "// [SYS_WARN]: YGGDRASIL SESSION ACTIVE — DEATH CONDITION ENFORCED",
+    "sysWarningColor": "cyan"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "glow-border-soft",
+  "introductionSummary": "Sword Art Online traps 10,000 players inside a VRMMO where logout is disabled and death inside the game means death in real life. Kirito, a solo specialist with the rare Dual Blades hidden skill, must clear 100 floors of increasing difficulty while navigating guild politics, PKing threats, and the architect who designed their prison.",
+  "aiInsights": {
+    "casual": "SAO takes the typical MMO grind and makes it life-or-death — every sword skill you master could be the difference between surviving a boss fight and dying permanently. Kirito's solo path works because he removes all the coordination overhead that slows guilds down.",
+    "deep": "SAO's YGGDRASIL system runs on skill-node trees where weapon type determines available sword skills, and grinding usage builds proficiency. The Dual Blades hidden class was designed as a high-investment dead-end, but solo grinding bypasses the party-requirement bottleneck. Kayaba's death-game constraint forces hyper-specialization over broad capability, inverting standard MMO balance logic."
+  },
+  "systemDescription": "YGGDRASIL-based VRMMO with sword skill progression, HP depletion, and death-game stakes. Players grind skill nodes through combat usage, optimizing builds around weapon types and sword arts.",
+  "systemName": "YGGDRASIL Game System",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/11/39717.jpg",
+  "hasAllAnime": false,
+  "factions": [
+    {
+      "name": "Laughing Coffin",
+      "role": "chaotic",
+      "loreDesc": "PKing guild that hunts players for real-world trophies and in-game power consolidation.",
+      "systemDesc": "Adversarial network that extracts survival capacity from other players, growing by diminishing collective clearing potential."
+    },
+    {
+      "name": "Aincrad Liberation Force",
+      "role": "protagonist",
+      "loreDesc": "Player guild attempting to clear floors faster than Kayaba's designed pace.",
+      "systemDesc": "Parallel processing collective attempting to compress the clearing schedule against developer intent."
+    },
+    {
+      "name": "Knights of the Blood Oath",
+      "role": "protagonist",
+      "loreDesc": "Elite clearing guild maintaining order on the front lines of Aincrad.",
+      "systemDesc": "High-cap party coordination network enabling risk distribution across specialized combat roles."
+    },
+    {
+      "name": "Dragon Knights",
+      "role": "neutral",
+      "loreDesc": "Guild built around defensive tank coordination and guild loyalty above individual glory.",
+      "systemDesc": "Defensive cluster network trading solo optimization for party resilience and aggro management."
+    },
+    {
+      "name": "Aincrad Management",
+      "role": "antagonist",
+      "loreDesc": "Kayaba's developer-level oversight layer running the death-game parameters.",
+      "systemDesc": "System architecture authority defining node rules, death conditions, and clearing constraints for all players."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Kirito",
+      "target": "Asuna",
+      "type": "ally",
+      "weight": 10,
+      "loreDesc": "Partners who meet in-game and discover real-world connection through shared survival stakes.",
+      "systemDesc": "Dual-wield + heal node combo with maximum synergy: Kirito's offense amplifies Asuna's burst window."
+    },
+    {
+      "source": "Kirito",
+      "target": "Kayaba Akihiko",
+      "type": "enemy",
+      "weight": 9,
+      "loreDesc": "Solo player vs. game architect — Kirito must break Kayaba's designed system from within.",
+      "systemDesc": "Single-node capability vs. system architecture: Kayaba built the clearing conditions; Kirito exploits the structural gaps."
+    },
+    {
+      "source": "Kirito",
+      "target": "Heathcliff",
+      "type": "rival",
+      "weight": 7,
+      "loreDesc": "Kirito challenges guild-centric clearing philosophy as the solo path proves faster.",
+      "systemDesc": "Solo optimization edge vs. party coordination overhead: competing clearing methodologies."
+    },
+    {
+      "source": "Asuna",
+      "target": "Heathcliff",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Asuna serves as Heathcliff's primary sub-leader while also maintaining her own independent bond with Kirito.",
+      "systemDesc": "Heal + buffer party edge with guild coordination bonus layered over personal combat priority."
+    },
+    {
+      "source": "Kirito",
+      "target": "Suguha Kirigaya",
+      "type": "dependent",
+      "weight": 6,
+      "loreDesc": "Suguha's sword art grinding is motivated by finding and reconnecting with her brother Kirito in the game.",
+      "systemDesc": "Relationship-constrained grinding loop: her progression is tied to recovering a severed family bond node."
+    },
+    {
+      "source": "Kirito",
+      "target": "Argo",
+      "type": "ally",
+      "weight": 5,
+      "loreDesc": "Argo's intel network gives Kirito routing advantages that offset his solo information disadvantage.",
+      "systemDesc": "Info-node edge: data brokerage reduces exploration cost and reveals boss pattern weaknesses."
+    },
+    {
+      "source": "Kirito",
+      "target": "Kuradeel",
+      "type": "enemy",
+      "weight": 7,
+      "loreDesc": "Kuradeel's guild loyalty and personal obsession with Kirito creates a persistent adversarial edge.",
+      "systemDesc": "Taunt-tank vs. solo DPS: Kuradeel's aggro control is offset by Kirito's independent damage output."
+    },
+    {
+      "source": "Kirito",
+      "target": "Diabel",
+      "type": "ally",
+      "weight": 4,
+      "loreDesc": "Diabel's first-clear trigger set the death-game in motion, making him an accidental catalyst for Kirito's journey.",
+      "systemDesc": "Bootstrap node: his clearing action initialized the death condition that all other nodes must operate under."
+    }
+  ],
+  "powerSystem": [
+    {
+      "name": "Sword Skills",
+      "subtitle": "Combat Technique Nodes",
+      "loreDesc": "Combat techniques activated by typing commands, scaling with weapon type and skill level. Each sword skill is a node with damage, speed, and cooldown edges.",
+      "systemDesc": "Usage-based skill tree where weapon type gates available nodes and repeated combat builds proficiency ranks.",
+      "icon": "Sword",
+      "color": "blue-400",
+      "signatureMoment": "Kirito mastering the Dual Blades skill tree by solo-grinding past the threshold no guild was designed to reach.",
+      "loreSubtitle": "The sword as interface",
+      "systemSubtitle": "Weapon-gated skill tree"
+    },
+    {
+      "name": "Dual Blades",
+      "subtitle": "Hidden Dual-Wield Class",
+      "loreDesc": "Hidden skill allowing simultaneous two-sword combat. Enables double skill activation with separate cooldowns.",
+      "systemDesc": "Dual-node activation bypassing single-skill cooldown constraints: two independent skill trees running in parallel.",
+      "icon": "Zap",
+      "color": "violet-400",
+      "signatureMoment": "Kirito activating Dual Blades against the Floor 74 boss when solo DPS requirements exceeded single-weapon output ceiling.",
+      "loreSubtitle": "The forbidden second edge",
+      "systemSubtitle": "Parallel cooldown bypass"
+    },
+    {
+      "name": "Healing and Support",
+      "subtitle": "Recovery and Buff Nodes",
+      "loreDesc": "Healer and support classes provide party sustain, removing the HP constraint that limits aggressive clearing strategies.",
+      "systemDesc": "Sustain nodes enabling higher risk/reward decisions by offsetting HP loss from aggressive damage windows.",
+      "icon": "Heart",
+      "color": "pink-400",
+      "signatureMoment": "Asuna's heal needle keeping Kirito alive through the Floor 75 boss when his HP pool was insufficient for the damage window.",
+      "loreSubtitle": "Life as a resource",
+      "systemSubtitle": "Sustain-enabling aggression"
+    },
+    {
+      "name": "Guild Coordination",
+      "subtitle": "Party Buff Network",
+      "loreDesc": "Guild parties provide coordination bonuses, aggro management, and risk distribution across specialized roles.",
+      "systemDesc": "Party-graph optimization where node specialization and buff stacking increase collective clearing throughput at the cost of decision-cycle synchronization.",
+      "icon": "Crown",
+      "color": "amber-400",
+      "signatureMoment": "Knights of the Blood Oath coordinating the Floor 78 boss clear with precision roles no solo player could replicate.",
+      "loreSubtitle": "Strength in numbers, cost in speed",
+      "systemSubtitle": "Synchronized party graph"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Skill Grinds With Usage",
+      "subtitle": "Practice builds proficiency",
+      "loreConsequence": "Time invested in a skill type creates measurable combat advantage.",
+      "systemEquivalent": "XP-like accumulation through combat activity, creating deterministic progression curves.",
+      "severity": "high",
+      "loreSubtitle": "Effort capital",
+      "systemSubtitle": "Usage-based scaling"
+    },
+    {
+      "name": "Death Is Permanent",
+      "subtitle": "Game death = real death",
+      "loreConsequence": "Every floor clear carries existential stakes for all players.",
+      "systemEquivalent": "No respawn mechanic creates permanent loss conditions, making defensive builds rational over aggressive ones.",
+      "severity": "fatal",
+      "loreSubtitle": "Irreversible loss",
+      "systemSubtitle": "Hard death condition"
+    },
+    {
+      "name": "Floor Clear Requires Party Coordination",
+      "subtitle": "Solo ceilings exist per design",
+      "loreConsequence": "High-floor bosses require multiple players and role specialization that solo builds cannot replicate.",
+      "systemEquivalent": "Content difficulty curve forces party graph formation despite solo optimization preference.",
+      "severity": "high",
+      "loreSubtitle": "Designed cooperation",
+      "systemSubtitle": "Party-mandated content"
+    },
+    {
+      "name": "System Admin Can Modify Rules",
+      "subtitle": "Developer privilege overrides player agency",
+      "loreConsequence": "Kayaba can alter any game parameter, making player strategy always subordinate to architect intent.",
+      "systemEquivalent": "Root permission on the node-graph means the system architect can rewrite any edge weight at will.",
+      "severity": "fatal",
+      "loreSubtitle": "The architect's sandbox",
+      "systemSubtitle": "Override-capable authority"
+    }
+  ],
+  "rankings": {
+    "systemName": "Floor Clearer Rankings",
+    "loreName": "Aincrad Top Players",
+    "topTierName": "Floor Clearers",
+    "topTierLore": "The fastest solo and party clearers whose names are known across all of Aincrad.",
+    "topTierSystem": "Highest throughput nodes in the clearing graph, measured by floor progress rate and boss defeat count.",
+    "tiers": [
+      {
+        "name": "Floor Boss Killers",
+        "loreDesc": "Players who have cleared major floor bosses and shaped Aincrad's front-line progress.",
+        "systemDesc": "High-value combat nodes with demonstrated boss-pattern expertise and damage output."
+      },
+      {
+        "name": "Guild Elites",
+        "loreDesc": "Top guild members who clear consistently and maintain party coordination across difficult content.",
+        "systemDesc": "Synchronized multi-node networks with buff stacking and role specialization advantages."
+      },
+      {
+        "name": "Solo Specialists",
+        "loreDesc": "Players who grind alone, often with hidden skills or unconventional builds.",
+        "systemDesc": "Independent nodes optimized for single-decision-cycle throughput with no coordination overhead."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Kirito",
+      "title": "The Black Swordsman",
+      "rank": "Solo S-Class",
+      "dangerLevel": 9,
+      "loreBio": "A solo specialist carrying the Dual Blades hidden skill and Beater knowledge advantage. Kirito's path proves solo optimization can clear content faster than guild coordination — but at the cost of lone exposure to every systemic threat.",
+      "systemBio": "Kirito runs a solo-build strategy with dual-wield nodes. His Beater knowledge edge lets him optimize routes before other players understand the system. Dual Blades doubles his skill activation rate, making his solo DPS competitive with full parties.",
+      "gradientFrom": "blue-950",
+      "gradientTo": "violet-900",
+      "accentColor": "blue-400",
+      "icon": "Sword",
+      "signatureMoment": "Activating Dual Blades for the first time against the Floor 74 boss, proving solo builds could break party-only content barriers.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/204821.jpg?s=6a96a832b35d0ff3af9292bdb082546e",
+      "malId": 20087,
+      "slug": "kirito",
+      "description": "Kirito is a solo player with the Dual Blades hidden skill. Beater status gives him early-game knowledge advantage.",
+      "faction": "Independent",
+      "abilities": [
+        {
+          "name": "Dual Blades",
+          "description": "Hidden dual-wield skill — two swords with independent cooldown cycles enabling simultaneous skill activation.",
+          "severity": "high"
+        },
+        {
+          "name": "Solo Tactics",
+          "description": "No party coordination dependency — all decisions flow through one node, removing sync overhead.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Asuna",
+      "title": "The Flash",
+      "rank": "S-Class Healer",
+      "dangerLevel": 8,
+      "loreBio": "Top-tier healer and front-line fighter whose lightning speed lets her outpace most offensive nodes. Asuna's heal-plus-offense hybrid makes her a force multiplier in any party graph, and her resolve after being trapped makes her one of the strongest independent actors in Aincrad.",
+      "systemBio": "Asuna's heal + offense hybrid makes her a force-multiplier node in any party graph. Her speed stat creates engagement priority and disengage options unavailable to standard support builds. Lightning Speed enables her to close or flee faster than any other node.",
+      "gradientFrom": "pink-950",
+      "gradientTo": "orange-900",
+      "accentColor": "pink-400",
+      "icon": "Bolt",
+      "signatureMoment": "Breaking her way out of the bird cage with a single sword thrust, proving she was never just a support node.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/262053.jpg?s=449153df46cce80307c9f8ae622b4514",
+      "malId": 107475,
+      "slug": "asuna",
+      "description": "Top-tier healer and front-line fighter. Flash speed enables her to outpace most offensive nodes.",
+      "faction": "Knights of the Blood Oath",
+      "abilities": [
+        {
+          "name": "Healing Needle",
+          "description": "Instant party recovery. High-cap sustain node enabling riskier aggressive plays.",
+          "severity": "high"
+        },
+        {
+          "name": "Lightning Speed",
+          "description": "Raw speed stat that lets her close distance and disengage faster than most enemies can track.",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "name": "Kayaba Akihiko",
+      "title": "The System Architect",
+      "rank": "Aincrad Overlord",
+      "dangerLevel": 10,
+      "loreBio": "Creator of SAO and architect of the death game. Built the entire system players must survive within. Kayaba's decisions define every node, edge, and constraint in the YGGDRASIL graph — his death-game was an ego project to build a perfect world and watch it fight for survival.",
+      "systemBio": "Kayaba is the system architect — root permission on the YGGDRASIL node graph. His decisions define the clearing conditions, skill trees, and death enforcement that all other nodes must operate within. No player can exceed the boundaries he has defined.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Crown",
+      "signatureMoment": "Revealing his identity as Heathcliff to force Kirito into a duel on the final floor — his last act as architect before accepting defeat.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/192505.jpg?s=036c5729790631b16646b9eb7b4660da",
+      "malId": 20085,
+      "slug": "kayaba-akihiko",
+      "description": "Creator of SAO and architect of the death game. Built the entire system players must survive within.",
+      "faction": "Aincrad Management",
+      "abilities": [
+        {
+          "name": "System Admin",
+          "description": "Architect-level control over YGGDRASIL's rules — can modify any node parameter or clearing condition at will.",
+          "severity": "fatal"
+        }
+      ]
+    },
+    {
+      "name": "Heathcliff",
+      "title": "The Iron Knight",
+      "rank": "S-Class Guild Leader",
+      "dangerLevel": 7,
+      "loreBio": "Leader of the Knights of the Blood Oath and secretly Kayaba in disguise. Heathcliff represents the guild coordination philosophy — that collective throughput beats solo optimization. His Iron Will taunt and guild leadership make him the anchor of Aincrad's front-line clearing efforts.",
+      "systemBio": "Party buffer node with defensive specialization and guild leadership creating systemic coordination advantages. His taunt ability redirects enemy aggro, protecting fragile damage-dealer nodes while the party graph executes synchronized burst windows.",
+      "gradientFrom": "amber-950",
+      "gradientTo": "slate-900",
+      "accentColor": "amber-400",
+      "icon": "Shield",
+      "signatureMoment": "Fighting Kirito in the final-floor duel, revealing himself as Kayaba — the ultimate test of whether the system architect could be beaten from within.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/178383.jpg?s=181b00224582fdb5492d27983d670a8e",
+      "malId": 20086,
+      "slug": "heathcliff",
+      "description": "Leader of the Knights of the Blood Oath. Suggatched to be Kayaba in disguise.",
+      "faction": "Knights of the Blood Oath",
+      "abilities": [
+        {
+          "name": "Iron Will",
+          "description": "Taunt ability that redirects enemy aggro to self, protecting fragile damage-dealer nodes.",
+          "severity": "high"
+        },
+        {
+          "name": "Guild Leadership",
+          "description": "Coordination bonus for all allied party members within range — synchronized party buff stacking.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Suguha Kirigaya",
+      "title": "The Sword Dancer",
+      "rank": "A-Class Player",
+      "dangerLevel": 5,
+      "loreBio": "Kirito's sister, trapped in SAO as Leafa, grinding sword arts to find her brother who she cannot recognize in-game. Her quest through the kirito-shaped hole in her memory drives her from a default avatar to a formidable melee specialist.",
+      "systemBio": "Sword arts user with a loyalty constraint — her grinding is motivated by relationship recovery rather than pure optimization. Her progression loop is anchored to a missing node (Kirito), making her build path emotionally rather than strategically determined.",
+      "gradientFrom": "green-950",
+      "gradientTo": "cyan-900",
+      "accentColor": "green-400",
+      "icon": "Wind",
+      "signatureMoment": "Standing between Kirito and a fatal blow on the 22nd floor, finally able to protect him as the sister she never got to be in the real world.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/192515.jpg?s=61eedc4ceb95b186ae903a1e00e2bbea",
+      "malId": 112304,
+      "slug": "suguha-kirigaya",
+      "description": "Kirito's sister, SAO player. Focused on finding Kirito through sword arts to reconnect with him.",
+      "faction": "Aincrad Liberation Force",
+      "abilities": [
+        {
+          "name": "Sword Wave",
+          "description": "Ranged sword skill with area damage — enables engagement at distance while closing.",
+          "severity": "medium"
+        },
+        {
+          "name": "Aerial Combat",
+          "description": "Flight-capable avatar giving positional advantage most players cannot counter.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Argo",
+      "title": "The Info Broker",
+      "rank": "Neutral Agent",
+      "dangerLevel": 4,
+      "loreBio": "The Rat — an information broker selling floor maps and clearance data. Neutral alignment lets her operate across faction lines. Argo's intel network is the closest thing to a global information system in a death-game where players are structurally isolated from each other.",
+      "systemBio": "Information network node — her data edges let other players optimize routes without exploration cost. She reduces the uncertainty in the clearing graph by providing monster spawn patterns, boss mechanics, and floor maps for currency.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Eye",
+      "signatureMoment": "Selling Kirito the Floor 22 boss pattern data that lets him solo the clearance window no guild was willing to commit to.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/297087.jpg?s=17f9f95b9b0a926971ae4dcded53e089",
+      "malId": 107487,
+      "slug": "argo",
+      "description": "Information broker selling floor maps and data. Neutral alignment across all factions.",
+      "faction": "Independent",
+      "abilities": [
+        {
+          "name": "Intel Network",
+          "description": "Access to floor clearance data, monster spawns, and boss patterns — reduces exploration cost for buyers.",
+          "severity": "medium"
+        },
+        {
+          "name": "Neutral Market Position",
+          "description": "Operating across faction lines without allegiance — information flows independent of politics.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Kuradeel",
+      "title": "The Obsessed Paladin",
+      "rank": "B-Class Tank",
+      "dangerLevel": 6,
+      "loreBio": "Paladin guild member whose loyalty to his guild commander crosses into personal obsession with Kirito as a threat to that bond. Kuradeel's defensive tank build is powerful in guild contexts but becomes a liability when personal rivalry overrides tactical judgment.",
+      "systemBio": "Defensive tank node with loyalty constraints. His guild coordination edges are offset by personal rivalry that drives him to make suboptimal aggro decisions. Shield Bash provides hard CC but his positioning discipline breaks when emotionally compromised.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "green-900",
+      "accentColor": "green-400",
+      "icon": "Shield",
+      "signatureMoment": "Cornering Kirito on Floor 40 to force a duel over Asuna's guild loyalty — revealing how personal attachments corrupt guild tank judgment.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/177111.jpg?s=abcdd29485dbe422d50d86096a8c7464",
+      "malId": 112309,
+      "slug": "kuradeel",
+      "description": "Paladin guild member who confronts Kirito over his solo play ideology and guild loyalty.",
+      "faction": "Dragon Knights",
+      "abilities": [
+        {
+          "name": "Shield Bash",
+          "description": "Stun + aggro-draw combo that locks enemies in place and forces single-target focus.",
+          "severity": "medium"
+        },
+        {
+          "name": "Iron Defensive Stance",
+          "description": "Temporary damage reduction node that lets him absorb burst windows standard tanks cannot survive.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Diabel",
+      "title": "The First Clearer",
+      "rank": "B-Class Player",
+      "dangerLevel": 3,
+      "loreBio": "The first player to clear the SAO tutorial — triggering the death game by logging in on launch day. Diabel's clearing instinct made him the accidental architect of 10,000 players' entrapment. He dies on Floor 2 trying to clear content no one understood yet.",
+      "systemBio": "Trigger node — his clearing choice activated the death condition that locked all players in. His first-clear expertise was real but insufficient for the systemic risk the death condition introduced. A high-cap individual node whose success model didn't transfer to the new constraint environment.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-300",
+      "icon": "Star",
+      "signatureMoment": "Dying on Floor 2 after triggering the SAO death condition — his heroic clearing instinct became the world's worst success.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/174903.jpg?s=145dcde8f722f84e5df883fb0157eca4",
+      "malId": 112306,
+      "slug": "diabel",
+      "description": "First player to clear the tutorial — triggered the SAO death game by logging in on launch day.",
+      "faction": "Independent",
+      "abilities": [
+        {
+          "name": "First Clear Expertise",
+          "description": "Tutorial boss pattern knowledge from being first to complete it — an edge that became irrelevant under death conditions.",
+          "severity": "low"
+        }
+      ]
+    }
+  ],
+  "systemQuestions": [
+    {
+      "question": "Why does Kirito's solo strategy outperform coordinated guild clearing despite SAO being designed as a party game?",
+      "answer": "Solo builds eliminate the coordination overhead that slows guild clearing. When each player's decision cycle must sync with others, the party graph moves at the slowest node's pace — Kirito's solo removes that constraint.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "How does the Dual Blades hidden skill break the expected YGGDRASIL balance?",
+      "answer": "Dual Blades was designed as a high-investment hidden class with no proportional reward. Kayaba never expected a player to grind solo to the investment threshold — Kirito's solo path found the only node capable of triggering it.",
+      "tabIndex": 1,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
+    },
+    {
+      "question": "What systemic risk does the PKing economy introduce to the floor-clearing collective?",
+      "answer": "Every player death permanently removes grinding hours from the collective capacity. Laughing Coffin's PKing isn't just adversarial — it's a net reduction in the clearing graph's total node count.",
+      "tabIndex": 2,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
+    },
+    {
+      "question": "How does Death-game stakes restructure the typical risk-reward calculation for skill investment?",
+      "answer": "Standard MMO logic says invest in broad capability to reduce failure risk. Death-game stakes invert this: broad investment takes time, time spent is exposure to death, so hyper-specialization minimizes the death-window.",
+      "tabIndex": 3,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    }
+  ],
+  "hero": {
+    "systemType": "affinity",
+    "microHook": "Sword skills level with use — time investment builds capability nodes.",
+    "thesis": "SAO runs on sword skill nodes and death-game stakes. Solo builds eliminate coordination overhead — Kirito clears what guilds cannot.",
+    "primarySystemType": "power_engine"
+  },
+  "counterplay": [
+    {
+      "attacker": "Aggro Overflow",
+      "defender": "Healer Sustain",
+      "mechanic": "Healers must maintain HP above death-threshold while tanks absorb burst damage spikes during boss phase transitions.",
+      "loreDesc": "Boss mechanics designed to spike damage faster than single healer nodes can respond — forcing multiple sustain links.",
+      "systemDesc": "HP threshold enforcement creates healing throughput requirements that scale super-linearly with boss phase complexity."
+    },
+    {
+      "attacker": "PKing Burst",
+      "defender": "Solo Escape",
+      "mechanic": "Solo players have no party buffer when ambushed — their only defense is raw speed and skill activation before backup arrives.",
+      "loreDesc": "Laughing Coffin specializes in rapid elimination of isolated targets before guild response can coordinate.",
+      "systemDesc": "Single-node survivability under coordinated multi-node assault depends on disengage options and burst window timing."
+    },
+    {
+      "attacker": "Floor Boss Enrage",
+      "defender": "Dual Wield Burst",
+      "mechanic": "Kirito's Dual Blades lets him push more damage per second than single-weapon builds when enrage timers approach.",
+      "loreDesc": "Floor bosses have enrage timers — if clearing takes too long, boss damage output scales until no party can survive.",
+      "systemDesc": "Time-constrained DPS checks favor high burst nodes over sustained damage graphs."
+    }
+  ]
+}
