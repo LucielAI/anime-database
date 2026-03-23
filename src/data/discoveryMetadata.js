@@ -157,6 +157,60 @@ export const DISCOVERY_METADATA = {
     clusterTags: ['faction-heavy', 'hierarchy-heavy', 'anomaly-driven'],
     appealTags: ['high-stakes-escalation', 'strategy-network'],
     systemProfile: { factionComplexity: 3, causalDensity: 3, powerStructure: 'exchange' }
+  },
+  'black-clover': {
+    addedAt: '2026-03-23', popularityBaseline: 82, classification: 'combat', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for anti-magic versus elemental sovereignty matchups.',
+    clusterTags: ['combat-systems', 'hierarchy-heavy', 'inheritance'],
+    appealTags: ['technical-counterplay', 'underdog-arcs'],
+    systemProfile: { factionComplexity: 2, causalDensity: 2, powerStructure: 'matchup' }
+  },
+  're-zero': {
+    addedAt: '2026-03-23', popularityBaseline: 87, classification: 'causal', startTab: 'core-laws', startLabel: 'Start with CORE LAWS to understand Return by Death save-point constraints.',
+    clusterTags: ['causal-systems', 'anomaly-driven', 'inheritance'],
+    appealTags: ['deterministic-systems', 'high-stakes-escalation'],
+    systemProfile: { factionComplexity: 2, causalDensity: 3, powerStructure: 'causal' }
+  },
+  'blue-lock': {
+    addedAt: '2026-03-23', popularityBaseline: 80, classification: 'combat', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for ego vision competitive positioning.',
+    clusterTags: ['combat-systems', 'anomaly-driven'],
+    appealTags: ['technical-counterplay', 'strategy-network'],
+    systemProfile: { factionComplexity: 2, causalDensity: 2, powerStructure: 'matchup' }
+  },
+  'sword-art-online': {
+    addedAt: '2026-03-23', popularityBaseline: 83, classification: 'network', startTab: 'entity-database', startLabel: 'Start with ENTITY DATABASE for death-game survival dependency mapping.',
+    clusterTags: ['faction-heavy', 'anomaly-driven', 'combat-systems'],
+    appealTags: ['high-stakes-escalation', 'strategy-network'],
+    systemProfile: { factionComplexity: 3, causalDensity: 2, powerStructure: 'exchange' }
+  },
+  'tokyo-revengers': {
+    addedAt: '2026-03-23', popularityBaseline: 75, classification: 'causal', startTab: 'core-laws', startLabel: 'Start with CORE LAWS to understand time-leaping linear constraints.',
+    clusterTags: ['causal-systems', 'faction-heavy'],
+    appealTags: ['deterministic-systems', 'strategy-network'],
+    systemProfile: { factionComplexity: 2, causalDensity: 2, powerStructure: 'causal' }
+  },
+  'one-punch-man': {
+    addedAt: '2026-03-23', popularityBaseline: 91, classification: 'network', startTab: 'relationships', startLabel: 'Start with RELATIONSHIPS for Hero Association hierarchy and power rank mapping.',
+    clusterTags: ['faction-heavy', 'hierarchy-heavy', 'combat-systems'],
+    appealTags: ['strategy-network', 'power-scaling'],
+    systemProfile: { factionComplexity: 3, causalDensity: 1, powerStructure: 'hierarchy' }
+  },
+  'spy-x-family': {
+    addedAt: '2026-03-23', popularityBaseline: 86, classification: 'network', startTab: 'entity-database', startLabel: 'Start with ENTITY DATABASE for Forger family coordination network mapping.',
+    clusterTags: ['faction-heavy', 'anomaly-driven'],
+    appealTags: ['strategy-network', 'high-stakes-escalation'],
+    systemProfile: { factionComplexity: 2, causalDensity: 1, powerStructure: 'control' }
+  },
+  'fire-force': {
+    addedAt: '2026-03-23', popularityBaseline: 79, classification: 'combat', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for spontaneous combustion breathing counter-matchups.',
+    clusterTags: ['combat-systems', 'hierarchy-heavy', 'inheritance'],
+    appealTags: ['technical-counterplay', 'high-stakes-escalation'],
+    systemProfile: { factionComplexity: 2, causalDensity: 2, powerStructure: 'matchup' }
+  },
+  'parasyte': {
+    addedAt: '2026-03-23', popularityBaseline: 77, classification: 'combat', startTab: 'power-engine', startLabel: 'Start with POWER ENGINE for Migi parasite-host control dynamics.',
+    clusterTags: ['combat-systems', 'anomaly-driven'],
+    appealTags: ['power-scaling', 'high-stakes-escalation'],
+    systemProfile: { factionComplexity: 1, causalDensity: 2, powerStructure: 'matchup' }
   }
 
 }
