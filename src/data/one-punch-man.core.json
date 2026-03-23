@@ -108,8 +108,8 @@
       "title": "The Caped Baldy / Class-S Anomaly",
       "rank": "Unrankable",
       "dangerLevel": 10,
-      "loreBio": "A seemingly ordinary bald man who achieved overwhelming power through a training regimen so intense it broke the universe's power-scaling rules.",
-      "systemBio": "A terminal-state combat node that permanently exceeds all classification parameters, creating systematic measurement failure across all tiers.",
+      "loreBio": "Dropped out of the hero circuit after becoming too powerful to find an opponent. Joined the Hero Association as a B-Class hero purely to find someone who can challenge him. His power level breaks every combat optimization model.",
+      "systemBio": "Saitama represents the upper ceiling of OPMs power hierarchy — his raw capability makes every other hero's strategic planning irrelevant. He's the answer to \"what if power scaling had no upper bound?\"",
       "gradientFrom": "slate-900",
       "gradientTo": "yellow-900",
       "accentColor": "yellow-300",
@@ -118,7 +118,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/294388.jpg?s=a56fc5484b23811f3308aad1dc7b8b2e",
       "malId": 73935,
       "slug": "saitama",
-      "description": "Hero who defeats any opponent with one punch — bored by it.",
+      "description": "Bored hero who defeats any opponent with one punch — the tragedy is that winning effortlessly means he can never experience the challenge of combat. Sits at B-Class because he only does hero work as a hobby.",
       "faction": "Hero Association (C-Class)",
       "abilities": [
         {
@@ -143,8 +143,8 @@
       "title": "The Demon Cyborg / S-Class Candidate",
       "rank": "S-Class (Unofficial)",
       "dangerLevel": 8,
-      "loreBio": "A 19-year-old cyborg whose body is 70% mechanical, relentlessly pursuing Saitama as his disciple while hunting the mad scientist who destroyed his family.",
-      "systemBio": "A high-output combat node with extensive sensor integration and adaptive combat learning, pursuing Saitama's methodology while remaining in the conventional power paradigm.",
+      "loreBio": "Severely damaged in a cyborg attack as a teenager. Saved by Dr. Kuseno who rebuilt him as a combat cyborg. Has been searching for the monster responsible ever since, and now serves as Saitama's student.",
+      "systemBio": "Genos runs a maximum-output combat optimization path. Every upgrade increases his power draw, meaning each battle is a test of whether his current specs are sufficient. He continuously self-destructs toward higher capability thresholds.",
       "gradientFrom": "slate-900",
       "gradientTo": "orange-900",
       "accentColor": "orange-400",
@@ -153,7 +153,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/297329.jpg?s=1dd6cf2edbb45d8bd1e654541226901d",
       "malId": 73979,
       "slug": "genos",
-      "description": "Cyborg disciple optimizing toward Saitamas power level.",
+      "description": "S-Class cyborg disciple of Saitama. Spends every waking moment upgrading and hunting for meaning in his existence. Sits at the top of the Hero Association rankings through raw power output.",
       "faction": "Hero Association (B-Class)",
       "abilities": [
         {

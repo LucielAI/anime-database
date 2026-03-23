@@ -283,7 +283,7 @@
       "title": "Company 8 / Nun",
       "rank": "Fire Soldier",
       "dangerLevel": 3,
-      "loreBio": "A nun who fights Infernals alongside Company 8, driven by faith that was shaken by witnessing the truth of the Great Cataclysm.",
+      "loreBio": "Third Generation pyrokinetic formerly with the 9th Company. Her combat experience from military operations makes her Company 8s most reliable combat specialist. She fights with pragmatic efficiency rather than the hot-blooded approach of her teammates.",
       "systemBio": "A faith-based combat node whose spiritual conviction provides psychological resilience under Infernal encounter stress.",
       "gradientFrom": "slate-900",
       "gradientTo": "cyan-900",
@@ -293,7 +293,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/587867.jpg?s=b321c8eb5776cacf367679d0ccb91791",
       "malId": 133769,
       "slug": "iris",
-      "description": "Infernal who chose to fight for Company 8.",
+      "description": "Third Generation pyrokinetic who brings military combat experience to Company 8.",
       "faction": "Company 8",
       "abilities": [
         {
@@ -381,7 +381,8 @@
       "name": "Company 8",
       "role": "protagonist",
       "loreDesc": "A special fire company investigating the truth behind spontaneous combustion and the Great Cataclysm.",
-      "systemDesc": "Investigation node pursuing the system's origin event while maintaining standard Infernal response."
+      "systemDesc": "Investigation node pursuing the system's origin event while maintaining standard Infernal response.",
+      "description": "Elite Special Fire Force unit operating in Tokyo. Fights infernals caused by spontaneous combustion and investigates the phenomenon. Shinra Kusakabe commands with the 8th.\n\nSystematically: Company 8s mixed-technique composition gives it structural flexibility that single-element units lack. Can counter any opposing formation with the right team mix."
     },
     {
       "name": "Tokyo Imperial Fire Defense",

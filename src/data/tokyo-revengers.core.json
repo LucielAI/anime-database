@@ -517,38 +517,32 @@
   "animeImageUrl": "https://myanimelist.net/images/anime/1839/122012.jpg",
   "systemQuestions": [
     {
-      "question": "Why is Takemichi's time-leap so constrained compared to other time manipulation in anime?",
-      "answer": "He cannot choose where or when to jump—only back to a fixed anchor point. Every future change requires a chain of small interventions rather than a single direct fix.",
+      "question": "Why does Mikey's decision in any timeline create a gravitational pull on every other characters choices — collapsing all possible futures into his preferred outcome?",
+      "answer": "Mikey commands the most powerful delinquent faction in Tokyo. His gravitational pull comes from the structural dependency other characters have on his decisions — every alliance, betrayal, and conflict routes through his choices.",
       "tabIndex": 0,
-      "sectionId": "power-system-heading",
+      "sectionId": "power-engine-heading",
       "tabLabel": "Power Engine"
     },
     {
-      "question": "Why does Takemichi fight with emotions rather than physical power?",
-      "answer": "He is not a strong fighter. His advantage is future memory and the ability to emotionally reach people, especially Mikey, redirecting gang outcomes through human connection.",
+      "question": "How does Takemichi's inability to change his own past choices create a specific constraint on the counter-tree — making him a reader of timelines rather than a writer of them?",
+      "answer": "Takemichi can travel to the past but cannot act independently of how history unfolded. Each time-leap is constrained by the character he was at that point in time, making him a passive reader of timeline branches.",
+      "tabIndex": 0,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
+    },
+    {
+      "question": "Why does the Black Dragons formation create a node-graph structure where Mikey is the central node — meaning his removal collapses every allied connection simultaneously?",
+      "answer": "Mikey is the unchallenged central node of the Black Dragons network. All alliances route through him, meaning his corruption or death severs every connected alliance simultaneously.",
       "tabIndex": 1,
-      "sectionId": "power-system-heading",
-      "tabLabel": "Power Engine"
-    },
-    {
-      "question": "Why is Mikey the most important person in the timeline?",
-      "answer": "Mikey is the supreme command node—his decisions ripple through the entire gang network. His dark impulse is what creates the worst futures, and his stability is what prevents them.",
-      "tabIndex": 2,
-      "sectionId": "faction-map-heading",
-      "tabLabel": "Faction Map"
-    },
-    {
-      "question": "Why does timeline branching matter for the story?",
-      "answer": "Each leap creates a revised present, and Takemichi must chain subsequent leaps from that new baseline. Mistakes compound, meaning one wrong intervention can create a worse future than the original.",
-      "tabIndex": 3,
-      "sectionId": "character-database-heading",
-      "tabLabel": "Entity Database"
-    },
-    {
-      "question": "What makes Izana the most dangerous antagonist?",
-      "answer": "He has founding-member knowledge of Toman's complete internal structure, allowing him to exploit every weakness from inside the system.",
       "sectionId": "core-laws-heading",
       "tabLabel": "Core Laws"
+    },
+    {
+      "question": "How does the Toman hierarchy create an inverted power structure where the VP has more tactical control than the captain — making Draken's position more strategically valuable than Mikey's?",
+      "answer": "Draken functions as the actual operational commander while Mikey provides legitimacy. This inverted structure means Draken's decisions carry more weight in actual gang conflicts, making him the true tactical center of Toman.",
+      "tabIndex": 1,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
     }
   ],
   "hero": {
