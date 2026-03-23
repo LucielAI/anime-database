@@ -236,8 +236,8 @@
       "accentColor": "gray-400",
       "icon": "Shield",
       "signatureMoment": "Facing Kaneki in combat and recognizing something of himself in the half-ghoul — the moment the human/ghoul binary started to break down for him.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/251453.jpg",
-      "_fetchFailed": false,
+      "imageUrl": null,
+      "_fetchFailed": true,
       "malId": 99671,
       "role": "Main"
     },
