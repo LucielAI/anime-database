@@ -123,12 +123,12 @@ export const UNIVERSE_CATALOG = [
     stats: { characters: 20, powerSystem: 4, rules: 4 }
   },
   {
-    id: 'blue-lock', anime: 'Blue Lock', tagline: "300 forwards. One egoist survives. Japan's national team reborn through ruthless self-optimization", malId: 49186, visualizationHint: 'counter-tree', visualizationReason: 'Blue Lock is structurally a counter-tree: each striker\'s ego vision competes as an individual optimization path, and the Blue Lock project eliminates collaborative paths until only pure individual capability remains.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/7/126929.jpg',
+    id: 'blue-lock', anime: 'Blue Lock', tagline: '300 forwards enter Blue Lock. Only one egoist survives.', malId: 49186, visualizationHint: 'counter-tree', visualizationReason: 'Blue Lock is structurally a counter-tree: each striker\'s ego vision competes as an individual optimization path, and the Blue Lock project eliminates collaborative paths until only pure individual capability remains.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/7/126929.jpg',
     themeColors: { primary: '#1d4ed8', secondary: '#0f172a', accent: '#3b82f6', glow: 'rgba(29,78,216,0.35)', tabActive: '#3b82f6', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#93c5fd', modeGlow: 'rgba(59,130,246,0.3)', heroGradient: 'rgba(10,15,35,0.95)' },
     stats: { characters: 6, powerSystem: 4, rules: 4 }
   },
   {
-    id: 'sword-art-online', anime: 'Sword Art Online', tagline: 'A death-game locks 10,000 players inside a virtual sword world — the only way out is to win', malId: 11757, visualizationHint: 'node-graph', visualizationReason: 'SAO is structurally a dependency graph: sword skills link to weapon type nodes, guilds create party coordination networks, and the death-game condition makes every clearing decision a matter of survival.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/11/39717.jpg',
+    id: 'sword-art-online', anime: 'Sword Art Online', tagline: '10,000 players trapped in a death-game. Only victory frees them.', malId: 11757, visualizationHint: 'node-graph', visualizationReason: 'SAO is structurally a dependency graph: sword skills link to weapon type nodes, guilds create party coordination networks, and the death-game condition makes every clearing decision a matter of survival.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/11/39717.jpg',
     themeColors: { primary: '#0ea5e9', secondary: '#0f172a', accent: '#06b6d4', glow: 'rgba(14,165,233,0.35)', tabActive: '#0ea5e9', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#7dd3fc', modeGlow: 'rgba(6,182,212,0.3)', heroGradient: 'rgba(5,15,25,0.95)' },
     stats: { characters: 8, powerSystem: 4, rules: 4 }
   },
@@ -148,7 +148,7 @@ export const UNIVERSE_CATALOG = [
     stats: { characters: 6, powerSystem: 4, rules: 4 }
   },
   {
-    id: 'fire-force', anime: 'Fire Force', tagline: 'Spontaneous human combustion creates armies of infernal monsters—and only those who breathe fire can stop them.', malId: 38671, visualizationHint: 'counter-tree', visualizationReason: 'Fire Forces power system revolves around Fire Breathing forms that directly counter each other in rock-paper-scissors relationships, and the Adolla Burst reveals create a branching counter-tree of elemental advantages.', animeImageUrl: 'https://myanimelist.net/images/anime/1664/103275.jpg',
+    id: 'fire-force', anime: 'Fire Force', tagline: 'Spontaneous combustion meets Breathing arts — Company 8 fights to save Tokyo.', malId: 38671, visualizationHint: 'counter-tree', visualizationReason: 'Fire Forces power system revolves around Fire Breathing forms that directly counter each other in rock-paper-scissors relationships, and the Adolla Burst reveals create a branching counter-tree of elemental advantages.', animeImageUrl: 'https://myanimelist.net/images/anime/1664/103275.jpg',
     themeColors: { primary: '#dc2626', secondary: '#1c1917', accent: '#f97316', glow: 'rgba(249,115,22,0.35)', tabActive: '#ef4444', badgeBg: 'rgba(28,25,23,0.55)', badgeText: '#fecaca', modeGlow: 'rgba(220,38,38,0.3)', heroGradient: 'rgba(2,6,23,0.94)' },
     stats: { characters: 8, powerSystem: 4, rules: 4 }
   },
