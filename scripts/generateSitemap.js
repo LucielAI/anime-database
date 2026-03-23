@@ -74,11 +74,13 @@ function buildSitemap(slugs) {
   ]
 
   // Insights/post slugs — from INSIGHTS object keys in InsightPost.jsx
-  const INSIGHT_POST_PATH = path.join(__dirname, '../src/components/InsightPost.jsx')
+  const INSIGHT_SRC = path.join(__dirname, '../src/components/InsightPost.jsx')
   let insightSlugs = []
   try {
-    const s = fs.readFileSync(INSIGHT_POST_PATH, 'utf8')
-    insightSlugs = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
+    const s = fs.readFileSync(INSIGHT_SRC, 'utf8')
+    const keys1 = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
+    const keys2 = [...s.matchAll(/^  "([^"]+)":/gm)].map(m => m[1])
+    insightSlugs = [...new Set([...keys1, ...keys2])]
   } catch {
     insightSlugs = []
   }
@@ -184,6 +186,8 @@ const INSIGHT_SRC = path.join(__dirname, '../src/components/InsightPost.jsx')
 let insightSlugs = []
 try {
   const s = fs.readFileSync(INSIGHT_SRC, 'utf8')
-  insightSlugs = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
+  const keys1 = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
+  const keys2 = [...s.matchAll(/^  "([^"]+)":/gm)].map(m => m[1])
+  insightSlugs = [...new Set([...keys1, ...keys2])]
 } catch {}
 console.log(`[sitemap] ${slugs.length} universe(s), ${THEMATIC_SLUGS.length} thematic page(s), ${insightSlugs.length} insight(s), ${blogSlugs.length} blog post(s) → public/sitemap.xml`)

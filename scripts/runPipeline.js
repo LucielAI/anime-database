@@ -81,8 +81,10 @@ const qaPayload = (slug) => {
   if ('_fetchFailed' in p) issues.push('Spurious _fetchFailed at root')
   p.characters?.forEach(c => {
     if (c.imageUrl && !IMAGE_HOSTS.some(h => c.imageUrl.includes(h))) issues.push(`Bad image host [${c.name}]`)
-    const hasBio = (c.loreBio?.length ?? 0) >= 5 || (c.systemBio?.length ?? 0) >= 5
-    if (!hasBio) issues.push(`Short/empty bio [${c.name}]`)
+    const loreOk = (c.loreBio?.length ?? 0) >= 5
+    const sysOk  = (c.systemBio?.length ?? 0) >= 5
+    if (!loreOk && !sysOk) issues.push(`Short/empty bio [${c.name}]`)
+    else if (!loreOk || !sysOk) issues.push(`WARN: partial bio [${c.name}] — only ${loreOk ? "loreBio" : "systemBio"} populated`)
   })
   p.relationships?.forEach(r => {
     if (!VALID_RELS.includes(r.type)) issues.push(`Bad rel type [${r.source}→${r.target}]: ${r.type}`)
