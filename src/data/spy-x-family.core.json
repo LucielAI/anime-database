@@ -1,6 +1,6 @@
 {
   "anime": "Spy x Family",
-  "tagline": "A spy, an assassin, and a telepath form a fake family—each hiding their real job from the others.",
+  "tagline": "Spy x Family — A spy, an assassin, and a telepath form a fake family — and somehow grow to mean it.",
   "malId": 50265,
   "themeColors": {
     "primary": "#7c3aed",
@@ -188,7 +188,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/457933.jpg?s=ba4caa5a44905138cd83d5972982664c",
       "malId": 170256,
       "slug": "anya-forger",
-      "description": "Anya Forger is a telepath from Spy x Family.",
+      "description": "Telepathic orphan who reads minds and desperately wants a family. Manipulates her way into the Forger household while hiding the one secret that would destroy everything.",
       "faction": "Forger Family",
       "abilities": [
         {

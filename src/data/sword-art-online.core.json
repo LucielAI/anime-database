@@ -1,7 +1,7 @@
 {
   "slug": "sword-art-online",
   "anime": "Sword Art Online",
-  "tagline": "10,000 players trapped in a death-game. Only victory frees them.",
+  "tagline": "Sword Art Online — 10,000 players trapped. Only victory or death exists as options.",
   "malId": 11757,
   "themeColors": {
     "primary": "#0ea5e9",
@@ -503,7 +503,7 @@
   "hero": {
     "systemType": "node-graph",
     "microHook": "Death-game traps Kirito — clear 100 floors alone or die trying.",
-    "thesis": "SAO's YGGDRASIL system runs on sword skill nodes, dual wielding, and survival-equals-death stakes. Players optimize builds through grinding and risk management.",
+    "thesis": "SAO runs on sword-skill nodes, dual wielding, and death-on-failure stakes. Players grind builds and manage risk against a collapsing clock.",
     "primarySystemType": "power_engine",
     "imageUrl": "https://cdn.myanimelist.net/images/anime/11/39717l.jpg"
   },

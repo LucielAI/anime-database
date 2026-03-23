@@ -1,6 +1,6 @@
 {
   "anime": "Parasyte",
-  "tagline": "A parasite takes over your right hand and becomes your most unlikely ally against alien invasion.",
+  "tagline": "Parasyte — A parasite takes over your right hand and becomes your unlikely partner in survival.",
   "malId": 22535,
   "themeColors": {
     "primary": "#0f766e",
@@ -193,7 +193,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/271459.jpg?s=7b3e263fe274cebba676640cab4bb1b7",
       "malId": 22145,
       "slug": "gotou",
-      "description": "Gotou is a parasite-human hybrid from Parasyte.",
+      "description": "Parasite-human hybrid sent to capture Migi. Has a fully formed parasite limbd replaced his right arm. Functions as a coordinated dual-substrate combatant.",
       "faction": "Parasite Core",
       "abilities": [
         {
@@ -223,7 +223,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/277609.jpg?s=f17ff00d22f5eb405e37ad937ae7bd5b",
       "malId": 22147,
       "slug": "muramoto",
-      "description": "Muramoto is a parasitized human from Parasyte.",
+      "description": "Migi-controlled corpse that Shinichi uses as a temporary body after their original host dies. Maintains parasite combat capabilities with human mobility limitations.",
       "faction": "Parasite Infiltrators",
       "abilities": [
         {
