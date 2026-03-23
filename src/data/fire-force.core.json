@@ -374,14 +374,6 @@
       "weight": 7,
       "loreDesc": "Iris's faith and Shinra's determination support each other through the investigation's darkest revelations.",
       "systemDesc": "Psychological resilience edge linking emotional conviction with tactical purpose."
-    },
-    {
-      "source": "Company 8",
-      "target": "The Evangelist",
-      "type": "counter",
-      "weight": 9,
-      "loreDesc": "The Evangelist's plan to recreate the Great Cataclysm puts Company 8 in direct opposition to the system's origin.",
-      "systemDesc": "Terminal conflict edge between the investigation node and the system's founding corruption."
     }
   ],
   "factions": [

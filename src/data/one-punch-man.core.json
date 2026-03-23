@@ -322,6 +322,37 @@
           "severity": "fatal"
         }
       ]
+    },
+    {
+      "name": "Baro Veldan",
+      "slug": "baro-veldan",
+      "title": "The Egotistical Swordsman",
+      "role": "Rival",
+      "rank": "B-Class",
+      "dangerLevel": 4,
+      "loreBio": "A B-Class hero from Sweden who challenged Saitama to a duel. His sword style focuses on overwhelming aggression and ego-driven combat. Baro believes he is the strongest, making him Saitamas rarest opponent.",
+      "systemBio": "Baro runs an ego-amplification combat strategy — his arrogance makes him attack without hesitation, which paradoxically makes him more effective than calculated fighters in some matchups.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "red-900",
+      "accentColor": "blue-400",
+      "icon": "Sword",
+      "signatureMoment": "Challenging Saitama to a duel and being defeated in a single blow while maintaining his conviction of victory.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/241727.jpg",
+      "malId": null,
+      "description": "Baro Veldan: B-Class hero who challenged Saitama.",
+      "faction": "Heroes",
+      "abilities": [
+        {
+          "name": "Sword Strike",
+          "description": "Aggressive sword swing.",
+          "severity": "medium"
+        },
+        {
+          "name": "Ego Rush",
+          "description": "Full-commitment attack with no defensive consideration.",
+          "severity": "high"
+        }
+      ]
     }
   ],
   "relationships": [
