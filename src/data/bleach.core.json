@@ -13,7 +13,7 @@
     "modeGlow": "rgba(30,58,138,0.25)",
     "heroGradient": "rgba(5,10,20,0.95)"
   },
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
+  "animeImageUrl": "https://myanimelist.net/images/anime/1541/147774.jpg",
   "visualizationHint": "node-graph",
   "visualizationReason": "Bleach is a faction-network universe where Soul Society, Hueco Mundo, the Human World, and the Quincy domain exist as distinct but interacting spiritual layers. The node-graph captures the structural thesis: each faction is a node, dimensional gateways are edges, and key individuals (Ichigo, Aizen, the Royal Guard) serve as bridge nodes connecting otherwise separate domains.",
   "headerFlavor": {
@@ -219,7 +219,7 @@
       "accentColor": "gray-400",
       "icon": "Swords",
       "signatureMoment": "Finally sealing his eye patch (which suppressed his power) and fighting Nnoitra — the moment the world's strongest raw fighter finally used everything he had.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/1/1211.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/483004.jpg?s=63c44da04ba828ee740d6f70b1c5ce37",
       "_fetchFailed": false,
       "malId": 1211,
       "role": "Main"
@@ -287,7 +287,7 @@
       "accentColor": "orange-400",
       "icon": "Shield",
       "signatureMoment": "Rejecting the death of a person she loved — the moment she demonstrated that her powers operate at the level of events rather than matter.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/505076.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/208151.jpg?s=02da17b640780ce6210580dfce8459c2",
       "_fetchFailed": false,
       "malId": 7,
       "role": "Main"
