@@ -61,7 +61,7 @@ function CompareRow({ label, left, right }) {
 }
 
 export default function CompareRoute() {
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const leftId = searchParams.get('left') || UNIVERSE_CATALOG[0]?.id || ''
   const rightId = searchParams.get('right') || UNIVERSE_CATALOG[1]?.id || ''
 
@@ -169,7 +169,7 @@ export default function CompareRoute() {
               onChange={(e) => {
                 const params = new URLSearchParams(searchParams)
                 params.set('left', e.target.value)
-                window.location.search = params.toString()
+                setSearchParams(params)
               }}
               className="w-full h-10 rounded-lg border border-white/10 bg-black/40 px-3 text-xs text-gray-200 cursor-pointer"
             >
@@ -185,7 +185,7 @@ export default function CompareRoute() {
               onChange={(e) => {
                 const params = new URLSearchParams(searchParams)
                 params.set('right', e.target.value)
-                window.location.search = params.toString()
+                setSearchParams(params)
               }}
               className="w-full h-10 rounded-lg border border-white/10 bg-black/40 px-3 text-xs text-gray-200 cursor-pointer"
             >
