@@ -1,0 +1,561 @@
+{
+  "anime": "Tokyo Revengers",
+  "tagline": "A time-leaping delinquent rewrites bloody futures by navigating linear past events.",
+  "malId": 42249,
+  "themeColors": {
+    "primary": "#1e3a5f",
+    "secondary": "#0d1b2a",
+    "accent": "#f97316",
+    "glow": "rgba(249,115,22,0.35)",
+    "tabActive": "#f97316",
+    "badgeBg": "rgba(13,27,42,0.55)",
+    "badgeText": "#fed7aa",
+    "modeGlow": "rgba(249,115,22,0.3)",
+    "heroGradient": "rgba(2,6,23,0.94)"
+  },
+  "visualizationHint": "timeline",
+  "visualizationReason": "Time-leaping in Tokyo Revengers is fundamentally a linear backward navigation mechanic: Takemichi rewinds to a fixed past point, makes changes, and must chain subsequent leaps to reach his desired future outcome.",
+  "headerFlavor": {
+    "loreQuote": "If I can jump back, I'll save them all—even if it means rewriting myself.",
+    "sysWarning": "// [SYS_WARN]: TIMELINE ANCHOR UNSTABLE — BRANCHING CHAINS DETECTED",
+    "sysWarningColor": "orange"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "glow-border-soft",
+  "introductionSummary": "Tokyo Revengers follows Takemichi Hanagaki, a directionless young adult who discovers he can time-leap to a fixed point in his past. Each leap forces him to navigate gang politics, prevent tragic deaths, and untangle causality chains that connect his present suffering to decisions made years earlier. The mechanic is strictly linear: he cannot jump to any arbitrary point, only back to the same anchor, which means every future fix requires a new chain of small interventions.",
+  "aiInsights": {
+    "casual": "Takemichi can't choose when he jumps—just back to middle school every time. He has to fix the future by changing small things in the past, which is way harder than it sounds because one wrong move creates a different disaster.",
+    "deep": "Tokyo Revengers presents a constrained time-manipulation model: no arbitrary destination jumps, no direct future access, and consequences that compound across branch chains. Each fixed past point becomes a new anchor whose altered outcomes feed forward into revised present states. The narrative tension comes from Takemichi's limited toolset against systemic gang violence—he cannot overpower his way through problems, only reroute causality."
+  },
+  "powerSystem": [
+    {
+      "name": "Time Leap",
+      "subtitle": "Linear Past Navigation",
+      "loreDesc": "Takemichi can transfer his consciousness back to a fixed point in his past, living through those years again while retaining full memory of the future.",
+      "systemDesc": "A single-anchor temporal rewind protocol that preserves subjective continuity but resets objective state to a fixed historical baseline.",
+      "icon": "Clock",
+      "color": "orange-400",
+      "signatureMoment": "Takemichi leaps for the first time and discovers his救いたい girl is still alive in the past.",
+      "loreSubtitle": "One-way ticket to a fixed past",
+      "systemSubtitle": "Single-anchor temporal rewind"
+    },
+    {
+      "name": "Future Memory",
+      "subtitle": "Causality Reference Library",
+      "loreDesc": "Takemichi retains perfect recall of all future events, giving him situational awareness that no one else possesses.",
+      "systemDesc": "Immutable read-only memory stream that persists across timeline resets, functioning as the sole source of advance intelligence.",
+      "icon": "Eye",
+      "color": "amber-400",
+      "signatureMoment": "He uses future knowledge to identify who's responsible for each tragedy before it happens.",
+      "loreSubtitle": "The only one who remembers",
+      "systemSubtitle": "Persistent memory across timeline resets"
+    },
+    {
+      "name": "Character Influence",
+      "subtitle": "Social Engineering Loop",
+      "loreDesc": "Takemichi cannot fight his way through gang conflicts, so he must redirect people through emotional manipulation and carefully timed interventions.",
+      "systemDesc": "A soft-power routing mechanism where alliance edges are rewired through persuasion rather than combat throughput.",
+      "icon": "Heart",
+      "color": "rose-400",
+      "signatureMoment": "Reaching Mikey's heart saves the future more than any physical confrontation ever could.",
+      "loreSubtitle": "Redirect people, not bullets",
+      "systemSubtitle": "Emotional routing over force"
+    },
+    {
+      "name": "Timeline Branching",
+      "subtitle": "Consequence Chains",
+      "loreDesc": "Each leap creates a revised future, and subsequent leaps must chain from that new present, meaning mistakes compound across the chain.",
+      "systemDesc": "A sequential state update model where each rewrite becomes the new baseline for all following operations.",
+      "icon": "GitBranch",
+      "color": "violet-400",
+      "signatureMoment": "Saving one person inadvertently creates a new tragedy elsewhere, forcing another leap.",
+      "loreSubtitle": "Every fix creates new problems",
+      "systemSubtitle": "Sequential state update chain"
+    }
+  ],
+  "rankings": {
+    "systemName": "Toman Command Hierarchy",
+    "loreName": "Tokyo Manji Gang Authority Ladder",
+    "topTierName": "Commander-in-Chief",
+    "topTierLore": "Mikey commands absolute authority over Tokyo's most powerful delinquent faction.",
+    "topTierSystem": "Root command node with override authority over all gang operations and alliance decisions.",
+    "tiers": [
+      {
+        "name": "Gang Commander",
+        "loreDesc": "Top leaders who control large delinquent organizations with regional reach.",
+        "systemDesc": "Primary command nodes directing strategic operations across multiple sub-units."
+      },
+      {
+        "name": "Vice-Commander / Division Leader",
+        "loreDesc": "Elite fighters and strategists who execute commander directives.",
+        "systemDesc": "Execution-layer nodes translating top-level commands into tactical field outcomes."
+      },
+      {
+        "name": "Core Member / Black Dragon",
+        "loreDesc": "Trusted inner circle members who hold significant influence despite rank.",
+        "systemDesc": "High-trust dependency edges within the command network."
+      },
+      {
+        "name": "Rookie / Foot Soldier",
+        "loreDesc": "Rank-and-file gang members who make up the bulk of any confrontation.",
+        "systemDesc": "Distributed compute nodes with minimal individual decision authority."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Takemichi Hanagaki",
+      "title": "The Time Leaper",
+      "rank": "Narrative Pivot",
+      "dangerLevel": 3,
+      "loreBio": "A 26-year-old who time-leaps back to his middle school days to prevent tragedies involving his ex-girlfriend Hina and the Tokyo Manji Gang.",
+      "systemBio": "The sole mutable state carrier in a fixed-causality universe, using future memory to reroute gang conflict outcomes through social intervention.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Clock",
+      "signatureMoment": "First time-leap: waking up in his middle school body, crying with relief that Hina is still alive.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/448782.jpg?s=489a6af4eb5a382b8e77fd8c557ae217",
+      "malId": 171969,
+      "slug": "takemichi-hanagaki",
+      "description": "Takemichi Hanagaki is a time leaper from Tokyo Revengers.",
+      "faction": "Independent",
+      "abilities": [
+        {
+          "name": "Time Leap",
+          "description": "Transfers consciousness to a fixed past anchor point while retaining full future memory.",
+          "severity": "high"
+        },
+        {
+          "name": "Future Memory",
+          "description": "Perfect recall of all events from the future across all timeline branches.",
+          "severity": "medium"
+        },
+        {
+          "name": "Emotional Reach",
+          "description": "Ability to emotionally connect with gang members and redirect their decisions through sincerity.",
+          "severity": "low"
+        }
+      ],
+      "primaryAbility": "Time Leap / Future Memory"
+    },
+    {
+      "name": "Manjiro Sano",
+      "title": "Mikey / Commander-in-Chief",
+      "rank": "Supreme Commander",
+      "dangerLevel": 10,
+      "loreBio": "The invincible leader of Tokyo Manji Gang whose emotional fragility beneath absolute strength drives the series' darkest timelines.",
+      "systemBio": "Central command authority node whose behavioral mutations from trauma cascade into system-wide instability across all future branches.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Crown",
+      "signatureMoment": "Going dark in the final timeline, issuing orders that lead to mass casualties.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/514406.jpg?s=1165265ce055037dbff9c95d878bd5ab",
+      "malId": 175294,
+      "slug": "manjiro-sano",
+      "description": "Manjiro Sano (Mikey) is the Commander-in-Chief of Tokyo Manji Gang from Tokyo Revengers.",
+      "faction": "Tokyo Manji Gang",
+      "abilities": [
+        {
+          "name": "Invincible Fighting",
+          "description": "Mikey defeats any opponent in direct combat regardless of opponent's skill level.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Absolute Authority",
+          "description": "His commands over the gang are never questioned or disobeyed.",
+          "severity": "high"
+        },
+        {
+          "name": "Dark Impulse",
+          "description": "A psychological breaking point where his combat output becomes destructively erratic.",
+          "severity": "fatal"
+        }
+      ],
+      "primaryAbility": "Invincible Fighting / Dark Impulse"
+    },
+    {
+      "name": "Ken Ryuuguji",
+      "title": "Draken / Vice-Commander",
+      "rank": "Vice-Commander",
+      "dangerLevel": 8,
+      "loreBio": "Mikey's closest confidant and the intellectual anchor of Tokyo Manji Gang who tempers Mikey's worst impulses.",
+      "systemBio": "Stabilization edge node whose removal from the command network correlates with Mikey's behavioral cascade into dark timelines.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Shield",
+      "signatureMoment": "His death in the original timeline triggers Takemichi's first conscious leap.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/388001.jpg?s=17cf9999ca02eeceb460bd3c911cf158",
+      "malId": 173221,
+      "slug": "ken-ryuuguji",
+      "description": "Ken Ryuuguji (Draken) is the Vice-Commander of Tokyo Manji Gang from Tokyo Revengers.",
+      "faction": "Tokyo Manji Gang",
+      "abilities": [
+        {
+          "name": "Elite Combat",
+          "description": "One of the strongest fighters in the entire gang ecosystem.",
+          "severity": "high"
+        },
+        {
+          "name": "Command Influence",
+          "description": "His counsel directly shapes Mikey's decisions and gang direction.",
+          "severity": "medium"
+        }
+      ],
+      "primaryAbility": "Elite Combat / Vice-Commander Authority"
+    },
+    {
+      "name": "Keisuke Baji",
+      "title": "First Division Captain",
+      "rank": "Division Captain",
+      "dangerLevel": 7,
+      "loreBio": "A fiercely loyal Toman member whose undercover work for Valhalla and ultimate sacrifice defines tragic loyalty.",
+      "systemBio": "High-impact node whose loyalty edge transitions between factions create critical branching events.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Sword",
+      "signatureMoment": "Choosing death over betraying his friends after his Valhalla mission collapses.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/387998.jpg?s=c6e1a161f58cfc3a0287efa7d8bf8546",
+      "malId": 173220,
+      "slug": "keisuke-baji",
+      "description": "Keisuke Baji is the First Division Captain of Tokyo Manji Gang from Tokyo Revengers.",
+      "faction": "Tokyo Manji Gang",
+      "abilities": [
+        {
+          "name": "Savage Fighting Style",
+          "description": "Unpredictable aggressive combat that overwhelms conventional opponents.",
+          "severity": "high"
+        }
+      ],
+      "primaryAbility": "Savage Fighting Style / First Division Command"
+    },
+    {
+      "name": "Rindou Haitani",
+      "title": "Haitani Brother / Rokuhara Leader",
+      "rank": "Gang Leader",
+      "dangerLevel": 7,
+      "loreBio": "The younger Haitani brother who leads Rokuhara Tandai and fights with a flexible, brutal technique.",
+      "systemBio": "Rival command node representing parallel gang hierarchy that competes for Tokyo territorial dominance.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Bolt",
+      "signatureMoment": "Fighting alongside Ran as an unstoppable brother combo against Toman.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/451064.jpg?s=cf44bbaad09552c6765aeeae300c225e",
+      "malId": 177568,
+      "slug": "rindou-haitani",
+      "description": "Rindou Haitani is the younger brother of the Haitani duo from Tokyo Revengers.",
+      "faction": "Rokuhara Tandai",
+      "abilities": [
+        {
+          "name": "Flexible Fighting",
+          "description": "A adaptable combat style that confuses opponents trained in rigid martial arts.",
+          "severity": "high"
+        }
+      ],
+      "primaryAbility": "Flexible Fighting / Rokuhara Leadership"
+    },
+    {
+      "name": "Ran Haitani",
+      "title": "Haitani Brother / Rokuhara Leader",
+      "rank": "Gang Leader",
+      "dangerLevel": 7,
+      "loreBio": "The elder Haitani brother whose calm demeanor masks a ruthless strategist who leads Rokuhara alongside Rindou.",
+      "systemBio": "Command node with complementary skill profile to Rindou, forming a dual-leader architecture with deep tactical coordination.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "Bolt",
+      "signatureMoment": "Demonstrating his brother's combo fighting synergy in the Tenjiku arc.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/442836.jpg?s=4fcd48fb22a0ed5d828ca6ed5237bef9",
+      "malId": 177567,
+      "slug": "ran-haitani",
+      "description": "Ran Haitani is the elder brother of the Haitani duo from Tokyo Revengers.",
+      "faction": "Rokuhara Tandai",
+      "abilities": [
+        {
+          "name": "Rokuhara Command",
+          "description": "Leadership authority over one of Tokyo's three major delinquent factions.",
+          "severity": "medium"
+        },
+        {
+          "name": "Strategic Mind",
+          "description": "Plans gang operations with precision and long-term territorial thinking.",
+          "severity": "medium"
+        }
+      ],
+      "primaryAbility": "Rokuhara Command / Strategic Planning"
+    },
+    {
+      "name": "Tadaomi Hanemiya",
+      "title": "Hanemiya / Tenjiku Architect",
+      "rank": "Strategic Commander",
+      "dangerLevel": 9,
+      "loreBio": "The founding member of Tokyo Manji Gang who becomes its most dangerous adversary through Tenjiku, revealed to be Mikey's lost older brother.",
+      "systemBio": "Deep-history node whose intimate knowledge of Toman's internal structure makes him the most dangerous external rival, exploiting hidden kinship edges.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "green-900",
+      "accentColor": "green-400",
+      "icon": "Skull",
+      "signatureMoment": "Revealing himself as Izana, Mikey's lost older brother, reframing the entire conflict.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/529795.jpg?s=debf885ed1064a258d9ace0a2254c703",
+      "malId": 238360,
+      "slug": "tadaomi-hanemiya",
+      "description": "Tadaomi Hanemiya (Izana) is the enigmatic founder of Tenjiku from Tokyo Revengers.",
+      "faction": "Tenjiku",
+      "abilities": [
+        {
+          "name": "Perfect Knowledge of Toman",
+          "description": "His founding-member insight into Tokyo Manji Gang makes him able to counter its every strategy.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Frightening Presence",
+          "description": "His aura alone causes weaker opponents to freeze or flee.",
+          "severity": "high"
+        }
+      ],
+      "primaryAbility": "Founding Member Insight / Toman Counter-Strategy"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Takemichi Hanagaki",
+      "target": "Manjiro Sano",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Takemichi becomes Mikey's closest emotional anchor, the only person who can reach him when he goes dark.",
+      "systemDesc": "Stabilization edge for the system's most volatile command node."
+    },
+    {
+      "source": "Takemichi Hanagaki",
+      "target": "Ken Ryuuguji",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Draken becomes Takemichi's tactical mentor and biggest supporter within Toman.",
+      "systemDesc": "High-trust routing edge that amplifies Takemichi's influence within the gang network."
+    },
+    {
+      "source": "Manjiro Sano",
+      "target": "Ken Ryuuguji",
+      "type": "ally",
+      "weight": 10,
+      "loreDesc": "Mikey's absolute trust in Draken is the foundation that keeps his command stable.",
+      "systemDesc": "Primary stabilization edge for the supreme command node."
+    },
+    {
+      "source": "Manjiro Sano",
+      "target": "Tadaomi Hanemiya",
+      "type": "counter",
+      "weight": 9,
+      "loreDesc": "Izana's revelation as Mikey's brother turns personal loyalty into a system-level fracture.",
+      "systemDesc": "Hidden kinship edge that rewrites alliance weights when revealed."
+    },
+    {
+      "source": "Keisuke Baji",
+      "target": "Manjiro Sano",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Baji's loyalty to Mikey is absolute and ultimately costs him his life.",
+      "systemDesc": "Unconditional dependency edge that persists even under misinformation."
+    },
+    {
+      "source": "Ran Haitani",
+      "target": "Rindou Haitani",
+      "type": "ally",
+      "weight": 10,
+      "loreDesc": "The Haitani brothers operate as a single combat unit, never apart.",
+      "systemDesc": "Mandatory pairing edge — both nodes must be present for full tactical output."
+    },
+    {
+      "source": "Rindou Haitani",
+      "target": "Manjiro Sano",
+      "type": "rival",
+      "weight": 7,
+      "loreDesc": "Rokuhara-Toman rivalry positions the Haitanis as recurring obstacles to Mikey's dominance.",
+      "systemDesc": "Competitive routing edge between parallel gang hierarchies."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Tokyo Manji Gang",
+      "role": "protagonist",
+      "loreDesc": "Tokyo's most powerful delinquent organization, founded by Mikey, with ambitions of national dominance.",
+      "systemDesc": "Primary command network with the most connected nodes in the gang ecosystem."
+    },
+    {
+      "name": "Rokuhara Tandai",
+      "role": "antagonist",
+      "loreDesc": "A major Tokyo gang led by the Haitani brothers that rivals Toman's territory.",
+      "systemDesc": "Parallel command architecture with comparable node count but different tactical doctrine."
+    },
+    {
+      "name": "Tenjiku",
+      "role": "antagonist",
+      "loreDesc": "An organization formed by Izana to destroy Toman from within using intimate knowledge of its structure.",
+      "systemDesc": "Insider-threat network exploiting kinship edges and structural vulnerabilities."
+    },
+    {
+      "name": "Black Dragon",
+      "role": "neutral",
+      "loreDesc": "A legendary delinquent faction that serves as the historical benchmark for gang power.",
+      "systemDesc": "Legacy benchmark node representing the peak of previous generation gang organization."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Time Leap Anchors to a Fixed Past Point",
+      "subtitle": "No arbitrary destination jumps",
+      "loreConsequence": "Takemichi cannot skip to any specific past moment—he must chain multiple leaps to navigate forward from the anchor.",
+      "systemEquivalent": "Single-anchor temporal rewind protocol with no destination flexibility.",
+      "severity": "high",
+      "loreSubtitle": "The same ticket every time",
+      "systemSubtitle": "Fixed-point rewind only"
+    },
+    {
+      "name": "Death in the Past Changes the Present",
+      "subtitle": "Timeline reflects past outcomes",
+      "loreConsequence": "Killing someone in a past leap eliminates them from the future—but also removes their future influence.",
+      "systemEquivalent": "State mutation propagates forward from the altered historical node.",
+      "severity": "fatal",
+      "loreSubtitle": "Kill in the past, vanish in the future",
+      "systemSubtitle": "Retroactive state overwrite"
+    },
+    {
+      "name": "Physical Contact Triggers Leap",
+      "subtitle": "Contact with future-self's hands",
+      "loreConsequence": "Takemichi can only time-leap by grabbing someone who will be alive in the future—the trigger is physical.",
+      "systemEquivalent": "Event-based initiation gate requiring specific future-state contact validation.",
+      "severity": "medium",
+      "loreSubtitle": "Handshake to the future",
+      "systemSubtitle": "Contact-gated trigger"
+    },
+    {
+      "name": "Losing the Future Anchors",
+      "subtitle": "If the person Takemichi is trying to save dies with no future version, he cannot leap to reach them",
+      "loreConsequence": "Some deaths permanently close the branch, making the outcome irreversible.",
+      "systemEquivalent": "Irreversible state loss when target node reaches terminal null.",
+      "severity": "fatal",
+      "loreSubtitle": "Some futures close forever",
+      "systemSubtitle": "Permanent branch closure"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Mikey's Dark Impulse",
+      "defender": "Takemichi's Emotional Reach",
+      "mechanic": "Only Takemichi's genuine emotional connection can pull Mikey back from his darkest behavioral states.",
+      "loreDesc": "No amount of fighting can stop Mikey when he's fully committed—only a human bond can.",
+      "systemDesc": "Soft-influence edge that accesses the command node's emotional input layer."
+    },
+    {
+      "attacker": "Gang Hierarchy",
+      "defender": "Future Knowledge",
+      "mechanic": "Takemichi uses information from the future to redirect gang decisions before they happen.",
+      "loreDesc": "Knowing who will betray whom and when lets him set up interventions no one can anticipate.",
+      "systemDesc": "Intelligence advantage from asymmetric memory access."
+    },
+    {
+      "attacker": "Izana's Insider Knowledge",
+      "defender": "Chained Timeline Interventions",
+      "mechanic": "Countering Tenjiku requires sequential small interventions across multiple leaps, not a single confrontation.",
+      "loreDesc": "Izana knows Toman too well for direct confrontation—Takemichi must change underlying causes.",
+      "systemDesc": "Sequential state adjustment rather than frontal override."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Consciousness Transfer Without Body Swap",
+      "ruleViolated": "Physical continuity should be required for temporal continuity",
+      "loreDesc": "Takemichi's consciousness transfers without his physical body following, creating a ghost-like presence in the past.",
+      "systemDesc": "Pure state transfer without physical substrate carrier."
+    },
+    {
+      "name": "Emotional State Bleeding Across Leaps",
+      "ruleViolated": "Each timeline should reset psychological state to anchor baseline",
+      "loreDesc": "Takemichi retains emotional trauma from future events even after leaping back, affecting his past relationships.",
+      "systemDesc": "Psychological state persistence that should have been cleared at each anchor reset."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Hina's Death / First Leap",
+      "trigger": "Takemichi witnesses his ex-girlfriend's death in the present",
+      "consequence": "He discovers his ability to time-leap and dedicates his power to saving her and others.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "The catalyst event that transforms a directionless adult into a temporal intervention agent.",
+      "systemDesc": "Event that initializes the mutable-node's primary directive."
+    },
+    {
+      "name": "Draken's Death",
+      "trigger": "Draken is killed in a gang conflict during the Tenjiku arc",
+      "consequence": "This death, even after being prevented in other timelines, haunts Takemichi's mission.",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The loss that first demonstrates how deeply entrenched gang violence is in the timeline.",
+      "systemDesc": "High-weight node deletion that destabilizes the command network."
+    },
+    {
+      "name": "Mikey's Dark Impulse Activation",
+      "trigger": "Mikey loses too many people he cares about across timeline branches",
+      "consequence": "His psychological breaking point triggers a dark version of himself that becomes the series' final antagonist.",
+      "timelinePosition": "Mid-Late Arc",
+      "loreDesc": "The command node's emotional safeguards fail, producing destructive behavioral outputs.",
+      "systemDesc": "Stabilization edge loss triggers catastrophic mode switch in root command node."
+    },
+    {
+      "name": "Izana Revealed as Mikey's Brother",
+      "trigger": "Hanemiya's true identity as Izana, Mikey's older brother, is exposed",
+      "consequence": "What appeared to be external gang rivalry is revealed to be family conflict.",
+      "timelinePosition": "Tenjiku Arc",
+      "loreDesc": "A hidden kinship edge dramatically rewrites the alliance structure.",
+      "systemDesc": "Identity revelation that retroactively reclassifies node relationships."
+    }
+  ],
+  "animeImageUrl": "https://myanimelist.net/images/anime/1839/122012.jpg",
+  "systemQuestions": [
+    {
+      "question": "Why is Takemichi's time-leap so constrained compared to other time manipulation in anime?",
+      "answer": "He cannot choose where or when to jump—only back to a fixed anchor point. Every future change requires a chain of small interventions rather than a single direct fix.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why does Takemichi fight with emotions rather than physical power?",
+      "answer": "He is not a strong fighter. His advantage is future memory and the ability to emotionally reach people, especially Mikey, redirecting gang outcomes through human connection.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why is Mikey the most important person in the timeline?",
+      "answer": "Mikey is the supreme command node—his decisions ripple through the entire gang network. His dark impulse is what creates the worst futures, and his stability is what prevents them.",
+      "tabIndex": 2,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
+    },
+    {
+      "question": "Why does timeline branching matter for the story?",
+      "answer": "Each leap creates a revised present, and Takemichi must chain subsequent leaps from that new baseline. Mistakes compound, meaning one wrong intervention can create a worse future than the original.",
+      "tabIndex": 1,
+      "sectionId": "character-database-heading",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "What makes Izana/Izanagi the most dangerous antagonist?",
+      "answer": "He has founding-member knowledge of Toman's complete internal structure, allowing him to exploit every weakness from inside the system.",
+      "tabIndex": 3,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    }
+  ],
+  "hero": {
+    "systemType": "relational",
+    "microHook": "Find the emotional node that unlocks the command chain.",
+    "thesis": "A single-anchor time-leap chains sequential interventions through gang hierarchy toward preventing civilization-scale tragedy.",
+    "primarySystemType": "entity_db"
+  }
+}

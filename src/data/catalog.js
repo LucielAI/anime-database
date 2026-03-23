@@ -1,4 +1,4 @@
-export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'mob-psycho-100', 'tokyo-ghoul', 'one-piece', 'black-clover', 're-zero', 'blue-lock', 'sword-art-online']
+export const preferredOrder = ['aot', 'jjk', 'chainsawman', 'demonslayer', 'hxh', 'vinlandsaga', 'steinsgate', 'deathnote', 'fmab', 'codegeass', 'mha', 'frieren', 'sololeveling', 'goblinslayer', 'mushokutensei', 'naruto', 'bleach', 'dragonballz', 'mob-psycho-100', 'tokyo-ghoul', 'one-piece', 'black-clover', 're-zero', 'blue-lock', 'sword-art-online', 'tokyo-revengers', 'one-punch-man', 'spy-x-family', 'fire-force', 'parasyte']
 
 export const UNIVERSE_CATALOG = [
   {
@@ -131,6 +131,31 @@ export const UNIVERSE_CATALOG = [
     id: 'sword-art-online', anime: 'Sword Art Online', tagline: 'A death-game locks 10,000 players inside a virtual sword world — the only way out is to win', malId: 11757, visualizationHint: 'node-graph', visualizationReason: 'SAO is structurally a dependency graph: sword skills link to weapon type nodes, guilds create party coordination networks, and the death-game condition makes every clearing decision a matter of survival.', animeImageUrl: 'https://cdn.myanimelist.net/images/anime/11/39717.jpg',
     themeColors: { primary: '#0ea5e9', secondary: '#0f172a', accent: '#06b6d4', glow: 'rgba(14,165,233,0.35)', tabActive: '#0ea5e9', badgeBg: 'rgba(15,23,42,0.55)', badgeText: '#7dd3fc', modeGlow: 'rgba(6,182,212,0.3)', heroGradient: 'rgba(5,15,25,0.95)' },
     stats: { characters: 8, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'tokyo-revengers', anime: 'Tokyo Revengers', tagline: 'A time-leaping delinquent rewrites bloody futures by navigating linear past events.', malId: 42249, visualizationHint: 'timeline', visualizationReason: 'Time-leaping in Tokyo Revengers is fundamentally a linear backward navigation mechanic: Takemichi rewinds to a fixed past point, makes changes, and must chain subsequent leaps to reach his desired future outcome.', animeImageUrl: 'https://myanimelist.net/images/anime/1839/122012.jpg',
+    themeColors: { primary: '#1e3a5f', secondary: '#0d1b2a', accent: '#f97316', glow: 'rgba(249,115,22,0.35)', tabActive: '#f97316', badgeBg: 'rgba(13,27,42,0.55)', badgeText: '#fed7aa', modeGlow: 'rgba(249,115,22,0.3)', heroGradient: 'rgba(2,6,23,0.94)' },
+    stats: { characters: 7, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'one-punch-man', anime: 'One Punch Man', tagline: 'A hero who defeats everything with one punch comedically breaks the entire power-scaling economy.', malId: 30276, visualizationHint: 'node-graph', visualizationReason: 'The Hero Association creates a rigid command-and-rank hierarchy where hero performance metrics determine class placement, resource allocation, and crisis routing—a pure node-graph where edges represent institutional authority and response coordination.', animeImageUrl: 'https://myanimelist.net/images/anime/12/76049.jpg',
+    themeColors: { primary: '#ca8a04', secondary: '#1c1917', accent: '#ef4444', glow: 'rgba(239,68,68,0.35)', tabActive: '#eab308', badgeBg: 'rgba(28,25,23,0.55)', badgeText: '#fef08a', modeGlow: 'rgba(239,68,68,0.3)', heroGradient: 'rgba(2,6,23,0.94)' },
+    stats: { characters: 7, powerSystem: 4, rules: 3 }
+  },
+  {
+    id: 'spy-x-family', anime: 'Spy x Family', tagline: 'A spy, an assassin, and a telepath form a fake family—each hiding their real job from the others.', malId: 50265, visualizationHint: 'affinity-matrix', visualizationReason: 'Spy x Family has no unified power system—each family member operates with an individual ability set (spy tradecraft, assassination, telepathy), and the narrative tension comes from their individual cards being revealed selectively, making it a perfect affinity-matrix.', animeImageUrl: 'https://myanimelist.net/images/anime/1441/122795.jpg',
+    themeColors: { primary: '#7c3aed', secondary: '#1e1b4b', accent: '#10b981', glow: 'rgba(124,58,237,0.35)', tabActive: '#8b5cf6', badgeBg: 'rgba(30,27,75,0.55)', badgeText: '#c4b5fd', modeGlow: 'rgba(16,185,129,0.3)', heroGradient: 'rgba(2,6,23,0.94)' },
+    stats: { characters: 6, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'fire-force', anime: 'Fire Force', tagline: 'Spontaneous human combustion creates armies of infernal monsters—and only those who breathe fire can stop them.', malId: 38671, visualizationHint: 'counter-tree', visualizationReason: 'Fire Forces power system revolves around Fire Breathing forms that directly counter each other in rock-paper-scissors relationships, and the Adolla Burst reveals create a branching counter-tree of elemental advantages.', animeImageUrl: 'https://myanimelist.net/images/anime/1664/103275.jpg',
+    themeColors: { primary: '#dc2626', secondary: '#1c1917', accent: '#f97316', glow: 'rgba(249,115,22,0.35)', tabActive: '#ef4444', badgeBg: 'rgba(28,25,23,0.55)', badgeText: '#fecaca', modeGlow: 'rgba(220,38,38,0.3)', heroGradient: 'rgba(2,6,23,0.94)' },
+    stats: { characters: 8, powerSystem: 4, rules: 4 }
+  },
+  {
+    id: 'parasyte', anime: 'Parasyte', tagline: 'A parasite takes over your right hand and becomes your most unlikely ally against alien invasion.', malId: 22535, visualizationHint: 'affinity-matrix', visualizationReason: 'Parasytes Migi operates as a symbiotic peer node to Shinichi human consciousness—sharing one body while maintaining distinct identities and abilities. The parasite control system creates affinity relationships between parasite types and host organisms.', animeImageUrl: 'https://myanimelist.net/images/anime/3/73178.jpg',
+    themeColors: { primary: '#0f766e', secondary: '#0c1a1a', accent: '#2dd4bf', glow: 'rgba(45,212,191,0.35)', tabActive: '#14b8a6', badgeBg: 'rgba(12,26,26,0.55)', badgeText: '#99f6e4', modeGlow: 'rgba(45,212,191,0.3)', heroGradient: 'rgba(2,6,23,0.94)' },
+    stats: { characters: 4, powerSystem: 4, rules: 4 }
   }
 ]
 

@@ -1,0 +1,578 @@
+{
+  "anime": "Fire Force",
+  "tagline": "Spontaneous human combustion creates armies of infernal monsters—and only those who breathe fire can stop them.",
+  "malId": 38671,
+  "themeColors": {
+    "primary": "#dc2626",
+    "secondary": "#1c1917",
+    "accent": "#f97316",
+    "glow": "rgba(249,115,22,0.35)",
+    "tabActive": "#ef4444",
+    "badgeBg": "rgba(28,25,23,0.55)",
+    "badgeText": "#fecaca",
+    "modeGlow": "rgba(220,38,38,0.3)",
+    "heroGradient": "rgba(2,6,23,0.94)"
+  },
+  "visualizationHint": "counter-tree",
+  "visualizationReason": "Fire Force's power system revolves around Fire Breathing forms that directly counter each other in rock-paper-scissors relationships, and the Adolla Burst reveals create a branching counter-tree of elemental advantages—perfect for a counter-tree visualization where each Breathing type branches into its weaknesses and strengths.",
+  "headerFlavor": {
+    "loreQuote": "When you play with fire, you get burned. When I play with fire, someone else gets burned.",
+    "sysWarning": "// [SYS_WARN]: SPONTANEOUS COMBUSTION PROTOCOL ACTIVE — INFERNAL BREACH COUNT: UNKNOWN",
+    "sysWarningColor": "red"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "glow-border-soft",
+  "introductionSummary": "Fire Force is set in a world where spontaneous human combustion creates 'Infernals'—monsters made of living flame—and only special fire departments with pyrokinetic abilities can contain them. Shinra Kusakabe joins Company 8 to find the truth about his mother's death and his own mysterious Blue Fire feet. The power system is Breathing—each Fire Soldier develops a specific flame type that has defined strengths and weaknesses against other types, creating a tactical counter-tree where knowing your opponent's Breath type determines whether you live or die.",
+  "aiInsights": {
+    "casual": "People randomly explode into fire monsters, and only teams of firefighters who can also shoot fire can stop them. Shinra's got blue foot-fires that are somehow special, and the whole thing ties back to some ancient burning god.",
+    "deep": "Fire Force runs a rock-paper-scissors power system where each of the eight Fire Breathing types directly counters another, creating a closed-loop counter balance. The Great Cataclysm and the Evangelist's plan exploit this by forcing a predetermined combat outcome through type-matching. Shinra's Adolla Burst—the elusive 'ninth' Breath—breaks the counter logic by operating outside the established type chart, which is why he's simultaneously the most valuable and most dangerous person in the system."
+  },
+  "powerSystem": [
+    {
+      "name": "Fire Breathing",
+      "subtitle": "Pyrokinetic Combat Classification",
+      "loreDesc": "Fire Soldiers manifest specific flame types through training, each with unique properties that determine combat matchups.",
+      "systemDesc": "A typed-elemental combat system where each type has defined advantage/disadvantage relationships against other types, creating tactical rock-paper-scissors dynamics.",
+      "icon": "Flame",
+      "color": "orange-400",
+      "signatureMoment": "Arthur Boyle discovers he has a 'Sword' Breath type that's completely useless until it isn't.",
+      "loreSubtitle": "Eight types, one answer",
+      "systemSubtitle": "Typed elemental counter system"
+    },
+    {
+      "name": "Adolla Burst",
+      "subtitle": "The Ninth Breathing / Blue Fire",
+      "loreDesc": "A legendary ninth flame type associated with the Great Cataclysm and the Evangelist's true plan—manifesting as pure white-blue fire.",
+      "systemDesc": "An anomaly node that operates outside the established type counter-chart, making it impossible to counter with standard Fire Breathing doctrine.",
+      "icon": "Zap",
+      "color": "blue-400",
+      "signatureMoment": "Shinra manifests Blue Fire for the first time, revealing he's connected to the Great Cataclysm.",
+      "loreSubtitle": "The flame that breaks the system",
+      "systemSubtitle": "Counter-immune fire type"
+    },
+    {
+      "name": "Infernalization",
+      "subtitle": "Spontaneous Human Combustion",
+      "loreDesc": "When combustion activates internally rather than through Breathing, humans become Infernals—monsters of living flame that attack indiscriminately.",
+      "systemDesc": "A corruption event that converts human nodes into hostile fire-based entities, representing the catastrophic failure state of the combustion system.",
+      "icon": "Skull",
+      "color": "red-400",
+      "signatureMoment": "A familiar face turning into an Infernal, forcing Company 8 to fight someone they knew.",
+      "loreSubtitle": "When humans become fuel",
+      "systemSubtitle": "Internal combustion corruption"
+    },
+    {
+      "name": "Great Cataclysm",
+      "subtitle": "The Founding Fire Event",
+      "loreDesc": "An ancient disaster 250 years ago created the current world and is directly connected to the Evangelist's plan to recreate it.",
+      "systemDesc": "The origin-state event that established the current combustion system's parameters and created the conditions for the Evangelist's end-goal.",
+      "icon": "Flame",
+      "color": "amber-400",
+      "signatureMoment": "The revelation that the Great Cataclysm was intentional—and is being planned again.",
+      "loreSubtitle": "The fire that made the world",
+      "systemSubtitle": "Founding corruption event"
+    }
+  ],
+  "rankings": {
+    "systemName": "Fire Soldier Company Hierarchy",
+    "loreName": "Tokyo Imperial Fire Defense Network",
+    "topTierName": "Company Captain / 2nd Generation",
+    "topTierLore": "Company leaders who possess 2nd Generation pyrokinetic abilities, giving them additional fire manipulation beyond standard Breathing.",
+    "topTierSystem": "High-output combat nodes with elemental type advantage and company-level command authority.",
+    "tiers": [
+      {
+        "name": "Company Captain (2nd Generation)",
+        "loreDesc": "Veterans with second-generation pyrokinetic abilities and company command authority.",
+        "systemDesc": "Command-layer nodes combining tactical expertise with superior fire type output."
+      },
+      {
+        "name": "Active Fire Soldier (1st Generation)",
+        "loreDesc": "Standard Fire Soldiers who use the eight standard Breathing types.",
+        "systemDesc": "Core response nodes operating within the typed counter-system."
+      },
+      {
+        "name": "Rookie / Provisional",
+        "loreDesc": "New recruits still learning their Breath type and company procedures.",
+        "systemDesc": "Entry-level nodes with unconfirmed type designation."
+      },
+      {
+        "name": "Infernal (Corrupted)",
+        "loreDesc": "Former humans who underwent spontaneous combustion corruption.",
+        "systemDesc": "Hostile corrupted nodes requiring immediate termination."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Shinra Kusakabe",
+      "title": "Soleil / Blue Fire User",
+      "rank": "Rookie (Special)",
+      "dangerLevel": 7,
+      "loreBio": "A rookie firefighter with Blue Fire feet who joins Company 8 to find the truth about his mother's involvement in the Great Cataclysm.",
+      "systemBio": "An Adolla Burst node that manifests outside the established type counter-system, making him simultaneously the system's greatest asset and greatest threat.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Flame",
+      "signatureMoment": "His Blue Fire activates for the first time, burning away an Infernal's flames with his foot.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/384757.jpg?s=bddb12716b3db79cd579895016120a18",
+      "malId": 133767,
+      "slug": "shinra-kusakabe",
+      "description": "Shinra Kusakabe is the protagonist of Fire Force (Enen no Shouboutai).",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Adolla Burst (Blue Fire)",
+          "description": "Pure white-blue fire that operates outside the standard type counter-system.",
+          "severity": "high"
+        },
+        {
+          "name": "Foot Fire Boost",
+          "description": "Can propel himself at high speed using flames expelled from his feet.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Arthur Boyle",
+      "title": "Ecclesius / Sword Breath User",
+      "rank": "Fire Soldier",
+      "dangerLevel": 6,
+      "loreBio": "A self-described 'sword' expert whose Breath type manifests as actual swords made of fire—useless in most situations, devastating in the right one.",
+      "systemBio": "A specialist node with extremely narrow use cases that becomes a critical counter against specific Infernal types.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Sword",
+      "signatureMoment": "His supposedly useless Sword Breath cuts through a monster that was completely immune to everyone else's fire.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/594733.jpg?s=56c98fdabff116c56bacd6ddc7c63109",
+      "malId": 134151,
+      "slug": "arthur-boyle",
+      "description": "Arthur Boyle is a Fire Soldier from Company 8 in Fire Force.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Sword Breath",
+          "description": "Creates sword-shaped fire constructs that can cut through fire-resistant materials.",
+          "severity": "medium"
+        },
+        {
+          "name": "Sword Expert Delusion",
+          "description": "Believes himself to be the greatest swordsman alive, which somehow makes him more effective.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Maki Oze",
+      "title": "Company 8 Vice-Captain",
+      "rank": "Vice-Captain",
+      "dangerLevel": 5,
+      "loreBio": "A disciplined vice-captain whose fire manipulation specializes in containment rather than destruction, making her essential for civilian rescue operations.",
+      "systemBio": "A support-optimized combat node whose fire output is tuned for protective applications rather than offensive engagement.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Shield",
+      "signatureMoment": "Using her flame barrier to protect trapped civilians while others fight.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/472215.jpg?s=5d911840594a55990fe15ebbba32246f",
+      "malId": 133768,
+      "slug": "maki-oze",
+      "description": "Maki Oze is the Vice-Captain of Company 8 in Fire Force.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Flame Barrier",
+          "description": "Creates protective flame walls that shield civilians from Infernal attacks.",
+          "severity": "medium"
+        },
+        {
+          "name": "Fire Analysis",
+          "description": "Can quickly identify the Breath type of any Infernal to guide team counter-selection.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Takehisa Hinawa",
+      "title": "Flame Soldier / Lance Type",
+      "rank": "Fire Soldier",
+      "dangerLevel": 5,
+      "loreBio": "Company 8's reconnaissance specialist who uses a lance-type fire manipulation to engage Infernals at medium range.",
+      "systemBio": "A precision-strike node optimized for targeted Infernal weak-point engagement.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "green-900",
+      "accentColor": "green-400",
+      "icon": "Bolt",
+      "signatureMoment": "Identifying an Infernal's type in seconds and calling out the counter strategy before it attacks.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/393747.jpg?s=595d01d6fe122a9cc82a2de3c9f7da0a",
+      "malId": 133771,
+      "slug": "takehisa-hinawa",
+      "description": "Takehisa Hinawa is a Fire Soldier from Company 8 in Fire Force.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Lance Fire Type",
+          "description": "Medium-range flame lance strikes effective against specific Infernal types.",
+          "severity": "medium"
+        },
+        {
+          "name": "Reconnaissance",
+          "description": "Fast deployment and battlefield observation skills for tactical intelligence.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Akitaru Obi",
+      "title": "Company 8 Captain / Ash Breath",
+      "rank": "Company Captain",
+      "dangerLevel": 6,
+      "loreBio": "A captain with no special pyrokinetic天赋—he earned command through sheer determination and practical tactics, making him the inspirational anchor of Company 8.",
+      "systemBio": "A command node with no elemental type advantage but maximum tactical experience, leading through strategy rather than power.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Crown",
+      "signatureMoment": "Fighting Infernals with nothing but a fire axe and human courage, inspiring everyone who watches.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/384685.jpg?s=b60a687a61b47e1d0fbe350a18fbfd20",
+      "malId": 133770,
+      "slug": "akitaru-obi",
+      "description": "Akitaru Obi is the Captain of Company 8 in Fire Force.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Tactical Command",
+          "description": "No elemental power, but unmatched ability to coordinate team Breathing combinations.",
+          "severity": "medium"
+        },
+        {
+          "name": "Ash Breath",
+          "description": "Creates ash-based flames that obscure vision and smother fires.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Tamaki Kotatsu",
+      "title": "Company 8 / Hot Spring User",
+      "rank": "Fire Soldier",
+      "dangerLevel": 4,
+      "loreBio": "A Fire Soldier whose hot spring ability creates steam-based attacks—unfortunately, her ability activation causes her clothes to fall off.",
+      "systemBio": "A steam-based combat node whose effectiveness is undermined by a critical social vulnerability mechanism.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Droplet",
+      "signatureMoment": "Using steam to save teammates while accidentally causing chaos, then being blamed for it.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/496649.jpg?s=b081da60efda0187d7c384afe9fd5e52",
+      "malId": 135798,
+      "slug": "tamaki-kotatsu",
+      "description": "Tamaki Kotatsu is a Fire Soldier from Company 8 in Fire Force.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Hot Spring Steam",
+          "description": "Creates powerful steam bursts that can extinguish flames and disorient Infernals.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Iris",
+      "title": "Company 8 / Nun",
+      "rank": "Fire Soldier",
+      "dangerLevel": 3,
+      "loreBio": "A nun who fights Infernals alongside Company 8, driven by faith that was shaken by witnessing the truth of the Great Cataclysm.",
+      "systemBio": "A faith-based combat node whose spiritual conviction provides psychological resilience under Infernal encounter stress.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-400",
+      "icon": "Star",
+      "signatureMoment": "Continuing to fight Infernals even after discovering the Church was complicit in the Great Cataclysm cover-up.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/587867.jpg?s=b321c8eb5776cacf367679d0ccb91791",
+      "malId": 133769,
+      "slug": "iris",
+      "description": "Iris is a Fire Soldier and nun from Company 8 in Fire Force.",
+      "faction": "Company 8",
+      "abilities": [
+        {
+          "name": "Faith Healing",
+          "description": "Can soothe the burning pain of Infernal corruption, buying time for treatment.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Leonardo Burns",
+      "title": "Demon / Infernal Knight Commander",
+      "rank": "Demon-Class Infernal",
+      "dangerLevel": 10,
+      "loreBio": "The Knight Commander who became the most powerful Infernal, retaining his intelligence and leading the Infernal armies against humanity.",
+      "systemBio": "A corruption-success node that retained command-layer functionality while operating at maximum hostile output.",
+      "gradientFrom": "red-900",
+      "gradientTo": "orange-800",
+      "accentColor": "red-300",
+      "icon": "Skull",
+      "signatureMoment": "Fighting Shinra as a fully-aware Infernal commander, demonstrating that Infernals can retain their minds.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/387864.jpg?s=95300cca80a20647bff56a4ddff7a082",
+      "malId": 136047,
+      "slug": "leonardo-burns",
+      "description": "Leonardo Burns is a powerful Infernal from Fire Force.",
+      "faction": "Infernal Army",
+      "abilities": [
+        {
+          "name": "Infernal Command",
+          "description": "Commands Infernal armies while retaining full intelligence and tactical capability.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Superior Fire Power",
+          "description": "Dragon-level fire output that exceeds all standard Company Captains.",
+          "severity": "fatal"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Shinra Kusakabe",
+      "target": "Arthur Boyle",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Rivals who push each other to be better, with Arthur's delusion and Shinra's seriousness creating constant friction.",
+      "systemDesc": "Competitive growth edge between two nodes with complementary weaknesses."
+    },
+    {
+      "source": "Shinra Kusakabe",
+      "target": "Akitaru Obi",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Captain Obi is the father figure who gives Shinra purpose and tactical guidance.",
+      "systemDesc": "Command guidance edge providing strategic framework for Shinra's raw output."
+    },
+    {
+      "source": "Shinra Kusakabe",
+      "target": "Maki Oze",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Maki's discipline balances Shinra's impulsiveness, making them an effective combat pair.",
+      "systemDesc": "Complementary tactical pairing where Maki's protective output covers Shinra's offensive gaps."
+    },
+    {
+      "source": "Leonardo Burns",
+      "target": "Shinra Kusakabe",
+      "type": "counter",
+      "weight": 9,
+      "loreDesc": "Burns represents the worst-case outcome of Infernalization—and the possibility that Shinra could become the same.",
+      "systemDesc": "Counter-edge representing the terminal corruption state that Shinra's Adolla Burst must prevent."
+    },
+    {
+      "source": "Iris",
+      "target": "Shinra Kusakabe",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Iris's faith and Shinra's determination support each other through the investigation's darkest revelations.",
+      "systemDesc": "Psychological resilience edge linking emotional conviction with tactical purpose."
+    },
+    {
+      "source": "Company 8",
+      "target": "The Evangelist",
+      "type": "counter",
+      "weight": 9,
+      "loreDesc": "The Evangelist's plan to recreate the Great Cataclysm puts Company 8 in direct opposition to the system's origin.",
+      "systemDesc": "Terminal conflict edge between the investigation node and the system's founding corruption."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Company 8",
+      "role": "protagonist",
+      "loreDesc": "A special fire company investigating the truth behind spontaneous combustion and the Great Cataclysm.",
+      "systemDesc": "Investigation node pursuing the system's origin event while maintaining standard Infernal response."
+    },
+    {
+      "name": "Tokyo Imperial Fire Defense",
+      "role": "systemic",
+      "loreDesc": "The official fire defense network with eight companies each specializing in different fire types.",
+      "systemDesc": "Institutional response infrastructure implementing the typed counter-system."
+    },
+    {
+      "name": "Holy Soly D领",
+      "role": "neutral",
+      "loreDesc": "The Church whose leadership is revealed to be complicit in the Great Cataclysm cover-up.",
+      "systemDesc": "Institutional node with information access to the system's founding events that must be protected."
+    },
+    {
+      "name": "Infernal Army",
+      "role": "antagonist",
+      "loreDesc": "An army of Infernalized humans led by Leonardo Burns, representing the catastrophic failure state of spontaneous combustion.",
+      "systemDesc": "Hostile node cluster representing the corruption cascade that threatens to overwhelm the human response network."
+    },
+    {
+      "name": "The Evangelist",
+      "role": "antagonist",
+      "loreDesc": "A mysterious figure planning to recreate the Great Cataclysm, whose true goals remain unclear.",
+      "systemDesc": "Root manipulation node controlling the cascade of Infernalization events toward a predetermined endpoint."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Breathing Types Counter Each Other",
+      "subtitle": "Rock-paper-scissors fire combat",
+      "loreConsequence": "Each of the eight fire types has a specific advantage against another and weakness against a third—choosing the wrong type matchup can be fatal.",
+      "systemEquivalent": "Typed counter-system where elemental advantage determines combat outcome before engagement begins.",
+      "severity": "high",
+      "loreSubtitle": "Know your type, know your fate",
+      "systemSubtitle": "Closed-loop elemental counter"
+    },
+    {
+      "name": "Spontaneous Combustion Is Contagious",
+      "subtitle": "Infernal corruption spreads",
+      "loreConsequence": "When someone becomes an Infernal, nearby combustion events can trigger chain reactions of additional Infernalizations.",
+      "systemEquivalent": "Corruption propagation mechanism where one node failure can cascade into cluster-wide failure.",
+      "severity": "fatal",
+      "loreSubtitle": "One spark, many fires",
+      "systemSubtitle": "Contagious corruption cascade"
+    },
+    {
+      "name": "Adolla Burst Ignores All Counters",
+      "subtitle": "The ninth flame breaks the system",
+      "loreConsequence": "Shinra's Blue Fire doesn't follow the type chart—it simply overpowers any fire it encounters.",
+      "systemEquivalent": "Anomaly node that bypasses the established counter-system's rules entirely.",
+      "severity": "fatal",
+      "loreSubtitle": "Some fires can't be countered",
+      "systemSubtitle": "Counter-immune output"
+    },
+    {
+      "name": "Infernalization Retains Consciousness (Rare)",
+      "subtitle": "Some Infernals keep their minds",
+      "loreConsequence": "Extremely rare cases like Leonardo Burns show that Infernals can retain their intelligence, raising questions about whether the corruption can be reversed.",
+      "systemEquivalent": "Corruption node that maintains high-level command functionality rather than descending to pure feral state.",
+      "severity": "high",
+      "loreSubtitle": "Mind intact in the flames",
+      "systemSubtitle": "Consciousness-preserving corruption"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Any Fire Type",
+      "defender": "Type Counter Selection",
+      "mechanic": "Knowing the opponent's Breath type lets you select the correct counter type, negating their fire advantage.",
+      "loreDesc": "Hinawa's reconnaissance is critical because getting the type wrong means the fight is already lost.",
+      "systemDesc": "Intelligence-gathering as primary combat multiplier in a rock-paper-scissors system."
+    },
+    {
+      "attacker": "Adolla Burst (Blue Fire)",
+      "defender": "Nothing (Uncounterable)",
+      "mechanic": "Blue Fire operates outside the counter system, meaning no type can defensively counter it.",
+      "loreDesc": "The only defense against Shinra's Blue Fire is to not be in its way.",
+      "systemDesc": "Systemic counter-immunity that makes the Adolla Burst node the ultimate offensive asset."
+    },
+    {
+      "attacker": "Infernal Corruption Spread",
+      "defender": "Rapid Infernal Termination",
+      "mechanic": "Company teams must quickly terminate Infernals before their burning presence triggers secondary Infernalizations.",
+      "loreDesc": "Every second an Infernal burns, the chance of more people combusting increases.",
+      "systemDesc": "Race-condition defense where slow response compounds the threat exponentially."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Shinra's Blue Fire Exists Outside the Type System",
+      "ruleViolated": "All fire types should follow the eight-type counter chart",
+      "loreDesc": "The Adolla Burst doesn't counter any type and isn't countered by any type—it simply overwrites.",
+      "systemDesc": "Counter-system anomaly that exposes the type chart as a constructed rather than fundamental rule."
+    },
+    {
+      "name": "Infernalization Preserves Intelligence in Some Cases",
+      "ruleViolated": "Infernal corruption should destroy cognitive function",
+      "loreDesc": "Leonardo Burns and others retain full intelligence as Infernals, contradicting the assumption that corruption destroys the mind.",
+      "systemDesc": "Consciousness preservation edge in a system designed to produce feral corruption nodes."
+    },
+    {
+      "name": "The Great Cataclysm Was Intentional",
+      "ruleViolated": "Natural disaster should be accidental",
+      "loreDesc": "The founding event that established the current combustion system was deliberately caused, meaning the current system was designed rather than evolved.",
+      "systemDesc": "Constructed origin event that means the system's 'natural laws' are actually a predetermined architecture."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "The Great Cataclysm",
+      "trigger": "An ancient civilization deliberately triggered a global combustion event",
+      "consequence": "Created the current world where spontaneous combustion produces Infernals, fire types counter each other, and the Evangelist wants to do it again.",
+      "timelinePosition": "250 Years Before Narrative",
+      "loreDesc": "The founding catastrophe that established all current system rules.",
+      "systemDesc": "Designed origin event that means all current system parameters are constructed, not natural."
+    },
+    {
+      "name": "Shinra's Mother and the Cataclysm",
+      "trigger": "Shinra's mother was connected to the Great Cataclysm",
+      "consequence": "Her death and her role in the Great Cataclysm become the mystery that drives Shinra's investigation.",
+      "timelinePosition": "Pre-Narrative",
+      "loreDesc": "Personal connection to the system origin event that makes Shinra's Adolla Burst not random but inherited.",
+      "systemDesc": "Bloodline node connecting current protagonist to founding event architecture."
+    },
+    {
+      "name": "Shinra's First Adolla Burst",
+      "trigger": "Shinra manifests Blue Fire against an Infernal",
+      "consequence": "Reveals his connection to the Great Cataclysm and marks him as both the system's greatest hope and the Evangelist's primary target.",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The event that transforms Shinra from a normal Fire Soldier into a system-level anomaly.",
+      "systemDesc": "Adolla Burst activation event that establishes the protagonist as a counter-systemic node."
+    },
+    {
+      "name": "Company 8 Discovers the Evangelist's Plan",
+      "trigger": "Investigation traces Infernalization back to a deliberate source",
+      "consequence": "The fight against Infernals transforms into a fight against whoever is engineering the combustion events.",
+      "timelinePosition": "Mid Arc",
+      "loreDesc": "Investigation node uncovers the manipulation architecture behind apparent chaos.",
+      "systemDesc": "Intelligence convergence event that redirects mission priority from symptom management to root cause."
+    }
+  ],
+  "animeImageUrl": "https://myanimelist.net/images/anime/1664/103275.jpg",
+  "systemQuestions": [
+    {
+      "question": "Why is the Breathing type counter-system important?",
+      "answer": "Because choosing the wrong type matchup is fatal—a fire soldier who doesn't know their opponent's type is almost certain to lose. Intelligence and type knowledge are the primary combat multipliers.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why is Shinra's Blue Fire so special?",
+      "answer": "It operates outside the type counter chart entirely. No type counters it, and it counters every type—which makes him the most powerful Fire Soldier but also the most dangerous because he can't be integrated into tactical doctrine.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why do Infernals exist?",
+      "answer": "Spontaneous human combustion is a feature of this world, not a bug. The Great Cataclysm established combustion as a fundamental environmental process, and the Evangelist is deliberately engineering more of it.",
+      "tabIndex": 3,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Why is counter-tree the right visualization for Fire Force?",
+      "answer": "Because the eight Breathing types form a closed counter-loop where each type has exactly one strength and one weakness, creating a branching decision tree for every combat engagement.",
+      "tabIndex": 1,
+      "sectionId": "character-database-heading",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "What is the Evangelist actually trying to do?",
+      "answer": "Recreate the Great Cataclysm—deliberately triggering another global combustion event. Company 8's investigation eventually reveals this is the endgame all Infernalization is building toward.",
+      "tabIndex": 2,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
+    }
+  ],
+  "hero": {
+    "systemType": "relational",
+    "microHook": "Know the type chart before engaging.",
+    "thesis": "Eight Breathing types form a closed counter-tree; Adolla Burst breaks it. Great Cataclysm was designed.",
+    "primarySystemType": "entity_db"
+  }
+}

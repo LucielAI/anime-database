@@ -1,0 +1,513 @@
+{
+  "anime": "Spy x Family",
+  "tagline": "A spy, an assassin, and a telepath form a fake family—each hiding their real job from the others.",
+  "malId": 50265,
+  "themeColors": {
+    "primary": "#7c3aed",
+    "secondary": "#1e1b4b",
+    "accent": "#10b981",
+    "glow": "rgba(124,58,237,0.35)",
+    "tabActive": "#8b5cf6",
+    "badgeBg": "rgba(30,27,75,0.55)",
+    "badgeText": "#c4b5fd",
+    "modeGlow": "rgba(16,185,129,0.3)",
+    "heroGradient": "rgba(2,6,23,0.94)"
+  },
+  "visualizationHint": "affinity-matrix",
+  "visualizationReason": "Spy x Family has no unified power system—each family member operates with an individual ability set (spy tradecraft, assassination, telepathy), and the narrative tension comes from their individual cards being revealed selectively, making it a perfect affinity-matrix: distinct ability nodes that occasionally combine but mostly operate independently.",
+  "headerFlavor": {
+    "loreQuote": "For the mission, I'll be a father. For her, I already am one.",
+    "sysWarning": "// [SYS_WARN]: IDENTITY RECONCILIATION FAILING — FAMILY BOND STRENGTHENING",
+    "sysWarningColor": "green"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "glow-border-soft",
+  "introductionSummary": "Spy x Family runs three independent power systems in one household: Loid Forger's spy tradecraft, Yor Forger's assassination training, and Anya's telepathy. None of them know what the others actually do. The comedy and warmth come from each character's dual life constantly threatening to collide, while their genuine care for each other slowly transforms the fake family into a real one. Each ability functions on its own rules—there is no shared power economy, only parallel skill sets occasionally pointed at the same problem.",
+  "aiInsights": {
+    "casual": "It's a fake family where nobody knows each other's real jobs: Dad's a spy, Mom's an assassin, and the kid can read minds. Anya's constantly trying to keep everyone from finding out while also trying to get them to bond.",
+    "deep": "Spy x Family is a comedic deconstruction of the found-family trope where each member's hidden identity creates both the plot tension and the emotional core. The three independent ability systems—tradecraft, assassination, telepathy—never merge into a unified power economy. Instead, they create a coordination comedy where each member's individual excellence occasionally overlaps, producing moments of accidental synergy that feel more genuine than any planned teamwork."
+  },
+  "powerSystem": [
+    {
+      "name": "Spy Tradecraft",
+      "subtitle": "Westalis Intelligence Operations",
+      "loreDesc": "Loid Forger operates as a top-tier spy for Westalis, running agents, gathering intelligence, and executing operations with surgical precision.",
+      "systemDesc": "An intelligence collection and manipulation node built on identity construction, social engineering, and operational security.",
+      "icon": "Eye",
+      "color": "blue-400",
+      "signatureMoment": "Creating an entire fake identity, family history, and social network from scratch to infiltrate Desmond's inner circle.",
+      "loreSubtitle": "The art of being someone else",
+      "systemSubtitle": "Identity fabrication and social engineering"
+    },
+    {
+      "name": "Assassination Arts",
+      "subtitle": "Garden Operative Protocols",
+      "loreDesc": "Yor Forger is an elite assassin for a shadowy organization called Garden, able to kill with anything—a knitting needle, a hairpin, or bare hands.",
+      "systemDesc": "A close-combat elimination node optimized for lethal efficiency in civilian contexts with zero collateral signature.",
+      "icon": "Skull",
+      "color": "red-400",
+      "signatureMoment": "Casually destroying a mafia operation while shopping for groceries, then denying any involvement.",
+      "loreSubtitle": "Kill with anything, deny everything",
+      "systemSubtitle": "Low-signature lethal elimination"
+    },
+    {
+      "name": "Telepathy",
+      "subtitle": "Anya's Mind Reading",
+      "loreDesc": "Anya can read the minds of everyone around her, giving her advance warning of danger, deception, and emotional truth.",
+      "systemDesc": "A passive intelligence collection node that bypasses all verbal and behavioral deception, providing raw emotional state data.",
+      "icon": "Eye",
+      "color": "pink-400",
+      "signatureMoment": "Accidentally revealing she knows Loid is a spy mid-conversation and having to improvise an excuse.",
+      "loreSubtitle": "Everyone's inner voice is her reality TV",
+      "systemSubtitle": "Passive mind-state streaming"
+    },
+    {
+      "name": "Stella / Growth Milestones",
+      "subtitle": "Anya's Academic Tracking",
+      "loreDesc": "Anya earns stars at school which translate to Stella—getting enough Stella gives her rewards and recognition she desperately wants.",
+      "systemDesc": "A gamified achievement tracking system that incentivizes Anya's social integration behavior through visible progress metrics.",
+      "icon": "Star",
+      "color": "yellow-400",
+      "signatureMoment": "Anya sabotages tests to get failing grades because Becky already knows the material and doesn't need competition.",
+      "loreSubtitle": "Academic performance as social engineering",
+      "systemSubtitle": "Gamified behavioral incentive loop"
+    }
+  ],
+  "rankings": {
+    "systemName": "Operational Security Clearance",
+    "loreName": "Intelligence Community Hierarchy",
+    "topTierName": "Handler / S-Rank Operative",
+    "topTierLore": "The highest-level intelligence officers who run entire operations and have direct access to mission-critical assets.",
+    "topTierSystem": "Maximum operational authority nodes with full mission context and independent decision capability.",
+    "tiers": [
+      {
+        "name": "Handler / Senior Operative",
+        "loreDesc": "Experienced intelligence officers who manage field agents and design operations.",
+        "systemDesc": "Command-layer nodes that design and oversee mission architecture."
+      },
+      {
+        "name": "Field Agent / Spy",
+        "loreDesc": "Operatives running individual intelligence operations under handler guidance.",
+        "systemDesc": "Execution-layer nodes operating with compartmentalized mission data."
+      },
+      {
+        "name": "Garden Assassin / Thorn",
+        "loreDesc": "Contract eliminators operating outside normal intelligence channels.",
+        "systemDesc": "Independent lethal nodes deployed for high-value target removal."
+      },
+      {
+        "name": "Asset / Informant",
+        "loreDesc": "People recruited to provide intelligence from within target organizations.",
+        "systemDesc": "Intelligence source nodes with limited operational clearance."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Loid Forger",
+      "title": "Twilight / Spy",
+      "rank": "Senior Operative",
+      "dangerLevel": 7,
+      "loreBio": "Westalis's top spy who creates the Forger identity to get close to a war-crimes target, only to find himself genuinely invested in the fake family he built.",
+      "systemBio": "An identity-fabrication node that builds entire social networks from nothing, running the most complex long-cover operation in intelligence history while developing authentic emotional connections.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Eye",
+      "signatureMoment": "Realizing that protecting Anya has become more important than the mission—and deciding to keep going anyway.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/580250.jpg?s=c98a9197f089df9132bc1c657bb6c131",
+      "malId": 170258,
+      "slug": "loid-forger",
+      "description": "Loid Forger (Twilight) is a spy from Spy x Family.",
+      "faction": "Westalis Intelligence",
+      "abilities": [
+        {
+          "name": "Identity Construction",
+          "description": "Can create entire fake personas with history, relationships, and social proof from nothing.",
+          "severity": "high"
+        },
+        {
+          "name": "Combat Proficiency",
+          "description": "Expert in hand-to-hand combat and tactical operations.",
+          "severity": "medium"
+        },
+        {
+          "name": "Psychological Manipulation",
+          "description": "Can read and influence people's behavior to achieve operational objectives.",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "name": "Yor Forger",
+      "title": "Thorn Princess / Assassin",
+      "rank": "Elite Operative",
+      "dangerLevel": 9,
+      "loreBio": "A government assassin who joined Garden to support her brother—her lethal skills are matched only by her social incompetence and genuine sweetness.",
+      "systemBio": "A high-lethality close-combat node operating with minimal institutional oversight, whose dual life creates the highest identity-collision risk in the family.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Skull",
+      "signatureMoment": "Standing in a destroyed warehouse denying she did anything while holding a weapon she used to kill fifteen people.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/457934.jpg?s=95b00e4e699e5120bad0e4d20a148aa8",
+      "malId": 170329,
+      "slug": "yor-forger",
+      "description": "Yor Forger (Thorn Princess) is an assassin from Spy x Family.",
+      "faction": "Garden",
+      "abilities": [
+        {
+          "name": "Lethal Precision",
+          "description": "Can kill with any object—a knitting needle, chopstick, or hairpin—without leaving evidence.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Superhuman Speed",
+          "description": "Can eliminate multiple targets faster than the eye can track.",
+          "severity": "high"
+        },
+        {
+          "name": "Complete Social Incompetence",
+          "description": "Cannot navigate normal social situations, making her cover identity constantly at risk of exposure.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Anya Forger",
+      "title": "Telepath / Student",
+      "rank": "Anomaly",
+      "dangerLevel": 4,
+      "loreBio": "A telepathic orphan who reads minds, was abandoned, and desperately wants a family—manipulating her way into the Forger household while keeping her powers secret.",
+      "systemBio": "A passive mind-streaming node that collects unfiltered emotional data from all nearby minds, creating constant information overload and behavioral chaos.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Eye",
+      "signatureMoment": "Saving Loid from an assassin by accidentally alerting him through her reaction to the attacker's hidden thoughts.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/457933.jpg?s=ba4caa5a44905138cd83d5972982664c",
+      "malId": 170256,
+      "slug": "anya-forger",
+      "description": "Anya Forger is a telepath from Spy x Family.",
+      "faction": "Forger Family",
+      "abilities": [
+        {
+          "name": "Telepathy",
+          "description": "Reads the thoughts of everyone nearby, hearing their unfiltered inner voices at all times.",
+          "severity": "high"
+        },
+        {
+          "name": "Emotional Manipulation",
+          "description": "Uses her knowledge of others' thoughts to manipulate situations toward desired outcomes.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Becky Blackbell",
+      "title": "The Shuutenin Heiress",
+      "rank": "Student / Asset",
+      "dangerLevel": 2,
+      "loreBio": "Anya's best friend and daughter of a major political family—her friendship with Anya becomes a genuine connection that transcends her family's political machinations.",
+      "systemBio": "High-value social network node whose family connections provide political intelligence access.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Heart",
+      "signatureMoment": "Demanding Anya call her by her first name, insisting their friendship is real.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/528426.jpg?s=67fd10f15e1160d355fc8d7d76fa15ae",
+      "malId": 177510,
+      "slug": "becky-blackbell",
+      "description": "Becky Blackbell is Anya's best friend from Spy x Family.",
+      "faction": "Eden Academy",
+      "abilities": [
+        {
+          "name": "Political Access",
+          "description": "Her father's position gives her indirect access to high-level political intelligence.",
+          "severity": "low"
+        },
+        {
+          "name": "Social Authority",
+          "description": "Being from the most powerful family at Eden gives her social weight that shapes peer dynamics.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Yuri Briar",
+      "title": "The Underage Operative",
+      "rank": "Garden Assassin (Junior)",
+      "dangerLevel": 6,
+      "loreBio": "Yor's younger brother who joined the intelligence service and secretly idolizes his sister, unaware she's the legendary assassin he works alongside.",
+      "systemBio": "A junior intelligence node whose admiration for Yor creates an identity-collision threat vector between Garden's two lethal assets.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "green-900",
+      "accentColor": "green-400",
+      "icon": "Sword",
+      "signatureMoment": "Accidentally revealing to Yor that he's part of Garden, making both of them realize they work in the same world.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/528425.jpg?s=f6acc0d039250e389237748fc305a88a",
+      "malId": 177507,
+      "slug": "yuri-briar",
+      "description": "Yuri Briar is Yor Forger's younger brother from Spy x Family.",
+      "faction": "Garden",
+      "abilities": [
+        {
+          "name": "Intelligence Work",
+          "description": "Junior operative with growing access to sensitive intelligence streams.",
+          "severity": "medium"
+        },
+        {
+          "name": "Yor Admiration",
+          "description": "His blindspot for anything negative about his sister makes him an unreliable analyst of her true capabilities.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Bondman",
+      "title": "Bond / Precognition Dog",
+      "rank": "Anomaly",
+      "dangerLevel": 1,
+      "loreBio": "A future-seeing dog whose precognitive visions help the Forger family anticipate threats they couldn't otherwise detect.",
+      "systemBio": "A temporal-foreknowledge node providing limited advance warning of specific threat events, functionally complementing Anya's telepathy.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Eye",
+      "signatureMoment": "Having a vision of the family's future that Anya then has to interpret without revealing how she knows.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/495202.jpg?s=95fed1fdf6018fe05dfb416c0f795f60",
+      "malId": 208895,
+      "slug": "bondman",
+      "description": "Bond is the Forger family's precognitive dog from Spy x Family.",
+      "faction": "Forger Family",
+      "abilities": [
+        {
+          "name": "Precognition",
+          "description": "Can see future events, particularly danger events involving the family.",
+          "severity": "medium"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Loid Forger",
+      "target": "Anya Forger",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Loid started the family as a mission but genuinely comes to care for Anya as a real father would.",
+      "systemDesc": "Mission-asset edge that crossed into authentic emotional dependency."
+    },
+    {
+      "source": "Yor Forger",
+      "target": "Anya Forger",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Yor is initially awkward as a mother but develops genuine maternal instincts toward Anya.",
+      "systemDesc": "Cover-role edge that produces authentic emotional output."
+    },
+    {
+      "source": "Loid Forger",
+      "target": "Yor Forger",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "A fake marriage that slowly becomes real as both characters develop genuine feelings for each other.",
+      "systemDesc": "Operational cover relationship that generates authentic attachment signals."
+    },
+    {
+      "source": "Anya Forger",
+      "target": "Becky Blackbell",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Anya needs Becky for social access; Becky wants a real friend. Both get what they genuinely need.",
+      "systemDesc": "Social network edge where mutual instrumentalism produces authentic friendship."
+    },
+    {
+      "source": "Yor Forger",
+      "target": "Yuri Briar",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Siblings who both work in intelligence and assassinations, completely unaware they're operational overlaps.",
+      "systemDesc": "Kinship edge connecting two independent lethal nodes without either knowing."
+    },
+    {
+      "source": "Bondman",
+      "target": "Anya Forger",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Bond's precognition and Anya's telepathy create a complementary information-sharing pair.",
+      "systemDesc": "Cross-modal perception edge that covers temporal and psychological information streams."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Westalis Intelligence",
+      "role": "systemic",
+      "loreDesc": "The state intelligence service running operations against Ostania, employing Loid as its top operative.",
+      "systemDesc": "Intelligence collection and covert operation command infrastructure."
+    },
+    {
+      "name": "Garden (Sable)",
+      "role": "neutral",
+      "loreDesc": "A shadowy government assassination unit that Yor works for, existing outside normal intelligence channels.",
+      "systemDesc": "Independent lethal action node deployed for high-value target elimination."
+    },
+    {
+      "name": "Ostania / Desmond Faction",
+      "role": "antagonist",
+      "loreDesc": "The rival state's political faction that Loid is trying to infiltrate through the Desmond son.",
+      "systemDesc": "Target network node that serves as the mission objective."
+    },
+    {
+      "name": "Forger Family",
+      "role": "protagonist",
+      "loreDesc": "The fake family unit that has become genuinely real to all three members despite their hidden identities.",
+      "systemDesc": "Affective network node that functions as both operational cover and authentic emotional unit."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Cover Identity Must Be Maintained",
+      "subtitle": "No one can know who the others really are",
+      "loreConsequence": "Any accidental reveal of a family member's true identity could compromise the entire operation and destroy the family.",
+      "systemEquivalent": "Operational security protocol where information compartmentalization is mandatory for family stability.",
+      "severity": "high",
+      "loreSubtitle": "The mission depends on secrecy",
+      "systemSubtitle": "Identity compartmentalization requirement"
+    },
+    {
+      "name": "Telepathy Cannot Be Controlled at Will",
+      "subtitle": "Anya hears everything all the time",
+      "loreConsequence": "Anya cannot choose when to read minds, meaning she constantly hears Loid planning spy operations and Yor thinking about murder.",
+      "systemEquivalent": "Always-on passive data collection that cannot be selectively deactivated.",
+      "severity": "medium",
+      "loreSubtitle": "Everyone's inner voice is always playing",
+      "systemSubtitle": "Permanent passive intelligence collection"
+    },
+    {
+      "name": "Bond's Precognition Is Cryptic",
+      "subtitle": "Vision without interpretation is useless",
+      "loreConsequence": "Bond sees the future but only in fragments that require Anya's telepathy to interpret—which she can only do by reading his dog thoughts.",
+      "systemEquivalent": "Temporal intelligence that arrives without context, requiring cross-modal analysis to extract actionable data.",
+      "severity": "medium",
+      "loreSubtitle": "Dog thoughts are hard to decode",
+      "systemSubtitle": "Encrypted temporal signal"
+    },
+    {
+      "name": "Anya's Academic Performance Affects the Mission",
+      "subtitle": "Eden Academy results determine social access",
+      "loreConsequence": "Anya's terrible grades threaten her enrollment, which threatens Loid's access to the Desmond family, which threatens the entire operation.",
+      "systemEquivalent": "A child's academic metrics are operationally load-bearing.",
+      "severity": "medium",
+      "loreSubtitle": "Stella determine mission access",
+      "systemSubtitle": "Gamified dependency chain"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Cover Exposure",
+      "defender": "Emotional Bonding",
+      "mechanic": "The genuine emotional connections between family members make them more willing to protect each other's secrets.",
+      "loreDesc": "If Yor knew Loid was a spy, she should logically report it—but she wouldn't, because she's come to genuinely love the family.",
+      "systemDesc": "Emotional investment creates a loyalty edge that overrides operational protocol."
+    },
+    {
+      "attacker": "Assassination Threat to Family",
+      "defender": "Coordination of Individual Abilities",
+      "mechanic": "When a real threat targets the family, Loid's tradecraft, Yor's lethality, and Anya's telepathy combine naturally.",
+      "loreDesc": "The family performs best as a unit when they don't know they're coordinating as a unit.",
+      "systemDesc": "Parallel individual能力强 nodes that create emergent synergy without explicit coordination."
+    },
+    {
+      "attacker": "Anya's Telepathy Overload",
+      "defender": "Selective Filtering",
+      "mechanic": "Anya learns to focus on specific minds or tune out the noise, becoming more effective over time.",
+      "loreDesc": "Reading Bond's dog thoughts plus dozens of classmates plus teachers is overwhelming—she has to learn to prioritize.",
+      "systemDesc": "Adaptive filtering on a passive intelligence stream."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Fake Family Produces Real Love",
+      "ruleViolated": "Operational cover relationships should not generate authentic emotional attachment",
+      "loreDesc": "Loid, Yor, and Anya all started with instrumental motivations for the family and genuinely fell in love with each other.",
+      "systemDesc": "Cover-to-authentic conversion that bypasses the expected emotional firewall."
+    },
+    {
+      "name": "Precognition + Telepathy = Incomplete Future Knowledge",
+      "ruleViolated": "Future-seeing abilities should provide actionable intelligence",
+      "loreDesc": "Anya can read Bond's precognitive visions but his dog thoughts make the messages cryptic, creating information that exists but cannot be reliably interpreted.",
+      "systemDesc": "Cross-modal ability combination that produces ambiguous rather than actionable intelligence."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Operation Strix Initiated",
+      "trigger": "Loid receives orders to get close to Desmond's son",
+      "consequence": "He fabricates a fake family in a single day, starting the chain of events that will make the fake family real.",
+      "timelinePosition": "Episode 1",
+      "loreDesc": "A spy mission to prevent war creates a found family.",
+      "systemDesc": "Cover fabrication event that generates the narrative's central affective network."
+    },
+    {
+      "name": "Anya Discovers Loid's True Identity",
+      "trigger": "She reads his mind and learns he's a spy",
+      "consequence": "She decides to keep the secret and become his 'partner'—the first step toward real family bonds.",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The information asymmetry that makes Anya the family's secret linchpin.",
+      "systemDesc": "Unauthorized access to mission-critical intelligence that produces loyalty rather than exposure."
+    },
+    {
+      "name": "Yor's Identity Revealed to Yuri",
+      "trigger": "Yuri accidentally reveals Garden affiliation",
+      "consequence": "Yor realizes her brother works in the same world of shadows she does, deepening family bonds while increasing exposure risk.",
+      "timelinePosition": "Mid Arc",
+      "loreDesc": "The first major identity collision that could have destroyed the family but instead strengthened it.",
+      "systemDesc": "Partial identity disclosure that increases operational risk while deepening affective bonds."
+    }
+  ],
+  "animeImageUrl": "https://myanimelist.net/images/anime/1441/122795.jpg",
+  "systemQuestions": [
+    {
+      "question": "Why does Spy x Family have no unified power system?",
+      "answer": "Each character has completely separate abilities that operate on different rules—Loid's tradecraft is social manipulation, Yor's assassination is physical lethality, Anya's telepathy is information access. They never merge into a single system.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why does the fake family become real?",
+      "answer": "Because all three members are emotionally starved—Loid from a lonely spy existence, Yor from social isolation, Anya from abandonment. The cover gives them permission to give and receive care they wouldn't otherwise allow themselves.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why is Anya the most important character?",
+      "answer": "She's the only one who knows everyone's secrets. Her telepathy makes her the information hub of the entire family, even though she's also the most chaotic element.",
+      "tabIndex": 1,
+      "sectionId": "character-database-heading",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "Why doesn't Yor kill people for Garden anymore in the story?",
+      "answer": "The series shifted away from her assassination work as her role as a mother became more central to her character arc, though she remains lethal when the family is threatened.",
+      "tabIndex": 3,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "Why is Bond's precognition so underused?",
+      "answer": "Precognition is narratively dangerous—it can solve too many problems. The series uses it sparingly and always in ways that create new problems rather than solving existing ones.",
+      "tabIndex": 3,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    }
+  ],
+  "hero": {
+    "systemType": "relational",
+    "microHook": "Each card is different—read the situation to know who's strongest.",
+    "thesis": "Three independent ability cards—spy, assassin, telepath—occasionally overlap for accidental synergy.",
+    "primarySystemType": "entity_db"
+  }
+}

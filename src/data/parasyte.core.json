@@ -1,0 +1,458 @@
+{
+  "anime": "Parasyte",
+  "tagline": "A parasite takes over your right hand and becomes your most unlikely ally against alien invasion.",
+  "malId": 22535,
+  "themeColors": {
+    "primary": "#0f766e",
+    "secondary": "#0c1a1a",
+    "accent": "#2dd4bf",
+    "glow": "rgba(45,212,191,0.35)",
+    "tabActive": "#14b8a6",
+    "badgeBg": "rgba(12,26,26,0.55)",
+    "badgeText": "#99f6e4",
+    "modeGlow": "rgba(45,212,191,0.3)",
+    "heroGradient": "rgba(2,6,23,0.94)"
+  },
+  "visualizationHint": "affinity-matrix",
+  "visualizationReason": "Parasyte's Migi operates as a symbiotic peer node to Shinichi's human consciousness—sharing one body while maintaining distinct identities and abilities. The parasite control system creates affinity relationships between parasite types and host organisms, making it a natural affinity-matrix where each node has individual capabilities that combine with but remain distinct from the host.",
+  "headerFlavor": {
+    "loreQuote": "Migi isn't a monster. He's the only one who actually understands what's happening.",
+    "sysWarning": "// [SYS_WARN]: PARASITE CO-INFECTION DETECTED — HOST INTEGRITY: SHARED",
+    "sysWarningColor": "teal"
+  },
+  "backgroundMotif": "noise",
+  "revealOverlay": "glow-border-soft",
+  "introductionSummary": "Parasyte follows Shinichi Izumi, a normal high schooler whose right hand is taken over by Migi—a parasite alien who represents the invasion's vanguard. Against all odds, Shinichi and Migi develop a genuine symbiotic partnership: Migi needs Shinichi's body to survive, and Shinichi needs Migi's power to fight the increasingly dangerous parasites hunting them both. The system's tension comes from the parasite-human boundary—how much of Shinichi remains Shinichi when half his body thinks for itself?",
+  "aiInsights": {
+    "casual": "An alien parasite takes over Shinichi's right hand and they become an unlikely team—he's got the brain, Migi's got the monster-fighting ability. It's a body-horror invasion story with surprisingly sweet moments of共生.",
+    "deep": "Parasyte runs a split-consciousness operating model: Migi processes threat analysis and combat while Shinichi maintains social identity and decision-making authority. Their negotiation over body control creates a unique co-governance system where neither can fully override the other without destroying the host. The parasites' mindless swarm behavior versus their sophisticated individual combat abilities exposes a critical design flaw in the invasion architecture—intelligence without emotional investment produces tactical brilliance but strategic brittleness."
+  },
+  "powerSystem": [
+    {
+      "name": "Parasite Biology",
+      "subtitle": "Migi's Alien Physiology",
+      "loreDesc": "Migi can reshape his body into any biological form—from blades and shields to eyes and weaponry—giving Shinichi access to combat capabilities no human could possess.",
+      "systemDesc": "A shapeshifting combat node that adapts its physical structure based on threat type, operating as a biological multi-tool within the host body.",
+      "icon": "Leaf",
+      "color": "teal-400",
+      "signatureMoment": "Migi extends a blade from Shinichi's arm to block a killing blow he couldn't have seen.",
+      "loreSubtitle": "One body, infinite loadouts",
+      "systemSubtitle": "Adaptive biological weapon system"
+    },
+    {
+      "name": "Symbiotic Coexistence",
+      "subtitle": "Shared Body Governance",
+      "loreDesc": "Shinichi and Migi must negotiate body control—Shinichi retains social autonomy while Migi handles combat response, creating a split-processing model.",
+      "systemDesc": "A co-governance operating system where two distinct consciousness nodes share one physical substrate through negotiated time-slicing.",
+      "icon": "Heart",
+      "color": "cyan-400",
+      "signatureMoment": "Migi refusing to let Shinichi sacrifice himself, insisting they survive together.",
+      "loreSubtitle": "Two minds, one body",
+      "systemSubtitle": "Cooperative consciousness timeslicing"
+    },
+    {
+      "name": "Parasite Hierarchy",
+      "subtitle": "Mission-Designed Roles",
+      "loreDesc": "The parasites operate with a clear division: some infiltration types blend with humans, others are combat specialists, and the core handles reproduction.",
+      "systemDesc": "A designed-species node architecture where each parasite type has a specific functional role in the invasion network.",
+      "icon": "GitBranch",
+      "color": "green-400",
+      "signatureMoment": "The Climax reveals the true scale of the parasite reproductive strategy.",
+      "loreSubtitle": "Each parasite has a job",
+      "systemSubtitle": "Functional role assignment"
+    },
+    {
+      "name": "Human Emotional Investment",
+      "subtitle": "The Symbiosis Paradox",
+      "loreDesc": "Migi develops genuine care for Shinichi and his family—emotional attachment that no parasite should possess, making Migi a malfunctioning unit in an otherwise efficient invasion.",
+      "systemDesc": "An emergent emotional node that breaks the parasite species' designed emotional sterility, creating loyalty outside the mission parameters.",
+      "icon": "Heart",
+      "color": "pink-400",
+      "signatureMoment": "Migi choosing to stay with Shinichi at the cost of reuniting with his own kind.",
+      "loreSubtitle": "The parasite who learned to care",
+      "systemSubtitle": "Emergent emotional override"
+    }
+  ],
+  "rankings": {
+    "systemName": "Parasite Type Classification",
+    "loreName": "Invasion Force Hierarchy",
+    "topTierName": "Core Parasite / Intelligence",
+    "topTierLore": "The central parasite intelligence directing the invasion, managing reproduction rates and combat deployment.",
+    "topTierSystem": "Command layer node coordinating all parasite operations with a single coherent strategy.",
+    "tiers": [
+      {
+        "name": "Core Parasite",
+        "loreDesc": "The central intelligence managing the invasion's reproductive and tactical decisions.",
+        "systemDesc": "Command architecture node with full strategic visibility and reproduction authorization."
+      },
+      {
+        "name": "Combat Specialist",
+        "loreDesc": "Parasites optimized for direct confrontation, with heavy armor and lethal weaponry.",
+        "systemDesc": "High-output combat nodes deployed for target elimination."
+      },
+      {
+        "name": "Infiltrator",
+        "loreDesc": "Parasites that take over human bodies and blend into society for intelligence gathering.",
+        "systemDesc": "Social camouflage nodes that grant access to human networks and information."
+      },
+      {
+        "name": "Migi (Unique Co-Existor)",
+        "loreDesc": "A parasite sharing a body with a human in genuine symbiosis—behaving against type.",
+        "systemDesc": "An anomalous co-existence node that retains combat capability while developing emotional investment in a host."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "name": "Shinichi Izumi",
+      "title": "The Parasitized Human",
+      "rank": "Symbiotic Host",
+      "dangerLevel": 5,
+      "loreBio": "A high schooler whose right hand is taken over by the parasite Migi. He maintains his humanity while gaining access to combat abilities that make him humanity's only real defense.",
+      "systemBio": "A co-governance host node maintaining human decision authority and emotional baselines while sharing physical control with an alien combat module.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "teal-900",
+      "accentColor": "teal-400",
+      "icon": "Heart",
+      "signatureMoment": "Choosing to save his mother from a parasite even knowing it nearly costs him Migi's protection.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/269013.jpg?s=1f0f49f662bd4f462b9c9b5f953ce11e",
+      "malId": 12323,
+      "slug": "shinichi-izumi",
+      "description": "Shinichi Izumi is the parasitized protagonist of Parasyte.",
+      "faction": "Human",
+      "abilities": [
+        {
+          "name": "Human Cognition",
+          "description": "Full human consciousness, emotional range, and moral reasoning preserved.",
+          "severity": "medium"
+        },
+        {
+          "name": "Migi Combat Integration",
+          "description": "Access to Migi's shapeshifting combat abilities while maintaining human decision authority.",
+          "severity": "high"
+        },
+        {
+          "name": "Parasite Knowledge",
+          "description": "Living with Migi gives Shinichi unique insight into parasite behavior and weaknesses.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "name": "Migi",
+      "title": "The Right-Hand Parasite",
+      "rank": "Symbiotic Combat Module",
+      "dangerLevel": 9,
+      "loreBio": "A parasite who was supposed to take over Shinichi's brain but only reached his hand. Rather than a failed invasion, Migi became a genuine partner.",
+      "systemBio": "An adaptive combat node that achieved co-existence with a host rather than conquest, developing emotional investment that violates parasite design parameters.",
+      "gradientFrom": "teal-900",
+      "gradientTo": "cyan-800",
+      "accentColor": "cyan-300",
+      "icon": "Bolt",
+      "signatureMoment": "Deciding to stay with Shinichi even when reunited parasite mass offers reunion with his own kind.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/348176.jpg?s=c378b81123b922b107c831c2c8b8db51",
+      "malId": 13773,
+      "slug": "migi",
+      "description": "Migi is the parasite sharing Shinichi's body in Parasyte.",
+      "faction": "Parasite (Defected)",
+      "abilities": [
+        {
+          "name": "Shapeshifting Combat",
+          "description": "Can form blades, shields, spikes, and other weapons from hand tissue at will.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Parasite Analysis",
+          "description": "Can identify other parasites and their likely attack patterns from body language.",
+          "severity": "high"
+        },
+        {
+          "name": "Speed/Strength Boost",
+          "description": "When integrated, provides superhuman physical capabilities beyond human limits.",
+          "severity": "high"
+        },
+        {
+          "name": "Sleep Function",
+          "description": "Migi's consciousness cycles through sleep states, making him unavailable for periods—but also allowing recovery.",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "name": "Gotou",
+      "title": "The Hybrid Human",
+      "rank": "Parasite-Human Fusion",
+      "dangerLevel": 10,
+      "loreBio": "A human whose body was fully taken over by parasites who then tried to replicate a human nervous system, resulting in a physically perfect but emotionally hollow organism.",
+      "systemBio": "A post-host conquest node that attempted to reverse-engineer human consciousness but only achieved behavioral mimicry without genuine emotional substrate.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Skull",
+      "signatureMoment": "Demonstrating his perfect human replication by fighting Shinichi and Migi while maintaining perfect calm.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/271459.jpg?s=7b3e263fe274cebba676640cab4bb1b7",
+      "malId": 22145,
+      "slug": "gotou",
+      "description": "Gotou is a parasite-human hybrid from Parasyte.",
+      "faction": "Parasite Core",
+      "abilities": [
+        {
+          "name": "Full Parasite Physiology",
+          "description": "Has complete parasite combat forms plus a replicated human nervous system.",
+          "severity": "fatal"
+        },
+        {
+          "name": "Human Behavior Mimicry",
+          "description": "Appears completely human but has no genuine emotions, making him terrifyingly consistent.",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "name": "Muramoto",
+      "title": "The Parasitized Father",
+      "rank": "Infiltrator Host",
+      "dangerLevel": 3,
+      "loreBio": "The father of a girl in Shinichi's class who was taken over by a parasite, representing how the invasion targets families and destroys normal life.",
+      "systemBio": "An infiltrator node that has been deployed into a family unit, representing the parasite network's social infiltration capability.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Ghost",
+      "signatureMoment": "Shinichi recognizing the father is a parasite from behavioral anomalies no one else notices.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/277609.jpg?s=f17ff00d22f5eb405e37ad937ae7bd5b",
+      "malId": 22147,
+      "slug": "muramoto",
+      "description": "Muramoto is a parasitized human from Parasyte.",
+      "faction": "Parasite Infiltrators",
+      "abilities": [
+        {
+          "name": "Infiltration Mimicry",
+          "description": "Can maintain a convincing human appearance and social role despite being fully parasite-controlled.",
+          "severity": "medium"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Shinichi Izumi",
+      "target": "Migi",
+      "type": "ally",
+      "weight": 10,
+      "loreDesc": "A genuine symbiotic partnership where both have learned to care for each other's survival.",
+      "systemDesc": "Co-governance node where two distinct consciousness types share one substrate through mutual necessity and emergent affection."
+    },
+    {
+      "source": "Migi",
+      "target": "Shinichi Izumi",
+      "type": "dependent",
+      "weight": 9,
+      "loreDesc": "Migi cannot survive without Shinichi's body as a host, but increasingly also doesn't want to leave.",
+      "systemDesc": "Host dependency edge that evolved from necessity into genuine partnership."
+    },
+    {
+      "source": "Shinichi Izumi",
+      "target": "Gotou",
+      "type": "counter",
+      "weight": 9,
+      "loreDesc": "Gotou represents what Shinichi could become if parasites fully conquered humanity—perfect bodies with no souls.",
+      "systemDesc": "Counter-edge representing the dystopian endpoint of failed human resistance."
+    },
+    {
+      "source": "Migi",
+      "target": "Parasite Core",
+      "type": "counter",
+      "weight": 8,
+      "loreDesc": "Migi chooses Shinichi over his species, making him a defector from the parasite network.",
+      "systemDesc": "Species-loyalty edge overridden by individual emotional investment."
+    },
+    {
+      "source": "Shinichi Izumi",
+      "target": "Muramoto",
+      "type": "counter",
+      "weight": 6,
+      "loreDesc": "Shinichi recognizes parasite-infiltrated humans by behavioral anomalies, putting him in the position of identifying and potentially eliminating them.",
+      "systemDesc": "Detection edge unique to the co-existence node, making Shinichi the only human who can reliably identify infiltrators."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Human Resistance",
+      "role": "protagonist",
+      "loreDesc": "Shinichi and the humans who fight back against the parasite invasion with Migi's help.",
+      "systemDesc": "A minimal resistance node anchored by the Shinichi-Migi co-existence unit."
+    },
+    {
+      "name": "Parasite Invasion Network",
+      "role": "antagonist",
+      "loreDesc": "The alien parasites infiltrating and consuming human society, led by the Core.",
+      "systemDesc": "Coordinated invasion architecture deploying infiltrator, combat, and reproductive node types."
+    },
+    {
+      "name": "Migi (Unique)",
+      "role": "neutral",
+      "loreDesc": "A parasite who defected from the invasion network through emotional development.",
+      "systemDesc": "An anomalous node that retained combat capability while developing species-atypical loyalty to a host."
+    },
+    {
+      "name": "Gotou (Hybrid)",
+      "role": "antagonist",
+      "loreDesc": "A full parasite takeover that attempted to replicate human neurology, representing the invasion's most sophisticated infiltration.",
+      "systemDesc": "Post-conquest node with maximum combat capability and social integration."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Parasite Takes Over What It Touches",
+      "subtitle": "Contact initiates conversion",
+      "loreConsequence": "Any parasite contact with exposed flesh initiates a takeover—if Migi hadn't been interrupted, Shinichi's entire body would have been consumed.",
+      "systemEquivalent": "Contact-based conversion protocol where physical proximity to parasite mass equals infection risk.",
+      "severity": "fatal",
+      "loreSubtitle": "Touch means transformation",
+      "systemSubtitle": "Contact infection model"
+    },
+    {
+      "name": "Migi Only Reached the Hand",
+      "subtitle": "Incomplete takeover = co-existence",
+      "loreConsequence": "Because Migi only reached Shinichi's hand, neither could conquer the other—creating forced symbiosis instead of possession.",
+      "systemEquivalent": "Partial invasion success that produces a co-governance model rather than host replacement.",
+      "severity": "high",
+      "loreSubtitle": "Partial success = unexpected partnership",
+      "systemSubtitle": "Incomplete conversion protocol"
+    },
+    {
+      "name": "Parasites Lack Emotions",
+      "subtitle": "Designed species emotional sterility",
+      "loreConsequence": "Parasites are perfectly efficient organisms with no emotional capacity—except Migi, who develops them through prolonged human contact.",
+      "systemEquivalent": "Species-wide emotional sterility that creates predictable behavior, violated only by Migi's anomalous development.",
+      "severity": "high",
+      "loreSubtitle": "Perfect bodies, empty souls",
+      "systemSubtitle": "Designed emotional null state"
+    },
+    {
+      "name": "Shinichi Retains Decision Authority",
+      "subtitle": "Migi cannot override human will",
+      "loreConsequence": "Migi can refuse to act in combat, but cannot force Shinichi's body to do anything against his will.",
+      "systemEquivalent": "Host sovereignty constraint where the parasite module is a tool, not a controller.",
+      "severity": "medium",
+      "loreSubtitle": "The human is always in charge",
+      "systemSubtitle": "Host authority override lock"
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Parasite Infiltration",
+      "defender": "Shinichi's Detection",
+      "mechanic": "Only Shinichi can reliably identify parasite-infiltrated humans because only he knows what parasite behavior looks like from the inside.",
+      "loreDesc": "No one believes him until it's too late, making his early warnings consistently ignored.",
+      "systemDesc": "Unique detection capability arising from co-existence node architecture."
+    },
+    {
+      "attacker": "Gotou's Perfect Body",
+      "defender": "Migi's Shapeshifting",
+      "mechanic": "Migi can match Gotou's combat forms because both are adapting shapeshifters—but Shinichi's human tactical thinking gives them an edge.",
+      "loreDesc": "Gotou has the body; Shinichi and Migi have the partnership that Gotou's emptiness cannot replicate.",
+      "systemDesc": "Cooperation edge between two specialized nodes versus single perfect-form node."
+    },
+    {
+      "attacker": "Parasite Sensory Network",
+      "defender": "Human Social Camouflage",
+      "mechanic": "Shinichi uses normal human life—school, family, friends—as cover that the parasites' social analysis can't penetrate.",
+      "loreDesc": "The parasites can analyze biology perfectly but can't understand why a human would care about anyone.",
+      "systemDesc": "Human emotional investment as camouflage against species designed without it."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Migi's Emotional Development",
+      "ruleViolated": "Parasites should have no emotional capacity",
+      "loreDesc": "Migi develops genuine affection for Shinichi and distress at his pain—a complete violation of parasite species design.",
+      "systemDesc": "Emergent emotional node arising from sustained co-existence with human host."
+    },
+    {
+      "name": "Shinichi's Dual-Nature Acceptance",
+      "ruleViolated": "Host-parasite relationship should be adversarial",
+      "loreDesc": "Shinichi comes to genuinely care about Migi as a partner rather than a parasite infection.",
+      "systemDesc": "Host acceptance edge that transforms adversarial relationship into cooperative symbiosis."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Migi's Partial Takeover",
+      "trigger": "Parasite attempts to consume Shinichi's brain but only reaches his hand",
+      "consequence": "Forced co-existence creates a symbiotic partnership that neither organism planned.",
+      "timelinePosition": "Episode 1",
+      "loreDesc": "The invasion's failure becomes humanity's only hope.",
+      "systemDesc": "Partial invasion success that produces a co-governance anomaly."
+    },
+    {
+      "name": "First Parasite Kill",
+      "trigger": "Shinichi and Migi kill their first parasite together",
+      "consequence": "Establishes the partnership dynamic and gives Shinichi a reason to keep fighting.",
+      "timelinePosition": "Early Arc",
+      "loreDesc": "The moment Shinichi realizes he and Migi are actually effective as a team.",
+      "systemDesc": "First successful co-combat node activation."
+    },
+    {
+      "name": "Gotou's True Nature Revealed",
+      "trigger": "The human-looking student is revealed to be fully parasite-controlled",
+      "consequence": "Demonstrates that complete infiltration looks exactly like normal human behavior.",
+      "timelinePosition": "Mid Arc",
+      "loreDesc": "The invasion is already won at the social level—humans just don't know it.",
+      "systemDesc": "Perfect infiltration node that invalidates behavioral detection methods."
+    },
+    {
+      "name": "Final Confrontation with the Core",
+      "trigger": "Shinichi and Migi face the parasite reproductive core",
+      "consequence": "The climax reveals the full scale of the invasion and Migi's ultimate choice.",
+      "timelinePosition": "Final Arc",
+      "loreDesc": "Humanity's survival depends on a boy and his alien partner.",
+      "systemDesc": "Terminal conflict node where co-existence architecture is tested against species-level threat."
+    }
+  ],
+  "animeImageUrl": "https://myanimelist.net/images/anime/3/73178.jpg",
+  "systemQuestions": [
+    {
+      "question": "Why is Migi different from other parasites?",
+      "answer": "Prolonged contact with Shinichi's human brain chemistry created emotional development that the parasite design doesn't account for. Migi learns to care because living with a human taught him what emotions are.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why does the parasite invasion work so well?",
+      "answer": "Each parasite type has a specific role—infiltrators blend in, combat specialists handle threats, the Core manages reproduction. It's a designed invasion architecture with no wasted units.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Why is Shinichi the only one who can detect infiltrators?",
+      "answer": "Living with a parasite gives him inside knowledge of how they think and behave. He knows what parasite thoughts feel like, so he can spot behavioral anomalies no one else can.",
+      "tabIndex": 1,
+      "sectionId": "character-database-heading",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "What makes Gotou the most dangerous parasite?",
+      "answer": "He has a perfect human appearance with full parasite combat capability—but no emotions. He's what the parasites think humans should be: perfectly efficient organisms without the mess of actual feelings.",
+      "tabIndex": 1,
+      "sectionId": "character-database-heading",
+      "tabLabel": "Entity Database"
+    },
+    {
+      "question": "Why does affinity-matrix work for Parasyte?",
+      "answer": "Shinichi and Migi are two distinct nodes sharing one substrate—each with their own abilities and identity, occasionally combining for greater effect but mostly operating independently within the same body.",
+      "tabIndex": 2,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
+    }
+  ],
+  "hero": {
+    "systemType": "relational",
+    "microHook": "Two minds are better than one, unless they disagree on saving the world.",
+    "thesis": "A human and parasite co-govern one body—Shinichi decides, Migi fights. Neither could survive alone.",
+    "primarySystemType": "entity_db"
+  }
+}
