@@ -526,29 +526,29 @@
   "animeImageUrl": "https://myanimelist.net/images/anime/1664/103275.jpg",
   "systemQuestions": [
     {
-      "question": "Why does the RMP rock-paper-scissors counter system paradoxically make Company 8 more effective at stopping infernals than any single specialized unit?",
-      "answer": "The rock-paper-scissors constraint means no single Breath form dominates. Company 8 compositions that include all three types can counter any opposing formation, making them structurally superior to single-element specialists in wide-area engagements.",
+      "question": "Why does the Three-Quarter Breath counter system paradoxically make Company 8 more effective at stopping Infernals than any single specialized unit?",
+      "answer": "The Three-Quarter Breath system means no single Breath type dominates all others. Company 8's mixed composition—where each member has a different fire type—lets them counter any Infernal formation. Getting the wrong type matchup can be fatal, so having all eight types available ensures Company 8 can always deploy the correct counter.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
     {
-      "question": "How does the Adolla Burst create a counter-tree that breaks the expected three-way counter balance?",
-      "answer": "Adolla Burst bypasses the rock-paper-scissors constraint entirely by accessing a shared consciousness field. This means the Evangelist can counter any Breath form without respecting the RMP structure, collapsing the three-way balance into a one-to-many dominance.",
+      "question": "How does Adolla Burst break the Three-Quarter Breath counter system?",
+      "answer": "Adolla Burst—Shinra's Blue Fire—operates completely outside the eight-type counter chart. While normal fire types follow the Infernals → Ignition → Ghost → Flash Fire → Blue progression, Adolla Burst doesn't counter any type and isn't countered by any type. It simply overwrites, making it the ultimate offensive asset and the Evangelist's primary target.",
       "tabIndex": 1,
       "sectionId": "counterplay-heading",
       "tabLabel": "Counterplay"
     },
     {
-      "question": "Why does Shinras devious footwork actually make him more effective as a captain than traditional combat optimization?",
-      "answer": "Shinras tactical chaos creates unpredictability that disrupts enemy formation modeling. Defensive systems built to counter standard approaches fail against him because his decision cycle does not follow the optimization patterns the opposing system expects.",
+      "question": "Why does Shinra's tactical positioning with Devil's Footprints actually make him more effective against Infernals?",
+      "answer": "Shinra's Blue Fire feet let him maneuver at high speed and attack from angles no other Fire Soldier can match. His foot-based fire propulsion creates unpredictability that disrupts Infernal attack patterns, while his Adolla Burst simply overpowers any flame it encounters—bypassing the type chart entirely.",
       "tabIndex": 2,
       "sectionId": "core-laws-heading",
       "tabLabel": "Core Laws"
     },
     {
-      "question": "How does Company 8s mixed-composition structure exploit the Evangelists one-to-many counter advantage?",
-      "answer": "The Evangelist strategy depends on overwhelming single-element forces with Adolla Burst. Mixed-composition forces that cycle element types force the Evangelist to reload counters for each element, compressing the timeline and creating windows where the counter-advantage collapses.",
+      "question": "How does Company 8's mixed-composition structure exploit the Evangelist's plan to remake humanity?",
+      "answer": "The Evangelist seeks to trigger another Great Cataclysm using Adolla Burst to remake humanity. Company 8's diverse Breath type composition lets them rapidly identify and counter Infernal threats before spontaneous combustion spreads. Every second an Infernal burns increases chain-reaction risk, making Company 8's balanced response essential to stopping the Evangelist's endgame.",
       "tabIndex": 3,
       "sectionId": "faction-map-heading",
       "tabLabel": "Faction Map"
@@ -556,7 +556,7 @@
   ],
   "hero": {
     "systemType": "relational",
-    "microHook": "Know the type chart before engaging.",
+    "microHook": "Spontaneous combustion meets Breathing arts — Company 8 fights to save Tokyo.",
     "thesis": "Eight Breathing types form a closed counter-tree; Adolla Burst breaks it. Great Cataclysm was designed.",
     "primarySystemType": "entity_db"
   }
