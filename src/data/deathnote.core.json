@@ -106,7 +106,9 @@
       "dangerLevel": 10,
       "signatureMoment": "Manipulating Rem into killing L and Watari to save Misa — weaponizing a shinigami's empathy constraint to eliminate the only mind capable of catching him, while maintaining total plausible deniability.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/63870.jpg?s=3adaed92c13123a9649ccc0cc6551f7d",
-      "malId": 80
+      "malId": 80,
+      "slug": "light-yagami",
+      "description": "Light Yagami is a  from Death Note."
     },
     {
       "name": "L Lawliet",
@@ -122,7 +124,9 @@
       "dangerLevel": 9,
       "signatureMoment": "The Lind L. Tailor broadcast — sacrificing a condemned prisoner on live television to provoke Kira into revealing his geographic region, extracting critical identification bits from Light's emotional reaction within minutes.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/249647.jpg?s=95cecc21f3db10318c68a0863f0132c8",
-      "malId": 71
+      "malId": 71,
+      "slug": "l-lawliet",
+      "description": "L Lawliet is a  from Death Note."
     },
     {
       "name": "Ryuk",
@@ -138,7 +142,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Writing Light's name in his notebook at the Yellow Box Warehouse — fulfilling the promise he made on day one: 'I'll be the one to write your name when your time comes.'",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/59125.jpg?s=e258ccc6e6f6ed00c837b5ae8bced941",
-      "malId": 75
+      "malId": 75,
+      "slug": "ryuk",
+      "description": "Ryuk is a  from Death Note."
     },
     {
       "name": "Near",
@@ -154,7 +160,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Confronting Light at the Yellow Box Warehouse with the forged notebook — calmly explaining every deduction while Light unravels, proving that the successor system works not through genius replication but through distributed processing.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/77339.jpg?s=e045ccd8110b534c2668b4e7a02ac22f",
-      "malId": 464
+      "malId": 464,
+      "slug": "near",
+      "description": "Near is a  from Death Note."
     },
     {
       "name": "Mello",
@@ -170,7 +178,9 @@
       "dangerLevel": 7,
       "signatureMoment": "Kidnapping Takada and forcing Light to expose Mikami's independent notebook access — a deliberate self-sacrifice that strips away the last layer of Kira's proxy insulation.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/31498.jpg?s=021fbd3f7ad05577fbbcd8cfb52e402b",
-      "malId": 463
+      "malId": 463,
+      "slug": "mello",
+      "description": "Mello is a  from Death Note."
     },
     {
       "name": "Misa Amane",
@@ -186,7 +196,9 @@
       "dangerLevel": 6,
       "signatureMoment": "Sending video tapes to Sakura TV proving the existence of a Second Kira — immediately compromising Light's carefully maintained anonymity by demonstrating that multiple notebook users exist and can be investigated independently.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/30971.jpg?s=0af596d087b34f6e05942dcae60aebae",
-      "malId": 835
+      "malId": 835,
+      "slug": "misa-amane",
+      "description": "Misa Amane is a  from Death Note."
     },
     {
       "name": "Rem",
@@ -202,7 +214,9 @@
       "dangerLevel": 7,
       "signatureMoment": "Writing L's and Watari's names in her Death Note to save Misa — knowing she will die, choosing to trigger the cosmic failsafe rather than let the human she loves be destroyed.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/28562.jpg?s=c132f8cc80e93184d9cd180218579e69",
-      "malId": 1905
+      "malId": 1905,
+      "slug": "rem",
+      "description": "Rem is a  from Death Note."
     },
     {
       "name": "Teru Mikami",
@@ -218,7 +232,9 @@
       "dangerLevel": 6,
       "signatureMoment": "Breaking routine to retrieve the real notebook from a bank vault when Takada is kidnapped — the single deviation that confirms to Near the existence of a hidden original, enabling the final forgery.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/36951.jpg?s=e7018dcde90b6f70f192eb36b0e2c81b",
-      "malId": 1904
+      "malId": 1904,
+      "slug": "teru-mikami",
+      "description": "Teru Mikami is a  from Death Note."
     }
   ],
   "relationships": [

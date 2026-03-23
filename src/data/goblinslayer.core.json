@@ -111,7 +111,9 @@
       "icon": "Sword",
       "signatureMoment": "Uses the Gate Scroll ocean-pressure exploit to erase an entrenched nest that conventional force could not crack.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/523995.jpg?s=377d38330bee0abfd7b0ad909e1b3d71",
-      "malId": 148622
+      "malId": 148622,
+      "slug": "goblin-slayer",
+      "description": "Goblin Slayer is a  from Goblin Slayer."
     },
     {
       "name": "Priestess",
@@ -130,7 +132,9 @@
         "Onna Shinkan",
         "Minarai Seijo"
       ],
-      "malId": 148623
+      "malId": 148623,
+      "slug": "priestess",
+      "description": "Priestess is a  from Goblin Slayer."
     },
     {
       "name": "High Elf Archer",
@@ -149,7 +153,9 @@
         "Elf",
         "Onna Elf"
       ],
-      "malId": 148956
+      "malId": 148956,
+      "slug": "high-elf-archer",
+      "description": "High Elf Archer is a  from Goblin Slayer."
     },
     {
       "name": "Dwarf Shaman",
@@ -164,7 +170,9 @@
       "icon": "Brain",
       "signatureMoment": "Uses shaping magic to collapse tunnel vectors and protect the party from flanking swarms.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/524000.jpg?s=25d8009da87fd29f81c1e7ac9fab81b7",
-      "malId": 159323
+      "malId": 159323,
+      "slug": "dwarf-shaman",
+      "description": "Dwarf Shaman is a  from Goblin Slayer."
     },
     {
       "name": "Lizard Priest",
@@ -182,7 +190,9 @@
       "jikanAliases": [
         "Lizardman"
       ],
-      "malId": 159322
+      "malId": 159322,
+      "slug": "lizard-priest",
+      "description": "Lizard Priest is a  from Goblin Slayer."
     },
     {
       "name": "Guild Girl",
@@ -200,7 +210,9 @@
       "jikanAliases": [
         "Uketsuke-jou"
       ],
-      "malId": 148958
+      "malId": 148958,
+      "slug": "guild-girl",
+      "description": "Guild Girl is a  from Goblin Slayer."
     },
     {
       "name": "Cow Girl",
@@ -218,7 +230,9 @@
       "jikanAliases": [
         "Bokujoushu"
       ],
-      "malId": 154478
+      "malId": 154478,
+      "slug": "cow-girl",
+      "description": "Cow Girl is a  from Goblin Slayer."
     },
     {
       "name": "Sword Maiden",
@@ -236,7 +250,9 @@
       "jikanAliases": [
         "Kenja"
       ],
-      "malId": 178477
+      "malId": 178477,
+      "slug": "sword-maiden",
+      "description": "Sword Maiden is a  from Goblin Slayer."
     },
     {
       "name": "Spearman",
@@ -254,7 +270,9 @@
       "malId": 159321,
       "jikanAliases": [
         "Yaritsukai"
-      ]
+      ],
+      "slug": "spearman",
+      "description": "Spearman is a  from Goblin Slayer."
     },
     {
       "name": "Witch",
@@ -272,7 +290,9 @@
       "malId": 148959,
       "jikanAliases": [
         "Majo"
-      ]
+      ],
+      "slug": "witch",
+      "description": "Witch is a  from Goblin Slayer."
     }
   ],
   "relationships": [

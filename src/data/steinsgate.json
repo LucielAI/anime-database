@@ -128,7 +128,9 @@
       "dangerLevel": 9,
       "signatureMoment": "Watching Mayuri die for the hundredth time and finally understanding that no action within the Alpha attractor field can save her — convergence is absolute.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/122643.jpg?s=b5ae0b297aefb93f19186e9edfdaee83",
-      "malId": 35252
+      "malId": 35252,
+      "slug": "okabe-rintarou",
+      "description": "Okabe Rintarou is a  from Steins;Gate."
     },
     {
       "name": "Makise Kurisu",
@@ -144,7 +146,9 @@
       "dangerLevel": 7,
       "signatureMoment": "Telling Okabe to go back and let her die — choosing to sacrifice herself so Mayuri can live, because she trusts Okabe to find another way.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/492885.jpg?s=b041df34b5f02990fd154cc8e8f9e3b9",
-      "malId": 34470
+      "malId": 34470,
+      "slug": "makise-kurisu",
+      "description": "Makise Kurisu is a  from Steins;Gate."
     },
     {
       "name": "Shiina Mayuri",
@@ -160,7 +164,9 @@
       "dangerLevel": 2,
       "signatureMoment": "Her watch stopping at the exact moment of her fated death — the same time, every worldline — proving convergence is not coincidence but structural enforcement.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/131329.jpg?s=ff82135c773b4903f6cae50c1d43ca26",
-      "malId": 35253
+      "malId": 35253,
+      "slug": "shiina-mayuri",
+      "description": "Shiina Mayuri is a  from Steins;Gate."
     },
     {
       "name": "Hashida Itaru",
@@ -176,7 +182,9 @@
       "dangerLevel": 5,
       "signatureMoment": "Cracking SERN's database to discover the Jellyman's Report — human test subjects sent through time who arrived as gelatinous corpses, revealing SERN has been experimenting with time travel for years.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/113767.jpg?s=5d160f99286a0891c5e32413a5438622",
-      "malId": 35258
+      "malId": 35258,
+      "slug": "hashida-itaru",
+      "description": "Hashida Itaru is a  from Steins;Gate."
     },
     {
       "name": "Amane Suzuha",
@@ -192,7 +200,9 @@
       "dangerLevel": 7,
       "signatureMoment": "Her rain-soaked farewell letter revealing she forgot her mission after a failed time jump, spent 24 years in hiding, and died full of regret — 'I failed. I failed. I failed.'",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/148223.jpg?s=1d567952db9e3f19cae8a855c788835e",
-      "malId": 35255
+      "malId": 35255,
+      "slug": "amane-suzuha",
+      "description": "Amane Suzuha is a  from Steins;Gate."
     },
     {
       "name": "Kiryuu Moeka",
@@ -208,7 +218,9 @@
       "dangerLevel": 6,
       "signatureMoment": "Leading the armed Rounders raid on the lab, shooting Mayuri point-blank — revealing that the quiet woman Okabe trusted was SERN's weapon all along.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/275310.jpg?s=6eea0288577665f743b1a8a0554c40e9",
-      "malId": 35257
+      "malId": 35257,
+      "slug": "kiryuu-moeka",
+      "description": "Kiryuu Moeka is a  from Steins;Gate."
     },
     {
       "name": "Okabe Rintarou (Future)",
@@ -224,7 +236,9 @@
       "dangerLevel": 10,
       "signatureMoment": "Sending the video message to his past self: 'You must deceive the world. Deceive yourself. That is the choice of Steins Gate.'",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/122643.jpg?s=b5ae0b297aefb93f19186e9edfdaee83",
-      "malId": 35252
+      "malId": 35252,
+      "slug": "okabe-rintarou-(future)",
+      "description": "Okabe Rintarou (Future) is a  from Steins;Gate."
     },
     {
       "name": "Hiyajo Maho",
@@ -243,7 +257,9 @@
       "malId": 83419,
       "jikanAliases": [
         "Maho Hiyajou"
-      ]
+      ],
+      "slug": "hiyajo-maho",
+      "description": "Hiyajo Maho is a  from Steins;Gate."
     }
   ],
   "relationships": [

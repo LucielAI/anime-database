@@ -87,7 +87,9 @@
       "icon": "Heart",
       "signatureMoment": "Unlocking Hinokami Kagura chains while cornered, transforming a losing exchange into a viable kill window.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/386735.jpg?s=7327e90f2310ececd18696cd4aa2ff4e",
-      "malId": 146156
+      "malId": 146156,
+      "slug": "tanjiro-kamado",
+      "description": "Tanjiro Kamado is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Nezuko Kamado",
@@ -102,7 +104,9 @@
       "icon": "Sun",
       "signatureMoment": "Conquering sunlight after the Swordsmith Village battle and proving the demon constraint set is mutable.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/378254.jpg?s=c3cdc50f2d9f3b30e4453c8ca1f8460f",
-      "malId": 146157
+      "malId": 146157,
+      "slug": "nezuko-kamado",
+      "description": "Nezuko Kamado is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Muzan Kibutsuji",
@@ -117,7 +121,9 @@
       "icon": "Crown",
       "signatureMoment": "Launching the Infinity Castle collapse sequence to force all remaining slayers into one terminal attrition arena.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/384669.jpg?s=c9d7f04d71e6651de82cb1e56f52e8e0",
-      "malId": 151156
+      "malId": 151156,
+      "slug": "muzan-kibutsuji",
+      "description": "Muzan Kibutsuji is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Kyojuro Rengoku",
@@ -132,7 +138,9 @@
       "icon": "Flame",
       "signatureMoment": "Holding Akaza in place until dawn pressure nearly converts the engagement into an environmental kill.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/423443.jpg?s=2f06005562d13647b1a8280b93db9d54",
-      "malId": 151143
+      "malId": 151143,
+      "slug": "kyojuro-rengoku",
+      "description": "Kyojuro Rengoku is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Giyu Tomioka",
@@ -147,7 +155,9 @@
       "icon": "Shield",
       "signatureMoment": "Deploying Dead Calm to nullify Akaza's momentum spikes and buy critical survival time.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/423445.jpg?s=a049de02a43de100a4b68b759a95fa41",
-      "malId": 146735
+      "malId": 146735,
+      "slug": "giyu-tomioka",
+      "description": "Giyu Tomioka is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Shinobu Kocho",
@@ -162,7 +172,9 @@
       "icon": "FlaskConical",
       "signatureMoment": "Embedding a body-saturated wisteria payload so Douma's consumption triggers delayed internal collapse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/386591.jpg?s=3c18dc65ee6cd3a032214d6a6e49ac9e",
-      "malId": 146736
+      "malId": 146736,
+      "slug": "shinobu-kocho",
+      "description": "Shinobu Kocho is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Akaza",
@@ -177,7 +189,9 @@
       "icon": "Zap",
       "signatureMoment": "Overwhelming multiple Hashira-level fighters by reading their battle spirit vectors before strike commitment.",
       "imageUrl": "https://myanimelist.net/images/characters/2/464775.jpg",
-      "malId": 174147
+      "malId": 174147,
+      "slug": "akaza",
+      "description": "Akaza is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Kokushibo",
@@ -192,7 +206,9 @@
       "icon": "Moon",
       "signatureMoment": "Forcing a multi-Hashira coalition into sacrificial sequencing just to create a single viable decapitation attempt.",
       "imageUrl": "https://myanimelist.net/images/characters/10/406156.jpg",
-      "malId": 174145
+      "malId": 174145,
+      "slug": "kokushibo",
+      "description": "Kokushibo is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Douma",
@@ -207,7 +223,9 @@
       "icon": "Snowflake",
       "signatureMoment": "Suppressing multiple high-level slayers with room-scale frost constructs before being compromised by Shinobu's poison architecture.",
       "imageUrl": "https://myanimelist.net/images/characters/3/465011.jpg",
-      "malId": 170152
+      "malId": 170152,
+      "slug": "douma",
+      "description": "Douma is a  from Demon Slayer: Kimetsu no Yaiba."
     },
     {
       "name": "Kagaya Ubuyashiki",
@@ -222,7 +240,9 @@
       "icon": "Brain",
       "signatureMoment": "Triggering a planned self-sacrifice blast to pin Muzan in place and initiate the final containment phase.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/387497.jpg?s=e6703bc6bca651607032e86749bfdc2a",
-      "malId": 151150
+      "malId": 151150,
+      "slug": "kagaya-ubuyashiki",
+      "description": "Kagaya Ubuyashiki is a  from Demon Slayer: Kimetsu no Yaiba."
     }
   ],
   "factions": [

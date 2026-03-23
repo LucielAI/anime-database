@@ -122,7 +122,9 @@
       "dangerLevel": 10,
       "signatureMoment": "Tricking his father through sophisticated future memory manipulation to slaughter the royal family.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/216895.jpg?s=ccb6539cbfc5462df97d61a48c52af93",
-      "malId": 40882
+      "malId": 40882,
+      "slug": "eren-yeager",
+      "description": "Eren Yeager is a  from Attack on Titan."
     },
     {
       "name": "Mikasa Ackerman",
@@ -138,7 +140,9 @@
       "dangerLevel": 9,
       "signatureMoment": "Brutally decapitating the Jaw Titan in a high-speed, mid-air maneuver to secure Eren's safe extraction during the raid on Liberio.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/215563.jpg?s=5b0650bb09a7e053afc6bad84ab48947",
-      "malId": 40881
+      "malId": 40881,
+      "slug": "mikasa-ackerman",
+      "description": "Mikasa Ackerman is a  from Attack on Titan."
     },
     {
       "name": "Armin Arlert",
@@ -154,7 +158,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Formulating a suicidal strategy to distract the Colossal Titan by enduring lethal steam burns, allowing Eren to extract the pilot.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/220267.jpg?s=afa2751e2201aba1f5179544e787ba1a",
-      "malId": 46494
+      "malId": 46494,
+      "slug": "armin-arlert",
+      "description": "Armin Arlert is a  from Attack on Titan."
     },
     {
       "name": "Levi Ackerman",
@@ -171,7 +177,9 @@
       "signatureMoment": "A dizzying, brutal vivisection of the Beast Titan in a forest, reducing a major, seemingly invincible threat to a mutilated husk in mere seconds.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/241413.jpg?s=1a789f9d4c7a441881e4b06a75bd91db",
       "_fetchFailed": false,
-      "malId": 45627
+      "malId": 45627,
+      "slug": "levi-ackerman",
+      "description": "Levi Ackerman is a  from Attack on Titan."
     },
     {
       "name": "Reiner Braun",
@@ -187,7 +195,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Surviving a direct, catastrophic decapitation attempt by rapidly transferring his neurological consciousness throughout his Titan's central nervous system.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/206489.jpg?s=e48695a419dc6e71c831d7481a5fc86f",
-      "malId": 46484
+      "malId": 46484,
+      "slug": "reiner-braun",
+      "description": "Reiner Braun is a  from Attack on Titan."
     },
     {
       "name": "Zeke Yeager",
@@ -204,7 +214,9 @@
       "signatureMoment": "Shredding an entire cavalry charge of Survey Corps soldiers to pieces with a supersonic barrage of crushed boulders.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/489878.jpg",
       "_fetchFailed": false,
-      "malId": 142314
+      "malId": 142314,
+      "slug": "zeke-yeager",
+      "description": "Zeke Yeager is a  from Attack on Titan."
     },
     {
       "name": "Erwin Smith",
@@ -220,7 +232,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Leading a final suicidal cavalry charge directly into the Beast Titan's kill zone, screaming 'My soldiers, rage!' as boulders shred his formation — buying Levi the opening to annihilate Zeke.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/559023.jpg?s=148a0689d341e23cae536207d030f3fc",
-      "malId": 46496
+      "malId": 46496,
+      "slug": "erwin-smith",
+      "description": "Erwin Smith is a  from Attack on Titan."
     },
     {
       "name": "Annie Leonhart",
@@ -236,7 +250,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Revealing herself as the Female Titan in the Stohess District, triggering a catastrophic urban battle that forced the Survey Corps to destroy an entire city district to capture her.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/206357.jpg?s=3a853fc7177a3eeaefbecb530d590a4a",
-      "malId": 46490
+      "malId": 46490,
+      "slug": "annie-leonhart",
+      "description": "Annie Leonhart is a  from Attack on Titan."
     },
     {
       "name": "Ymir Fritz",
@@ -253,7 +269,9 @@
       "signatureMoment": "Weeping as Eren Yeager breaks her 2,000-year programming of obedience by simply asking her to choose for herself.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/402927.jpg",
       "_fetchFailed": false,
-      "malId": 182601
+      "malId": 182601,
+      "slug": "ymir-fritz",
+      "description": "Ymir Fritz is a  from Attack on Titan."
     },
     {
       "name": "Grisha Yeager",
@@ -269,7 +287,9 @@
       "dangerLevel": 8,
       "signatureMoment": "Collapsing in horror after slaughtering the Reiss family, screaming to the invisible future Eren, 'Is this what you wanted?'",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/206441.jpg?s=9618f66845f0678a8e993d9bd76675c6",
-      "malId": 62477
+      "malId": 62477,
+      "slug": "grisha-yeager",
+      "description": "Grisha Yeager is a  from Attack on Titan."
     }
   ],
   "relationships": [

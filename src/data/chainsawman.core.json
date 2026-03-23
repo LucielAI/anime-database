@@ -111,7 +111,9 @@
       "icon": "Sword",
       "signatureMoment": "Activates Chainsaw form against Katana Man after near-fatal attrition and grinds through a prolonged urban duel.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/492407.jpg?s=4d8e9a01dac6a5d891c3ed434187fba9",
-      "malId": 170732
+      "malId": 170732,
+      "slug": "denji",
+      "description": "Denji is a  from Chainsaw Man."
     },
     {
       "name": "Pochita",
@@ -126,7 +128,9 @@
       "icon": "Lock",
       "signatureMoment": "Re-emerges under extreme stress to repel multiple high-tier attackers while preserving Denji's contract promise.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/391655.jpg?s=98a1bd67048600807f26dd709b70b7cc",
-      "malId": 174750
+      "malId": 174750,
+      "slug": "pochita",
+      "description": "Pochita is a  from Chainsaw Man."
     },
     {
       "name": "Makima",
@@ -141,7 +145,9 @@
       "icon": "Crown",
       "signatureMoment": "Systematically engineers Denji's emotional collapse to surface Chainsaw Man for capture and strategic use.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/489561.jpg?s=6593bd49704ffb415d3fd9d40e5dc183",
-      "malId": 170734
+      "malId": 170734,
+      "slug": "makima",
+      "description": "Makima is a  from Chainsaw Man."
     },
     {
       "name": "Aki Hayakawa",
@@ -156,7 +162,9 @@
       "icon": "Target",
       "signatureMoment": "Uses Future Devil foresight windows and Curse Devil conditions in repeated high-cost engagements.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/395003.jpg?s=d0d59f9d3f6d5aa89534c8b16433cf74",
-      "malId": 170735
+      "malId": 170735,
+      "slug": "aki-hayakawa",
+      "description": "Aki Hayakawa is a  from Chainsaw Man."
     },
     {
       "name": "Power",
@@ -171,7 +179,9 @@
       "icon": "Flame",
       "signatureMoment": "Returns in a critical moment to extract Denji from Makima's kill zone and restore his will to act.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/494969.jpg?s=02622d6ffa487b8d6d7503af4792a106",
-      "malId": 170733
+      "malId": 170733,
+      "slug": "power",
+      "description": "Power is a  from Chainsaw Man."
     },
     {
       "name": "Himeno",
@@ -186,7 +196,9 @@
       "icon": "Eye",
       "signatureMoment": "Offers her entire body to Ghost Devil in a final attempt to neutralize overwhelming opposition.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/386392.jpg?s=587b426444b95d23293c9b8f1aa38450",
-      "malId": 170765
+      "malId": 170765,
+      "slug": "himeno",
+      "description": "Himeno is a  from Chainsaw Man."
     },
     {
       "name": "Kobeni Higashiyama",
@@ -201,7 +213,9 @@
       "icon": "Heart",
       "signatureMoment": "In the Eternity Devil incident, fear-driven reflexes let her survive and contribute to team extraction despite collapse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/467961.jpg?s=62b404edd1edcea21a0fb16f230f3916",
-      "malId": 174749
+      "malId": 174749,
+      "slug": "kobeni-higashiyama",
+      "description": "Kobeni Higashiyama is a  from Chainsaw Man."
     },
     {
       "name": "Kishibe",
@@ -216,7 +230,9 @@
       "icon": "Shield",
       "signatureMoment": "Imposes kill-or-be-killed conditioning on Denji and Power to force adaptive combat behavior.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/488553.jpg?s=90bf9b9117281aaead8dd8ac08cf388f",
-      "malId": 174748
+      "malId": 174748,
+      "slug": "kishibe",
+      "description": "Kishibe is a  from Chainsaw Man."
     },
     {
       "name": "Santa Claus",
@@ -234,7 +250,9 @@
       "malId": 184106,
       "jikanAliases": [
         "Master"
-      ]
+      ],
+      "slug": "santa-claus",
+      "description": "Santa Claus is a  from Chainsaw Man."
     },
     {
       "name": "Katana Man",
@@ -252,7 +270,9 @@
       "malId": 174747,
       "jikanAliases": [
         "Samurai Sword"
-      ]
+      ],
+      "slug": "katana-man",
+      "description": "Katana Man is a  from Chainsaw Man."
     }
   ],
   "relationships": [

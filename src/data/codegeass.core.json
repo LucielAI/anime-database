@@ -71,7 +71,9 @@
       "icon": "Crown",
       "signatureMoment": "Executes Zero Requiem and turns his own assassination into a governance reboot.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/406163.jpg?s=e69a97cba35bb909a56523e14212524e",
-      "malId": 417
+      "malId": 417,
+      "slug": "lelouch-lamperouge",
+      "description": "Lelouch Lamperouge is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Suzaku Kururugi",
@@ -86,7 +88,9 @@
       "icon": "Sword",
       "signatureMoment": "Kills Emperor Lelouch in public to complete Zero Requiem and absorb perpetual symbolic burden.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/31564.jpg?s=cb64797d0f0647df7c2e85ac3331d3c7",
-      "malId": 559
+      "malId": 559,
+      "slug": "suzaku-kururugi",
+      "description": "Suzaku Kururugi is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "C.C.",
@@ -101,7 +105,9 @@
       "icon": "Key",
       "signatureMoment": "Keeps Lelouch operational after network collapse and re-centers the final plan.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/33815.jpg?s=b6688e8e5cd4e025e35f617da7a802d5",
-      "malId": 1111
+      "malId": 1111,
+      "slug": "c.c.",
+      "description": "C.C. is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Stadtfeld, Kallen",
@@ -116,7 +122,9 @@
       "icon": "Flame",
       "signatureMoment": "Holds off Britannia's best units during late-war operations with Guren's Radiant Wave armament.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/603839.jpg?s=5ed4bab52b91194208d024d7c2743d4a",
-      "malId": 558
+      "malId": 558,
+      "slug": "stadtfeld,-kallen",
+      "description": "Stadtfeld, Kallen is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Charles zi Britannia",
@@ -131,7 +139,9 @@
       "icon": "Lock",
       "signatureMoment": "Activates Ragnarök Connection in the Thought Elevator to hard-overwrite human individuality.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/146911.jpg?s=a27fde62430b36c24f87535cb5d1e129",
-      "malId": 5610
+      "malId": 5610,
+      "slug": "charles-zi-britannia",
+      "description": "Charles zi Britannia is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Schneizel el Britannia",
@@ -146,7 +156,9 @@
       "icon": "Target",
       "signatureMoment": "Uses Damocles broadcasts to enforce compliance through instant planetary punishment threat.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/31513.jpg?s=e032a87439d7a7db6043be0b1396c16c",
-      "malId": 1710
+      "malId": 1710,
+      "slug": "schneizel-el-britannia",
+      "description": "Schneizel el Britannia is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Nunnally Lamperouge",
@@ -161,7 +173,9 @@
       "icon": "Heart",
       "signatureMoment": "Publicly rejects Lelouch's tyranny narrative and exposes the emotional cost of systemic engineering.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/31536.jpg?s=c07f02c20e2d6ff3ea83c65c98724ba0",
-      "malId": 1110
+      "malId": 1110,
+      "slug": "nunnally-lamperouge",
+      "description": "Nunnally Lamperouge is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Jeremiah Gottwald",
@@ -176,7 +190,9 @@
       "icon": "Shield",
       "signatureMoment": "Uses Geass Canceller to restore compromised allies and protect final-phase command continuity.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/107028.jpg?s=41c0866056632523d8cc74590862b07d",
-      "malId": 1113
+      "malId": 1113,
+      "slug": "jeremiah-gottwald",
+      "description": "Jeremiah Gottwald is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Cornelia li Britannia",
@@ -191,7 +207,9 @@
       "icon": "Shield",
       "signatureMoment": "Nearly crushes Black Knights offensives before Geass-layer intelligence flips engagements.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/33793.jpg?s=0fe272f3ed54c40d352bf6866489712d",
-      "malId": 797
+      "malId": 797,
+      "slug": "cornelia-li-britannia",
+      "description": "Cornelia li Britannia is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Euphemia li Britannia",
@@ -206,7 +224,9 @@
       "icon": "Star",
       "signatureMoment": "Her massacre under Geass converts a diplomatic solution into irreversible civil escalation.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/83313.jpg?s=a0895a29c7d622a43c0504c6bd04c7cb",
-      "malId": 1114
+      "malId": 1114,
+      "slug": "euphemia-li-britannia",
+      "description": "Euphemia li Britannia is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Lloyd Asplund",
@@ -221,7 +241,9 @@
       "icon": "Brain",
       "signatureMoment": "Delivers Lancelot upgrades that repeatedly restore Britannian combat overmatch.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/83148.jpg?s=a3da42512b8d125a30e21c1069950449",
-      "malId": 1130
+      "malId": 1130,
+      "slug": "lloyd-asplund",
+      "description": "Lloyd Asplund is a  from Code Geass: Hangyaku no Lelouch."
     },
     {
       "name": "Kaname Ohgi",
@@ -240,7 +262,9 @@
         "Kaname Ougi",
         "Ougi, Kaname"
       ],
-      "malId": 1115
+      "malId": 1115,
+      "slug": "kaname-ohgi",
+      "description": "Kaname Ohgi is a  from Code Geass: Hangyaku no Lelouch."
     }
   ],
   "relationships": [

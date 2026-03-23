@@ -85,7 +85,9 @@
       "signatureMoment": "She overturns Aura's mana-scaling certainty by revealing an intentionally concealed reserve.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/525105.jpg?s=1706604ec2ca141a172526b8dedf3177",
       "malId": 184947,
-      "primaryAbility": "Mana Suppression / High-Order Dispel"
+      "primaryAbility": "Mana Suppression / High-Order Dispel",
+      "slug": "frieren",
+      "description": "Frieren is a  from Sousou no Frieren."
     },
     {
       "name": "Fern",
@@ -101,7 +103,9 @@
       "signatureMoment": "Outpaces veteran mages in exchange velocity during certification-stage duels.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/619183.jpg?s=15f45c66440c0e9843e2f0109f0c1aef",
       "malId": 188176,
-      "primaryAbility": "Rapid Precision Casting / Zoltraak Barrage"
+      "primaryAbility": "Rapid Precision Casting / Zoltraak Barrage",
+      "slug": "fern",
+      "description": "Fern is a  from Sousou no Frieren."
     },
     {
       "name": "Stark",
@@ -117,7 +121,9 @@
       "signatureMoment": "Holds lethal melee pressure long enough for mage-side reconfiguration and counter-casting.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/621924.jpg?s=ff623ff40dde15a769f879d87d6e7dcd",
       "malId": 188177,
-      "primaryAbility": "Frontline Interception / Burst Axe Strikes"
+      "primaryAbility": "Frontline Interception / Burst Axe Strikes",
+      "slug": "stark",
+      "description": "Stark is a  from Sousou no Frieren."
     },
     {
       "name": "Himmel",
@@ -133,7 +139,9 @@
       "signatureMoment": "His posthumous memory drives Frieren's entire second journey and reframes mission priorities.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/621925.jpg?s=5faec0afd8c70ec30faa16d5e256baa6",
       "malId": 186854,
-      "primaryAbility": "Heroic Swordplay / Morale Stabilization"
+      "primaryAbility": "Heroic Swordplay / Morale Stabilization",
+      "slug": "himmel",
+      "description": "Himmel is a  from Sousou no Frieren."
     },
     {
       "name": "Flamme",
@@ -149,7 +157,9 @@
       "signatureMoment": "Institutionalizes mana suppression as a civilization-scale asymmetry against demon heuristics.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/528177.jpg?s=8b3a2d8085f11194c19344fe11e9605c",
       "malId": 187307,
-      "primaryAbility": "Anti-Demon Doctrine Engineering"
+      "primaryAbility": "Anti-Demon Doctrine Engineering",
+      "slug": "flamme",
+      "description": "Flamme is a  from Sousou no Frieren."
     },
     {
       "name": "Serie",
@@ -165,7 +175,9 @@
       "signatureMoment": "Her exam oversight filters who can access strategic-grade magical authority.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/536851.jpg?s=bc2d816ac437e368cc7b7b7cb94922d0",
       "malId": 211285,
-      "primaryAbility": "Spell Authority / First-Class Mage Gatekeeping"
+      "primaryAbility": "Spell Authority / First-Class Mage Gatekeeping",
+      "slug": "serie",
+      "description": "Serie is a  from Sousou no Frieren."
     },
     {
       "name": "Aura",
@@ -181,7 +193,9 @@
       "signatureMoment": "Her certainty in mana-read hierarchy is exploited and reversed in a single decision collapse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/524719.jpg?s=4048eff20f4b708dcb207e42dcf350a2",
       "malId": 206722,
-      "primaryAbility": "Auserlese Obedience Scale"
+      "primaryAbility": "Auserlese Obedience Scale",
+      "slug": "aura",
+      "description": "Aura is a  from Sousou no Frieren."
     },
     {
       "name": "Macht",
@@ -197,7 +211,9 @@
       "signatureMoment": "Introduces transformation-scale threats that conventional anti-demon playbooks cannot cleanly absorb.",
       "imageUrl": "https://myanimelist.net/images/characters/5/491752.jpg",
       "primaryAbility": "Di Agolze Curse Transmutation",
-      "malId": 219460
+      "malId": 219460,
+      "slug": "macht",
+      "description": "Macht is a  from Sousou no Frieren."
     }
   ],
   "relationships": [

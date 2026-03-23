@@ -111,7 +111,9 @@
       "icon": "Crown",
       "signatureMoment": "Transitioning from System player to sovereign commander and deploying shadow legions at scale.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/540692.jpg?s=84ef54c5990bd67985d24060a9ff3e84",
-      "malId": 174185
+      "malId": 174185,
+      "slug": "sung-jin-woo",
+      "description": "Sung Jin-Woo is a  from Solo Leveling."
     },
     {
       "name": "Cha Hae-In",
@@ -126,7 +128,9 @@
       "icon": "Sword",
       "signatureMoment": "Recognizing Jinwoo as a category-breaker while top guilds still model him as a conventional outlier.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/536361.jpg?s=92ad759f97826f201fd29f3919263aa2",
-      "malId": 173979
+      "malId": 173979,
+      "slug": "cha-hae-in",
+      "description": "Cha Hae-In is a  from Solo Leveling."
     },
     {
       "name": "Yoo Jin-Ho",
@@ -141,7 +145,9 @@
       "icon": "Shield",
       "signatureMoment": "Backing Jinwoo's independent path when established guild systems hesitate.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/531271.jpg?s=65f9c9adeb8a4cd68225408b6bcbf56a",
-      "malId": 173987
+      "malId": 173987,
+      "slug": "yoo-jin-ho",
+      "description": "Yoo Jin-Ho is a  from Solo Leveling."
     },
     {
       "name": "Go Gun-Hee",
@@ -156,7 +162,9 @@
       "icon": "Star",
       "signatureMoment": "Choosing cooperation over containment as Jinwoo's capabilities exceed institutional playbooks.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/531270.jpg?s=d6b4d3ca914d70105618a5127f0040c9",
-      "malId": 173983
+      "malId": 173983,
+      "slug": "go-gun-hee",
+      "description": "Go Gun-Hee is a  from Solo Leveling."
     },
     {
       "name": "Baek Yoon-Ho",
@@ -171,7 +179,9 @@
       "icon": "Target",
       "signatureMoment": "Recalibrating guild-level risk models after Jinwoo's solo performance data.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/531273.jpg?s=3ce567baf6938a539f6cf49c6a4a4c9b",
-      "malId": 173981
+      "malId": 173981,
+      "slug": "baek-yoon-ho",
+      "description": "Baek Yoon-Ho is a  from Solo Leveling."
     },
     {
       "name": "Choi Jong-In",
@@ -186,7 +196,9 @@
       "icon": "Flame",
       "signatureMoment": "Serving as a baseline for how far standard S-rank specialization can go without System-style mutation.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/531272.jpg?s=309b174b84779d1c3105c7777c1524b2",
-      "malId": 173980
+      "malId": 173980,
+      "slug": "choi-jong-in",
+      "description": "Choi Jong-In is a  from Solo Leveling."
     },
     {
       "name": "Woo Jin-Chul",
@@ -201,7 +213,9 @@
       "icon": "Shield",
       "signatureMoment": "Coordinating emergency response when gate incidents outrun normal staffing assumptions.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/531274.jpg?s=d1cc0e1ef0e2f88ca994b14a594888af",
-      "malId": 199349
+      "malId": 199349,
+      "slug": "woo-jin-chul",
+      "description": "Woo Jin-Chul is a  from Solo Leveling."
     },
     {
       "name": "Lee Joo-Hee",
@@ -216,7 +230,9 @@
       "icon": "Heart",
       "signatureMoment": "Withdrawing from frontline operations after cumulative shock, highlighting non-power bottlenecks in hunter sustainability.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/540694.jpg?s=b1d8998cd3b8c1409c0dc98ea7b18177",
-      "malId": 173986
+      "malId": 173986,
+      "slug": "lee-joo-hee",
+      "description": "Lee Joo-Hee is a  from Solo Leveling."
     },
     {
       "name": "Thomas Andre",
@@ -234,7 +250,9 @@
       "malId": 194373,
       "jikanAliases": [
         "Thomas Andre"
-      ]
+      ],
+      "slug": "thomas-andre",
+      "description": "Thomas Andre is a  from Solo Leveling."
     },
     {
       "name": "Ashborn",
@@ -252,7 +270,9 @@
       "malId": 245955,
       "jikanAliases": [
         "Ashborn"
-      ]
+      ],
+      "slug": "ashborn",
+      "description": "Ashborn is a  from Solo Leveling."
     }
   ],
   "relationships": [

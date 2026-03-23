@@ -96,7 +96,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/284121.jpg?s=3ebac88ad166bf105d8f04894f3fb469",
       "_fetchFailed": false,
       "malId": 17,
-      "role": "Main"
+      "role": "Main",
+      "slug": "naruto-uzumaki",
+      "description": "Naruto Uzumaki is a Main from Naruto."
     },
     {
       "name": "Sasuke Uchiha",
@@ -113,7 +115,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/131317.jpg?s=9705c17dba36c2edebded3a72dc1a46e",
       "_fetchFailed": false,
       "malId": 13,
-      "role": "Main"
+      "role": "Main",
+      "slug": "sasuke-uchiha",
+      "description": "Sasuke Uchiha is a Main from Naruto."
     },
     {
       "name": "Kakashi Hatake",
@@ -130,7 +134,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/284129.jpg?s=b0a6b941fd427cbfd85657f316c0e309",
       "_fetchFailed": false,
       "malId": 85,
-      "role": "Supporting"
+      "role": "Supporting",
+      "slug": "kakashi-hatake",
+      "description": "Kakashi Hatake is a Supporting from Naruto."
     },
     {
       "name": "Shikamaru Nara",
@@ -147,7 +153,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/131315.jpg?s=a800fe970f638eae38b1e50d3471121d",
       "_fetchFailed": false,
       "malId": 2007,
-      "role": "Supporting"
+      "role": "Supporting",
+      "slug": "shikamaru-nara",
+      "description": "Shikamaru Nara is a Supporting from Naruto."
     },
     {
       "name": "Orochimaru",
@@ -164,7 +172,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/162089.jpg?s=77b65c6a4dfa133ef211d805af39d986",
       "_fetchFailed": false,
       "malId": 2455,
-      "role": "Main"
+      "role": "Main",
+      "slug": "orochimaru",
+      "description": "Orochimaru is a Main from Naruto."
     },
     {
       "name": "Tsunade",
@@ -181,7 +191,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/523646.jpg?s=6e76b1e4adef34cd1698c91947542cc5",
       "_fetchFailed": false,
       "malId": 2767,
-      "role": "Supporting"
+      "role": "Supporting",
+      "slug": "tsunade",
+      "description": "Tsunade is a Supporting from Naruto."
     },
     {
       "name": "Jiraiya",
@@ -198,7 +210,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/68618.jpg?s=ec35c8f49aa4cd7389bfc36d30cda3d7",
       "_fetchFailed": false,
       "malId": 2423,
-      "role": "Supporting"
+      "role": "Supporting",
+      "slug": "jiraiya",
+      "description": "Jiraiya is a Supporting from Naruto."
     },
     {
       "name": "Hiruzen Sarutobi",
@@ -216,7 +230,9 @@
       "_fetchFailed": false,
       "systemBio": "An institutional continuity node — Hiruzen's value was his ability to maintain equilibrium between competing internal factions. His death created a power vacuum that accelerated multiple parallel conflicts simultaneously.",
       "malId": 7571,
-      "role": "Supporting"
+      "role": "Supporting",
+      "slug": "hiruzen-sarutobi",
+      "description": "Hiruzen Sarutobi is a Supporting from Naruto."
     },
     {
       "name": "Itachi Uchiha",
@@ -233,7 +249,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/284122.jpg?s=11eac9672b208175831a0da62f188622",
       "_fetchFailed": false,
       "malId": 14,
-      "role": "Main"
+      "role": "Main",
+      "slug": "itachi-uchiha",
+      "description": "Itachi Uchiha is a Main from Naruto."
     },
     {
       "name": "Sakura Haruno",
@@ -251,7 +269,8 @@
       "accentColor": "pink-400",
       "icon": "Heart",
       "signatureMoment": "Landing the final blow against Kaguya — the moment that proved she was never just 'the one who needed protecting' on Team 7.",
-      "description": "Medical ninja; Tsunade's apprentice; arc from civilian liability to battlefield determinant"
+      "description": "Medical ninja; Tsunade's apprentice; arc from civilian liability to battlefield determinant",
+      "slug": "sakura-haruno"
     },
     {
       "name": "Rock Lee",
@@ -269,7 +288,8 @@
       "accentColor": "green-400",
       "icon": "Zap",
       "signatureMoment": "Opening the Seventh Gate against Gaara — the moment he proved that the system had no category for what he was about to become.",
-      "description": "Taijutsu-only specialist; Eight Gates system; proves hard work exceeds natural talent"
+      "description": "Taijutsu-only specialist; Eight Gates system; proves hard work exceeds natural talent",
+      "slug": "rock-lee"
     },
     {
       "name": "Gaara",
@@ -287,7 +307,8 @@
       "accentColor": "orange-400",
       "icon": "Shield",
       "signatureMoment": "Choosing to protect the village that tried to kill him as a child — the ultimate act of redefining your relationship to the system that rejected you.",
-      "description": "Kazekage; sand/water tailed beast host; redemption arc from weapon to leader"
+      "description": "Kazekage; sand/water tailed beast host; redemption arc from weapon to leader",
+      "slug": "gaara"
     },
     {
       "name": "Kabuto Yakushi",
@@ -305,7 +326,8 @@
       "accentColor": "yellow-400",
       "icon": "Bug",
       "signatureMoment": "Being trapped by his own Izanami — forced to relive his true identity after years of constructing a false one.",
-      "description": "Edo Tensei orchestrator; sage mode user; Fourth Shinobi War catalyst"
+      "description": "Edo Tensei orchestrator; sage mode user; Fourth Shinobi War catalyst",
+      "slug": "kabuto-yakushi"
     },
     {
       "name": "Neji Hyuga",
@@ -323,7 +345,8 @@
       "accentColor": "cyan-400",
       "icon": "Eye",
       "signatureMoment": "Dying to protect Hinata and Naruto — choosing to use his 'fate' position to enable others rather than accept it as a limitation.",
-      "description": "Byakugan bearer; branch seal system; fate debate culminating in war contribution"
+      "description": "Byakugan bearer; branch seal system; fate debate culminating in war contribution",
+      "slug": "neji-hyuga"
     },
     {
       "name": "Pain (Nagato)",
@@ -341,7 +364,8 @@
       "accentColor": "red-400",
       "icon": "Target",
       "signatureMoment": "Destroying Konoha to prove his thesis — and being proven wrong by Naruto's choice to forgive.",
-      "description": "Akatsuki leader; former student of Jiraiya; attack on Konoha as systemic rupture"
+      "description": "Akatsuki leader; former student of Jiraiya; attack on Konoha as systemic rupture",
+      "slug": "pain-(nagato)"
     }
   ],
   "factions": [
