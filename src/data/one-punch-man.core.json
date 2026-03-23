@@ -269,7 +269,7 @@
       "gradientTo": "rose-900",
       "accentColor": "rose-400",
       "icon": "Skull",
-      "signatureMoment": "His King Engine heartbeat sound吓得 all monsters because it sounds like an engine of death.",
+      "signatureMoment": "His King Engine heartbeat sounds like an engine of death, terrifying all monsters who hear it.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/295547.jpg?s=8cd20c7942e901e44f2a05d55c025ee9",
       "malId": 86049,
       "slug": "king",
@@ -534,7 +534,7 @@
     },
     {
       "question": "Why is Saitama depressed despite being the strongest?",
-      "answer": "Because victory without challenge has no meaning. His depression is the psychological consequence of having no equal—there's no growth, no suspense, no成就感.",
+      "answer": "Because victory without challenge has no meaning. His depression is the psychological consequence of having no equal—there's no growth, no suspense, no payoff.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"

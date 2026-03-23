@@ -18,15 +18,15 @@
   "visualizationReason": "Blue Lock is structurally a counter-tree: each striker's ego path creates specific strengths that become exploitable weaknesses for opponents who read the counter-relationship. The elimination bracket makes counter-matchup analysis the core strategic layer.",
   "headerFlavor": {
     "loreQuote": "Ego is the only thing that matters. Skill is just a tool for the egoist.",
-    "sysWarning": "// [SYS_WARN]: ELIMINATION LOOP ACTIVE — STRIKER CANDIDATES: 300 → 1",
+    "sysWarning": "// [SYS_WARN]: ELIMINATION LOOP ACTIVE \u2014 STRIKER CANDIDATES: 300 \u2192 1",
     "sysWarningColor": "blue"
   },
   "backgroundMotif": "grid",
   "revealOverlay": "glow-border-soft",
-  "introductionSummary": "Blue Lock is a Japanese national football project that takes 300 forwards and forces them through an ego-based elimination tournament. The winner becomes Japan's starting striker. The project strips away teamwork as a virtue, treating individual scoring ego as the only metric — forcing players to either develop an irreplaceable striker identity or be eliminated.",
+  "introductionSummary": "Blue Lock is a Japanese national football project that takes 300 forwards and forces them through an ego-based elimination tournament. The winner becomes Japan's starting striker. The project strips away teamwork as a virtue, treating individual scoring ego as the only metric \u2014 forcing players to either develop an irreplaceable striker identity or be eliminated.",
   "aiInsights": {
-    "casual": "Blue Lock's twist is that it treats collaboration as weakness — if you need others to score, you're not a striker. Each player has to develop a signature scoring style so unique that no one else can replicate it, even if that means betraying your teammates.",
-    "deep": "Blue Lock runs an elimination tree where each player's ego creates a specific capability signature. That signature is simultaneously their greatest offensive tool and their most exploitable counter-vulnerability. Isagi's metavision makes him a consistent positioning threat, but it requires reactive reading rather than creative generation — meaning a sufficiently chaotic offensive style (Bachira's dribbling) can still outpace his decision tree. The ego system thus creates a recursive optimization loop where each player's answer to 'what makes me unique' becomes the input for opponents to build their counter-answer."
+    "casual": "Blue Lock's twist is that it treats collaboration as weakness \u2014 if you need others to score, you're not a striker. Each player has to develop a signature scoring style so unique that no one else can replicate it, even if that means betraying your teammates.",
+    "deep": "Blue Lock runs an elimination tree where each player's ego creates a specific capability signature. That signature is simultaneously their greatest offensive tool and their most exploitable counter-vulnerability. Isagi's metavision makes him a consistent positioning threat, but it requires reactive reading rather than creative generation \u2014 meaning a sufficiently chaotic offensive style (Bachira's dribbling) can still outpace his decision tree. The ego system thus creates a recursive optimization loop where each player's answer to 'what makes me unique' becomes the input for opponents to build their counter-answer."
   },
   "systemDescription": "Ego Vision competitive football system that isolates individual skill through AI simulation. The Blue Lock project forces 300 forwards to compete in a layered elimination tournament, with only the egoistiest striker surviving.",
   "systemName": "Ego Vision System",
@@ -42,8 +42,8 @@
     {
       "name": "Team Z",
       "role": "neutral",
-      "loreDesc": "Initial Blue Lock group formed from the first 300 eliminations — temporary alliance network through positional proximity.",
-      "systemDesc": "Proximity-clustered sub-network within the larger elimination graph — alliance nodes are fragile under ego pressure."
+      "loreDesc": "Initial Blue Lock group formed from the first 300 eliminations \u2014 temporary alliance network through positional proximity.",
+      "systemDesc": "Proximity-clustered sub-network within the larger elimination graph \u2014 alliance nodes are fragile under ego pressure."
     },
     {
       "name": "Team White",
@@ -58,7 +58,7 @@
       "target": "Bachira Meguru",
       "type": "rival",
       "weight": 8,
-      "loreDesc": "Rivals whose competition drives both toward striker optimization — Bachira's chaos and Isagi's analysis push each other higher.",
+      "loreDesc": "Rivals whose competition drives both toward striker optimization \u2014 Bachira's chaos and Isagi's analysis push each other higher.",
       "systemDesc": "Parallel ego tracks creating mutual acceleration: chaos node vs. analysis node, both attempting to find the optimal scoring path."
     },
     {
@@ -66,7 +66,7 @@
       "target": "Nagi Seishiro",
       "type": "rival",
       "weight": 7,
-      "loreDesc": "Isagi recognizes Nagi's natural talent as a threat to his own striker path — the tactical mind vs. the physical ceiling.",
+      "loreDesc": "Isagi recognizes Nagi's natural talent as a threat to his own striker path \u2014 the tactical mind vs. the physical ceiling.",
       "systemDesc": "Constraint-based optimization vs. pure talent: Isagi's spatial reading vs. Nagi's effortless technical limit."
     },
     {
@@ -74,7 +74,7 @@
       "target": "Chigiri Hyoma",
       "type": "rival",
       "weight": 6,
-      "loreDesc": "Speed as a scoring weapon — Chigiri's pace creates a direct-line threat that Isagi's positioning must account for in every defensive rotation.",
+      "loreDesc": "Speed as a scoring weapon \u2014 Chigiri's pace creates a direct-line threat that Isagi's positioning must account for in every defensive rotation.",
       "systemDesc": "Velocity advantage node creating linear scoring vectors that bypass Isagi's spatial mapping complexity."
     },
     {
@@ -91,34 +91,26 @@
       "type": "rival",
       "weight": 5,
       "loreDesc": "Bachira sees Nagi's talent and wants to know if monster-style chaos can beat effortless trap mastery.",
-      "systemDesc": "Creative chaos node vs. passive technical ceiling — unpredictable generation vs. optimized reception."
+      "systemDesc": "Creative chaos node vs. passive technical ceiling \u2014 unpredictable generation vs. optimized reception."
     },
     {
       "source": "Reo Mikage",
       "target": "Nagi Seishiro",
       "type": "dependent",
       "weight": 9,
-      "loreDesc": "Reo's entire striker path is built around copying Nagi — his ego depends on using Nagi's talent as his own weapon.",
+      "loreDesc": "Reo's entire striker path is built around copying Nagi \u2014 his ego depends on using Nagi's talent as his own weapon.",
       "systemDesc": "Dependent ego node: Reo's capability tree is branched from Nagi's technique root, making his optimization path parasitic on another player's signature."
-    },
-    {
-      "source": "Isagi Yoichi",
-      "target": "Baro Veldan",
-      "type": "counter",
-      "weight": 7,
-      "loreDesc": "Baro's physical dominance and direct ego style represent everything Blue Lock's domestic pool lacks — forcing Isagi to evolve beyond tactical positioning.",
-      "systemDesc": "Physical-force node counter: Isagi's decision-tree approach must find angles that Baro's body advantage cannot close."
     }
   ],
   "powerSystem": [
     {
       "name": "Direct Shooting",
       "subtitle": "Zero-Dribble Goal Threat",
-      "loreDesc": "Firing on goal without dribbling or passing. The most direct path to scoring — removes all intermediate steps between opportunity and goal.",
+      "loreDesc": "Firing on goal without dribbling or passing. The most direct path to scoring \u2014 removes all intermediate steps between opportunity and goal.",
       "systemDesc": "Compression node: eliminates the dribble-and-shoot sequence, reducing the defender's reaction window to near-zero.",
       "icon": "Zap",
       "color": "blue-400",
-      "signatureMoment": "Isagi's direct shot against Team White's goalkeeper — firing before the defense could reorganize, scoring from a position no standard striker would shoot from.",
+      "signatureMoment": "Isagi's direct shot against Team White's goalkeeper \u2014 firing before the defense could reorganize, scoring from a position no standard striker would shoot from.",
       "loreSubtitle": "No middlemen",
       "systemSubtitle": "Route compression attack"
     },
@@ -151,7 +143,7 @@
       "systemDesc": "Meta-learner node: observation triggers muscle memory replication, making him a counter-node who adapts to specific opponents.",
       "icon": "Moon",
       "color": "violet-400",
-      "signatureMoment": "Reo copying Nagi's trap and Isagi's direct shot in the same match — proving the copy path is a legitimate ego route.",
+      "signatureMoment": "Reo copying Nagi's trap and Isagi's direct shot in the same match \u2014 proving the copy path is a legitimate ego route.",
       "loreSubtitle": "Borrowed greatness",
       "systemSubtitle": "Technique absorption engine"
     }
@@ -169,7 +161,7 @@
     {
       "name": "Skill Ceiling is Physical",
       "subtitle": "Talent has limits",
-      "loreConsequence": "Even geniuses like Nagi hit a wall when ego isn't driving their progression — talent alone isn't enough.",
+      "loreConsequence": "Even geniuses like Nagi hit a wall when ego isn't driving their progression \u2014 talent alone isn't enough.",
       "systemEquivalent": "Passive optimization reaches a local maximum; only ego-driven active iteration breaks through.",
       "severity": "medium",
       "loreSubtitle": "The talent trap",
@@ -179,7 +171,7 @@
       "name": "Mutual Blindness Protocol",
       "subtitle": "Players can't see each other's ego plans",
       "loreConsequence": "Teams are assembled from rivals who don't know each other's plays, forcing each striker to execute without coordination.",
-      "systemEquivalent": "Incomplete graph information — each node operates on partial field state, making spatial reading even more valuable.",
+      "systemEquivalent": "Incomplete graph information \u2014 each node operates on partial field state, making spatial reading even more valuable.",
       "severity": "medium",
       "loreSubtitle": "Designed isolation",
       "systemSubtitle": "Partial information field"
@@ -187,7 +179,7 @@
     {
       "name": "One Striker Per Revolution",
       "subtitle": "Only one ego per position",
-      "loreConsequence": "The elimination isn't just about being good — it's about being so specifically unique that no one else fills the same role.",
+      "loreConsequence": "The elimination isn't just about being good \u2014 it's about being so specifically unique that no one else fills the same role.",
       "systemEquivalent": "Uniqueness constraint: two players with identical ego signatures means one is redundant.",
       "severity": "high",
       "loreSubtitle": "The singularity requirement",
@@ -199,7 +191,7 @@
     "loreName": "Project Ego Leaderboard",
     "topTierName": "Blue Lock Selects",
     "topTierLore": "The egoists whose striker signatures are distinct and developed enough to survive the elimination loop.",
-    "topTierSystem": "Highest optimization nodes in the elimination tree — players who have identified and compounded their unique scoring signature.",
+    "topTierSystem": "Highest optimization nodes in the elimination tree \u2014 players who have identified and compounded their unique scoring signature.",
     "tiers": [
       {
         "name": "Striker Selects",
@@ -208,12 +200,12 @@
       },
       {
         "name": "Developing Egoists",
-        "loreDesc": "Players still refining their signature — high potential but not yet consistent enough to survive elimination.",
+        "loreDesc": "Players still refining their signature \u2014 high potential but not yet consistent enough to survive elimination.",
         "systemDesc": "Partial optimization nodes with identifiable direction but incomplete capability trees."
       },
       {
         "name": "Collaborative Fragments",
-        "loreDesc": "Players who rely on others for scoring — the project's primary elimination targets.",
+        "loreDesc": "Players who rely on others for scoring \u2014 the project's primary elimination targets.",
         "systemDesc": "Dependent nodes being pruned from the striker optimization graph."
       }
     ]
@@ -224,13 +216,13 @@
       "title": "The Spatial tactician",
       "rank": "Blue Lock Tier 1",
       "dangerLevel": 8,
-      "loreBio": "Adaptive striker who uses spatial awareness and tactical analysis to find optimal scoring positions. Isagi has no singular physical gift — his advantage is reading the field as a decision tree and positioning himself where the probability of scoring is highest. He evolves by absorbing what works from rivals and integrating it into his spatial model.",
-      "systemBio": "Isagi runs a tactical optimization path — his metavision lets him read the field as a decision tree and position himself where scoring probability is highest. Every rival encounter updates his spatial model, making him a compounding analysis node.",
+      "loreBio": "Adaptive striker who uses spatial awareness and tactical analysis to find optimal scoring positions. Isagi has no singular physical gift \u2014 his advantage is reading the field as a decision tree and positioning himself where the probability of scoring is highest. He evolves by absorbing what works from rivals and integrating it into his spatial model.",
+      "systemBio": "Isagi runs a tactical optimization path \u2014 his metavision lets him read the field as a decision tree and position himself where scoring probability is highest. Every rival encounter updates his spatial model, making him a compounding analysis node.",
       "gradientFrom": "blue-950",
       "gradientTo": "cyan-900",
       "accentColor": "blue-400",
       "icon": "Eye",
-      "signatureMoment": "Using metavision to track Bachira, Nagi, AND the goalkeeper simultaneously — finding the one scoring angle no other player saw.",
+      "signatureMoment": "Using metavision to track Bachira, Nagi, AND the goalkeeper simultaneously \u2014 finding the one scoring angle no other player saw.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/558080.jpg",
       "malId": 74399,
       "slug": "isagi-yoichi",
@@ -259,13 +251,13 @@
       "title": "The Dribbling Monster",
       "rank": "Blue Lock Tier 1",
       "dangerLevel": 7,
-      "loreBio": "Creative dribbler with monster-style flair who sees football as self-expression. Bachira's 'monster' is a chaos node in structured defensive systems — his unpredictable edge trajectories break defensive models built on predictable player movement patterns.",
+      "loreBio": "Creative dribbler with monster-style flair who sees football as self-expression. Bachira's 'monster' is a chaos node in structured defensive systems \u2014 his unpredictable edge trajectories break defensive models built on predictable player movement patterns.",
       "systemBio": "Bachira's dribbling creates unpredictable edge trajectories that defenders can't pre-model. His 'monster' creativity generates offensive paths that don't exist in standard tactical frameworks, making him effective specifically against structured defenses.",
       "gradientFrom": "yellow-950",
       "gradientTo": "orange-900",
       "accentColor": "yellow-400",
       "icon": "Flame",
-      "signatureMoment": "Dribbling through four defenders with monster-style flair, showing that ego isn't just about efficiency — it's about expression.",
+      "signatureMoment": "Dribbling through four defenders with monster-style flair, showing that ego isn't just about efficiency \u2014 it's about expression.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/491180.jpg",
       "malId": 74398,
       "slug": "bachira-meguru",
@@ -274,12 +266,12 @@
       "abilities": [
         {
           "name": "Dribbling Monster",
-          "description": "Ball control that generates unpredictable edge trajectories — breaks defensive modeling assumptions.",
+          "description": "Ball control that generates unpredictable edge trajectories \u2014 breaks defensive modeling assumptions.",
           "severity": "high"
         },
         {
           "name": "Creative Chaos",
-          "description": "Offensive generation outside standard tactical frameworks — creates paths that structured defenses cannot pre-empt.",
+          "description": "Offensive generation outside standard tactical frameworks \u2014 creates paths that structured defenses cannot pre-empt.",
           "severity": "high"
         }
       ]
@@ -289,7 +281,7 @@
       "title": "The Effortless Genius",
       "rank": "Blue Lock Tier 1",
       "dangerLevel": 8,
-      "loreBio": "Genius striker with effortless technical ability discovered late. Nagi's talent ceiling is near-physical-limit skill, but his passive optimization approach — he doesn't particularly care about winning — leaves him vulnerable to ego-motivated players who want it more.",
+      "loreBio": "Genius striker with effortless technical ability discovered late. Nagi's talent ceiling is near-physical-limit skill, but his passive optimization approach \u2014 he doesn't particularly care about winning \u2014 leaves him vulnerable to ego-motivated players who want it more.",
       "systemBio": "Nagi's talent ceiling is near-physical-limit technical skill, but his passive optimization approach leaves him exploitable by actively ego-driven nodes. His trap mastery is the most efficient reception node in Blue Lock but requires an external trigger to activate.",
       "gradientFrom": "slate-950",
       "gradientTo": "slate-100",
@@ -304,12 +296,12 @@
       "abilities": [
         {
           "name": "Trap Master",
-          "description": "Effortless first touch that makes any pass look like a perfect setup — one-motion reception-to-shot cycle.",
+          "description": "Effortless first touch that makes any pass look like a perfect setup \u2014 one-motion reception-to-shot cycle.",
           "severity": "high"
         },
         {
           "name": "Idol Calculation",
-          "description": "Absorbing interesting techniques from others — passive skill tree expansion triggered by observing compelling egoists.",
+          "description": "Absorbing interesting techniques from others \u2014 passive skill tree expansion triggered by observing compelling egoists.",
           "severity": "medium"
         }
       ]
@@ -319,13 +311,13 @@
       "title": "The Crimson Sprint",
       "rank": "Blue Lock Tier 1",
       "dangerLevel": 6,
-      "loreBio": "Speedster with a leg injury past. Chigiri's raw pace creates a velocity advantage node — he outruns defenders before they can close, trading defensive contribution for pure offensive burst. His leg injury gives him a psychological edge: he plays without fear because he already lost everything once.",
+      "loreBio": "Speedster with a leg injury past. Chigiri's raw pace creates a velocity advantage node \u2014 he outruns defenders before they can close, trading defensive contribution for pure offensive burst. His leg injury gives him a psychological edge: he plays without fear because he already lost everything once.",
       "systemBio": "Chigiri's speed stat creates a velocity advantage node that generates linear scoring vectors. His pace forces defenders into recovery positions they cannot close from, making him a one-dimensional but extremely efficient goal threat.",
       "gradientFrom": "red-950",
       "gradientTo": "pink-900",
       "accentColor": "red-400",
       "icon": "Bolt",
-      "signatureMoment": "Outrunning three defenders in the final minutes of a match — the speed that once defined his career rebuilt after injury.",
+      "signatureMoment": "Outrunning three defenders in the final minutes of a match \u2014 the speed that once defined his career rebuilt after injury.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/401567.jpg",
       "malId": 74396,
       "slug": "chigiri-hyoma",
@@ -334,12 +326,12 @@
       "abilities": [
         {
           "name": "Speed Dribble",
-          "description": "Pace advantage that closes distance to goal before defenders can react — pure velocity-based scoring vector.",
+          "description": "Pace advantage that closes distance to goal before defenders can react \u2014 pure velocity-based scoring vector.",
           "severity": "high"
         },
         {
           "name": "Crimson Zone",
-          "description": "Chigiri's high-speed dribbling state where his pace becomes impossible to track — defender reactions fail.",
+          "description": "Chigiri's high-speed dribbling state where his pace becomes impossible to track \u2014 defender reactions fail.",
           "severity": "high"
         }
       ]
@@ -349,13 +341,13 @@
       "title": "The Adaptive Copyist",
       "rank": "Blue Lock Tier 1",
       "dangerLevel": 7,
-      "loreBio": "Wealthy prodigy with adaptive copy ability. Reo wants Nagi specifically as his weapon but discovers that the copy path itself is an ego — becoming the player who can become anyone is its own striker identity.",
+      "loreBio": "Wealthy prodigy with adaptive copy ability. Reo wants Nagi specifically as his weapon but discovers that the copy path itself is an ego \u2014 becoming the player who can become anyone is its own striker identity.",
       "systemBio": "Reo's copy ability lets him adopt any observed technique, making him a meta-learner who counters specific opponents by absorbing their key moves. His ego journey is from parasitic (copying Nagi) to adaptive (choosing which signature to deploy).",
       "gradientFrom": "violet-950",
       "gradientTo": "purple-900",
       "accentColor": "violet-400",
       "icon": "Moon",
-      "signatureMoment": "Copying Nagi's trap, Isagi's direct shot, AND Bachira's dribble in the same match — proving the copy ego is a legitimate striker path.",
+      "signatureMoment": "Copying Nagi's trap, Isagi's direct shot, AND Bachira's dribble in the same match \u2014 proving the copy ego is a legitimate striker path.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/618304.jpg",
       "malId": 74394,
       "slug": "reo-mikage",
@@ -364,12 +356,12 @@
       "abilities": [
         {
           "name": "Neo-Egoist Leap",
-          "description": "Copying observed techniques into immediate muscle memory — adaptive counter-node that adopts specific opponent signatures.",
+          "description": "Copying observed techniques into immediate muscle memory \u2014 adaptive counter-node that adopts specific opponent signatures.",
           "severity": "high"
         },
         {
           "name": "Symbiotic Strike",
-          "description": "Using Nagi's trap as a trigger while providing Reo's own copy-enhanced finishing — co-dependent duo optimization.",
+          "description": "Using Nagi's trap as a trigger while providing Reo's own copy-enhanced finishing \u2014 co-dependent duo optimization.",
           "severity": "medium"
         }
       ]
@@ -378,14 +370,14 @@
   "systemQuestions": [
     {
       "question": "How does the Blue Lock ego system restructure the typical value calculation for striker candidates?",
-      "answer": "Standard scouting values technical skill + teamwork. Blue Lock isolates ego — the willingness to optimize for individual scoring regardless of team context. This means collaborative players get systematically eliminated even if they're technically skilled.",
+      "answer": "Standard scouting values technical skill + teamwork. Blue Lock isolates ego \u2014 the willingness to optimize for individual scoring regardless of team context. This means collaborative players get systematically eliminated even if they're technically skilled.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
     {
       "question": "Why does metavision give Isagi a structural advantage over purely technical players like Nagi?",
-      "answer": "Metavision is a decision-support tool that scales with tactical intelligence. Nagi's technical ceiling is higher, but Isagi's spatial awareness lets him find optimal positions Nagi doesn't even consider — making Isagi's utility node more consistent.",
+      "answer": "Metavision is a decision-support tool that scales with tactical intelligence. Nagi's technical ceiling is higher, but Isagi's spatial awareness lets him find optimal positions Nagi doesn't even consider \u2014 making Isagi's utility node more consistent.",
       "tabIndex": 1,
       "sectionId": "counterplay-heading",
       "tabLabel": "Counterplay"
@@ -407,7 +399,7 @@
   ],
   "hero": {
     "systemType": "counterplay",
-    "microHook": "Ego Vision maps the field as a decision tree — the striker who reads it best wins.",
+    "microHook": "Ego Vision maps the field as a decision tree \u2014 the striker who reads it best wins.",
     "thesis": "Blue Lock ego elimination: 300 forwards, one striker. Collaborative players are pruned until one egoist survives.",
     "primarySystemType": "power_engine"
   },
@@ -415,30 +407,30 @@
     {
       "attacker": "Metavision Positioning",
       "defender": "Physical Dominance",
-      "mechanic": "Isagi's spatial reading finds shooting angles that Baro's body coverage cannot reach — the mind outpaces the muscle.",
+      "mechanic": "Isagi's spatial reading finds shooting angles that Baro's body coverage cannot reach \u2014 the mind outpaces the muscle.",
       "loreDesc": "Isagi uses metavision to locate the exact spatial gap Baro's physical dominance can't cover.",
-      "systemDesc": "Analytical positioning edge vs. force-based coverage — decision-tree accuracy beats raw body advantage in confined spaces."
+      "systemDesc": "Analytical positioning edge vs. force-based coverage \u2014 decision-tree accuracy beats raw body advantage in confined spaces."
     },
     {
       "attacker": "Speed Burst",
       "defender": "Trap Master",
       "mechanic": "Chigiri's velocity advantage generates a shooting window before Nagi can close the distance with his trap reach.",
-      "loreDesc": "Chigiri's speed means the ball is gone before Nagi's trap can catch it — pace beats reception quality.",
-      "systemDesc": "Time-to-ball advantage vs. reception optimization — speed creates windows that Nagi's technique cannot counter."
+      "loreDesc": "Chigiri's speed means the ball is gone before Nagi's trap can catch it \u2014 pace beats reception quality.",
+      "systemDesc": "Time-to-ball advantage vs. reception optimization \u2014 speed creates windows that Nagi's technique cannot counter."
     },
     {
       "attacker": "Chaos Dribbling",
       "defender": "Metavision Tracking",
-      "mechanic": "Bachira's unpredictable edge trajectories exceed Isagi's spatial model prediction accuracy — creativity breaks analysis.",
+      "mechanic": "Bachira's unpredictable edge trajectories exceed Isagi's spatial model prediction accuracy \u2014 creativity breaks analysis.",
       "loreDesc": "Isagi's metavision can track known patterns but Bachira's monster-style generation creates trajectories that don't exist in his training data.",
-      "systemDesc": "Generative creativity vs. analytical prediction — when the input space exceeds the decision tree's training range, chaos outperforms analysis."
+      "systemDesc": "Generative creativity vs. analytical prediction \u2014 when the input space exceeds the decision tree's training range, chaos outperforms analysis."
     },
     {
       "attacker": "Ego Copy Adaptation",
       "defender": "Fixed Signature",
-      "mechanic": "Reo copies Nagi's exact technique, then adds a new finishing layer Nagi doesn't have — parasitic optimization that improves on the source.",
+      "mechanic": "Reo copies Nagi's exact technique, then adds a new finishing layer Nagi doesn't have \u2014 parasitic optimization that improves on the source.",
       "loreDesc": "Reo's copy path means any striker who shows him a technique immediately faces a version of themselves with additional ego development.",
-      "systemDesc": "Adaptive learning node vs. static signature — Reo's copy ceiling is limited only by which egoists he observes."
+      "systemDesc": "Adaptive learning node vs. static signature \u2014 Reo's copy ceiling is limited only by which egoists he observes."
     },
     {
       "attacker": "Direct Shot Compression",
@@ -450,8 +442,8 @@
     {
       "attacker": "Copy Adaptation",
       "defender": "Fixed Signature",
-      "mechanic": "Reo's ego leap copies Nagi's techniques and layers his own finishing on top — a parasitic optimization that surpasses the host node.",
-      "loreDesc": "The copy striker path isn't just imitation — Reo adds his own ego to what he copies, making the copy superior to the original.",
+      "mechanic": "Reo's ego leap copies Nagi's techniques and layers his own finishing on top \u2014 a parasitic optimization that surpasses the host node.",
+      "loreDesc": "The copy striker path isn't just imitation \u2014 Reo adds his own ego to what he copies, making the copy superior to the original.",
       "systemDesc": "Adaptive absorption node that grows by consuming other ego signatures, then upgrading them with additional optimization layers."
     }
   ]
