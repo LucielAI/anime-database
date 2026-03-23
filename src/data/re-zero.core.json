@@ -106,7 +106,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/551926.jpg?s=22728d0269f40fb353a31a54545ded00",
       "malId": 156008,
       "slug": "emilia",
-      "description": "Emilia is a Royal Candidate from Re:Zero. 3 abilities recorded."
+      "description": "Half-elf candidate with ties to the Witch of Vanity."
     },
     {
       "name": "Satella",
@@ -123,7 +123,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/333682.jpg?s=d51df16debe182247eb3c6796ee4b1df",
       "malId": 157889,
       "slug": "satella",
-      "description": "Satella is a Witch from Re:Zero. 3 abilities recorded."
+      "description": "Half-elf who absorbed Subaru and carries the Witch of Envy."
     },
     {
       "name": "Beatrice",
@@ -174,7 +174,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/311327.jpg?s=3246595cd08261824d0dbf11a44c7229",
       "malId": 152568,
       "slug": "rem",
-      "description": "Rem is a Maid from Re:Zero. 3 abilities recorded."
+      "description": "Demon maid whose loyalty loop was reset by Satella."
     },
     {
       "name": "Ram",
@@ -191,7 +191,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/306390.jpg?s=c627953e35df76da593d931548b7e646",
       "malId": 152567,
       "slug": "ram",
-      "description": "Ram is a Maid from Re:Zero. 3 abilities recorded."
+      "description": "Demon maid whose horn was lost fighting the Witch of Vanity."
     },
     {
       "name": "Wilhelm van Astrea",
@@ -344,8 +344,8 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/563875.jpg?s=3a2e7a913fa75cf8ab24869bdb1b6351",
       "malId": 168163,
       "slug": "echidna",
-      "description": "Echidna is a Witch from Re:Zero. 3 abilities recorded.",
-      "systemBio": "Echidna is a Witch from Re:Zero. 3 abilities recorded."
+      "description": "Witch of Vanity who collects death experiences from Subaru.",
+      "systemBio": "Echidna is the Witch of Vanity who collects death experiences from Subaru through the Whale contract. Her knowledge encompasses all loops through her Book of the Dead, making her the most informed entity in the system."
     },
     {
       "name": "Reinhard van Astrea",

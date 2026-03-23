@@ -118,7 +118,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/580250.jpg?s=c98a9197f089df9132bc1c657bb6c131",
       "malId": 170258,
       "slug": "loid-forger",
-      "description": "Loid Forger (Twilight) is a spy from Spy x Family.",
+      "description": "WOTP agent whose daughter happens to be an empath.",
       "faction": "Westalis Intelligence",
       "abilities": [
         {
@@ -153,7 +153,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/457934.jpg?s=95b00e4e699e5120bad0e4d20a148aa8",
       "malId": 170329,
       "slug": "yor-forger",
-      "description": "Yor Forger (Thorn Princess) is an assassin from Spy x Family.",
+      "description": "Assassin whose husband thinks she is a clinic worker.",
       "faction": "Garden",
       "abilities": [
         {
@@ -188,7 +188,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/457933.jpg?s=ba4caa5a44905138cd83d5972982664c",
       "malId": 170256,
       "slug": "anya-forger",
-      "description": "Anya Forger is a telepath from Spy x Family.",
+      "description": "Child empath who can read minds across the network.",
       "faction": "Forger Family",
       "abilities": [
         {

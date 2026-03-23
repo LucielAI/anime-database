@@ -118,7 +118,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/384757.jpg?s=bddb12716b3db79cd579895016120a18",
       "malId": 133767,
       "slug": "shinra-kusakabe",
-      "description": "Shinra Kusakabe is the protagonist of Fire Force (Enen no Shouboutai).",
+      "description": "Devil Foot pyrokinetic whose smile covers trauma.",
       "faction": "Company 8",
       "abilities": [
         {
@@ -148,7 +148,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/594733.jpg?s=56c98fdabff116c56bacd6ddc7c63109",
       "malId": 134151,
       "slug": "arthur-boyle",
-      "description": "Arthur Boyle is a Fire Soldier from Company 8 in Fire Force.",
+      "description": "Justice-obsessed knight who fights with real firepower.",
       "faction": "Company 8",
       "abilities": [
         {
@@ -178,7 +178,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/472215.jpg?s=5d911840594a55990fe15ebbba32246f",
       "malId": 133768,
       "slug": "maki-oze",
-      "description": "Maki Oze is the Vice-Captain of Company 8 in Fire Force.",
+      "description": "Force captain whose strength exceeds her pyrokinetic output.",
       "faction": "Company 8",
       "abilities": [
         {
@@ -228,7 +228,7 @@
       "title": "Company 8 Captain / Ash Breath",
       "rank": "Company Captain",
       "dangerLevel": 6,
-      "loreBio": "A captain with no special pyrokinetic天赋—he earned command through sheer determination and practical tactics, making him the inspirational anchor of Company 8.",
+      "loreBio": "Company 8 Captain who fights with brute force and hot-blooded determination. Former professional boxer who joined the Fire Force after witnessing his brothers death in a spontaneous combustion incident. Commands Company 8 with reckless courage.",
       "systemBio": "A command node with no elemental type advantage but maximum tactical experience, leading through strategy rather than power.",
       "gradientFrom": "slate-900",
       "gradientTo": "stone-900",
@@ -238,7 +238,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/384685.jpg?s=b60a687a61b47e1d0fbe350a18fbfd20",
       "malId": 133770,
       "slug": "akitaru-obi",
-      "description": "Akitaru Obi is the Captain of Company 8 in Fire Force.",
+      "description": "Company 8 captain whose boxing roots anchor tactical decisions.",
       "faction": "Company 8",
       "abilities": [
         {
@@ -293,7 +293,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/587867.jpg?s=b321c8eb5776cacf367679d0ccb91791",
       "malId": 133769,
       "slug": "iris",
-      "description": "Iris is a Fire Soldier and nun from Company 8 in Fire Force.",
+      "description": "Infernal who chose to fight for Company 8.",
       "faction": "Company 8",
       "abilities": [
         {
@@ -318,7 +318,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/387864.jpg?s=95300cca80a20647bff56a4ddff7a082",
       "malId": 136047,
       "slug": "leonardo-burns",
-      "description": "Leonardo Burns is a powerful Infernal from Fire Force.",
+      "description": "Third Generation whose white flames exceed normal output.",
       "faction": "Infernal Army",
       "abilities": [
         {
@@ -526,37 +526,30 @@
   "animeImageUrl": "https://myanimelist.net/images/anime/1664/103275.jpg",
   "systemQuestions": [
     {
-      "question": "Why is the Breathing type counter-system important?",
-      "answer": "Because choosing the wrong type matchup is fatal—a fire soldier who doesn't know their opponent's type is almost certain to lose. Intelligence and type knowledge are the primary combat multipliers.",
+      "question": "Why does the RMP rock-paper-scissors counter system paradoxically make Company 8 more effective at stopping infernals than any single specialized unit?",
+      "answer": "The rock-paper-scissors constraint means no single Breath form dominates. Company 8 compositions that include all three types can counter any opposing formation, making them structurally superior to single-element specialists in wide-area engagements.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
     {
-      "question": "Why is Shinra's Blue Fire so special?",
-      "answer": "It operates outside the type counter chart entirely. No type counters it, and it counters every type—which makes him the most powerful Fire Soldier but also the most dangerous because he can't be integrated into tactical doctrine.",
-      "tabIndex": 0,
-      "sectionId": "power-system-heading",
-      "tabLabel": "Power Engine"
+      "question": "How does the Adolla Burst create a counter-tree that breaks the expected three-way counter balance?",
+      "answer": "Adolla Burst bypasses the rock-paper-scissors constraint entirely by accessing a shared consciousness field. This means the Evangelist can counter any Breath form without respecting the RMP structure, collapsing the three-way balance into a one-to-many dominance.",
+      "tabIndex": 1,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
     },
     {
-      "question": "Why do Infernals exist?",
-      "answer": "Spontaneous human combustion is a feature of this world, not a bug. The Great Cataclysm established combustion as a fundamental environmental process, and the Evangelist is deliberately engineering more of it.",
-      "tabIndex": 3,
+      "question": "Why does Shinras devious footwork actually make him more effective as a captain than traditional combat optimization?",
+      "answer": "Shinras tactical chaos creates unpredictability that disrupts enemy formation modeling. Defensive systems built to counter standard approaches fail against him because his decision cycle does not follow the optimization patterns the opposing system expects.",
+      "tabIndex": 2,
       "sectionId": "core-laws-heading",
       "tabLabel": "Core Laws"
     },
     {
-      "question": "Why is counter-tree the right visualization for Fire Force?",
-      "answer": "Because the eight Breathing types form a closed counter-loop where each type has exactly one strength and one weakness, creating a branching decision tree for every combat engagement.",
-      "tabIndex": 1,
-      "sectionId": "character-database-heading",
-      "tabLabel": "Entity Database"
-    },
-    {
-      "question": "What is the Evangelist actually trying to do?",
-      "answer": "Recreate the Great Cataclysm—deliberately triggering another global combustion event. Company 8's investigation eventually reveals this is the endgame all Infernalization is building toward.",
-      "tabIndex": 2,
+      "question": "How does Company 8s mixed-composition structure exploit the Evangelists one-to-many counter advantage?",
+      "answer": "The Evangelist strategy depends on overwhelming single-element forces with Adolla Burst. Mixed-composition forces that cycle element types force the Evangelist to reload counters for each element, compressing the timeline and creating windows where the counter-advantage collapses.",
+      "tabIndex": 3,
       "sectionId": "faction-map-heading",
       "tabLabel": "Faction Map"
     }

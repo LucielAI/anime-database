@@ -234,7 +234,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/483998.jpg",
       "malId": 74399,
       "slug": "isagi-yoichi",
-      "description": "Adaptive striker who uses spatial awareness and tactical analysis to find optimal scoring positions.",
+      "description": "Metavision striker who reads the field as a decision tree.",
       "faction": "Team Z",
       "abilities": [
         {
@@ -269,7 +269,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/483999.jpg",
       "malId": 74398,
       "slug": "bachira-meguru",
-      "description": "Creative dribbler with monster-style flair. Sees football as self-expression.",
+      "description": "Dribbling monster whose chaos breaks defensive models.",
       "faction": "Team Z",
       "abilities": [
         {
@@ -299,7 +299,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/484000.jpg",
       "malId": 74395,
       "slug": "nagi-seishiro",
-      "description": "Genius striker with effortless technical ability. Discovered football late and lacks competitive drive.",
+      "description": "Trap genius whose talent ceiling outpaces his motivation.",
       "faction": "Team Z",
       "abilities": [
         {
@@ -329,7 +329,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/484001.jpg",
       "malId": 74396,
       "slug": "chigiri-hyoma",
-      "description": "Speedster with a leg injury past. Uses raw pace as his primary weapon.",
+      "description": "Speed specialist whose leg injury fuels his pace advantage.",
       "faction": "Team Z",
       "abilities": [
         {
@@ -359,7 +359,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/484002.jpg",
       "malId": 74394,
       "slug": "reo-mikage",
-      "description": "Wealthy prodigy with adaptive copy ability. Wants Nagi specifically as his weapon.",
+      "description": "Neo-egoist who copies observed techniques into muscle memory.",
       "faction": "Team Z",
       "abilities": [
         {
@@ -389,7 +389,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/484003.jpg",
       "malId": 74397,
       "slug": "baro-veldana",
-      "description": "Swedish egoist with strong individual skills. Represents Team White.",
+      "description": "Swedish egoist relying on physical dominance.",
       "faction": "Team White",
       "abilities": [
         {

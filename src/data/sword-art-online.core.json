@@ -254,7 +254,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/204821.jpg?s=6a96a832b35d0ff3af9292bdb082546e",
       "malId": 20087,
       "slug": "kirito",
-      "description": "Kirito is a solo player with the Dual Blades hidden skill. Beater status gives him early-game knowledge advantage.",
+      "description": "Dual wielder who exploits solo-build optimization.",
       "faction": "Independent",
       "abilities": [
         {
@@ -284,7 +284,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/262053.jpg?s=449153df46cce80307c9f8ae622b4514",
       "malId": 107475,
       "slug": "asuna",
-      "description": "Top-tier healer and front-line fighter. Flash speed enables her to outpace most offensive nodes.",
+      "description": "Healer-flash who dominates burst windows with sub-second reaction.",
       "faction": "Knights of the Blood Oath",
       "abilities": [
         {
@@ -314,7 +314,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/192505.jpg?s=036c5729790631b16646b9eb7b4660da",
       "malId": 20085,
       "slug": "kayaba-akihiko",
-      "description": "Creator of SAO and architect of the death game. Built the entire system players must survive within.",
+      "description": "System architect whose own creation traps him.",
       "faction": "Aincrad Management",
       "abilities": [
         {
@@ -339,7 +339,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/178383.jpg?s=181b00224582fdb5492d27983d670a8e",
       "malId": 20086,
       "slug": "heathcliff",
-      "description": "Leader of the Knights of the Blood Oath. Suggatched to be Kayaba in disguise.",
+      "description": "Guild leader whose defensive specialization hides secrets.",
       "faction": "Knights of the Blood Oath",
       "abilities": [
         {

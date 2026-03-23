@@ -118,7 +118,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/269013.jpg?s=1f0f49f662bd4f462b9c9b5f953ce11e",
       "malId": 12323,
       "slug": "shinichi-izumi",
-      "description": "Shinichi Izumi is the parasitized protagonist of Parasyte.",
+      "description": "Human whose right hand is inhabited by Migi.",
       "faction": "Human",
       "abilities": [
         {
@@ -153,7 +153,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/348176.jpg?s=c378b81123b922b107c831c2c8b8db51",
       "malId": 13773,
       "slug": "migi",
-      "description": "Migi is the parasite sharing Shinichi's body in Parasyte.",
+      "description": "Parasite alien whose logic overrides human emotion.",
       "faction": "Parasite (Defected)",
       "abilities": [
         {
@@ -193,7 +193,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/271459.jpg?s=7b3e263fe274cebba676640cab4bb1b7",
       "malId": 22145,
       "slug": "gotou",
-      "description": "Gotou is a parasite-human hybrid from Parasyte.",
+      "description": "Parasite human experiment whose five-brain system coordinates combat.",
       "faction": "Parasite Core",
       "abilities": [
         {
@@ -223,7 +223,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/277609.jpg?s=f17ff00d22f5eb405e37ad937ae7bd5b",
       "malId": 22147,
       "slug": "muramoto",
-      "description": "Muramoto is a parasitized human from Parasyte.",
+      "description": "Doctors assistant helping Shinichi understand the parasites.",
       "faction": "Parasite Infiltrators",
       "abilities": [
         {
