@@ -151,7 +151,7 @@
       "accentColor": "orange-400",
       "icon": "Zap",
       "signatureMoment": "Choosing to suppress his 100% power when the Body Improvement Club showed him genuine friendship — proving that connection is stronger than apocalypse.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/343344.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/343344.jpg?s=3e76e9f00b1e67cc81c526e89f162bf8",
       "_fetchFailed": false,
       "malId": 109929,
       "role": "Main"
@@ -168,7 +168,7 @@
       "accentColor": "blue-400",
       "icon": "Briefcase",
       "signatureMoment": "Confronting the Claw President using only words and psychological insight — proving that human intelligence can defeat psychic power when the psychic has emotional vulnerabilities.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/308364.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/308364.jpg?s=3fd34b01685c150ebd8572b2fcd26f40",
       "_fetchFailed": false,
       "malId": 109931,
       "role": "Main"
@@ -185,7 +185,7 @@
       "accentColor": "purple-400",
       "icon": "Smile",
       "signatureMoment": "Becoming a 'god' through the cult and then choosing to fight against his own followers to protect Mob — the reformed villain's redemption arc.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/299395.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/299395.jpg?s=0857c68f6e2810f1c79eb22f9f8b9fa1",
       "_fetchFailed": false,
       "malId": 125034,
       "role": "Main"
@@ -202,7 +202,7 @@
       "accentColor": "gray-400",
       "icon": "Users",
       "signatureMoment": "Learning that his worth isn't determined by psychic output — Ritsu's acceptance of himself without powers is his character arc resolution.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/306672.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/306672.jpg?s=0865960b46255cb77b31097c14e8fbbf",
       "_fetchFailed": false,
       "malId": 124788,
       "role": "Main"
@@ -219,7 +219,7 @@
       "accentColor": "yellow-400",
       "icon": "Star",
       "signatureMoment": "Being defeated by Mob and learning that his 'confidence' was just arrogance — Teruki's defeat is the beginning of his real character development.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/299391.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/342630.jpg?s=e822b769c37a513c85ca38024f825f1b",
       "_fetchFailed": false,
       "malId": 124783,
       "role": "Main"
@@ -236,7 +236,7 @@
       "accentColor": "red-400",
       "icon": "Dumbbell",
       "signatureMoment": "Standing up to an esper psycically attacking Mob and saying he's stronger — the moment ordinary human courage matched psychic power.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/316353.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/311242.jpg?s=73fc085b39e1b6abff6b7b4d2984170c",
       "_fetchFailed": false,
       "malId": 124795,
       "role": "Main"
@@ -253,7 +253,7 @@
       "accentColor": "gray-400",
       "icon": "Crown",
       "signatureMoment": "Fighting Mob and revealing his 'superior esper' philosophy — the clearest articulation of what esper supremacy looks like in practice.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/299393.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/375717.jpg?s=293b3c4508218e900206f60b419d9378",
       "_fetchFailed": false,
       "malId": 125024,
       "role": "Antagonist"
@@ -270,7 +270,7 @@
       "accentColor": "orange-400",
       "icon": "Heart",
       "signatureMoment": "Choosing to help Mob instead of Ekubo when the cult turned violent — the moment Tenga chose genuine connection over power.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/299397.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/373641.jpg?s=f88cac17388774a5442fdc825a22dd5d",
       "_fetchFailed": false,
       "malId": 125026,
       "role": "Main"
@@ -287,7 +287,7 @@
       "accentColor": "blue-400",
       "icon": "Radio",
       "signatureMoment": "His telepathic assault on Mob's consciousness — revealing the emotional damage that created his power.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/299399.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/312031.jpg?s=864c18cc0148f2ac387830983eaaa4c9",
       "_fetchFailed": false,
       "malId": 125027,
       "role": "Antagonist"
@@ -304,8 +304,8 @@
       "accentColor": "pink-400",
       "icon": "Heart",
       "signatureMoment": "Her genuine crush on Mob — showing that even someone who doesn't know about his powers is drawn to his authentic self.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/337293.jpg",
-      "_fetchFailed": false,
+      "imageUrl": null,
+      "_fetchFailed": true,
       "malId": 125662,
       "role": "Main"
     }
