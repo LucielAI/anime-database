@@ -1,0 +1,653 @@
+{
+  "anime": "Re:Zero - Starting Life in Another World",
+  "tagline": "Save-scum your way to victory — if you're willing to die enough times to find the winning timeline.",
+  "malId": 31240,
+  "themeColors": {
+    "primary": "#7c3aed",
+    "secondary": "#0f172a",
+    "accent": "#c4b5fd",
+    "glow": "rgba(124,58,237,0.30)",
+    "tabActive": "#8b5cf6",
+    "badgeBg": "rgba(15,23,42,0.55)",
+    "badgeText": "#c4b5fd",
+    "modeGlow": "rgba(196,181,253,0.28)",
+    "heroGradient": "rgba(2,6,23,0.93)"
+  },
+  "visualizationHint": "counter-tree",
+  "visualizationReason": "Re:Zero's Return by Death creates a counter-tree exploration model: each death reveals a new branch of the decision graph, and Subaru must find the single path where all critical nodes survive.",
+  "headerFlavor": {
+    "loreQuote": "I won't let anyone die. Even if it means dying over and over.",
+    "sysWarning": "// [SAVE_POINT]: DEATH LOG RECORDED — BRANCH REINITIALIZATION",
+    "sysWarningColor": "purple"
+  },
+  "backgroundMotif": "clock",
+  "revealOverlay": "hatch-purple",
+  "aiInsights": {
+    "casual": "Re:Zero looks like a standard isekai but it's actually a horror puzzle game: Subaru gets unlimited retries but every death is permanent for whoever died, and he has to navigate social complexity, betrayal loops, and his own deteriorating mental state to find the winning route.",
+    "deep": "The universe runs on a checkpoint-based exploration model where Return by Death acts as a rollback mechanism that reveals the full decision tree of events. The Witch of Envy's shadow selectively kills Subaru when he triggers certain narrative conditions, forcing him to re-examine failed timelines and identify the hidden branching constraint. The real horror is that each rollback costs him psychological integrity and alienates the people he's trying to save."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/1522/128039.jpg",
+  "powerSystem": [
+    {
+      "name": "Return by Death",
+      "subtitle": "Checkpoint Rollback Protocol",
+      "loreDesc": "Subaru's unseen authority granted by Satella allows him to reverse time to the last save point upon death, erasing all timeline changes except his own memory.",
+      "systemDesc": "A one-way temporal rollback that preserves only the operator's experiential state, forcing discovery of optimal paths through repeated failure.",
+      "icon": "RotateCcw",
+      "color": "violet-400",
+      "signatureMoment": "Dying seventeen times in the mansion loop, each death revealing a new threat vector and forcing a complete tactical restart.",
+      "loreSubtitle": "Death is just a starting point",
+      "systemSubtitle": "Forced exploration of failure branches"
+    },
+    {
+      "name": "Witch Factors",
+      "subtitle": "Corrupted Ability Inheritance",
+      "loreDesc": "Seven witch factors exist, each granting immense power at the cost of progressive corruption toward the Witch of Envy's influence.",
+      "systemDesc": "High-value ability amplifiers bound to corruption timers: each use increases Envy influence until the operator risks being overwritten.",
+      "icon": "Droplet",
+      "color": "red-400",
+      "signatureMoment": "Subaru using Corutus's greed factor to coordinate a flawless infiltration, paying with increasing voice distortion and blackouts.",
+      "loreSubtitle": "Power comes with a witch attached",
+      "systemSubtitle": "Capability amplifier with corruption side-effect"
+    },
+    {
+      "name": "Spirit Arts",
+      "subtitle": "Contracted Entity Channeling",
+      "loreDesc": "Individuals like Emilia and Beatrice channel spirits for elemental magic, with contract strength determining the volume and quality of spirit power available.",
+      "systemDesc": "Outsourced ability nodes: spirit contracts provide elemental combat capacity without the operator directly generating magical output.",
+      "icon": "Sparkles",
+      "color": "cyan-400",
+      "signatureMoment": "Beatrice choosing to close her gate and stabilize rather than channel unlimited spirits for Subaru's final battle.",
+      "loreSubtitle": "Spirits are force multipliers",
+      "systemSubtitle": "External magic resource pooling"
+    },
+    {
+      "name": "Divine Protection",
+      "subtitle": "Passive Skill Grant",
+      "loreDesc": "Certain individuals are born with passive blessings that automatically activate under specific conditions, providing unseen advantages.",
+      "systemDesc": "Conditional auto-trigger nodes that activate under defined circumstances without conscious activation cost.",
+      "icon": "Shield",
+      "color": "amber-400",
+      "signatureMoment": "Subaru's Return by Death triggering automatically the moment his heart stops, regardless of his will or awareness.",
+      "loreSubtitle": "Luck is a transferable asset",
+      "systemSubtitle": "Passive conditional trigger"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Natsuki Subaru",
+      "title": "Return by Death Loop Anchor",
+      "rank": "Unaffiliated — Emilia Camp",
+      "dangerLevel": 7,
+      "loreBio": "A teenage NEET isekai'd into a fantasy world, Subaru becomes the most dangerous person alive through sheer willingness to die until he finds the right answer.",
+      "systemBio": "Checkpoint-rollback operator with accumulated knowledge of failure trees, enabling strategic pathfinding through repeated death loops.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "RotateCcw",
+      "signatureMoment": "Seventeen mansion deaths culminating in identifying Petelgeuse's unseen hand as the mansion threat.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/315153.jpg?s=48e475fa71e56bb47eb93594fe10359d",
+      "malId": 151963,
+      "slug": "natsuki-subaru",
+      "description": "Natsuki Subaru is an Unaffiliated from Re:Zero. 4 abilities recorded."
+    },
+    {
+      "name": "Emilia",
+      "title": "Ice Magic Half-Demon Node",
+      "rank": "Royal Candidate — Emilia Camp",
+      "dangerLevel": 8,
+      "loreBio": "A half-elf with the appearance of the Witch of Envy, Emilia fights to prove she is not Satella while pursuing the royal throne.",
+      "systemBio": "High-output ice magic node with a dormant witch factor, creating significant combat potential constrained by psychological limits on witch association.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Snowflake",
+      "signatureMoment": "Unfreezing the entire city to defeat the White Whale's freeze attack, then freezing Petelgeuse solid.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/551926.jpg?s=22728d0269f40fb353a31a54545ded00",
+      "malId": 156008,
+      "slug": "emilia",
+      "description": "Emilia is a Royal Candidate from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Satella",
+      "title": "Witch of Envy Root Process",
+      "rank": "Witch",
+      "dangerLevel": 10,
+      "loreBio": "The Witch of Envy who destroyed half the world four centuries ago and now inhabits Subaru's shadow, granting him Return by Death while demanding his love.",
+      "systemBio": "Root authority node that overrides narrative rules by force, granting checkpoint access at the cost of progressive shadow corruption.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "red-950",
+      "accentColor": "red-400",
+      "icon": "Eye",
+      "signatureMoment": "Manifesting in the Pleiades tower to seal away the White Whale, the Great Spirit, and Petelgeuse simultaneously.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/333682.jpg?s=d51df16debe182247eb3c6796ee4b1df",
+      "malId": 157889,
+      "slug": "satella",
+      "description": "Satella is a Witch from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Beatrice",
+      "title": "Shade Magic Gatekeeper Node",
+      "rank": "Spirit — Emilia Camp",
+      "dangerLevel": 8,
+      "loreBio": "A Great Spirit who has waited four hundred years in the library for someone to choose her, Beatrice's shade magic can cast thousands of spells per second.",
+      "systemBio": "High-frequency spellcasting node using shade magic for rapid multi-type spell sequences, constrained by gate stability and operator compatibility.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Book",
+      "signatureMoment": "Choosing Subaru as her contractor after four centuries, unleashing her full library magic to devastate the Archbishop of Sloth.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/591066.jpg?s=c8b21170c013b5b286d0ee1345052236",
+      "malId": 168157,
+      "slug": "beatrice",
+      "description": "Beatrice is a Spirit from Re:Zero. 4 abilities recorded."
+    },
+    {
+      "name": "Petelgeuse Romanée-Conti",
+      "title": "Sloth Archbishop Unseen Hand Node",
+      "rank": "Archbishop of Sin — Witch Cult",
+      "dangerLevel": 9,
+      "loreBio": "The psychotic Archbishop of Sloth who serves Satella and commands the Witch Cult, wielding the unseen hand to manipulate objects across distances.",
+      "systemBio": "Remote manipulation node using unseen hand technology to apply force at distance, with divine protection providing near-invulnerability.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "stone-950",
+      "accentColor": "stone-400",
+      "icon": "Hand",
+      "signatureMoment": "Using fourteen of his own followers as living bombs to force Subaru into a fatal position during the mansion siege.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/433803.jpg?s=ea96d10316206d8bee58ed1e85daa58b",
+      "malId": 168158,
+      "slug": "petelgeuse-romanee-conti",
+      "description": "Petelgeuse Romanée-Conti is an Archbishop of Sin from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Rem",
+      "title": "Horn Magic Counter-Intelligence Node",
+      "rank": "Maid — Emilia Camp",
+      "dangerLevel": 8,
+      "loreBio": "The blue-haired twin maid whose horn magic provides overwhelming crowd control and scan capabilities, though her deepest loyalty is to her sister Ram.",
+      "systemBio": "Area-denial and sensory intelligence node using horn magic for sleep-inducing attacks and real-time battlefield monitoring.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Waves",
+      "signatureMoment": "Single-handedly defeating the White Whale with a dawn-breaking miasma attack that put the entire beast to sleep.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/311327.jpg?s=3246595cd08261824d0dbf11a44c7229",
+      "malId": 152568,
+      "slug": "rem",
+      "description": "Rem is a Maid from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Ram",
+      "title": "Oni God Possession Node",
+      "rank": "Maid — Emilia Camp",
+      "dangerLevel": 8,
+      "loreBio": "The pink-haired twin who lost her horn and most of her power, Ram compensates through the oni god Barrem who speaks through her during combat.",
+      "systemBio": "Divine possession node using Barrem's authority for high-precision spirit arts strikes that ignore magical defenses.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "rose-900",
+      "accentColor": "rose-400",
+      "icon": "Zap",
+      "signatureMoment": "Channeling Barrem to destroy the Archbishop of Sloth's unseen hands with divine spirit arts that cannot be intercepted.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/306390.jpg?s=c627953e35df76da593d931548b7e646",
+      "malId": 152567,
+      "slug": "ram",
+      "description": "Ram is a Maid from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Wilhelm van Astrea",
+      "title": "Sword Demon Lineage Master",
+      "rank": "Knight — Emilia Camp",
+      "dangerLevel": 9,
+      "loreBio": "The Sword Demon who killed the White Whale three years ago and lost his wife Theresia in the process, now seeking a rematch to give her spirit peace.",
+      "systemBio": "Sword technique mastery node representing the culmination of blade combat optimization, with an accumulated kill record that grants psychological pressure bonuses.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Sword",
+      "signatureMoment": "Delivering the final killing stroke to the White Whale, fulfilling the promise to his dead wife Theresia.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/365139.jpg?s=400e950105421a3d6596993e600604ba",
+      "malId": 158309,
+      "slug": "wilhelm-van-astrea",
+      "description": "Wilhelm van Astrea is a Knight from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Felix Argyle",
+      "title": "Water Magic Healing Specialist",
+      "rank": "Knight — Emilia Camp",
+      "dangerLevel": 5,
+      "loreBio": "A cat-boy healer whose water magic is perfectly calibrated for medical treatment, Felix serves as the Emilia camp's primary support and Subaru's sarcastic advisor.",
+      "systemBio": "Precision healing node using water magic at body-temperature accuracy to repair critical damage without scar tissue or function loss.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-300",
+      "icon": "Heart",
+      "signatureMoment": "Saving Subaru from the white Whale's miasma poison after every other healer declared the case terminal.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/563864.jpg?s=5a4ddc6aa8062f7f1033b366dfb87655",
+      "malId": 168159,
+      "slug": "felix-argyle",
+      "description": "Felix Argyle is a Knight from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Crusch Karsten",
+      "title": "Lion's Heart Division Commander",
+      "rank": "Knight — Crusch Camp",
+      "dangerLevel": 7,
+      "loreBio": "A pragmatic noblewoman and royal candidate who leads the Karsten fortune with military discipline, partnering with Subaru after he saves her from the Whale.",
+      "systemBio": "Strategic command node coordinating multi-unit operations with logistics optimization and tactical assessment capabilities.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Target",
+      "signatureMoment": "Coordinating the multi-camp assault on the White Whale that requires simultaneous kills from three different directions.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/477333.jpg?s=906c6aacc5a8dc5db4cf6c0312c12127",
+      "malId": 168160,
+      "slug": "crusch-karsten",
+      "description": "Crusch Karsten is a Knight from Re:Zero. 2 abilities recorded."
+    },
+    {
+      "name": "Anastasia Hoshin",
+      "title": "Business Empire Guild Master",
+      "rank": "Royal Candidate — Anastasia Camp",
+      "dangerLevel": 6,
+      "loreBio": "A former slum child who built a trading empire and now competes for the throne, Anastasia's pragmatic business logic contrasts with Subaru's emotional approach.",
+      "systemBio": "Economic intelligence node with superior resource tracking and contractual negotiation capabilities, compensating for limited personal combat ability.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-400",
+      "icon": "DollarSign",
+      "signatureMoment": "Deploying her merchant network to cut off the Witch Cult's supply lines before the Sanctuary assault.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/316407.jpg?s=fef1ce5f3639b48b8e69700a3447b79a",
+      "malId": 158310,
+      "slug": "anastasia-hoshin",
+      "description": "Anastasia Hoshin is a Royal Candidate from Re:Zero. 2 abilities recorded."
+    },
+    {
+      "name": "Julius Euclius",
+      "title": "Beast Soul Summoner Knight",
+      "rank": "Knight — Royal Guard",
+      "dangerLevel": 8,
+      "loreBio": "A flawless knight of the royal guard who summons six different beast spirits in combat, Julius represents the ideal the royal family aspires to.",
+      "systemBio": "Multi-summon combat node using six spirit contracts for versatility across offense, defense, and terrain control.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "PawPrint",
+      "signatureMoment": "Summoning all six beast spirits simultaneously to intercept the White Whale's assault on the royal capital.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/480481.jpg?s=abe9942fc7985c6d3eea6c771df017a8",
+      "malId": 172013,
+      "slug": "julius-euclius",
+      "description": "Julius Euclius is a Knight from Re:Zero. 4 abilities recorded."
+    },
+    {
+      "name": "Priscilla Barielle",
+      "title": "Red Lightning Combat Dominator",
+      "rank": "Royal Candidate — Priscilla Camp",
+      "dangerLevel": 8,
+      "loreBio": "An arrogant royal candidate who fights with a folding fan channeling red lightning, Priscilla's combat ability far exceeds her social graces.",
+      "systemBio": "Precision lightning node using fan-channeled output for controlled high-voltage strikes with minimal charge-up telegraph.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Zap",
+      "signatureMoment": "One-shotting the Mabeast that killed Subaru in his second timeline with a casual flick of her fan.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/563865.jpg?s=29783ad5f42c00511a4c4d2f9266e696",
+      "malId": 168161,
+      "slug": "priscilla-barielle",
+      "description": "Priscilla Barielle is a Royal Candidate from Re:Zero. 2 abilities recorded."
+    },
+    {
+      "name": "Aldebaran",
+      "title": "Comedic Guard Loyalty Node",
+      "rank": "Knight — Emilia Camp",
+      "dangerLevel": 6,
+      "loreBio": "An eccentric knight who serves as the Emilia camp's guard captain, Aldebaran's jester persona masks genuine combat skill and fierce loyalty.",
+      "systemBio": "Melee combat node with above-average swordsmanship and psychological disruption capabilities through clown act misdirection.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-300",
+      "icon": "Sword",
+      "signatureMoment": "Standing guard against the White Whale's assault while the camp escaped, dying to buy critical evacuation time.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/11/268229.jpg?s=b56892395016938e10832be0aea88100",
+      "malId": 168162,
+      "slug": "aldebaran",
+      "description": "Aldebaran is a Knight from Re:Zero. 2 abilities recorded."
+    },
+    {
+      "name": "Otto Suwen",
+      "title": "Soul Inheritance Device Node",
+      "rank": "Merchant — Emilia Camp",
+      "dangerLevel": 5,
+      "loreBio": "A traveling merchant who provides the Emilia camp with a portable bathroom and surprisingly effective strategic coordination, soul-linked to a frog spirit.",
+      "systemBio": "Utility and coordination node with a frog spirit providing environmental scanning and minor elemental output support.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "teal-900",
+      "accentColor": "teal-400",
+      "icon": "Map",
+      "signatureMoment": "Teleporting Subaru away from the whale's final attack, saving the critical return-by-death information carrier.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/438832.jpg?s=a4b29f3ba09228b9adae8f3326575b92",
+      "malId": 157892,
+      "slug": "otto-suwen",
+      "description": "Otto Suwen is a Merchant from Re:Zero. 2 abilities recorded."
+    },
+    {
+      "name": "Echidna",
+      "title": "Witch of Greed Knowledge Architect",
+      "rank": "Witch",
+      "dangerLevel": 8,
+      "loreBio": "The Witch of Greed who grants knowledge at the cost of experiencing the seeker's death, operating the tomb's tea party for those brave or desperate enough to enter.",
+      "systemDesc": "Knowledge acquisition node that trades experiential death data for strategic intelligence, enabling pre-failure reconnaissance at psychological cost.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "brown-900",
+      "accentColor": "amber-600",
+      "icon": "BookOpen",
+      "signatureMoment": "Offering Subaru a contract to know everything about Return by Death in exchange for experiencing all his deaths.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/563875.jpg?s=3a2e7a913fa75cf8ab24869bdb1b6351",
+      "malId": 168163,
+      "slug": "echidna",
+      "description": "Echidna is a Witch from Re:Zero. 3 abilities recorded.",
+      "systemBio": "Echidna is a Witch from Re:Zero. 3 abilities recorded."
+    },
+    {
+      "name": "Reinhard van Astrea",
+      "title": "Divine Protection Accumulation Apex",
+      "rank": "Knight — Royal Guard",
+      "dangerLevel": 10,
+      "loreBio": "The strongest knight in the kingdom with more divine protections than any person in history, Reinhard is functionally invincible and endlessly resourceful.",
+      "systemBio": "Max-tier combat node with accumulated divine protections covering every possible combat scenario, making defeat mathematically impossible.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "yellow-950",
+      "accentColor": "yellow-400",
+      "icon": "Sun",
+      "signatureMoment": "One-shotting the Archbishop of Lust by requesting the god of justice to give him the sword needed to kill her.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/480482.jpg?s=f80ad8379f9a33fed291c3f684d7e4ce",
+      "malId": 172014,
+      "slug": "reinhard-van-astrea",
+      "description": "Reinhard van Astrea is a Knight from Re:Zero. 4 abilities recorded."
+    },
+    {
+      "name": "Felt",
+      "title": "Royal Election Wildcard",
+      "rank": "Royal Candidate — Felt Camp",
+      "dangerLevel": 5,
+      "loreBio": "A slum girl with the rare ability to hear the voice of the seal containing the witch of vainglory, Felt represents the unknown variable in the royal election.",
+      "systemBio": "Seal resonance node with passive witch communication ability, providing early warning and strategic unpredictability.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-700",
+      "accentColor": "slate-300",
+      "icon": "Star",
+      "signatureMoment": "Revealing she is a legitimate royal bloodline candidate, triggering a political crisis in the selection process.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/315231.jpg?s=1bef1ff41ee3049d7e71a91242bf42da",
+      "malId": 157893,
+      "slug": "felt",
+      "description": "Felt is a Royal Candidate from Re:Zero. 2 abilities recorded."
+    },
+    {
+      "name": "Elsa Granhiert",
+      "title": "Meat Shield Immunity Loophole Node",
+      "rank": "Assassin — Unknown",
+      "dangerLevel": 8,
+      "loreBio": "A reaper assassin who cannot die as long as she can continue killing, Elsa's curse creates an immunity loop where combat experience makes her stronger.",
+      "systemBio": "Regeneration-through-violence node that gains combat effectiveness proportional to casualties inflicted, creating perverse incentive structures.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "rose-950",
+      "accentColor": "rose-400",
+      "icon": "Sword",
+      "signatureMoment": "Chasing Subaru through multiple death loops, each death making her marginally faster and more determined.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/324239.jpg?s=03e10ed43c2a928188259e4ea7ef1272",
+      "malId": 168164,
+      "slug": "elsa-granhiert",
+      "description": "Elsa Granhiert is an Assassin from Re:Zero. 2 abilities recorded."
+    },
+    {
+      "name": "Meili Portroute",
+      "title": "Beast Master Control Node",
+      "rank": "Beast Handler — Witch Cult",
+      "dangerLevel": 7,
+      "loreBio": "A young girl who controls mabeasts through unknown magical means, serving the Witch Cult while remaining a child fundamentally.",
+      "systemBio": "Beast command node that interfaces with mabeast threat vectors, directing them as area-denial and targeted elimination tools.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "PawPrint",
+      "signatureMoment": "Releasing a swarm of mabeasts to cover Petelgeuse's assault on the mansion while Rem neutralized her.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/2/311500.jpg?s=6fb1d9e92b98005ef8453dd75f9be473",
+      "malId": 157894,
+      "slug": "meili-portroute",
+      "description": "Meili Portroute is a Beast Handler from Re:Zero. 2 abilities recorded."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Emilia Camp",
+      "role": "protagonist",
+      "loreDesc": "Subaru's home faction, led by the half-elf royal candidate Emilia and supported by the twin maids Rem and Ram, the spirit Beatrice, and the merchant Otto.",
+      "systemDesc": "Adaptive learning faction that leverages Return by Death intelligence to optimize decision trees for Emilia's political survival."
+    },
+    {
+      "name": "Witch Cult",
+      "role": "antagonist",
+      "loreDesc": "A fanatical cult that worships the Witch of Envy and carries out her will through seven Archbishops, each embodying a deadly sin.",
+      "systemDesc": "Distributed antagonist network with autonomous Archbishop nodes pursuing independent objectives that collectively destabilize the kingdom."
+    },
+    {
+      "name": "Royal Selection Candidates",
+      "role": "neutral",
+      "loreDesc": "Five candidates compete for the throne, each backed by different factions, resources, and divine blessings.",
+      "systemDesc": "Competitive multi-agent system where resource accumulation and event survival determine which candidate node receives the dragon's endorsement."
+    },
+    {
+      "name": "Mabeast Threat Network",
+      "role": "systemic",
+      "loreDesc": "Man-made beasts created by the witch of vainglory that proliferate across the world, creating persistent environmental hazard zones.",
+      "systemDesc": "Swarm hazard nodes that scale in threat level with population density and contaminate territories for decades."
+    },
+    {
+      "name": "The Witches of Sin",
+      "role": "systemic",
+      "loreDesc": "Seven witches each holding a sin factor, collectively representing the dangerous knowledge Satella sealed away.",
+      "systemDesc": "Accumulated authority nodes representing seven distinct corruption pathways, each granting power at escalating psychological cost."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Return by Death Activates on Fatal Condition",
+      "subtitle": "Unavoidable Checkpoint Trigger",
+      "loreConsequence": "Subaru cannot control when Return by Death activates — it triggers automatically the moment he would die, regardless of whether he wants it.",
+      "systemEquivalent": "Automatic rollback trigger tied to biometric death threshold with no voluntary override, forcing exploration of failure branches.",
+      "severity": "fatal",
+      "loreSubtitle": "Death is not a choice",
+      "systemSubtitle": "Forced checkpoint reload"
+    },
+    {
+      "name": "Witch Factor Corruption Is Cumulative",
+      "subtitle": "Escalating Envy Influence",
+      "loreConsequence": "Each use of a witch factor increases the Witch of Envy's hold on the user, eventually risking full personality overwrite.",
+      "systemEquivalent": "Stackable debuff that trades immediate capability gains for long-term autonomy erosion toward a hostile root process.",
+      "severity": "fatal",
+      "loreSubtitle": "Power draws Satella closer",
+      "systemSubtitle": "Corruption accumulation with no known cure"
+    },
+    {
+      "name": "Knowledge Has a Death Toll",
+      "subtitle": "Echidna's Knowledge Contract",
+      "loreConsequence": "Learning from Echidna requires experiencing the death that preceded the knowledge, accumulating psychological damage.",
+      "systemEquivalent": "Intelligence gathering at the cost of experiencing failure state data, creating information acquisition overhead.",
+      "severity": "high",
+      "loreSubtitle": "Knowing costs dying",
+      "systemSubtitle": "Death-experience knowledge fee"
+    },
+    {
+      "name": "Royal Dragon Endorsement Is Terminal",
+      "subtitle": "Volcanica's Selection Lock",
+      "loreConsequence": "The dragon Volcanica's endorsement cannot be revoked and fundamentally changes the endorsed candidate's relationship with the world.",
+      "systemEquivalent": "Irreversible buff that restructures all downstream narrative permissions for the selected node.",
+      "severity": "high",
+      "loreSubtitle": "Dragon selection reshapes the world",
+      "systemSubtitle": "Irreversible endorsement override"
+    }
+  ],
+  "rankings": {
+    "systemName": "Combat and Influence Capability Tiers",
+    "loreName": "World Threat and Political Weight Hierarchy",
+    "topTierName": "Witch and Divine Protection Apex Tier",
+    "topTierLore": "Reinhard and the Witches operate on a fundamentally different scale than any other character, requiring special narrative conditions to even interact with.",
+    "topTierSystem": "Max-tier capability nodes whose power profiles exceed normal scaling rules and require external constraints to balance.",
+    "tiers": [
+      {
+        "name": "Knight and Archbishop Combat Tier",
+        "loreDesc": "Combatants at this level can challenge mabeasts, hold territory against Witch Cult incursions, and engage royal candidates.",
+        "systemDesc": "High-capability combat nodes with accumulated divine protections or witch factor access, enabling multi-threat simultaneous engagement."
+      },
+      {
+        "name": "Skilled Combatant and Noble Tier",
+        "loreDesc": "Professional soldiers, capable maids, and mid-level nobles who form the backbone of kingdom defense and political operations.",
+        "systemDesc": "Operational tier nodes with disciplined combat training and faction resources suitable for squad-level threat response."
+      },
+      {
+        "name": "Civilian and Unaffiliated Tier",
+        "loreDesc": "The general population has no combat capability and depends entirely on knight protection for survival against mabeasts and cultists.",
+        "systemDesc": "Baseline nodes with no combat protocols, entirely dependent on factional protection infrastructure."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "source": "Natsuki Subaru",
+      "target": "Satella",
+      "type": "dependent",
+      "weight": 10,
+      "loreDesc": "Subaru is bound to Satella through Return by Death, unable to reject her authority or fully understand her motives.",
+      "systemDesc": "Root authority dependency that grants checkpoint access while applying progressive shadow corruption to the bound operator."
+    },
+    {
+      "source": "Natsuki Subaru",
+      "target": "Emilia",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Subaru's primary motivation is saving Emilia, having fallen in love with her at first sight in the loot house.",
+      "systemDesc": "Priority anchor node that determines acceptable failure cost thresholds — Subaru will accept unlimited deaths to preserve Emilia."
+    },
+    {
+      "source": "Rem",
+      "target": "Natsuki Subaru",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "After being saved from her own self-doubt, Rem becomes Subaru's most reliable combat partner and emotional anchor.",
+      "systemDesc": "High-dependency alliance that provides crucial combat support and psychological stability during extended death loops."
+    },
+    {
+      "source": "Petelgeuse Romanée-Conti",
+      "target": "Satella",
+      "type": "ally",
+      "weight": 9,
+      "loreDesc": "Petelgeuse serves Satella obsessively, using Sloth's unseen hand to execute her will across the continent.",
+      "systemDesc": "Fanaticism coupling that grants divine protection access and combat amplification in service of the root witch process."
+    },
+    {
+      "source": "Beatrice",
+      "target": "Natsuki Subaru",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "After four centuries of waiting, Beatrice chooses Subaru as her contractor, binding her existence to his survival.",
+      "systemDesc": "High-capacity spirit contract node providing spellcasting throughput and gate magic that multiplies Subaru's tactical options."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "White Whale spatial displacement",
+      "defender": "Simultaneous multi-point kill protocol",
+      "mechanic": "The Whale teleports when three people simultaneously deal killing blows, requiring perfect coordination across geographically distributed kill nodes.",
+      "loreDesc": "Only a perfectly synchronized assault from three directions can permanently kill the Whale.",
+      "systemDesc": "Distributed kill synchronization requirement that multiplies difficulty by forcing cross-unit coordination under time pressure."
+    },
+    {
+      "attacker": "Petelgeuse's Unseen Hand manipulation",
+      "defender": "Oni god spirit arts negation",
+      "mechanic": "Ram's Barrem channeling destroys unseen hand constructs because divine spirit arts cannot be intercepted by physical or magical force.",
+      "loreDesc": "The only counter to unseen hand is a god that speaks through a girl with no magic.",
+      "systemDesc": "Divine override mechanic that bypasses normal combat resolution to apply automatic nullification."
+    },
+    {
+      "attacker": "Witch Cult coordination ambush",
+      "defender": "Return by Death loop intelligence gathering",
+      "mechanic": "Subaru dies repeatedly to map cult positioning, timing, and Archbishop ability activation conditions before committing his allies.",
+      "loreDesc": "The cult can't anticipate someone who's already died to learn their setup.",
+      "systemDesc": "Intelligence advantage generated by pre-failure reconnaissance that maps enemy decision trees before engagement."
+    },
+    {
+      "attacker": "Meili's mabeast swarm",
+      "defender": "Horn magic sleep negation",
+      "mechanic": "Rem's horn magic emits frequencies that neutralize mabeast aggression and induce hibernation state across the swarm.",
+      "loreDesc": "A sleeping mabeast is a safe mabeast — and Rem can put them all to sleep.",
+      "systemDesc": "AOE sleep trigger that converts swarm threat into manageable neutralized state without lethal engagement."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Subaru's Shadow Satella",
+      "ruleViolated": "Return by Death Activates on Fatal Condition",
+      "loreDesc": "Satella appears in Subaru's shadow and speaks through him after each Return by Death activation, yet she is simultaneously sealed away.",
+      "systemDesc": "Concurrent multi-instance anomaly where sealed root process maintains active communication channel with bound operator node."
+    },
+    {
+      "name": "Rem's Existence Error",
+      "ruleViolated": "Timeline Consistency",
+      "loreDesc": "In a timeline where Rem died and was never saved, her existence was overwritten — yet she somehow persists in Subaru's memory despite the timeline rollback.",
+      "systemDesc": "Operator-side memory trace that persists beyond timeline rollback, suggesting Return by Death does not fully clear operator experiential state."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "The Witch of Envy Destroys Half the World",
+      "trigger": "Satella absorbs the other witches and loses control of her power.",
+      "consequence": "Four hundred years of fear, the Witch Cult formation, and the royal dragon endorsement system designed to prevent a recurrence.",
+      "timelinePosition": "400 Years Before Present",
+      "loreDesc": "A love story gone wrong destroys civilization and creates the world's central political and magical institutions.",
+      "systemDesc": "Origin event that establishes all downstream institutional structures, faction motivations, and power scaling baselines."
+    },
+    {
+      "name": "Subaru Summoned to the World",
+      "trigger": "A mysterious portal opens in modern Japan and ejects Subaru into a fantasy kingdom.",
+      "consequence": "Return by Death is activated, the Emilia camp forms, and the Witch Cult begins targeting Subaru as a threat.",
+      "timelinePosition": "Day 1",
+      "loreDesc": "A regular teenager becomes the most important piece in a thousand-year political game.",
+      "systemDesc": "Operator injection event that introduces a checkpoint-rollback capability into an existing multi-faction narrative system."
+    }
+  ],
+  "hero": {
+    "systemType": "counterplay",
+    "microHook": "A broken teenager with one broken power: die until you find the timeline where everyone lives.",
+    "thesis": "Re:Zero's counter-tree runs on death saves, witch factors, and invisible consequence chains.",
+    "primarySystemType": "power_engine"
+  },
+  "systemQuestions": [
+    {
+      "question": "Why does Return by Death create a systemic dependency rather than making Subaru self-sufficient?",
+      "answer": "Each death only unlocks knowledge, not capability. Since authority abilities are independent of earned growth, Subaru cannot transfer learned combat skills between loops — making each restart a knowledge-only progression.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "How do witch factors create an ecological constraint on user selection?",
+      "answer": "Witch factors compete for control — holding multiple factors without sufficient resistance causes corruption and personality takeover. This caps the number of authorities any single user can safely hold.",
+      "tabIndex": 1,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "What makes Return by Death strategically different from conventional save-state mechanics?",
+      "answer": "Conventional save-states allow trial-and-error optimization without consequence. Return by Death only triggers on Subaru's death, meaning failed strategies that don't kill him produce no checkpoint — making invisible failures irreversible.",
+      "tabIndex": 2,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
+    },
+    {
+      "question": "Why is Return by Death's counterplay primarily social rather than combat-oriented?",
+      "answer": "Most threats to Subaru are architectural or political rather than directly lethal. This means the primary optimization path is information gathering and alliance formation, not combat training.",
+      "tabIndex": 3,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
+    }
+  ]
+}

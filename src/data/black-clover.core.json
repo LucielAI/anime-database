@@ -1,0 +1,738 @@
+{
+  "anime": "Black Clover",
+  "tagline": "Anti-magic versus elemental sovereignty — a kingdom bets on raw willpower over inherited bloodline.",
+  "malId": 34572,
+  "themeColors": {
+    "primary": "#1e3a5f",
+    "secondary": "#0f172a",
+    "accent": "#fbbf24",
+    "glow": "rgba(30,58,95,0.30)",
+    "tabActive": "#2563eb",
+    "badgeBg": "rgba(15,23,42,0.55)",
+    "badgeText": "#93c5fd",
+    "modeGlow": "rgba(251,191,36,0.28)",
+    "heroGradient": "rgba(2,6,23,0.93)"
+  },
+  "visualizationHint": "affinity-matrix",
+  "visualizationReason": "Black Clover's magic system is an affinity matrix: five elemental types plus anti-magic form an orthogonal grid where mana quality, quantity, and magical attribute determine matchup outcomes.",
+  "headerFlavor": {
+    "loreQuote": "I'll pour my soul into my sword.",
+    "sysWarning": "// [AFFINITY_MATRIX]: ELEMENTAL GRID ACTIVE — ANTI-MAGIC NODE DETECTED",
+    "sysWarningColor": "yellow"
+  },
+  "backgroundMotif": "grid",
+  "revealOverlay": "grid-green",
+  "aiInsights": {
+    "casual": "Black Clover looks like a standard shonen power-fest but the magic system is surprisingly tactical: every mage has a fixed elemental affinity, grimoire rank, and mana pool, and fights are decided by attribute matchups, ki control, and who can negate or outlast whom. Asta breaks the entire matrix by simply not playing — his anti-magic erases spells instead of countering them.",
+    "deep": "The universe runs on a constrained optimization model: magic is genetically determined (bloodline → mana quality → affinity → spell class), so social hierarchy maps directly onto magical hierarchy. The Eye of the Midnight Sun and the Spade Kingdom exploit this by accumulating high-wealth high-mana individuals. Asta's anti-magic is a system exploit — it bypasses the entire affinity grid and forces opponents into physical-only combat where his elite conditioning dominates."
+  },
+  "animeImageUrl": "https://myanimelist.net/images/anime/2/88336.jpg",
+  "powerSystem": [
+    {
+      "name": "Grimoire Affinity",
+      "subtitle": "Elemental Type Assignment",
+      "loreDesc": "Every Magic Knight receives a grimoire binding them to one of five elements: Fire, Water, Wind, Earth, or Darkness.",
+      "systemDesc": "A fixed-type combat interface where spell output is constrained by inherited mana quality and elemental affinity classification.",
+      "icon": "Book",
+      "color": "amber-400",
+      "signatureMoment": "Yuno's spirit dive manifesting a four-leaf grimoire that channels stellar mana into physical augmentation.",
+      "loreSubtitle": "Bloodline determines magical destiny",
+      "systemSubtitle": "Class-locked spellcasting framework"
+    },
+    {
+      "name": "Ki Sensing",
+      "subtitle": "Mana Pressure Detection",
+      "loreDesc": "Masters learn to read opponent mana flow to predict attacks, detect lies, and locate threats across vast distances.",
+      "systemDesc": "A passive reconnaissance layer that maps enemy intent and capability before strike execution, enabling preemptive counter-routing.",
+      "icon": "Zap",
+      "color": "cyan-400",
+      "signatureMoment": "Yami teaching Asta to sense ki in the volcanic hot springs, turning raw instinct into tactical read.",
+      "loreSubtitle": "Mana pressure is readable",
+      "systemSubtitle": "Pre-strike telemetry"
+    },
+    {
+      "name": "Anti-Magic",
+      "subtitle": "Nullification Override",
+      "loreDesc": "Asta wields the five-leaf clover grimoire containing anti-magic that cancels any magical spell on contact.",
+      "systemDesc": "A hard counter layer that bypasses affinity constraints and directly deletes spell processes, forcing pure physical combat.",
+      "icon": "Slash",
+      "color": "slate-400",
+      "signatureMoment": "Asta's anti-magic swords shattering Licht's magic sword constructs mid-strike, turning an unwinnable duel into a fist fight.",
+      "loreSubtitle": "Steel meets soul",
+      "systemSubtitle": "Grid-bypass deletion engine"
+    },
+    {
+      "name": "Demon Slayer Sword",
+      "subtitle": "Transformation-Class Weapon",
+      "loreDesc": "Asta's demon-destroyer sword amplifies anti-magic into concussive waves that can disintegrate spell constructs and demon flesh alike.",
+      "systemDesc": "A high-voltage anti-magic delivery system that converts nullification into area-of-effect destruction with collateral damage radius.",
+      "icon": "Sword",
+      "color": "red-400",
+      "signatureMoment": "Unlocking the demon slayer sword form to shred the Word of God sealed within Licht's reincarnation.",
+      "loreSubtitle": "Anti-magic goes kinetic",
+      "systemSubtitle": "Nullification weaponized"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Asta",
+      "title": "Anti-Magic Overclock Node",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 9,
+      "loreBio": "Born with zero mana in a world where magic is everything, Asta compensates with obsessive training and a five-leaf anti-magic grimoire that rewrites the rules of combat.",
+      "systemBio": "Nullification-type combat node that bypasses the entire affinity grid, forcing opponents into physical-only exchanges where his elite conditioning and sword skill dominate.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "emerald-900",
+      "accentColor": "emerald-400",
+      "icon": "Sword",
+      "signatureMoment": "Cutting the reincarnated Licht's four-leaf grimoire mid-air and shattering the Word of God seal.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/312836.jpg?s=f4ea6f575c53db8908baf0f874e33e70",
+      "malId": 131532,
+      "slug": "asta",
+      "description": "Asta is a Magic Knight from Black Clover. 4 abilities recorded."
+    },
+    {
+      "name": "Yuno",
+      "title": "Spirit Magic Convergence Node",
+      "rank": "Magic Knight — Golden Dawn",
+      "dangerLevel": 9,
+      "loreBio": "Astaroth's other child with Aschia, Yuno possesses a four-leaf grimoire and the rare Spirit Guardian mana style, making him the most naturally gifted mage in the kingdom.",
+      "systemBio": "High-throughput elemental node combining spirit magic physical augmentation with wind affinity, creating unmatched offensive pressure and defensive read options.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-400",
+      "icon": "Wind",
+      "signatureMoment": "Ascending to become the new Captain of the Golden Dawn and manifesting spirit dive to fight alongside Asta against the devil.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/318765.jpg?s=dbc2307d86d0e001e31b9aad6f12b21c",
+      "malId": 131531,
+      "slug": "yuno",
+      "description": "Yuno is a Magic Knight from Black Clover. 4 abilities recorded."
+    },
+    {
+      "name": "Noelle Silva",
+      "title": "Sea God Magic Amplifier",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 8,
+      "loreBio": "Born into the royal Silva family but written off as a failure, Noelle masters water magic through sheer will and unlocks the lost Sea God magic mid-battle.",
+      "systemBio": "High-variance water magic node that gains precision and destructive output through emotional amplification, with a dormant Sea God form providing catastrophic burst windows.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-400",
+      "icon": "Droplets",
+      "signatureMoment": "Unlocking Valkyrie Armor and Sea God's Wrath to defeat the most powerful Devil host.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/338844.jpg?s=37d6d1f99de07821983285b9a3ac2614",
+      "malId": 137994,
+      "slug": "noelle-silva",
+      "description": "Noelle Silva is a Magic Knight from Black Clover. 4 abilities recorded."
+    },
+    {
+      "name": "Yami Sukehiro",
+      "title": "Dark Magic Spatial Dominator",
+      "rank": "Magic Knight Captain — Black Bull",
+      "dangerLevel": 9,
+      "loreBio": "A foreigner who became the youngest captain in Clover Kingdom history, Yami wields dark magic with unmatched precision and reads combat with ki senses that see beyond mana.",
+      "systemBio": "Dark magic provides versatile spatial control, weapon creation, and area denial while ki sensing enables pre-emptive threat identification across the battlefield.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "purple-950",
+      "accentColor": "purple-400",
+      "icon": "Moon",
+      "signatureMoment": "Opening a dimensional gate to summon an exiled devil's castle and collapsing it on the Word of God.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/352602.jpg?s=0d04e5b6b20a9e2f7f5f5c0b7ae2f8d3",
+      "malId": 131530,
+      "slug": "yami-sukehiro",
+      "description": "Yami Sukehiro is a Magic Knight Captain from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Julius Novachrono",
+      "title": "Time Magic System Root",
+      "rank": "Magic Knight Captain — Wizard King",
+      "dangerLevel": 10,
+      "loreBio": "The current Wizard King and most powerful mage in the Clover Kingdom, Julius wields time magic at the cost of his own aging, seeing all possible futures simultaneously.",
+      "systemBio": "Temporal manipulation node that rewrites causality windows, extends personal timeline at massive systemic cost, and provides near-omniscient tactical foresight.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "indigo-900",
+      "accentColor": "indigo-400",
+      "icon": "Clock",
+      "signatureMoment": " Sacrificing his remaining lifespan to undo the killing of the merchant and expose the Eye of the Midnight Sun's invasion.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/384103.jpg?s=be6d19e6e2c50a14f67f5f6c3cbf0aa1",
+      "malId": 151939,
+      "slug": "julius-novachrono",
+      "description": "Julius Novachrono is a Wizard King from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Mereoleona Vermillion",
+      "title": "Fire Magic Immersion Specialist",
+      "rank": "Magic Knight Captain — Red Lion",
+      "dangerLevel": 9,
+      "loreBio": "The informal queen of the Vermillion family, Mereoleona's unmatched mana reserves and fire magic are combined with fist-fighting skills that let her dominate demons and devils alike.",
+      "systemBio": "High-throughput fire magic node using mana zone immersion for area denial and sustained burn damage, backed by physical combat competence.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Flame",
+      "signatureMoment": "Burning through the Spade Kingdom's demon invasion by wading into demon-infested territory alone.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/369104.jpg?s=6fbf9e73a7c21b4aee70c8a5f1f69c4a",
+      "malId": 157887,
+      "slug": "mereoleona-vermillion",
+      "description": "Mereoleona Vermillion is a Magic Knight Captain from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Charlotte Roselei",
+      "title": "Rose Magic Anti-Personnel Node",
+      "rank": "Magic Knight Captain — Blue Rose",
+      "dangerLevel": 8,
+      "loreBio": "The sole female captain, Charlotte channels her unrequited love for Yami into combat-focused rose magic that creates diamond-hard thorns and protective barriers.",
+      "systemBio": "Defensive and counter-vegetation node using rose constructs for area denial, entrapment, and precision thorn strikes against armored targets.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "pink-900",
+      "accentColor": "pink-400",
+      "icon": "Flower",
+      "signatureMoment": "Unlocking Unison Raid with Yami to combine dark and rose magic into a devastating anti-devil formation.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/338862.jpg?s=6c0e8d3bf77e6a3f4f8e5f2c3a8f6e2a",
+      "malId": 131537,
+      "slug": "charlotte-roselei",
+      "description": "Charlotte Roselei is a Magic Knight Captain from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Fuegoleon Vermillion",
+      "title": "Fire Spirit Magic Anchor",
+      "rank": "Magic Knight Captain — Crimson Lion",
+      "dangerLevel": 8,
+      "loreBio": "The eldest Vermillion heir and former captain candidate, Fuegoleon lost use of his right arm but gained a fire spirit companion, becoming a dual-source combat node.",
+      "systemBio": "Hybrid node combining fire magic with spirit guardian contract, providing sustained area burn and spirit-augmented physical strikes.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "red-900",
+      "accentColor": "red-400",
+      "icon": "Flame",
+      "signatureMoment": "Merging with his fire spirit to become the fire salamander and challenge the devils at the end of time.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/369103.jpg?s=1f2c3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "malId": 131536,
+      "slug": "fuegoleon-vermillion",
+      "description": "Fuegoleon Vermillion is a Magic Knight Captain from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Nozel Silva",
+      "title": "Mercury Magic High-Precision Node",
+      "rank": "Magic Knight Captain — Silver Eagle",
+      "dangerLevel": 8,
+      "loreBio": "The eldest Silva sibling and captain of the Silver Eagle, Nozel's mercury magic provides unmatched precision striking and liquid-metal defensive formations.",
+      "systemBio": "High-precision mercury magic node using liquid metal morphing for blade formation, penetration rounds, and defensive cocoon shapes.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-800",
+      "accentColor": "slate-400",
+      "icon": "Droplet",
+      "signatureMoment": "Revealing his true allegiance to Noelle and forming a devastating Unison Raid with her Sea God magic.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/338841.jpg?s=3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f",
+      "malId": 131538,
+      "slug": "nozel-silva",
+      "description": "Nozel Silva is a Magic Knight Captain from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Luck Volta",
+      "title": "Lightning Magic Berserker Node",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 7,
+      "loreBio": "Asta's best friend and fellow Black Bull, Luck fights purely for the joy of combat, using lightning magic for overwhelming speed and constant pressure.",
+      "systemBio": "High-frequency lightning magic node optimized for aggression, using speed differential to create openings before opponents can establish defensive form.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "yellow-900",
+      "accentColor": "yellow-300",
+      "icon": "Zap",
+      "signatureMoment": "Combining with Magna in Unison Raid to deliver a fire-lightning explosion that tears through demon flesh.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/369107.jpg?s=9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d",
+      "malId": 148152,
+      "slug": "luck-volta",
+      "description": "Luck Volta is a Magic Knight from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Magna Swing",
+      "title": "Fire Magic Explosion Specialist",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 7,
+      "loreBio": "A normal human with no special bloodline, Magna compensates with creative fire magic that uses combustion timing and projectile arcs to deliver explosive force.",
+      "systemBio": "Technique-over-power combat node using fireball trajectories and timed detonation sequences to maximize damage output within constrained mana reserves.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-800",
+      "accentColor": "orange-300",
+      "icon": "Flame",
+      "signatureMoment": "Defeating a devil host through sheer tactical brilliance by combining his fire magic with Luck's lightning in Unison Raid.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/357534.jpg?s=2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f",
+      "malId": 148153,
+      "slug": "magna-swing",
+      "description": "Magna Swing is a Magic Knight from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Vanessa Enoteca",
+      "title": "Thread Magic Fate Manipulation",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 7,
+      "loreBio": "A former witch from the Eye of the Midnight Sun, Vanessa's thread magic lets her manipulate fate itself, pulling strings that alter probability in combat.",
+      "systemBio": "Stochastic control node using enchanted threads to redirect attack trajectories and probability outcomes within a localized field.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-300",
+      "icon": "GitBranch",
+      "signatureMoment": "Unlocking her cat's thread magic to rewrite fate and rescue Asta from certain death.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/338849.jpg?s=a1136f2a61fa0fa033790daac3abbb28",
+      "malId": 137995,
+      "slug": "vanessa-enoteca",
+      "description": "Vanessa Enoteca is a Magic Knight from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Finral Roulacase",
+      "title": "Spatial Magic Battlefield Router",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 6,
+      "loreBio": "The Black Bull's transport and support specialist, Finral's spatial magic creates portals for troop movement, escape, and repositioning across the battlefield.",
+      "systemDesc": "Mobility and logistics node enabling instant positional switching, battlefield insertion, and strategic repositioning for allied forces.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "violet-900",
+      "accentColor": "violet-400",
+      "icon": "Move",
+      "signatureMoment": "Opening a dimensional portal to the underworld to allow Asta and Yuno to confront the devil directly.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/352603.jpg?s=5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c",
+      "malId": 148155,
+      "slug": "finral-roulacase",
+      "description": "Finral Roulacase is a Magic Knight from Black Clover. 3 abilities recorded.",
+      "systemBio": "Finral Roulacase is a Magic Knight from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Grey",
+      "title": "Transformation Magic Mimicry Node",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 5,
+      "loreBio": "A shy mage who can mimic any physical form through transformation magic, Grey went from timid support to a combatant capable of replicating enemy attack patterns.",
+      "systemBio": "Adaptive mimicry node that copies target morphology and attack patterns after visual observation, enabling rapid counter-strategy deployment.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "teal-900",
+      "accentColor": "teal-400",
+      "icon": "Copy",
+      "signatureMoment": "Transforming into Ladros to match and counter his attack, turning the enemy's power against them.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/14/370159.jpg?s=6434f27baf3554320d606ee7d4f1ef9b",
+      "malId": 148156,
+      "slug": "grey",
+      "description": "Grey is a Magic Knight from Black Clover. 2 abilities recorded."
+    },
+    {
+      "name": "Charmy Pappitson",
+      "title": "Cotton and Food Magic Sustain Node",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 6,
+      "loreBio": "A half-dwarf who channels her endless appetite into cotton magic for defense and food magic for battlefield sustain, making her a unique logistics-combat hybrid.",
+      "systemBio": "Sustain and field support node using cotton constructs for defense and food magic for mana/endurance restoration across allied units.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "amber-900",
+      "accentColor": "amber-300",
+      "icon": "Cookie",
+      "signatureMoment": "Summoning an army of cotton sheep knights to defend the Clover Kingdom during the invasion.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/352604.jpg?s=4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
+      "malId": 148157,
+      "slug": "charmy-pappitson",
+      "description": "Charmy Pappitson is a Magic Knight from Black Clover. 2 abilities recorded."
+    },
+    {
+      "name": "Zora Ideale",
+      "title": "Trap and Counter Magic Architect",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 7,
+      "loreBio": "A vengeful mage who creates trap arrays that turn enemy spells back on their casters, Zora represents the principle that magic can be weaponized through intelligence alone.",
+      "systemBio": "Counter-magic node using rune-based spell reflection and trap sequencing to convert enemy spell inputs into redirected lethal outputs.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "stone-900",
+      "accentColor": "stone-400",
+      "icon": "Shield",
+      "signatureMoment": "Setting counter-traps that reflected the Spade Kingdom devils' attacks back at them during the invasion.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/6/476198.jpg?s=bfdf3edd392e10d77edc47505690cdca",
+      "malId": 168151,
+      "slug": "zora-ideale",
+      "description": "Zora Ideale is a Magic Knight from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Secre Swallowtail",
+      "title": "Concealment Magic Specialist",
+      "rank": "Magic Knight — Black Bull",
+      "dangerLevel": 6,
+      "loreBio": "The last survivor of the Promised Land, Secre uses light magic to conceal allies and herself, making the invisible visible and the visible invisible.",
+      "systemBio": "Stealth and denial node that manipulates light refraction for camouflage, scouting, and surprise engagement windows.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "cyan-900",
+      "accentColor": "cyan-300",
+      "icon": "Eye",
+      "signatureMoment": "Concealing the Black Bull's approach during the invasion, enabling a perfectly timed ambush on the Spade Kingdom forces.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/341888.jpg?s=8a7eabcf0db9d98dbac5224ba5f3c689",
+      "malId": 148158,
+      "slug": "secre-swallowtail",
+      "description": "Secre Swallowtail is a Magic Knight from Black Clover. 2 abilities recorded."
+    },
+    {
+      "name": "Jack the Ripper",
+      "title": "Slash Magic Speed Assassin",
+      "rank": "Magic Knight Captain — Green Praying Mantis",
+      "dangerLevel": 8,
+      "loreBio": "The fastest captain, Jack's slash magic cuts anything — space, armor, and magical defenses alike — through sheer velocity and blade sharpness.",
+      "systemBio": "High-velocity penetration node using spatial slash attacks that bypass conventional armor and magical defense layers.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "green-900",
+      "accentColor": "green-400",
+      "icon": "Scissors",
+      "signatureMoment": "Slicing through the reincarnated demons' defenses with slashes too fast for the eye to track.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/476133.jpg?s=155b6fcdaeb6b5dc5aff3bf5ac952da1",
+      "malId": 169893,
+      "slug": "jack-the-ripper",
+      "description": "Jack the Ripper is a Magic Knight Captain from Black Clover. 2 abilities recorded."
+    },
+    {
+      "name": "Rill Boismortier",
+      "title": "Painting Magic Creation Node",
+      "rank": "Magic Knight Captain — Blue Rose",
+      "dangerLevel": 7,
+      "loreBio": "An eccentric child prodigy captain, Rill's painting magic can bring two-dimensional artwork to life as magical constructs in combat.",
+      "systemBio": "Object creation node that transmutes mana paintings into physical combat entities with varied abilities depending on artistic subject.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "blue-900",
+      "accentColor": "blue-300",
+      "icon": "Paintbrush",
+      "signatureMoment": "Creating an army of painted soldiers and siege weapons to defend the Clover Kingdom during the invasion.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/351522.jpg?s=558a521fe99c73d50a8e756d96a548f1",
+      "malId": 157888,
+      "slug": "rill-boismortier",
+      "description": "Rill Boismortier is a Magic Knight Captain from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Licht",
+      "title": "Five-leaf Grimoire Devil Host",
+      "rank": "Elf Reincarnation Host",
+      "dangerLevel": 10,
+      "loreBio": "The reincarnated first elf and true leader of the Eye of the Midnight Sun, Licht wields a five-leaf grimoire with word magic that rewrites reality itself.",
+      "systemBio": "Reality-warping node using word magic to implement game-rule overrides at catastrophic scale, overriding physical law within defined scopes.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "red-950",
+      "accentColor": "red-400",
+      "icon": "Book",
+      "signatureMoment": "Attempting to rewrite the world through the Word of God spell, only to be stopped by Asta's anti-magic cutting the grimoire itself.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/4/397186.jpg?s=3e4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9",
+      "malId": 168152,
+      "slug": "licht",
+      "description": "Licht is an Elf Reincarnation Host from Black Clover. 4 abilities recorded."
+    },
+    {
+      "name": "Ladros",
+      "title": "Metal Magic Power Node",
+      "rank": "Eye of the Midnight Sun",
+      "dangerLevel": 8,
+      "loreBio": "A former noble who joined the Eye of the Midnight Sun for revenge, Ladros's metal magic converts mana into devastating physical force projectiles.",
+      "systemBio": "High-output kinetic projectile node using metal magic to accelerate mass to hypersonic velocities with minimal telegraph.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-700",
+      "accentColor": "slate-300",
+      "icon": "Target",
+      "signatureMoment": "Overwhelming Noelle with a barrage of metal spears until she unlocks Sea God magic.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/367824.jpg?s=44eac55de08cdfe68f7e46ac92aba4b8",
+      "malId": 168153,
+      "slug": "ladros",
+      "description": "Ladros is a member of Eye of the Midnight Sun from Black Clover. 2 abilities recorded."
+    },
+    {
+      "name": "Patri",
+      "title": "Word Magic Progenitor Node",
+      "rank": "Eye of the Midnight Sun Leader",
+      "dangerLevel": 9,
+      "loreBio": "The ancient elf who led the Eye of the Midnight Sun for centuries, Patri used word magic to rewrite his followers' magic and create artificial demon hosts.",
+      "systemBio": "System-level magic override node capable of modifying the grimoire assignment rules and creating spell constructs that bypass normal mana constraints.",
+      "gradientFrom": "slate-950",
+      "gradientTo": "emerald-950",
+      "accentColor": "emerald-400",
+      "icon": "Type",
+      "signatureMoment": "Using Word of God magic to rewrite the laws of the world until his grimoire was destroyed by anti-magic.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/434361.jpg?s=6d3664d4ee453096dd544bc31e8c1823",
+      "malId": 168154,
+      "slug": "patri",
+      "description": "Patri is the Eye of the Midnight Sun Leader from Black Clover. 3 abilities recorded."
+    },
+    {
+      "name": "Mars",
+      "title": "Earth Magic Terrain Controller",
+      "rank": "Eye of the Midnight Sun",
+      "dangerLevel": 6,
+      "loreBio": "A former noble turned eye member, Mars's earth magic controls volcanic terrain and creates magma-based offensive and defensive constructs.",
+      "systemBio": "Environmental terrain control node using earth magic to shape volcanic geology for area denial and sustained damage zones.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "orange-900",
+      "accentColor": "orange-400",
+      "icon": "Mountain",
+      "signatureMoment": "Creating a massive volcanic eruption to devastate the Clover Kingdom capital before being defeated by Asta.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/7/369107.jpg?s=f14b3aa1750d03133165d9d9268478eb",
+      "malId": 148159,
+      "slug": "mars",
+      "description": "Mars is a member of Eye of the Midnight Sun from Black Clover. 2 abilities recorded."
+    },
+    {
+      "name": "Rhya",
+      "title": "Copy Magic Dual-Personality Node",
+      "rank": "Eye of the Midnight Sun",
+      "dangerLevel": 7,
+      "loreBio": "An elf with the ability to copy any two magics simultaneously, Rhya represents the danger of multiclass magic in a world that prizes specialization.",
+      "systemBio": "Dual-magic copy node that replicates two foreign magic types simultaneously, enabling fluid tactical adaptation mid-combat.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "purple-900",
+      "accentColor": "purple-400",
+      "icon": "Copy",
+      "signatureMoment": "Copying Fuegoleon's fire magic and the spirit of fire simultaneously to create an overwhelming dual-element assault.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/476331.jpg?s=3115618c6334573bde162e0a610e5c4f",
+      "malId": 168155,
+      "slug": "rhya",
+      "description": "Rhya is a member of Eye of the Midnight Sun from Black Clover. 2 abilities recorded."
+    },
+    {
+      "name": "Fana",
+      "title": "Crying Steel Magic Specialist",
+      "rank": "Eye of the Midnight Sun",
+      "dangerLevel": 6,
+      "loreBio": "An elf swordsman whose steel magic is fused with unrequited love, Fana's tears animate his weapons into unstoppable slashing constructs.",
+      "systemBio": "Spectral weapon creation node using emotional mana to animate steel constructs with autonomous attack behavior.",
+      "gradientFrom": "slate-900",
+      "gradientTo": "slate-800",
+      "accentColor": "slate-400",
+      "icon": "Sword",
+      "signatureMoment": "His crying steel swords attacking autonomously to pin down multiple opponents simultaneously.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/352251.jpg?s=4002207f1b3d9d55d57c14ff63f095a9",
+      "malId": 168156,
+      "slug": "fana",
+      "description": "Fana is a member of Eye of the Midnight Sun from Black Clover. 2 abilities recorded."
+    }
+  ],
+  "factions": [
+    {
+      "name": "Black Bull",
+      "role": "protagonist",
+      "loreDesc": "The most chaotic Magic Knight squad, Black Bull specializes in unconventional missions and houses the kingdom's most powerful misfits including Asta.",
+      "systemDesc": "Diverse capability squad optimized for high-variance threat response, combining nullification, support, and area-control nodes."
+    },
+    {
+      "name": "Golden Dawn",
+      "role": "protagonist",
+      "loreDesc": "The kingdom's most prestigious squad led by the Wizard King, housing Yuno and the strongest mages in the Clover Kingdom.",
+      "systemDesc": "High-capability elite squad combining spirit magic, time magic, and ki sensing for maximum tactical throughput."
+    },
+    {
+      "name": "Eye of the Midnight Sun",
+      "role": "antagonist",
+      "loreDesc": "A centuries-old terrorist organization of elves reincarnated into human vessels, seeking revenge against the Clover Kingdom for the genocide of their race.",
+      "systemDesc": "Coordinated cell network using reincarnation magic, word magic, and multi-element combat nodes for strategic destabilization."
+    },
+    {
+      "name": "Spade Kingdom",
+      "role": "antagonist",
+      "loreDesc": "A rival nation that unleashes devil hosts and invasion forces against the Clover Kingdom, representing the ultimate external threat.",
+      "systemDesc": "Nation-state threat actor deploying devil-contract nodes and elite combat mages against Clover Kingdom infrastructure."
+    },
+    {
+      "name": "Magic Knight Captains Council",
+      "role": "neutral",
+      "loreDesc": "The nine Magic Knight captains who collectively defend the kingdom, each commanding a unique squad with distinct magical specialization.",
+      "systemDesc": "Tiered command network distributing defensive responsibility across elemental affinity bands with mutual aid protocols."
+    }
+  ],
+  "rules": [
+    {
+      "name": "Mana Affinity Is Genetically Determined",
+      "subtitle": "Bloodline Lock on Spell Class",
+      "loreConsequence": "Mages are born into their magical potential; no amount of training can overcome inherited mana quality or elemental affinity.",
+      "systemEquivalent": "Class-locked character creation: base stats and ability pool are fixed at initialization and cannot be retrained.",
+      "severity": "high",
+      "loreSubtitle": "Magic destiny is written in blood",
+      "systemSubtitle": "Fixed-type inheritance model"
+    },
+    {
+      "name": "Grimoire Rank Determines ceiling",
+      "subtitle": "Three-Leaf Tier Cap",
+      "loreConsequence": "Common, rare, and elite grimoires each impose a maximum ceiling on the power level achievable by their bearer.",
+      "systemEquivalent": "Progression cap gated by artifact tier: three-leaf grimoires hard-cap stat and ability development at different breakpoints.",
+      "severity": "medium",
+      "loreSubtitle": "Some grimoires unlock more potential",
+      "systemSubtitle": "Artifact rarity progression gates"
+    },
+    {
+      "name": "Anti-Magic Nullifies All Spell Constructs",
+      "subtitle": "Grid-Bypass Rule",
+      "loreConsequence": "Asta's anti-magic cannot be countered by any known magical defense — it simply erases spells from existence on contact.",
+      "systemEquivalent": "Hard counter mechanic that bypasses affinity advantage and directly deletes spell-type abilities regardless of power level.",
+      "severity": "fatal",
+      "loreSubtitle": "Anti-magic plays a different game",
+      "systemSubtitle": "Nullification overrides all affinity tiers"
+    },
+    {
+      "name": "Five-Leaf Grimoires Grant Devil Contracts",
+      "subtitle": "Devil Host Activation Threshold",
+      "loreConsequence": "Five-leaf grimoires are gateways to devil power, granting massive combat amplification at the cost of eventual demonic takeover.",
+      "systemEquivalent": "High-risk transformation state that grants temporary god-tier stats but applies a long-term hostile process takeover timer.",
+      "severity": "fatal",
+      "loreSubtitle": "Devil contracts have a hidden cost",
+      "systemSubtitle": "Time-delayed hostile takeover"
+    }
+  ],
+  "rankings": {
+    "systemName": "Magic Knight and Threat Capability Tiers",
+    "loreName": "Kingdom Defense Hierarchy",
+    "topTierName": "Captain and Devil Host Tier",
+    "topTierLore": "Magic Knight captains and devil hosts can reshape battlefield outcomes and require multiple elite combatants to contain.",
+    "topTierSystem": "Apex combat nodes combining captain-level mana throughput with devil amplification, creating near-irresistible force projection.",
+    "tiers": [
+      {
+        "name": "Vice-Captain and Elite Magic Knight Tier",
+        "loreDesc": "Veterans who have mastered their affinity and lead squad operations in captain's absence.",
+        "systemDesc": "High-capability combat nodes with fully unlocked affinity trees and squad coordination protocols."
+      },
+      {
+        "name": "Standard Magic Knight Tier",
+        "loreDesc": "Professional soldiers who defend the kingdom from routine threats using disciplined magical combat.",
+        "systemDesc": "Operational combat nodes with established spell pools and combat training suitable for coordinated unit operations."
+      },
+      {
+        "name": "Civilian and Untrained Tier",
+        "loreDesc": "The general population has no combat magic capability and relies entirely on Magic Knights for demon and threat response.",
+        "systemDesc": "Baseline nodes with no combat protocols, entirely dependent on external protection infrastructure."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "source": "Asta",
+      "target": "Yuno",
+      "type": "rival",
+      "weight": 10,
+      "loreDesc": "Born together and separated at birth, Asta and Yuno push each other through friendly rivalry to become the strongest.",
+      "systemDesc": "Dual-node competitive coupling where each's advancement creates performance pressure on the other, driving mutual optimization."
+    },
+    {
+      "source": "Asta",
+      "target": "Yami Sukehiro",
+      "type": "mentor",
+      "weight": 9,
+      "loreDesc": "Yami discovered Asta and gave him a place in Black Bull, teaching him ki sensing and the value of raw drive over bloodline.",
+      "systemDesc": "Guidance link that provides tactical knowledge transfer and authorizes access to high-tier threat environments."
+    },
+    {
+      "source": "Noelle Silva",
+      "target": "Asta",
+      "type": "ally",
+      "weight": 8,
+      "loreDesc": "Noelle starts hostile but comes to respect Asta's determination, becoming one of his most reliable combat partners.",
+      "systemDesc": "Combat partnership with growing synergistic Unison Raid potential and mutual tactical coverage expansion."
+    },
+    {
+      "source": "Licht",
+      "target": "Patri",
+      "type": "dependent",
+      "weight": 9,
+      "loreDesc": "Licht's reincarnation is orchestrated by Patri using the reincarnation magic developed from Licht's five-leaf grimoire.",
+      "systemDesc": "Puppeteering relationship where the root node uses the superior combat host as a vehicle for executing centuries-long revenge strategy."
+    },
+    {
+      "source": "Yami Sukehiro",
+      "target": "Julius Novachrono",
+      "type": "ally",
+      "weight": 7,
+      "loreDesc": "Despite their different backgrounds, Yami and Julius share mutual respect as the two most powerful mages in the kingdom.",
+      "systemDesc": "Cross-squad alliance bridging foreign and native magic traditions for kingdom-level threat response."
+    }
+  ],
+  "counterplay": [
+    {
+      "attacker": "Elemental affinity superiority",
+      "defender": "Ki sensing and tactical repositioning",
+      "mechanic": "Reading mana flow to anticipate spell type and angle before cast completion, allowing evasion or counter-element selection.",
+      "loreDesc": "Skill can overcome bloodline disadvantage if you read your opponent's mana before they strike.",
+      "systemDesc": "Telemetry advantage converts affinity disadvantage into evasion and counter-setup windows."
+    },
+    {
+      "attacker": "Devil host overwhelming power",
+      "defender": "Anti-magic nullification and dawn survival",
+      "mechanic": "Asta's anti-magic erases devil amplification, returning hosts to baseline human capacity where teamwork can overwhelm them.",
+      "loreDesc": "Anti-magic is the only known counter to devil contract power multiplication.",
+      "systemDesc": "Nullification bypasses devil amplification multiplier and returns target to base stat line."
+    },
+    {
+      "attacker": "Word magic reality rewrite",
+      "defender": "Grimoire destruction",
+      "mechanic": "Destroying the five-leaf grimoire severs the word magic connection and collapses all granted spells simultaneously.",
+      "loreDesc": "Cut the book, cut the power.",
+      "systemDesc": "Artifact destruction triggers immediate process termination for all dependent spell instances."
+    },
+    {
+      "attacker": "Five-on-one squad assault",
+      "defender": "Unison Raid ability fusion",
+      "mechanic": "Two mages combining their magic into a single fused attack that multiplies damage output beyond either individual maximum.",
+      "loreDesc": "Teamwork multiplies what individuals cannot achieve alone.",
+      "systemDesc": "Coordinated multi-node spell fusion bypasses single-node output ceiling."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "Asta's Zero Mana with Anti-Magic",
+      "ruleViolated": "Mana Affinity Is Genetically Determined",
+      "loreDesc": "Asta has literally zero mana — an impossibility in a world where mana is required for all magic — yet wields anti-magic.",
+      "systemDesc": "System exception: null-type node with no affinity class that bypasses the entire mana-based combat matrix."
+    },
+    {
+      "name": "Five-Leaf Grimoire Existence",
+      "ruleViolated": "Grimoire Rank Determines Ceiling",
+      "loreDesc": "The existence of five-leaf grimoires implies a tier beyond elite that grants devil contracts, contradicting the established three-tier grimoire system.",
+      "systemDesc": "Hidden artifact tier with devil contract access that overrides standard progression cap rules."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "Devils Sealed Beneath the Spade Kingdom",
+      "trigger": "Ancient sealing magic traps devils below the Spade Kingdom border.",
+      "consequence": "Devils seek human hosts to regain physical form, driving the Spade Kingdom's invasion strategy and devil host program.",
+      "timelinePosition": "Ancient History",
+      "loreDesc": "Ancient sealing created a pressure valve that eventually ruptures.",
+      "systemDesc": "Contained threat vector with built-in expiry condition that triggers cascade release."
+    },
+    {
+      "name": "The Demon Lord's Sword Forged",
+      "trigger": "Ancient dwarven smiths forge swords capable of slaying devils.",
+      "consequence": "Anti-magic weapons exist as a forgotten countermeasure against the devil threat, waiting for the five-leaf grimoire holder.",
+      "timelinePosition": "Ancient History",
+      "loreDesc": "One sword for one devil — a pre-engineered solution to the coming apocalypse.",
+      "systemDesc": "Pre-placed counter-artifact keyed to specific threat signature for deployment when threat activates."
+    }
+  ],
+  "hero": {
+    "systemType": "affinity",
+    "microHook": "Zero-mana underdog rewrites the entire magic hierarchy with anti-magic fists and relentless wil",
+    "thesis": "Black Clover's magic system runs on an affinity matrix where mana inheritance and anti-magic define every matchup.",
+    "primarySystemType": "power_engine"
+  },
+  "systemQuestions": [
+    {
+      "question": "How does the affinity matrix change combat strategy when one node can delete any spell on contact — does the entire grid collapse into physical combat for anti-magic matchups?",
+      "answer": "Anti-magic nodes delete spell edges entirely, forcing affinity-matrix collapse to raw physical combat. This makes Yuno's magic-dependent nodes structurally inferior to Asta's physical edge in anti-magic matchups.",
+      "tabIndex": 0,
+      "sectionId": "power-system-heading",
+      "tabLabel": "Power Engine"
+    },
+    {
+      "question": "Can devil contract amplification be quantified against natural mana inheritance advantages, or does the five-leaf grimoire create a fundamentally non-comparable power tier?",
+      "answer": "Devil contracts add multiplicative edge but require risk trade-offs. Five-leaf grimoires create non-comparable power tiers because the growth ceiling is uncapped compared to fixed genetic mana caps.",
+      "tabIndex": 1,
+      "sectionId": "core-laws-heading",
+      "tabLabel": "Core Laws"
+    },
+    {
+      "question": "If mana affinity is truly genetically locked, how did Asta develop ki sensing and physical combat techniques that rival captain-level mages despite having zero mana to work with?",
+      "answer": "Ki sensing is trained physical perception, not mana-based. This means the affinity-matrix has a physical combat path that bypasses the mana dependency entirely — making Asta's route the only null-route in the system.",
+      "tabIndex": 2,
+      "sectionId": "faction-map-heading",
+      "tabLabel": "Faction Map"
+    },
+    {
+      "question": "Does the Unison Raid mechanic represent a genuine multiplicative force multiplier or is it limited by the lower-capability node's output ceiling?",
+      "answer": "Unison Raid is multiplicatively capped by the weaker node's output ceiling — meaning two captains' combined Unison Raid is still captain-level, not above-captain.",
+      "tabIndex": 3,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
+    }
+  ]
+}
