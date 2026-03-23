@@ -526,7 +526,7 @@
     {
       "question": "Why does Takemichi fight with emotions rather than physical power?",
       "answer": "He is not a strong fighter. His advantage is future memory and the ability to emotionally reach people, especially Mikey, redirecting gang outcomes through human connection.",
-      "tabIndex": 0,
+      "tabIndex": 1,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
@@ -540,22 +540,21 @@
     {
       "question": "Why does timeline branching matter for the story?",
       "answer": "Each leap creates a revised present, and Takemichi must chain subsequent leaps from that new baseline. Mistakes compound, meaning one wrong intervention can create a worse future than the original.",
-      "tabIndex": 1,
+      "tabIndex": 3,
       "sectionId": "character-database-heading",
       "tabLabel": "Entity Database"
     },
     {
-      "question": "What makes Izana/Izanagi the most dangerous antagonist?",
+      "question": "What makes Izana the most dangerous antagonist?",
       "answer": "He has founding-member knowledge of Toman's complete internal structure, allowing him to exploit every weakness from inside the system.",
-      "tabIndex": 3,
       "sectionId": "core-laws-heading",
       "tabLabel": "Core Laws"
     }
   ],
   "hero": {
-    "systemType": "relational",
-    "microHook": "Find the emotional node that unlocks the command chain.",
-    "thesis": "A single-anchor time-leap chains sequential interventions through gang hierarchy toward preventing civilization-scale tragedy.",
+    "systemType": "counter-tree",
+    "microHook": "Time-leap to the past — every change ripples forward through 12 years of consequences.",
+    "thesis": "Time-leap branches Takemichi's choices. Mikey's decisions anchor futures. Gang conflicts resolve through temporal rewind.",
     "primarySystemType": "entity_db"
   }
 }
