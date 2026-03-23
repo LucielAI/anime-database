@@ -501,9 +501,9 @@
     }
   ],
   "hero": {
-    "systemType": "affinity",
-    "microHook": "Sword skills level with use — time investment builds capability nodes.",
-    "thesis": "SAO runs on sword skill nodes and death-game stakes. Solo builds eliminate coordination overhead — Kirito clears what guilds cannot.",
+    "systemType": "node-graph",
+    "microHook": "Death-game locks players inside a virtual world — Kirito must clear 100 floors alone, betting his survival against the architect's rules.",
+    "thesis": "SAO's YGGDRASIL system runs on sword skill nodes, dual wielding, and survival-equals-death stakes. Players optimize builds through grinding and risk management.",
     "primarySystemType": "power_engine"
   },
   "counterplay": [
