@@ -13,7 +13,7 @@
     "modeGlow": "rgba(220,38,38,0.25)",
     "heroGradient": "rgba(20,5,10,0.95)"
   },
-  "animeImageUrl": "https://myanimelist.net/images/anime/1498/134443.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1498/134443l.jpg",
   "visualizationHint": "counter-tree",
   "visualizationReason": "Tokyo Ghoul is a ghoul/human predator-prey system organized as a counter-tree. The counter-tree captures the core structural thesis: the ghoul/human binary as the root divide, ghoul factions and CCG hierarchies as branching nodes, and specific character matchups determining which fighter counters which in the biological arms race between species.",
   "headerFlavor": {
@@ -219,7 +219,7 @@
       "accentColor": "green-400",
       "icon": "Eye",
       "signatureMoment": "Manifesting her full koukaku kagune — a massive armored kagune that represented the physical manifestation of her political power.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/276501.jpg?s=6bd3d1eda8082217b36d0e2ff2d8775f",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/276501.jpg",
       "_fetchFailed": false,
       "malId": 112997,
       "role": "Antagonist"
@@ -236,7 +236,7 @@
       "accentColor": "gray-400",
       "icon": "Shield",
       "signatureMoment": "Facing Kaneki in combat and recognizing something of himself in the half-ghoul — the moment the human/ghoul binary started to break down for him.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/259349.jpg?s=8d644e379a9a029aaea887ba623a6101",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/13/251453.jpg",
       "_fetchFailed": false,
       "malId": 99671,
       "role": "Main"
@@ -287,7 +287,7 @@
       "accentColor": "purple-400",
       "icon": "UtensilsCrossed",
       "signatureMoment": "His elaborate ghoul restaurant and collection of rare human cuisines — the aestheticization of predation as fine dining.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/9/260091.jpg?s=2c4fda28fe4b9cd553d36171dd435ee6",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/258499.jpg",
       "_fetchFailed": false,
       "malId": 112687,
       "role": "Main"

@@ -13,7 +13,7 @@
     "modeGlow": "rgba(251,191,36,0.25)",
     "heroGradient": "rgba(20,10,5,0.95)"
   },
-  "animeImageUrl": "https://myanimelist.net/images/anime/8/80356.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/8/80356l.jpg",
   "visualizationHint": "affinity-matrix",
   "visualizationReason": "Mob Psycho 100 is a psychic power network organized as an affinity-matrix. The affinity-matrix captures the core structural thesis: each character has a psychic power level and an emotional intelligence level, and the relationship between these two dimensions determines the character's arc. Espers with high power and low emotional intelligence become antagonists; those with balanced development become allies.",
   "headerFlavor": {
@@ -168,7 +168,7 @@
       "accentColor": "blue-400",
       "icon": "Briefcase",
       "signatureMoment": "Confronting the Claw President using only words and psychological insight — proving that human intelligence can defeat psychic power when the psychic has emotional vulnerabilities.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/12/377518.jpg?s=b64e4f56a8a462e2875b5a2c5b783ad2",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/308364.jpg",
       "_fetchFailed": false,
       "malId": 109931,
       "role": "Main"
@@ -185,7 +185,7 @@
       "accentColor": "purple-400",
       "icon": "Smile",
       "signatureMoment": "Becoming a 'god' through the cult and then choosing to fight against his own followers to protect Mob — the reformed villain's redemption arc.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/299395.jpg?s=0857c68f6e2810f1c79eb22f9f8b9fa1",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/8/299395.jpg",
       "_fetchFailed": false,
       "malId": 125034,
       "role": "Main"
@@ -236,7 +236,7 @@
       "accentColor": "red-400",
       "icon": "Dumbbell",
       "signatureMoment": "Standing up to an esper psycically attacking Mob and saying he's stronger — the moment ordinary human courage matched psychic power.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/15/311242.jpg?s=73fc085b39e1b6abff6b7b4d2984170c",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/316353.jpg",
       "_fetchFailed": false,
       "malId": 124795,
       "role": "Main"
