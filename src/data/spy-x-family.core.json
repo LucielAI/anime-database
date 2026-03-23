@@ -466,7 +466,7 @@
       "systemDesc": "Partial identity disclosure that increases operational risk while deepening affective bonds."
     }
   ],
-  "animeImageUrl": "https://myanimelist.net/images/anime/1441/122795.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg",
   "systemQuestions": [
     {
       "question": "Why does Spy x Family have no unified power system?",
@@ -508,6 +508,7 @@
     "systemType": "relational",
     "microHook": "Each card is different—read the situation to know who's strongest.",
     "thesis": "Three independent ability cards—spy, assassin, telepath—occasionally overlap for accidental synergy.",
-    "primarySystemType": "entity_db"
+    "primarySystemType": "entity_db",
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg"
   }
 }

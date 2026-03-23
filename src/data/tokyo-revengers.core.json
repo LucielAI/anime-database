@@ -514,7 +514,7 @@
       "systemDesc": "Identity revelation that retroactively reclassifies node relationships."
     }
   ],
-  "animeImageUrl": "https://myanimelist.net/images/anime/1839/122012.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1839/122012l.jpg",
   "systemQuestions": [
     {
       "question": "Why does Mikey's decision in any timeline create a gravitational pull on every other characters choices — collapsing all possible futures into his preferred outcome?",
@@ -549,6 +549,7 @@
     "systemType": "counter-tree",
     "microHook": "Time-leap to the past — every change ripples forward through 12 years of consequences.",
     "thesis": "Time-leap branches Takemichi's choices. Mikey's decisions anchor futures. Gang conflicts resolve through temporal rewind.",
-    "primarySystemType": "entity_db"
+    "primarySystemType": "entity_db",
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/1839/122012l.jpg"
   }
 }

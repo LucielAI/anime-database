@@ -403,7 +403,7 @@
       "systemDesc": "Terminal conflict node where co-existence architecture is tested against species-level threat."
     }
   ],
-  "animeImageUrl": "https://myanimelist.net/images/anime/3/73178.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/3/73178l.jpg",
   "systemQuestions": [
     {
       "question": "Why is Migi different from other parasites?",
@@ -445,6 +445,7 @@
     "systemType": "relational",
     "microHook": "Two minds are better than one, unless they disagree on saving the world.",
     "thesis": "A human and parasite co-govern one body—Shinichi decides, Migi fights. Neither could survive alone.",
-    "primarySystemType": "entity_db"
+    "primarySystemType": "entity_db",
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/3/73178l.jpg"
   }
 }

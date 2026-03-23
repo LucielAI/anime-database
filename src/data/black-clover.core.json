@@ -26,7 +26,7 @@
     "casual": "Black Clover looks like a standard shonen power-fest but the magic system is surprisingly tactical: every mage has a fixed elemental affinity, grimoire rank, and mana pool, and fights are decided by attribute matchups, ki control, and who can negate or outlast whom. Asta breaks the entire matrix by simply not playing — his anti-magic erases spells instead of countering them.",
     "deep": "The universe runs on a constrained optimization model: magic is genetically determined (bloodline → mana quality → affinity → spell class), so social hierarchy maps directly onto magical hierarchy. The Eye of the Midnight Sun and the Spade Kingdom exploit this by accumulating high-wealth high-mana individuals. Asta's anti-magic is a system exploit — it bypasses the entire affinity grid and forces opponents into physical-only combat where his elite conditioning dominates."
   },
-  "animeImageUrl": "https://myanimelist.net/images/anime/2/88336.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/2/88336l.jpg",
   "powerSystem": [
     {
       "name": "Grimoire Affinity",
@@ -703,7 +703,8 @@
     "systemType": "affinity",
     "microHook": "Zero-mana underdog rewrites the entire magic hierarchy with anti-magic fists and relentless wil",
     "thesis": "Black Clover's magic system runs on an affinity matrix where mana inheritance and anti-magic define every matchup.",
-    "primarySystemType": "power_engine"
+    "primarySystemType": "power_engine",
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/2/88336l.jpg"
   },
   "systemQuestions": [
     {

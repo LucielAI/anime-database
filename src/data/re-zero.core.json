@@ -26,7 +26,7 @@
     "casual": "Re:Zero looks like a standard isekai but it's actually a horror puzzle game: Subaru gets unlimited retries but every death is permanent for whoever died, and he has to navigate social complexity, betrayal loops, and his own deteriorating mental state to find the winning route.",
     "deep": "The universe runs on a checkpoint-based exploration model where Return by Death acts as a rollback mechanism that reveals the full decision tree of events. The Witch of Envy's shadow selectively kills Subaru when he triggers certain narrative conditions, forcing him to re-examine failed timelines and identify the hidden branching constraint. The real horror is that each rollback costs him psychological integrity and alienates the people he's trying to save."
   },
-  "animeImageUrl": "https://myanimelist.net/images/anime/1522/128039.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1522/128039l.jpg",
   "powerSystem": [
     {
       "name": "Return by Death",
@@ -618,7 +618,8 @@
     "systemType": "counterplay",
     "microHook": "A broken teenager with one broken power: die until you find the timeline where everyone lives.",
     "thesis": "Re:Zero's counter-tree runs on death saves, witch factors, and invisible consequence chains.",
-    "primarySystemType": "power_engine"
+    "primarySystemType": "power_engine",
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/1522/128039l.jpg"
   },
   "systemQuestions": [
     {

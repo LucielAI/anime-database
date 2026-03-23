@@ -523,7 +523,7 @@
       "systemDesc": "Adaptive node that approaches the terminal state's output ceiling through recursive self-improvement."
     }
   ],
-  "animeImageUrl": "https://myanimelist.net/images/anime/12/76049.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/10/72281l.jpg",
   "systemQuestions": [
     {
       "question": "Why does Saitama's power break the show's power scaling?",
@@ -565,6 +565,7 @@
     "systemType": "relational",
     "microHook": "Check the rank before assuming who wins.",
     "thesis": "Hero Association's rank hierarchy tries to categorize Saitama, who simply overrides every edge in the network.",
-    "primarySystemType": "entity_db"
+    "primarySystemType": "entity_db",
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/10/72281l.jpg"
   }
 }

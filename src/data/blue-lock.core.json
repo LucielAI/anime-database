@@ -30,7 +30,7 @@
   },
   "systemDescription": "Ego Vision competitive football system that isolates individual skill through AI simulation. The Blue Lock project forces 300 forwards to compete in a layered elimination tournament, with only the egoistiest striker surviving.",
   "systemName": "Ego Vision System",
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/7/126929.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1258/126929l.jpg",
   "hasAllAnime": false,
   "factions": [
     {
@@ -365,6 +365,60 @@
           "severity": "medium"
         }
       ]
+    },
+    {
+      "id": "aoshi-tokimitsu",
+      "name": "Aoshi Tokimitsu",
+      "title": "Blue Lock Striker",
+      "rank": "Striker",
+      "dangerLevel": 6,
+      "loreBio": "Blue Lock forward whose anxiety transforms into raw physical power in front of goal. His trembling legs carry explosive speed that surprises even veteran players.",
+      "systemDesc": "Speed-based striker whose anxiety-driven adrenaline spikes create unpredictable momentum bursts.",
+      "gradientFrom": "blue-900",
+      "gradientTo": "cyan-800",
+      "accentColor": "cyan-500",
+      "icon": "Zap",
+      "signatureMoment": "Scoring against Team X with a speed burst born from pre-match panic.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/498305.jpg",
+      "malId": 498305,
+      "description": "Speed striker whose anxiety becomes his greatest weapon on the field.",
+      "systemBio": "Tokimitsu represents the anxiety-variable in Blue Locks psychological optimization model. His panic attacks trigger measurable adrenaline spikes that temporarily elevate his speed beyond trained baselines — converting psychological distress into a quantifiable performance output."
+    },
+    {
+      "id": "rensuke-kunigami",
+      "name": "Rensuke Kunigami",
+      "title": "Blue Lock Forward",
+      "rank": "Forward",
+      "dangerLevel": 7,
+      "loreBio": "Blue Lock striker whose physical specimen genetics give him immediate advantages over players who rely on technique training alone.",
+      "systemDesc": "Physical-optimization striker built on athlete DNA. His advantage comes from raw specimen genetics that reduce training time needed.",
+      "gradientFrom": "red-900",
+      "gradientTo": "orange-800",
+      "accentColor": "orange-500",
+      "icon": "Flame",
+      "signatureMoment": "Scoring with a physique-based power shot that bypassed all defensive positioning.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/3/467112.jpg",
+      "malId": 467112,
+      "description": "Physically gifted striker whose specimen genetics give immediate advantages.",
+      "systemBio": "Kunigami is the genetic lottery variable in Blue Lock. His physical specimen baseline means he starts with measurable advantages that other players must train to close. His presence forces the system to test whether technique can overcome raw physical optimization."
+    },
+    {
+      "id": "shouei-barou",
+      "name": "Shouei Barou",
+      "title": "Blue Lock King",
+      "rank": "Striker",
+      "dangerLevel": 8,
+      "loreBio": "Blue Lock striker who operates as a selfish king on the field — taking shots he should pass, treating every match as his personal stage. His ego is structural.",
+      "systemDesc": "Ego-maximizing striker who actively disrupts team coordination to assert dominance. Tests whether individual genius produces more than coordinated teamwork.",
+      "gradientFrom": "yellow-900",
+      "gradientTo": "amber-800",
+      "accentColor": "amber-500",
+      "icon": "Crown",
+      "signatureMoment": "Dribbling through 4 defenders for a solo goal, celebrating as if the team existed for him.",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/16/576062.jpg",
+      "malId": 576062,
+      "description": "Ego-driven striker who treats football as his personal stage for individual genius.",
+      "systemBio": "Barou is the ego-maximizing variable in Blue Lock. Where the system optimizes for team coordination, Barou optimizes purely for self. His presence tests whether the Egoist model can coexist with collective optimization — or whether his individual genius justifies the systemic disruption."
     }
   ],
   "systemQuestions": [
@@ -402,7 +456,7 @@
     "microHook": "Ego Vision maps the field as a decision tree — the striker who reads it best wins.",
     "thesis": "Blue Lock ego elimination: 300 forwards, one striker. Collaborative players are pruned until one egoist survives.",
     "primarySystemType": "power_engine",
-    "imageUrl": "https://cdn.myanimelist.net/images/anime/1258/126929.jpg"
+    "imageUrl": "https://cdn.myanimelist.net/images/anime/1258/126929l.jpg"
   },
   "counterplay": [
     {
@@ -446,6 +500,38 @@
       "mechanic": "Reo's ego leap copies Nagi's techniques and layers his own finishing on top — a parasitic optimization that surpasses the host node.",
       "loreDesc": "The copy striker path isn't just imitation — Reo adds his own ego to what he copies, making the copy superior to the original.",
       "systemDesc": "Adaptive absorption node that grows by consuming other ego signatures, then upgrading them with additional optimization layers."
+    }
+  ],
+  "causalEvents": [
+    {
+      "name": "The Egoist Elimination",
+      "trigger": "Players who refuse team coordination face systematic elimination.",
+      "consequence": "Egoist players like Barou must either adapt to team structures or be removed from Blue Lock.",
+      "timelinePosition": "Ongoing",
+      "loreDesc": "Forces selfish strikers to confront whether individual output justifies the coordination cost they impose on teammates.",
+      "systemDesc": "Tests whether the individual genius floor value exceeds the coordination multiplier in Blue Locks optimization model."
+    },
+    {
+      "name": "Blue Lock Position Classification",
+      "trigger": "Players classified by position with striker role rewarded most heavily.",
+      "consequence": "Concentrates ego-driven players at striker where their selfishness impacts goal-scoring most directly.",
+      "timelinePosition": "Structural",
+      "loreDesc": "The classification system rewards goal-scoring above all else, creating incentive structures that favor selfish strikers.",
+      "systemDesc": "Position-based reward concentration creates a talent magnet effect — egoists cluster at the highest-reward position."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "The Barou Paradox",
+      "ruleViolated": "Team Coordination Produces Better Outcomes",
+      "loreDesc": "Barou consistently disrupts team plays but his individual scoring output occasionally exceeds coordinated expectation.",
+      "systemDesc": "Individual output exception that validates egoist hypothesis — some geniuses produce better results when freed from team constraints."
+    },
+    {
+      "name": "The Nagi Talent Variable",
+      "ruleViolated": "All Performance Is Trainable",
+      "loreDesc": "Nagi displays elite potential with minimal training investment, suggesting raw talent has a genetic component.",
+      "systemDesc": "Talent exception that challenges Blue Locks purely training-based optimization — not all variables are equal inputs."
     }
   ]
 }
