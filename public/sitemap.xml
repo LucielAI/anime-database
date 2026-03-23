@@ -157,6 +157,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://animearchive.app/universe/fire-force</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://animearchive.app/universe/fmab</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -217,6 +223,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://animearchive.app/universe/one-punch-man</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://animearchive.app/universe/re-zero</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -224,6 +242,12 @@
   </url>
   <url>
     <loc>https://animearchive.app/universe/sololeveling</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -242,6 +266,12 @@
   </url>
   <url>
     <loc>https://animearchive.app/universe/tokyo-ghoul</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1382,6 +1412,108 @@
   </url>
   <url>
     <loc>https://animearchive.app/universe/dragonballz/faction/4</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/4</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/5</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/6</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/character/7</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/power/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/power/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/power/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/power/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/faction/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/faction/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/faction/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/faction/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/fire-force/faction/4</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -2545,6 +2677,168 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://animearchive.app/universe/one-punch-man/character/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/character/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/character/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/character/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/character/4</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/character/5</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/character/6</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/power/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/power/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/power/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/power/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/faction/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/faction/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/faction/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/one-punch-man/faction/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/character/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/character/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/character/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/character/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/power/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/power/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/power/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/power/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/faction/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/faction/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/faction/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/parasyte/faction/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://animearchive.app/universe/re-zero/character/0</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -2834,6 +3128,90 @@
   </url>
   <url>
     <loc>https://animearchive.app/universe/sololeveling/faction/5</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/character/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/character/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/character/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/character/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/character/4</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/character/5</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/power/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/power/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/power/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/power/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/faction/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/faction/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/faction/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/spy-x-family/faction/3</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -3164,6 +3542,96 @@
   </url>
   <url>
     <loc>https://animearchive.app/universe/tokyo-ghoul/faction/4</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/character/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/character/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/character/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/character/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/character/4</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/character/5</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/character/6</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/power/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/power/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/power/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/power/3</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/faction/0</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/faction/1</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/faction/2</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://animearchive.app/universe/tokyo-revengers/faction/3</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

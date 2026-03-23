@@ -35,6 +35,11 @@ Each universe is structured as a dual-mode experience:
 ### Re:Zero - Starting Life in Another World | /universe/re-zero | Save-scum your way to victory - if you are willing to die enough times
 ### Blue Lock | /universe/blue-lock | 300 forwards. One egoist survives. Japan's national team reborn through ruthless self-optimization
 ### Sword Art Online | /universe/sword-art-online | A death-game locks 10,000 players inside a virtual sword world — the only way out is to win
+### Tokyo Revengers | /universe/tokyo-revengers | A time-leaping delinquent rewrites bloody futures by navigating linear past events.
+### One Punch Man | /universe/one-punch-man | A hero who defeats everything with one punch comedically breaks the entire power-scaling economy.
+### Spy x Family | /universe/spy-x-family | A spy, an assassin, and a telepath form a fake family—each hiding their real job from the others.
+### Fire Force | /universe/fire-force | Spontaneous human combustion creates armies of infernal monsters—and only those who breathe fire can stop them.
+### Parasyte | /universe/parasyte | A parasite takes over your right hand and becomes your most unlikely ally against alien invasion.
 
 ## Systems / Thematic Pages
 
