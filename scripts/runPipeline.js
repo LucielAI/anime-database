@@ -406,7 +406,7 @@ Examples:
         R.setWarn(`Auto-fixing: ${auto.join(', ')}`)
         auto.forEach(msg => {
           if (msg.includes('_fetchFailed') && p) delete p._fetchFailed
-          if (msg.includes('severity') && p) p.rankings?.forEach(r => { if (!VALID_SEVERITIES.includes(r.severity)) r.severity = 'medium' })
+          if (msg.includes("severity") && p) Object.values(p.rankings ?? {}).forEach(entry => { if (Array.isArray(entry)) entry.forEach(item => { if (item.severity && !VALID_SEVERITIES.includes(item.severity)) item.severity = "medium" }) })
         })
         writePayload(R.slug, p)
       }
