@@ -285,7 +285,7 @@ export default function InsightPost() {
         <SeoHead
           title={`${insight.title} — Anime Archive`}
           description={description}
-          url={pageUrl}
+          canonicalUrl={pageUrl}
           image="https://animearchive.app/og-default.png"
           type="article"
           keywords={insight.tags?.join(', ')}

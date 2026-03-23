@@ -73,15 +73,12 @@ function buildSitemap(slugs) {
     { loc: `${BASE_URL}/insights`, priority: '0.8', changefreq: 'weekly', lastmod },
   ]
 
-  // Insights/post slugs — from public/blog/ directory
-  const PUBLIC_BLOG_DIR = path.join(__dirname, '../public/blog')
+  // Insights/post slugs — from INSIGHTS object keys in InsightPost.jsx
+  const INSIGHT_POST_PATH = path.join(__dirname, '../src/components/InsightPost.jsx')
   let insightSlugs = []
   try {
-    insightSlugs = fs
-      .readdirSync(PUBLIC_BLOG_DIR)
-      .filter(f => f.endsWith('.json'))
-      .map(f => f.replace(/\.json$/, ''))
-      .filter(Boolean)
+    const s = fs.readFileSync(INSIGHT_POST_PATH, 'utf8')
+    insightSlugs = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
   } catch {
     insightSlugs = []
   }

@@ -175,7 +175,7 @@ export default function InsightsRoute() {
       <SeoHead
         title="System Breakdowns — Anime Intelligence Archive"
         description="Deep dives into how anime worlds actually work. Power mechanics, causal logic, and the systems behind the fights."
-        url={canonicalUrl}
+        canonicalUrl={canonicalUrl}
         image="https://animearchive.app/api/og?id=insights"
         structuredData={structuredData}
       />

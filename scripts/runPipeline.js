@@ -81,7 +81,8 @@ const qaPayload = (slug) => {
   if ('_fetchFailed' in p) issues.push('Spurious _fetchFailed at root')
   p.characters?.forEach(c => {
     if (c.imageUrl && !IMAGE_HOSTS.some(h => c.imageUrl.includes(h))) issues.push(`Bad image host [${c.name}]`)
-    if (!c.description || c.description.length < 5) issues.push(`Short/empty desc [${c.name}]`)
+    const hasBio = (c.loreBio?.length ?? 0) >= 5 || (c.systemBio?.length ?? 0) >= 5
+    if (!hasBio) issues.push(`Short/empty bio [${c.name}]`)
   })
   p.relationships?.forEach(r => {
     if (!VALID_RELS.includes(r.type)) issues.push(`Bad rel type [${r.source}→${r.target}]: ${r.type}`)
@@ -140,7 +141,7 @@ const scoreContent = (p) => {
   scores.novelty = Math.min(10, scores.novelty + (relTypes.length >= 5 ? 1.5 : relTypes.length >= 3 ? 1 : 0))
   const charsWithDesc = p.characters?.filter(c => c.description && c.description.length > 10 && !/^[A-Z\s]{20,}$/.test(c.description)).length ?? 0
   scores.clarity = Math.round(((charCount > 0 ? charsWithDesc / charCount : 0) * 8 + (p.introductionSummary ? 2 : 0)) * 10) / 10
-  const hasRankings = (p.rankings?.length ?? 0) >= 3
+  const hasRankings = Object.keys(p.rankings ?? {}).length >= 3
   const hasPowerSys = (p.powerSystem?.length ?? 0) >= 2
   scores.comparisonValue = (hasRankings ? 4 : 0) + (hasPowerSys ? 3 : 0) + (charCount >= 8 ? 2 : 0) + (relTypes.length >= 4 ? 1 : 0)
   scores.overall = Math.round((scores.depth * 0.3 + scores.novelty * 0.2 + scores.clarity * 0.3 + scores.comparisonValue * 0.2) * 10) / 10
