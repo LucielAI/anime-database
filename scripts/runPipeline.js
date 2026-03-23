@@ -88,7 +88,11 @@ const qaPayload = (slug) => {
     if (!p.characters?.some(c => c.name === r.source)) issues.push(`Orphan source [${r.source}]`)
     if (!p.characters?.some(c => c.name === r.target)) issues.push(`Orphan target [${r.target}]`)
   })
-  p.rankings?.forEach(r => { if (r.severity && !VALID_SEVERITIES.includes(r.severity)) issues.push(`Bad severity [${r.character}]: ${r.severity}`) })
+  // rankings is an object {tierName: [...], ...}, not an array — validate severity on each entry
+  Object.values(p.rankings ?? {}).forEach(entry => {
+    if (typeof entry === 'string' && !VALID_SEVERITIES.includes(entry)) issues.push(`Bad severity: ${entry}`)
+    if (Array.isArray(entry)) entry.forEach(item => { if (item.severity && !VALID_SEVERITIES.includes(item.severity)) issues.push(`Bad severity [${item.character ?? '?'}]: ${item.severity}`) })
+  })
   if (!p.animeImageUrl) issues.push('Missing animeImageUrl')
   if (!p.tagline) issues.push('Missing tagline')
   if (!p.introductionSummary) issues.push('Missing introductionSummary')
@@ -405,7 +409,7 @@ Examples:
         R.setWarn(`Auto-fixing: ${auto.join(', ')}`)
         auto.forEach(msg => {
           if (msg.includes('_fetchFailed') && p) delete p._fetchFailed
-          if (msg.includes('severity') && p) p.rankings?.forEach(r => { if (!VALID_SEVERITIES.includes(r.severity)) r.severity = 'medium' })
+          if (msg.includes('severity') && p) Object.values(p.rankings ?? {}).forEach(entry => { if (Array.isArray(entry)) entry.forEach(item => { if (item.severity && !VALID_SEVERITIES.includes(item.severity)) item.severity = 'medium' }) })
         })
         writePayload(R.slug, p)
       }
@@ -448,7 +452,7 @@ Examples:
   // STAGE 5: Validate
   R.addStage('Validate', 'running')
   if (!R.errors.length) {
-    const v = await run('npm', ['run', 'validate:payload', '--', `--slug=${R.slug}`])
+    const v = await run('npm', ['run', 'validate:payload', '--', `src/data/${R.slug}.core.json`])
     if (v.code !== 0) { R.setError(`validate:payload failed:\n${v.out?.slice(-500)}`); exitCode = 1 }
   }
   if (!R.errors.length) R.addStage('Validate', 'pass', 'schema clean')

@@ -136,12 +136,16 @@ export default function InsightsRoute() {
   const rest = filtered.filter(i => !i.featured)
 
   // Show featured insight when: no filters (always show), OR featured matches the active category/term
+  // Include tag match so searching "economics" shows the featured One Piece insight (which has tag "economics")
   const featuredMatches =
     !featured ||
     (activeCategory === 'all' && !searchQuery) ||
     activeCategory === featured.category ||
     featured.tags?.some(t => t.toLowerCase() === activeCategory.toLowerCase()) ||
-    (searchQuery && featured.title.toLowerCase().includes(searchQuery.toLowerCase()))
+    (searchQuery && (
+      featured.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      featured.tags?.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()))
+    ))
   const showFeatured = featured && featuredMatches
 
   const canonicalUrl = `${SITE_URL}/insights`
