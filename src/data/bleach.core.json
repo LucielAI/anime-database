@@ -13,7 +13,7 @@
     "modeGlow": "rgba(30,58,138,0.25)",
     "heroGradient": "rgba(5,10,20,0.95)"
   },
-  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
+  "animeImageUrl": "https://cdn.myanimelist.net/images/anime/3/30296.jpg",
   "visualizationHint": "node-graph",
   "visualizationReason": "Bleach is a faction-network universe where Soul Society, Hueco Mundo, the Human World, and the Quincy domain exist as distinct but interacting spiritual layers. The node-graph captures the structural thesis: each faction is a node, dimensional gateways are edges, and key individuals (Ichigo, Aizen, the Royal Guard) serve as bridge nodes connecting otherwise separate domains.",
   "headerFlavor": {
