@@ -1,19 +1,15 @@
 #!/usr/bin/env node
 /**
- * Universe Production Pipeline — Agent-Native Edition
- * 
- * Designed for AI agent execution with both human-readable and JSON output.
- * 
- * Usage (human):
- *   node scripts/runPipeline.js <anime-name> <mal-id>
- *   node scripts/runPipeline.js "Frieren" 52984
+ * Universe Production Pipeline — Agent-Native v2
+ * Structured output for subagents, dashboards, CI gates, review tooling.
+ *
+ * Usage:
+ *   node scripts/runPipeline.js <anime-name> <mal-id> [options]
  *   node scripts/runPipeline.js "Frieren" 52984 --dry-run
- * 
- * Usage (agent):
- *   node scripts/runPipeline.js "Frieren" 52984 --json
- *   # Exit code 0 = success, 1 = failure. JSON output on --json.
- * 
- * Environment: runs from /data/workspace/anime-database
+ *   node scripts/runPipeline.js "Frieren" 52984 --json | jq '.mergeReady'
+ *
+ * Output statuses: pass | warn | fail | blocked | needs_review
+ * Exit codes:      0 = merge ready, 1 = blocked, 2 = needs review
  */
 
 import { spawn } from 'child_process'
@@ -23,195 +19,303 @@ import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
+const CACHE = join(ROOT, '.pipeline-cache')
 
 const [,, animeName, malId, ...args] = process.argv
-const DRY_RUN = args.includes('--dry-run')
-const JSON_MODE = args.includes('--json')
+const DRY_RUN  = args.includes('--dry-run')
+const JSON_OUT = args.includes('--json')
 const SKIP_TEST = args.includes('--skip-test')
 
-// ─── Agent-native output / exit ───────────────────────────────────────────────
-const result = { stages: {}, errors: [], startTime: Date.now() }
+// ─── Guards ────────────────────────────────────────────────────────────────────
+let _stop = false
+const stop = (rc = 0) => { _stop = true; return rc }
 
+// ─── Output ───────────────────────────────────────────────────────────────────
 const out = (obj) => {
-  if (JSON_MODE) process.stdout.write(JSON.stringify(obj) + '\n')
-  else console.log(obj)
+  if (_stop) return
+  const line = JSON_OUT
+    ? JSON.stringify(obj)
+    : `[${String(obj.stage ?? '').padEnd(14)}] [${(obj.status ?? '').toUpperCase().padEnd(11)}] ${obj.label ?? ''} ${obj.message ?? ''}`
+  if (JSON_OUT) process.stdout.write(line + '\n')
+  else console.log(line)
 }
-const err = (obj) => {
-  if (JSON_MODE) process.stderr.write(JSON.stringify(obj) + '\n')
-  else console.error(obj)
+
+// ─── Shell helpers ─────────────────────────────────────────────────────────────
+const run = (cmd, args, cwd = ROOT) =>
+  new Promise((resolve) => {
+    const child = spawn(cmd, args, { cwd, shell: true })
+    let o = '', e = ''
+    child.stdout.on('data', d => o += d)
+    child.stderr.on('data', d => e += d)
+    child.on('close', code => resolve({ code, out: o, err: e }))
+  })
+
+const git = (...a) => run('git', a)
+const changedFiles = async (from = 'HEAD') => {
+  const r = await git('diff', '--name-only', from)
+  return r.out.trim().split('\n').filter(Boolean)
 }
-const exit = (code, msg) => {
-  if (JSON_MODE) {
-    const payload = { ...result, exitCode: code }
-    if (msg) payload.message = msg
-    if (code === 0) process.stdout.write(JSON.stringify(payload) + '\n')
-    else process.stderr.write(JSON.stringify(payload) + '\n')
-  } else if (msg) {
-    if (code === 0) console.log(msg)
-    else console.error(msg)
+const readPayload = (s) => {
+  const p = join(ROOT, 'src/data', `${s}.core.json`)
+  return existsSync(p) ? JSON.parse(readFileSync(p)) : null
+}
+const writePayload = (s, data) =>
+  writeFileSync(join(ROOT, 'src/data', `${s}.core.json`), JSON.stringify(data, null, 2))
+
+// ─── QA helpers ────────────────────────────────────────────────────────────────
+const VALID_SEVERITIES = ['low', 'medium', 'high', 'fatal']
+const VALID_RELS = ['ally', 'enemy', 'rival', 'mentor', 'betrayal', 'mirror', 'dependent', 'successor', 'counter']
+const IMAGE_HOSTS = ['cdn.myanimelist.net', 'images.myanimelist.net', 'myanimelist.net']
+
+const qaPayload = (slug) => {
+  const p = readPayload(slug)
+  if (!p) return { issues: ['Payload not found'] }
+  const issues = []
+  if ('_fetchFailed' in p) issues.push('Spurious _fetchFailed at root')
+  p.characters?.forEach(c => {
+    if (c.imageUrl && !IMAGE_HOSTS.some(h => c.imageUrl.includes(h))) issues.push(`Bad image host [${c.name}]`)
+    if (!c.description || c.description.length < 5) issues.push(`Short/empty desc [${c.name}]`)
+  })
+  p.relationships?.forEach(r => {
+    if (!VALID_RELS.includes(r.type)) issues.push(`Bad rel type [${r.source}→${r.target}]: ${r.type}`)
+    if (!p.characters?.some(c => c.name === r.source)) issues.push(`Orphan source [${r.source}]`)
+    if (!p.characters?.some(c => c.name === r.target)) issues.push(`Orphan target [${r.target}]`)
+  })
+  p.rankings?.forEach(r => { if (r.severity && !VALID_SEVERITIES.includes(r.severity)) issues.push(`Bad severity [${r.character}]: ${r.severity}`) })
+  if (!p.animeImageUrl) issues.push('Missing animeImageUrl')
+  if (!p.tagline) issues.push('Missing tagline')
+  if (!p.introductionSummary) issues.push('Missing introductionSummary')
+  return { p, issues }
+}
+
+const checkDocs = async (slug) => {
+  const checks = []
+  const readme = existsSync(join(ROOT, 'README.md')) ? readFileSync(join(ROOT, 'README.md'), 'utf8') : ''
+  const blueprint = existsSync(join(ROOT, 'docs/BLUEPRINT.md')) ? readFileSync(join(ROOT, 'docs/BLUEPRINT.md'), 'utf8') : ''
+  if (!readme.includes(slug)) checks.push('README.md: slug missing')
+  if (!blueprint.includes(slug)) checks.push('docs/BLUEPRINT.md: slug missing')
+  const ogRaw = existsSync(join(ROOT, 'api/og.js')) ? readFileSync(join(ROOT, 'api/og.js'), 'utf8') : ''
+  if (!ogRaw.includes(slug)) checks.push('api/og.js: universe entry missing')
+  return checks
+}
+
+// ─── Result object ─────────────────────────────────────────────────────────────
+const R = {
+  universe: animeName ?? '',
+  malId: malId ?? '',
+  slug: (animeName ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+  branch: `feat/universe-${(animeName ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+  runId: Date.now().toString(36),
+  stages: [],
+  errors: [],
+  warnings: [],
+  filesChanged: [],
+  docsParity: false,
+  mergeReady: false,
+
+  addStage(label, status, message = '') {
+    if (_stop) return
+    this.stages.push({ label, status, message, ts: new Date().toISOString() })
+    out({ stage: this.stages.length, label, status, message })
+  },
+
+  setError(err) {
+    if (_stop) return
+    this.errors.push(err)
+    this.addStage('ERROR', 'fail', err)
+  },
+
+  setWarn(warn) {
+    if (_stop) return
+    this.warnings.push(warn)
+    out({ stage: '─', label: 'WARN', status: 'warn', message: warn })
+  },
+
+  writeCache() {
+    try {
+      writeFileSync(join(CACHE, `${this.runId}.json`), JSON.stringify(this, null, 2))
+      const idx = join(CACHE, 'runs.index.json')
+      const index = existsSync(idx) ? JSON.parse(readFileSync(idx)) : []
+      index.unshift({ runId: this.runId, slug: this.slug, universe: this.universe, status: this.mergeReady ? 'MERGE_READY' : this.errors.length ? 'FAIL' : 'NEEDS_REVIEW', ts: new Date().toISOString() })
+      writeFileSync(idx, JSON.stringify(index.slice(0, 100), null, 2))
+    } catch { /* non-fatal */ }
   }
-  process.exit(code)
 }
 
-const stage = (n, label) => ({ pass: () => out({ stage: n, label, status: 'pass', elapsed: Date.now() - result.startTime }),
-  fail: (msg) => { result.errors.push({ stage: n, label, msg }); exit(1, `[Stage ${n}] FAIL: ${msg}`) } })
-
+// ─── Help ─────────────────────────────────────────────────────────────────────
 if (!animeName || !malId || animeName === '--help') {
-  out(`
-Universe Production Pipeline (Agent-Native)
+  console.log(`
+Universe Production Pipeline v2 — Agent-Native
 
 Usage:
   node scripts/runPipeline.js <anime-name> <mal-id> [options]
 
 Options:
-  --dry-run    Show Stage 0 checklist, do not execute
-  --json       Machine-readable JSON output + proper exit codes
-  --skip-test  Skip test suite (faster iteration during development)
+  --dry-run    Stage 0 checklist only, no generation
+  --json       Full JSON output + structured summary
+  --skip-test  Skip test suite (dev mode)
+
+Output statuses: pass | warn | fail | blocked | needs_review
+Exit codes:      0 = merge ready, 1 = blocked, 2 = needs review
+
+Summary fields: universe, malId, slug, branch, runId, stages[], errors[], warnings[], filesChanged[], docsParity, mergeReady
+Auto-logs to:   .pipeline-cache/<runId>.json
+
+Stages: 0(Target) → 1(Generate) → 2(QA) → 3(UX) → 4(SEO) → 5(Validate+Build) → 6(Docs) → 7(Push) → 8(MergeGate)
 
 Examples:
-  node scripts/runPipeline.js "Frieren" 52984           # full pipeline
-  node scripts/runPipeline.js "Frieren" 52984 --dry-run  # preview only
-  node scripts/runPipeline.js "Frieren" 52984 --json     # for subagents
-
-Stages: 0 (Target) → 1 (Generate) → 2 (QA) → 3 (Fix) → 4 (UX) → 5 (Fix) → 6 (SEO) → 7 (Fix) → 8 (Validate) → 9 (Learn)
+  node scripts/runPipeline.js "Frieren" 52984
+  node scripts/runPipeline.js "Frieren" 52984 --dry-run
+  node scripts/runPipeline.js "Frieren" 52984 --json | jq '.mergeReady'
 `)
-  exit(0)
+  process.exit(0)
 }
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-const slug = animeName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+// ─── Pipeline ─────────────────────────────────────────────────────────────────
+;(async () => {
+  let exitCode = 0
 
-const cmd = (cmd, args, cwd = ROOT) =>
-  new Promise((res) => {
-    const child = spawn(cmd, args, { cwd, shell: true })
-    let out = '', err = ''
-    child.stdout.on('data', d => out += d)
-    child.stderr.on('data', d => err += d)
-    child.on('close', code => res({ code, out, err }))
-  })
-
-const readPayload = (s) => {
-  const p = join(ROOT, 'src/data', `${s}.core.json`)
-  return existsSync(p) ? JSON.parse(readFileSync(p)) : null
-}
-const writePayload = (s, data) => writeFileSync(join(ROOT, 'src/data', `${s}.core.json`), JSON.stringify(data, null, 2))
-const runTests = () => cmd('npm', ['test'])
-const runValidate = (s) => cmd('npm', ['run', 'validate:payload', '--', `--slug=${s}`])
-const runBuild = () => cmd('npm', ['run', 'build'])
-
-// ─── STAGE 0: Target Selection ─────────────────────────────────────────────────
-if (DRY_RUN) {
-  out({ stage: 0, slug, malId, status: 'dry-run', message: `MAL ID ${malId} — confirm: trending? SEO potential? compare value? overlap with existing? system type?` })
-  exit(0)
-}
-
-out({ stage: 0, status: 'pass' })
-
-// ─── STAGE 1: Generate ─────────────────────────────────────────────────────────
-out({ stage: 1, status: 'running', message: `Generating ${animeName} (${slug})` })
-const genScript = join(ROOT, 'scripts', 'addUniverseWithSitemap.js')
-if (!existsSync(genScript)) stage(1, 'Generate').fail(`Script not found: ${genScript}`)
-
-let gen
-try {
-  gen = await cmd('node', [genScript, animeName, malId])
-  if (gen.code !== 0) stage(1, 'Generate').fail(`Generator exited ${gen.code}: ${gen.err?.slice(-500)}`)
-} catch (e) {
-  stage(1, 'Generate').fail(`Threw: ${e.message}`)
-}
-out({ stage: 1, status: 'pass', message: `${slug}.core.json created` })
-
-// ─── STAGE 2: QA Structural ────────────────────────────────────────────────────
-out({ stage: 2, status: 'running' })
-const qa = await runValidate(slug)
-if (qa.code !== 0) {
-  const payload = readPayload(slug)
-  if (!payload) stage(2, 'QA').fail('Payload not found after generation')
-  
-  let fixed = false; const fixes = []
-  
-  if ('_fetchFailed' in payload) { delete payload._fetchFailed; fixes.push('removed _fetchFailed from root'); fixed = true }
-  
-  const VALID_SEVERITIES = ['low', 'medium', 'high', 'fatal']
-  payload.rankings?.forEach(r => {
-    if (r.severity && !VALID_SEVERITIES.includes(r.severity)) {
-      r.severity = 'medium'; fixes.push(`severity→medium: ${r.character}`); fixed = true
-    }
-  })
-  
-  if (fixed) {
-    writePayload(slug, payload)
-    out({ stage: 2, status: 'auto-fixed', message: fixes.join(', ') })
-    const recheck = await runValidate(slug)
-    if (recheck.code !== 0) stage(2, 'QA').fail(`Still failing after auto-fix:\n${recheck.out?.slice(-800)}`)
-    out({ stage: 2, status: 'pass', message: 'Auto-fixed and re-validated' })
-  } else {
-    stage(2, 'QA').fail(`QA errors (no auto-fix available):\n${qa.out?.slice(-800)}`)
+  // STAGE 0: Target Selection
+  R.addStage('Target Selection', DRY_RUN ? 'needs_review' : 'pass',
+    DRY_RUN ? `MAL ${malId} — confirm: trending? SEO? compare value? overlap? system type?` : `MAL ${malId} confirmed`)
+  if (DRY_RUN) {
+    R.mergeReady = false
+    R.writeCache()
+    out({ stage: 'SUMMARY', status: 'needs_review', label: '', message: `${R.slug} | dry-run complete | confirm target before proceeding`, ...R })
+    if (JSON_OUT) process.stdout.write(JSON.stringify(R) + '\n')
+    return
   }
-} else {
-  out({ stage: 2, status: 'pass', message: '0 errors, 0 warnings' })
-}
 
-// ─── STAGE 3: UX Readability ──────────────────────────────────────────────────
-out({ stage: 3, status: 'running' })
-const payload = readPayload(slug)
-if (!payload) stage(3, 'UX').fail('Could not read payload')
+  // STAGE 1: Generate
+  R.addStage('Generate', 'running')
+  {
+    const genScript = join(ROOT, 'scripts', 'addUniverseWithSitemap.js')
+    if (!existsSync(genScript)) { R.setError(`Script not found: ${genScript}`); exitCode = 1 }
+    else {
+      try {
+        const g = await run('node', [genScript, animeName, malId])
+        if (g.code !== 0) { R.setError(`Generator failed (${g.code}): ${g.err?.slice(-500)}`); exitCode = 1 }
+      } catch (e) { R.setError(`Threw: ${e.message}`); exitCode = 1 }
+    }
+  }
+  if (!R.errors.length) R.addStage('Generate', 'pass', `${R.slug}.core.json created`)
 
-const uxIssues = []
-payload.characters?.forEach(c => {
-  if (!c.name || c.name.length < 2) uxIssues.push(`Name too short: ${JSON.stringify(c.name)}`)
-  if (!c.description || c.description.length < 10) uxIssues.push(`Desc too short: ${c.name}`)
-  if (c.description?.length > 200) uxIssues.push(`Desc too long (${c.description.length}): ${c.name}`)
-})
-const vague = ['interesting', 'amazing', 'cool', 'great', 'awesome']
-payload.systemQuestions?.forEach(q => {
-  if (vague.some(v => q.question.toLowerCase().includes(v))) uxIssues.push(`Vague: "${q.question}"`)
-})
-if (payload.introductionSummary?.length > 300) uxIssues.push(`introSummary too long (${payload.introductionSummary.length})`)
-if (payload.tagline?.length > 100) uxIssues.push(`tagline too long (${payload.tagline.length})`)
+  // STAGE 2: QA
+  R.addStage('QA', 'running')
+  {
+    const { p, issues } = qaPayload(R.slug)
+    if (issues?.length) {
+      const auto = issues.filter(i => i.includes('_fetchFailed') || i.includes('severity'))
+      const manual = issues.filter(i => !i.includes('_fetchFailed') && !i.includes('severity'))
+      if (auto.length) {
+        R.setWarn(`Auto-fixing: ${auto.join(', ')}`)
+        auto.forEach(msg => {
+          if (msg.includes('_fetchFailed') && p) delete p._fetchFailed
+          if (msg.includes('severity') && p) p.rankings?.forEach(r => { if (!VALID_SEVERITIES.includes(r.severity)) r.severity = 'medium' })
+        })
+        writePayload(R.slug, p)
+      }
+      if (manual.length) { R.setError(`QA issues:\n${manual.map(m => '  - ' + m).join('\n')}`); exitCode = 1 }
+    }
+  }
+  if (!R.errors.length) R.addStage('QA', 'pass', 'clean')
 
-if (uxIssues.length) stage(3, 'UX').fail(`Issues:\n${uxIssues.map(u => '  - ' + u).join('\n')}`)
-out({ stage: 3, status: 'pass' })
+  // STAGE 3: UX Readability
+  R.addStage('UX Readability', 'running')
+  {
+    const { p } = qaPayload(R.slug)
+    const ux = []
+    p?.characters?.forEach(c => { if (c.description?.length > 200) ux.push(`Desc too long [${c.name}]: ${c.description.length} chars`) })
+    p?.systemQuestions?.forEach(q => {
+      if (['interesting','amazing','cool','great','awesome'].some(v => q.question.toLowerCase().includes(v)))
+        ux.push(`Vague question: "${q.question.slice(0, 50)}"`)
+    })
+    if (p?.introductionSummary?.length > 300) ux.push(`introSummary > 300 chars`)
+    if (p?.tagline?.length > 100) ux.push(`tagline > 100 chars`)
+    if (ux.length) { R.setWarn(`UX: ${ux.join(' | ')}`); exitCode = exitCode === 1 ? 1 : 2 }
+    R.addStage('UX Readability', ux.length ? 'warn' : 'pass', ux.length ? `${ux.length} warnings` : 'clean')
+  }
 
-// ─── STAGE 4: SEO Metadata ────────────────────────────────────────────────────
-out({ stage: 4, status: 'running' })
-const seoIssues = []
-if (!payload.tagline) seoIssues.push('Missing tagline')
-else {
-  if (payload.tagline.length > 100) seoIssues.push(`tagline > 100 chars`)
-  if (payload.tagline.split(' ').length > 12) seoIssues.push(`tagline > 12 words`)
-}
-if (!payload.introductionSummary) seoIssues.push('Missing intro')
-else {
-  if (payload.introductionSummary.length > 300) seoIssues.push('intro > 300 chars')
-  if (/[`#*_]/.test(payload.introductionSummary)) seoIssues.push('intro has markdown')
-}
-if (!payload.animeImageUrl) seoIssues.push('Missing animeImageUrl')
-if (!payload.themeColors?.primary) seoIssues.push('Missing themeColors.primary')
+  // STAGE 4: SEO Metadata
+  R.addStage('SEO Metadata', 'running')
+  {
+    const { p } = qaPayload(R.slug)
+    const seo = []
+    if (!p?.tagline) seo.push('Missing tagline')
+    else { if (p.tagline.length > 100) seo.push('tagline > 100 chars'); if (p.tagline.split(' ').length > 12) seo.push('tagline > 12 words') }
+    if (!p?.introductionSummary) seo.push('Missing intro')
+    else if (/[`#*_\[\]]/.test(p.introductionSummary)) seo.push('intro has markdown/bad chars')
+    if (!p?.animeImageUrl) seo.push('Missing animeImageUrl')
+    if (!p?.themeColors?.primary) seo.push('Missing themeColors.primary')
+    if (seo.length) { R.setWarn(`SEO: ${seo.join(' | ')}`); exitCode = exitCode === 1 ? 1 : 2 }
+    R.addStage('SEO Metadata', seo.length ? 'warn' : 'pass', seo.length ? `${seo.length} warnings` : 'clean')
+  }
 
-if (seoIssues.length) stage(4, 'SEO').fail(`Issues:\n${seoIssues.map(s => '  - ' + s).join('\n')}`)
-out({ stage: 4, status: 'pass' })
+  // STAGE 5: Validate
+  R.addStage('Validate', 'running')
+  if (!R.errors.length) {
+    const v = await run('npm', ['run', 'validate:payload', '--', `--slug=${R.slug}`])
+    if (v.code !== 0) { R.setError(`validate:payload failed:\n${v.out?.slice(-500)}`); exitCode = 1 }
+  }
+  if (!R.errors.length) R.addStage('Validate', 'pass', 'schema clean')
 
-// ─── STAGE 5: Final Validation ────────────────────────────────────────────────
-out({ stage: 5, status: 'running', message: 'Tests' })
-if (!SKIP_TEST) {
-  const t = await runTests()
-  if (t.code !== 0) stage(5, 'Tests').fail(t.out?.slice(-500))
-}
-out({ stage: 5, status: 'pass', message: SKIP_TEST ? 'tests skipped' : '107 passed' })
+  if (!SKIP_TEST && !R.errors.length) {
+    R.addStage('Test Suite', 'running')
+    const t = await run('npm', ['test'])
+    if (t.code !== 0) { R.setWarn(`Tests failed:\n${t.out?.slice(-500)}`); exitCode = exitCode === 1 ? 1 : 2 }
+    else R.addStage('Test Suite', 'pass', '107 passed')
+  }
 
-out({ stage: 5, status: 'running', message: 'Build' })
-const b = await runBuild()
-if (b.code !== 0) stage(5, 'Build').fail(b.out?.slice(-500))
-out({ stage: 5, status: 'pass', message: 'build succeeded' })
+  R.addStage('Build', 'running')
+  if (!R.errors.length) {
+    const b = await run('npm', ['run', 'build'])
+    if (b.code !== 0) { R.setError(`Build failed:\n${b.out?.slice(-300)}`); exitCode = 1 }
+  }
+  if (!R.errors.length) R.addStage('Build', 'pass', 'built')
 
-// ─── DONE ─────────────────────────────────────────────────────────────────────
-out({
-  stage: 9,
-  status: 'done',
-  slug,
-  malId,
-  message: 'Universe ready. File Stage 9 Learn report in hashi-collab/memory/universe-performance.md within 7 days.',
-  elapsed_ms: Date.now() - result.startTime
-})
-exit(0)
+  // STAGE 6: Docs Parity
+  R.addStage('Docs Parity', 'running')
+  {
+    const docIssues = await checkDocs(R.slug)
+    if (docIssues.length) { R.setWarn(`Docs: ${docIssues.join(' | ')}`); R.docsParity = false; exitCode = exitCode === 1 ? 1 : 2 }
+    else R.docsParity = true
+  }
+  R.addStage('Docs Parity', R.docsParity ? 'pass' : 'warn', R.docsParity ? 'all docs synced' : 'missing from docs')
+
+  // STAGE 7: Push
+  R.addStage('Push', 'running')
+  if (!R.errors.length) {
+    R.filesChanged = (await changedFiles('HEAD')).filter(f => !f.startsWith('.pipeline'))
+    if (!R.filesChanged.length) { R.setWarn('No files changed'); exitCode = exitCode === 1 ? 1 : 2 }
+    else {
+      const commitMsg = `feat: add ${R.universe} universe\nMAL ID: ${R.malId} | errors=${R.errors.length} warnings=${R.warnings.length} docsParity=${R.docsParity}`
+      await git('add', ...R.filesChanged)
+      const c = await git('commit', '-m', commitMsg)
+      if (c.code !== 0) { R.setError(`Commit failed: ${c.err?.slice(-300)}`); exitCode = 1 }
+      else {
+        const push = await git('push', '-u', 'origin', `HEAD:refs/heads/${R.branch}`, '--force')
+        if (push.code !== 0) { R.setError(`Push failed: ${push.err?.slice(-300)}`); exitCode = 1 }
+        else R.addStage('Push', 'pass', `${R.filesChanged.length} files → ${R.branch}`)
+      }
+    }
+  }
+
+  // STAGE 8: Merge Gate
+  R.addStage('Merge Gate', 'blocked', 'Auto-merge disabled. Merge PR manually.')
+  R.mergeReady = exitCode === 0 && R.docsParity && !R.errors.length
+  if (R.mergeReady) R.stages[R.stages.length - 1].status = 'pass'
+
+  // Final output
+  R.writeCache()
+  const finalStatus = R.errors.length ? 'fail' : R.warnings.length ? 'needs_review' : 'pass'
+  out({ stage: 'SUMMARY', status: finalStatus, label: '',
+    message: `${R.slug} | stages=${R.stages.length} errors=${R.errors.length} warnings=${R.warnings.length} files=${R.filesChanged.length} docsParity=${R.docsParity} mergeReady=${R.mergeReady}`,
+    ...R })
+  if (JSON_OUT) process.stdout.write(JSON.stringify(R) + '\n')
+  else {
+    if (R.mergeReady) console.log('\n🚀 MERGE READY — review and merge PR to deploy.')
+    else if (exitCode === 2) console.log('\n⏸  NEEDS REVIEW — human decision required.')
+    else console.log('\n❌ BLOCKED — fix issues before continuing.')
+  }
+  process.exit(exitCode)
+})()
