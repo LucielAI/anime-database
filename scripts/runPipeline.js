@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 /**
- * Universe Production Pipeline — Agent-Native v2
+ * Universe Production Pipeline — Agent-Native v3
  * Structured output for subagents, dashboards, CI gates, review tooling.
+ *
+ * Extended v3 contract adds:
+ *   contentScore: {depth, novelty, clarity, comparisonValue, overall} (0-10)
+ *   linking:      {relatedUniverses[], comparePairs[], homepageEligible}
+ *   distribution: {shareSnippets[], seoTitles[], internalBoostApplied}
  *
  * Usage:
  *   node scripts/runPipeline.js <anime-name> <mal-id> [options]
@@ -99,6 +104,113 @@ const checkDocs = async (slug) => {
   return checks
 }
 
+// ─── Extended v3 helpers ──────────────────────────────────────────────────────
+
+/** Score a universe payload on content quality (0–10 per dimension) */
+const scoreContent = (p) => {
+  const scores = { depth: 0, novelty: 0, clarity: 0, comparisonValue: 0, overall: 0 }
+
+  // Depth: characters + relationships + factions + rules + events
+  const charCount = p.characters?.length ?? 0
+  const relCount  = p.relationships?.length ?? 0
+  const facCount  = p.factions?.length ?? 0
+  const ruleCount = p.rules?.length ?? 0
+  const evtCount  = p.causalEvents?.length ?? 0
+  const sqCount   = p.systemQuestions?.length ?? 0
+  const depthRaw = (charCount * 1 + relCount * 1.5 + facCount * 2 + ruleCount * 2 + evtCount * 1.5 + sqCount * 1) / 7
+  scores.depth = Math.min(10, Math.round(depthRaw * 10) / 10)
+
+  // Novelty: system type rarity in existing universe set
+  const existingTypes = ['timeline', 'counter-tree', 'node-graph', 'affinity-matrix']
+  const myType = p.visualizationHint ?? ''
+  const sameTypeCount = existingTypes.filter(t => t === myType).length // simplified
+  scores.novelty = myType === 'affinity-matrix' ? 9 : myType === 'counter-tree' ? 7 : myType === 'node-graph' ? 5 : myType === 'timeline' ? 6 : 5
+  // Boost if relationship variety is high (many different rel types)
+  const relTypes = [...new Set(p.relationships?.map(r => r.type) ?? [])]
+  scores.novelty = Math.min(10, scores.novelty + (relTypes.length >= 5 ? 1.5 : relTypes.length >= 3 ? 1 : 0))
+
+  // Clarity: descriptions present and not all-caps
+  const charsWithDesc = p.characters?.filter(c => c.description && c.description.length > 10 && !/^[A-Z\s]{20,}$/.test(c.description)).length ?? 0
+  const descRatio = charCount > 0 ? charsWithDesc / charCount : 0
+  scores.clarity = Math.round((descRatio * 8 + (p.introductionSummary ? 2 : 0)) * 10) / 10
+
+  // Comparison value: good for compare page (different system type from most universes, strong rankings)
+  const hasRankings = (p.rankings?.length ?? 0) >= 3
+  const hasPowerSys  = (p.powerSystem?.length ?? 0) >= 2
+  scores.comparisonValue = (hasRankings ? 4 : 0) + (hasPowerSys ? 3 : 0) + (charCount >= 8 ? 2 : 0) + (relTypes.length >= 4 ? 1 : 0)
+
+  // Overall: weighted average
+  scores.overall = Math.round((scores.depth * 0.3 + scores.novelty * 0.2 + scores.clarity * 0.3 + scores.comparisonValue * 0.2) * 10) / 10
+
+  return scores
+}
+
+/** Find related universes and ideal compare pairs */
+const computeLinking = (slug, vizHint) => {
+  // System type contrast map — opposites/contrasts score highest for compare
+  const contrastMap = {
+    'timeline':        ['node-graph', 'counter-tree'],
+    'counter-tree':    ['timeline', 'affinity-matrix'],
+    'node-graph':      ['timeline', 'affinity-matrix'],
+    'affinity-matrix': ['counter-tree', 'timeline'],
+  }
+  const opposites = contrastMap[vizHint] ?? []
+
+  // Known existing universes (hardcoded for now — could read catalog at runtime)
+  const known = ['aot','jjk','chainsawman','demonslayer','hxh','vinlandsaga','steinsgate','deathnote','fmab','codegeass','mha','frieren','sololeveling','goblinslayer','mushokutensei','naruto','one-piece','dragonballz','bleach','tokyo-ghoul','mobpsycho100']
+  const related = known.filter(s => s !== slug).slice(0, 5)
+  const comparePairs = opposites.filter(o => known.includes(o)).map(o => ({ left: slug, right: o, strength: 'strong' }))
+  if (comparePairs.length < 2) {
+    // Fallback: any 2 other universes as moderate pairs
+    const fallbacks = known.filter(s => s !== slug).slice(0, 2)
+    fallbacks.forEach(o => comparePairs.push({ left: slug, right: o, strength: 'moderate' }))
+  }
+
+  // Homepage eligible: overall score >= 6.0 (runtime-assigned later; here just structural)
+  const hasHero = true // structural gate passed earlier
+  const homepageEligible = hasHero && slug.length > 0
+
+  return { relatedUniverses: related, comparePairs, homepageEligible }
+}
+
+/** Generate distribution assets */
+const computeDistribution = (p) => {
+  const shareSnippets = []
+  const seoTitles = []
+
+  // Tagline-derived snippets (tweet-sized, <=280 chars)
+  const tagline = p.tagline ?? ''
+  if (tagline) {
+    shareSnippets.push(`${tagline} — mapped at animearchive.app/universe/${p.slug ?? '???'}`)
+    if (tagline.length < 200) {
+      shareSnippets.push(`"${tagline.split(' ').slice(0, 12).join(' ')}..." — system breakdown on @animearchive`)
+    }
+  }
+
+  // Character count snippet
+  const charCount = p.characters?.length ?? 0
+  const relCount  = p.relationships?.length ?? 0
+  if (charCount >= 5) {
+    shareSnippets.push(`${charCount} characters · ${relCount} relationships mapped. Explore the system →`)
+  }
+
+  // SEO title variations (anime name should appear in each)
+  const anime = p.anime ?? ''
+  if (anime) {
+    seoTitles.push(`${anime} Power System Explained — Anime Intelligence Archive`)
+    seoTitles.push(`How ${anime} Works: System Breakdown | animearchive.app`)
+    seoTitles.push(`${anime} — Universe Analysis | Characters, Factions & Power Rules`)
+  }
+
+  // System type titles
+  const sysType = p.visualizationHint ?? ''
+  if (anime && sysType) {
+    seoTitles.push(`${sysType.replace('-', ' ')} system in ${anime} — analyzed`)
+  }
+
+  return { shareSnippets, seoTitles, internalBoostApplied: false }
+}
+
 // ─── Result object ─────────────────────────────────────────────────────────────
 const R = {
   universe: animeName ?? '',
@@ -112,6 +224,12 @@ const R = {
   filesChanged: [],
   docsParity: false,
   mergeReady: false,
+
+  // ── Extended contract v3 ────────────────────────────────────────────────────
+  contentScore: null,   // {depth, novelty, clarity, comparisonValue, overall} | null
+  linking: null,        // {relatedUniverses, comparePairs, homepageEligible} | null
+  distribution: null,   // {shareSnippets, seoTitles, internalBoostApplied} | null
+  // ─────────────────────────────────────────────────────────────────────────
 
   addStage(label, status, message = '') {
     if (_stop) return
@@ -136,7 +254,7 @@ const R = {
       writeFileSync(join(CACHE, `${this.runId}.json`), JSON.stringify(this, null, 2))
       const idx = join(CACHE, 'runs.index.json')
       const index = existsSync(idx) ? JSON.parse(readFileSync(idx)) : []
-      index.unshift({ runId: this.runId, slug: this.slug, universe: this.universe, status: this.mergeReady ? 'MERGE_READY' : this.errors.length ? 'FAIL' : 'NEEDS_REVIEW', ts: new Date().toISOString() })
+      index.unshift({ runId: this.runId, slug: this.slug, universe: this.universe, status: this.mergeReady ? 'MERGE_READY' : this.errors.length ? 'FAIL' : 'NEEDS_REVIEW', ts: new Date().toISOString(), contentScore: this.contentScore?.overall ?? null })
       writeFileSync(idx, JSON.stringify(index.slice(0, 100), null, 2))
     } catch { /* non-fatal */ }
   }
@@ -161,7 +279,7 @@ Exit codes:      0 = merge ready, 1 = blocked, 2 = needs review
 Summary fields: universe, malId, slug, branch, runId, stages[], errors[], warnings[], filesChanged[], docsParity, mergeReady
 Auto-logs to:   .pipeline-cache/<runId>.json
 
-Stages: 0(Target) → 1(Generate) → 2(QA) → 3(UX) → 4(SEO) → 5(Validate+Build) → 6(Docs) → 7(Push) → 8(MergeGate)
+Stages: 0(Target) → 1(Generate) → 2(QA) → 3(UX) → 4(SEO) → 5(Validate+Build) → 6(Docs) → 7(Push) → 9(ContentScore) → 10(Linking) → 11(Distribution) → 12(MergeGate)
 
 Examples:
   node scripts/runPipeline.js "Frieren" 52984
@@ -300,16 +418,66 @@ Examples:
     }
   }
 
-  // STAGE 8: Merge Gate
+  // STAGE 9: Content Score
+  R.addStage('Content Score', 'running')
+  {
+    const { p } = qaPayload(R.slug)
+    if (p) {
+      R.contentScore = scoreContent(p)
+      const s = R.contentScore
+      const notes = `depth=${s.depth} novelty=${s.novelty} clarity=${s.clarity} compareVal=${s.comparisonValue} overall=${s.overall}`
+      if (s.overall < 4) {
+        R.setWarn(`Content score ${s.overall}/10 — below threshold (4). Universe may be too thin to publish.`)
+        exitCode = exitCode === 1 ? 1 : 2
+      } else if (s.overall < 6) {
+        R.setWarn(`Content score ${s.overall}/10 — acceptable but not strong. Consider expanding before publishing.`)
+        exitCode = exitCode === 1 ? 1 : 2
+      }
+      R.addStage('Content Score', s.overall < 4 ? 'fail' : s.overall < 6 ? 'warn' : 'pass', notes)
+    } else {
+      R.contentScore = null
+    }
+  }
+
+  // STAGE 10: Linking
+  R.addStage('Linking', 'running')
+  {
+    const { p } = qaPayload(R.slug)
+    const vizHint = p?.visualizationHint ?? ''
+    const linking = computeLinking(R.slug, vizHint)
+    R.linking = linking
+    const note = linking.homepageEligible
+      ? `eligible for homepage | ${linking.comparePairs.length} compare pairs | ${linking.relatedUniverses.length} related`
+      : `not homepage eligible | ${linking.comparePairs.length} compare pairs | ${linking.relatedUniverses.length} related`
+    R.addStage('Linking', linking.comparePairs.length >= 2 ? 'pass' : 'warn', note)
+    if (!linking.comparePairs.length) R.setWarn('No compare pairs found — universe may be isolated')
+  }
+
+  // STAGE 11: Distribution
+  R.addStage('Distribution', 'running')
+  {
+    const { p } = qaPayload(R.slug)
+    if (p) {
+      R.distribution = computeDistribution(p)
+      const note = `${R.distribution.shareSnippets.length} snippets | ${R.distribution.seoTitles.length} SEO titles`
+      R.addStage('Distribution', 'pass', note)
+    } else {
+      R.distribution = null
+    }
+  }
+
+  // STAGE 12: Merge Gate
   R.addStage('Merge Gate', 'blocked', 'Auto-merge disabled. Merge PR manually.')
-  R.mergeReady = exitCode === 0 && R.docsParity && !R.errors.length
+  // contentScore overall < 4 is a hard block; < 6 is a soft warning
+  const scoreBlocked = R.contentScore && R.contentScore.overall < 4
+  R.mergeReady = exitCode === 0 && R.docsParity && !R.errors.length && !scoreBlocked
   if (R.mergeReady) R.stages[R.stages.length - 1].status = 'pass'
 
-  // Final output
+  // Final output — include extended v3 contract fields
   R.writeCache()
   const finalStatus = R.errors.length ? 'fail' : R.warnings.length ? 'needs_review' : 'pass'
   out({ stage: 'SUMMARY', status: finalStatus, label: '',
-    message: `${R.slug} | stages=${R.stages.length} errors=${R.errors.length} warnings=${R.warnings.length} files=${R.filesChanged.length} docsParity=${R.docsParity} mergeReady=${R.mergeReady}`,
+    message: `${R.slug} | stages=${R.stages.length} errors=${R.errors.length} warnings=${R.warnings.length} files=${R.filesChanged.length} docsParity=${R.docsParity} contentScore=${R.contentScore?.overall ?? '?'} mergeReady=${R.mergeReady}`,
     ...R })
   if (JSON_OUT) process.stdout.write(JSON.stringify(R) + '\n')
   else {
