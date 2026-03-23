@@ -159,6 +159,75 @@ if [ $? -ne 0 ]; then
 fi
 
 # ============================================================
+# GATE 2b: Catalog Image Verification — catalog.js images
+# ============================================================
+echo ""
+echo "[GATE 2b] Catalog image verification..."
+
+python3 - << 'PYEOF'
+import json, urllib.request, os, sys, re
+
+repo = '/data/workspace/anime-database/src/data'
+
+def check(url):
+    if not url:
+        return False
+    url = url.replace('https://myanimelist.net', 'https://cdn.myanimelist.net')
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        r = urllib.request.urlopen(req, timeout=5)
+        return r.getcode() == 200
+    except:
+        return False
+
+catalog_path = f'{repo}/catalog.js'
+with open(catalog_path) as f:
+    content = f.read()
+
+new_universes = {'blue-lock','black-clover','re-zero','sword-art-online','tokyo-revengers','one-punch-man','spy-x-family','fire-force','parasyte'}
+
+# Match entries like: id: 'blue-lock', anime: 'Blue Lock', ..., malId: 49596, ..., animeImageUrl: '...'
+pattern = r"id: '([^']+)', anime: '([^']+)', tagline: '([^']+)', malId: (\d+)"
+entries = re.findall(pattern, content)
+errors = []
+
+for entry in entries:
+    uid, anime, tagline, malId = entry
+    if uid not in new_universes:
+        continue
+    # Find animeImageUrl for this entry
+    idx = content.find(f"id: '{uid}'")
+    next_idx = content.find(f"id: '", idx + 10)
+    chunk = content[idx:next_idx if next_idx > 0 else idx + 2000]
+    img_match = re.search(r"animeImageUrl: '([^']+)'", chunk)
+    if img_match:
+        imgUrl = img_match.group(1)
+        if not check(imgUrl):
+            errors.append(f'  catalog.js/{uid}: animeImageUrl FAIL {imgUrl[-40:]}')
+        # Check MAL ID matches .core.json
+        core_path = f'{repo}/{uid}.core.json'
+        if os.path.exists(core_path):
+            with open(core_path) as f:
+                core = json.load(f)
+            core_mal = core.get('malId')
+            if str(core_mal) != str(malId):
+                errors.append(f'  catalog.js/{uid}: MAL ID mismatch catalog={malId} .core.json={core_mal}')
+
+if errors:
+    print('FAIL: Catalog issues:')
+    for e in errors:
+        print(e)
+    sys.exit(1)
+else:
+    print('  PASS: All catalog images return HTTP 200')
+PYEOF
+
+if [ $? -ne 0 ]; then
+    echo "❌ BLOCKED: Catalog image check failed"
+    FAILED=1
+fi
+
+# ============================================================
 # GATE 3: Template Content Check
 # ============================================================
 echo ""
