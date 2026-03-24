@@ -87,7 +87,14 @@
       "malId": 184947,
       "primaryAbility": "Mana Suppression / High-Order Dispel",
       "slug": "frieren",
-      "description": "Frieren is a  from Sousou no Frieren."
+      "description": "Frieren is a  from Sousou no Frieren.",
+      "role": "Main",
+      "relationships": [
+        "Sousou no Frieren",
+        "Yuusha",
+        "Sousou no Frieren: ●● no Mahou",
+        "Sousou no Frieren 2nd Season"
+      ]
     },
     {
       "name": "Fern",
@@ -105,7 +112,13 @@
       "malId": 188176,
       "primaryAbility": "Rapid Precision Casting / Zoltraak Barrage",
       "slug": "fern",
-      "description": "Fern is a  from Sousou no Frieren."
+      "description": "Fern is a  from Sousou no Frieren.",
+      "role": "Main",
+      "relationships": [
+        "Sousou no Frieren",
+        "Sousou no Frieren: ●● no Mahou",
+        "Sousou no Frieren 2nd Season"
+      ]
     },
     {
       "name": "Stark",
@@ -123,7 +136,13 @@
       "malId": 188177,
       "primaryAbility": "Frontline Interception / Burst Axe Strikes",
       "slug": "stark",
-      "description": "Stark is a  from Sousou no Frieren."
+      "description": "Stark is a  from Sousou no Frieren.",
+      "role": "Main",
+      "relationships": [
+        "Sousou no Frieren",
+        "Sousou no Frieren: ●● no Mahou",
+        "Sousou no Frieren 2nd Season"
+      ]
     },
     {
       "name": "Himmel",
@@ -141,7 +160,14 @@
       "malId": 186854,
       "primaryAbility": "Heroic Swordplay / Morale Stabilization",
       "slug": "himmel",
-      "description": "Himmel is a  from Sousou no Frieren."
+      "description": "Himmel is a  from Sousou no Frieren.",
+      "role": "Supporting",
+      "relationships": [
+        "Sousou no Frieren",
+        "Yuusha",
+        "Sousou no Frieren: ●● no Mahou",
+        "Sousou no Frieren 2nd Season"
+      ]
     },
     {
       "name": "Flamme",
@@ -159,7 +185,11 @@
       "malId": 187307,
       "primaryAbility": "Anti-Demon Doctrine Engineering",
       "slug": "flamme",
-      "description": "Flamme is a  from Sousou no Frieren."
+      "description": "Flamme is a  from Sousou no Frieren.",
+      "role": "Supporting",
+      "relationships": [
+        "Sousou no Frieren"
+      ]
     },
     {
       "name": "Serie",
@@ -177,7 +207,13 @@
       "malId": 211285,
       "primaryAbility": "Spell Authority / First-Class Mage Gatekeeping",
       "slug": "serie",
-      "description": "Serie is a  from Sousou no Frieren."
+      "description": "Serie is a  from Sousou no Frieren.",
+      "role": "Supporting",
+      "relationships": [
+        "Sousou no Frieren",
+        "Sousou no Frieren: ●● no Mahou",
+        "Sousou no Frieren 2nd Season"
+      ]
     },
     {
       "name": "Aura",
@@ -195,7 +231,11 @@
       "malId": 206722,
       "primaryAbility": "Auserlese Obedience Scale",
       "slug": "aura",
-      "description": "Aura is a  from Sousou no Frieren."
+      "description": "Aura is a  from Sousou no Frieren.",
+      "role": "Supporting",
+      "relationships": [
+        "Sousou no Frieren"
+      ]
     },
     {
       "name": "Macht",

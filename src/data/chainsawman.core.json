@@ -113,7 +113,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/492407.jpg?s=4d8e9a01dac6a5d891c3ed434187fba9",
       "malId": 170732,
       "slug": "denji",
-      "description": "Denji is a  from Chainsaw Man."
+      "description": "Denji is a  from Chainsaw Man.",
+      "role": "Main",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Movie: Reze-hen",
+        "Chainsaw Man Recap",
+        "Chainsaw Man: Shikaku-hen"
+      ]
     },
     {
       "name": "Pochita",
@@ -130,7 +137,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/391655.jpg?s=98a1bd67048600807f26dd709b70b7cc",
       "malId": 174750,
       "slug": "pochita",
-      "description": "Pochita is a  from Chainsaw Man."
+      "description": "Pochita is a  from Chainsaw Man.",
+      "role": "Supporting",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Movie: Reze-hen",
+        "Chainsaw Man Recap"
+      ]
     },
     {
       "name": "Makima",
@@ -147,7 +160,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/489561.jpg?s=6593bd49704ffb415d3fd9d40e5dc183",
       "malId": 170734,
       "slug": "makima",
-      "description": "Makima is a  from Chainsaw Man."
+      "description": "Makima is a  from Chainsaw Man.",
+      "role": "Main",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Movie: Reze-hen",
+        "Chainsaw Man Recap"
+      ]
     },
     {
       "name": "Aki Hayakawa",
@@ -164,7 +183,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/395003.jpg?s=d0d59f9d3f6d5aa89534c8b16433cf74",
       "malId": 170735,
       "slug": "aki-hayakawa",
-      "description": "Aki Hayakawa is a  from Chainsaw Man."
+      "description": "Aki Hayakawa is a  from Chainsaw Man.",
+      "role": "Main",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Movie: Reze-hen",
+        "Chainsaw Man Recap"
+      ]
     },
     {
       "name": "Power",
@@ -181,7 +206,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/494969.jpg?s=02622d6ffa487b8d6d7503af4792a106",
       "malId": 170733,
       "slug": "power",
-      "description": "Power is a  from Chainsaw Man."
+      "description": "Power is a  from Chainsaw Man.",
+      "role": "Main",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Movie: Reze-hen",
+        "Chainsaw Man Recap"
+      ]
     },
     {
       "name": "Himeno",
@@ -198,7 +229,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/386392.jpg?s=587b426444b95d23293c9b8f1aa38450",
       "malId": 170765,
       "slug": "himeno",
-      "description": "Himeno is a  from Chainsaw Man."
+      "description": "Himeno is a  from Chainsaw Man.",
+      "role": "Supporting",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Recap"
+      ]
     },
     {
       "name": "Kobeni Higashiyama",
@@ -215,7 +251,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/467961.jpg?s=62b404edd1edcea21a0fb16f230f3916",
       "malId": 174749,
       "slug": "kobeni-higashiyama",
-      "description": "Kobeni Higashiyama is a  from Chainsaw Man."
+      "description": "Kobeni Higashiyama is a  from Chainsaw Man.",
+      "role": "Supporting",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Movie: Reze-hen",
+        "Chainsaw Man Recap"
+      ]
     },
     {
       "name": "Kishibe",
@@ -232,7 +274,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/488553.jpg?s=90bf9b9117281aaead8dd8ac08cf388f",
       "malId": 174748,
       "slug": "kishibe",
-      "description": "Kishibe is a  from Chainsaw Man."
+      "description": "Kishibe is a  from Chainsaw Man.",
+      "role": "Supporting",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Movie: Reze-hen",
+        "Chainsaw Man Recap"
+      ]
     },
     {
       "name": "Santa Claus",
@@ -272,7 +320,12 @@
         "Samurai Sword"
       ],
       "slug": "katana-man",
-      "description": "Katana Man is a  from Chainsaw Man."
+      "description": "Katana Man is a  from Chainsaw Man.",
+      "role": "Supporting",
+      "relationships": [
+        "Chainsaw Man",
+        "Chainsaw Man Recap"
+      ]
     }
   ],
   "relationships": [

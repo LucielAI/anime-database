@@ -156,7 +156,17 @@
       "malId": 5,
       "role": "Main",
       "slug": "ichigo-kurosaki",
-      "description": "Ichigo Kurosaki is a Main from Bleach."
+      "description": "Ichigo Kurosaki is a Main from Bleach.",
+      "relationships": [
+        "Bleach",
+        "Bleach: Memories in the Rain",
+        "Bleach: The Sealed Sword Frenzy",
+        "Bleach Movie 1: Memories of Nobody",
+        "Bleach Movie 2: The DiamondDust Rebellion - Mou Hitotsu no Hyourinmaru",
+        "Bleach Movie 3: Fade to Black - Kimi no Na wo Yobu",
+        "Bleach Movie 4: Jigoku-hen",
+        "Bleach KaraBuri!: Gotei Juusan Yatai Daisakusen!"
+      ]
     },
     {
       "name": "Sosuke Aizen",
@@ -175,7 +185,17 @@
       "malId": 1086,
       "role": "Antagonist",
       "slug": "sosuke-aizen",
-      "description": "Sosuke Aizen is a Antagonist from Bleach."
+      "description": "Sosuke Aizen is a Antagonist from Bleach.",
+      "relationships": [
+        "Bleach",
+        "Bleach: The Sealed Sword Frenzy",
+        "Bleach: Gotei 13 Omake",
+        "Bleach: Sennen Kessen-hen",
+        "Bleach: Sennen Kessen-hen - Ketsubetsu-tan",
+        "Bleach: Sennen Kessen-hen - Soukoku-tan",
+        "Bleach 20th PV",
+        "Bleach: Sennen Kessen-hen - Kashin-tan"
+      ]
     },
     {
       "name": "Ulquiorra Cifer",
@@ -213,7 +233,17 @@
       "malId": 6,
       "role": "Main",
       "slug": "byakuya-kuchiki",
-      "description": "Byakuya Kuchiki is a Main from Bleach."
+      "description": "Byakuya Kuchiki is a Main from Bleach.",
+      "relationships": [
+        "Bleach",
+        "Bleach: Memories in the Rain",
+        "Bleach: The Sealed Sword Frenzy",
+        "Bleach Movie 1: Memories of Nobody",
+        "Bleach Movie 2: The DiamondDust Rebellion - Mou Hitotsu no Hyourinmaru",
+        "Bleach Movie 3: Fade to Black - Kimi no Na wo Yobu",
+        "Bleach Movie 4: Jigoku-hen",
+        "Bleach KaraBuri!: Gotei Juusan Yatai Daisakusen!"
+      ]
     },
     {
       "name": "Kenpachi Zaraki",
@@ -270,7 +300,17 @@
       "malId": 6,
       "role": "Main",
       "slug": "rukia-kuchiki",
-      "description": "Rukia Kuchiki is a Main from Bleach."
+      "description": "Rukia Kuchiki is a Main from Bleach.",
+      "relationships": [
+        "Bleach",
+        "Bleach: Memories in the Rain",
+        "Bleach: The Sealed Sword Frenzy",
+        "Bleach Movie 1: Memories of Nobody",
+        "Bleach Movie 2: The DiamondDust Rebellion - Mou Hitotsu no Hyourinmaru",
+        "Bleach Movie 3: Fade to Black - Kimi no Na wo Yobu",
+        "Bleach Movie 4: Jigoku-hen",
+        "Bleach KaraBuri!: Gotei Juusan Yatai Daisakusen!"
+      ]
     },
     {
       "name": "Uryuu Ishida",
@@ -289,7 +329,17 @@
       "malId": 564,
       "role": "Main",
       "slug": "uryuu-ishida",
-      "description": "Uryuu Ishida is a Main from Bleach."
+      "description": "Uryuu Ishida is a Main from Bleach.",
+      "relationships": [
+        "Bleach",
+        "Bleach Movie 1: Memories of Nobody",
+        "Bleach Movie 2: The DiamondDust Rebellion - Mou Hitotsu no Hyourinmaru",
+        "Bleach Movie 4: Jigoku-hen",
+        "Bleach: Sennen Kessen-hen",
+        "Bleach: Sennen Kessen-hen - Ketsubetsu-tan",
+        "Bleach: Sennen Kessen-hen - Ketsubetsu-tan Recap",
+        "Bleach: Sennen Kessen-hen - Soukoku-tan"
+      ]
     },
     {
       "name": "Orihime Inoue",
@@ -308,7 +358,17 @@
       "malId": 7,
       "role": "Main",
       "slug": "orihime-inoue",
-      "description": "Orihime Inoue is a Main from Bleach."
+      "description": "Orihime Inoue is a Main from Bleach.",
+      "relationships": [
+        "Bleach",
+        "Bleach: Memories in the Rain",
+        "Bleach Movie 1: Memories of Nobody",
+        "Bleach Movie 2: The DiamondDust Rebellion - Mou Hitotsu no Hyourinmaru",
+        "Bleach Movie 4: Jigoku-hen",
+        "Bleach: Sennen Kessen-hen",
+        "Bleach: Sennen Kessen-hen - Ketsubetsu-tan",
+        "Bleach: Sennen Kessen-hen - Soukoku-tan"
+      ]
     },
     {
       "name": "Renji Abarai",
@@ -327,7 +387,17 @@
       "malId": 906,
       "role": "Main",
       "slug": "renji-abarai",
-      "description": "Renji Abarai is a Main from Bleach."
+      "description": "Renji Abarai is a Main from Bleach.",
+      "relationships": [
+        "Bleach",
+        "Bleach: The Sealed Sword Frenzy",
+        "Bleach Movie 1: Memories of Nobody",
+        "Bleach Movie 2: The DiamondDust Rebellion - Mou Hitotsu no Hyourinmaru",
+        "Bleach Movie 3: Fade to Black - Kimi no Na wo Yobu",
+        "Bleach Movie 4: Jigoku-hen",
+        "Bleach KaraBuri!: Gotei Juusan Yatai Daisakusen!",
+        "Bleach: Gotei 13 Omake"
+      ]
     }
   ],
   "factions": [

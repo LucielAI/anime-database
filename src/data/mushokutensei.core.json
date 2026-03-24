@@ -87,7 +87,16 @@
       "malId": 111245,
       "primaryAbility": "Silent Casting / High-Capacity Elemental Magic",
       "slug": "rudeus-greyrat",
-      "description": "Rudeus Greyrat is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Rudeus Greyrat is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Main",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+      ]
     },
     {
       "name": "Orsted",
@@ -105,7 +114,12 @@
       "malId": 115175,
       "primaryAbility": "Dragon God Combat Mastery / Loop Knowledge",
       "slug": "orsted",
-      "description": "Orsted is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Orsted is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Supporting",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2"
+      ]
     },
     {
       "name": "Hitogami",
@@ -123,7 +137,14 @@
       "malId": 118253,
       "primaryAbility": "Dream Oracle Manipulation / Apostle Routing",
       "slug": "hitogami",
-      "description": "Hitogami is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Hitogami is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Supporting",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2"
+      ]
     },
     {
       "name": "Eris Boreas Greyrat",
@@ -141,7 +162,14 @@
       "malId": 111335,
       "primaryAbility": "Sword God Style Burst Assault",
       "slug": "eris-boreas-greyrat",
-      "description": "Eris Boreas Greyrat is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Eris Boreas Greyrat is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Main",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
+        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+      ]
     },
     {
       "name": "Roxy Migurdia",
@@ -159,7 +187,14 @@
       "malId": 111341,
       "primaryAbility": "Water Magic Doctrine / Instruction",
       "slug": "roxy-migurdia",
-      "description": "Roxy Migurdia is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Roxy Migurdia is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Main",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+      ]
     },
     {
       "name": "Sylphiette",
@@ -177,7 +212,16 @@
       "malId": 111337,
       "primaryAbility": "Support Casting / Barrier and Healing Utility",
       "slug": "sylphiette",
-      "description": "Sylphiette is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Sylphiette is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Main",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu - Shugo Jutsushi Fitz",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+      ]
     },
     {
       "name": "Ruijerd Superdia",
@@ -195,7 +239,14 @@
       "malId": 111739,
       "primaryAbility": "Superd Spear Combat / Detection Instinct",
       "slug": "ruijerd-superdia",
-      "description": "Ruijerd Superdia is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Ruijerd Superdia is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Supporting",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
+        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2"
+      ]
     },
     {
       "name": "Kishirika Kishirisu",
@@ -213,7 +264,12 @@
       "malId": 111745,
       "primaryAbility": "Demon Eye Grant / Ancient Authority",
       "slug": "kishirika-kishirisu",
-      "description": "Kishirika Kishirisu is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Kishirika Kishirisu is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Supporting",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2"
+      ]
     },
     {
       "name": "Perugius Dola",
@@ -231,7 +287,11 @@
       "malId": 118279,
       "primaryAbility": "Summoning and Fortress Control",
       "slug": "perugius-dola",
-      "description": "Perugius Dola is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Perugius Dola is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "role": "Supporting",
+      "relationships": [
+        "Mushoku Tensei: Isekai Ittara Honki Dasu"
+      ]
     },
     {
       "name": "Badigadi",

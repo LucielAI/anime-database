@@ -86,7 +86,18 @@
       "_fetchFailed": false,
       "malId": 40,
       "slug": "monkey-d.-luffy",
-      "description": "Monkey D. Luffy is a  from One Piece."
+      "description": "Monkey D. Luffy is a  from One Piece.",
+      "role": "Main",
+      "relationships": [
+        "One Piece",
+        "One Piece Movie 01",
+        "One Piece Movie 02: Nejimaki-jima no Daibouken",
+        "One Piece Movie 03: Chinjuu-jima no Chopper Oukoku",
+        "One Piece Movie 04: Dead End no Bouken",
+        "One Piece Movie 05: Norowareta Seiken",
+        "One Piece Movie 06: Omatsuri Danshaku to Himitsu no Shima",
+        "One Piece Movie 07: Karakuri-jou no Mecha Kyohei"
+      ]
     },
     {
       "name": "Marshall D. Teach",
@@ -104,7 +115,14 @@
       "_fetchFailed": false,
       "malId": 3331,
       "slug": "marshall-d.-teach",
-      "description": "Marshall D. Teach is a  from One Piece."
+      "description": "Marshall D. Teach is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece Movie 14: Stampede",
+        "One Piece: Kizamareru Rekishi! Gekidou no Shinkyuu Yonkou!"
+      ]
     },
     {
       "name": "Red-Haired Shanks",
@@ -122,7 +140,18 @@
       "_fetchFailed": false,
       "malId": 727,
       "slug": "red-haired-shanks",
-      "description": "Red-Haired Shanks is a  from One Piece."
+      "description": "Red-Haired Shanks is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece Movie 04: Dead End no Bouken",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece 3D: Mugiwara Chase",
+        "One Piece: Kinkyuu Kikaku One Piece Kanzen Kouryakuhou",
+        "One Piece: Episode of Luffy - Hand Island no Bouken",
+        "One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no Daibouken",
+        "One Piece Film: Red"
+      ]
     },
     {
       "name": "Silvers Rayleigh",
@@ -140,7 +169,16 @@
       "_fetchFailed": false,
       "malId": 17142,
       "slug": "silvers-rayleigh",
-      "description": "Silvers Rayleigh is a  from One Piece."
+      "description": "Silvers Rayleigh is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece 3D2Y: Ace no Shi wo Koete! Luffy Nakama to no Chikai",
+        "One Piece Movie 14: Stampede",
+        "One Piece Fan Letter",
+        "One Piece: Gyojin Tou-hen"
+      ]
     },
     {
       "name": "Nico Robin",
@@ -158,7 +196,18 @@
       "_fetchFailed": false,
       "malId": 61,
       "slug": "nico-robin",
-      "description": "Nico Robin is a  from One Piece."
+      "description": "Nico Robin is a  from One Piece.",
+      "role": "Main",
+      "relationships": [
+        "One Piece",
+        "One Piece Movie 04: Dead End no Bouken",
+        "One Piece Movie 05: Norowareta Seiken",
+        "One Piece Movie 06: Omatsuri Danshaku to Himitsu no Shima",
+        "One Piece Movie 07: Karakuri-jou no Mecha Kyohei",
+        "One Piece: Oounabara ni Hirake! Dekkai Dekkai Chichi no Yume!",
+        "One Piece: Mamore! Saigo no Oobutai",
+        "One Piece: Nenmatsu Tokubetsu Kikaku! Mugiwara no Luffy Oyabun Torimonochou"
+      ]
     },
     {
       "name": "Buggy the Clown",
@@ -176,7 +225,18 @@
       "_fetchFailed": false,
       "malId": 725,
       "slug": "buggy-the-clown",
-      "description": "Buggy the Clown is a  from One Piece."
+      "description": "Buggy the Clown is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece: Nenmatsu Tokubetsu Kikaku! Mugiwara no Luffy Oyabun Torimonochou",
+        "One Piece: Yume no Soccer Ou!",
+        "One Piece: Mezase! Kaizoku Yakyuu Ou",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece: Kinkyuu Kikaku One Piece Kanzen Kouryakuhou",
+        "One Piece 3D2Y: Ace no Shi wo Koete! Luffy Nakama to no Chikai",
+        "One Piece Movie 14: Stampede"
+      ]
     },
     {
       "name": "Dracule Mihawk",
@@ -194,7 +254,16 @@
       "_fetchFailed": false,
       "malId": 2064,
       "slug": "dracule-mihawk",
-      "description": "Dracule Mihawk is a  from One Piece."
+      "description": "Dracule Mihawk is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece 3D2Y: Ace no Shi wo Koete! Luffy Nakama to no Chikai",
+        "One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no Daibouken",
+        "One Piece Movie 14: Stampede",
+        "One Piece Fan Letter"
+      ]
     },
     {
       "name": "Sengoku",
@@ -213,7 +282,18 @@
       "systemBio": "An institutional memory node — Sengoku's value lies in his institutional knowledge of the Void Century, the Roger era, and the long-term strategic calculations of the World Government. His position bridges the current era's conflicts with the historical data that drives them.",
       "malId": 13018,
       "slug": "sengoku",
-      "description": "Sengoku is a  from One Piece."
+      "description": "Sengoku is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece Film: Strong World",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece Film: Z",
+        "One Piece 3D2Y: Ace no Shi wo Koete! Luffy Nakama to no Chikai",
+        "One Piece: Episode of Sabo - 3 Kyoudai no Kizuna Kiseki no Saikai to Uketsugareru Ishi",
+        "One Piece Movie 14: Stampede",
+        "One Piece: Yuruganu Seigi! Kaigun no Hokoritakaki Log!"
+      ]
     },
     {
       "name": "Monkey D. Garp",
@@ -231,7 +311,18 @@
       "_fetchFailed": false,
       "malId": 8064,
       "slug": "monkey-d.-garp",
-      "description": "Monkey D. Garp is a  from One Piece."
+      "description": "Monkey D. Garp is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece Film: Strong World",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece Film: Z",
+        "One Piece: Cry Heart",
+        "One Piece 3D2Y: Ace no Shi wo Koete! Luffy Nakama to no Chikai",
+        "One Piece: Episode of Sabo - 3 Kyoudai no Kizuna Kiseki no Saikai to Uketsugareru Ishi",
+        "One Piece: Adventure of Nebulandia"
+      ]
     },
     {
       "name": "Whitebeard",
@@ -249,7 +340,18 @@
       "_fetchFailed": false,
       "malId": 2751,
       "slug": "whitebeard",
-      "description": "Whitebeard is a  from One Piece."
+      "description": "Whitebeard is a  from One Piece.",
+      "role": "Supporting",
+      "relationships": [
+        "One Piece",
+        "One Piece Film: Strong World Episode 0",
+        "One Piece: Cry Heart",
+        "One Piece 3D2Y: Ace no Shi wo Koete! Luffy Nakama to no Chikai",
+        "One Piece: Episode of Sabo - 3 Kyoudai no Kizuna Kiseki no Saikai to Uketsugareru Ishi",
+        "One Piece: Kizamareru Rekishi! Gekidou no Shinkyuu Yonkou!",
+        "One Piece Fan Letter",
+        "One Piece: Gyojin Tou-hen"
+      ]
     }
   ],
   "factions": [
