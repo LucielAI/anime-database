@@ -108,7 +108,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/63870.jpg?s=3adaed92c13123a9649ccc0cc6551f7d",
       "malId": 80,
       "slug": "light-yagami",
-      "description": "Light Yagami is a  from Death Note."
+      "description": "Light Yagami is a  from Death Note.",
+      "role": "Main",
+      "relationships": [
+        "Death Note",
+        "Death Note: Rewrite"
+      ]
     },
     {
       "name": "L Lawliet",
@@ -126,7 +131,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/249647.jpg?s=95cecc21f3db10318c68a0863f0132c8",
       "malId": 71,
       "slug": "l-lawliet",
-      "description": "L Lawliet is a  from Death Note."
+      "description": "L Lawliet is a  from Death Note.",
+      "role": "Main",
+      "relationships": [
+        "Death Note",
+        "Death Note: Rewrite"
+      ]
     },
     {
       "name": "Ryuk",
@@ -144,7 +154,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/59125.jpg?s=e258ccc6e6f6ed00c837b5ae8bced941",
       "malId": 75,
       "slug": "ryuk",
-      "description": "Ryuk is a  from Death Note."
+      "description": "Ryuk is a  from Death Note.",
+      "role": "Main",
+      "relationships": [
+        "Death Note",
+        "Death Note: Rewrite"
+      ]
     },
     {
       "name": "Near",
@@ -162,7 +177,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/77339.jpg?s=e045ccd8110b534c2668b4e7a02ac22f",
       "malId": 464,
       "slug": "near",
-      "description": "Near is a  from Death Note."
+      "description": "Near is a  from Death Note.",
+      "role": "Supporting",
+      "relationships": [
+        "Death Note",
+        "Death Note: Rewrite"
+      ]
     },
     {
       "name": "Mello",
@@ -180,7 +200,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/31498.jpg?s=021fbd3f7ad05577fbbcd8cfb52e402b",
       "malId": 463,
       "slug": "mello",
-      "description": "Mello is a  from Death Note."
+      "description": "Mello is a  from Death Note.",
+      "role": "Supporting",
+      "relationships": [
+        "Death Note",
+        "Death Note: Rewrite"
+      ]
     },
     {
       "name": "Misa Amane",
@@ -198,7 +223,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/30971.jpg?s=0af596d087b34f6e05942dcae60aebae",
       "malId": 835,
       "slug": "misa-amane",
-      "description": "Misa Amane is a  from Death Note."
+      "description": "Misa Amane is a  from Death Note.",
+      "role": "Supporting",
+      "relationships": [
+        "Death Note",
+        "Death Note: Rewrite"
+      ]
     },
     {
       "name": "Teru Mikami",
@@ -216,7 +246,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/36951.jpg?s=e7018dcde90b6f70f192eb36b0e2c81b",
       "malId": 1904,
       "slug": "teru-mikami",
-      "description": "Teru Mikami is a  from Death Note."
+      "description": "Teru Mikami is a  from Death Note.",
+      "role": "Supporting",
+      "relationships": [
+        "Death Note",
+        "Death Note: Rewrite"
+      ]
     }
   ],
   "relationships": [

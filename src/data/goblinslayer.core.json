@@ -113,7 +113,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/523995.jpg?s=377d38330bee0abfd7b0ad909e1b3d71",
       "malId": 148622,
       "slug": "goblin-slayer",
-      "description": "Goblin Slayer is a  from Goblin Slayer."
+      "description": "Goblin Slayer is a  from Goblin Slayer.",
+      "role": "Main",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Priestess",
@@ -134,7 +141,14 @@
       ],
       "malId": 148623,
       "slug": "priestess",
-      "description": "Priestess is a  from Goblin Slayer."
+      "description": "Priestess is a  from Goblin Slayer.",
+      "role": "Main",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "High Elf Archer",
@@ -155,7 +169,14 @@
       ],
       "malId": 148956,
       "slug": "high-elf-archer",
-      "description": "High Elf Archer is a  from Goblin Slayer."
+      "description": "High Elf Archer is a  from Goblin Slayer.",
+      "role": "Main",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Dwarf Shaman",
@@ -172,7 +193,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/524000.jpg?s=25d8009da87fd29f81c1e7ac9fab81b7",
       "malId": 159323,
       "slug": "dwarf-shaman",
-      "description": "Dwarf Shaman is a  from Goblin Slayer."
+      "description": "Dwarf Shaman is a  from Goblin Slayer.",
+      "role": "Main",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Lizard Priest",
@@ -192,7 +220,14 @@
       ],
       "malId": 159322,
       "slug": "lizard-priest",
-      "description": "Lizard Priest is a  from Goblin Slayer."
+      "description": "Lizard Priest is a  from Goblin Slayer.",
+      "role": "Main",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Guild Girl",
@@ -212,7 +247,14 @@
       ],
       "malId": 148958,
       "slug": "guild-girl",
-      "description": "Guild Girl is a  from Goblin Slayer."
+      "description": "Guild Girl is a  from Goblin Slayer.",
+      "role": "Supporting",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Cow Girl",
@@ -232,7 +274,13 @@
       ],
       "malId": 154478,
       "slug": "cow-girl",
-      "description": "Cow Girl is a  from Goblin Slayer."
+      "description": "Cow Girl is a  from Goblin Slayer.",
+      "role": "Supporting",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Sword Maiden",
@@ -252,7 +300,12 @@
       ],
       "malId": 178477,
       "slug": "sword-maiden",
-      "description": "Sword Maiden is a  from Goblin Slayer."
+      "description": "Sword Maiden is a  from Goblin Slayer.",
+      "role": "Supporting",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Spearman",
@@ -272,7 +325,13 @@
         "Yaritsukai"
       ],
       "slug": "spearman",
-      "description": "Spearman is a  from Goblin Slayer."
+      "description": "Spearman is a  from Goblin Slayer.",
+      "role": "Supporting",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     },
     {
       "name": "Witch",
@@ -292,7 +351,13 @@
         "Majo"
       ],
       "slug": "witch",
-      "description": "Witch is a  from Goblin Slayer."
+      "description": "Witch is a  from Goblin Slayer.",
+      "role": "Supporting",
+      "relationships": [
+        "Goblin Slayer",
+        "Goblin Slayer: Goblin's Crown",
+        "Goblin Slayer II"
+      ]
     }
   ],
   "relationships": [

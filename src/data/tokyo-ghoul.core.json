@@ -156,7 +156,13 @@
       "malId": 87275,
       "role": "Main",
       "slug": "ken-kaneki",
-      "description": "Ken Kaneki is a Main from Tokyo Ghoul."
+      "description": "Ken Kaneki is a Main from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul:re",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     },
     {
       "name": "Kishou Arima",
@@ -175,7 +181,14 @@
       "malId": 111767,
       "role": "Antagonist",
       "slug": "kishou-arima",
-      "description": "Kishou Arima is a Antagonist from Tokyo Ghoul."
+      "description": "Kishou Arima is a Antagonist from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul: \"Jack\"",
+        "Tokyo Ghoul:re",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     },
     {
       "name": "Touka Kirishima",
@@ -194,7 +207,13 @@
       "malId": 87277,
       "role": "Main",
       "slug": "touka-kirishima",
-      "description": "Touka Kirishima is a Main from Tokyo Ghoul."
+      "description": "Touka Kirishima is a Main from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul:re",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     },
     {
       "name": "Rize Kamishiro",
@@ -232,7 +251,13 @@
       "malId": 112997,
       "role": "Antagonist",
       "slug": "eto-yoshimura",
-      "description": "Eto Yoshimura is a Antagonist from Tokyo Ghoul."
+      "description": "Eto Yoshimura is a Antagonist from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul:re",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     },
     {
       "name": "Koutarou Amon",
@@ -251,7 +276,13 @@
       "malId": 99671,
       "role": "Main",
       "slug": "koutarou-amon",
-      "description": "Koutarou Amon is a Main from Tokyo Ghoul."
+      "description": "Koutarou Amon is a Main from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul:re",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     },
     {
       "name": "Juuzou Suzuya",
@@ -289,7 +320,13 @@
       "malId": 99675,
       "role": "Main",
       "slug": "hinami-fueguchi",
-      "description": "Hinami Fueguchi is a Main from Tokyo Ghoul."
+      "description": "Hinami Fueguchi is a Main from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul:re",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     },
     {
       "name": "Shuu Tsukiyama",
@@ -308,7 +345,12 @@
       "malId": 112687,
       "role": "Main",
       "slug": "shuu-tsukiyama",
-      "description": "Shuu Tsukiyama is a Main from Tokyo Ghoul."
+      "description": "Shuu Tsukiyama is a Main from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     },
     {
       "name": "Koma Ihei",
@@ -327,7 +369,12 @@
       "malId": 110241,
       "role": "Main",
       "slug": "koma-ihei",
-      "description": "Koma Ihei is a Main from Tokyo Ghoul."
+      "description": "Koma Ihei is a Main from Tokyo Ghoul.",
+      "relationships": [
+        "Tokyo Ghoul",
+        "Tokyo Ghoul √A",
+        "Tokyo Ghoul:re 2nd Season"
+      ]
     }
   ],
   "factions": [

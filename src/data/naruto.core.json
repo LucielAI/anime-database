@@ -98,7 +98,17 @@
       "malId": 17,
       "role": "Main",
       "slug": "naruto-uzumaki",
-      "description": "Naruto Uzumaki is a Main from Naruto."
+      "description": "Naruto Uzumaki is a Main from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!",
+        "Naruto: Akaki Yotsuba no Clover wo Sagase",
+        "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!"
+      ]
     },
     {
       "name": "Sasuke Uchiha",
@@ -117,7 +127,17 @@
       "malId": 13,
       "role": "Main",
       "slug": "sasuke-uchiha",
-      "description": "Sasuke Uchiha is a Main from Naruto."
+      "description": "Sasuke Uchiha is a Main from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!",
+        "Naruto: Akaki Yotsuba no Clover wo Sagase",
+        "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai"
+      ]
     },
     {
       "name": "Kakashi Hatake",
@@ -136,7 +156,17 @@
       "malId": 85,
       "role": "Supporting",
       "slug": "kakashi-hatake",
-      "description": "Kakashi Hatake is a Supporting from Naruto."
+      "description": "Kakashi Hatake is a Supporting from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!",
+        "Naruto: Akaki Yotsuba no Clover wo Sagase",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai"
+      ]
     },
     {
       "name": "Shikamaru Nara",
@@ -155,7 +185,17 @@
       "malId": 2007,
       "role": "Supporting",
       "slug": "shikamaru-nara",
-      "description": "Shikamaru Nara is a Supporting from Naruto."
+      "description": "Shikamaru Nara is a Supporting from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai",
+        "Naruto: Shippuuden Movie 1"
+      ]
     },
     {
       "name": "Orochimaru",
@@ -174,7 +214,17 @@
       "malId": 2455,
       "role": "Main",
       "slug": "orochimaru",
-      "description": "Orochimaru is a Main from Naruto."
+      "description": "Orochimaru is a Main from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto: Shippuuden",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai",
+        "Naruto: Shippuuden - Shippuu! \"Konoha Gakuen\" Den",
+        "Naruto: Shippuuden Movie 2 - Kizuna",
+        "Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono",
+        "Naruto: The Cross Roads",
+        "Naruto x UT"
+      ]
     },
     {
       "name": "Tsunade",
@@ -193,7 +243,17 @@
       "malId": 2767,
       "role": "Supporting",
       "slug": "tsunade",
-      "description": "Tsunade is a Supporting from Naruto."
+      "description": "Tsunade is a Supporting from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+        "Naruto: Shippuuden Movie 1",
+        "Naruto: Shippuuden - Shippuu! \"Konoha Gakuen\" Den",
+        "Naruto: Shippuuden Movie 2 - Kizuna"
+      ]
     },
     {
       "name": "Jiraiya",
@@ -212,7 +272,17 @@
       "malId": 2423,
       "role": "Supporting",
       "slug": "jiraiya",
-      "description": "Jiraiya is a Supporting from Naruto."
+      "description": "Jiraiya is a Supporting from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+        "Naruto: Shippuuden Movie 2 - Kizuna",
+        "Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono",
+        "Naruto: Shippuuden Movie 4 - The Lost Tower"
+      ]
     },
     {
       "name": "Hiruzen Sarutobi",
@@ -232,7 +302,16 @@
       "malId": 7571,
       "role": "Supporting",
       "slug": "hiruzen-sarutobi",
-      "description": "Hiruzen Sarutobi is a Supporting from Naruto."
+      "description": "Hiruzen Sarutobi is a Supporting from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto: Shippuuden",
+        "Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono",
+        "Naruto: Shippuuden Movie 4 - The Lost Tower",
+        "Boruto: Naruto Next Generations",
+        "Road of Naruto"
+      ]
     },
     {
       "name": "Itachi Uchiha",
@@ -251,7 +330,17 @@
       "malId": 14,
       "role": "Main",
       "slug": "itachi-uchiha",
-      "description": "Itachi Uchiha is a Main from Naruto."
+      "description": "Itachi Uchiha is a Main from Naruto.",
+      "relationships": [
+        "Naruto",
+        "Naruto: Shippuuden",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai",
+        "Naruto: Shippuuden - Shippuu! \"Konoha Gakuen\" Den",
+        "Naruto: The Cross Roads",
+        "Naruto x UT",
+        "Naruto SD: Rock Lee no Seishun Full-Power Ninden",
+        "Naruto: Shippuuden Movie 6 - Road to Ninja"
+      ]
     },
     {
       "name": "Sakura Haruno",
@@ -270,7 +359,17 @@
       "icon": "Heart",
       "signatureMoment": "Landing the final blow against Kaguya — the moment that proved she was never just 'the one who needed protecting' on Team 7.",
       "description": "Medical ninja; Tsunade's apprentice; arc from civilian liability to battlefield determinant",
-      "slug": "sakura-haruno"
+      "slug": "sakura-haruno",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!",
+        "Naruto: Akaki Yotsuba no Clover wo Sagase",
+        "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!"
+      ]
     },
     {
       "name": "Rock Lee",
@@ -289,7 +388,17 @@
       "icon": "Zap",
       "signatureMoment": "Opening the Seventh Gate against Gaara — the moment he proved that the system had no category for what he was about to become.",
       "description": "Taijutsu-only specialist; Eight Gates system; proves hard work exceeds natural talent",
-      "slug": "rock-lee"
+      "slug": "rock-lee",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+        "Naruto: Shippuuden Movie 1",
+        "Naruto: Shippuuden - Shippuu! \"Konoha Gakuen\" Den",
+        "Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono"
+      ]
     },
     {
       "name": "Gaara",
@@ -308,7 +417,17 @@
       "icon": "Shield",
       "signatureMoment": "Choosing to protect the village that tried to kill him as a child — the ultimate act of redefining your relationship to the system that rejected you.",
       "description": "Kazekage; sand/water tailed beast host; redemption arc from weapon to leader",
-      "slug": "gaara"
+      "slug": "gaara",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai",
+        "Naruto: Shippuuden - Shippuu! \"Konoha Gakuen\" Den",
+        "Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono",
+        "Naruto x UT"
+      ]
     },
     {
       "name": "Kabuto Yakushi",
@@ -327,7 +446,17 @@
       "icon": "Bug",
       "signatureMoment": "Being trapped by his own Izanami — forced to relive his true identity after years of constructing a false one.",
       "description": "Edo Tensei orchestrator; sage mode user; Fourth Shinobi War catalyst",
-      "slug": "kabuto-yakushi"
+      "slug": "kabuto-yakushi",
+      "relationships": [
+        "Naruto",
+        "Naruto: Shippuuden",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai",
+        "Naruto: Shippuuden - Shippuu! \"Konoha Gakuen\" Den",
+        "Naruto: Shippuuden Movie 2 - Kizuna",
+        "Naruto: The Cross Roads",
+        "Naruto x UT",
+        "Naruto SD: Rock Lee no Seishun Full-Power Ninden"
+      ]
     },
     {
       "name": "Neji Hyuga",
@@ -346,7 +475,17 @@
       "icon": "Eye",
       "signatureMoment": "Dying to protect Hinata and Naruto — choosing to use his 'fate' position to enable others rather than accept it as a limitation.",
       "description": "Byakugan bearer; branch seal system; fate debate culminating in war contribution",
-      "slug": "neji-hyuga"
+      "slug": "neji-hyuga",
+      "relationships": [
+        "Naruto",
+        "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+        "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+        "Naruto: Shippuuden",
+        "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+        "Naruto: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo! - Konoha no Sato no Dai Undoukai",
+        "Naruto: Shippuuden Movie 1",
+        "Naruto: Shippuuden - Shippuu! \"Konoha Gakuen\" Den"
+      ]
     },
     {
       "name": "Pain (Nagato)",
@@ -365,7 +504,16 @@
       "icon": "Target",
       "signatureMoment": "Destroying Konoha to prove his thesis — and being proven wrong by Naruto's choice to forgive.",
       "description": "Akatsuki leader; former student of Jiraiya; attack on Konoha as systemic rupture",
-      "slug": "pain-(nagato)"
+      "slug": "pain-(nagato)",
+      "relationships": [
+        "Naruto",
+        "Naruto: Shippuuden",
+        "Naruto x UT",
+        "Naruto SD: Rock Lee no Seishun Full-Power Ninden",
+        "Naruto: Shippuuden Movie 6 - Road to Ninja",
+        "The Last: Naruto the Movie",
+        "Road of Naruto"
+      ]
     }
   ],
   "factions": [

@@ -112,7 +112,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/299404.jpg?s=6a448d3702c1d3185ed7ad8f0b8484f0",
       "malId": 117909,
       "slug": "izuku-midoriya",
-      "description": "Izuku Midoriya is a  from My Hero Academia."
+      "description": "Izuku Midoriya is a  from My Hero Academia.",
+      "role": "Main",
+      "relationships": [
+        "Boku no Hero Academia",
+        "Boku no Hero Academia 2nd Season",
+        "Boku no Hero Academia: Sukue! Kyuujo Kunren!",
+        "Boku no Hero Academia: Hero Note",
+        "Boku no Hero Academia: Training of the Dead",
+        "Boku no Hero Academia 3rd Season",
+        "Boku no Hero Academia the Movie 1: Futari no Hero",
+        "Boku no Hero Academia 4th Season"
+      ]
     },
     {
       "name": "All Might",
@@ -129,7 +140,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/310613.jpg?s=2bb273c38247c38003176367645e6488",
       "malId": 117921,
       "slug": "all-might",
-      "description": "All Might is a  from My Hero Academia."
+      "description": "All Might is a  from My Hero Academia.",
+      "role": "Main",
+      "relationships": [
+        "Boku no Hero Academia",
+        "Boku no Hero Academia 2nd Season",
+        "Boku no Hero Academia: Sukue! Kyuujo Kunren!",
+        "Boku no Hero Academia: Hero Note",
+        "Boku no Hero Academia: Training of the Dead",
+        "Boku no Hero Academia 3rd Season",
+        "Boku no Hero Academia the Movie 1: Futari no Hero",
+        "Boku no Hero Academia 4th Season"
+      ]
     },
     {
       "name": "All For One",
@@ -146,7 +168,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/370136.jpg?s=9a8bbc134d9c1719cacb71c58d863e72",
       "malId": 141358,
       "slug": "all-for-one",
-      "description": "All For One is a  from My Hero Academia."
+      "description": "All For One is a  from My Hero Academia.",
+      "role": "Supporting",
+      "relationships": [
+        "Boku no Hero Academia",
+        "Boku no Hero Academia 2nd Season",
+        "Boku no Hero Academia 3rd Season",
+        "Boku no Hero Academia the Movie 1: Futari no Hero",
+        "Boku no Hero Academia 4th Season",
+        "Boku no Hero Academia the Movie 1: Futari no Hero Specials",
+        "Boku no Hero Academia 5th Season",
+        "Boku no Hero Academia 6th Season"
+      ]
     },
     {
       "name": "Tomura Shigaraki",
@@ -163,7 +196,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/272139.jpg?s=ee7d051f5ff04bd4fe6830e0d268cb10",
       "malId": 122103,
       "slug": "tomura-shigaraki",
-      "description": "Tomura Shigaraki is a  from My Hero Academia."
+      "description": "Tomura Shigaraki is a  from My Hero Academia.",
+      "role": "Supporting",
+      "relationships": [
+        "Boku no Hero Academia",
+        "Boku no Hero Academia 2nd Season",
+        "Boku no Hero Academia: Hero Note",
+        "Boku no Hero Academia 3rd Season",
+        "Boku no Hero Academia 4th Season",
+        "Boku no Hero Academia the Movie 2: Heroes:Rising",
+        "Boku no Hero Academia 5th Season",
+        "Boku no Hero Academia 6th Season"
+      ]
     },
     {
       "name": "Enji Todoroki",
@@ -248,7 +292,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/301855.jpg?s=30bde8aa7f840805f22ab894a1eca521",
       "malId": 117915,
       "slug": "shouta-aizawa",
-      "description": "Shouta Aizawa is a  from My Hero Academia."
+      "description": "Shouta Aizawa is a  from My Hero Academia.",
+      "role": "Supporting",
+      "relationships": [
+        "Boku no Hero Academia",
+        "Boku no Hero Academia 2nd Season",
+        "Boku no Hero Academia: Sukue! Kyuujo Kunren!",
+        "Boku no Hero Academia: Hero Note",
+        "Boku no Hero Academia: Training of the Dead",
+        "Boku no Hero Academia 3rd Season",
+        "Boku no Hero Academia 4th Season",
+        "Boku no Hero Academia the Movie 2: Heroes:Rising"
+      ]
     },
     {
       "name": "Touya Todoroki",

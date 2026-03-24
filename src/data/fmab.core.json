@@ -118,7 +118,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/72533.jpg?s=d38cf4e2e5cbb46ddaf2b23345a03eae",
       "malId": 11,
       "slug": "edward-elric",
-      "description": "Edward Elric is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "Edward Elric is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Main",
+      "relationships": [
+        "Fullmetal Alchemist",
+        "Fullmetal Alchemist: The Conqueror of Shamballa",
+        "Fullmetal Alchemist: Reflections",
+        "Fullmetal Alchemist: Premium Collection",
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood Specials",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou",
+        "Fullmetal Alchemist: The Sacred Star of Milos"
+      ]
     },
     {
       "name": "Alphonse Elric",
@@ -135,7 +146,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/54265.jpg?s=65c1a674adae3d7c5740d5711517285a",
       "malId": 12,
       "slug": "alphonse-elric",
-      "description": "Alphonse Elric is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "Alphonse Elric is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Main",
+      "relationships": [
+        "Fullmetal Alchemist",
+        "Fullmetal Alchemist: The Conqueror of Shamballa",
+        "Fullmetal Alchemist: Reflections",
+        "Fullmetal Alchemist: Premium Collection",
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood Specials",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou",
+        "Fullmetal Alchemist: The Sacred Star of Milos"
+      ]
     },
     {
       "name": "Father",
@@ -155,7 +177,12 @@
       ],
       "malId": 15542,
       "slug": "father",
-      "description": "Father is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "Father is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Supporting",
+      "relationships": [
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou"
+      ]
     },
     {
       "name": "Roy Mustang",
@@ -172,7 +199,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/510227.jpg?s=a9880198a26475fa0555f4690bab8cd3",
       "malId": 68,
       "slug": "roy-mustang",
-      "description": "Roy Mustang is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "Roy Mustang is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Supporting",
+      "relationships": [
+        "Fullmetal Alchemist",
+        "Fullmetal Alchemist: The Conqueror of Shamballa",
+        "Fullmetal Alchemist: Reflections",
+        "Fullmetal Alchemist: Premium Collection",
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood Specials",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou",
+        "Fullmetal Alchemist: The Sacred Star of Milos"
+      ]
     },
     {
       "name": "King Bradley",
@@ -189,7 +227,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/62053.jpg?s=181ba72d4c6ba5605bbfb63f1812f876",
       "malId": 5103,
       "slug": "king-bradley",
-      "description": "King Bradley is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "King Bradley is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Supporting",
+      "relationships": [
+        "Fullmetal Alchemist",
+        "Fullmetal Alchemist: Premium Collection",
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou"
+      ]
     },
     {
       "name": "Scar",
@@ -206,7 +251,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/31591.jpg?s=0f4cfb335f3a86eede76abc630a3fe9e",
       "malId": 66,
       "slug": "scar",
-      "description": "Scar is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "Scar is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Supporting",
+      "relationships": [
+        "Fullmetal Alchemist",
+        "Fullmetal Alchemist: Reflections",
+        "Fullmetal Alchemist: Premium Collection",
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou"
+      ]
     },
     {
       "name": "Van Hohenheim",
@@ -223,7 +276,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/80676.jpg?s=9ea1723c8b75fa22716cabfd858d2497",
       "malId": 9792,
       "slug": "van-hohenheim",
-      "description": "Van Hohenheim is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "Van Hohenheim is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Supporting",
+      "relationships": [
+        "Fullmetal Alchemist",
+        "Fullmetal Alchemist: The Conqueror of Shamballa",
+        "Fullmetal Alchemist: Reflections",
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou"
+      ]
     },
     {
       "name": "Ling Yao",
@@ -240,7 +301,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/62602.jpg?s=c1c34cb6b91640be0fc8a4c4aadc14a1",
       "malId": 3293,
       "slug": "ling-yao",
-      "description": "Ling Yao is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "Ling Yao is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Supporting",
+      "relationships": [
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou"
+      ]
     },
     {
       "name": "May Chang",
@@ -261,7 +327,12 @@
       ],
       "malId": 15532,
       "slug": "may-chang",
-      "description": "May Chang is a  from Fullmetal Alchemist: Brotherhood."
+      "description": "May Chang is a  from Fullmetal Alchemist: Brotherhood.",
+      "role": "Supporting",
+      "relationships": [
+        "Fullmetal Alchemist: Brotherhood",
+        "Fullmetal Alchemist: Brotherhood - 4-koma Gekijou"
+      ]
     }
   ],
   "relationships": [

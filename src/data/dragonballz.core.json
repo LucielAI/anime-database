@@ -175,7 +175,17 @@
       "malId": 1855,
       "role": "Main",
       "slug": "vegeta",
-      "description": "Vegeta is a Main from Dragon Ball Z."
+      "description": "Vegeta is a Main from Dragon Ball Z.",
+      "relationships": [
+        "Dragon Ball GT",
+        "Dragon Ball Z",
+        "Dragon Ball Z Movie 06: Gekitotsu!! 100-oku Power no Senshi-tachi",
+        "Dragon Ball Z Movie 07: Kyokugen Battle!! Sandai Super Saiyajin",
+        "Dragon Ball Z Movie 08: Moetsukiro!! Nessen, Ressen, Chougekisen",
+        "Dragon Ball Z Movie 09: Ginga Girigiri!! Bucchigiri no Sugoi Yatsu",
+        "Dragon Ball Z Movie 12: Fukkatsu no Fusion!! Gokuu to Vegeta",
+        "Dragon Ball Z Movie 13: Ryuuken Bakuhatsu!! Gokuu ga Yaraneba Dare ga Yaru"
+      ]
     },
     {
       "name": "Frieza",
@@ -213,7 +223,17 @@
       "malId": 1879,
       "role": "Antagonist",
       "slug": "cell",
-      "description": "Cell is a Antagonist from Dragon Ball Z."
+      "description": "Cell is a Antagonist from Dragon Ball Z.",
+      "relationships": [
+        "Dragon Ball GT",
+        "Dragon Ball Z",
+        "Dragon Ball Kai",
+        "Dragon Ball Z: Atsumare! Gokuu World",
+        "Dragon Ball Kai: Mirai ni Heiwa wo! Goku no Tamashii yo Eien ni",
+        "Dragon Ball Z Movie 14: Kami to Kami",
+        "Dragon Ball Z: Zenbu Misemasu Toshi Wasure Dragon Ball Z!",
+        "Dragon Ball Kai (2014)"
+      ]
     },
     {
       "name": "Majin Buu",
@@ -232,7 +252,17 @@
       "malId": 1893,
       "role": "Antagonist",
       "slug": "majin-buu",
-      "description": "Majin Buu is a Antagonist from Dragon Ball Z."
+      "description": "Majin Buu is a Antagonist from Dragon Ball Z.",
+      "relationships": [
+        "Dragon Ball GT",
+        "Dragon Ball Z",
+        "Dragon Ball: Ossu! Kaettekita Son Gokuu to Nakama-tachi!!",
+        "Dragon Ball Z Movie 14: Kami to Kami",
+        "Dragon Ball Kai (2014)",
+        "Dragon Ball Super",
+        "Super Dragon Ball Heroes",
+        "Dragon Ball Daima"
+      ]
     },
     {
       "name": "Gohan",
@@ -270,7 +300,17 @@
       "malId": 914,
       "role": "Main",
       "slug": "piccolo",
-      "description": "Piccolo is a Main from Dragon Ball Z."
+      "description": "Piccolo is a Main from Dragon Ball Z.",
+      "relationships": [
+        "Dragon Ball",
+        "Dragon Ball GT",
+        "Dragon Ball Z",
+        "Dragon Ball Z Movie 01: Ora no Gohan wo Kaese!!",
+        "Dragon Ball Z Movie 02: Kono Yo de Ichiban Tsuyoi Yatsu",
+        "Dragon Ball Z Movie 03: Chikyuu Marugoto Choukessen",
+        "Dragon Ball Z Movie 04: Super Saiyajin da Son Gokuu",
+        "Dragon Ball Z Movie 05: Tobikkiri no Saikyou tai Saikyou"
+      ]
     },
     {
       "name": "Trunks",
@@ -289,7 +329,17 @@
       "malId": 1925,
       "role": "Main",
       "slug": "trunks",
-      "description": "Trunks is a Main from Dragon Ball Z."
+      "description": "Trunks is a Main from Dragon Ball Z.",
+      "relationships": [
+        "Dragon Ball GT",
+        "Dragon Ball Z",
+        "Dragon Ball Z Movie 09: Ginga Girigiri!! Bucchigiri no Sugoi Yatsu",
+        "Dragon Ball Z Movie 10: Kiken na Futari! Super Senshi wa Nemurenai",
+        "Dragon Ball Z Movie 11: Super Senshi Gekiha!! Katsu no wa Ore da",
+        "Dragon Ball Z Movie 12: Fukkatsu no Fusion!! Gokuu to Vegeta",
+        "Dragon Ball Z Movie 13: Ryuuken Bakuhatsu!! Gokuu ga Yaraneba Dare ga Yaru",
+        "Dragon Ball: Ossu! Kaettekita Son Gokuu to Nakama-tachi!!"
+      ]
     },
     {
       "name": "Krillin",
