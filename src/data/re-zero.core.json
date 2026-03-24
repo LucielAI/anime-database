@@ -798,5 +798,6 @@
       "sectionId": "faction-map-heading",
       "tabLabel": "Faction Map"
     }
-  ]
+  ],
+  "systemType": "contract-subscription"
 }

@@ -42,7 +42,7 @@ export function trackCTAClick(url, universe, phase) {
 
   // Backup: console log for debugging
   if (import.meta.env.DEV) {
-    console.log('[Analytics] CTA Click:', { url, universe, phase, ...data })
+    console.debug('[Analytics] CTA Click:', { url, universe, phase, ...data })
   }
 
   // Optional: send beacon for reliable delivery
@@ -77,7 +77,7 @@ export function trackOpenSystem(tabIndex, universe, tabName) {
   }
 
   if (import.meta.env.DEV) {
-    console.log('[Analytics] Open System:', { tabIndex, universe, tabName, ...data })
+    console.debug('[Analytics] Open System:', { tabIndex, universe, tabName, ...data })
   }
 }
 
@@ -106,7 +106,7 @@ export function trackScrollDepth(currentDepth) {
     }
 
     if (import.meta.env.DEV) {
-      console.log('[Analytics] Scroll Depth:', currentDepth)
+      console.debug('[Analytics] Scroll Depth:', currentDepth)
     }
   }
 }
@@ -133,7 +133,7 @@ export function trackHeroVisibility(isVisible, duration = 0) {
   }
 
   if (import.meta.env.DEV) {
-    console.log('[Analytics] Hero Visibility:', { isVisible, duration: `${duration}s`, ...data })
+    console.debug('[Analytics] Hero Visibility:', { isVisible, duration: `${duration}s`, ...data })
   }
 }
 
@@ -158,7 +158,7 @@ export function trackShareFrame(visible) {
   }
 
   if (import.meta.env.DEV) {
-    console.log('[Analytics] Share Frame:', { visible, ...data })
+    console.debug('[Analytics] Share Frame:', { visible, ...data })
   }
 }
 

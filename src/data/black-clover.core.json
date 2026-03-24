@@ -890,5 +890,6 @@
       "sectionId": "counterplay-heading",
       "tabLabel": "Counterplay"
     }
-  ]
+  ],
+  "systemType": "magic-hierarchy"
 }

@@ -571,5 +571,6 @@
       "loreDesc": "Nagi displays elite potential with minimal training investment, suggesting raw talent has a genetic component.",
       "systemDesc": "Talent exception that challenges Blue Locks purely training-based optimization — not all variables are equal inputs."
     }
-  ]
+  ],
+  "systemType": "counter-tree"
 }

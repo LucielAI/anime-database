@@ -613,5 +613,6 @@
     "thesis": "Hero Association's rank hierarchy tries to categorize Saitama, who simply overrides every edge in the network.",
     "primarySystemType": "entity_db",
     "imageUrl": "https://cdn.myanimelist.net/images/anime/10/72281l.jpg"
-  }
+  },
+  "systemType": "absolute-strength"
 }
