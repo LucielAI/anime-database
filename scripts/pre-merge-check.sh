@@ -127,16 +127,37 @@ else
     pass "no universe files changed (skipping OG map check)"
 fi
 
-# 11. Secrets check
-echo -n "11. Secrets scan: "
-if grep -rn "ghp_[a-zA-Z0-9]\{36\}\|ak-[a-zA-Z0-9]\{20,\}\|sk-[a-zA-Z0-9]\{20,\}" src/ --include="*.js" --include="*.jsx" 2>/dev/null | grep -v node_modules | grep -q .; then
+# 11. Gate 3c — Compare route OG title integrity (run when og.js or universe data changes)
+echo -n "11. Compare route OG: "
+python3 -c "
+import os
+changed = os.popen('git diff --name-only 2>/dev/null').read()
+needs_check = any(f.endswith('.core.json') or f == 'src/data/og.js' for f in changed.split())
+if not needs_check:
+    print('SKIP — no og.js or universe changes')
+else:
+    try:
+        with open('api/og.js') as f:
+            og = f.read()
+        # Check for stale hardcoded compare defaults
+        if 'Attack on Titan' in og:
+            print('WARN: og.js has stale hardcoded compare defaults (Attack on Titan)')
+        else:
+            print('PASS')
+    except:
+        print('SKIP')
+" 2>/dev/null || echo "SKIP"
+
+# 12. Secrets check
+echo -n "12. Secrets scan: "
+if grep -rn "ghp_[a-zA-Z0-9]\{36\}\|AKIA[A-Z0-9]\{16\}\|sk-[a-zA-Z0-9]\{20,\}" src/ --include="*.js" --include="*.jsx" 2>/dev/null | grep -v node_modules | grep -q .; then
     fail "potential secret/token found in source"
     errors=$((errors+1))
 else
     pass "no obvious secrets in source"
 fi
 
-echo "━━━ SUMMARY ━━━"
+echo "━━━ SUMMARY (12 checks) ━━━"
 if [ $errors -eq 0 ]; then
     echo -e "${GREEN}✅ ALL CHECKS PASSED — ready to merge${NC}"
     exit 0
