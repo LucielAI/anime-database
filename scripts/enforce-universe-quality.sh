@@ -228,6 +228,61 @@ if [ $? -ne 0 ]; then
 fi
 
 # ============================================================
+# GATE 2c: Cross-universe character dedup
+# ============================================================
+echo ""
+echo "[GATE 2c] Cross-universe character dedup..."
+
+python3 << 'PYEOF'
+import json, os, sys
+from collections import defaultdict
+
+repo = '/data/workspace/anime-database/src/data'
+core_files = [f for f in os.listdir(repo) if f.endswith('.core.json')]
+
+# Build malId -> set(of universe slugs) map
+malId_to_universes = defaultdict(set)
+
+for fname in core_files:
+    fpath = f'{repo}/{fname}'
+    slug = fname.replace('.core.json', '')
+    with open(fpath) as f:
+        d = json.load(f)
+    for c in d.get('characters', []):
+        malId = c.get('malId')
+        if malId is not None:
+            malId_to_universes[malId].add(slug)
+
+# Find cross-universe duplicates (same malId in DIFFERENT universe files)
+cross_universe_dups = {mid: slugs for mid, slugs in malId_to_universes.items() if len(slugs) > 1}
+
+if cross_universe_dups:
+    print('FAIL: Character malIds found in multiple universes:')
+    for mid, slugs in sorted(cross_universe_dups.items()):
+        # Find character names in each universe
+        details = []
+        for fname in core_files:
+            fpath = f'{repo}/{fname}'
+            slug = fname.replace('.core.json', '')
+            if slug not in slugs:
+                continue
+            with open(fpath) as f:
+                d = json.load(f)
+            for c in d.get('characters', []):
+                if c.get('malId') == mid:
+                    details.append(f'{c.get("name","?")}@{slug}')
+        print(f'  malId={mid}: {", ".join(sorted(details))}')
+    sys.exit(1)
+else:
+    print(f'  PASS: All {len(core_files)} universes have unique character malIds (no cross-universe contamination)')
+PYEOF
+
+if [ $? -ne 0 ]; then
+    echo "❌ BLOCKED: Cross-universe character duplication found"
+    FAILED=1
+fi
+
+# ============================================================
 # GATE 3: Template Content Check
 # ============================================================
 echo ""
