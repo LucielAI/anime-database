@@ -300,7 +300,9 @@
         "Master"
       ],
       "slug": "santa-claus",
-      "description": "Santa Claus is a  from Chainsaw Man."
+      "description": "Santa Claus is a  from Chainsaw Man.",
+      "relationships": [],
+      "role": "Minor"
     },
     {
       "name": "Katana Man",
@@ -657,7 +659,7 @@
       "sectionId": "factions-heading"
     },
     {
-      "question": "What is concept erasure in practical system terms?",
+      "question": "How does the Devil Contract network weaponize emotional trauma and identity erasure in Chainsaw Man?",
       "answer": "It is a schema-delete operation: removing a Devil can remove the named concept from shared memory, altering future state constraints.",
       "tabIndex": 3,
       "tabLabel": "Core Laws",

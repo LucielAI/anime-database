@@ -156,7 +156,8 @@
       "malId": 1831,
       "role": "Main",
       "slug": "goku",
-      "description": "Goku is a Main from Dragon Ball Z."
+      "description": "Goku is a Main from Dragon Ball Z.",
+      "relationships": []
     },
     {
       "name": "Vegeta",
@@ -204,7 +205,8 @@
       "malId": 1877,
       "role": "Antagonist",
       "slug": "frieza",
-      "description": "Frieza is a Antagonist from Dragon Ball Z."
+      "description": "Frieza is a Antagonist from Dragon Ball Z.",
+      "relationships": []
     },
     {
       "name": "Cell",
@@ -281,7 +283,8 @@
       "malId": 1845,
       "role": "Main",
       "slug": "gohan",
-      "description": "Gohan is a Main from Dragon Ball Z."
+      "description": "Gohan is a Main from Dragon Ball Z.",
+      "relationships": []
     },
     {
       "name": "Piccolo",
@@ -358,7 +361,8 @@
       "malId": 1833,
       "role": "Main",
       "slug": "krillin",
-      "description": "Krillin is a Main from Dragon Ball Z."
+      "description": "Krillin is a Main from Dragon Ball Z.",
+      "relationships": []
     },
     {
       "name": "Broly",
@@ -377,7 +381,8 @@
       "malId": 22865,
       "role": "Antagonist",
       "slug": "broly",
-      "description": "Broly is a Antagonist from Dragon Ball Z."
+      "description": "Broly is a Antagonist from Dragon Ball Z.",
+      "relationships": []
     }
   ],
   "factions": [

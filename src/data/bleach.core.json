@@ -214,7 +214,10 @@
       "malId": 1200,
       "role": "Antagonist",
       "slug": "ulquiorra-cifer",
-      "description": "Ulquiorra Cifer is a Antagonist from Bleach."
+      "description": "Ulquiorra Cifer is a Antagonist from Bleach.",
+      "relationships": [
+        "Bleach"
+      ]
     },
     {
       "name": "Byakuya Kuchiki",
@@ -262,7 +265,8 @@
       "malId": 1211,
       "role": "Main",
       "slug": "kenpachi-zaraki",
-      "description": "Kenpachi Zaraki is a Main from Bleach."
+      "description": "Kenpachi Zaraki is a Main from Bleach.",
+      "relationships": []
     },
     {
       "name": "Grimmjow Jaggerjack",
@@ -281,7 +285,8 @@
       "malId": 1199,
       "role": "Antagonist",
       "slug": "grimmjow-jaggerjack",
-      "description": "Grimmjow Jaggerjack is a Antagonist from Bleach."
+      "description": "Grimmjow Jaggerjack is a Antagonist from Bleach.",
+      "relationships": []
     },
     {
       "name": "Rukia Kuchiki",

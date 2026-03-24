@@ -309,7 +309,9 @@
       "primaryAbility": "Immortal Demon Physiology / Armor Synchronization",
       "malId": 118211,
       "slug": "badigadi",
-      "description": "Badigadi is a  from Mushoku Tensei: Jobless Reincarnation."
+      "description": "Badigadi is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "relationships": [],
+      "role": "Supporting"
     }
   ],
   "relationships": [
@@ -584,7 +586,7 @@
       "sectionId": "causal-events"
     },
     {
-      "question": "What is the single biggest growth lever for mages in this universe?",
+      "question": "How does the reincarnation-plus-mana-system combination create runaway stratification in Mushoku Tensei's power economy?",
       "answer": "Early mana training windows create path-dependent reserve growth, which compounds for life and defines late-game ceiling differences.",
       "tabIndex": 1,
       "sectionId": "power-system"

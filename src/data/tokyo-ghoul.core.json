@@ -232,7 +232,8 @@
       "malId": 87391,
       "role": "Main",
       "slug": "rize-kamishiro",
-      "description": "Rize Kamishiro is a Main from Tokyo Ghoul."
+      "description": "Rize Kamishiro is a Main from Tokyo Ghoul.",
+      "relationships": []
     },
     {
       "name": "Eto Yoshimura",
@@ -301,7 +302,8 @@
       "malId": 115869,
       "role": "Main",
       "slug": "juuzou-suzuya",
-      "description": "Juuzou Suzuya is a Main from Tokyo Ghoul."
+      "description": "Juuzou Suzuya is a Main from Tokyo Ghoul.",
+      "relationships": []
     },
     {
       "name": "Hinami Fueguchi",
