@@ -1,6 +1,6 @@
 {
   "anime": "Fire Force",
-  "tagline": "Fire Force — spontaneous combustion meets Breathing arts as Company 8 fights to save Tokyo.",
+  "tagline": "Fire Force — spontaneous combustion turns humans into fire monsters. Company 8 fights to stop the flames and save Tokyo.",
   "malId": 38671,
   "themeColors": {
     "primary": "#dc2626",
@@ -25,7 +25,7 @@
   "introductionSummary": "Fire Force is set in a world where spontaneous human combustion creates 'Infernals'—monsters made of living flame—and only special fire departments with pyrokinetic abilities can contain them. Shinra Kusakabe joins Company 8 to find the truth about his mother's death and his own mysterious Blue Fire feet. The power system is Breathing—each Fire Soldier develops a specific flame type that has defined strengths and weaknesses against other types, creating a tactical counter-tree where knowing your opponent's Breath type determines whether you live or die.",
   "aiInsights": {
     "casual": "People randomly explode into fire monsters, and only teams of firefighters who can also shoot fire can stop them. Shinra's got blue foot-fires that are somehow special, and the whole thing ties back to some ancient burning god.",
-    "deep": "Fire Force runs a rock-paper-scissors power system where each of the eight Fire Breathing types directly counters another, creating a closed-loop counter balance. The Great Cataclysm and the Evangelist's plan exploit this by forcing a predetermined combat outcome through type-matching. Shinra's Adolla Burst—the elusive 'ninth' Breath—breaks the counter logic by operating outside the established type chart, which is why he's simultaneously the most valuable and most dangerous person in the system."
+    "deep": "The Evangelist controls the rate of spontaneous combustion across Tokyo, creating a strategic variable no single Company can counter without coordination. Company 8 operates as the primary investigative unit, tracking Infernal conversion patterns to predict where the Evangelist will strike next."
   },
   "powerSystem": [
     {
@@ -105,7 +105,7 @@
   "characters": [
     {
       "name": "Shinra Kusakabe",
-      "title": "Soleil / Blue Fire User",
+      "title": "Devil Foot / Blue Fire User",
       "rank": "Rookie (Special)",
       "dangerLevel": 7,
       "loreBio": "A rookie firefighter with Blue Fire feet who joins Company 8 to find the truth about his mother's involvement in the Great Cataclysm.",
@@ -135,10 +135,10 @@
     },
     {
       "name": "Arthur Boyle",
-      "title": "Ecclesius / Sword Breath User",
+      "title": "Sword / Fire Swordsman",
       "rank": "Fire Soldier",
       "dangerLevel": 6,
-      "loreBio": "A self-described 'sword' expert whose Breath type manifests as actual swords made of fire—useless in most situations, devastating in the right one.",
+      "loreBio": "Self-described knight who fights with fire swords and unwavering conviction. Joined Company 8 because they fight for justice. His belief in his own righteousness is his primary weapon — he never questions whether his enemies deserve saving.",
       "systemBio": "A specialist node with extremely narrow use cases that becomes a critical counter against specific Infernal types.",
       "gradientFrom": "slate-900",
       "gradientTo": "yellow-900",
@@ -225,7 +225,7 @@
     },
     {
       "name": "Akitaru Obi",
-      "title": "Company 8 Captain / Ash Breath",
+      "title": "Company 8 Captain / Former Professional Boxer",
       "rank": "Company Captain",
       "dangerLevel": 6,
       "loreBio": "Company 8 Captain who fights with brute force and hot-blooded determination. Former professional boxer who joined the Fire Force after witnessing his brothers death in a spontaneous combustion incident. Commands Company 8 with reckless courage.",
@@ -385,28 +385,25 @@
       "description": "Elite Special Fire Force unit operating in Tokyo. Fights infernals caused by spontaneous combustion and investigates the phenomenon. Akitaru Obi captains the 8th. Mixed-technique composition gives structural flexibility that single-element units lack."
     },
     {
-      "name": "Tokyo Imperial Fire Defense",
+      "name": "Holy Sol",
       "role": "systemic",
       "loreDesc": "The official fire defense network with eight companies each specializing in different fire types.",
-      "systemDesc": "Institutional response infrastructure implementing the typed counter-system."
-    },
-    {
-      "name": "Holy Soly D领",
-      "role": "neutral",
-      "loreDesc": "The Church whose leadership is revealed to be complicit in the Great Cataclysm cover-up.",
-      "systemDesc": "Institutional node with information access to the system's founding events that must be protected."
+      "systemDesc": "Institutional response infrastructure implementing the typed counter-system.",
+      "description": "Religious organization whose clergy fight alongside the Special Fire Force. The Sisters of the Holy Sol — including Iris — operate as combat nuns, using faith as motivation alongside pyrokinetic ability. The organization is connected to the Evangelist but its rank-and-file members are unaware."
     },
     {
       "name": "Infernal Army",
       "role": "antagonist",
       "loreDesc": "An army of Infernalized humans led by Leonardo Burns, representing the catastrophic failure state of spontaneous combustion.",
-      "systemDesc": "Hostile node cluster representing the corruption cascade that threatens to overwhelm the human response network."
+      "systemDesc": "Hostile node cluster representing the corruption cascade that threatens to overwhelm the human response network.",
+      "description": "The Evangelist's military force composed of converted Infernals. Led by Leonardo Burns, the Infernal Knights retain intelligence and serve as the primary combat arm of the Evangelist's plan to remake humanity. Operates as an opposing faction to Company 8."
     },
     {
       "name": "The Evangelist",
       "role": "antagonist",
       "loreDesc": "A mysterious figure planning to recreate the Great Cataclysm, whose true goals remain unclear.",
-      "systemDesc": "Root manipulation node controlling the cascade of Infernalization events toward a predetermined endpoint."
+      "systemDesc": "Root manipulation node controlling the cascade of Infernalization events toward a predetermined endpoint.",
+      "description": "The primary antagonist and architect of the Great Fire Cataclysm. Seeks to reshape humanity through spontaneous combustion. Functions as the central antagonistic force driving the conflict with the Special Fire Force."
     }
   ],
   "rules": [
@@ -449,46 +446,37 @@
   ],
   "counterplay": [
     {
-      "attacker": "Any Fire Type",
-      "defender": "Type Counter Selection",
-      "mechanic": "Knowing the opponent's Breath type lets you select the correct counter type, negating their fire advantage.",
-      "loreDesc": "Hinawa's reconnaissance is critical because getting the type wrong means the fight is already lost.",
-      "systemDesc": "Intelligence-gathering as primary combat multiplier in a rock-paper-scissors system."
-    },
-    {
-      "attacker": "Adolla Burst (Blue Fire)",
-      "defender": "Nothing (Uncounterable)",
-      "mechanic": "Blue Fire operates outside the counter system, meaning no type can defensively counter it.",
-      "loreDesc": "The only defense against Shinra's Blue Fire is to not be in its way.",
-      "systemDesc": "Systemic counter-immunity that makes the Adolla Burst node the ultimate offensive asset."
-    },
-    {
-      "attacker": "Infernal Corruption Spread",
-      "defender": "Rapid Infernal Termination",
-      "mechanic": "Company teams must quickly terminate Infernals before their burning presence triggers secondary Infernalizations.",
-      "loreDesc": "Every second an Infernal burns, the chance of more people combusting increases.",
-      "systemDesc": "Race-condition defense where slow response compounds the threat exponentially."
-    },
-    {
-      "id": "fire-vs-water-counter",
-      "name": "Water Breath Counters Fire Breath",
-      "attacker": "Water Breather",
-      "defender": "Fire Breather",
-      "mechanic": "Type advantage: Water Breath cancels Fire Breath on contact",
-      "loreDesc": "The rock-paper-scissors Breath type chart gives Water a direct advantage over Fire, making water-type users the optimal counter against fire-based opponents.",
-      "systemDesc": "Type-advantage counter-tree: Water Breath occupies the counter position against Fire Breath in the eight-type chart. Ignition timing and output level determine whether the counter succeeds.",
+      "id": "third-gen-vs-second-gen",
+      "name": "Third Generation vs Second Generation Ignition",
+      "attacker": "Third Generation Pyrokinetic",
+      "defender": "Second Generation Infernal",
+      "mechanic": "Third Generation ignites at 25% power — faster startup but lower peak. Second Generation has higher output but slower ignition. Fast ignition can terminate the target before full power activation.",
+      "loreDesc": "Third Generation pyrokinetics sacrifice maximum output for ignition speed. This trade-off means they win against Second Generation Infernals not through power but through timing — they engage before the opponent reaches full combustion.",
+      "systemDesc": "Generation-based counter-tree: ignition speed vs peak output trade-off. Third Gen exploits the window between Second Gen ignition and full power activation. The counter only works if the Third Gen pyrokinetic engages proactively rather than reactively.",
       "tabIndex": 1,
       "sectionId": "counterplay-heading",
       "tabLabel": "Counterplay"
     },
     {
-      "id": "third-gen-vs-second-gen",
-      "name": "Third Gen Ignition Advantage",
-      "attacker": "Third Generation Pyrokinetic",
-      "defender": "Second Generation Infernal",
-      "mechanic": "Faster ignition at 25% output enables pre-emptive strikes",
-      "loreDesc": "Third Generation pyrokinetics ignite faster but at lower peak power than Second Generation, giving them tactical advantage in battles where reaction time matters more than raw output.",
-      "systemDesc": "Speed-vs-power trade-off: Third Generation sacrifices maximum damage for ignition speed, creating a tactical window that Second Generation opponents cannot exploit without knowing the matchup intimately.",
+      "id": "devils-foot-ignition",
+      "name": "Devil Foot Ignition Bypasses Infernal Defenses",
+      "attacker": "Shinra Kusakabe",
+      "defender": "Any Infernal",
+      "mechanic": "Devil Foot produces blue fire with unknown properties. It has been shown to one-hit terminate Infernals that resist normal fire attacks. The mechanism suggests an Ignition quality rather than simple thermal output.",
+      "loreDesc": "Shinra's Devil Foot attack consistently terminates Infernals regardless of their resistance to normal fire. This is tactically significant because it means Company 8 has a reliable hard counter to even the strongest Infernals — but only through Shinra.",
+      "systemDesc": "Unique capability exception: Devil Foot operates outside the normal fire-resistance model. This makes Shinra a critical node — his removal would collapse Company 8's ability to counter high-tier Infernals. The tactical dependency on a single capability is a structural vulnerability.",
+      "tabIndex": 1,
+      "sectionId": "counterplay-heading",
+      "tabLabel": "Counterplay"
+    },
+    {
+      "id": "maki-physical-advantage",
+      "name": "Physical Strength Overcomes Pyrokinetic Output",
+      "attacker": "Maki Oze",
+      "defender": "High-Output Pyrokinetic",
+      "mechanic": "Maki's physical strength exceeds the output of most pyrokinetics. She can physically dominate opponents who rely on fire manipulation rather than physical combat. This makes her effective against both Infernals and rival pyrokinetics who underestimate physical capability.",
+      "loreDesc": "Maki's physical strength means she does not rely on her pyrokinetic ability in combat. This independence from fire-based combat means she is effective against opponents whose defensive tactics assume fire-based engagement.",
+      "systemDesc": "Non-fire capability node: Maki represents the physical-override path in Fire Force's combat model. Where most combatants are constrained by fire-generation capability, Maki's purely physical capability profile creates an asymmetry that fire-based defenders cannot counter.",
       "tabIndex": 1,
       "sectionId": "counterplay-heading",
       "tabLabel": "Counterplay"
@@ -551,29 +539,29 @@
   "animeImageUrl": "https://cdn.myanimelist.net/images/anime/1664/103275l.jpg",
   "systemQuestions": [
     {
-      "question": "Why does the Three-Quarter Breath counter system paradoxically make Company 8 more effective at stopping Infernals than any single specialized unit?",
-      "answer": "The Three-Quarter Breath system means no single Breath type dominates all others. Company 8's mixed composition—where each member has a different fire type—lets them counter any Infernal formation. Getting the wrong type matchup can be fatal, so having all eight types available ensures Company 8 can always deploy the correct counter.",
+      "question": "Why does spontaneous combustion create Infernals instead of pyrokinetics in some humans — and what does the Evangelist's plan reveal about why the outcome matters strategically?",
+      "answer": "Spontaneous combustion converts humans into Infernals when the ignition is uncontrolled. Controlled ignition at the 3rd Generation level produces pyrokinetics. The Evangelist's plan weaponizes uncontrolled combustion as a conversion mechanism — forcing humanity into a single outcome regardless of individual will. Company 8's mission is to interrupt this forced conversion and preserve the pyrokinetic differentiation.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",
       "tabLabel": "Power Engine"
     },
     {
-      "question": "How does Adolla Burst break the Three-Quarter Breath counter system?",
-      "answer": "Adolla Burst—Shinra's Blue Fire—operates completely outside the eight-type counter chart. While normal fire types follow the Infernals → Ignition → Ghost → Flash Fire → Blue progression, Adolla Burst doesn't counter any type and isn't countered by any type. It simply overwrites, making it the ultimate offensive asset and the Evangelist's primary target.",
+      "question": "How does Company 8's mixed-generation composition give it structural advantages that homogeneous units lack — and why does the Evangelist's Infernal Army specifically target this mixed structure?",
+      "answer": "Company 8 combines 2nd Generation experience with 3rd Generation adaptability, creating tactical flexibility. Homogeneous units can be countered by type-specific responses; Company 8's mixed composition means no single counter defeats the whole unit. The Infernal Army targets this specifically because a coordinated multi-generation force disrupts the Evangelist's single-vector conversion strategy.",
       "tabIndex": 1,
       "sectionId": "counterplay-heading",
       "tabLabel": "Counterplay"
     },
     {
-      "question": "Why does Shinra's tactical positioning with Devil's Footprints actually make him more effective against Infernals?",
-      "answer": "Shinra's Blue Fire feet let him maneuver at high speed and attack from angles no other Fire Soldier can match. His foot-based fire propulsion creates unpredictability that disrupts Infernal attack patterns, while his Adolla Burst simply overpowers any flame it encounters—bypassing the type chart entirely.",
+      "question": "Why is Shinra's relationship to the Evangelist — his biological connection — the critical variable that makes him irreplaceable to both the Evangelist's plan and Company 8's resistance?",
+      "answer": "Shinra carries the Evangelist's bloodline, giving him unique pyrokinetic potential and direct connection to the Evangelist's power source. This makes him simultaneously the key to the Evangelist's completion and the only one capable of stopping it. No other character occupies both sides of this structural dependency.",
       "tabIndex": 2,
       "sectionId": "core-laws-heading",
       "tabLabel": "Core Laws"
     },
     {
-      "question": "How does Company 8's mixed-composition structure exploit the Evangelist's plan to remake humanity?",
-      "answer": "The Evangelist seeks to trigger another Great Cataclysm using Adolla Burst to remake humanity. Company 8's diverse Breath type composition lets them rapidly identify and counter Infernal threats before spontaneous combustion spreads. Every second an Infernal burns increases chain-reaction risk, making Company 8's balanced response essential to stopping the Evangelist's endgame.",
+      "question": "Why does Leonardo Burns — as an Infernal Knight Commander — represent the failure mode of Company 8's entire mission: the possibility that Infernals can be more effective than the pyrokinetics who failed to protect the people they converted?",
+      "answer": "Burns converted from Knight Commander to Infernal yet retained intelligence and gained overwhelming power, proving the conversion process does not destroy capability — it amplifies it. Company 8 fights to prevent conversions, but Burns demonstrates the Infernal state is not merely a loss of humanity. His existence challenges whether the Evangelist's plan is monstrous or simply an accelerated evolution.",
       "tabIndex": 3,
       "sectionId": "faction-map-heading",
       "tabLabel": "Faction Map"
@@ -581,9 +569,11 @@
   ],
   "hero": {
     "systemType": "relational",
-    "microHook": "Spontaneous combustion meets Breathing arts — Company 8 fights to save Tokyo.",
-    "thesis": "Eight Breathing types form a closed counter-tree; Adolla Burst breaks it. Great Cataclysm was designed.",
+    "microHook": "Spontaneous combustion is turning Tokyo into Infernals — only Company 8 can stop the fire.",
+    "thesis": "Fire Force runs on pyrokinetic generations and Infernal conversions. Each Company is a defense node. The Evangelist reshapes humanity.",
     "primarySystemType": "entity_db",
     "imageUrl": "https://cdn.myanimelist.net/images/anime/1664/103275l.jpg"
-  }
+  },
+  "systemType": "node-graph",
+  "primarySystemType": "node-graph"
 }
