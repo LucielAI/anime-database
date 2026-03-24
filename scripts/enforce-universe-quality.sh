@@ -8,6 +8,7 @@
 set -eo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+export REPO_DIR
 cd "$REPO_DIR"
 
 FIX_MODE=false
@@ -29,7 +30,7 @@ echo "[GATE 1] File integrity check..."
 python3 << 'PYEOF'
 import json, os, sys
 
-repo = '/data/workspace/anime-database/src/data'
+repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 
 # Scan ALL .core.json files — no hardcoded list
 core_files = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
@@ -86,7 +87,7 @@ echo "[GATE 2] Image verification..."
 python3 << 'PYEOF'
 import json, urllib.request, os, sys
 
-repo = '/data/workspace/anime-database/src/data'
+repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 # Scan ALL .core.json files — no hardcoded list
 new_universes = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
 
@@ -160,7 +161,7 @@ echo "[GATE 2b] Catalog image verification..."
 python3 - << 'PYEOF'
 import json, urllib.request, os, sys, re
 
-repo = '/data/workspace/anime-database/src/data'
+repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 
 def check(url):
     if not url:
@@ -226,7 +227,7 @@ python3 << 'PYEOF'
 import json, os, sys
 from collections import defaultdict
 
-repo = '/data/workspace/anime-database/src/data'
+repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 core_files = [f for f in os.listdir(repo) if f.endswith('.core.json')]
 
 # Build malId -> set(of universe slugs) map
@@ -280,7 +281,7 @@ echo "[GATE 3] Template/filler content check..."
 python3 << 'PYEOF'
 import json, os, sys
 
-repo = '/data/workspace/anime-database/src/data'
+repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 # Scan ALL .core.json files — no hardcoded list
 new_universes = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
 
@@ -354,7 +355,7 @@ echo "[GATE 3b] Character role/relationships completeness..."
 python3 << 'PYEOF'
 import json, os, sys
 
-repo = '/data/workspace/anime-database/src/data'
+repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 core_files = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
 
 errors = []
@@ -444,7 +445,7 @@ echo "[GATE 0] Jikan API verification (MAL ID + sample character check)..."
 python3 << 'PYEOF'
 import json, os, sys, urllib.request, time
 
-repo = '/data/workspace/anime-database/src/data'
+repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 core_files = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
 
 errors = []
