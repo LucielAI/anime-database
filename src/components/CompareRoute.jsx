@@ -62,8 +62,9 @@ function CompareRow({ label, left, right }) {
 
 export default function CompareRoute() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const leftId = searchParams.get('left') || UNIVERSE_CATALOG[0]?.id || ''
-  const rightId = searchParams.get('right') || UNIVERSE_CATALOG[1]?.id || ''
+  // Support both ?left=slug&right=slug and ?a=slug&b=slug URL formats
+  const leftId = searchParams.get('left') || searchParams.get('a') || ''
+  const rightId = searchParams.get('right') || searchParams.get('b') || ''
 
   const [leftData, setLeftData] = useState(null)
   const [rightData, setRightData] = useState(null)
