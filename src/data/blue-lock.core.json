@@ -244,7 +244,9 @@
           "description": "Shooting immediately upon receiving the ball, before defenders can close the angle.",
           "severity": "medium"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Bachira Meguru",
@@ -274,7 +276,9 @@
           "description": "Offensive generation outside standard tactical frameworks — creates paths that structured defenses cannot pre-empt.",
           "severity": "high"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Nagi Seishiro",
@@ -304,7 +308,9 @@
           "description": "Absorbing interesting techniques from others — passive skill tree expansion triggered by observing compelling egoists.",
           "severity": "medium"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Chigiri Hyoma",
@@ -334,7 +340,9 @@
           "description": "Chigiri's high-speed dribbling state where his pace becomes impossible to track — defender reactions fail.",
           "severity": "high"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Reo Mikage",
@@ -364,6 +372,14 @@
           "description": "Using Nagi's trap as a trigger while providing Reo's own copy-enhanced finishing — co-dependent duo optimization.",
           "severity": "medium"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Bachira Meguru",
+        "Chigiri Hyoma",
+        "Isagi Yoichi",
+        "Rensuke Kunigami",
+        "Shouei Barou"
       ]
     },
     {
@@ -382,7 +398,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/498305.jpg",
       "malId": 498305,
       "description": "Speed striker whose anxiety becomes his greatest weapon on the field.",
-      "systemBio": "Tokimitsu represents the anxiety-variable in Blue Locks psychological optimization model. His panic attacks trigger measurable adrenaline spikes that temporarily elevate his speed beyond trained baselines — converting psychological distress into a quantifiable performance output."
+      "systemBio": "Tokimitsu represents the anxiety-variable in Blue Locks psychological optimization model. His panic attacks trigger measurable adrenaline spikes that temporarily elevate his speed beyond trained baselines — converting psychological distress into a quantifiable performance output.",
+      "role": "Supporting",
+      "relationships": [
+        "Bachira Meguru",
+        "Chigiri Hyoma",
+        "Isagi Yoichi",
+        "Rensuke Kunigami",
+        "Shouei Barou"
+      ]
     },
     {
       "id": "rensuke-kunigami",
@@ -400,7 +424,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/467112.jpg",
       "malId": 467112,
       "description": "Physically gifted striker whose specimen genetics give immediate advantages.",
-      "systemBio": "Kunigami is the genetic lottery variable in Blue Lock. His physical specimen baseline means he starts with measurable advantages that other players must train to close. His presence forces the system to test whether technique can overcome raw physical optimization."
+      "systemBio": "Kunigami is the genetic lottery variable in Blue Lock. His physical specimen baseline means he starts with measurable advantages that other players must train to close. His presence forces the system to test whether technique can overcome raw physical optimization.",
+      "role": "Main",
+      "relationships": [
+        "Bachira Meguru",
+        "Chigiri Hyoma",
+        "Isagi Yoichi",
+        "Shouei Barou"
+      ]
     },
     {
       "id": "shouei-barou",
@@ -418,7 +449,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/576062.jpg",
       "malId": 576062,
       "description": "Ego-driven striker who treats football as his personal stage for individual genius.",
-      "systemBio": "Barou is the ego-maximizing variable in Blue Lock. Where the system optimizes for team coordination, Barou optimizes purely for self. His presence tests whether the Egoist model can coexist with collective optimization — or whether his individual genius justifies the systemic disruption."
+      "systemBio": "Barou is the ego-maximizing variable in Blue Lock. Where the system optimizes for team coordination, Barou optimizes purely for self. His presence tests whether the Egoist model can coexist with collective optimization — or whether his individual genius justifies the systemic disruption.",
+      "role": "Supporting",
+      "relationships": [
+        "Bachira Meguru",
+        "Chigiri Hyoma",
+        "Isagi Yoichi",
+        "Rensuke Kunigami"
+      ]
     }
   ],
   "systemQuestions": [

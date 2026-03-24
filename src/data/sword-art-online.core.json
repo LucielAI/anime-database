@@ -267,7 +267,9 @@
           "description": "No party coordination dependency — all decisions flow through one node, removing sync overhead.",
           "severity": "medium"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Asuna",
@@ -297,6 +299,13 @@
           "description": "Raw speed stat that lets her close distance and disengage faster than most enemies can track.",
           "severity": "high"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Suguha Kirigaya",
+        "Argo",
+        "Diabel",
+        "Heathcliff"
       ]
     },
     {
@@ -322,7 +331,9 @@
           "description": "Architect-level control over YGGDRASIL's rules — can modify any node parameter or clearing condition at will.",
           "severity": "fatal"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Heathcliff",
@@ -352,6 +363,13 @@
           "description": "Coordination bonus for all allied party members within range — synchronized party buff stacking.",
           "severity": "medium"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Suguha Kirigaya",
+        "Asuna",
+        "Argo",
+        "Diabel"
       ]
     },
     {
@@ -382,6 +400,13 @@
           "description": "Flight-capable avatar giving positional advantage most players cannot counter.",
           "severity": "medium"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Asuna",
+        "Argo",
+        "Diabel",
+        "Heathcliff"
       ]
     },
     {
@@ -412,6 +437,13 @@
           "description": "Operating across faction lines without allegiance — information flows independent of politics.",
           "severity": "low"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Suguha Kirigaya",
+        "Asuna",
+        "Diabel",
+        "Heathcliff"
       ]
     },
     {
@@ -442,6 +474,14 @@
           "description": "Temporary damage reduction node that lets him absorb burst windows standard tanks cannot survive.",
           "severity": "medium"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Suguha Kirigaya",
+        "Asuna",
+        "Argo",
+        "Diabel",
+        "Heathcliff"
       ]
     },
     {
@@ -467,6 +507,13 @@
           "description": "Tutorial boss pattern knowledge from being first to complete it — an edge that became irrelevant under death conditions.",
           "severity": "low"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Suguha Kirigaya",
+        "Asuna",
+        "Argo",
+        "Heathcliff"
       ]
     }
   ],

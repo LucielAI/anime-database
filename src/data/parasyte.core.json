@@ -136,6 +136,12 @@
           "description": "Living with Migi gives Shinichi unique insight into parasite behavior and weaknesses.",
           "severity": "medium"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Migi",
+        "Muramoto",
+        "Gotou"
       ]
     },
     {
@@ -176,6 +182,12 @@
           "description": "Migi's consciousness cycles through sleep states, making him unavailable for periods—but also allowing recovery.",
           "severity": "low"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Shinichi Izumi",
+        "Muramoto",
+        "Gotou"
       ]
     },
     {
@@ -206,6 +218,12 @@
           "description": "Appears completely human but has no genuine emotions, making him terrifyingly consistent.",
           "severity": "high"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Shinichi Izumi",
+        "Migi",
+        "Muramoto"
       ]
     },
     {
@@ -231,7 +249,9 @@
           "description": "Can maintain a convincing human appearance and social role despite being fully parasite-controlled.",
           "severity": "medium"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     }
   ],
   "relationships": [

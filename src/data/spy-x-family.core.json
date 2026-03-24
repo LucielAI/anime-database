@@ -136,6 +136,14 @@
           "description": "Can read and influence people's behavior to achieve operational objectives.",
           "severity": "high"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Yor Forger",
+        "Anya Forger",
+        "Becky Blackbell",
+        "Bondman",
+        "Yuri Briar"
       ]
     },
     {
@@ -171,6 +179,14 @@
           "description": "Cannot navigate normal social situations, making her cover identity constantly at risk of exposure.",
           "severity": "low"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Loid Forger",
+        "Anya Forger",
+        "Becky Blackbell",
+        "Bondman",
+        "Yuri Briar"
       ]
     },
     {
@@ -201,6 +217,14 @@
           "description": "Uses her knowledge of others' thoughts to manipulate situations toward desired outcomes.",
           "severity": "medium"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Loid Forger",
+        "Yor Forger",
+        "Becky Blackbell",
+        "Bondman",
+        "Yuri Briar"
       ]
     },
     {
@@ -231,6 +255,14 @@
           "description": "Being from the most powerful family at Eden gives her social weight that shapes peer dynamics.",
           "severity": "low"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Loid Forger",
+        "Yor Forger",
+        "Anya Forger",
+        "Bondman",
+        "Yuri Briar"
       ]
     },
     {
@@ -261,6 +293,14 @@
           "description": "His blindspot for anything negative about his sister makes him an unreliable analyst of her true capabilities.",
           "severity": "low"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Loid Forger",
+        "Yor Forger",
+        "Anya Forger",
+        "Becky Blackbell",
+        "Bondman"
       ]
     },
     {
@@ -286,6 +326,14 @@
           "description": "Can see future events, particularly danger events involving the family.",
           "severity": "medium"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Loid Forger",
+        "Yor Forger",
+        "Anya Forger",
+        "Becky Blackbell",
+        "Yuri Briar"
       ]
     }
   ],

@@ -136,6 +136,14 @@
           "description": "Has survived attacks from planetary-level opponents with minimal visible damage.",
           "severity": "high"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Genos",
+        "King",
+        "Atomic Samurai",
+        "Bang",
+        "Lord Boros"
       ]
     },
     {
@@ -171,6 +179,14 @@
           "description": "70% mechanical body providing superhuman strength, speed, and sensor capability.",
           "severity": "medium"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Saitama",
+        "King",
+        "Atomic Samurai",
+        "Bang",
+        "Lord Boros"
       ]
     },
     {
@@ -201,7 +217,9 @@
           "description": "His body collapses faster than he can regenerate once pushed past his limit.",
           "severity": "high"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Bang",
@@ -231,6 +249,14 @@
           "description": "Decades of combat experience creating instincts that compensate for age-related speed loss.",
           "severity": "medium"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Genos",
+        "Saitama",
+        "King",
+        "Atomic Samurai",
+        "Lord Boros"
       ]
     },
     {
@@ -256,6 +282,14 @@
           "description": "Cuts through any material at the molecular level with unmatched sword speed.",
           "severity": "high"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Genos",
+        "Saitama",
+        "King",
+        "Bang",
+        "Lord Boros"
       ]
     },
     {
@@ -286,6 +320,14 @@
           "description": "Everyone in the hero world believes he is the strongest, giving him maximum deterrent value with zero actual power.",
           "severity": "medium"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Genos",
+        "Saitama",
+        "Atomic Samurai",
+        "Bang",
+        "Lord Boros"
       ]
     },
     {
@@ -321,6 +363,14 @@
           "description": "Can adapt and grow stronger during combat faster than any normal human.",
           "severity": "fatal"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Genos",
+        "Saitama",
+        "King",
+        "Atomic Samurai",
+        "Bang"
       ]
     },
     {
@@ -340,7 +390,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/344059.jpg",
       "malId": 344059,
       "description": "C-Class hero on a bicycle who compensates for zero combat ability with pure willpower and determination.",
-      "faction": "Hero Association (C-Class)"
+      "faction": "Hero Association (C-Class)",
+      "role": "Supporting",
+      "relationships": [
+        "Genos",
+        "Saitama",
+        "King",
+        "Atomic Samurai",
+        "Bang"
+      ]
     }
   ],
   "relationships": [

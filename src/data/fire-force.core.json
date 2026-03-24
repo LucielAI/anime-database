@@ -131,6 +131,14 @@
           "description": "Can propel himself at high speed using flames expelled from his feet.",
           "severity": "medium"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Arthur Boyle",
+        "Takehisa Hinawa",
+        "Iris",
+        "Tamaki Kotatsu",
+        "Akitaru Obi"
       ]
     },
     {
@@ -161,6 +169,14 @@
           "description": "Believes himself to be the greatest swordsman alive, which somehow makes him more effective.",
           "severity": "low"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Takehisa Hinawa",
+        "Iris",
+        "Tamaki Kotatsu",
+        "Shinra Kusakabe",
+        "Akitaru Obi"
       ]
     },
     {
@@ -191,6 +207,14 @@
           "description": "Can quickly identify the Breath type of any Infernal to guide team counter-selection.",
           "severity": "low"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Arthur Boyle",
+        "Takehisa Hinawa",
+        "Iris",
+        "Tamaki Kotatsu",
+        "Shinra Kusakabe"
       ]
     },
     {
@@ -221,6 +245,14 @@
           "description": "Fast deployment and battlefield observation skills for tactical intelligence.",
           "severity": "low"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Arthur Boyle",
+        "Iris",
+        "Tamaki Kotatsu",
+        "Shinra Kusakabe",
+        "Akitaru Obi"
       ]
     },
     {
@@ -251,7 +283,9 @@
           "description": "Creates ash-based flames that obscure vision and smother fires.",
           "severity": "low"
         }
-      ]
+      ],
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Tamaki Kotatsu",
@@ -276,6 +310,14 @@
           "description": "Creates powerful steam bursts that can extinguish flames and disorient Infernals.",
           "severity": "medium"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Arthur Boyle",
+        "Takehisa Hinawa",
+        "Iris",
+        "Shinra Kusakabe",
+        "Akitaru Obi"
       ]
     },
     {
@@ -301,6 +343,14 @@
           "description": "Can soothe the burning pain of Infernal corruption, buying time for treatment.",
           "severity": "low"
         }
+      ],
+      "role": "Main",
+      "relationships": [
+        "Arthur Boyle",
+        "Takehisa Hinawa",
+        "Tamaki Kotatsu",
+        "Shinra Kusakabe",
+        "Akitaru Obi"
       ]
     },
     {
@@ -331,6 +381,14 @@
           "description": "Dragon-level fire output that exceeds all standard Company Captains.",
           "severity": "fatal"
         }
+      ],
+      "role": "Supporting",
+      "relationships": [
+        "Arthur Boyle",
+        "Takehisa Hinawa",
+        "Iris",
+        "Tamaki Kotatsu",
+        "Shinra Kusakabe"
       ]
     }
   ],

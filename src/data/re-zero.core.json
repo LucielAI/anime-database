@@ -89,7 +89,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/315153.jpg?s=48e475fa71e56bb47eb93594fe10359d",
       "malId": 151963,
       "slug": "natsuki-subaru",
-      "description": "Return by Death user who discovers each loop requires dying before he can save anyone, making his optimization curve inversely proportional to his sanity."
+      "description": "Return by Death user who discovers each loop requires dying before he can save anyone, making his optimization curve inversely proportional to his sanity.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Emilia",
@@ -106,7 +108,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/551926.jpg?s=22728d0269f40fb353a31a54545ded00",
       "malId": 156008,
       "slug": "emilia",
-      "description": "Half-elf candidate with ties to the Witch of Vanity."
+      "description": "Half-elf candidate with ties to the Witch of Vanity.",
+      "role": "Main",
+      "relationships": [
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle",
+        "Beatrice"
+      ]
     },
     {
       "name": "Satella",
@@ -123,7 +133,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/333682.jpg?s=d51df16debe182247eb3c6796ee4b1df",
       "malId": 157889,
       "slug": "satella",
-      "description": "Half-elf who absorbed Subaru and carries the Witch of Envy."
+      "description": "Half-elf who absorbed Subaru and carries the Witch of Envy.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Beatrice",
@@ -140,7 +158,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/591066.jpg?s=c8b21170c013b5b286d0ee1345052236",
       "malId": 168157,
       "slug": "beatrice",
-      "description": "Oni sibling contracted to Echidna whose Royal Party language creates a communication barrier that Subaru cannot parse without significant context."
+      "description": "Oni sibling contracted to Echidna whose Royal Party language creates a communication barrier that Subaru cannot parse without significant context.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Petelgeuse Romanée-Conti",
@@ -157,7 +183,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/433803.jpg?s=ea96d10316206d8bee58ed1e85daa58b",
       "malId": 168158,
       "slug": "petelgeuse-romanee-conti",
-      "description": "Witch of Sloth vessel whose distributed consciousness across multiple bodies makes him simultaneously easy to damage and impossible to eliminate."
+      "description": "Witch of Sloth vessel whose distributed consciousness across multiple bodies makes him simultaneously easy to damage and impossible to eliminate.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Rem",
@@ -174,7 +208,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/311327.jpg?s=3246595cd08261824d0dbf11a44c7229",
       "malId": 152568,
       "slug": "rem",
-      "description": "Demon maid whose loyalty loop was reset by Satella."
+      "description": "Demon maid whose loyalty loop was reset by Satella.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Ram",
@@ -191,7 +233,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/306390.jpg?s=c627953e35df76da593d931548b7e646",
       "malId": 152567,
       "slug": "ram",
-      "description": "Demon maid whose horn was lost fighting the Witch of Vanity."
+      "description": "Demon maid whose horn was lost fighting the Witch of Vanity.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Wilhelm van Astrea",
@@ -208,7 +258,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/365139.jpg?s=400e950105421a3d6596993e600604ba",
       "malId": 158309,
       "slug": "wilhelm-van-astrea",
-      "description": "Sword demon bearer whose grief over his dead wife drives every combat decision, making him simultaneously the most and least rational fighter."
+      "description": "Sword demon bearer whose grief over his dead wife drives every combat decision, making him simultaneously the most and least rational fighter.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Felix Argyle",
@@ -225,7 +283,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/563864.jpg?s=5a4ddc6aa8062f7f1033b366dfb87655",
       "malId": 168159,
       "slug": "felix-argyle",
-      "description": "Cushion hydra healer whose water manipulation is undercut by his pathological need to mock everyone around him."
+      "description": "Cushion hydra healer whose water manipulation is undercut by his pathological need to mock everyone around him.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Priscilla Barielle",
+        "Beatrice"
+      ]
     },
     {
       "name": "Crusch Karsten",
@@ -242,7 +308,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/477333.jpg?s=906c6aacc5a8dc5db4cf6c0312c12127",
       "malId": 168160,
       "slug": "crusch-karsten",
-      "description": "Beast speak whale tamer whose rationalism makes her the only character who processes the world through logic rather than emotion."
+      "description": "Beast speak whale tamer whose rationalism makes her the only character who processes the world through logic rather than emotion.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Anastasia Hoshin",
@@ -259,7 +333,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/316407.jpg?s=fef1ce5f3639b48b8e69700a3447b79a",
       "malId": 158310,
       "slug": "anastasia-hoshin",
-      "description": "Business logic architect whose merchant instincts create treaty networks faster than any military conquest could secure."
+      "description": "Business logic architect whose merchant instincts create treaty networks faster than any military conquest could secure.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Julius Euclius",
@@ -276,7 +358,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/480481.jpg?s=abe9942fc7985c6d3eea6c771df017a8",
       "malId": 172013,
       "slug": "julius-euclius",
-      "description": "Beast speak whale tamer whose knighthood is undermined by the tension between his public role and private competencies."
+      "description": "Beast speak whale tamer whose knighthood is undermined by the tension between his public role and private competencies.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Priscilla Barielle",
@@ -293,7 +383,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/563865.jpg?s=29783ad5f42c00511a4c4d2f9266e696",
       "malId": 168161,
       "slug": "priscilla-barielle",
-      "description": "Royal candidate whose lava magic creates territorial dominance but her arrogance makes her the easiest candidate to manipulate."
+      "description": "Royal candidate whose lava magic creates territorial dominance but her arrogance makes her the easiest candidate to manipulate.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Beatrice"
+      ]
     },
     {
       "name": "Aldebaran",
@@ -310,7 +408,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/268229.jpg?s=b56892395016938e10832be0aea88100",
       "malId": 168162,
       "slug": "aldebaran",
-      "description": "Lionheart bearer whose physical combat prowess is undermined by his comedic self-deprecation masking genuine strategic depth."
+      "description": "Lionheart bearer whose physical combat prowess is undermined by his comedic self-deprecation masking genuine strategic depth.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Felix Argyle",
+        "Priscilla Barielle",
+        "Beatrice"
+      ]
     },
     {
       "name": "Otto Suwen",
@@ -327,7 +433,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/438832.jpg?s=a4b29f3ba09228b9adae8f3326575b92",
       "malId": 157892,
       "slug": "otto-suwen",
-      "description": "Subspace cart mage whose merchant diplomacy is the only neutral broker available in the Emilia camp power structure."
+      "description": "Subspace cart mage whose merchant diplomacy is the only neutral broker available in the Emilia camp power structure.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Echidna",
@@ -345,7 +459,9 @@
       "malId": 168163,
       "slug": "echidna",
       "description": "Witch of Vanity who collects death experiences from Subaru.",
-      "systemBio": "Echidna is the Witch of Vanity who collects death experiences from Subaru through the Whale contract. Her knowledge encompasses all loops through her Book of the Dead, making her the most informed entity in the system."
+      "systemBio": "Echidna is the Witch of Vanity who collects death experiences from Subaru through the Whale contract. Her knowledge encompasses all loops through her Book of the Dead, making her the most informed entity in the system.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Reinhard van Astrea",
@@ -362,7 +478,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/480482.jpg?s=f80ad8379f9a33fed291c3f684d7e4ce",
       "malId": 172014,
       "slug": "reinhard-van-astrea",
-      "description": "Dragon Swor d taker whose divine blessing collection makes him literally undefeatable in direct combat, requiring indirect assassination."
+      "description": "Dragon Swor d taker whose divine blessing collection makes him literally undefeatable in direct combat, requiring indirect assassination.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Felt",
@@ -379,7 +503,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/315231.jpg?s=1bef1ff41ee3049d7e71a91242bf42da",
       "malId": 157893,
       "slug": "felt",
-      "description": "Authority bearer whose lack of noble education makes her the only candidate who cannot be compromised by traditional political pressure."
+      "description": "Authority bearer whose lack of noble education makes her the only candidate who cannot be compromised by traditional political pressure.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Elsa Granhiert",
@@ -396,7 +528,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/324239.jpg?s=03e10ed43c2a928188259e4ea7ef1272",
       "malId": 168164,
       "slug": "elsa-granhiert",
-      "description": "Sword demon hunter whose death-and-revival cycle creates an opponent who cannot be permanently eliminated, only delayed."
+      "description": "Sword demon hunter whose death-and-revival cycle creates an opponent who cannot be permanently eliminated, only delayed.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     },
     {
       "name": "Meili Portroute",
@@ -413,7 +553,15 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/311500.jpg?s=6fb1d9e92b98005ef8453dd75f9be473",
       "malId": 157894,
       "slug": "meili-portroute",
-      "description": "Beast tamer whose monster army creates a biological hazard zone that forces opponents to choose between fighting beasts or fleeing."
+      "description": "Beast tamer whose monster army creates a biological hazard zone that forces opponents to choose between fighting beasts or fleeing.",
+      "role": "Supporting",
+      "relationships": [
+        "Emilia",
+        "Natsuki Subaru",
+        "Aldebaran",
+        "Felix Argyle",
+        "Priscilla Barielle"
+      ]
     }
   ],
   "factions": [

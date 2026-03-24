@@ -89,7 +89,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/312836.jpg?s=f4ea6f575c53db8908baf0f874e33e70",
       "malId": 131532,
       "slug": "asta",
-      "description": "Anti-magic wielder who turns the affinity matrix into raw physical combat."
+      "description": "Anti-magic wielder who turns the affinity matrix into raw physical combat.",
+      "role": "Main",
+      "relationships": [
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Yuno",
@@ -106,7 +112,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/318765.jpg?s=dbc2307d86d0e001e31b9aad6f12b21c",
       "malId": 131531,
       "slug": "yuno",
-      "description": "Four-leaf grimoire holder with overwhelming elemental mana reserves."
+      "description": "Four-leaf grimoire holder with overwhelming elemental mana reserves.",
+      "role": "Main",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva"
+      ]
     },
     {
       "name": "Noelle Silva",
@@ -123,7 +135,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/338844.jpg?s=37d6d1f99de07821983285b9a3ac2614",
       "malId": 137994,
       "slug": "noelle-silva",
-      "description": "Valkyrie armor wielder channeling mana through sheer willpower."
+      "description": "Valkyrie armor wielder channeling mana through sheer willpower.",
+      "role": "Main",
+      "relationships": [
+        "Asta",
+        "Yuno"
+      ]
     },
     {
       "name": "Yami Sukehiro",
@@ -140,7 +157,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/599705.jpg",
       "malId": 131530,
       "slug": "yami-sukehiro",
-      "description": "Dark magic user who can cancel any spell by touching it."
+      "description": "Dark magic user who can cancel any spell by touching it.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Julius Novachrono",
@@ -157,7 +181,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/474453.jpg",
       "malId": 151939,
       "slug": "julius-novachrono",
-      "description": "Time magic user who pays for each temporal manipulation with accelerated biological aging."
+      "description": "Time magic user who pays for each temporal manipulation with accelerated biological aging.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Mereoleona Vermillion",
@@ -174,7 +205,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/375601.jpg",
       "malId": 157887,
       "slug": "mereoleona-vermillion",
-      "description": "Fire magic powerhouse with unmatched physical combat ability."
+      "description": "Fire magic powerhouse with unmatched physical combat ability.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Charlotte Roselei",
@@ -191,7 +229,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/507586.jpg",
       "malId": 131537,
       "slug": "charlotte-roselei",
-      "description": "Briar magic specialist who dominates single-target combat."
+      "description": "Briar magic specialist who dominates single-target combat.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Fuegoleon Vermillion",
@@ -208,7 +253,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/473479.jpg",
       "malId": 131536,
       "slug": "fuegoleon-vermillion",
-      "description": "Fire magic captain whose loss of a limb redirected his entire magical trajectory toward survival and regeneration."
+      "description": "Fire magic captain whose loss of a limb redirected his entire magical trajectory toward survival and regeneration.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Nozel Silva",
@@ -225,7 +277,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/476153.jpg",
       "malId": 131538,
       "slug": "nozel-silva",
-      "description": "Mercurial silver magic user whose protective obsession over his siblings warps into strategic cowardice at critical moments."
+      "description": "Mercurial silver magic user whose protective obsession over his siblings warps into strategic cowardice at critical moments.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Luck Volta",
@@ -242,7 +300,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/338847.jpg",
       "malId": 148152,
       "slug": "luck-volta",
-      "description": "Combat-obsessed lightning mage whose enthusiasm for fights frequently destabilizes his own team formations."
+      "description": "Combat-obsessed lightning mage whose enthusiasm for fights frequently destabilizes his own team formations.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Magna Swing",
@@ -259,7 +319,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/338846.jpg",
       "malId": 148153,
       "slug": "magna-swing",
-      "description": "Ball wielder who compensates for below-average mana with aggressive close-range tactics and sheer determination."
+      "description": "Ball wielder who compensates for below-average mana with aggressive close-range tactics and sheer determination.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Vanessa Enoteca",
@@ -276,7 +343,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/338849.jpg?s=a1136f2a61fa0fa033790daac3abbb28",
       "malId": 137995,
       "slug": "vanessa-enoteca",
-      "description": "Witch Thread magic user whose fate manipulation accidentally steered her toward the Black Bulls over years of coincidences."
+      "description": "Witch Thread magic user whose fate manipulation accidentally steered her toward the Black Bulls over years of coincidences.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Finral Roulacase",
@@ -294,7 +368,14 @@
       "malId": 148155,
       "slug": "finral-roulacase",
       "description": "Spatial magic user whose dimensional rifts create escape routes that reshape tactical decision-making for the entire squad.",
-      "systemBio": "Finral Roulacase is a Magic Knight from Black Clover. 3 abilities recorded."
+      "systemBio": "Finral Roulacase is a Magic Knight from Black Clover. 3 abilities recorded.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Grey",
@@ -311,7 +392,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/370159.jpg?s=6434f27baf3554320d606ee7d4f1ef9b",
       "malId": 148156,
       "slug": "grey",
-      "description": "Transformation magic user whose self-identity erasure creates tactical confusion for opponents and allies alike."
+      "description": "Transformation magic user whose self-identity erasure creates tactical confusion for opponents and allies alike.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Charmy Pappitson",
@@ -328,7 +416,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/352604.jpg?s=4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
       "malId": 148157,
       "slug": "charmy-pappitson",
-      "description": "Wool and food magic user whose dual-function support role creates unexpected tactical depth."
+      "description": "Wool and food magic user whose dual-function support role creates unexpected tactical depth.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Zora Ideale",
@@ -345,7 +440,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/476198.jpg?s=bfdf3edd392e10d77edc47505690cdca",
       "malId": 168151,
       "slug": "zora-ideale",
-      "description": "Spatial magic duelist whose trap-based approach inverts the standard combat-by-damage model."
+      "description": "Spatial magic duelist whose trap-based approach inverts the standard combat-by-damage model.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Secre Swallowtail",
@@ -362,7 +464,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/341888.jpg?s=8a7eabcf0db9d98dbac5224ba5f3c689",
       "malId": 148158,
       "slug": "secre-swallowtail",
-      "description": "Magic Emperor candidate whose three-century seal broke at the worst possible moment for the kingdom."
+      "description": "Magic Emperor candidate whose three-century seal broke at the worst possible moment for the kingdom.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Jack the Ripper",
@@ -379,7 +483,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/476133.jpg?s=155b6fcdaeb6b5dc5aff3bf5ac952da1",
       "malId": 169893,
       "slug": "jack-the-ripper",
-      "description": "Sword Magic Master whose overwhelming combat drive treats every engagement as an optimization problem to solve through violence."
+      "description": "Sword Magic Master whose overwhelming combat drive treats every engagement as an optimization problem to solve through violence.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Rill Boismortier",
@@ -396,7 +507,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/351522.jpg?s=558a521fe99c73d50a8e756d96a548f1",
       "malId": 157888,
       "slug": "rill-boismortier",
-      "description": "Painting magic captain whose artistic genius competes with his emotional instability for control of his tactical output."
+      "description": "Painting magic captain whose artistic genius competes with his emotional instability for control of his tactical output.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Licht",
@@ -413,7 +531,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/390335.jpg",
       "malId": 168152,
       "slug": "licht",
-      "description": "Elf reincarnation host whose five-leaf grimoire compensates for physical limitations the host body imposes on his strategy."
+      "description": "Elf reincarnation host whose five-leaf grimoire compensates for physical limitations the host body imposes on his strategy.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Ladros",
@@ -430,7 +555,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/367824.jpg?s=44eac55de08cdfe68f7e46ac92aba4b8",
       "malId": 168153,
       "slug": "ladros",
-      "description": "Telekinesis mage whose power level created expectations he could not fulfill without compromising the missions structural integrity."
+      "description": "Telekinesis mage whose power level created expectations he could not fulfill without compromising the missions structural integrity.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Patri",
@@ -447,7 +579,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/434361.jpg?s=6d3664d4ee453096dd544bc31e8c1823",
       "malId": 168154,
       "slug": "patri",
-      "description": "Elf warrior whose faith in the clover kingdom collapsed after discovering his own heritage was a fabricated memory."
+      "description": "Elf warrior whose faith in the clover kingdom collapsed after discovering his own heritage was a fabricated memory.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Mars",
@@ -464,7 +598,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/369107.jpg?s=f14b3aa1750d03133165d9d9268478eb",
       "malId": 148159,
       "slug": "mars",
-      "description": "Stone and plant magic user whose dual-affinity gives him defensive options his offensive strategy never fully exploits."
+      "description": "Stone and plant magic user whose dual-affinity gives him defensive options his offensive strategy never fully exploits.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Rhya",
@@ -481,7 +622,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/476331.jpg?s=3115618c6334573bde162e0a610e5c4f",
       "malId": 168155,
       "slug": "rhya",
-      "description": "Copy magic user whose ability to replicate any spell makes him a wildcard that destabilizes both allied and enemy formations."
+      "description": "Copy magic user whose ability to replicate any spell makes him a wildcard that destabilizes both allied and enemy formations.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     },
     {
       "name": "Fana",
@@ -498,7 +646,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/352251.jpg?s=4002207f1b3d9d55d57c14ff63f095a9",
       "malId": 168156,
       "slug": "fana",
-      "description": "Mage whose eternal flame spells are the only known counter to demons, making her irreplaceable in the final battle."
+      "description": "Mage whose eternal flame spells are the only known counter to demons, making her irreplaceable in the final battle.",
+      "role": "Supporting",
+      "relationships": [
+        "Asta",
+        "Noelle Silva",
+        "Nozel Silva",
+        "Yuno"
+      ]
     }
   ],
   "factions": [

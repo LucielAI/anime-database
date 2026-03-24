@@ -137,7 +137,15 @@
           "severity": "low"
         }
       ],
-      "primaryAbility": "Time Leap / Future Memory"
+      "primaryAbility": "Time Leap / Future Memory",
+      "role": "Main",
+      "relationships": [
+        "Ken Ryuuguji",
+        "Manjiro Sano",
+        "Keisuke Baji",
+        "Rindou Haitani",
+        "Ran Haitani"
+      ]
     },
     {
       "name": "Manjiro Sano",
@@ -173,7 +181,9 @@
           "severity": "fatal"
         }
       ],
-      "primaryAbility": "Invincible Fighting / Dark Impulse"
+      "primaryAbility": "Invincible Fighting / Dark Impulse",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Ken Ryuuguji",
@@ -204,7 +214,9 @@
           "severity": "medium"
         }
       ],
-      "primaryAbility": "Elite Combat / Vice-Commander Authority"
+      "primaryAbility": "Elite Combat / Vice-Commander Authority",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Keisuke Baji",
@@ -230,7 +242,15 @@
           "severity": "high"
         }
       ],
-      "primaryAbility": "Savage Fighting Style / First Division Command"
+      "primaryAbility": "Savage Fighting Style / First Division Command",
+      "role": "Supporting",
+      "relationships": [
+        "Takemichi Hanagaki",
+        "Ken Ryuuguji",
+        "Manjiro Sano",
+        "Rindou Haitani",
+        "Ran Haitani"
+      ]
     },
     {
       "name": "Rindou Haitani",
@@ -256,7 +276,15 @@
           "severity": "high"
         }
       ],
-      "primaryAbility": "Flexible Fighting / Rokuhara Leadership"
+      "primaryAbility": "Flexible Fighting / Rokuhara Leadership",
+      "role": "Supporting",
+      "relationships": [
+        "Takemichi Hanagaki",
+        "Ken Ryuuguji",
+        "Manjiro Sano",
+        "Keisuke Baji",
+        "Ran Haitani"
+      ]
     },
     {
       "name": "Ran Haitani",
@@ -287,7 +315,15 @@
           "severity": "medium"
         }
       ],
-      "primaryAbility": "Rokuhara Command / Strategic Planning"
+      "primaryAbility": "Rokuhara Command / Strategic Planning",
+      "role": "Supporting",
+      "relationships": [
+        "Takemichi Hanagaki",
+        "Ken Ryuuguji",
+        "Manjiro Sano",
+        "Keisuke Baji",
+        "Rindou Haitani"
+      ]
     },
     {
       "name": "Tadaomi Hanemiya",
@@ -318,7 +354,9 @@
           "severity": "high"
         }
       ],
-      "primaryAbility": "Founding Member Insight / Toman Counter-Strategy"
+      "primaryAbility": "Founding Member Insight / Toman Counter-Strategy",
+      "role": "Supporting",
+      "relationships": []
     }
   ],
   "relationships": [
