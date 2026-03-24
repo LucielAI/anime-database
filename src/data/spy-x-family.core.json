@@ -558,5 +558,6 @@
     "thesis": "Three independent ability cards—spy, assassin, telepath—occasionally overlap for accidental synergy.",
     "primarySystemType": "entity_db",
     "imageUrl": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg"
-  }
+  },
+  "systemType": "stealth-skill"
 }

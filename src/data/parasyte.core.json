@@ -475,5 +475,6 @@
     "thesis": "A human and parasite co-govern one body—Shinichi decides, Migi fights. Neither could survive alone.",
     "primarySystemType": "entity_db",
     "imageUrl": "https://cdn.myanimelist.net/images/anime/3/73178l.jpg"
-  }
+  },
+  "systemType": "host-parasite"
 }
