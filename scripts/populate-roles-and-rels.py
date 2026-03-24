@@ -34,20 +34,25 @@ def jikan_chars_for_anime(anime_id):
         mid = c['mal_id']
         role = entry.get('role', 'Unknown')
         img = c['images']['jpg']['image_url'].replace('https://myanimelist.net', 'https://cdn.myanimelist.net')
-        chars[name] = {'malId': mid, 'imageUrl': img, 'role': role}
-        # Index by last-name for fuzzy matching
+        chars[name] = {'malId': mid, 'imageUrl': img, 'role': role, '_jikan_name': name}
+        # Index by last-name for fuzzy matching — list to handle same-last-name collisions
         parts = name.split(',')
         if len(parts) >= 2:
-            chars['_last:' + parts[0].strip()] = chars[name]
+            last_key = '_last:' + parts[0].strip().lower()  # lowercase for case-insensitive lookup
+            if last_key not in chars:
+                chars[last_key] = []
+            chars[last_key].append(chars[name])
     return chars
 
-def last_name(name):
-    parts = name.strip().split()
-    return parts[-1] if parts else name
+def last_name(full_name):
+    """Extract last token from 'First Last' format."""
+    parts = full_name.strip().split()
+    return parts[-1] if parts else full_name
 
-def first_name(name):
-    parts = name.strip().split()
-    return parts[0] if parts else name
+def first_name(full_name):
+    """Extract first token from 'First Last' format."""
+    parts = full_name.strip().split()
+    return parts[0] if parts else full_name
 
 def name_sim(a, b):
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
@@ -55,16 +60,55 @@ def name_sim(a, b):
 def best_match(stored_name, jikan_chars):
     """
     Match stored character to Jikan character using last-name + first-name logic.
+    Handles same-last-name characters (e.g., Tanjiro + Nezuko Kamado) correctly.
     Returns (jikan_name, jc, confidence_str) or None.
     """
     stored_last = last_name(stored_name).lower()
     stored_first = first_name(stored_name).lower()
 
+    # Phase 1: Check _last: index for exact last-name matches
+    last_key = '_last:' + stored_last
+    if last_key in jikan_chars:
+        candidates_for_last = jikan_chars[last_key]
+        if len(candidates_for_last) == 1:
+            # Only one character with this last name — high confidence if first names match loosely
+            jc = candidates_for_last[0]
+            jikan_name = jc.get('_jikan_name', '')
+            parts = jikan_name.split(',')
+            j_first = parts[1].strip().lower() if len(parts) >= 2 else ''
+            if stored_first == j_first:
+                return jikan_name, jc, 'exact_full'
+            else:
+                return jikan_name, jc, 'exact_last'
+        else:
+            # Multiple characters with same last name — try fuzzy first-name match
+            best_sim = -1
+            best_jc = None
+            best_jn = None
+            for jc in candidates_for_last:
+                jikan_name = jc.get('_jikan_name', '')
+                parts = jikan_name.split(',')
+                j_first = parts[1].strip().lower() if len(parts) >= 2 else ''
+                if stored_first == j_first:
+                    # Exact first-name match — use this one
+                    return jikan_name, jc, 'exact_full'
+                # Fuzzy: check similarity against first name
+                sim = name_sim(stored_first, j_first)
+                if sim > best_sim:
+                    best_sim = sim
+                    best_jc = jc
+                    best_jn = jikan_name
+            # No exact first-name match — use best fuzzy match if good enough, else skip
+            if best_sim >= 0.7:
+                return best_jn, best_jc, f'fuzzy_last_{best_sim:.2f}'
+            else:
+                return None  # no good match among same-last-name chars
+
+    # Phase 2: No last-name match in index — fuzzy search all characters
     candidates = []
     for jikan_name, jc in jikan_chars.items():
         if jikan_name.startswith('_'):
             continue
-        # Jikan "Last, First" format
         parts = jikan_name.split(',')
         if len(parts) >= 2:
             j_last = parts[0].strip().lower()
@@ -73,9 +117,7 @@ def best_match(stored_name, jikan_chars):
             j_last = jikan_name.lower()
             j_first = ''
 
-        # Exact last-name match = HIGH
         if stored_last == j_last:
-            # Exact first-name too = highest confidence
             if stored_first == j_first:
                 candidates.append((jikan_name, jc, 'exact_full', 1.0))
             else:
@@ -133,7 +175,7 @@ def fix_universe(slug, dry_run=True, min_conf='exact_last'):
             results['skipped'].append({'name': sn, 'stored_malId': sc.get('malId'), 'reason': 'no Jikan match'})
             continue
         jn, jc, conf = match
-        if conf not in ('exact_full', 'exact_last'):
+        if conf not in ('exact_full', 'exact_last') and not conf.startswith('fuzzy_last'):
             results['manual_review'].append({
                 'name': sn, 'stored_malId': sc.get('malId'), 'jikan_malId': jc['malId'],
                 'jikan_name': jn, 'confidence': conf, 'reason': 'low confidence match'})
