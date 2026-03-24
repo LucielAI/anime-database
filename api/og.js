@@ -144,6 +144,60 @@ const UNIVERSE_MAP = {
     tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas.',
     visualizationHint: 'node-graph',
     themeColors: { primary: '#dc2626' }
+  },
+  'black-clover': {
+    anime: 'Black Clover',
+    tagline: 'Anti-magic versus elemental sovereignty as willpower bets against bloodline.',
+    visualizationHint: 'affinity-matrix',
+    themeColors: { primary: '#1e3a5f', secondary: '#0f172a', accent: '#fbbf24' }
+  },
+  'blue-lock': {
+    anime: 'Blue Lock',
+    tagline: '300 forwards enter Blue Lock. Only one egoist survives.',
+    visualizationHint: 'counter-tree',
+    themeColors: { primary: '#1d4ed8', secondary: '#0c0f1a', accent: '#f97316' }
+  },
+  'fire-force': {
+    anime: 'Fire Force',
+    tagline: 'Spontaneous combustion turns humans into fire monsters. Company 8 fights back.',
+    visualizationHint: 'counter-tree',
+    themeColors: { primary: '#dc2626', secondary: '#1c1917', accent: '#f97316' }
+  },
+  'one-punch-man': {
+    anime: 'One Punch Man',
+    tagline: 'A hero defeats everything with one punch, comedically breaking the entire power-scaling economy.',
+    visualizationHint: 'node-graph',
+    themeColors: { primary: '#ca8a04', secondary: '#1c1917', accent: '#ef4444' }
+  },
+  'parasyte': {
+    anime: 'Parasyte',
+    tagline: 'A parasite takes over your right hand and becomes your unlikely partner in survival.',
+    visualizationHint: 'affinity-matrix',
+    themeColors: { primary: '#0f766e', secondary: '#0c1a1a', accent: '#2dd4bf' }
+  },
+  're-zero': {
+    anime: 'Re:Zero - Starting Life in Another World',
+    tagline: 'Save-scum your way to victory if you die enough times to find the winning timeline.',
+    visualizationHint: 'counter-tree',
+    themeColors: { primary: '#7c3aed', secondary: '#0f172a', accent: '#c4b5fd' }
+  },
+  'spy-x-family': {
+    anime: 'Spy x Family',
+    tagline: 'A spy, an assassin, and a telepath form a fake family — and somehow grow to mean it.',
+    visualizationHint: 'affinity-matrix',
+    themeColors: { primary: '#7c3aed', secondary: '#1e1b4b', accent: '#10b981' }
+  },
+  'sword-art-online': {
+    anime: 'Sword Art Online',
+    tagline: '10,000 players trapped. Only victory or death exists as options.',
+    visualizationHint: 'node-graph',
+    themeColors: { primary: '#0ea5e9', secondary: '#0f172a', accent: '#06b6d4' }
+  },
+  'tokyo-revengers': {
+    anime: 'Tokyo Revengers',
+    tagline: 'A time-leaping delinquent rewrites futures by changing his own choices.',
+    visualizationHint: 'timeline',
+    themeColors: { primary: '#1e3a5f', secondary: '#0d1b2a', accent: '#f97316' }
   }
 }
 
