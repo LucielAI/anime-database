@@ -156,7 +156,8 @@
       "malId": 109929,
       "role": "Main",
       "slug": "mob-(shigeo-kageyama)",
-      "description": "Mob (Shigeo Kageyama) is a Main from Mob Psycho 100."
+      "description": "Mob (Shigeo Kageyama) is a Main from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Reigen Arataka",
@@ -175,7 +176,8 @@
       "malId": 109931,
       "role": "Main",
       "slug": "reigen-arataka",
-      "description": "Reigen Arataka is a Main from Mob Psycho 100."
+      "description": "Reigen Arataka is a Main from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Ekubo (Dimple)",
@@ -194,7 +196,8 @@
       "malId": 125034,
       "role": "Main",
       "slug": "ekubo-(dimple)",
-      "description": "Ekubo (Dimple) is a Main from Mob Psycho 100."
+      "description": "Ekubo (Dimple) is a Main from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Ritsu Kageyama",
@@ -213,7 +216,8 @@
       "malId": 124788,
       "role": "Main",
       "slug": "ritsu-kageyama",
-      "description": "Ritsu Kageyama is a Main from Mob Psycho 100."
+      "description": "Ritsu Kageyama is a Main from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Teruki Hanazawa",
@@ -232,7 +236,8 @@
       "malId": 124783,
       "role": "Main",
       "slug": "teruki-hanazawa",
-      "description": "Teruki Hanazawa is a Main from Mob Psycho 100."
+      "description": "Teruki Hanazawa is a Main from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Koyama",
@@ -251,7 +256,8 @@
       "malId": 124795,
       "role": "Main",
       "slug": "koyama",
-      "description": "Koyama is a Main from Mob Psycho 100."
+      "description": "Koyama is a Main from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "The Claw President (Suzuki)",
@@ -270,7 +276,8 @@
       "malId": 125024,
       "role": "Antagonist",
       "slug": "the-claw-president-(suzuki)",
-      "description": "The Claw President (Suzuki) is a Antagonist from Mob Psycho 100."
+      "description": "The Claw President (Suzuki) is a Antagonist from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Tenga Kawajiri",
@@ -289,7 +296,8 @@
       "malId": 125026,
       "role": "Main",
       "slug": "tenga-kawajiri",
-      "description": "Tenga Kawajiri is a Main from Mob Psycho 100."
+      "description": "Tenga Kawajiri is a Main from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Sho Suzuki (Telepathy Arc)",
@@ -308,7 +316,8 @@
       "malId": 125027,
       "role": "Antagonist",
       "slug": "sho-suzuki-(telepathy-arc)",
-      "description": "Sho Suzuki (Telepathy Arc) is a Antagonist from Mob Psycho 100."
+      "description": "Sho Suzuki (Telepathy Arc) is a Antagonist from Mob Psycho 100.",
+      "relationships": []
     },
     {
       "name": "Emi (Mob's Girlfriend)",
@@ -327,7 +336,8 @@
       "malId": 125662,
       "role": "Main",
       "slug": "emi-(mobs-girlfriend)",
-      "description": "Emi (Mob's Girlfriend) is a Main from Mob Psycho 100."
+      "description": "Emi (Mob's Girlfriend) is a Main from Mob Psycho 100.",
+      "relationships": []
     }
   ],
   "factions": [

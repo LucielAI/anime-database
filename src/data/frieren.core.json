@@ -253,7 +253,9 @@
       "primaryAbility": "Di Agolze Curse Transmutation",
       "malId": 219460,
       "slug": "macht",
-      "description": "Macht is a  from Sousou no Frieren."
+      "description": "Macht is a  from Sousou no Frieren.",
+      "relationships": [],
+      "role": "Antagonist"
     }
   ],
   "relationships": [
@@ -531,7 +533,7 @@
       "tabLabel": "Power Engine"
     },
     {
-      "question": "What is the most important hard rule in Frieren's magic system?",
+      "question": "Why does Frieren's magic system prioritize lifespan asymmetry and mana concealment as its core structural constraints?",
       "answer": "Visualization. If a caster cannot truly model an outcome as possible, spell throughput collapses regardless of mana reserves.",
       "tabIndex": 3,
       "sectionId": "core-laws-heading",

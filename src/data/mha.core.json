@@ -224,7 +224,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/4/414269.jpg",
       "malId": 141624,
       "slug": "enji-todoroki",
-      "description": "Enji Todoroki is a  from My Hero Academia."
+      "description": "Enji Todoroki is a  from My Hero Academia.",
+      "relationships": [],
+      "role": "Supporting"
     },
     {
       "name": "Keigo Takami",
@@ -241,7 +243,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/10/438645.jpg",
       "malId": 195199,
       "slug": "keigo-takami",
-      "description": "Keigo Takami is a  from My Hero Academia."
+      "description": "Keigo Takami is a  from My Hero Academia.",
+      "relationships": [],
+      "role": "Supporting"
     },
     {
       "name": "Chizome Akaguro",
@@ -258,7 +262,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/15/331442.jpg",
       "malId": 132691,
       "slug": "chizome-akaguro",
-      "description": "Chizome Akaguro is a  from My Hero Academia."
+      "description": "Chizome Akaguro is a  from My Hero Academia.",
+      "relationships": [],
+      "role": "Antagonist"
     },
     {
       "name": "Rikiya Yotsubashi",
@@ -275,7 +281,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/16/454752.jpg",
       "malId": 174410,
       "slug": "rikiya-yotsubashi",
-      "description": "Rikiya Yotsubashi is a  from My Hero Academia."
+      "description": "Rikiya Yotsubashi is a  from My Hero Academia.",
+      "relationships": [],
+      "role": "Supporting"
     },
     {
       "name": "Shouta Aizawa",
@@ -320,7 +328,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/6/454749.jpg",
       "malId": 139262,
       "slug": "touya-todoroki",
-      "description": "Touya Todoroki is a  from My Hero Academia."
+      "description": "Touya Todoroki is a  from My Hero Academia.",
+      "relationships": [],
+      "role": "Antagonist"
     }
   ],
   "relationships": [

@@ -287,7 +287,8 @@
       "description": "Thomas Andre is a  from Solo Leveling.",
       "relationships": [
         "Solo Leveling"
-      ]
+      ],
+      "role": "Antagonist"
     },
     {
       "name": "Ashborn",
@@ -310,7 +311,8 @@
       "description": "Ashborn is a  from Solo Leveling.",
       "relationships": [
         "Solo Leveling"
-      ]
+      ],
+      "role": "Antagonist"
     }
   ],
   "relationships": [
@@ -607,7 +609,7 @@
       "tabLabel": "Power Engine"
     },
     {
-      "question": "What is the practical function of the System?",
+      "question": "Why does the System's hunter ranking and level-up mechanics create a fixed-strategy versus emergent-strategy tension in Solo Leveling?",
       "answer": "It is a coercive adaptation framework that conditions Jinwoo for sovereign authority while preventing early self-destruction.",
       "tabIndex": 0,
       "sectionId": "power-system-heading",

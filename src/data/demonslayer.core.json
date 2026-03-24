@@ -252,7 +252,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/2/464775.jpg",
       "malId": 174147,
       "slug": "akaza",
-      "description": "Akaza is a  from Demon Slayer: Kimetsu no Yaiba."
+      "description": "Akaza is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "relationships": [],
+      "role": "Antagonist"
     },
     {
       "name": "Kokushibo",
@@ -269,7 +271,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/10/406156.jpg",
       "malId": 174145,
       "slug": "kokushibo",
-      "description": "Kokushibo is a  from Demon Slayer: Kimetsu no Yaiba."
+      "description": "Kokushibo is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "relationships": [],
+      "role": "Antagonist"
     },
     {
       "name": "Douma",
@@ -286,7 +290,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/3/465011.jpg",
       "malId": 170152,
       "slug": "douma",
-      "description": "Douma is a  from Demon Slayer: Kimetsu no Yaiba."
+      "description": "Douma is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "relationships": [],
+      "role": "Antagonist"
     },
     {
       "name": "Kagaya Ubuyashiki",
