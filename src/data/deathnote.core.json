@@ -643,5 +643,6 @@
     "thesis": "Death Note is structurally defined by relational interdependence — who controls whom, who knows what about whom, and how shifting alliances…",
     "primarySystemType": "entity_db"
   },
-  "introductionSummary": "Death Note runs as a cat-and-mouse information war where Light's supernatural execution power collides with L's probabilistic deanonymization — and every move either shrinks Light's anonymity or expands L's suspicion network. The node graph captures what drives each tactical reversal: who knows what about whom, and how trust networks between investigators and criminals continuously reconfigure. Psychology leaks what cryptography cannot."
+  "introductionSummary": "Death Note runs as a cat-and-mouse information war where Light's supernatural execution power collides with L's probabilistic deanonymization — and every move either shrinks Light's anonymity or expands L's suspicion network. The node graph captures what drives each tactical reversal: who knows what about whom, and how trust networks between investigators and criminals continuously reconfigure. Psychology leaks what cryptography cannot.",
+  "systemType": "death-note-rules"
 }
