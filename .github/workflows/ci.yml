@@ -39,3 +39,10 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Bug Catcher PR verification
+        if: github.event_name == 'pull_request'
+        env:
+          BUG_CATCHER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: node scripts/catch-bugs.js $PR_NUMBER --repo=.
