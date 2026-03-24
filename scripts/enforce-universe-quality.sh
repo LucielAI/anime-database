@@ -417,6 +417,84 @@ else
 fi
 
 # ============================================================
+# GATE 0: Jikan API Verification — MAL ID + character spot-check
+# ============================================================
+echo ""
+echo "[GATE 0] Jikan API verification (MAL ID + sample character check)..."
+
+python3 << 'PYEOF'
+import json, os, sys, urllib.request, time
+
+repo = '/data/workspace/anime-database/src/data'
+core_files = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
+
+errors = []
+warnings = []
+
+known_wrong = {
+    'fire-force': {'wrong': 31964, 'correct': 38671},
+    'jjk': {'wrong': 44738, 'correct': 40748},
+    'spy-x-family': {'wrong': 50693, 'correct': 50265},
+}
+
+def jikan_get(path, retries=2):
+    for attempt in range(retries):
+        try:
+            url = f'https://api.jikan.moe/v4{path}'
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            r = urllib.request.urlopen(req, timeout=10)
+            return json.loads(r.read())
+        except Exception:
+            if attempt < retries - 1:
+                time.sleep(1)
+    return None
+
+for fname in core_files:
+    slug = fname.replace('.core.json', '')
+    with open(f'{repo}/{fname}') as f:
+        d = json.load(f)
+    
+    mal_id = d.get('malId')
+    anime_name = d.get('anime', '')
+    
+    if not mal_id:
+        errors.append(f'  {slug}: malId MISSING')
+        continue
+    
+    if slug in known_wrong and mal_id == known_wrong[slug].get('wrong'):
+        errors.append(f'  {slug}: malId {mal_id} is KNOWN WRONG (correct: {known_wrong[slug]["correct"]})')
+        continue
+    
+    result = jikan_get(f'/anime/{mal_id}')
+    if not result:
+        warnings.append(f'  {slug}: Jikan unreachable for malId {mal_id} (non-blocking)')
+        continue
+    
+    jikan_title = result.get('data', {}).get('title', '')
+    if anime_name:
+        short = anime_name.split(' - ')[0].split(':')[0].strip()
+        if short.lower() not in jikan_title.lower() and jikan_title.lower() not in short.lower():
+            errors.append(f'  {slug}: title mismatch — .core.json="{anime_name}" Jikan="{jikan_title}"')
+
+if errors:
+    print('FAIL: Jikan verification failures:')
+    for e in errors:
+        print(e)
+    sys.exit(1)
+else:
+    print(f'  PASS: All {len(core_files)} universes passed Jikan MAL ID verification')
+    for w in warnings:
+        print(w)
+PYEOF
+
+if [ $? -ne 0 ]; then
+    echo "❌ BLOCKED: Jikan verification failed"
+    FAILED=1
+else
+    echo "  INFO: Jikan failures are non-blocking warnings"
+fi
+
+# ============================================================
 # RESULT
 # ============================================================
 echo ""

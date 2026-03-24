@@ -116,11 +116,7 @@
       "description": "Sung Jin-Woo is a  from Solo Leveling.",
       "role": "Main",
       "relationships": [
-        "Echo",
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken: How to Get Stronger",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow",
-        "Ore dake Level Up na Ken: ReAwakening"
+        "Solo Leveling"
       ]
     },
     {
@@ -141,9 +137,7 @@
       "description": "Cha Hae-In is a  from Solo Leveling.",
       "role": "Supporting",
       "relationships": [
-        "Echo",
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow"
+        "Solo Leveling"
       ]
     },
     {
@@ -164,9 +158,7 @@
       "description": "Yoo Jin-Ho is a  from Solo Leveling.",
       "role": "Supporting",
       "relationships": [
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken: How to Get Stronger",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow"
+        "Solo Leveling"
       ]
     },
     {
@@ -187,9 +179,7 @@
       "description": "Go Gun-Hee is a  from Solo Leveling.",
       "role": "Supporting",
       "relationships": [
-        "Echo",
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow"
+        "Solo Leveling"
       ]
     },
     {
@@ -210,9 +200,7 @@
       "description": "Baek Yoon-Ho is a  from Solo Leveling.",
       "role": "Supporting",
       "relationships": [
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken: How to Get Stronger",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow"
+        "Solo Leveling"
       ]
     },
     {
@@ -233,9 +221,7 @@
       "description": "Choi Jong-In is a  from Solo Leveling.",
       "role": "Supporting",
       "relationships": [
-        "Echo",
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow"
+        "Solo Leveling"
       ]
     },
     {
@@ -256,8 +242,7 @@
       "description": "Woo Jin-Chul is a  from Solo Leveling.",
       "role": "Supporting",
       "relationships": [
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow"
+        "Solo Leveling"
       ]
     },
     {
@@ -278,9 +263,7 @@
       "description": "Lee Joo-Hee is a  from Solo Leveling.",
       "role": "Supporting",
       "relationships": [
-        "Ore dake Level Up na Ken",
-        "Ore dake Level Up na Ken: How to Get Stronger",
-        "Ore dake Level Up na Ken Season 2: Arise from the Shadow"
+        "Solo Leveling"
       ]
     },
     {
@@ -301,7 +284,10 @@
         "Thomas Andre"
       ],
       "slug": "thomas-andre",
-      "description": "Thomas Andre is a  from Solo Leveling."
+      "description": "Thomas Andre is a  from Solo Leveling.",
+      "relationships": [
+        "Solo Leveling"
+      ]
     },
     {
       "name": "Ashborn",
@@ -321,7 +307,10 @@
         "Ashborn"
       ],
       "slug": "ashborn",
-      "description": "Ashborn is a  from Solo Leveling."
+      "description": "Ashborn is a  from Solo Leveling.",
+      "relationships": [
+        "Solo Leveling"
+      ]
     }
   ],
   "relationships": [
