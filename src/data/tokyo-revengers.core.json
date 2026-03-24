@@ -589,5 +589,6 @@
     "thesis": "Time-leap branches Takemichi's choices. Mikey's decisions anchor futures. Gang conflicts resolve through temporal rewind.",
     "primarySystemType": "entity_db",
     "imageUrl": "https://cdn.myanimelist.net/images/anime/1839/122012l.jpg"
-  }
+  },
+  "systemType": "timeline-manipulation"
 }

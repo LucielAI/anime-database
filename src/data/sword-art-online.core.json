@@ -576,5 +576,6 @@
       "loreDesc": "Floor bosses have enrage timers — if clearing takes too long, boss damage output scales until no party can survive.",
       "systemDesc": "Time-constrained DPS checks favor high burst nodes over sustained damage graphs."
     }
-  ]
+  ],
+  "systemType": "game-mechanic"
 }
