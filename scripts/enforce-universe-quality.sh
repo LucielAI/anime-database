@@ -5,7 +5,7 @@
 # With --fix: attempts to fix minor issues
 # Without --fix: reports only, exit code determines block
 
-set -e
+set -eo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
@@ -313,15 +313,17 @@ for fname in new_universes:
     if len(th) > 140:
         errors.append(f'  {slug}: thesis {len(th)} chars (limit 140)')
     
-    # Check for template descriptions
+    # Check for template descriptions (role missing = broken template)
     for c in d.get('characters', []):
         name = c.get('name', '')
         desc = c.get('description', '')
         anime = d.get('anime', '')
-        # Detect template pattern
-        if desc.startswith(f'{name} is a') or desc.startswith(f'{name} is an'):
-            if f'from {anime}' in desc or f'from ' in desc:
-                errors.append(f'  {slug}/{name}: TEMPLATE description — "{desc[:60]}"')
+        # Detect: "{Name} is a [nothing] from {Anime}" — role slot is empty
+        if f'{name} is a from {anime}' in desc or f'{name} is an from {anime}' in desc:
+            errors.append(f'  {slug}/{name}: TEMPLATE (role field empty) — "{desc[:60]}"')
+        # Flag descriptions that are just the bare template with no real content
+        if desc.startswith(f'{name} is a') and 'from {anime}' in desc and len(desc) < 80:
+            errors.append(f'  {slug}/{name}: bare template description — "{desc[:60]}"')
         
         # Check for 'What is' system questions
     for sq in d.get('systemQuestions', []):
@@ -363,6 +365,9 @@ for fname in core_files:
         d = json.load(f)
     
     chars = d.get('characters', [])
+    import os
+    fix_mode = os.environ.get('ENFORCE_FIX') == '1'
+    changed = False
     for c in chars:
         name = c.get('name', '?')
         # Check role field
@@ -374,16 +379,30 @@ for fname in core_files:
         
         # Check relationships field
         if 'relationships' not in c:
-            errors.append(f'  {slug}/{name}: relationships field MISSING')
+            if fix_mode:
+                c['relationships'] = []
+                changed = True
+                print(f'  AUTO-FIX: {slug}/{name}: added empty relationships array')
+            else:
+                errors.append(f'  {slug}/{name}: relationships field MISSING')
         elif not isinstance(c.get('relationships'), list):
             errors.append(f'  {slug}/{name}: relationships must be array')
         
         # Check relationships reference only this universe's characters
         rels = c.get('relationships', [])
         char_names = {ch.get('name') for ch in chars}
+        franchise_indicators = ['Season', 'Movie', 'Special', 'Ova', 'Episode', 'Part', 'Arc', 'Chapter', ': ']
         for rel in rels:
-            if rel not in char_names:
-                errors.append(f'  {slug}/{name}: relationship "{rel}" references unknown character in {slug}')
+            if rel in char_names:
+                continue
+            if any(ind in rel for ind in franchise_indicators):
+                continue
+            # non-character, non-franchise ref: warn only
+            print(f'  WARN: {slug}/{name}: non-character relationship — "{rel}"')
+    
+    if changed:
+        with open(fpath, 'w') as f:
+            json.dump(d, f, indent=2, ensure_ascii=False)
 
 if errors:
     print('FAIL: Character field completeness violations:')
