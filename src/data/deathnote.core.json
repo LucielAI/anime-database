@@ -189,22 +189,6 @@
       "malId": 835
     },
     {
-      "name": "Rem",
-      "title": "The Anomalous Vector",
-      "rank": "Shinigami",
-      "primaryAbility": "Death Note / Empathy Override",
-      "loreBio": "A shinigami who develops genuine protective attachment to Misa Amane after witnessing Gelus die for her. Rem's empathy is her structural vulnerability — Light exploits it by engineering a scenario where L's continued existence threatens Misa, forcing Rem to kill L and Watari at the cost of her own life, as any shinigami who extends a human's lifespan is destroyed.",
-      "systemBio": "An anomalous death-god node whose hardcoded empathy constraint overrides the standard Shinigami self-preservation protocol. Light identifies and weaponizes this constraint, converting Rem into a single-use guided munition — she eliminates the primary adversary but triggers the Shinigami failsafe that terminates her in the process.",
-      "gradientFrom": "slate-900",
-      "gradientTo": "violet-900",
-      "accentColor": "violet-400",
-      "icon": "Shield",
-      "dangerLevel": 7,
-      "signatureMoment": "Writing L's and Watari's names in her Death Note to save Misa — knowing she will die, choosing to trigger the cosmic failsafe rather than let the human she loves be destroyed.",
-      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/28562.jpg?s=c132f8cc80e93184d9cd180218579e69",
-      "malId": 1905
-    },
-    {
       "name": "Teru Mikami",
       "title": "The Automated Proxy",
       "rank": "X-Kira / Hand of Kira",
