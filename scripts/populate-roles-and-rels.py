@@ -175,7 +175,12 @@ def fix_universe(slug, dry_run=True, min_conf='exact_last'):
             results['skipped'].append({'name': sn, 'stored_malId': sc.get('malId'), 'reason': 'no Jikan match'})
             continue
         jn, jc, conf = match
-        if conf not in ('exact_full', 'exact_last') and not conf.startswith('fuzzy_last'):
+        # Determine auto-apply vs manual review
+        auto_apply = conf in ('exact_full', 'exact_last') or conf.startswith('fuzzy_last')
+        if conf.startswith('similar'):
+            score = float(conf.split('_')[1])
+            auto_apply = (score >= 0.90)  # ECHO-verified: ≥0.90 auto-apply
+        if not auto_apply:
             results['manual_review'].append({
                 'name': sn, 'stored_malId': sc.get('malId'), 'jikan_malId': jc['malId'],
                 'jikan_name': jn, 'confidence': conf, 'reason': 'low confidence match'})
