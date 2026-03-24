@@ -2,6 +2,7 @@
   "anime": "Death Note",
   "tagline": "Death Note — An underground executioner vs. the world's greatest detective in a deadly names game.",
   "malId": 1535,
+  "systemType": "death-note-rules",
   "themeColors": {
     "primary": "#dc2626",
     "secondary": "#1e1b4b",
