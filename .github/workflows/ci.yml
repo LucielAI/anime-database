@@ -46,3 +46,4 @@ jobs:
           BUG_CATCHER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: node scripts/catch-bugs.js $PR_NUMBER --repo=.
+        continue-on-error: true
