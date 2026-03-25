@@ -183,7 +183,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/73909.jpg",
       "_fetchFailed": false,
       "malId": 1086,
-      "role": "Antagonist",
+      "role": "Supporting",
       "slug": "sosuke-aizen",
       "description": "Sosuke Aizen is a Antagonist from Bleach.",
       "relationships": [
@@ -211,8 +211,8 @@
       "signatureMoment": "Releasing his Resurreccion and revealing a second Hollow form — proving that even among Espada, he had powers no one knew about.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/529323.jpg?s=701d2f9aa034abda278ca33c96b54030",
       "_fetchFailed": false,
-      "malId": 1200,
-      "role": "Antagonist",
+      "malId": 1081,
+      "role": "Supporting",
       "slug": "ulquiorra-cifer",
       "description": "Ulquiorra Cifer is a Antagonist from Bleach.",
       "relationships": [
@@ -234,7 +234,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/100098.jpg?s=c184bfa12ef0b29cc48d31e986d011ad",
       "_fetchFailed": false,
       "malId": 6,
-      "role": "Main",
+      "role": "Supporting",
       "slug": "byakuya-kuchiki",
       "description": "Byakuya Kuchiki is a Main from Bleach.",
       "relationships": [
