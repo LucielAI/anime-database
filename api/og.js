@@ -224,6 +224,10 @@ function normalizePreview(id) {
   return UNIVERSE_MAP[normalizedId] || FALLBACK
 }
 
+function escXml(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;')
+}
+
 
 function generateSVG(title, subtitle, typeLabel, themeColor) {
   const width = 1200
@@ -267,7 +271,7 @@ function generateSVG(title, subtitle, typeLabel, themeColor) {
         stroke="${themeColor}" stroke-width="2" opacity="0.2" filter="url(#glow)" />
   
   <!-- Type label -->
-  <text x="100" y="120" class="type-label">// ${typeLabel}</text>
+  <text x="100" y="120" class="type-label">// ${escXml(typeLabel)}</text>
   
   <!-- System profile badge -->
   <rect x="920" y="80" width="200" height="50" rx="25" fill="rgba(0,0,0,0.5)" 
@@ -275,10 +279,10 @@ function generateSVG(title, subtitle, typeLabel, themeColor) {
   <text x="1020" y="112" text-anchor="middle" class="system-profile">SYSTEM PROFILE</text>
   
   <!-- Title -->
-  <text x="100" y="350" class="title">${title}</text>
+  <text x="100" y="350" class="title">${escXml(title)}</text>
   
   <!-- Subtitle -->
-  <text x="100" y="420" class="subtitle">${subtitle}</text>
+  <text x="100" y="420" class="subtitle">${escXml(subtitle)}</text>
   
   <!-- Footer -->
   <text x="1100" y="590" text-anchor="end" class="footer">ANIME_ARCHITECTURE_ARCHIVE</text>
@@ -313,8 +317,8 @@ function generateInsightSVG(title, subtitle, themeColor) {
   <text x="100" y="120" class="type-label">// SYSTEM BREAKDOWN</text>
   <rect x="920" y="80" width="200" height="50" rx="25" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
   <text x="1020" y="112" text-anchor="middle" class="type-label" style="font-size:18px">INSIGHTS</text>
-  <text x="100" y="340" class="title">${title}</text>
-  <text x="100" y="410" class="subtitle">${subtitle}</text>
+  <text x="100" y="340" class="title">${escXml(title)}</text>
+  <text x="100" y="410" class="subtitle">${escXml(subtitle)}</text>
   <text x="1100" y="590" text-anchor="end" class="footer">ANIME_ARCHITECTURE_INSIGHTS</text>
 </svg>`
 }

@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect, lazy, Suspense } from 'react'
+import React, { useState, useCallback, useRef, useEffect, lazy, Suspense } from 'react'
 import * as d3 from 'd3-force'
 import DangerBar from '../components/DangerBar'
 import { resolveColor } from '../utils/resolveColor'
@@ -64,7 +64,7 @@ function getEdgeLabelPos(sx, sy, tx, ty) {
 
 const StandardCardsExplorer = lazy(() => import('./StandardCardsExplorer'))
 
-export default function NodeGraphExplorer({ characters = [], relationships = [], isSystemMode, theme, data }) {
+export default React.memo(function NodeGraphExplorer({ characters = [], relationships = [], isSystemMode, theme, data }) {
   const svgRef = useRef(null)
   const simulationRef = useRef(null)
   const [nodes, setNodes] = useState([])
@@ -76,6 +76,9 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
   const [hasInteracted, setHasInteracted] = useState(false)
   const dragOffset = useRef({ x: 0, y: 0 })
   const rafRef = useRef(null)
+  // Stable refs for D3 — avoids creating new array references on every tick
+  const nodesRef = useRef([])
+  const linksRef = useRef([])
 
   // Wow Graph Moment — auto-select highest-degree node
   useEffect(() => {
