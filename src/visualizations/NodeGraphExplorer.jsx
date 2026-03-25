@@ -156,7 +156,9 @@ export default React.memo(function NodeGraphExplorer({ characters = [], relation
       if (simulationRef.current) simulationRef.current.stop()
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
-  }, [characters, relationships]) // triggers resetLayout only when data actually changes
+    // resetLayout is stable (empty deps) — deps are [characters, relationships] only
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [characters, relationships])
 
   if (characters.length === 0) {
     return (

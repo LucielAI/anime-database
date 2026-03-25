@@ -95,9 +95,9 @@ export default function CompareRoute() {
   const comparisonStats = useMemo(() => getCompareStats(left, right), [left, right])
 
   const seo = {
-    title: left && right
+    title: left?.anime && right?.anime
       ? `${left.anime} vs ${right.anime} — System Comparison | ${SITE_NAME}`
-      : `Universe Comparison | ${SITE_NAME}`,
+      : (console.warn('[ARCHIVE] CompareRoute OG title fallback: missing anime names', { leftAnime: left?.anime, rightAnime: right?.anime }), `Universe Comparison | ${SITE_NAME}`),
     description: left && right
       ? `Compare ${left.anime} and ${right.anime} side-by-side. Power systems, factions, combat mechanics, and structural analysis.`
       : `Compare anime universe systems side-by-side.`,

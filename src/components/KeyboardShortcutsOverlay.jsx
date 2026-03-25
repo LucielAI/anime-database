@@ -28,6 +28,9 @@ export default function KeyboardShortcutsOverlay({ onClose }) {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="keyboard-shortcuts-heading"
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-6"
       onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
     >
@@ -38,7 +41,7 @@ export default function KeyboardShortcutsOverlay({ onClose }) {
               <rect x="2" y="6" width="20" height="12" rx="2" />
               <path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8" />
             </svg>
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-white">Keyboard Shortcuts</h2>
+            <h2 id="keyboard-shortcuts-heading" className="text-sm font-bold uppercase tracking-[0.2em] text-white">Keyboard Shortcuts</h2>
           </div>
           <button
             onClick={onClose}
