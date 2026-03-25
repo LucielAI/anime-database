@@ -375,7 +375,7 @@ export default function Dashboard({ data }) {
             </div>
           </div>
         </div>
-      )}
+      ) : null}
 
       {/* System Reveal Vignette Overlay */}
       <div 
@@ -386,9 +386,9 @@ export default function Dashboard({ data }) {
           backgroundColor: 'rgba(5, 5, 8, 0.5)'
         }} 
       >
-        {isRevealing && revealOverlay && (
+        {isRevealing && revealOverlay ? (
           <div className={revealOverlay.className} style={revealOverlay.style} />
-        )}
+        ) : null}
       </div>
 
       {/* Hero: first viewport reset */}
@@ -469,7 +469,7 @@ export default function Dashboard({ data }) {
           <p className="text-xs md:text-sm text-gray-300 leading-relaxed max-w-4xl">
             {universeIntro}
           </p>
-          {bestParallel?.entry && (
+          {bestParallel?.entry ? (
             <p className="mt-4 text-[11px] text-gray-400">
               If you understood this system, continue with:{' '}
               <Link to={`/universe/${bestParallel.entry.id}`} className="text-cyan-300 hover:text-cyan-200">
@@ -477,7 +477,7 @@ export default function Dashboard({ data }) {
               </Link>
               .
             </p>
-          )}
+          ) : null}
         </div>
       </section>
 
@@ -801,9 +801,9 @@ export default function Dashboard({ data }) {
           Unofficial fan-made interactive analysis. All characters, names, and lore belong to their respective creators and studios. Created by Hashi.Ai.
         </p>
       </footer>
-      {showShortcuts && (
+      {showShortcuts ? (
         <KeyboardShortcutsOverlay onClose={() => setShowShortcuts(false)} />
-      )}
+      ) : null}
     </div>
   )
 }
