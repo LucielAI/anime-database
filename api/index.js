@@ -5,7 +5,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const PUBLIC_DIR = path.join(process.cwd(), 'public');
+// Deployment root — Vercel Functions can read dist/ at runtime
+const ROOT_DIR = process.cwd();
 
 function serveFile(filePath, contentType) {
   if (!fs.existsSync(filePath)) {
@@ -20,16 +21,16 @@ function route(req) {
 
   // Homepage
   if (urlPath === '' || urlPath === '/') {
-    return serveFile(path.join(PUBLIC_DIR, 'index.html'), 'text/html; charset=utf-8');
+    return serveFile(path.join(ROOT_DIR, 'index.html'), 'text/html; charset=utf-8');
   }
 
   // Universe pages: /universe/{slug}
   const universeMatch = urlPath.match(/^\/universe\/([^/]+)$/);
   if (universeMatch) {
     const slug = universeMatch[1];
-    const filePath = path.join(PUBLIC_DIR, 'universe', slug, 'index.html');
+    const filePath = path.join(ROOT_DIR, 'universe', slug, 'index.html');
     // Security: ensure path is within public/universe/
-    if (!filePath.startsWith(path.join(PUBLIC_DIR, 'universe'))) {
+    if (!filePath.startsWith(path.join(ROOT_DIR, 'universe'))) {
       return { status: 403, body: 'Forbidden' };
     }
     return serveFile(filePath, 'text/html; charset=utf-8');
@@ -39,8 +40,8 @@ function route(req) {
   const charMatch = urlPath.match(/^\/universe\/([^/]+)\/character\/(\d+)$/);
   if (charMatch) {
     const slug = charMatch[1];
-    const filePath = path.join(PUBLIC_DIR, 'universe', slug, 'index.html');
-    if (!filePath.startsWith(path.join(PUBLIC_DIR, 'universe'))) {
+    const filePath = path.join(ROOT_DIR, 'universe', slug, 'index.html');
+    if (!filePath.startsWith(path.join(ROOT_DIR, 'universe'))) {
       return { status: 403, body: 'Forbidden' };
     }
     return serveFile(filePath, 'text/html; charset=utf-8');
