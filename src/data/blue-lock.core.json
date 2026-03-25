@@ -533,7 +533,7 @@
       "systemDesc": "Route compression attack that reduces defensive response time below human neural reaction threshold."
     },
     {
-      "attacker": "Copy Adaptation",
+      "attacker": "Ego Copy Adaptation",
       "defender": "Fixed Signature",
       "mechanic": "Reo's ego leap copies Nagi's techniques and layers his own finishing on top — a parasitic optimization that surpasses the host node.",
       "loreDesc": "The copy striker path isn't just imitation — Reo adds his own ego to what he copies, making the copy superior to the original.",

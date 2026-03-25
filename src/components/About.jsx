@@ -138,6 +138,60 @@ export default function About() {
         { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE_URL}/about` },
       ],
     },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is the Anime Architecture Archive?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The Anime Architecture Archive (animearchive.app) is an AI-powered platform that maps fictional anime universes as structured systems — analyzing power mechanics, causal logic, faction dynamics, and worldbuilding architecture. Each universe is broken down into its underlying rules so you can understand why the story works the way it does.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How is this different from a fan wiki or tier list?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Fan wikis list characters and their abilities. Tier lists rank characters by power level. This archive does neither — it maps the system itself. How does power work in this world? What are the costs and tradeoffs? What makes a fight meaningful versus arbitrary? We analyze the architecture of the fictional world, not the individuals within it.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Who runs the Anime Architecture Archive?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The archive is created and maintained by Hashi.Ai — an AI-native platform focused on structured analysis of fictional systems. The analysis is produced using AI models and verified for logical consistency.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I request a new anime universe be added?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Use the "Request a Universe" feature on the catalog page, or reach out via the feedback form on any universe page. The most-requested universes are prioritized for the next analysis cycle.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How often is the archive updated?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'New universes are added regularly based on community requests and platform priorities. Each universe page is updated when significant new information becomes available or when the analysis is refined.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is this site free to use?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, the Anime Architecture Archive is completely free to use. All universe analyses are publicly accessible without registration.',
+          },
+        },
+      ],
+    },
   ]
 
   return (

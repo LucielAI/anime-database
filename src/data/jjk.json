@@ -120,7 +120,7 @@
       "_fetchFailed": false,
       "malId": 164471,
       "slug": "satoru-gojo",
-      "description": "Satoru Gojo is a  from Jujutsu Kaisen.",
+      "description": "Satoru Gojo is the most powerful Jujutsu sorcerer and mentor from Jujutsu Kaisen.",
       "role": "Main",
       "relationships": []
     },
@@ -141,7 +141,7 @@
       "_fetchFailed": false,
       "malId": 175198,
       "slug": "ryomen-sukuna",
-      "description": "Ryomen Sukuna is a  from Jujutsu Kaisen.",
+      "description": "Ryomen Sukuna is the ancient dual-faced demon King of Curses from Jujutsu Kaisen.",
       "role": "Supporting",
       "relationships": []
     },
@@ -162,7 +162,7 @@
       "_fetchFailed": false,
       "malId": 175542,
       "slug": "kenjaku",
-      "description": "Kenjaku is a  from Jujutsu Kaisen.",
+      "description": "Kenjaku is the ancient parasitic sorcerer and mastermind from Jujutsu Kaisen.",
       "role": "Supporting",
       "relationships": []
     },
@@ -183,7 +183,7 @@
       "_fetchFailed": false,
       "malId": 168067,
       "slug": "yuta-okkotsu",
-      "description": "Yuta Okkotsu is a  from Jujutsu Kaisen.",
+      "description": "Yuta Okkotsu is a Special Grade sorcerer bound to the Queen of Curses from Jujutsu Kaisen.",
       "role": "Supporting",
       "relationships": []
     },
@@ -204,7 +204,7 @@
       "_fetchFailed": false,
       "malId": 175543,
       "slug": "toji-fushiguro",
-      "description": "Toji Fushiguro is a  from Jujutsu Kaisen.",
+      "description": "Toji Fushiguro is the Sorcerer Killer and holder of a Heavenly Restriction from Jujutsu Kaisen.",
       "role": "Supporting",
       "relationships": []
     },
@@ -224,7 +224,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/423949.jpg?s=72edfa936ac89421e8d16970762d8b5b",
       "malId": 164482,
       "slug": "maki-zenin",
-      "description": "Maki Zenin is a  from Jujutsu Kaisen.",
+      "description": "Maki Zenin is a demon hunter and Heavenly Restriction holder from Jujutsu Kaisen.",
       "role": "Supporting",
       "relationships": []
     },
@@ -248,7 +248,7 @@
         "Itadori, Yuuji"
       ],
       "slug": "yuji-itadori",
-      "description": "Yuji Itadori is a  from Jujutsu Kaisen.",
+      "description": "Yuji Itadori is a prodigious fighter and Jujutsu vessel from Jujutsu Kaisen.",
       "role": "Main",
       "relationships": []
     },
@@ -268,7 +268,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/392689.jpg?s=2395a10b59bb54ec9891c74ef214fea1",
       "malId": 164470,
       "slug": "megumi-fushiguro",
-      "description": "Megumi Fushiguro is a  from Jujutsu Kaisen.",
+      "description": "Megumi Fushiguro is a Jujutsu sorcerer and Ten Shadows user from Jujutsu Kaisen.",
       "role": "Main",
       "relationships": []
     },
@@ -288,7 +288,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/446508.jpg?s=8cfa45381097f1e9a720982061ec087d",
       "malId": 164481,
       "slug": "mahito",
-      "description": "Mahito is a  from Jujutsu Kaisen.",
+      "description": "Mahito is a Disaster Curse and Soul Manipulator from Jujutsu Kaisen.",
       "role": "Supporting",
       "relationships": []
     },
@@ -308,7 +308,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/581424.jpg?s=78de007092c9e32f3555753de4999ee6",
       "malId": 164473,
       "slug": "kento-nanami",
-      "description": "Kento Nanami is a  from Jujutsu Kaisen.",
+      "description": "Kento Nanami is a Grade 1 sorcerer with the Ratio Technique from Jujutsu Kaisen.",
       "role": "Supporting",
       "relationships": []
     }
