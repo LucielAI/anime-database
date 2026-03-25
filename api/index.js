@@ -1,11 +1,10 @@
 /**
- * Vercel serverless function — serves static HTML for homepage + universe routes.
- * Falls through to the SPA for all other routes.
+ * Vercel serverless function — serves pre-generated static HTML for universe routes.
+ * All other routes fall through to the SPA via vercel.json catch-all rewrite.
  */
 const fs = require('fs');
 const path = require('path');
 
-// Deployment root — Vercel Functions can read dist/ at runtime
 const ROOT_DIR = process.cwd();
 
 function serveFile(filePath, contentType) {
@@ -19,18 +18,12 @@ function serveFile(filePath, contentType) {
 function route(req) {
   const urlPath = (req.url || '').split('?')[0].replace(/\/$/, '');
 
-  // Homepage
-  if (urlPath === '' || urlPath === '/') {
-    return serveFile(path.join(ROOT_DIR, 'index.html'), 'text/html; charset=utf-8');
-  }
-
   // Universe pages: /universe/{slug}
   const universeMatch = urlPath.match(/^\/universe\/([^/]+)$/);
   if (universeMatch) {
     const slug = universeMatch[1];
-    const filePath = path.join(ROOT_DIR, 'universe', slug, 'index.html');
-    // Security: ensure path is within public/universe/
-    if (!filePath.startsWith(path.join(ROOT_DIR, 'universe'))) {
+    const filePath = path.join(ROOT_DIR, 'dist', 'universe', slug, 'index.html');
+    if (!filePath.startsWith(path.join(ROOT_DIR, 'dist', 'universe'))) {
       return { status: 403, body: 'Forbidden' };
     }
     return serveFile(filePath, 'text/html; charset=utf-8');
@@ -40,22 +33,20 @@ function route(req) {
   const charMatch = urlPath.match(/^\/universe\/([^/]+)\/character\/(\d+)$/);
   if (charMatch) {
     const slug = charMatch[1];
-    const filePath = path.join(ROOT_DIR, 'universe', slug, 'index.html');
-    if (!filePath.startsWith(path.join(ROOT_DIR, 'universe'))) {
+    const filePath = path.join(ROOT_DIR, 'dist', 'universe', slug, 'index.html');
+    if (!filePath.startsWith(path.join(ROOT_DIR, 'dist', 'universe'))) {
       return { status: 403, body: 'Forbidden' };
     }
     return serveFile(filePath, 'text/html; charset=utf-8');
   }
 
-  return false; // Let the SPA handle it
+  return false;
 }
 
 module.exports = (req, res) => {
   const result = route(req);
 
   if (!result) {
-    // Not handled — let the default SPA handler take over
-    // Return 404 to let Vercel's default routing handle it
     res.status(404).send('Not a static route');
     return;
   }

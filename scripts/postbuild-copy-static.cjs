@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 /**
  * Post-build step: copy pre-generated static SEO HTML files into dist/
- * so Vercel serves them as static files at / and /universe/{slug}/
+ * so Vercel serves them as static files at /universe/{slug}/
  *
- * Vite build generates dist/index.html (SPA shell). This script replaces
- * it with the pre-generated static SEO HTML that has correct meta/schema.
- * Also copies public/universe/ → dist/universe/ for universe route serving.
+ * Only universe pages get static HTML — homepage stays as the Vite-generated
+ * SPA shell (React handles meta injection client-side).
  */
 const fs = require('fs');
 const path = require('path');
@@ -39,24 +38,13 @@ function copyDir(src, dst) {
 function main() {
   console.log('[postbuild] Copying static SEO HTML files to dist/...');
 
-  // Copy public/index.html → dist/index.html (replaces Vite's SPA shell)
-  const srcHome = path.join(PUBLIC_DIR, 'index.html');
-  const dstHome = path.join(DIST_DIR, 'index.html');
-  if (fs.existsSync(srcHome)) {
-    fs.copyFileSync(srcHome, dstHome);
-    const size = fs.statSync(dstHome).size;
-    console.log(`  [postbuild] Copied homepage: ${size} bytes`);
-  } else {
-    console.log(`  [postbuild] WARNING: ${srcHome} not found — skipping homepage`);
-  }
-
   // Copy public/universe/ → dist/universe/ (for /universe/{slug}/ static serving)
+  // NOTE: homepage (public/index.html) is NOT copied — it stays as the Vite SPA shell
   const srcUniverse = path.join(PUBLIC_DIR, 'universe');
   const dstUniverse = path.join(DIST_DIR, 'universe');
   copyDir(srcUniverse, dstUniverse);
 
-  console.log('[postbuild] Done — static SEO HTML deployed.');
+  console.log('[postbuild] Done — universe static HTML deployed.');
 }
 
 main();
-// already reverted above
