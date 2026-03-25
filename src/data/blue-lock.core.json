@@ -519,7 +519,7 @@
       "systemDesc": "Generative creativity vs. analytical prediction — when the input space exceeds the decision tree's training range, chaos outperforms analysis."
     },
     {
-      "attacker": "Ego Copy Adaptation",
+      "attacker": "Ego Copy",
       "defender": "Fixed Signature",
       "mechanic": "Reo copies Nagi's exact technique, then adds a new finishing layer Nagi doesn't have — parasitic optimization that improves on the source.",
       "loreDesc": "Reo's copy path means any striker who shows him a technique immediately faces a version of themselves with additional ego development.",
