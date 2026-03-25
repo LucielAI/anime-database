@@ -1,10 +1,10 @@
-import { useState, lazy, Suspense } from 'react'
+import React, { useState, lazy, Suspense } from 'react'
 import CounterTree from '../components/CounterTree'
 import { resolveColor } from '../utils/resolveColor'
 
 const StandardCardsExplorer = lazy(() => import('./StandardCardsExplorer'))
 
-export default function CounterTreeExplorer({ characters = [], counterplay = [], powerSystem = [], isSystemMode, theme }) {
+export default React.memo(function CounterTreeExplorer({ characters = [], counterplay = [], powerSystem = [], isSystemMode, theme }) {
   const [selectedPower, setSelectedPower] = useState(null)
   const accent = theme?.accent || '#22d3ee'
 
@@ -79,4 +79,4 @@ export default function CounterTreeExplorer({ characters = [], counterplay = [],
       </div>
     </div>
   )
-}
+})

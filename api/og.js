@@ -1,6 +1,19 @@
+import { createRequire } from 'module';
+
 export const config = {
   runtime: 'edge',
 }
+
+const require = createRequire(import.meta.url);
+const { UNIVERSE_CATALOG } = require('../src/data/catalog.js');
+const UNIVERSE_MAP = Object.fromEntries(
+  UNIVERSE_CATALOG.map(e => [e.id, {
+    anime: e.anime,
+    tagline: e.tagline,
+    visualizationHint: e.visualizationHint,
+    themeColors: { primary: e.themeColors.primary }
+  }])
+);
 
 const INSIGHTS_MAP = {
   insights: { title: 'System Breakdowns', tagline: 'Deep dives into how anime worlds actually work.', themeColor: '#22d3ee' },
@@ -18,190 +31,6 @@ const INSIGHTS_MAP = {
 }
 
 // Minimal self-contained mapping
-const UNIVERSE_MAP = {
-  aot: {
-    anime: 'Attack on Titan',
-    tagline: 'A brutal deterministic closed-loop temporal matrix',
-    visualizationHint: 'timeline',
-    themeColors: { primary: '#6b7280' }
-  },
-  jjk: {
-    anime: 'Jujutsu Kaisen',
-    tagline: 'Negative Energy Economy & Algorithmic Combat',
-    visualizationHint: 'counter-tree',
-    themeColors: { primary: '#4f46e5' }
-  },
-  chainsawman: {
-    anime: 'Chainsaw Man',
-    tagline: 'A fear-fed devil economy where control networks weaponize trauma, contracts, and identity erasure.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#dc2626' }
-  },
-  demonslayer: {
-    anime: 'Demon Slayer: Kimetsu no Yaiba',
-    tagline: 'A nocturnal immortality network versus humans burning their own lifespan for solar-grade kill windows.',
-    visualizationHint: 'counter-tree',
-    themeColors: { primary: '#dc2626' }
-  },
-  hxh: {
-    anime: 'Hunter x Hunter',
-    tagline: 'Contractual Power Economy & Asymmetric Information Warfare',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#059669' }
-  },
-  vinlandsaga: {
-    anime: 'Vinland Saga',
-    tagline: 'A deterministic economy of retributive violence',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#d97706' }
-  },
-  steinsgate: {
-    anime: 'Steins;Gate',
-    tagline: 'A deterministic attractor-field prison where convergence cannot be outrun — only rewritten',
-    visualizationHint: 'timeline',
-    themeColors: { primary: '#22d3ee' }
-  },
-  deathnote: {
-    anime: 'Death Note',
-    tagline: 'An asymmetric information war where anonymous execution power collides with probabilistic deanonymization — and psychology leaks what cryptography cannot',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#dc2626' }
-  },
-  fmab: {
-    anime: 'Fullmetal Alchemist: Brotherhood',
-    tagline: 'A closed thermodynamic system where every act of creation demands an equal destruction — and a 400-year parasite has been rigging the ledger from beneath the earth',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#d97706' }
-  },
-  codegeass: {
-    anime: 'Code Geass: Hangyaku no Lelouch',
-    tagline: 'An occupied nation becomes a control-war between imperial hierarchy, masked insurgency, and a will-hacking anomaly that turns strategy into governance engineering.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#7c3aed' }
-  },
-  mha: {
-    anime: 'My Hero Academia',
-    tagline: 'Mutating biological power collides with state-managed hero capitalism.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#0ea5e9' }
-  },
-  frieren: {
-    anime: 'Sousou no Frieren',
-    tagline: 'A post-war fantasy where mana deception, lifespan asymmetry, and visualization limits decide who survives.',
-    visualizationHint: 'timeline',
-    themeColors: { primary: '#0f766e' }
-  },
-  sololeveling: {
-    anime: 'Solo Leveling',
-    tagline: 'A fixed-rank hunter economy is broken by one player running an infinite growth protocol.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#1d4ed8' }
-  },
-  goblinslayer: {
-    anime: 'Goblin Slayer',
-    tagline: 'A low-prestige extermination niche becomes the hidden maintenance layer that keeps a fantasy civilization from collapsing.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#065f46' }
-  },
-  mushokutensei: {
-    anime: 'Mushoku Tensei: Jobless Reincarnation',
-    tagline: 'A reincarnation-driven fate system where mana growth, bloodline factors, and looping causality decide civilization-scale outcomes.',
-    visualizationHint: 'timeline',
-    themeColors: { primary: '#0f766e' }
-  },
-  naruto: {
-    anime: 'Naruto',
-    tagline: 'A shinobi world where political loyalty, inter-village competition, and bloodline hierarchies define power more than any individual combat outcome.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#f59e0b' }
-  },
-  dragonballz: {
-    anime: 'Dragon Ball Z',
-    tagline: 'A vertical ki hierarchy where exponential transformation tiers, power levels, and the brutal arithmetic of who can destroy what define every combat outcome.',
-    visualizationHint: 'counter-tree',
-    themeColors: { primary: '#f97316' }
-  },
-  bleach: {
-    anime: 'Bleach',
-    tagline: 'A multi-faction spiritual network where Reiatsu dominance and Zanpakuto resonance define survival.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#1e3a8a' }
-  },
-  'tokyo-ghoul': {
-    anime: 'Tokyo Ghoul',
-    tagline: 'A predator-prey economy where the ghoul/human biological boundary defines every alliance and moral position.',
-    visualizationHint: 'counter-tree',
-    themeColors: { primary: '#dc2626' }
-  },
-  'mob-psycho-100': {
-    anime: 'Mob Psycho 100',
-    tagline: 'An affinity-matrix where psychic power and emotional intelligence determine outcomes more than raw esper ability.',
-    visualizationHint: 'affinity-matrix',
-    themeColors: { primary: '#f97316' }
-  },
-  'one-piece': {
-    anime: 'One Piece',
-    tagline: 'An empire-faction control network where rubber physiology, haki willpower, and devil fruit economics determine who owns the seas.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#dc2626' }
-  },
-  'black-clover': {
-    anime: 'Black Clover',
-    tagline: 'Anti-magic versus elemental sovereignty as willpower bets against bloodline.',
-    visualizationHint: 'affinity-matrix',
-    themeColors: { primary: '#1e3a5f', secondary: '#0f172a', accent: '#fbbf24' }
-  },
-  'blue-lock': {
-    anime: 'Blue Lock',
-    tagline: '300 forwards enter Blue Lock. Only one egoist survives.',
-    visualizationHint: 'counter-tree',
-    themeColors: { primary: '#1d4ed8', secondary: '#0c0f1a', accent: '#f97316' }
-  },
-  'fire-force': {
-    anime: 'Fire Force',
-    tagline: 'Spontaneous combustion turns humans into fire monsters. Company 8 fights back.',
-    visualizationHint: 'counter-tree',
-    themeColors: { primary: '#dc2626', secondary: '#1c1917', accent: '#f97316' }
-  },
-  'one-punch-man': {
-    anime: 'One Punch Man',
-    tagline: 'A hero defeats everything with one punch, comedically breaking the entire power-scaling economy.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#ca8a04', secondary: '#1c1917', accent: '#ef4444' }
-  },
-  'parasyte': {
-    anime: 'Parasyte',
-    tagline: 'A parasite takes over your right hand and becomes your unlikely partner in survival.',
-    visualizationHint: 'affinity-matrix',
-    themeColors: { primary: '#0f766e', secondary: '#0c1a1a', accent: '#2dd4bf' }
-  },
-  're-zero': {
-    anime: 'Re:Zero - Starting Life in Another World',
-    tagline: 'Save-scum your way to victory if you die enough times to find the winning timeline.',
-    visualizationHint: 'counter-tree',
-    themeColors: { primary: '#7c3aed', secondary: '#0f172a', accent: '#c4b5fd' }
-  },
-  'spy-x-family': {
-    anime: 'Spy x Family',
-    tagline: 'A spy, an assassin, and a telepath form a fake family — and somehow grow to mean it.',
-    visualizationHint: 'affinity-matrix',
-    themeColors: { primary: '#7c3aed', secondary: '#1e1b4b', accent: '#10b981' }
-  },
-  'sword-art-online': {
-    anime: 'Sword Art Online',
-    tagline: '10,000 players trapped. Only victory or death exists as options.',
-    visualizationHint: 'node-graph',
-    themeColors: { primary: '#0ea5e9', secondary: '#0f172a', accent: '#06b6d4' }
-  },
-  'tokyo-revengers': {
-    anime: 'Tokyo Revengers',
-    tagline: 'A time-leaping delinquent rewrites futures by changing his own choices.',
-    visualizationHint: 'timeline',
-    themeColors: { primary: '#1e3a5f', secondary: '#0d1b2a', accent: '#f97316' }
-  }
-}
-
-const FALLBACK = {
   anime: 'Anime Architecture Archive',
   tagline: 'Fictional Universe Intelligence System',
   visualizationHint: 'standard-cards',
