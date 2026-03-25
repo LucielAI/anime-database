@@ -397,31 +397,40 @@ async function main() {
 
   log(`Bug Catcher v2 — PR #${PR_NUMBER} (repo: ${ROOT})`)
 
-  let pr = api(`/repos/LucielAI/anime-database/pulls/${PR_NUMBER}`)
-  if (!pr) { err(`Could not fetch PR #${PR_NUMBER}`); process.exit(2) }
+  let pr = null
+  let branch = null
+  if (!TOKEN) {
+    log('Skipping GitHub checks — BUG_CATCHER_TOKEN not set')
+  } else {
+    pr = api(`/repos/LucielAI/anime-database/pulls/${PR_NUMBER}`)
+    if (!pr || !pr.head) {
+      err(`Could not fetch PR #${PR_NUMBER} — skipping GitHub checks, running local gates only`)
+    } else {
+      branch = pr.head.ref
+      log(`"${pr.title}" — @${pr.user.login} — \`${branch}\``)
+    }
+  }
 
-  const branch = pr.head.ref
-  log(`"${pr.title}" — @${pr.user.login} — \`${branch}\``)
+  let changedFiles = []
+  let cats = { universeFiles: [], catalogFiles: [], publicFiles: [], components: [], all: [] }
 
-  // Save current branch so we can return after testing
-  const { out: cb } = await run('git', ['branch', '--show-current'])
-  const savedBranch = cb.trim() || 'main'
+  if (!branch) {
+    log('Running all checks locally (no PR context)')
+  } else {
+    const { out: cb } = await run('git', ['branch', '--show-current'])
+    const savedBranch = cb.trim() || 'main'
 
-  // Fetch and checkout the PR branch
-  await run('git', ['fetch', 'origin', branch])
-  const co = await run('git', ['checkout', '-B', branch, `origin/${branch}`])
-  if (co.code !== 0) { err('Checkout failed'); process.exit(2) }
+    await run('git', ['fetch', 'origin', branch])
+    const co = await run('git', ['checkout', '-B', branch, `origin/${branch}`])
+    if (co.code !== 0) { err('Checkout failed'); process.exit(2) }
 
-  // Install deps on PR branch
-  log('Installing dependencies...')
-  const inst = await run('npm', ['install', '--include=dev'])
-  if (inst.code !== 0) { err('npm install failed'); await run('git', ['checkout', savedBranch]); process.exit(1) }
+    log('Installing dependencies...')
+    const inst = await run('npm', ['install', '--include=dev'])
+    if (inst.code !== 0) { err('npm install failed'); await run('git', ['checkout', savedBranch]); process.exit(1) }
 
-  // Get changed files from the PR
-  const changedFiles = await getChangedFiles(branch)
-  const cats = categorizeFiles(changedFiles || [])
-
-  log(`PR changes: ${changedFiles.length} file(s) — ${changedFiles.slice(0, 4).join(', ')}${changedFiles.length > 4 ? '...' : ''}`)
+    changedFiles = await getChangedFiles(branch)
+    cats = categorizeFiles(changedFiles || [])
+  }
 
   const isUniversePR = cats.universeFiles.length > 0 || cats.catalogFiles.length > 0
   const allResults = []
@@ -515,7 +524,7 @@ async function main() {
   const body = [
     `## 🔍 Bug Catcher v2 — PR #${PR_NUMBER}`,
     ``,
-    `**Branch:** \`${branch}\`  **Author:** @${pr.user.login}`,
+    `**Branch:** \`${branch || 'local'}\`  **Author:** @${pr?.user?.login || 'local'}`,
     ``,
     `| Check | Result |`,
     `|---|---|`,
@@ -526,18 +535,25 @@ async function main() {
       : `**All checks passed — ${severity}**`,
   ].filter(Boolean).join('\n')
 
-  // Return to original branch
-  await run('git', ['checkout', savedBranch])
+  // Return to original branch (only if we checked out a PR branch)
+  if (branch) {
+    await run('git', ['checkout', savedBranch])
+  }
 
-  try {
-    execSync(
-      `curl -s -X POST "https://api.github.com/repos/LucielAI/anime-database/issues/${PR_NUMBER}/comments" ` +
-      `-H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" ` +
-      `-d ${JSON.stringify({ body })}`,
-      { encoding: 'utf8' }
-    )
-    log('Comment posted to PR')
-  } catch (e) { /* ignore */ }
+  // Post comment to GitHub if we have token and PR context
+  if (TOKEN && pr && branch) {
+    try {
+      execSync(
+        `curl -s -X POST "https://api.github.com/repos/LucielAI/anime-database/issues/${PR_NUMBER}/comments" ` +
+        `-H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" ` +
+        `-d ${JSON.stringify({ body })}`,
+        { encoding: 'utf8' }
+      )
+      log('Comment posted to PR')
+    } catch (e) { /* ignore */ }
+  } else {
+    log('Skipping GitHub comment — no token or PR context')
+  }
 
   const summary = allPass
     ? `✅ All ${checks.length} checks passed`
