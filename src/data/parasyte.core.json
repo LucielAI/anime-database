@@ -280,14 +280,6 @@
       "systemDesc": "Counter-edge representing the dystopian endpoint of failed human resistance."
     },
     {
-      "source": "Migi",
-      "target": "Parasite Core",
-      "type": "counter",
-      "weight": 8,
-      "loreDesc": "Migi chooses Shinichi over his species, making him a defector from the parasite network.",
-      "systemDesc": "Species-loyalty edge overridden by individual emotional investment."
-    },
-    {
       "source": "Shinichi Izumi",
       "target": "Muramoto",
       "type": "counter",
