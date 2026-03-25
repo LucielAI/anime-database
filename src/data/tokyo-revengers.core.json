@@ -584,7 +584,7 @@
     }
   ],
   "hero": {
-    "systemType": "counter-tree",
+    "systemType": "counterplay",
     "microHook": "Time-leap to the past — every change ripples forward through 12 years of consequences.",
     "thesis": "Time-leap branches Takemichi's choices. Mikey's decisions anchor futures. Gang conflicts resolve through temporal rewind.",
     "primarySystemType": "entity_db",
