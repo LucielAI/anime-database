@@ -1,5 +1,7 @@
 # Anime Architecture Archive
 
+Generated: 2026-03-25 | Universe count: 30 | Last updated: 2026-03-25
+
 The Anime Architecture Archive maps fictional anime universes as structured systems — not summarizing plots, but analyzing the underlying mechanics that make each world function.
 
 ## What This Archive Provides
@@ -9,6 +11,8 @@ Each universe is structured as a dual-mode experience:
 - System Mode: For deep analysis of power mechanics, governing rules, and causal chains
 
 ## Available Universes
+
+_30 universes — last updated 2026-03-25_
 
 ### Attack on Titan | /universe/aot | A brutal deterministic closed-loop temporal matrix
 ### Jujutsu Kaisen | /universe/jjk | Negative Energy Economy & Algorithmic Combat
