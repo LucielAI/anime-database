@@ -44,21 +44,11 @@ function main() {
   const dstUniverse = path.join(DIST_DIR, 'universe');
   copyDir(srcUniverse, dstUniverse);
 
-  // Remove universe index.html files from dist/universe/
-  // These files intercept hard-refresh requests and return blank pages
-  // because they contain no JS bundle. The Vite SPA shell (dist/index.html)
-  // handles all routes including universe routes after the vercel.json fix.
-  if (fs.existsSync(dstUniverse)) {
-    let removed = 0;
-    fs.readdirSync(dstUniverse).forEach(slug => {
-      const idxPath = path.join(dstUniverse, slug, 'index.html');
-      if (fs.existsSync(idxPath)) {
-        fs.unlinkSync(idxPath);
-        removed++;
-      }
-    });
-    console.log(`  [postbuild] Removed ${removed} universe index.html (SPA now boots on hard refresh)`);
-  }
+  // NOTE: Universe index.html files are kept in dist/universe/ so Vercel serves
+  // them directly to social crawlers (Twitter, Facebook) that don't execute JS.
+  // Real users get the SPA via vercel.json rewrite, with client-side React
+  // updating meta tags dynamically. Static HTML shells carry correct og:title,
+  // og:image, twitter:card for crawlers.
 
   console.log('[postbuild] Done — universe static HTML deployed.');
 }
