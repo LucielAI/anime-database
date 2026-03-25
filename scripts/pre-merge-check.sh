@@ -136,6 +136,56 @@ else
     pass "no obvious secrets in source"
 fi
 
+# 12. Gate 3c — Static HTML OG tag integrity
+echo -n "12. Gate 3c (static HTML OG tag integrity): "
+python3 -c "
+import json, glob, os, re
+
+# Derive slugs from src/data/*.core.json
+slugs = [f.split('/')[-1].replace('.core.json','') for f in glob.glob('src/data/*.core.json')]
+
+missing_files = []
+missing_og_title = []
+missing_og_image = []
+missing_jsonld = []
+
+for slug in slugs:
+    path = f'dist/universe/{slug}/index.html'
+    if not os.path.exists(path):
+        missing_files.append(slug)
+        continue
+
+    with open(path) as f:
+        content = f.read()
+
+    # Check og:title
+    if not re.search(r'<meta[^>]+property=[\"\']og:title[\"\'][^>]+content=[\"\'][^\"\']+[\"\']', content, re.IGNORECASE) and \
+       not re.search(r'<meta[^>]+content=[\"\'][^\"\']+[\"\'][^>]+property=[\"\']og:title[\"\']', content, re.IGNORECASE):
+        missing_og_title.append(slug)
+
+    # Check og:image
+    if not re.search(r'<meta[^>]+property=[\"\']og:image[\"\'][^>]+content=[\"\'][^\"\']+[\"\']', content, re.IGNORECASE) and \
+       not re.search(r'<meta[^>]+content=[\"\'][^\"\']+[\"\'][^>]+property=[\"\']og:image[\"\']', content, re.IGNORECASE):
+        missing_og_image.append(slug)
+
+    # Check schema.org JSON-LD
+    if not re.search(r'<script[^>]+type=[\"\']application/ld\+json[\"\'][^>]*>', content, re.IGNORECASE) and \
+       not re.search(r'<script[^>]+type=[\"\']application/ld\+json[\"\']', content, re.IGNORECASE):
+        missing_jsonld.append(slug)
+
+if missing_files:
+    print(f'FAIL: missing index.html: {missing_files}')
+    exit(1)
+if missing_og_title or missing_og_image or missing_jsonld:
+    parts = []
+    if missing_og_title: parts.append(f'og:title in {missing_og_title}')
+    if missing_og_image: parts.append(f'og:image in {missing_og_image}')
+    if missing_jsonld: parts.append(f'JSON-LD in {missing_jsonld}')
+    print('FAIL:', '; '.join(parts))
+    exit(1)
+print('PASS')
+" 2>/dev/null && pass "static HTML OG tag integrity" || { fail "static HTML OG tag integrity issues"; errors=$((errors+1)); }
+
 echo "━━━ SUMMARY ━━━"
 if [ $errors -eq 0 ]; then
     echo -e "${GREEN}✅ ALL CHECKS PASSED — ready to merge${NC}"
