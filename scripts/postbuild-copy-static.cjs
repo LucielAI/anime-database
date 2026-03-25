@@ -44,6 +44,22 @@ function main() {
   const dstUniverse = path.join(DIST_DIR, 'universe');
   copyDir(srcUniverse, dstUniverse);
 
+  // Remove universe index.html files from dist/universe/
+  // These files intercept hard-refresh requests and return blank pages
+  // because they contain no JS bundle. The Vite SPA shell (dist/index.html)
+  // handles all routes including universe routes after the vercel.json fix.
+  if (fs.existsSync(dstUniverse)) {
+    let removed = 0;
+    fs.readdirSync(dstUniverse).forEach(slug => {
+      const idxPath = path.join(dstUniverse, slug, 'index.html');
+      if (fs.existsSync(idxPath)) {
+        fs.unlinkSync(idxPath);
+        removed++;
+      }
+    });
+    console.log(`  [postbuild] Removed ${removed} universe index.html (SPA now boots on hard refresh)`);
+  }
+
   console.log('[postbuild] Done — universe static HTML deployed.');
 }
 
