@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect, lazy, Suspense } from 'react'
+import React, { useState, useCallback, useRef, useEffect, lazy, Suspense } from 'react'
 import * as d3 from 'd3-force'
 import DangerBar from '../components/DangerBar'
 import { resolveColor } from '../utils/resolveColor'
@@ -64,7 +64,7 @@ function getEdgeLabelPos(sx, sy, tx, ty) {
 
 const StandardCardsExplorer = lazy(() => import('./StandardCardsExplorer'))
 
-export default function NodeGraphExplorer({ characters = [], relationships = [], isSystemMode, theme, data }) {
+export default React.memo(function NodeGraphExplorer({ characters = [], relationships = [], isSystemMode, theme, data }) {
   const svgRef = useRef(null)
   const simulationRef = useRef(null)
   const [nodes, setNodes] = useState([])
@@ -76,6 +76,9 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
   const [hasInteracted, setHasInteracted] = useState(false)
   const dragOffset = useRef({ x: 0, y: 0 })
   const rafRef = useRef(null)
+  // Stable refs for D3 — avoids creating new array references on every tick
+  const nodesRef = useRef([])
+  const linksRef = useRef([])
 
   // Wow Graph Moment — auto-select highest-degree node
   useEffect(() => {
@@ -95,18 +98,33 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
     return () => clearTimeout(timer)
   }, [nodes, hasInteracted, selected, links])
 
+  // Stable refs so resetLayout doesn't need characters/relationships in its deps
+  const charactersRef = useRef(characters)
+  const relationshipsRef = useRef(relationships)
+
+  useEffect(() => {
+    charactersRef.current = characters
+    relationshipsRef.current = relationships
+  }, [characters, relationships])
+
   const resetLayout = useCallback(() => {
     if (simulationRef.current) simulationRef.current.stop()
 
     // Position nodes radially to start
     const cx = VB_W / 2, cy = VB_H / 2, spread = 220
-    const newNodes = characters.map((c, i) => {
-      const angle = (2 * Math.PI * i) / characters.length - Math.PI / 2
+    const chars = charactersRef.current
+    const rels = relationshipsRef.current
+    const newNodes = chars.map((c, i) => {
+      const angle = (2 * Math.PI * i) / chars.length - Math.PI / 2
       return { ...c, x: cx + spread * Math.cos(angle), y: cy + spread * Math.sin(angle) }
     })
     
     // Copy links so d3 doesn't mutate original JSON relationship objects
-    const newLinks = relationships.map(r => ({ ...r }))
+    const newLinks = rels.map(r => ({ ...r }))
+
+    // Store in refs so tick can read them without causing re-renders
+    nodesRef.current = newNodes
+    linksRef.current = newLinks
 
     const sim = d3.forceSimulation(newNodes)
       .force('link', d3.forceLink(newLinks).id(d => d.name).distance(220))
@@ -117,20 +135,20 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
       .on('tick', () => {
         if (!rafRef.current) {
           rafRef.current = requestAnimationFrame(() => {
-            // Enforce boundary box safely
-            newNodes.forEach(n => {
+            // Enforce boundary box safely — mutate nodes in-place
+            nodesRef.current.forEach(n => {
               n.x = Math.max(BOUNDS_PAD, Math.min(VB_W - BOUNDS_PAD, n.x))
               n.y = Math.max(BOUNDS_PAD, Math.min(VB_H - BOUNDS_PAD, n.y))
             })
-            setNodes([...newNodes])
-            setLinks([...newLinks])
+            setNodes([...nodesRef.current])
+            setLinks([...linksRef.current])
             rafRef.current = null
           })
         }
       })
 
     simulationRef.current = sim
-  }, [characters, relationships])
+  }, []) // stable — reads current data from refs
 
   useEffect(() => {
     resetLayout()
@@ -138,7 +156,9 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
       if (simulationRef.current) simulationRef.current.stop()
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
-  }, [resetLayout])
+    // resetLayout is stable (empty deps) — deps are [characters, relationships] only
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [characters, relationships])
 
   if (characters.length === 0) {
     return (
@@ -586,4 +606,4 @@ export default function NodeGraphExplorer({ characters = [], relationships = [],
       )}
     </div>
   )
-}
+})

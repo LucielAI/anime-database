@@ -553,7 +553,7 @@
     }
   ],
   "hero": {
-    "systemType": "relational",
+    "systemType": "affinity",
     "microHook": "Each card is different—read the situation to know who's strongest.",
     "thesis": "Three independent ability cards—spy, assassin, telepath—occasionally overlap for accidental synergy.",
     "primarySystemType": "entity_db",

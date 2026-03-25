@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo, useRef, useTransition, useDeferredValue } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { loadNavState, saveNavState } from './utils/navState.js'
 import { throttle } from './utils/throttle.js'
 import { ExternalLink, Camera, X, Network, HeartHandshake, ArrowRight } from 'lucide-react'
@@ -79,7 +79,11 @@ function buildUniverseIntroduction(data) {
 }
 
 export default function Dashboard({ data }) {
-  const [activeTab, setActiveTab] = useState(0)
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [activeTab, setActiveTab] = useState(() => {
+    const t = searchParams.get('tab')
+    return t ? parseInt(t, 10) : 0
+  })
   const [isSystemMode, setIsSystemMode] = useState(false)
   const { isRevealing, revealStep } = useSystemReveal()
   const { isShareFrame, toggleShareFrame } = useShareFrame()
@@ -91,6 +95,7 @@ export default function Dashboard({ data }) {
   const [, startTransition] = useTransition()
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [showShortcuts, setShowShortcuts] = useState(false)
+  const activeTabRef = useRef(activeTab)
 
   const bestEntry = useMemo(() => getBestEntryConfig(data?.id, data?.visualizationHint), [data?.id, data?.visualizationHint])
   const relatedUniverses = useMemo(() => getRelatedUniverseSuggestions(UNIVERSE_CATALOG, data?.id, 3), [data?.id])
@@ -102,15 +107,19 @@ export default function Dashboard({ data }) {
 
     const nav = loadNavState(data.id);
     if (nav && Number.isInteger(nav.tabIndex)) {
+      const tab = Math.max(0, Math.min(3, nav.tabIndex))
       startTransition(() => {
-        setActiveTab(Math.max(0, Math.min(3, nav.tabIndex)));
+        setSearchParams({ tab: String(tab) }, { replace: true })
+        setActiveTab(tab)
       });
       requestAnimationFrame(() => {
         window.scrollTo({ top: nav.scrollY || 0, behavior: 'auto' });
       });
     } else {
+      const tab = bestEntry.tabIndex
       startTransition(() => {
-        setActiveTab(bestEntry.tabIndex);
+        setSearchParams({ tab: String(tab) }, { replace: true })
+        setActiveTab(tab)
       });
     }
   }, [data?.id, bestEntry.tabIndex]);
@@ -179,16 +188,27 @@ export default function Dashboard({ data }) {
       // Ignore when typing in inputs
       if (e.target.matches('input, textarea, select')) return
 
+      // Sync ref before reading for URL update
+      activeTabRef.current = activeTab
+
       switch (e.key) {
         case '?':
           e.preventDefault()
           setShowShortcuts(true)
           break
         case 'j':
-          setActiveTab((prev) => Math.min(prev + 1, 3))
+          startTransition(() => {
+            const next = Math.min(activeTabRef.current + 1, 3)
+            setSearchParams({ tab: String(next) }, { replace: true })
+            setActiveTab(next)
+          })
           break
         case 'k':
-          setActiveTab((prev) => Math.max(prev - 1, 0))
+          startTransition(() => {
+            const next = Math.max(activeTabRef.current - 1, 0)
+            setSearchParams({ tab: String(next) }, { replace: true })
+            setActiveTab(next)
+          })
           break
         case 't':
           setIsSystemMode((prev) => !prev)
@@ -197,6 +217,7 @@ export default function Dashboard({ data }) {
           document.getElementById('share-btn')?.click()
           break
         case 'r':
+          if (e.target.matches('input, textarea, select, [contenteditable]')) return
           toggleShareFrame()
           break
         case 'h':
@@ -258,7 +279,10 @@ export default function Dashboard({ data }) {
       ? Math.min(3, Math.max(0, tabIndex))
       : 0
 
-    setActiveTab(normalizedTabIndex)
+    startTransition(() => {
+      setSearchParams({ tab: String(normalizedTabIndex) }, { replace: true })
+      setActiveTab(normalizedTabIndex)
+    })
     if (!sectionId || typeof window === 'undefined') return
 
     requestAnimationFrame(() => {
@@ -290,7 +314,7 @@ export default function Dashboard({ data }) {
       <div className={`sys-mode-overlay ${isSystemMode ? 'active' : ''} share-frame-hide`} />
 
       {/* Share Frame Overlay */}
-      {isShareFrame && (
+      {isShareFrame ? (
         <div className="fixed inset-0 z-[60] bg-[#050508] flex flex-col items-center justify-center px-4 py-6 md:p-6 overflow-y-auto">
           <button
             onClick={toggleShareFrame}
@@ -351,7 +375,7 @@ export default function Dashboard({ data }) {
             </div>
           </div>
         </div>
-      )}
+      ) : null}
 
       {/* System Reveal Vignette Overlay */}
       <div 
@@ -362,9 +386,9 @@ export default function Dashboard({ data }) {
           backgroundColor: 'rgba(5, 5, 8, 0.5)'
         }} 
       >
-        {isRevealing && revealOverlay && (
+        {isRevealing && revealOverlay ? (
           <div className={revealOverlay.className} style={revealOverlay.style} />
-        )}
+        ) : null}
       </div>
 
       {/* Hero: first viewport reset */}
@@ -445,7 +469,7 @@ export default function Dashboard({ data }) {
           <p className="text-xs md:text-sm text-gray-300 leading-relaxed max-w-4xl">
             {universeIntro}
           </p>
-          {bestParallel?.entry && (
+          {bestParallel?.entry ? (
             <p className="mt-4 text-[11px] text-gray-400">
               If you understood this system, continue with:{' '}
               <Link to={`/universe/${bestParallel.entry.id}`} className="text-cyan-300 hover:text-cyan-200">
@@ -453,7 +477,7 @@ export default function Dashboard({ data }) {
               </Link>
               .
             </p>
-          )}
+          ) : null}
         </div>
       </section>
 
@@ -668,7 +692,12 @@ export default function Dashboard({ data }) {
           return (
             <button
               key={tab}
-              onClick={() => setActiveTab(idx)}
+              onClick={() => {
+                startTransition(() => {
+                  setSearchParams({ tab: String(idx) }, { replace: true })
+                  setActiveTab(idx)
+                })
+              }}
               className={`relative px-4 py-3.5 min-h-[44px] md:px-6 md:py-4 text-[10px] md:text-xs font-bold tracking-[0.2em] whitespace-nowrap transition-all duration-300 cursor-pointer ${isActive ? '' : 'hover:text-gray-300'}`}
               style={{
                 color: isActive ? activeColor : '#4b5563',
@@ -772,9 +801,9 @@ export default function Dashboard({ data }) {
           Unofficial fan-made interactive analysis. All characters, names, and lore belong to their respective creators and studios. Created by Hashi.Ai.
         </p>
       </footer>
-      {showShortcuts && (
+      {showShortcuts ? (
         <KeyboardShortcutsOverlay onClose={() => setShowShortcuts(false)} />
-      )}
+      ) : null}
     </div>
   )
 }

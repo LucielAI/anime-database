@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import ImageWithFallback from '../components/ImageWithFallback'
 import DangerBar from '../components/DangerBar'
 import { User, Sword, Swords, Shield, Flame, Zap, Skull, Eye, Star, Brain, Copy, Crosshair, Hexagon, Wifi, Globe, Cpu, Activity, Box } from 'lucide-react'
@@ -9,7 +9,7 @@ function getIcon(iconName) {
   return ICON_MAP[iconName] || User
 }
 
-export default function StandardCardsExplorer({ characters = [], isSystemMode, theme }) {
+export default React.memo(function StandardCardsExplorer({ characters = [], isSystemMode, theme }) {
   const [expanded, setExpanded] = useState(null)
 
   if (characters.length === 0) {
@@ -65,4 +65,4 @@ export default function StandardCardsExplorer({ characters = [], isSystemMode, t
       })}
     </div>
   )
-}
+})

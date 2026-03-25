@@ -29,12 +29,13 @@ export default async function handler(req, res) {
   const body = safeBody(req)
   const { email } = body
 
-  if (!email || typeof email !== 'string' || !email.includes('@') || email.length > 254) {
-    return res.status(400).json({ error: 'Invalid email', requestId })
-  }
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
-  // Basic sanitization — reject obvious injection attempts
-  if (/<|>|script/i.test(email)) {
+  const normalizedEmail = typeof email === 'string'
+    ? email.trim().replace(/[\x00-\x1F\x7F]/g, '').toLowerCase()
+    : ''
+
+  if (!normalizedEmail || !EMAIL_RE.test(normalizedEmail) || normalizedEmail.length > 254) {
     return res.status(400).json({ error: 'Invalid email', requestId })
   }
 
@@ -59,7 +60,7 @@ export default async function handler(req, res) {
         Prefer: 'return=minimal',
       },
       body: JSON.stringify({
-        email: email.trim().toLowerCase(),
+        email: normalizedEmail,
         source: 'web',
         created_at: new Date().toISOString(),
       }),

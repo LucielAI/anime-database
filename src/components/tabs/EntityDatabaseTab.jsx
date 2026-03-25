@@ -117,7 +117,7 @@ export default function EntityDatabaseTab({ data, isSystemMode, theme, revealSte
                     <th className="text-left py-2 px-3 hidden sm:table-cell">DESCRIPTION</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody style={{ contentVisibility: 'auto', containIntrinsicSize: '0 500px' }}>
                   {relationships.map((rel, i) => {
                     const badgeColor = TYPE_BADGE_COLORS[rel.type] || TYPE_BADGE_COLORS.ally
                     return (

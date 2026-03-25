@@ -301,6 +301,16 @@ function Home() {
   }, [])
 
   useEffect(() => {
+    if (typeof document === 'undefined') return
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.href = '/blog-index.json'
+    link.as = 'fetch'
+    document.head.appendChild(link)
+    return () => { document.head.removeChild(link) }
+  }, [])
+
+  useEffect(() => {
     if (typeof window === 'undefined') return undefined
 
     const token = scheduleIdleTask(() => setDeferSecondary(true), 1200)
@@ -833,7 +843,7 @@ class DashboardErrorBoundary extends React.Component {
 function UniverseRoute() {
   const navigate = useNavigate()
   const { id } = useParams()
-  const normalizedId = (id || '').trim().toLowerCase()
+  const normalizedId = useMemo(() => (id || '').trim().toLowerCase(), [id])
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const preview = normalizedId ? UNIVERSE_CATALOG_MAP[normalizedId] : null
@@ -970,9 +980,9 @@ function EntityRoute({ type }) {
 
   return (
     <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
-      {type === 'character' && <CharacterPage data={data} preview={preview} charIndex={entityIndex} />}
-      {type === 'power' && <PowerSystemPage data={data} preview={preview} powerIndex={entityIndex} />}
-      {type === 'faction' && <FactionPage data={data} preview={preview} factionIndex={entityIndex} />}
+      {type === 'character' ? <CharacterPage data={data} preview={preview} charIndex={entityIndex} /> : null}
+      {type === 'power' ? <PowerSystemPage data={data} preview={preview} powerIndex={entityIndex} /> : null}
+      {type === 'faction' ? <FactionPage data={data} preview={preview} factionIndex={entityIndex} /> : null}
     </Suspense>
   )
 }
@@ -1006,12 +1016,13 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    if (window.goatcounter) {
-      window.goatcounter.count({
+    const token = scheduleIdleTask(() => {
+      window.goatcounter?.count({
         path: location.pathname,
         title: document.title || SITE_NAME
       })
-    }
+    }, 500)
+    return () => cancelIdleTask(token)
   }, [location.pathname])
 
   // Global `/` keyboard shortcut to open search
@@ -1073,8 +1084,8 @@ export default function App() {
       {/* Global search modal — triggered by "/" keyboard shortcut only */}
       <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
-      {telemetry.SpeedInsights && <telemetry.SpeedInsights />}
-      {telemetry.Analytics && <telemetry.Analytics />}
+      {telemetry.SpeedInsights ? <telemetry.SpeedInsights /> : null}
+      {telemetry.Analytics ? <telemetry.Analytics /> : null}
     </>
   )
 }

@@ -470,7 +470,7 @@
     }
   ],
   "hero": {
-    "systemType": "relational",
+    "systemType": "affinity",
     "microHook": "Two minds are better than one, unless they disagree on saving the world.",
     "thesis": "A human and parasite co-govern one body—Shinichi decides, Migi fights. Neither could survive alone.",
     "primarySystemType": "entity_db",

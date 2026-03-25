@@ -1,4 +1,4 @@
-import { useMemo, lazy, Suspense } from 'react'
+import React, { useMemo, lazy, Suspense } from 'react'
 import AffinityMatrix from '../components/AffinityMatrix'
 
 // Deterministic hash from two name strings — replaces Math.random() to prevent
@@ -14,7 +14,7 @@ function nameHash(a, b) {
 
 const StandardCardsExplorer = lazy(() => import('./StandardCardsExplorer'))
 
-export default function AffinityMatrixExplorer({ characters = [], isSystemMode, theme }) {
+export default React.memo(function AffinityMatrixExplorer({ characters = [], isSystemMode, theme }) {
   const types = useMemo(() => characters.map(c => c.name), [characters])
 
   // Memoized deterministic affinity matrix based on danger level similarity + name hash
@@ -50,4 +50,4 @@ export default function AffinityMatrixExplorer({ characters = [], isSystemMode, 
       </div>
     </div>
   )
-}
+})

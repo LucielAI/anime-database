@@ -626,7 +626,7 @@
     }
   ],
   "hero": {
-    "systemType": "relational",
+    "systemType": "counterplay",
     "microHook": "Spontaneous combustion is turning Tokyo into Infernals — only Company 8 can stop the fire.",
     "thesis": "Fire Force runs on pyrokinetic generations and Infernal conversions. Each Company is a defense node. The Evangelist reshapes humanity.",
     "primarySystemType": "entity_db",
