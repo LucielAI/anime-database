@@ -130,7 +130,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/122643.jpg?s=b5ae0b297aefb93f19186e9edfdaee83",
       "malId": 35252,
       "slug": "okabe-rintarou",
-      "description": "Okabe Rintarou is a  from Steins;Gate.",
+      "description": "Okabe Rintarou is the mad scientist founder of the Future Gadget Lab from Steins;Gate.",
       "role": "Main",
       "relationships": []
     },
@@ -150,7 +150,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/492885.jpg?s=b041df34b5f02990fd154cc8e8f9e3b9",
       "malId": 34470,
       "slug": "makise-kurisu",
-      "description": "Makise Kurisu is a  from Steins;Gate.",
+      "description": "Makise Kurisu is the genius neuroscientist who enabled time travel from Steins;Gate.",
       "role": "Main",
       "relationships": []
     },
@@ -170,7 +170,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/131329.jpg?s=ff82135c773b4903f6cae50c1d43ca26",
       "malId": 35253,
       "slug": "shiina-mayuri",
-      "description": "Shiina Mayuri is a  from Steins;Gate.",
+      "description": "Shiina Mayuri is Okabe's childhood friend and convergence target from Steins;Gate.",
       "role": "Main",
       "relationships": []
     },
@@ -190,7 +190,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/113767.jpg?s=5d160f99286a0891c5e32413a5438622",
       "malId": 35258,
       "slug": "hashida-itaru",
-      "description": "Hashida Itaru is a  from Steins;Gate.",
+      "description": "Hashida Itaru is the hacker and hardware engineer of the Future Gadget Lab from Steins;Gate.",
       "role": "Main",
       "relationships": []
     },
@@ -210,7 +210,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/148223.jpg?s=1d567952db9e3f19cae8a855c788835e",
       "malId": 35255,
       "slug": "amane-suzuha",
-      "description": "Amane Suzuha is a  from Steins;Gate.",
+      "description": "Amane Suzuha is a temporal agent from the future and daughter of Itaru from Steins;Gate.",
       "role": "Supporting",
       "relationships": []
     },
@@ -230,7 +230,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/275310.jpg?s=6eea0288577665f743b1a8a0554c40e9",
       "malId": 35257,
       "slug": "kiryuu-moeka",
-      "description": "Kiryuu Moeka is a  from Steins;Gate.",
+      "description": "Kiryuu Moeka is an SERN infiltrator and Rounders agent from Steins;Gate.",
       "role": "Supporting",
       "relationships": []
     },
@@ -250,7 +250,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/122643.jpg?s=b5ae0b297aefb93f19186e9edfdaee83",
       "malId": 35252,
       "slug": "okabe-rintarou-(future)",
-      "description": "Okabe Rintarou (Future) is a  from Steins;Gate.",
+      "description": "Okabe Rintarou (Future) is the architect of Operation Skuld from Steins;Gate.",
       "role": "Main",
       "relationships": []
     },
@@ -267,13 +267,13 @@
       "icon": "Key",
       "dangerLevel": 6,
       "signatureMoment": "Activating the Amadeus kill-switch — 'Der Alte würfelt nicht' — permanently deleting the digitized Kurisu to prevent military exploitation, destroying her closest connection to her dead friend to save the world.",
-      "imageUrl": "https://myanimelist.net/images/characters/10/340197.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/10/340197.jpg?s=340197",
       "malId": 83419,
       "jikanAliases": [
         "Maho Hiyajou"
       ],
       "slug": "hiyajo-maho",
-      "description": "Hiyajo Maho is a  from Steins;Gate.",
+      "description": "Hiyajo Maho is a neuroscientist and Amadeus system architect from Steins;Gate.",
       "role": "Main",
       "relationships": []
     }
@@ -622,6 +622,7 @@
     "systemType": "causal",
     "microHook": "Map the causal chain before judging outcomes.",
     "thesis": "Steins;Gate is structurally defined by worldline divergence and attractor field convergence.",
+    "tagline": "Steins;Gate: A deterministic attractor-field prison where convergence can be controlled",
     "primarySystemType": "entity_db"
   },
   "introductionSummary": "Steins;Gate is a deterministic attractor-field prison where convergence is inevitable until it isn't — and the entire plot is one actor navigating a branching temporal graph toward an escape trajectory he can only find by understanding what he would have to sacrifice to escape it. The timeline renderer is the only lens that captures why the D-mail system creates irreversible causal forks, why the attractor field keeps pulling outcomes back to the same failures, and why the final escape requires rewriting the fundamental conditions of the experiment."

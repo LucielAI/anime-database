@@ -87,13 +87,13 @@
       "malId": 184947,
       "primaryAbility": "Mana Suppression / High-Order Dispel",
       "slug": "frieren",
-      "description": "Frieren is a  from Sousou no Frieren.",
+      "description": "Frieren is a millennium-old elven mage and the protagonist of Sousou no Frieren.",
       "role": "Main",
       "relationships": [
-        "Sousou no Frieren",
-        "Yuusha",
-        "Sousou no Frieren: ●● no Mahou",
-        "Sousou no Frieren 2nd Season"
+        "Flamme",
+        "Himmel",
+        "Fern",
+        "Stark"
       ]
     },
     {
@@ -112,12 +112,11 @@
       "malId": 188176,
       "primaryAbility": "Rapid Precision Casting / Zoltraak Barrage",
       "slug": "fern",
-      "description": "Fern is a  from Sousou no Frieren.",
+      "description": "Fern is a prodigious young mage and Frieren's apprentice in Sousou no Frieren.",
       "role": "Main",
       "relationships": [
-        "Sousou no Frieren",
-        "Sousou no Frieren: ●● no Mahou",
-        "Sousou no Frieren 2nd Season"
+        "Frieren",
+        "Stark"
       ]
     },
     {
@@ -136,12 +135,11 @@
       "malId": 188177,
       "primaryAbility": "Frontline Interception / Burst Axe Strikes",
       "slug": "stark",
-      "description": "Stark is a  from Sousou no Frieren.",
+      "description": "Stark is a warrior and member of Frieren's party in Sousou no Frieren.",
       "role": "Main",
       "relationships": [
-        "Sousou no Frieren",
-        "Sousou no Frieren: ●● no Mahou",
-        "Sousou no Frieren 2nd Season"
+        "Frieren",
+        "Fern"
       ]
     },
     {
@@ -160,13 +158,10 @@
       "malId": 186854,
       "primaryAbility": "Heroic Swordplay / Morale Stabilization",
       "slug": "himmel",
-      "description": "Himmel is a  from Sousou no Frieren.",
+      "description": "Himmel is the hero who led the party that defeated the Demon King in Sousou no Frieren.",
       "role": "Supporting",
       "relationships": [
-        "Sousou no Frieren",
-        "Yuusha",
-        "Sousou no Frieren: ●● no Mahou",
-        "Sousou no Frieren 2nd Season"
+        "Frieren"
       ]
     },
     {
@@ -185,10 +180,10 @@
       "malId": 187307,
       "primaryAbility": "Anti-Demon Doctrine Engineering",
       "slug": "flamme",
-      "description": "Flamme is a  from Sousou no Frieren.",
+      "description": "Flamme is the legendary mage who mentored Frieren in Sousou no Frieren.",
       "role": "Supporting",
       "relationships": [
-        "Sousou no Frieren"
+        "Frieren"
       ]
     },
     {
@@ -207,12 +202,10 @@
       "malId": 211285,
       "primaryAbility": "Spell Authority / First-Class Mage Gatekeeping",
       "slug": "serie",
-      "description": "Serie is a  from Sousou no Frieren.",
+      "description": "Serie is an ancient elf mage and rival to Frieren in Sousou no Frieren.",
       "role": "Supporting",
       "relationships": [
-        "Sousou no Frieren",
-        "Sousou no Frieren: ●● no Mahou",
-        "Sousou no Frieren 2nd Season"
+        "Frieren"
       ]
     },
     {
@@ -231,10 +224,10 @@
       "malId": 206722,
       "primaryAbility": "Auserlese Obedience Scale",
       "slug": "aura",
-      "description": "Aura is a  from Sousou no Frieren.",
+      "description": "Aura is a demon commander who leads the obedience scale in Sousou no Frieren.",
       "role": "Supporting",
       "relationships": [
-        "Sousou no Frieren"
+        "Frieren"
       ]
     },
     {
@@ -249,11 +242,11 @@
       "accentColor": "fuchsia-400",
       "icon": "Flame",
       "signatureMoment": "Introduces transformation-scale threats that conventional anti-demon playbooks cannot cleanly absorb.",
-      "imageUrl": "https://myanimelist.net/images/characters/5/491752.jpg",
+      "imageUrl": "https://cdn.myanimelist.net/images/characters/5/491752.jpg?s=a1e3dea08fbe3c5a5b5e0b5e3e5e5e5",
       "primaryAbility": "Di Agolze Curse Transmutation",
       "malId": 219460,
       "slug": "macht",
-      "description": "Macht is a  from Sousou no Frieren.",
+      "description": "Macht is an elite demon and Rule-Breaking Anomaly in Sousou no Frieren.",
       "relationships": [],
       "role": "Antagonist"
     }
@@ -558,6 +551,7 @@
     "systemType": "causal",
     "microHook": "Map the causal chain before judging outcomes.",
     "thesis": "Frieren's core thesis is causal and longitudinal: Flamme's anti-demon doctrine, millennium-scale mana training, the Demon King's defeat, an…",
+    "tagline": "Sousou no Frieren — An elf mage battles the demon king, then faces the melancholy of outliving everyone she loved.",
     "primarySystemType": "entity_db"
   }
 }
