@@ -496,7 +496,8 @@ echo ""
 echo "[GATE 0] Jikan API verification (MAL ID + sample character check)..."
 
 python3 << 'PYEOF'
-import json, os, sys, urllib.request, time
+import json, os, sys, urllib.request, time, re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 
@@ -519,55 +520,67 @@ known_wrong = {
     'spy-x-family': {'wrong': 50693, 'correct': 50265},
 }
 
-def jikan_get(path, retries=2):
+def jikan_get(path, retries=2, timeout=10):
+    """Single Jikan API call with retries and timeout. Returns parsed JSON or None."""
     for attempt in range(retries):
         try:
             url = f'https://api.jikan.moe/v4{path}'
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-            r = urllib.request.urlopen(req, timeout=10)
+            r = urllib.request.urlopen(req, timeout=timeout)
             return json.loads(r.read())
         except Exception:
             if attempt < retries - 1:
                 time.sleep(1)
     return None
 
-for fname in universe_files():
-    s = slug(fname)
+def check_universe(args):
+    """Check a single universe's MAL ID against Jikan. Returns (slug, error_msg or None)."""
+    fname, s = args
     with open(f'{repo}/{fname}') as f:
         d = json.load(f)
-    
+
     mal_id = d.get('malId')
     anime_name = d.get('anime', '')
-    
+
     if not mal_id:
-        errors.append(f'  {s}: malId MISSING')
-        continue
-    
+        return (s, f'  {s}: malId MISSING')
+
     if s in known_wrong and mal_id == known_wrong[s].get('wrong'):
-        errors.append(f'  {s}: malId {mal_id} is KNOWN WRONG (correct: {known_wrong[s]["correct"]})')
-        continue
-    
+        return (s, f'  {s}: malId {mal_id} is KNOWN WRONG (correct: {known_wrong[s]["correct"]})')
+
     result = jikan_get(f'/anime/{mal_id}')
     if not result:
-        warnings.append(f'  {s}: Jikan unreachable for malId {mal_id} (non-blocking)')
-        continue
-    
+        return (s, None)  # non-blocking warning, handled below
+
     # Validate via animeImageUrl match as proxy for correct anime
-    # (English/Japanese title differences are expected — don't compare titles)
     jikan_image = result.get('data', {}).get('images', {}).get('jpg', {}).get('image_url', '')
     our_img = d.get('animeImageUrl', '')
-    
+
     if jikan_image and our_img:
-        import re
         jikan_img_match = re.search(r'/images/anime/(\d+)/', jikan_image)
         our_img_match = re.search(r'/images/anime/(\d+)/', our_img)
         jikan_img_id = jikan_img_match.group(1) if jikan_img_match else None
         our_img_id = our_img_match.group(1) if our_img_match else None
-        
-        # Flag if image IDs differ by more than 10000 (clear wrong anime)
+
         if jikan_img_id and our_img_id:
             if abs(int(jikan_img_id) - int(our_img_id)) > 10000:
-                errors.append(f'  {s}: animeImageUrl mismatch (ID diff >10000: ours={our_img_id} vs Jikan={jikan_img_id})')
+                return (s, f'  {s}: animeImageUrl mismatch (ID diff >10000: ours={our_img_id} vs Jikan={jikan_img_id})')
+
+    return (s, None)
+
+# Parallelize all Jikan API calls using ThreadPoolExecutor
+files_and_slugs = [(fname, slug(fname)) for fname in universe_files()]
+
+with ThreadPoolExecutor(max_workers=25) as ex:
+    futures = {ex.submit(check_universe, args): args for args in files_and_slugs}
+    for future in as_completed(futures):
+        s, err = future.result()
+        if err:
+            # Check if it's a "known wrong" error (hard fail) vs unreachable (warning)
+            if 'KNOWN WRONG' in err or 'mismatch' in err:
+                errors.append(err)
+            else:
+                warnings.append(f'  {s}: Jikan unreachable for malId (non-blocking)')
 
 if errors:
     print('FAIL: Jikan verification failures:')
