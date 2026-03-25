@@ -1,6 +1,6 @@
 {
   "anime": "Steins;Gate",
-  "tagline": "A deterministic attractor-field prison where convergence cannot be outrun — only rewritten",
+  "tagline": "Steins;Gate: A deterministic attractor-field prison where convergence can be controlled",
   "malId": 9253,
   "themeColors": {
     "primary": "#22d3ee",
@@ -130,7 +130,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/122643.jpg?s=b5ae0b297aefb93f19186e9edfdaee83",
       "malId": 35252,
       "slug": "okabe-rintarou",
-      "description": "Okabe Rintarou is a  from Steins;Gate."
+      "description": "Okabe Rintarou is a  from Steins;Gate.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Makise Kurisu",
@@ -148,7 +150,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/492885.jpg?s=b041df34b5f02990fd154cc8e8f9e3b9",
       "malId": 34470,
       "slug": "makise-kurisu",
-      "description": "Makise Kurisu is a  from Steins;Gate."
+      "description": "Makise Kurisu is a  from Steins;Gate.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Shiina Mayuri",
@@ -166,7 +170,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/131329.jpg?s=ff82135c773b4903f6cae50c1d43ca26",
       "malId": 35253,
       "slug": "shiina-mayuri",
-      "description": "Shiina Mayuri is a  from Steins;Gate."
+      "description": "Shiina Mayuri is a  from Steins;Gate.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Hashida Itaru",
@@ -184,7 +190,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/113767.jpg?s=5d160f99286a0891c5e32413a5438622",
       "malId": 35258,
       "slug": "hashida-itaru",
-      "description": "Hashida Itaru is a  from Steins;Gate."
+      "description": "Hashida Itaru is a  from Steins;Gate.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Amane Suzuha",
@@ -202,7 +210,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/148223.jpg?s=1d567952db9e3f19cae8a855c788835e",
       "malId": 35255,
       "slug": "amane-suzuha",
-      "description": "Amane Suzuha is a  from Steins;Gate."
+      "description": "Amane Suzuha is a  from Steins;Gate.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Kiryuu Moeka",
@@ -220,7 +230,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/275310.jpg?s=6eea0288577665f743b1a8a0554c40e9",
       "malId": 35257,
       "slug": "kiryuu-moeka",
-      "description": "Kiryuu Moeka is a  from Steins;Gate."
+      "description": "Kiryuu Moeka is a  from Steins;Gate.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Okabe Rintarou (Future)",
@@ -238,7 +250,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/122643.jpg?s=b5ae0b297aefb93f19186e9edfdaee83",
       "malId": 35252,
       "slug": "okabe-rintarou-(future)",
-      "description": "Okabe Rintarou (Future) is a  from Steins;Gate."
+      "description": "Okabe Rintarou (Future) is a  from Steins;Gate.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Hiyajo Maho",
@@ -259,7 +273,9 @@
         "Maho Hiyajou"
       ],
       "slug": "hiyajo-maho",
-      "description": "Hiyajo Maho is a  from Steins;Gate."
+      "description": "Hiyajo Maho is a  from Steins;Gate.",
+      "role": "Main",
+      "relationships": []
     }
   ],
   "relationships": [

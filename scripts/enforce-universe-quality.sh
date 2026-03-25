@@ -23,6 +23,14 @@ echo ""
 FAILED=0
 
 # ============================================================
+# HELPER: find all universe payload files
+# Both *.core.json AND *.json (but NOT *.extended.json)
+# ============================================================
+get_universe_files() {
+    find "$REPO_DIR/src/data" -maxdepth 1 -type f \( -name "*.core.json" -o -name "*.json" \) ! -name "*.extended.json" | sort
+}
+
+# ============================================================
 # GATE 1: File Integrity — anime field must match filename
 # ============================================================
 echo "[GATE 1] File integrity check..."
@@ -32,19 +40,30 @@ import json, os, sys
 
 repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
 
-# Scan ALL .core.json files — no hardcoded list
-core_files = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
+def universe_files():
+    """Return all universe payload files (*.core.json and *.json, not *.extended.json)."""
+    return sorted([f for f in os.listdir(repo)
+                   if (f.endswith('.core.json') or f.endswith('.json'))
+                   and not f.endswith('.extended.json')])
+
+def slug(fname):
+    """Extract universe slug from filename."""
+    if fname.endswith('.core.json'):
+        return fname.replace('.core.json', '')
+    return fname.replace('.json', '')
+
+core_files = universe_files()
 print(f'  Checking {len(core_files)} universe files...')
 
 errors = []
 for fname in core_files:
     fpath = f'{repo}/{fname}'
-    slug = fname.replace('.core.json', '')
+    s = slug(fname)  # use function, not variable
     with open(fpath) as f:
         d = json.load(f)
     anime = d.get('anime', '')
     if not anime:
-        errors.append(f'  {slug}: anime field is empty')
+        errors.append(f'  {s}: anime field is empty')
     
     # Check for cross-character contamination
     # Note: Some character names appear in multiple anime (e.g. "Rem" is in both Re:Zero AND Death Note as different characters)
@@ -61,8 +80,8 @@ for fname in core_files:
     }
     char_names = [c.get('name','') for c in d.get('characters',[])]
     for char, valid_slugs in cross_checks.items():
-        if char in char_names and slug not in valid_slugs:
-            errors.append(f'  {slug}: cross-contamination "{char}" (belongs in {valid_slugs[0]})')
+        if char in char_names and s not in valid_slugs:
+            errors.append(f'  {s}: cross-contamination "{char}" (belongs in {valid_slugs[0]})')
 
 if errors:
     print('FAIL: File integrity violations:')
@@ -70,7 +89,7 @@ if errors:
         print(e)
     sys.exit(1)
 else:
-    print(f'  PASS: All {len(core_files)} files have anime fields, no cross-contamination')
+    print(f'  PASS: All {len(universe_files())} files have anime fields, no cross-contamination')
 PYEOF
 
 if [ $? -ne 0 ]; then
@@ -88,8 +107,16 @@ python3 << 'PYEOF'
 import json, urllib.request, os, sys
 
 repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
-# Scan ALL .core.json files — no hardcoded list
-new_universes = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
+
+def universe_files():
+    return sorted([f for f in os.listdir(repo)
+                   if (f.endswith('.core.json') or f.endswith('.json'))
+                   and not f.endswith('.extended.json')])
+
+def slug(fname):
+    if fname.endswith('.core.json'):
+        return fname.replace('.core.json', '')
+    return fname.replace('.json', '')
 
 def check(url):
     if not url:
@@ -102,7 +129,7 @@ def check(url):
         return False
 
 errors = []
-for fname in new_universes:
+for fname in universe_files():
     fpath = f'{repo}/{fname}'
     if not os.path.exists(fpath):
         errors.append(f'  {fname}: FILE MISSING')
@@ -110,21 +137,21 @@ for fname in new_universes:
     with open(fpath) as f:
         d = json.load(f)
     
-    slug = fname.replace('.core.json', '')
+    s = slug(fname)
     
     # animeImageUrl
     url = d.get('animeImageUrl', '')
     if not url:
-        errors.append(f'  {slug}: animeImageUrl MISSING')
+        errors.append(f'  {s}: animeImageUrl MISSING')
     elif not check(url):
-        errors.append(f'  {slug}: animeImageUrl ❌ {url[-40:]}')
+        errors.append(f'  {s}: animeImageUrl ❌ {url[-40:]}')
     
     # hero.imageUrl — check but warn only (not used in current UI)
     url = d.get('hero', {}).get('imageUrl', '')
     if not url:
-        print(f'  WARN: {slug}: hero.imageUrl MISSING (not blocking — not used in UI)')
+        print(f'  WARN: {s}: hero.imageUrl MISSING (not blocking — not used in UI)')
     elif not check(url):
-        errors.append(f'  {slug}: hero.imageUrl ❌ {url[-40:]}')
+        errors.append(f'  {s}: hero.imageUrl ❌ {url[-40:]}')
     
     # character images
     for c in d.get('characters', []):
@@ -132,9 +159,9 @@ for fname in new_universes:
         name = c.get('name', '?')
         # Allow _fetchFailed: true as valid (image not available)
         if not url and not c.get('_fetchFailed'):
-            errors.append(f'  {slug}/{name}: imageUrl MISSING')
+            errors.append(f'  {s}/{name}: imageUrl MISSING')
         elif url and url != 'null' and not check(url):
-            errors.append(f'  {slug}/{name}: ❌ {url[-40:]}')
+            errors.append(f'  {s}/{name}: ❌ {url[-40:]}')
 
 if errors:
     print('FAIL: Image verification failures:')
@@ -228,20 +255,29 @@ import json, os, sys
 from collections import defaultdict
 
 repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
-core_files = [f for f in os.listdir(repo) if f.endswith('.core.json')]
 
-# Build malId -> set(of universe slugs) map
+def universe_files():
+    return sorted([f for f in os.listdir(repo)
+                   if (f.endswith('.core.json') or f.endswith('.json'))
+                   and not f.endswith('.extended.json')])
+
+def slug(fname):
+    if fname.endswith('.core.json'):
+        return fname.replace('.core.json', '')
+    return fname.replace('.json', '')
+
+# Build malId -> set(of universe slugs) map — now covers ALL universe files
 malId_to_universes = defaultdict(set)
 
-for fname in core_files:
+for fname in universe_files():
     fpath = f'{repo}/{fname}'
-    slug = fname.replace('.core.json', '')
+    s = slug(fname)
     with open(fpath) as f:
         d = json.load(f)
     for c in d.get('characters', []):
         malId = c.get('malId')
         if malId is not None:
-            malId_to_universes[malId].add(slug)
+            malId_to_universes[malId].add(s)
 
 # Find cross-universe duplicates (same malId in DIFFERENT universe files)
 cross_universe_dups = {mid: slugs for mid, slugs in malId_to_universes.items() if len(slugs) > 1}
@@ -249,22 +285,22 @@ cross_universe_dups = {mid: slugs for mid, slugs in malId_to_universes.items() i
 if cross_universe_dups:
     print('FAIL: Character malIds found in multiple universes:')
     for mid, slugs in sorted(cross_universe_dups.items()):
-        # Find character names in each universe
         details = []
-        for fname in core_files:
+        for fname in universe_files():
             fpath = f'{repo}/{fname}'
-            slug = fname.replace('.core.json', '')
-            if slug not in slugs:
+            s = slug(fname)
+            if s not in slugs:
                 continue
             with open(fpath) as f:
                 d = json.load(f)
             for c in d.get('characters', []):
                 if c.get('malId') == mid:
-                    details.append(f'{c.get("name","?")}@{slug}')
+                    details.append(f'{c.get("name","?")}@{s}')
         print(f'  malId={mid}: {", ".join(sorted(details))}')
     sys.exit(1)
 else:
-    print(f'  PASS: All {len(core_files)} universes have unique character malIds (no cross-universe contamination)')
+    all_files = universe_files()
+    print(f'  PASS: All {len(all_files)} universes have unique character malIds (no cross-universe contamination)')
 PYEOF
 
 if [ $? -ne 0 ]; then
@@ -282,18 +318,26 @@ python3 << 'PYEOF'
 import json, os, sys
 
 repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
-# Scan ALL .core.json files — no hardcoded list
-new_universes = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
+
+def universe_files():
+    return sorted([f for f in os.listdir(repo)
+                   if (f.endswith('.core.json') or f.endswith('.json'))
+                   and not f.endswith('.extended.json')])
+
+def slug(fname):
+    if fname.endswith('.core.json'):
+        return fname.replace('.core.json', '')
+    return fname.replace('.json', '')
 
 errors = []
-for fname in new_universes:
+for fname in universe_files():
     fpath = f'{repo}/{fname}'
     if not os.path.exists(fpath):
         continue
     with open(fpath) as f:
         d = json.load(f)
     
-    slug = fname.replace('.core.json', '')
+    s = slug(fname)
     
     # Check tagline starts with anime name
     tagline = d.get('tagline', '')
@@ -302,17 +346,17 @@ for fname in new_universes:
         # Allow partial match for long titles
         short_name = anime_name.split(' - ')[0].split(':')[0].strip()
         if short_name not in tagline:
-            errors.append(f'  {slug}: tagline missing anime name ("{tagline[:50]}")')
+            errors.append(f'  {s}: tagline missing anime name ("{tagline[:50]}")')
     
     # Check microHook length
     mh = d.get('hero', {}).get('microHook', '')
     if len(mh) > 95:
-        errors.append(f'  {slug}: microHook {len(mh)} chars (limit 95) — "{mh[:50]}"')
+        errors.append(f'  {s}: microHook {len(mh)} chars (limit 95) — "{mh[:50]}"')
     
     # Check thesis length
     th = d.get('hero', {}).get('thesis', '')
     if len(th) > 140:
-        errors.append(f'  {slug}: thesis {len(th)} chars (limit 140)')
+        errors.append(f'  {s}: thesis {len(th)} chars (limit 140)')
     
     # Check for template descriptions (role missing = broken template)
     for c in d.get('characters', []):
@@ -321,16 +365,16 @@ for fname in new_universes:
         anime = d.get('anime', '')
         # Detect: "{Name} is a [nothing] from {Anime}" — role slot is empty
         if f'{name} is a from {anime}' in desc or f'{name} is an from {anime}' in desc:
-            errors.append(f'  {slug}/{name}: TEMPLATE (role field empty) — "{desc[:60]}"')
+            errors.append(f'  {s}/{name}: TEMPLATE (role field empty) — "{desc[:60]}"')
         # Flag descriptions that are just the bare template with no real content
         if desc.startswith(f'{name} is a') and 'from {anime}' in desc and len(desc) < 80:
-            errors.append(f'  {slug}/{name}: bare template description — "{desc[:60]}"')
+            errors.append(f'  {s}/{name}: bare template description — "{desc[:60]}"')
         
         # Check for 'What is' system questions
     for sq in d.get('systemQuestions', []):
         q = sq.get('question', '')
         if q.startswith('What is'):
-            errors.append(f'  {slug}: "What is" systemQuestion — must be "Why does" or "How does"')
+            errors.append(f'  {s}: "What is" systemQuestion — must be "Why does" or "How does"')
 
 if errors:
     print('FAIL: Content quality violations:')
@@ -356,17 +400,25 @@ python3 << 'PYEOF'
 import json, os, sys
 
 repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
-core_files = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
+
+def universe_files():
+    return sorted([f for f in os.listdir(repo)
+                   if (f.endswith('.core.json') or f.endswith('.json'))
+                   and not f.endswith('.extended.json')])
+
+def slug(fname):
+    if fname.endswith('.core.json'):
+        return fname.replace('.core.json', '')
+    return fname.replace('.json', '')
 
 errors = []
-for fname in core_files:
+for fname in universe_files():
     fpath = f'{repo}/{fname}'
-    slug = fname.replace('.core.json', '')
+    s = slug(fname)
     with open(fpath) as f:
         d = json.load(f)
     
     chars = d.get('characters', [])
-    import os
     fix_mode = os.environ.get('ENFORCE_FIX') == '1'
     changed = False
     for c in chars:
@@ -374,20 +426,20 @@ for fname in core_files:
         # Check role field
         role = c.get('role')
         if not role:
-            errors.append(f'  {slug}/{name}: role MISSING')
+            errors.append(f'  {s}/{name}: role MISSING')
         elif role not in ('Main', 'Supporting', 'Antagonist', 'Minor'):
-            errors.append(f'  {slug}/{name}: invalid role "{role}" (must be Main/Supporting/Antagonist/Minor)')
+            errors.append(f'  {s}/{name}: invalid role "{role}" (must be Main/Supporting/Antagonist/Minor)')
         
         # Check relationships field
         if 'relationships' not in c:
             if fix_mode:
                 c['relationships'] = []
                 changed = True
-                print(f'  AUTO-FIX: {slug}/{name}: added empty relationships array')
+                print(f'  AUTO-FIX: {s}/{name}: added empty relationships array')
             else:
-                errors.append(f'  {slug}/{name}: relationships field MISSING')
+                errors.append(f'  {s}/{name}: relationships field MISSING')
         elif not isinstance(c.get('relationships'), list):
-            errors.append(f'  {slug}/{name}: relationships must be array')
+            errors.append(f'  {s}/{name}: relationships must be array')
         
         # Check relationships reference only this universe's characters
         rels = c.get('relationships', [])
@@ -399,7 +451,7 @@ for fname in core_files:
             if any(ind in rel for ind in franchise_indicators):
                 continue
             # non-character, non-franchise ref: warn only
-            print(f'  WARN: {slug}/{name}: non-character relationship — "{rel}"')
+            print(f'  WARN: {s}/{name}: non-character relationship — "{rel}"')
     
     if changed:
         with open(fpath, 'w') as f:
@@ -413,7 +465,8 @@ if errors:
         print(f'  ... and {len(errors)-30} more')
     sys.exit(1)
 else:
-    print(f'  PASS: All {len(core_files)} universes — all characters have role + relationships')
+    all_files = universe_files()
+    print(f'  PASS: All {len(all_files)} universes — all characters have role + relationships')
 PYEOF
 
 if [ $? -ne 0 ]; then
@@ -446,7 +499,16 @@ python3 << 'PYEOF'
 import json, os, sys, urllib.request, time
 
 repo = os.environ.get('REPO_DIR', '/data/workspace/anime-database') + '/src/data'
-core_files = sorted([f for f in os.listdir(repo) if f.endswith('.core.json')])
+
+def universe_files():
+    return sorted([f for f in os.listdir(repo)
+                   if (f.endswith('.core.json') or f.endswith('.json'))
+                   and not f.endswith('.extended.json')])
+
+def slug(fname):
+    if fname.endswith('.core.json'):
+        return fname.replace('.core.json', '')
+    return fname.replace('.json', '')
 
 errors = []
 warnings = []
@@ -469,8 +531,8 @@ def jikan_get(path, retries=2):
                 time.sleep(1)
     return None
 
-for fname in core_files:
-    slug = fname.replace('.core.json', '')
+for fname in universe_files():
+    s = slug(fname)
     with open(f'{repo}/{fname}') as f:
         d = json.load(f)
     
@@ -478,16 +540,16 @@ for fname in core_files:
     anime_name = d.get('anime', '')
     
     if not mal_id:
-        errors.append(f'  {slug}: malId MISSING')
+        errors.append(f'  {s}: malId MISSING')
         continue
     
-    if slug in known_wrong and mal_id == known_wrong[slug].get('wrong'):
-        errors.append(f'  {slug}: malId {mal_id} is KNOWN WRONG (correct: {known_wrong[slug]["correct"]})')
+    if s in known_wrong and mal_id == known_wrong[s].get('wrong'):
+        errors.append(f'  {s}: malId {mal_id} is KNOWN WRONG (correct: {known_wrong[s]["correct"]})')
         continue
     
     result = jikan_get(f'/anime/{mal_id}')
     if not result:
-        warnings.append(f'  {slug}: Jikan unreachable for malId {mal_id} (non-blocking)')
+        warnings.append(f'  {s}: Jikan unreachable for malId {mal_id} (non-blocking)')
         continue
     
     # Validate via animeImageUrl match as proxy for correct anime
@@ -505,7 +567,7 @@ for fname in core_files:
         # Flag if image IDs differ by more than 10000 (clear wrong anime)
         if jikan_img_id and our_img_id:
             if abs(int(jikan_img_id) - int(our_img_id)) > 10000:
-                errors.append(f'  {slug}: animeImageUrl mismatch (ID diff >10000: ours={our_img_id} vs Jikan={jikan_img_id})')
+                errors.append(f'  {s}: animeImageUrl mismatch (ID diff >10000: ours={our_img_id} vs Jikan={jikan_img_id})')
 
 if errors:
     print('FAIL: Jikan verification failures:')
@@ -513,7 +575,8 @@ if errors:
         print(e)
     sys.exit(1)
 else:
-    print(f'  PASS: All {len(core_files)} universes passed Jikan MAL ID verification')
+    all_files = universe_files()
+    print(f'  PASS: All {len(all_files)} universes passed Jikan MAL ID verification')
     for w in warnings:
         print(w)
 PYEOF

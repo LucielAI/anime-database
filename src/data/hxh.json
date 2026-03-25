@@ -1,6 +1,6 @@
 {
   "anime": "Hunter x Hunter",
-  "tagline": "Contractual Power Economy & Asymmetric Information Warfare",
+  "tagline": "Hunter x Hunter: Contractual Power Economy & Asymmetric Information Warfare",
   "malId": 11061,
   "visualizationHint": "node-graph",
   "visualizationReason": "HxH is defined by conditional alliances, asymmetric information, and binding contractual power — the node-graph maps the strategic web where every relationship is a potential betrayal vector.",
@@ -119,7 +119,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/174517.jpg?s=c8133cf450dc6bf13ba52d6781759101",
       "malId": 30,
       "slug": "gon-freecss",
-      "description": "Gon Freecss is a  from Hunter x Hunter."
+      "description": "Gon Freecss is a  from Hunter x Hunter.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Killua Zoldyck",
@@ -137,7 +139,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/327920.jpg?s=afd533ace6e7ce81ccf877d3d97880bb",
       "malId": 27,
       "slug": "killua-zoldyck",
-      "description": "Killua Zoldyck is a  from Hunter x Hunter."
+      "description": "Killua Zoldyck is a  from Hunter x Hunter.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Hisoka Morow",
@@ -155,7 +159,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/174561.jpg?s=74fd92ebbe0d14dec69aeba8eff36bb9",
       "malId": 31,
       "slug": "hisoka-morow",
-      "description": "Hisoka Morow is a  from Hunter x Hunter."
+      "description": "Hisoka Morow is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Chrollo Lucilfer",
@@ -173,7 +179,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/182387.jpg?s=82532b8deca18069b86e7f598e0ca914",
       "malId": 58,
       "slug": "chrollo-lucilfer",
-      "description": "Chrollo Lucilfer is a  from Hunter x Hunter."
+      "description": "Chrollo Lucilfer is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Kurapika",
@@ -191,7 +199,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/549312.jpg?s=fc4bb9699591fdf742c7fee5593c961e",
       "malId": 28,
       "slug": "kurapika",
-      "description": "Kurapika is a  from Hunter x Hunter."
+      "description": "Kurapika is a  from Hunter x Hunter.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Meruem",
@@ -209,7 +219,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/243861.jpg?s=7d6b962cafaeb5d6ae91fa8b3d9d38a0",
       "malId": 23277,
       "slug": "meruem",
-      "description": "Meruem is a  from Hunter x Hunter."
+      "description": "Meruem is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Isaac Netero",
@@ -227,7 +239,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/257355.jpg?s=1371e4c5acb62a73bf7843b25b58d25d",
       "malId": 14489,
       "slug": "isaac-netero",
-      "description": "Isaac Netero is a  from Hunter x Hunter."
+      "description": "Isaac Netero is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Illumi Zoldyck",
@@ -245,7 +259,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/174521.jpg?s=3b9c5ccadb580670fc0942edd8d06a6d",
       "malId": 57,
       "slug": "illumi-zoldyck",
-      "description": "Illumi Zoldyck is a  from Hunter x Hunter."
+      "description": "Illumi Zoldyck is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Neferpitou",
@@ -263,7 +279,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/253673.jpg?s=1800b6a0931f971d9c6d47b9ca1cae1c",
       "malId": 12300,
       "slug": "neferpitou",
-      "description": "Neferpitou is a  from Hunter x Hunter."
+      "description": "Neferpitou is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Biscuit Krueger",
@@ -281,7 +299,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/194667.jpg?s=b2a4def7e985c1ca4f4aac63a511ffc5",
       "malId": 13898,
       "slug": "biscuit-krueger",
-      "description": "Biscuit Krueger is a  from Hunter x Hunter."
+      "description": "Biscuit Krueger is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Ging Freecss",
@@ -299,7 +319,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/231795.jpg?s=a02e50645c7dc0816f3e7108cbef2c42",
       "malId": 26,
       "slug": "ging-freecss",
-      "description": "Ging Freecss is a  from Hunter x Hunter."
+      "description": "Ging Freecss is a  from Hunter x Hunter.",
+      "role": "Supporting",
+      "relationships": []
     }
   ],
   "factions": [

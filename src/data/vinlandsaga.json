@@ -1,6 +1,6 @@
 {
   "anime": "Vinland Saga",
-  "tagline": "A deterministic economy of retributive violence",
+  "tagline": "Vinland Saga: A deterministic economy of retributive violence",
   "malId": 37521,
   "themeColors": {
     "primary": "#d97706",
@@ -120,7 +120,9 @@
       "_fetchFailed": false,
       "malId": 10138,
       "slug": "thorfinn-karlsefni",
-      "description": "Thorfinn Karlsefni is a  from Vinland Saga."
+      "description": "Thorfinn Karlsefni is a  from Vinland Saga.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Askeladd",
@@ -138,7 +140,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/401940.jpg?s=738c36550f7afd3f402a32a5bbef66c8",
       "malId": 13020,
       "slug": "askeladd",
-      "description": "Askeladd is a  from Vinland Saga."
+      "description": "Askeladd is a  from Vinland Saga.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "King Canute",
@@ -157,7 +161,9 @@
       "_fetchFailed": false,
       "malId": 17438,
       "slug": "king-canute",
-      "description": "King Canute is a  from Vinland Saga."
+      "description": "King Canute is a  from Vinland Saga.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Thors Snorresson",
@@ -176,7 +182,9 @@
       "_fetchFailed": false,
       "malId": 13021,
       "slug": "thors-snorresson",
-      "description": "Thors Snorresson is a  from Vinland Saga."
+      "description": "Thors Snorresson is a  from Vinland Saga.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Thorkell the Tall",
@@ -195,7 +203,9 @@
       "_fetchFailed": false,
       "malId": 17440,
       "slug": "thorkell-the-tall",
-      "description": "Thorkell the Tall is a  from Vinland Saga."
+      "description": "Thorkell the Tall is a  from Vinland Saga.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Einar",
@@ -213,7 +223,9 @@
       "imageUrl": "https://myanimelist.net/images/characters/16/501347.jpg",
       "malId": 28030,
       "slug": "einar",
-      "description": "Einar is a  from Vinland Saga."
+      "description": "Einar is a  from Vinland Saga.",
+      "role": "Supporting",
+      "relationships": []
     }
   ],
   "relationships": [
@@ -419,7 +431,7 @@
   ],
   "systemQuestions": [
     {
-      "question": "What is the core system conflict in Vinland Saga?",
+      "question": "Why does the cycle of violence define Vinland Saga's power dynamics?",
       "answer": "It contrasts violence-based status acquisition with long-horizon governance and social trust-building.",
       "tabIndex": 2,
       "sectionId": "factions-heading",
@@ -433,7 +445,7 @@
       "tabLabel": "Entity Database"
     },
     {
-      "question": "What rules constrain power despite constant warfare?",
+      "question": "How do the rules of combat constrain power despite constant warfare?",
       "answer": "Core laws and consequences show that revenge, loyalty, and resource scarcity impose recurring strategic limits.",
       "tabIndex": 3,
       "sectionId": "rules-heading",

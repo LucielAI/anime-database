@@ -1,6 +1,6 @@
 {
   "anime": "Jujutsu Kaisen",
-  "tagline": "Negative Energy Economy & Algorithmic Combat",
+  "tagline": "Jujutsu Kaisen: Negative Energy Economy & Algorithmic Combat",
   "malId": 40748,
   "visualizationHint": "counter-tree",
   "visualizationReason": "JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.",
@@ -120,7 +120,9 @@
       "_fetchFailed": false,
       "malId": 164471,
       "slug": "satoru-gojo",
-      "description": "Satoru Gojo is a  from Jujutsu Kaisen."
+      "description": "Satoru Gojo is a  from Jujutsu Kaisen.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Ryomen Sukuna",
@@ -139,7 +141,9 @@
       "_fetchFailed": false,
       "malId": 175198,
       "slug": "ryomen-sukuna",
-      "description": "Ryomen Sukuna is a  from Jujutsu Kaisen."
+      "description": "Ryomen Sukuna is a  from Jujutsu Kaisen.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Kenjaku",
@@ -158,7 +162,9 @@
       "_fetchFailed": false,
       "malId": 175542,
       "slug": "kenjaku",
-      "description": "Kenjaku is a  from Jujutsu Kaisen."
+      "description": "Kenjaku is a  from Jujutsu Kaisen.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Yuta Okkotsu",
@@ -177,7 +183,9 @@
       "_fetchFailed": false,
       "malId": 168067,
       "slug": "yuta-okkotsu",
-      "description": "Yuta Okkotsu is a  from Jujutsu Kaisen."
+      "description": "Yuta Okkotsu is a  from Jujutsu Kaisen.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Toji Fushiguro",
@@ -196,7 +204,9 @@
       "_fetchFailed": false,
       "malId": 175543,
       "slug": "toji-fushiguro",
-      "description": "Toji Fushiguro is a  from Jujutsu Kaisen."
+      "description": "Toji Fushiguro is a  from Jujutsu Kaisen.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Maki Zenin",
@@ -214,7 +224,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/423949.jpg?s=72edfa936ac89421e8d16970762d8b5b",
       "malId": 164482,
       "slug": "maki-zenin",
-      "description": "Maki Zenin is a  from Jujutsu Kaisen."
+      "description": "Maki Zenin is a  from Jujutsu Kaisen.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Yuji Itadori",
@@ -236,7 +248,9 @@
         "Itadori, Yuuji"
       ],
       "slug": "yuji-itadori",
-      "description": "Yuji Itadori is a  from Jujutsu Kaisen."
+      "description": "Yuji Itadori is a  from Jujutsu Kaisen.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Megumi Fushiguro",
@@ -254,7 +268,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/392689.jpg?s=2395a10b59bb54ec9891c74ef214fea1",
       "malId": 164470,
       "slug": "megumi-fushiguro",
-      "description": "Megumi Fushiguro is a  from Jujutsu Kaisen."
+      "description": "Megumi Fushiguro is a  from Jujutsu Kaisen.",
+      "role": "Main",
+      "relationships": []
     },
     {
       "name": "Mahito",
@@ -272,7 +288,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/446508.jpg?s=8cfa45381097f1e9a720982061ec087d",
       "malId": 164481,
       "slug": "mahito",
-      "description": "Mahito is a  from Jujutsu Kaisen."
+      "description": "Mahito is a  from Jujutsu Kaisen.",
+      "role": "Supporting",
+      "relationships": []
     },
     {
       "name": "Kento Nanami",
@@ -290,7 +308,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/581424.jpg?s=78de007092c9e32f3555753de4999ee6",
       "malId": 164473,
       "slug": "kento-nanami",
-      "description": "Kento Nanami is a  from Jujutsu Kaisen."
+      "description": "Kento Nanami is a  from Jujutsu Kaisen.",
+      "role": "Supporting",
+      "relationships": []
     }
   ],
   "factions": [
