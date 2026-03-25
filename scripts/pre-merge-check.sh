@@ -141,8 +141,18 @@ echo -n "12. Gate 3c (static HTML OG tag integrity): "
 python3 -c "
 import json, glob, os, re
 
-# Derive slugs from src/data/*.core.json
-slugs = [f.split('/')[-1].replace('.core.json','') for f in glob.glob('src/data/*.core.json')]
+# Derive slugs from src/data/*.core.json AND *.json (not *.extended.json), deduped
+seen = set()
+slugs = []
+for pattern in ['src/data/*.core.json', 'src/data/*.json']:
+    for f in glob.glob(pattern):
+        name = f.split('/')[-1]
+        if name.endswith('.extended.json'):
+            continue
+        slug = name.replace('.core.json','').replace('.json','')
+        if slug not in seen:
+            seen.add(slug)
+            slugs.append(slug)
 
 missing_files = []
 missing_og_title = []
