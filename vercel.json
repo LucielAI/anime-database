@@ -1,3 +1,20 @@
 {
-  "trailingSlash": true
+  "rewrites": [
+    {
+      "source": "/universe/:slug",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/universe/:slug/",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/((?!assets/|api/|src/data/|blog-index\\.json|blog/|search-index\\.json|manifest\\.json|sw\\.js|feed\\.xml|sitemap\\.xml|llms\\.txt|robots\\.txt|favicon\\.svg).*)",
+      "destination": "/index.html"
+    }
+  ]
 }
