@@ -1,4 +1,4 @@
 {
-  "trailingSlash": true,
-  "cleanUrls": true
+  "publicDirectory": "public",
+  "trailingSlash": true
 }
