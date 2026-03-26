@@ -716,9 +716,9 @@ function UniversesCatalogRoute() {
       <main id="catalog-main" className="max-w-6xl mx-auto">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">Universe Catalog</h1>
-          <Link to="/" className="px-3 py-2 text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white rounded-lg border border-white/10 hover:border-white/20 transition-colors">← Back Home</Link>
+          <Link to="/" className="px-3 py-2 text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white rounded-lg border border-white/10 hover:border-white/20 transition-colors">← Back to Archive</Link>
         </div>
-        <p className="text-xs text-gray-300/80 max-w-3xl mb-4">Search and sort the archive using lightweight catalog metadata only. Universe payloads still lazy-load when you open a route.</p>
+        <p className="text-xs text-gray-300/80 max-w-3xl mb-4">Filter by system type, sort by latest or most viewed, or search to find any universe.</p>
 
         {/* Archive stats bar */}
         <div className="mb-6 flex flex-wrap justify-start gap-4 text-[10px] text-gray-400 tracking-widest uppercase">
