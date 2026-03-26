@@ -1,0 +1,260 @@
+/* CompareRoute entrance animations */
+@keyframes compareSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes headerGlow {
+  0%, 100% {
+    opacity: 0.5;
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(60px);
+  }
+}
+
+@keyframes tableRowReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-compare-slide-up {
+  animation: compareSlideUp 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+.animate-compare-delay-1 { animation-delay: 80ms; }
+.animate-compare-delay-2 { animation-delay: 160ms; }
+.animate-compare-delay-3 { animation-delay: 240ms; }
+.animate-compare-delay-4 { animation-delay: 320ms; }
+.animate-compare-delay-5 { animation-delay: 400ms; }
+.animate-compare-delay-6 { animation-delay: 480ms; }
+
+.compare-header-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.compare-header-glow::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(34,211,238,0.12) 0%, transparent 70%);
+  animation: headerGlow 4s ease-in-out infinite;
+}
+
+.compare-header-glow::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 160px;
+  background: radial-gradient(ellipse, rgba(139,92,246,0.1) 0%, transparent 70%);
+  animation: headerGlow 6s ease-in-out infinite reverse;
+}
+
+/* Compare table styles */
+.compare-table-panel {
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+  backdrop-filter: blur(4px);
+}
+
+.compare-table-category-header {
+  background: linear-gradient(90deg, rgba(34,211,238,0.08) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(34,211,238,0.15);
+}
+
+.compare-table-row {
+  animation: tableRowReveal 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 200ms ease;
+}
+
+.compare-table-row:last-child {
+  border-bottom: none;
+}
+
+.compare-table-row:hover {
+  background: rgba(34,211,238,0.04);
+}
+
+.compare-value-same {
+  color: rgba(156,163,175,0.4);
+}
+
+.compare-value-diff {
+  color: #e2e8f0;
+}
+
+.compare-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(156,163,175,0.5);
+}
+
+.compare-cell-left {
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.compare-cell-cyan {
+  color: #67e8f9;
+}
+
+.compare-cell-purple {
+  color: #c4b5fd;
+}
+
+/* Selector panel */
+.compare-selector-panel {
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+}
+
+.compare-selector-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(156,163,175,0.5);
+}
+
+/* Quick link cards */
+.compare-quick-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  transition: all 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.compare-quick-card:hover {
+  border-color: rgba(34,211,238,0.25);
+  background: linear-gradient(135deg, rgba(34,211,238,0.06) 0%, rgba(255,255,255,0.02) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(34,211,238,0.08);
+}
+
+/* CTA buttons */
+.compare-cta-btn {
+  background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+  color: #020617;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: all 250ms cubic-bezier(0.22, 1, 0.36, 1);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.compare-cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 100%);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.compare-cta-btn:hover::before {
+  opacity: 1;
+}
+
+.compare-cta-btn:hover {
+  box-shadow: 0 4px 24px rgba(34,211,238,0.3);
+  transform: translateY(-1px);
+}
+
+.compare-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* Divider line with glow dot */
+.compare-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(34,211,238,0.2) 50%, transparent 100%);
+}
+
+/* Select styling */
+.compare-select {
+  appearance: none;
+  background-color: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e2e8f0;
+  font-size: 11px;
+  cursor: pointer;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+
+.compare-select:focus {
+  outline: none;
+  border-color: rgba(34,211,238,0.4);
+  box-shadow: 0 0 0 2px rgba(34,211,238,0.1);
+}
+
+/* Loading state */
+.compare-loading-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.compare-loading-block {
+  height: 80px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Empty state */
+.compare-empty-state {
+  border: 1px dashed rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.01);
+}
+
+/* Responsive reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-compare-slide-up,
+  .compare-table-row {
+    animation: none;
+    opacity: 1;
+  }
+  .compare-header-glow::before,
+  .compare-header-glow::after {
+    animation: none;
+  }
+}
