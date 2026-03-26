@@ -87,15 +87,17 @@
       "malId": 111245,
       "primaryAbility": "Silent Casting / High-Capacity Elemental Magic",
       "slug": "rudeus-greyrat",
-      "description": "Rudeus Greyrat is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Rudeus Greyrat is a reincarnated mage who committed to growth in his second life, mastering silent casting and high-capacity elemental magic to become a central actor in family-scale and world-scale conflicts in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Main",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+        "Orsted",
+        "Hitogami",
+        "Eris Boreas Greyrat",
+        "Roxy Migurdia",
+        "Sylphiette",
+        "Ruijerd Superdia",
+        "Kishirika Kishirisu",
+        "Perugius Dola"
       ]
     },
     {
@@ -114,11 +116,13 @@
       "malId": 115175,
       "primaryAbility": "Dragon God Combat Mastery / Loop Knowledge",
       "slug": "orsted",
-      "description": "Orsted is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Orsted is a Dragon God who carries an inherited mission to eliminate Hitogami, repeating history loops while refining plans each cycle to challenge the man god who manipulated his fate in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Supporting",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2"
+        "Rudeus Greyrat",
+        "Perugius Dola",
+        "Badigadi",
+        "Hitogami"
       ]
     },
     {
@@ -137,13 +141,12 @@
       "malId": 118253,
       "primaryAbility": "Dream Oracle Manipulation / Apostle Routing",
       "slug": "hitogami",
-      "description": "Hitogami is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Hitogami is a Human God imprisoned in the Void World who influences events through dreams and apostles, operating as an asymmetric information super-node that specializes in indirect branch edits via weak-fate intermediaries in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Supporting",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2"
+        "Rudeus Greyrat",
+        "Orsted",
+        "Badigadi"
       ]
     },
     {
@@ -162,13 +165,12 @@
       "malId": 111335,
       "primaryAbility": "Sword God Style Burst Assault",
       "slug": "eris-boreas-greyrat",
-      "description": "Eris Boreas Greyrat is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Eris Boreas Greyrat is a Sword King and burst duelist who evolved from an impulsive noble-born swordswoman into an elite close-range combatant through relentless discipline and post-teleport growth in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Main",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
-        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+        "Rudeus Greyrat",
+        "Sylphiette",
+        "Ruijerd Superdia"
       ]
     },
     {
@@ -187,13 +189,12 @@
       "malId": 111341,
       "primaryAbility": "Water Magic Doctrine / Instruction",
       "slug": "roxy-migurdia",
-      "description": "Roxy Migurdia is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Roxy Migurdia is a King-Class water mage who serves as Rudeus's first teacher, establishing silent casting habits and confidence scaffolding through patient instruction and worldview expansion in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Main",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+        "Rudeus Greyrat",
+        "Sylphiette",
+        "Kishirika Kishirisu"
       ]
     },
     {
@@ -212,15 +213,13 @@
       "malId": 111337,
       "primaryAbility": "Support Casting / Barrier and Healing Utility",
       "slug": "sylphiette",
-      "description": "Sylphiette is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Sylphiette is a support mage who serves as Rudeus's emotional anchor after displacement and court politics, combining resilience and sustain capabilities to preserve team continuity under political and battlefield volatility in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Main",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu - Shugo Jutsushi Fitz",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei III: Isekai Ittara Honki Dasu"
+        "Rudeus Greyrat",
+        "Roxy Migurdia",
+        "Eris Boreas Greyrat",
+        "Ruijerd Superdia"
       ]
     },
     {
@@ -239,13 +238,12 @@
       "malId": 111739,
       "primaryAbility": "Superd Spear Combat / Detection Instinct",
       "slug": "ruijerd-superdia",
-      "description": "Ruijerd Superdia is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Ruijerd Superdia is a Superd warrior carrying generational stigma who protects children and seeks to restore his people's name, acting as a frontline guardian enabling fragile-caster survival during lethal transit arcs in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Supporting",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
-        "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2"
+        "Rudeus Greyrat",
+        "Eris Boreas Greyrat",
+        "Sylphiette"
       ]
     },
     {
@@ -264,11 +262,11 @@
       "malId": 111745,
       "primaryAbility": "Demon Eye Grant / Ancient Authority",
       "slug": "kishirika-kishirisu",
-      "description": "Kishirika Kishirisu is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Kishirika Kishirisu is a Demon Empress and ocular grantor who dispenses demon eyes to key actors, acting as a rare-ability distributor node that injects asymmetric perception tools shifting local engagement math in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Supporting",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2"
+        "Rudeus Greyrat",
+        "Roxy Migurdia"
       ]
     },
     {

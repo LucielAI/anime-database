@@ -1,6 +1,6 @@
 {
   "anime": "Mob Psycho 100",
-  "tagline": "Mob Psycho 100 — A powerful psychic navigates supernatural threats while mastering his own emotions.",
+  "tagline": "Mob Psycho 100 \u2014 A powerful psychic navigates supernatural threats while mastering his own emotions.",
   "malId": 32182,
   "themeColors": {
     "primary": "#f97316",
@@ -18,12 +18,12 @@
   "visualizationReason": "Mob Psycho 100 is a psychic power network organized as an affinity-matrix. The affinity-matrix captures the core structural thesis: each character has a psychic power level and an emotional intelligence level, and the relationship between these two dimensions determines the character's arc. Espers with high power and low emotional intelligence become antagonists; those with balanced development become allies.",
   "headerFlavor": {
     "loreQuote": "I'll become a doctor, fall in love, become a full-fledged member of society. One percent at a time.",
-    "sysWarning": "// [SYSTEM STATUS]: PSYCHIC EMISSION DETECTED — EMOTIONAL PRESSURE: 0%",
+    "sysWarning": "// [SYSTEM STATUS]: PSYCHIC EMISSION DETECTED \u2014 EMOTIONAL PRESSURE: 0%",
     "sysWarningColor": "yellow"
   },
   "backgroundMotif": "radial",
   "revealOverlay": "glow-border",
-  "introductionSummary": "Mob Psycho 100 operates as an affinity-matrix where psychic power is distributed across individuals with radically different relationships to the spiritual world. The analytical lens is psychological: power level doesn't determine outcome — emotional state, acceptance, and genuine human connection determine it. The series' thesis is that overwhelming psychic power is meaningless without the emotional intelligence to use it responsibly. The core mechanic is emotional pressure — Mob suppresses his power to avoid hurting others, and when that pressure exceeds his threshold, catastrophic psychic events occur.",
+  "introductionSummary": "Mob Psycho 100 operates as an affinity-matrix where psychic power is distributed across individuals with radically different relationships to the spiritual world. The analytical lens is psychological: power level doesn't determine outcome \u2014 emotional state, acceptance, and genuine human connection determine it. The series' thesis is that overwhelming psychic power is meaningless without the emotional intelligence to use it responsibly. The core mechanic is emotional pressure \u2014 Mob suppresses his power to avoid hurting others, and when that pressure exceeds his threshold, catastrophic psychic events occur.",
   "hero": {
     "systemType": "affinity",
     "microHook": "Psychic power is the x-axis; emotional intelligence is the y-axis.",
@@ -32,71 +32,71 @@
   },
   "aiInsights": {
     "casual": "Mob Psycho 100 is about a kid who could destroy the world with his mind but just wants to be normal. He's an extremely polite middle schooler who works part-time for a con-artist psychic, joined the Body Improvement Club to try to build muscle, and is completely oblivious to the girl who has a crush on him. It's the most wholesome anime about a walking apocalypse you'll ever see. The 'villains' are mostly people with hurt feelings who need a hug.",
-    "deep": "Mob Psycho 100's system is a psychological power matrix where raw psychic ability and emotional development exist on separate axes. The series' structural insight is that these two dimensions are independent — you can have overwhelming power with zero emotional development (the Claw espers), moderate power with high emotional development (Reigen), or the perfect balance (Mob at the end). The affinity-matrix is not about who has the most power; it's about who has developed the emotional framework to handle what they have. Mob's genius is that he doesn't want power — he wants ordinary human connection. This makes him the only esper in the series who is genuinely free from the corruption of power because he never wanted it in the first place. The con-artist Reigen is actually the most emotionally intelligent character — he understands people better than anyone, which is why he can 'sense' things without psychic powers."
+    "deep": "Mob Psycho 100's system is a psychological power matrix where raw psychic ability and emotional development exist on separate axes. The series' structural insight is that these two dimensions are independent \u2014 you can have overwhelming power with zero emotional development (the Claw espers), moderate power with high emotional development (Reigen), or the perfect balance (Mob at the end). The affinity-matrix is not about who has the most power; it's about who has developed the emotional framework to handle what they have. Mob's genius is that he doesn't want power \u2014 he wants ordinary human connection. This makes him the only esper in the series who is genuinely free from the corruption of power because he never wanted it in the first place. The con-artist Reigen is actually the most emotionally intelligent character \u2014 he understands people better than anyone, which is why he can 'sense' things without psychic powers."
   },
   "powerSystem": [
     {
       "name": "Psychic Powers (Esper)",
       "subtitle": "Telekinesis and Spiritual Resonance",
-      "loreDesc": "The primary power system — telekinesis, telepathy, psychokinesis, and spirit manipulation. Psychic power ranges from moving small objects to reality-warping levels. Power level is fixed per individual but emotional state affects output.",
-      "systemDesc": "The fixed-potential system — psychic power is an innate capacity that cannot be increased through training (unlike ki or chakra). This makes espers fundamentally unequal from birth. The only variable is emotional state affecting output efficiency.",
+      "loreDesc": "The primary power system \u2014 telekinesis, telepathy, psychokinesis, and spirit manipulation. Psychic power ranges from moving small objects to reality-warping levels. Power level is fixed per individual but emotional state affects output.",
+      "systemDesc": "The fixed-potential system \u2014 psychic power is an innate capacity that cannot be increased through training (unlike ki or chakra). This makes espers fundamentally unequal from birth. The only variable is emotional state affecting output efficiency.",
       "loreSubtitle": "Telekinesis and Spiritual Resonance",
       "systemSubtitle": "Innate Fixed-Potential Power",
       "icon": "Zap",
       "color": "orange-400",
-      "signatureMoment": "Mob at 100% emotional release destroying the Claw psychic army in seconds — the terrifying gap between his suppressed state and full power."
+      "signatureMoment": "Mob at 100% emotional release destroying the Claw psychic army in seconds \u2014 the terrifying gap between his suppressed state and full power."
     },
     {
       "name": "Emotional Suppression",
       "subtitle": "The 0% Pressure Technique",
       "loreDesc": "Mob's unique technique of suppressing psychic output by suppressing emotional expression. He maintains emotional pressure at 0% by never getting angry, never showing off, never being greedy. This prevents accidents but also prevents genuine self-expression.",
-      "systemDesc": "The emotional dampening mechanic — Mob's technique of emotional suppression is a form of psychic output control. When emotional pressure builds (typically from feelings of inadequacy or injustice), it compresses into a psychic explosion at threshold. The technique works but creates an identity crisis — who is Mob when he never expresses his true feelings?",
+      "systemDesc": "The emotional dampening mechanic \u2014 Mob's technique of emotional suppression is a form of psychic output control. When emotional pressure builds (typically from feelings of inadequacy or injustice), it compresses into a psychic explosion at threshold. The technique works but creates an identity crisis \u2014 who is Mob when he never expresses his true feelings?",
       "loreSubtitle": "The 0% Pressure Technique",
       "systemSubtitle": "Emotional Dampening Power Control",
       "icon": "Gauge",
       "color": "yellow-400",
-      "signatureMoment": "Mob maintaining 0% emotional pressure while being bullied — the incredible discipline of someone who refuses to let their power hurt others."
+      "signatureMoment": "Mob maintaining 0% emotional pressure while being bullied \u2014 the incredible discipline of someone who refuses to let their power hurt others."
     },
     {
       "name": "Spiritual Affinity",
       "subtitle": "Esper-Spirit Connection",
-      "loreDesc": "The connection between espers and spirits. High spiritual affinity means stronger psychic resonance and more powerful spirit interactions. Mob has extremely high spiritual affinity — he can perceive and interact with spirits naturally.",
-      "systemDesc": "The spiritual perception layer — some characters can perceive spirits, others cannot. This creates a perception asymmetry where non-psychics live in a fundamentally different world than espers. Ekubo's existence as a powerful spirit depends on finding espers with sufficient affinity.",
+      "loreDesc": "The connection between espers and spirits. High spiritual affinity means stronger psychic resonance and more powerful spirit interactions. Mob has extremely high spiritual affinity \u2014 he can perceive and interact with spirits naturally.",
+      "systemDesc": "The spiritual perception layer \u2014 some characters can perceive spirits, others cannot. This creates a perception asymmetry where non-psychics live in a fundamentally different world than espers. Ekubo's existence as a powerful spirit depends on finding espers with sufficient affinity.",
       "loreSubtitle": "Esper-Spirit Connection",
       "systemSubtitle": "Spiritual Perception Gate",
       "icon": "Eye",
       "color": "purple-400",
-      "signatureMoment": "Mob perceiving spirits clearly while others see nothing — the first indication that his power includes spiritual perception."
+      "signatureMoment": "Mob perceiving spirits clearly while others see nothing \u2014 the first indication that his power includes spiritual perception."
     },
     {
       "name": "Body Improvement",
       "subtitle": "The Physical Esper Alternative",
-      "loreDesc": "The Body Improvement Club's philosophy: physical training can achieve comparable results to psychic powers through discipline. They represent the human potential counter to supernatural gifts — muscle as an alternative to telekinesis.",
-      "systemDesc": "The non-esper path — Body Improvement demonstrates that human physical potential can approach esper levels through sufficient training. This creates a philosophical counter to the esper hierarchy: maybe psychics aren't superior.",
+      "loreDesc": "The Body Improvement Club's philosophy: physical training can achieve comparable results to psychic powers through discipline. They represent the human potential counter to supernatural gifts \u2014 muscle as an alternative to telekinesis.",
+      "systemDesc": "The non-esper path \u2014 Body Improvement demonstrates that human physical potential can approach esper levels through sufficient training. This creates a philosophical counter to the esper hierarchy: maybe psychics aren't superior.",
       "loreSubtitle": "The Physical Esper Alternative",
       "systemSubtitle": "Human Potential vs Supernatural Gift",
       "icon": "Dumbbell",
       "color": "red-400",
-      "signatureMoment": "The Body Improvement Club standing up to espers — proof that ordinary humans can face supernatural threats through courage and training."
+      "signatureMoment": "The Body Improvement Club standing up to espers \u2014 proof that ordinary humans can face supernatural threats through courage and training."
     },
     {
       "name": "100% Emotional Release",
       "subtitle": "The Nuclear Option",
-      "loreDesc": "When Mob's suppressed emotional pressure exceeds his threshold (typically from deep emotional hurt), he releases 100% of his psychic power. At full release, Mob is effectively a walking apocalypse — reality warps around him, matter disintegrates, and only emotional intervention can stop him.",
-      "systemDesc": "The suppression-release cycle — Mob's power is a controlled nuclear reaction. He maintains low output through constant emotional suppression, but the accumulated pressure eventually releases catastrophically. The 100% state is not a choice but a system failure from accumulated emotional overload.",
+      "loreDesc": "When Mob's suppressed emotional pressure exceeds his threshold (typically from deep emotional hurt), he releases 100% of his psychic power. At full release, Mob is effectively a walking apocalypse \u2014 reality warps around him, matter disintegrates, and only emotional intervention can stop him.",
+      "systemDesc": "The suppression-release cycle \u2014 Mob's power is a controlled nuclear reaction. He maintains low output through constant emotional suppression, but the accumulated pressure eventually releases catastrophically. The 100% state is not a choice but a system failure from accumulated emotional overload.",
       "loreSubtitle": "The Nuclear Option",
       "systemSubtitle": "Suppression-Failure Catastrophe",
       "icon": "Explosion",
       "color": "orange-400",
-      "signatureMoment": "Mob's 100% release against Koyama — the moment the Body Improvement Club's friendship became more powerful than his psychic apocalypse."
+      "signatureMoment": "Mob's 100% release against Koyama \u2014 the moment the Body Improvement Club's friendship became more powerful than his psychic apocalypse."
     }
   ],
   "rules": [
     {
       "name": "Psychic power is innate and fixed",
       "subtitle": "The Fixed Potential Rule",
-      "loreConsequence": "Espers are born with their power ceiling. Training can improve technique but not raw output. This makes espers fundamentally unequal from birth — some people simply have more spiritual potential than others.",
-      "systemEquivalent": "An inborn inequality mechanism — psychic power cannot be increased, only expressed. This means the esper hierarchy is a genetic aristocracy, with no possibility of meritocratic advancement.",
+      "loreConsequence": "Espers are born with their power ceiling. Training can improve technique but not raw output. This makes espers fundamentally unequal from birth \u2014 some people simply have more spiritual potential than others.",
+      "systemEquivalent": "An inborn inequality mechanism \u2014 psychic power cannot be increased, only expressed. This means the esper hierarchy is a genetic aristocracy, with no possibility of meritocratic advancement.",
       "severity": "high",
       "loreSubtitle": "The Fixed Potential Rule",
       "systemSubtitle": "Innate Inequality Protocol"
@@ -104,8 +104,8 @@
     {
       "name": "Emotional state affects psychic output",
       "subtitle": "The Emotional Pressure Gate",
-      "loreConsequence": "Mob suppresses his output by suppressing his emotions. Strong emotions (especially negative ones) dramatically increase psychic output — the series' version of Super Saiyan transformation.",
-      "systemEquivalent": "An emotional amplification gate — the only way to increase psychic output beyond baseline is through emotional amplification. This creates a psychological dependency on emotional state for combat effectiveness.",
+      "loreConsequence": "Mob suppresses his output by suppressing his emotions. Strong emotions (especially negative ones) dramatically increase psychic output \u2014 the series' version of Super Saiyan transformation.",
+      "systemEquivalent": "An emotional amplification gate \u2014 the only way to increase psychic output beyond baseline is through emotional amplification. This creates a psychological dependency on emotional state for combat effectiveness.",
       "severity": "medium",
       "loreSubtitle": "The Emotional Pressure Gate",
       "systemSubtitle": "Emotional Output Multiplier"
@@ -114,7 +114,7 @@
       "name": "Power without emotional intelligence creates villains",
       "subtitle": "The Corruption Theorem",
       "loreConsequence": "Every antagonist in the series is an esper with high power but low emotional development. The Claw President, Mogami, and every major villain represents what happens when someone gets power without the character to handle it.",
-      "systemEquivalent": "A character-development gate — raw power is meaningless without the emotional framework to contextualize it. The series' core argument: emotional intelligence is the prerequisite for responsible power use.",
+      "systemEquivalent": "A character-development gate \u2014 raw power is meaningless without the emotional framework to contextualize it. The series' core argument: emotional intelligence is the prerequisite for responsible power use.",
       "severity": "fatal",
       "loreSubtitle": "The Corruption Theorem",
       "systemSubtitle": "Power-Corruption Correlation"
@@ -123,7 +123,7 @@
       "name": "Reigen has no psychic powers but senses everything",
       "subtitle": "The Human Perception Theorem",
       "loreConsequence": "Reigen's defining characteristic is that he has zero psychic ability but understands people better than any esper. He senses emotional truth through observation rather than telepathy.",
-      "systemEquivalent": "A human-potential proof — non-psychics can match espers in practical terms through superior emotional intelligence. Reigen's effectiveness proves that human social perception is a valid alternative to supernatural perception.",
+      "systemEquivalent": "A human-potential proof \u2014 non-psychics can match espers in practical terms through superior emotional intelligence. Reigen's effectiveness proves that human social perception is a valid alternative to supernatural perception.",
       "severity": "low",
       "loreSubtitle": "The Human Perception Theorem",
       "systemSubtitle": "Human Intelligence as Power Alternative"
@@ -132,7 +132,7 @@
       "name": "Friendship and human connection suppress psychic power",
       "subtitle": "The Connection Paradox",
       "loreConsequence": "Mob's most powerful attacks are suppressed when he's reminded of his connections to people. The Body Improvement Club's friendship literally prevents him from going 100%.",
-      "systemEquivalent": "An emotional anchor mechanism — genuine human connection creates emotional stability that dampens psychic output. This is the system's built-in counter to power暴走.",
+      "systemEquivalent": "An emotional anchor mechanism \u2014 genuine human connection creates emotional stability that dampens psychic output. This is the system's built-in counter to power\u66b4\u8d70.",
       "severity": "medium",
       "loreSubtitle": "The Connection Paradox",
       "systemSubtitle": "Emotional Anchor Dampening"
@@ -144,60 +144,75 @@
       "title": " esper with 100% Psychic Potential",
       "rank": "Apex Tier / Walking Apocalypse",
       "dangerLevel": 10,
-      "loreBio": "A middle schooler with the highest psychic potential in the series. He suppresses 99% of his power to live normally — going to school, working part-time, joining the Body Improvement Club. His defining trait is his extraordinary emotional restraint and genuine kindness.",
-      "systemBio": "The protagonist as power ceiling — Mob represents the highest possible psychic power combined with the lowest possible desire to use it. His 100% emotional release is a system failure, not a choice. His arc is learning that emotional expression is not the same as emotional destruction.",
+      "loreBio": "A middle schooler with the highest psychic potential in the series. He suppresses 99% of his power to live normally \u2014 going to school, working part-time, joining the Body Improvement Club. His defining trait is his extraordinary emotional restraint and genuine kindness.",
+      "systemBio": "The protagonist as power ceiling \u2014 Mob represents the highest possible psychic power combined with the lowest possible desire to use it. His 100% emotional release is a system failure, not a choice. His arc is learning that emotional expression is not the same as emotional destruction.",
       "gradientFrom": "orange-950",
       "gradientTo": "yellow-900",
       "accentColor": "orange-400",
       "icon": "Zap",
-      "signatureMoment": "Choosing to suppress his 100% power when the Body Improvement Club showed him genuine friendship — proving that connection is stronger than apocalypse.",
+      "signatureMoment": "Choosing to suppress his 100% power when the Body Improvement Club showed him genuine friendship \u2014 proving that connection is stronger than apocalypse.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/343344.jpg?s=3e76e9f00b1e67cc81c526e89f162bf8",
       "_fetchFailed": false,
       "malId": 109929,
       "role": "Main",
       "slug": "mob-(shigeo-kageyama)",
       "description": "Mob (Shigeo Kageyama) is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Reigen Arataka",
+        "Ekubo (Dimple)",
+        "Ritsu Kageyama",
+        "Teruki Hanazawa",
+        "Koyama",
+        "Emi (Mob's Girlfriend)",
+        "Sho Suzuki (Telepathy Arc)"
+      ]
     },
     {
       "name": "Reigen Arataka",
       "title": "Psychic Consultant",
       "rank": "Human Tier / Emotional Intelligence Apex",
       "dangerLevel": 1,
-      "loreBio": "A con-artist who pretends to be a psychic but actually has zero powers. Reigen is Mob's part-time boss and mentor. He understands human psychology better than any esper — his 'psychic sensing' is actually brilliant emotional reading.",
-      "systemBio": "The human intelligence node — Reigen's structural position is proof that non-psychics can match espers through superior emotional intelligence. He has zero psychic power but accomplishes more than any esper through understanding people.",
+      "loreBio": "A con-artist who pretends to be a psychic but actually has zero powers. Reigen is Mob's part-time boss and mentor. He understands human psychology better than any esper \u2014 his 'psychic sensing' is actually brilliant emotional reading.",
+      "systemBio": "The human intelligence node \u2014 Reigen's structural position is proof that non-psychics can match espers through superior emotional intelligence. He has zero psychic power but accomplishes more than any esper through understanding people.",
       "gradientFrom": "blue-950",
       "gradientTo": "indigo-900",
       "accentColor": "blue-400",
       "icon": "Briefcase",
-      "signatureMoment": "Confronting the Claw President using only words and psychological insight — proving that human intelligence can defeat psychic power when the psychic has emotional vulnerabilities.",
+      "signatureMoment": "Confronting the Claw President using only words and psychological insight \u2014 proving that human intelligence can defeat psychic power when the psychic has emotional vulnerabilities.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/308364.jpg?s=3fd34b01685c150ebd8572b2fcd26f40",
       "_fetchFailed": false,
       "malId": 109931,
       "role": "Main",
       "slug": "reigen-arataka",
       "description": "Reigen Arataka is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)",
+        "Ekubo (Dimple)"
+      ]
     },
     {
       "name": "Ekubo (Dimple)",
       "title": "Powerful Spirit",
       "rank": "Spirit Tier / Reformed Villain",
       "dangerLevel": 7,
-      "loreBio": "A powerful spirit who initially wanted to use Mob to become a god. Ekubo represents the reformed villain arc — over the series he becomes genuinely invested in Mob's wellbeing and even sacrifices himself to protect him.",
-      "systemBio": "The spirit node — Ekubo's structural position is the series' proof that even initially selfish actors can develop genuine loyalty. His power as a spirit is independent of the esper system, making him one of the few non-esper entities with comparable capability.",
+      "loreBio": "A powerful spirit who initially wanted to use Mob to become a god. Ekubo represents the reformed villain arc \u2014 over the series he becomes genuinely invested in Mob's wellbeing and even sacrifices himself to protect him.",
+      "systemBio": "The spirit node \u2014 Ekubo's structural position is the series' proof that even initially selfish actors can develop genuine loyalty. His power as a spirit is independent of the esper system, making him one of the few non-esper entities with comparable capability.",
       "gradientFrom": "purple-950",
       "gradientTo": "fuchsia-900",
       "accentColor": "purple-400",
       "icon": "Smile",
-      "signatureMoment": "Becoming a 'god' through the cult and then choosing to fight against his own followers to protect Mob — the reformed villain's redemption arc.",
+      "signatureMoment": "Becoming a 'god' through the cult and then choosing to fight against his own followers to protect Mob \u2014 the reformed villain's redemption arc.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/299395.jpg?s=0857c68f6e2810f1c79eb22f9f8b9fa1",
       "_fetchFailed": false,
       "malId": 125034,
       "role": "Main",
       "slug": "ekubo-(dimple)",
       "description": "Ekubo (Dimple) is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)",
+        "Reigen Arataka",
+        "Tenga Kawajiri"
+      ]
     },
     {
       "name": "Ritsu Kageyama",
@@ -205,59 +220,65 @@
       "rank": "Latent Tier / Inferiority Complex",
       "dangerLevel": 5,
       "loreBio": "Mob's younger brother with latent psychic powers. Ritsu resents being overshadowed by his brother's overwhelming ability and struggles with feelings of inadequacy. When his powers awaken, they are initially oriented toward harmful thoughts.",
-      "systemBio": "The sibling rivalry node — Ritsu's structural position represents the pressure of being the less-powered sibling. His arc is learning that his worth isn't determined by psychic output.",
+      "systemBio": "The sibling rivalry node \u2014 Ritsu's structural position represents the pressure of being the less-powered sibling. His arc is learning that his worth isn't determined by psychic output.",
       "gradientFrom": "gray-950",
       "gradientTo": "slate-800",
       "accentColor": "gray-400",
       "icon": "Users",
-      "signatureMoment": "Learning that his worth isn't determined by psychic output — Ritsu's acceptance of himself without powers is his character arc resolution.",
+      "signatureMoment": "Learning that his worth isn't determined by psychic output \u2014 Ritsu's acceptance of himself without powers is his character arc resolution.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/306672.jpg?s=0865960b46255cb77b31097c14e8fbbf",
       "_fetchFailed": false,
       "malId": 124788,
       "role": "Main",
       "slug": "ritsu-kageyama",
       "description": "Ritsu Kageyama is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)"
+      ]
     },
     {
       "name": "Teruki Hanazawa",
       "title": "The Golden-Topped esper",
       "rank": "Elite Tier / Natural Talent",
       "dangerLevel": 8,
-      "loreBio": "The most naturally talented psychic in the series — handsome, popular, and powerful. Teruki starts as the series' most complete esper before his fight with Mob teaches him that power without understanding is hollow.",
-      "systemBio": "The talent node — Teruki's structural position is what happens when you give someone overwhelming power AND emotional intelligence without the character development to go with it. His arc is realizing that natural talent means nothing without genuine human connection.",
+      "loreBio": "The most naturally talented psychic in the series \u2014 handsome, popular, and powerful. Teruki starts as the series' most complete esper before his fight with Mob teaches him that power without understanding is hollow.",
+      "systemBio": "The talent node \u2014 Teruki's structural position is what happens when you give someone overwhelming power AND emotional intelligence without the character development to go with it. His arc is realizing that natural talent means nothing without genuine human connection.",
       "gradientFrom": "yellow-950",
       "gradientTo": "amber-900",
       "accentColor": "yellow-400",
       "icon": "Star",
-      "signatureMoment": "Being defeated by Mob and learning that his 'confidence' was just arrogance — Teruki's defeat is the beginning of his real character development.",
+      "signatureMoment": "Being defeated by Mob and learning that his 'confidence' was just arrogance \u2014 Teruki's defeat is the beginning of his real character development.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/342630.jpg?s=e822b769c37a513c85ca38024f825f1b",
       "_fetchFailed": false,
       "malId": 124783,
       "role": "Main",
       "slug": "teruki-hanazawa",
       "description": "Teruki Hanazawa is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)"
+      ]
     },
     {
       "name": "Koyama",
       "title": "Body Improvement Club President",
       "rank": "Human Tier / Physical Esper Alternative",
       "dangerLevel": 2,
-      "loreBio": "The president of the Body Improvement Club — a group of physically trained students who serve as Mob's friends and support network. Koyama represents the human potential counter to psychic power.",
-      "systemBio": "The physical node — Koyama's structural position is proof that ordinary humans can face esper-level threats through physical training and courage. The Body Improvement Club is the system's argument that non-psychics are not automatically inferior.",
+      "loreBio": "The president of the Body Improvement Club \u2014 a group of physically trained students who serve as Mob's friends and support network. Koyama represents the human potential counter to psychic power.",
+      "systemBio": "The physical node \u2014 Koyama's structural position is proof that ordinary humans can face esper-level threats through physical training and courage. The Body Improvement Club is the system's argument that non-psychics are not automatically inferior.",
       "gradientFrom": "red-950",
       "gradientTo": "orange-900",
       "accentColor": "red-400",
       "icon": "Dumbbell",
-      "signatureMoment": "Standing up to an esper psycically attacking Mob and saying he's stronger — the moment ordinary human courage matched psychic power.",
+      "signatureMoment": "Standing up to an esper psycically attacking Mob and saying he's stronger \u2014 the moment ordinary human courage matched psychic power.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/311242.jpg?s=73fc085b39e1b6abff6b7b4d2984170c",
       "_fetchFailed": false,
       "malId": 124795,
       "role": "Main",
       "slug": "koyama",
       "description": "Koyama is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)"
+      ]
     },
     {
       "name": "The Claw President (Suzuki)",
@@ -265,19 +286,21 @@
       "rank": "Apex Tier / Psychic Supremacist",
       "dangerLevel": 10,
       "loreBio": "The leader of Claw, an organization of powerful espers who believe psychics should rule non-psychics. The Claw President has the second-highest psychic power after Mob and genuine megalomaniacal ambition.",
-      "systemBio": "The corruption node — Claw President's structural position is the clearest example of the corruption theorem: overwhelming power + zero emotional development = megalomania. He genuinely believes psychics are superior and non-psychics are insects.",
+      "systemBio": "The corruption node \u2014 Claw President's structural position is the clearest example of the corruption theorem: overwhelming power + zero emotional development = megalomania. He genuinely believes psychics are superior and non-psychics are insects.",
       "gradientFrom": "gray-950",
       "gradientTo": "zinc-900",
       "accentColor": "gray-400",
       "icon": "Crown",
-      "signatureMoment": "Fighting Mob and revealing his 'superior esper' philosophy — the clearest articulation of what esper supremacy looks like in practice.",
+      "signatureMoment": "Fighting Mob and revealing his 'superior esper' philosophy \u2014 the clearest articulation of what esper supremacy looks like in practice.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/375717.jpg?s=293b3c4508218e900206f60b419d9378",
       "_fetchFailed": false,
       "malId": 125024,
       "role": "Antagonist",
       "slug": "the-claw-president-(suzuki)",
       "description": "The Claw President (Suzuki) is a Antagonist from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)"
+      ]
     },
     {
       "name": "Tenga Kawajiri",
@@ -285,19 +308,22 @@
       "rank": "Human Tier / Reformed Bully",
       "dangerLevel": 3,
       "loreBio": "A member of Ekubo's cult who represents the reformed bully arc. Tenga was a delinquent who joined the cult because he felt lost, and he eventually becomes one of Mob's genuine supporters.",
-      "systemBio": "The reformed antagonist node — Tenga's structural position represents the possibility of redemption through genuine connection. His journey from cult member to genuine friend shows that people can change.",
+      "systemBio": "The reformed antagonist node \u2014 Tenga's structural position represents the possibility of redemption through genuine connection. His journey from cult member to genuine friend shows that people can change.",
       "gradientFrom": "orange-950",
       "gradientTo": "yellow-900",
       "accentColor": "orange-400",
       "icon": "Heart",
-      "signatureMoment": "Choosing to help Mob instead of Ekubo when the cult turned violent — the moment Tenga chose genuine connection over power.",
+      "signatureMoment": "Choosing to help Mob instead of Ekubo when the cult turned violent \u2014 the moment Tenga chose genuine connection over power.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/373641.jpg?s=f88cac17388774a5442fdc825a22dd5d",
       "_fetchFailed": false,
       "malId": 125026,
       "role": "Main",
       "slug": "tenga-kawajiri",
       "description": "Tenga Kawajiri is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Ekubo (Dimple)",
+        "Mob (Shigeo Kageyama)"
+      ]
     },
     {
       "name": "Sho Suzuki (Telepathy Arc)",
@@ -305,39 +331,43 @@
       "rank": "Mid Tier / Emotional Damage",
       "dangerLevel": 6,
       "loreBio": "A powerful telepathic esper from the telepathy arc. Sho's powers emerged from emotional trauma and he uses them to inflict the same pain on others that he experienced.",
-      "systemBio": "The trauma node — Sho's structural position represents power emerging from emotional damage. His telepathy is a manifestation of unprocessed trauma rather than natural ability.",
+      "systemBio": "The trauma node \u2014 Sho's structural position represents power emerging from emotional damage. His telepathy is a manifestation of unprocessed trauma rather than natural ability.",
       "gradientFrom": "blue-950",
       "gradientTo": "cyan-900",
       "accentColor": "blue-400",
       "icon": "Radio",
-      "signatureMoment": "His telepathic assault on Mob's consciousness — revealing the emotional damage that created his power.",
+      "signatureMoment": "His telepathic assault on Mob's consciousness \u2014 revealing the emotional damage that created his power.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/312031.jpg?s=864c18cc0148f2ac387830983eaaa4c9",
       "_fetchFailed": false,
       "malId": 125027,
       "role": "Antagonist",
       "slug": "sho-suzuki-(telepathy-arc)",
       "description": "Sho Suzuki (Telepathy Arc) is a Antagonist from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)"
+      ]
     },
     {
       "name": "Emi (Mob's Girlfriend)",
       "title": "Mob's Love Interest",
       "rank": "Human Tier / Genuine Connection",
       "dangerLevel": 0,
-      "loreBio": "A girl from Mob's school who has a crush on him. Emi represents Mob's desire for ordinary human connection — a girlfriend, normal relationships, a normal life. Her presence is the counterweight to his overwhelming power.",
-      "systemBio": "The anchor node — Emi's structural position is Mob's emotional tether to normalcy. She is proof that Mob's deepest desire is not power but human connection.",
+      "loreBio": "A girl from Mob's school who has a crush on him. Emi represents Mob's desire for ordinary human connection \u2014 a girlfriend, normal relationships, a normal life. Her presence is the counterweight to his overwhelming power.",
+      "systemBio": "The anchor node \u2014 Emi's structural position is Mob's emotional tether to normalcy. She is proof that Mob's deepest desire is not power but human connection.",
       "gradientFrom": "pink-950",
       "gradientTo": "rose-900",
       "accentColor": "pink-400",
       "icon": "Heart",
-      "signatureMoment": "Her genuine crush on Mob — showing that even someone who doesn't know about his powers is drawn to his authentic self.",
+      "signatureMoment": "Her genuine crush on Mob \u2014 showing that even someone who doesn't know about his powers is drawn to his authentic self.",
       "imageUrl": null,
       "_fetchFailed": true,
       "malId": 125662,
       "role": "Main",
       "slug": "emi-(mobs-girlfriend)",
       "description": "Emi (Mob's Girlfriend) is a Main from Mob Psycho 100.",
-      "relationships": []
+      "relationships": [
+        "Mob (Shigeo Kageyama)"
+      ]
     }
   ],
   "factions": [
@@ -346,16 +376,16 @@
       "description": "Individuals with psychic powers scattered across society. Espers range from powerful (Mob, Teruki) to street-level (Reigen's clients). They exist outside normal social hierarchies because their power gives them an alternative status system.",
       "role": "neutral",
       "icon": "Users",
-      "loreDesc": "The esper community is not formally organized except in crisis. Espers are distributed across society with no institutional structure — their hierarchy is purely based on power level.",
-      "systemDesc": "An informal power aristocracy — esper status is determined by psychic output, creating a natural hierarchy independent of social institutions. This makes espers inherently difficult to organize or govern."
+      "loreDesc": "The esper community is not formally organized except in crisis. Espers are distributed across society with no institutional structure \u2014 their hierarchy is purely based on power level.",
+      "systemDesc": "An informal power aristocracy \u2014 esper status is determined by psychic output, creating a natural hierarchy independent of social institutions. This makes espers inherently difficult to organize or govern."
     },
     {
       "name": "Body Improvement Club",
       "description": "Mob's genuine friend group. A club of physically training students who provide Mob with human connection outside the esper world. They represent the power of ordinary human community.",
       "role": "protagonist",
       "icon": "Dumbbell",
-      "loreDesc": "The Body Improvement Club is the most wholesome faction in anime — a group of friends who train physically and support each other. Their defining trait is that they have no powers but face esper threats anyway.",
-      "systemDesc": "The human community node — the Body Improvement Club is the system's proof that human connection is a valid alternative to psychic power. They are the emotional anchor that keeps Mob from going 100%."
+      "loreDesc": "The Body Improvement Club is the most wholesome faction in anime \u2014 a group of friends who train physically and support each other. Their defining trait is that they have no powers but face esper threats anyway.",
+      "systemDesc": "The human community node \u2014 the Body Improvement Club is the system's proof that human connection is a valid alternative to psychic power. They are the emotional anchor that keeps Mob from going 100%."
     },
     {
       "name": "Claw (Company)",
@@ -363,15 +393,15 @@
       "role": "antagonist",
       "icon": "Building",
       "loreDesc": "Claw is an esper supremacist organization that recruits powerful espers and uses them to achieve political goals. Their ideology is that psychics are the next step in human evolution and non-psychics are inferior.",
-      "systemDesc": "A power-hierarchy ideology — Claw represents the logical endpoint of a society organized purely by psychic output: a genetic aristocracy of espers ruling over non-psychics as inferior beings."
+      "systemDesc": "A power-hierarchy ideology \u2014 Claw represents the logical endpoint of a society organized purely by psychic output: a genetic aristocracy of espers ruling over non-psychics as inferior beings."
     },
     {
       "name": "Spirits and Ghosts",
       "description": "Non-human entities that exist in the spiritual world. Range from harmless to dangerous. Ekubo is the most powerful, but there are many others.",
       "role": "neutral",
       "icon": "Ghost",
-      "loreDesc": "Spirits in Mob Psycho 100 are separate from espers — they are non-human consciousnesses that exist independently of psychic powers. Most are minor threats; Ekubo is the apex.",
-      "systemDesc": "The parallel entity system — spirits represent an entirely separate category of supernatural being that exists alongside espers. They don't follow esper rules and have their own power hierarchy."
+      "loreDesc": "Spirits in Mob Psycho 100 are separate from espers \u2014 they are non-human consciousnesses that exist independently of psychic powers. Most are minor threats; Ekubo is the apex.",
+      "systemDesc": "The parallel entity system \u2014 spirits represent an entirely separate category of supernatural being that exists alongside espers. They don't follow esper rules and have their own power hierarchy."
     },
     {
       "name": "Ekubo's Cult",
@@ -379,7 +409,7 @@
       "role": "neutral",
       "icon": "Users",
       "loreDesc": "Ekubo's cult is a satirical look at how religious movements form around perceived supernatural authority. The members are ordinary people seeking meaning who found it in a powerful spirit's promises.",
-      "systemDesc": "The manipulation network — the cult represents the system's dark side: spirits can manipulate humans through perceived authority, and humans are vulnerable to that manipulation."
+      "systemDesc": "The manipulation network \u2014 the cult represents the system's dark side: spirits can manipulate humans through perceived authority, and humans are vulnerable to that manipulation."
     }
   ],
   "relationships": [
@@ -388,7 +418,7 @@
       "target": "Reigen Arataka",
       "type": "mentor",
       "weight": 10,
-      "description": "Reigen is Mob's mentor in life skills and emotional intelligence — the person who teaches him more about being human than any esper"
+      "description": "Reigen is Mob's mentor in life skills and emotional intelligence \u2014 the person who teaches him more about being human than any esper"
     },
     {
       "source": "Mob (Shigeo Kageyama)",
@@ -402,56 +432,56 @@
       "target": "Ritsu Kageyama",
       "type": "dependent",
       "weight": 9,
-      "description": "Mob's protective feelings toward his brother — Ritsu's resentment of Mob's power creates tension that Mob desperately wants to resolve"
+      "description": "Mob's protective feelings toward his brother \u2014 Ritsu's resentment of Mob's power creates tension that Mob desperately wants to resolve"
     },
     {
       "source": "Mob (Shigeo Kageyama)",
       "target": "Teruki Hanazawa",
       "type": "rival",
       "weight": 8,
-      "description": "Teruki starts as an arrogant powerful esper who must learn from Mob's example — the rival who forces Mob's growth through opposition"
+      "description": "Teruki starts as an arrogant powerful esper who must learn from Mob's example \u2014 the rival who forces Mob's growth through opposition"
     },
     {
       "source": "Mob (Shigeo Kageyama)",
       "target": "Koyama",
       "type": "ally",
       "weight": 8,
-      "description": "The Body Improvement Club is Mob's genuine friend group — the human community that prevents his psychic power from consuming him"
+      "description": "The Body Improvement Club is Mob's genuine friend group \u2014 the human community that prevents his psychic power from consuming him"
     },
     {
       "source": "Reigen Arataka",
       "target": "Ekubo (Dimple)",
       "type": "counter",
       "weight": 7,
-      "description": "Reigen has no powers but his psychological insight works against spirits and espers alike — Ekubo fears Reigen's ability to see through manipulation"
+      "description": "Reigen has no powers but his psychological insight works against spirits and espers alike \u2014 Ekubo fears Reigen's ability to see through manipulation"
     },
     {
       "source": "The Claw President (Suzuki)",
       "target": "Mob (Shigeo Kageyama)",
       "type": "enemy",
       "weight": 10,
-      "description": "The esper supremacist vs. the esper who doesn't want power — their conflict is ideological as much as physical"
+      "description": "The esper supremacist vs. the esper who doesn't want power \u2014 their conflict is ideological as much as physical"
     },
     {
       "source": "Tenga Kawajiri",
       "target": "Ekubo (Dimple)",
       "type": "ally",
       "weight": 6,
-      "description": "Tenga followed Ekubo into the cult but chose Mob when it mattered — the reformed follower who became genuine"
+      "description": "Tenga followed Ekubo into the cult but chose Mob when it mattered \u2014 the reformed follower who became genuine"
     },
     {
       "source": "Mob (Shigeo Kageyama)",
       "target": "Emi (Mob's Girlfriend)",
       "type": "dependent",
       "weight": 7,
-      "description": "Mob's crush represents his desire for normal human connection — the girlfriend he wants to have before the esper identity consumes him"
+      "description": "Mob's crush represents his desire for normal human connection \u2014 the girlfriend he wants to have before the esper identity consumes him"
     },
     {
       "source": "Sho Suzuki (Telepathy Arc)",
       "target": "Mob (Shigeo Kageyama)",
       "type": "counter",
       "weight": 7,
-      "description": "Telepathy vs. raw psychic power — Sho's emotional attack forces Mob to confront his own suppressed feelings"
+      "description": "Telepathy vs. raw psychic power \u2014 Sho's emotional attack forces Mob to confront his own suppressed feelings"
     }
   ],
   "rankings": {
@@ -503,35 +533,35 @@
           "Body Improvement Club",
           "Emi"
         ],
-        "description": "No psychic powers but high emotional intelligence — effective against espers through other means"
+        "description": "No psychic powers but high emotional intelligence \u2014 effective against espers through other means"
       }
     ]
   },
   "systemQuestions": [
     {
       "question": "Why does Mob suppress his powers?",
-      "answer": "Mob suppresses his powers to avoid hurting people he cares about. His 100% emotional release is involuntary — triggered by accumulated emotional pressure, not choice. The suppression is his attempt to live normally despite being a walking apocalypse.",
+      "answer": "Mob suppresses his powers to avoid hurting people he cares about. His 100% emotional release is involuntary \u2014 triggered by accumulated emotional pressure, not choice. The suppression is his attempt to live normally despite being a walking apocalypse.",
       "tabIndex": 1,
       "sectionId": "power",
       "tabLabel": "Power System"
     },
     {
       "question": "Why does Reigen have no psychic powers but seem to sense everything?",
-      "answer": "Reigen has zero psychic ability — his 'psychic sensing' is actually extremely accurate emotional and psychological observation. He understands people at a level that appears supernatural because most people don't actually listen to each other.",
+      "answer": "Reigen has zero psychic ability \u2014 his 'psychic sensing' is actually extremely accurate emotional and psychological observation. He understands people at a level that appears supernatural because most people don't actually listen to each other.",
       "tabIndex": 1,
       "sectionId": "power",
       "tabLabel": "Power System"
     },
     {
       "question": "What makes the Body Improvement Club effective against espers?",
-      "answer": "The Body Improvement Club's effectiveness is not physical — they can't actually fight espers. Their effectiveness is emotional: they provide Mob with genuine human connection that prevents his emotional pressure from building to the 100% release threshold.",
+      "answer": "The Body Improvement Club's effectiveness is not physical \u2014 they can't actually fight espers. Their effectiveness is emotional: they provide Mob with genuine human connection that prevents his emotional pressure from building to the 100% release threshold.",
       "tabIndex": 1,
       "sectionId": "power",
       "tabLabel": "Power System"
     },
     {
       "question": "Why does every esper antagonist have emotional damage?",
-      "answer": "The series' core argument: power without emotional development creates villains. The Claw President, Sho Suzuki, Mogami — every esper who goes bad has unprocessed emotional trauma. The system is saying that psychic power attracts people with unresolved psychological wounds.",
+      "answer": "The series' core argument: power without emotional development creates villains. The Claw President, Sho Suzuki, Mogami \u2014 every esper who goes bad has unprocessed emotional trauma. The system is saying that psychic power attracts people with unresolved psychological wounds.",
       "tabIndex": 2,
       "sectionId": "rules",
       "tabLabel": "Rules"
@@ -541,54 +571,54 @@
     {
       "name": "Mob's Parents Discover His Powers",
       "trigger": "Mob's psychic powers are discovered by his parents at a young age",
-      "consequence": "Mob begins suppressing his powers and emotions to avoid frightening his family — the emotional suppression technique that defines his entire character",
+      "consequence": "Mob begins suppressing his powers and emotions to avoid frightening his family \u2014 the emotional suppression technique that defines his entire character",
       "timelinePosition": "Pre-Narrative",
-      "loreDesc": "The formative trauma that creates Mob's coping mechanism — his family's fear of his power forces him to develop emotional suppression as a survival strategy.",
-      "systemDesc": "A family-rejection event — the discovery that his own family fears him creates the emotional suppression pattern that defines Mob's power management technique."
+      "loreDesc": "The formative trauma that creates Mob's coping mechanism \u2014 his family's fear of his power forces him to develop emotional suppression as a survival strategy.",
+      "systemDesc": "A family-rejection event \u2014 the discovery that his own family fears him creates the emotional suppression pattern that defines Mob's power management technique."
     },
     {
       "name": "Mob Meets Reigen",
       "trigger": "Mob takes a part-time job at Reigen's Spirit Consultation office",
-      "consequence": "Mob finds a mentor who accepts him without fearing his power — Reigen becomes the emotional intelligence guide Mob's family couldn't be",
+      "consequence": "Mob finds a mentor who accepts him without fearing his power \u2014 Reigen becomes the emotional intelligence guide Mob's family couldn't be",
       "timelinePosition": "Early Arc",
-      "loreDesc": "The mentorship pivot — Reigen's acceptance of Mob despite knowing about his power creates the first relationship where Mob doesn't have to suppress himself completely.",
-      "systemDesc": "A mentorship introduction event — finding a guide who can provide emotional intelligence that Mob's own family couldn't creates the conditions for Mob's eventual growth."
+      "loreDesc": "The mentorship pivot \u2014 Reigen's acceptance of Mob despite knowing about his power creates the first relationship where Mob doesn't have to suppress himself completely.",
+      "systemDesc": "A mentorship introduction event \u2014 finding a guide who can provide emotional intelligence that Mob's own family couldn't creates the conditions for Mob's eventual growth."
     },
     {
       "name": "Teruki's Defeat",
       "trigger": "Teruki Hanazawa challenges Mob and is defeated without Mob going 100%",
-      "consequence": "Teruki learns that natural talent is meaningless without genuine human connection — his entire worldview is challenged",
+      "consequence": "Teruki learns that natural talent is meaningless without genuine human connection \u2014 his entire worldview is challenged",
       "timelinePosition": "Early Arc",
-      "loreDesc": "The talent questioning — Teruki's defeat forces him to confront that his entire identity was built on power comparisons, not genuine self-worth.",
-      "systemDesc": "A talent-vs-character revelation — the arrogant natural talent is defeated by the suppressed esper who has genuine human connections. This proves the corruption theorem: Teruki's power was hollow because it was all he had."
+      "loreDesc": "The talent questioning \u2014 Teruki's defeat forces him to confront that his entire identity was built on power comparisons, not genuine self-worth.",
+      "systemDesc": "A talent-vs-character revelation \u2014 the arrogant natural talent is defeated by the suppressed esper who has genuine human connections. This proves the corruption theorem: Teruki's power was hollow because it was all he had."
     },
     {
       "name": "Mob Chooses Connection Over Power",
       "trigger": "Mob is about to go 100% against Koyama; the Body Improvement Club reminds him of his friendship",
-      "consequence": "Mob chooses not to release — the first time he consciously controls the 100% threshold through emotional choice rather than suppression",
+      "consequence": "Mob chooses not to release \u2014 the first time he consciously controls the 100% threshold through emotional choice rather than suppression",
       "timelinePosition": "Mid Arc",
-      "loreDesc": "The character development pivot — Mob's choice to reject apocalypse in favor of friendship is the moment his emotional development exceeds his emotional suppression.",
-      "systemDesc": "A consciousness breakthrough — Mob's first voluntary control over the 100% release through genuine emotional choice rather than forced suppression."
+      "loreDesc": "The character development pivot \u2014 Mob's choice to reject apocalypse in favor of friendship is the moment his emotional development exceeds his emotional suppression.",
+      "systemDesc": "A consciousness breakthrough \u2014 Mob's first voluntary control over the 100% release through genuine emotional choice rather than forced suppression."
     }
   ],
   "anomalies": [
     {
       "name": "Mob's 100% Release is Involuntary",
-      "ruleViolated": "Power control should be voluntary — espers should be able to choose their output level",
-      "loreDesc": "Mob's 100% emotional release is involuntary — triggered by emotional overload, not choice. Even after character development, he cannot voluntarily access 100%. This makes his most powerful state a system failure rather than a technique.",
-      "systemDesc": "An involuntary release gate — Mob's nuclear option is a malfunction, not a feature. The system has no voluntary access to the highest power state."
+      "ruleViolated": "Power control should be voluntary \u2014 espers should be able to choose their output level",
+      "loreDesc": "Mob's 100% emotional release is involuntary \u2014 triggered by emotional overload, not choice. Even after character development, he cannot voluntarily access 100%. This makes his most powerful state a system failure rather than a technique.",
+      "systemDesc": "An involuntary release gate \u2014 Mob's nuclear option is a malfunction, not a feature. The system has no voluntary access to the highest power state."
     },
     {
       "name": "Reigen Has No Powers But Is Effective",
       "ruleViolated": "Only psychics can deal with supernatural threats",
       "loreDesc": "Reigen has zero psychic ability but deals with spirits, espers, and supernatural threats effectively through psychological insight, physical courage, and manipulation of emotional states.",
-      "systemDesc": "A non-esper effectiveness anomaly — Reigen's existence proves that human intelligence at its best can match supernatural power in practical terms."
+      "systemDesc": "A non-esper effectiveness anomaly \u2014 Reigen's existence proves that human intelligence at its best can match supernatural power in practical terms."
     },
     {
       "name": "Body Improvement Matches esper",
       "ruleViolated": "Physical training cannot match supernatural powers",
       "loreDesc": "The Body Improvement Club can physically stand up to esper-level threats through sheer physical training and courage. Koyama standing firm against psychic attack is physically impossible in the power system but emotionally true.",
-      "systemDesc": "A human-potential anomaly — ordinary humans achieving esper-level resistance through physical training and psychological resolve."
+      "systemDesc": "A human-potential anomaly \u2014 ordinary humans achieving esper-level resistance through physical training and psychological resolve."
     }
   ],
   "counterplay": [
@@ -596,37 +626,37 @@
       "attacker": " esper Psyche",
       "defender": "Human Emotional Intelligence",
       "mechanic": "Reigen's psychological insight works against espers because emotional vulnerabilities are the source of esper power. Understanding someone's emotional state lets you predict and counter their psychic output.",
-      "loreDesc": "The human intelligence counter — Reigen defeats espers by understanding their emotional triggers rather than countering their psychic output."
+      "loreDesc": "The human intelligence counter \u2014 Reigen defeats espers by understanding their emotional triggers rather than countering their psychic output."
     },
     {
       "attacker": " esper Power",
       "defender": " esper Emotional Development",
       "mechanic": "More emotionally developed espers can remain calm under provocation, preventing the emotional pressure build-up that triggers 100% release.",
-      "loreDesc": "The emotional development counter — espers with genuine emotional intelligence are harder to trigger because they can process emotional events without pressure accumulation."
+      "loreDesc": "The emotional development counter \u2014 espers with genuine emotional intelligence are harder to trigger because they can process emotional events without pressure accumulation."
     },
     {
       "attacker": " esper Power",
       "defender": "Body Improvement Physical Training",
       "mechanic": "Physical training builds psychological resilience that partially resists psychic intimidation. The Body Improvement Club's courage creates a shield against esper psychological attacks.",
-      "loreDesc": "The physical resilience counter — ordinary humans can resist esper-level psychological pressure through physical conditioning and community support."
+      "loreDesc": "The physical resilience counter \u2014 ordinary humans can resist esper-level psychological pressure through physical conditioning and community support."
     },
     {
       "attacker": "Spirit Possession",
       "defender": " esper Spiritual Affinity",
       "mechanic": "Espers with high spiritual affinity can perceive and resist spirit possession. Mob's high spiritual affinity lets him see through Ekubo's initial manipulation.",
-      "loreDesc": "The spiritual perception counter — espers can resist spirit manipulation because they can perceive the spiritual entities clearly."
+      "loreDesc": "The spiritual perception counter \u2014 espers can resist spirit manipulation because they can perceive the spiritual entities clearly."
     },
     {
       "attacker": " esper Suppression",
       "defender": "Genuine Human Connection",
-      "mechanic": "When Mob is reminded of his genuine friendships, his emotional pressure drops, preventing 100% release. Friendship is the system-level counter to psychic暴走.",
-      "loreDesc": "The connection paradox counter — genuine human connection prevents the emotional pressure accumulation that triggers the 100% release state."
+      "mechanic": "When Mob is reminded of his genuine friendships, his emotional pressure drops, preventing 100% release. Friendship is the system-level counter to psychic\u66b4\u8d70.",
+      "loreDesc": "The connection paradox counter \u2014 genuine human connection prevents the emotional pressure accumulation that triggers the 100% release state."
     },
     {
       "attacker": " esper Telepathy",
       "defender": " esper Emotional Suppression",
-      "mechanic": "Mob's emotional suppression technique prevents telepathic reading — Sho's telepathy works by reading emotional states, and if there are no emotions to read, there's nothing to access.",
-      "loreDesc": "The blank-slate defense — Mob's deliberate emotional suppression creates a telepathic blank that cannot be read."
+      "mechanic": "Mob's emotional suppression technique prevents telepathic reading \u2014 Sho's telepathy works by reading emotional states, and if there are no emotions to read, there's nothing to access.",
+      "loreDesc": "The blank-slate defense \u2014 Mob's deliberate emotional suppression creates a telepathic blank that cannot be read."
     }
   ],
   "tags": [

@@ -1,6 +1,6 @@
 {
   "anime": "Code Geass: Hangyaku no Lelouch",
-  "tagline": "Code Geass — A resistance leader with mind-control Geass wages war against an empire.",
+  "tagline": "Code Geass \u2014 A resistance leader with mind-control Geass wages war against an empire.",
   "malId": 1575,
   "themeColors": {
     "primary": "#7c3aed",
@@ -17,7 +17,7 @@
   "visualizationReason": "Code Geass is a control-network story: Geass permissions, command chains, propaganda legitimacy, and betrayal edges continuously rewire who can issue orders and who obeys; node-graph most accurately surfaces that shifting authority topology.",
   "headerFlavor": {
     "loreQuote": "The only ones who should kill are those prepared to be killed.",
-    "sysWarning": "// [COMMAND_OVERRIDE]: CONSENT LAYER BYPASSED — AUTHORITY GRAPH MUTATING IN REAL TIME",
+    "sysWarning": "// [COMMAND_OVERRIDE]: CONSENT LAYER BYPASSED \u2014 AUTHORITY GRAPH MUTATING IN REAL TIME",
     "sysWarningColor": "purple"
   },
   "backgroundMotif": "jagged",
@@ -73,17 +73,18 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/406163.jpg?s=e69a97cba35bb909a56523e14212524e",
       "malId": 417,
       "slug": "lelouch-lamperouge",
-      "description": "Lelouch Lamperouge is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Lelouch Lamperouge is an exiled Britannian prince who weaponizes Geass, theatrics, and statecraft to wage a global insurgency against the empire in Code Geass.",
       "role": "Main",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Kiseki no Birthday"
+        "C.C.",
+        "Suzaku Kururugi",
+        "Nunnally Lamperouge",
+        "Stadtfeld, Kallen",
+        "Charles zi Britannia",
+        "Schneizel el Britannia",
+        "Kaname Ohgi",
+        "Jeremiah Gottwald",
+        "Euphemia li Britannia"
       ]
     },
     {
@@ -101,17 +102,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/31564.jpg?s=cb64797d0f0647df7c2e85ac3331d3c7",
       "malId": 559,
       "slug": "suzaku-kururugi",
-      "description": "Suzaku Kururugi is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Suzaku Kururugi is a knight and Britannian ace pilot who becomes both Lelouch's executor and the living mask that stabilizes the postwar order in Code Geass.",
       "role": "Main",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Kiseki no Birthday"
+        "Lelouch Lamperouge",
+        "Euphemia li Britannia",
+        "Schneizel el Britannia",
+        "Lloyd Asplund",
+        "Cornelia li Britannia"
       ]
     },
     {
@@ -129,17 +127,11 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/33815.jpg?s=b6688e8e5cd4e025e35f617da7a802d5",
       "malId": 1111,
       "slug": "c.c.",
-      "description": "C.C. is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "C.C. is an immortal Geass code-bearer who serves as a strategic asset and emotional anchor to Lelouch, granting him the power of absolute obedience in Code Geass.",
       "role": "Main",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Kiseki no Birthday",
-        "Code Geass: Hangyaku no Lelouch R2 Omake Flash"
+        "Lelouch Lamperouge",
+        "Charles zi Britannia"
       ]
     },
     {
@@ -157,22 +149,16 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/603839.jpg?s=5ed4bab52b91194208d024d7c2743d4a",
       "malId": 558,
       "slug": "stadtfeld,-kallen",
-      "description": "Stadtfeld, Kallen is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Stadtfeld, Kallen is an elite Knightmare pilot with a dual Japanese-Britannian identity who fights as one of Zero's most trusted operatives in Code Geass.",
       "role": "Main",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Kiseki no Birthday"
+        "Lelouch Lamperouge",
+        "Cornelia li Britannia"
       ]
     },
     {
       "name": "Charles zi Britannia",
-      "title": "Emperor / Ragnarök Architect",
+      "title": "Emperor / Ragnar\u00f6k Architect",
       "rank": "Holy Britannian Sovereign",
       "dangerLevel": 10,
       "loreBio": "Britannia's emperor preaches strength while secretly attempting to erase lies and grief by merging all consciousness.",
@@ -181,21 +167,18 @@
       "gradientTo": "red-950",
       "accentColor": "red-400",
       "icon": "Lock",
-      "signatureMoment": "Activates Ragnarök Connection in the Thought Elevator to hard-overwrite human individuality.",
+      "signatureMoment": "Activates Ragnar\u00f6k Connection in the Thought Elevator to hard-overwrite human individuality.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/146911.jpg?s=a27fde62430b36c24f87535cb5d1e129",
       "malId": 5610,
       "slug": "charles-zi-britannia",
-      "description": "Charles zi Britannia is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Charles zi Britannia is the tyrannical Emperor of Britannia who secretly attempts to merge all human consciousness through the Ragnar\u00f6k Connection in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Nunnally in Wonderland",
-        "Code Geass: Soubou no Oz Picture Drama",
-        "Code Geass: Fukkatsu no Lelouch"
+        "Lelouch Lamperouge",
+        "C.C.",
+        "Cornelia li Britannia",
+        "Schneizel el Britannia",
+        "Nunnally Lamperouge"
       ]
     },
     {
@@ -213,17 +196,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/31513.jpg?s=e032a87439d7a7db6043be0b1396c16c",
       "malId": 1710,
       "slug": "schneizel-el-britannia",
-      "description": "Schneizel el Britannia is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Schneizel el Britannia is the brilliant second prince of Britannia who seeks peace through total fear using Damocles and F.L.E.I.J.A. in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Nunnally in Wonderland",
-        "Code Geass: Fukkatsu no Lelouch",
-        "Code Geass: Hangyaku no Lelouch I - Koudou"
+        "Lelouch Lamperouge",
+        "Suzaku Kururugi",
+        "Charles zi Britannia",
+        "Nunnally Lamperouge"
       ]
     },
     {
@@ -241,17 +220,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/31536.jpg?s=c07f02c20e2d6ff3ea83c65c98724ba0",
       "malId": 1110,
       "slug": "nunnally-lamperouge",
-      "description": "Nunnally Lamperouge is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Nunnally Lamperouge is Lelouch's physically vulnerable sister who becomes a powerful symbol of legitimacy that both Zero and Schneizel seek to claim in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Kiseki no Birthday"
+        "Lelouch Lamperouge",
+        "Charles zi Britannia",
+        "Schneizel el Britannia"
       ]
     },
     {
@@ -269,17 +243,11 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/107028.jpg?s=41c0866056632523d8cc74590862b07d",
       "malId": 1113,
       "slug": "jeremiah-gottwald",
-      "description": "Jeremiah Gottwald is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Jeremiah Gottwald is a disgraced Britannian officer rebuilt into a cybernetic loyalist who becomes one of Lelouch's most reliable guardians in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Nunnally in Wonderland"
+        "Lelouch Lamperouge",
+        "Cornelia li Britannia"
       ]
     },
     {
@@ -297,17 +265,14 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/33793.jpg?s=0fe272f3ed54c40d352bf6866489712d",
       "malId": 797,
       "slug": "cornelia-li-britannia",
-      "description": "Cornelia li Britannia is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Cornelia li Britannia is a ruthless imperial princess-general who commands Britannian forces in Area 11 and represents the empire's military supremacy in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Nunnally in Wonderland",
-        "Code Geass: Fukkatsu no Lelouch"
+        "Suzaku Kururugi",
+        "Charles zi Britannia",
+        "Jeremiah Gottwald",
+        "Stadtfeld, Kallen",
+        "Euphemia li Britannia"
       ]
     },
     {
@@ -325,16 +290,12 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/83313.jpg?s=a0895a29c7d622a43c0504c6bd04c7cb",
       "malId": 1114,
       "slug": "euphemia-li-britannia",
-      "description": "Euphemia li Britannia is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Euphemia li Britannia is a sincere reformist princess whose Special Administrative Zone plan briefly opens a path to peace before tragedy strikes in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch - Nunnally in Wonderland",
-        "Code Geass: Hangyaku no Lelouch I - Koudou",
-        "Code Geass: Hangyaku no Lelouch II - Handou"
+        "Suzaku Kururugi",
+        "Lelouch Lamperouge",
+        "Cornelia li Britannia"
       ]
     },
     {
@@ -352,17 +313,10 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/83148.jpg?s=a3da42512b8d125a30e21c1069950449",
       "malId": 1130,
       "slug": "lloyd-asplund",
-      "description": "Lloyd Asplund is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Lloyd Asplund is an amoral Britannian R&D scientist who drives Knightmare frame innovation with little regard for ideological consequences in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Picture Drama",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Picture Drama",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Nunnally in Wonderland"
+        "Suzaku Kururugi"
       ]
     },
     {
@@ -384,17 +338,11 @@
       ],
       "malId": 1115,
       "slug": "kaname-ohgi",
-      "description": "Kaname Ohgi is a  from Code Geass: Hangyaku no Lelouch.",
+      "description": "Kaname Ohgi is a founding member of the Black Knights whose crisis of trust during the rebellion helps topple Lelouch's command structure in Code Geass.",
       "role": "Supporting",
       "relationships": [
-        "Code Geass: Hangyaku no Lelouch",
-        "Code Geass: Hangyaku no Lelouch Recaps",
-        "Code Geass: Hangyaku no Lelouch R2",
-        "Code Geass: Hangyaku no Lelouch Special Edition - Black Rebellion",
-        "Code Geass: Hangyaku no Lelouch R2 Special Edition - Zero Requiem",
-        "Code Geass: Hangyaku no Lelouch - Nunnally in Wonderland",
-        "Code Geass: Fukkatsu no Lelouch",
-        "Code Geass: Hangyaku no Lelouch I - Koudou"
+        "Lelouch Lamperouge",
+        "Stadtfeld, Kallen"
       ]
     }
   ],
@@ -611,7 +559,7 @@
     },
     {
       "name": "Metaphysical Unity Cannot Be Forced",
-      "subtitle": "Ragnarök proposes ending pain by erasing individual boundaries.",
+      "subtitle": "Ragnar\u00f6k proposes ending pain by erasing individual boundaries.",
       "loreConsequence": "Erasing loneliness also erases choice, grief, love, and responsibility.",
       "systemEquivalent": "Backend consciousness merge deletes agent diversity and system resilience.",
       "severity": "fatal",
@@ -636,7 +584,7 @@
       "systemDesc": "Operator-side failure transforms tactical exploit into civilization-scale legitimacy collapse."
     },
     {
-      "name": "Ragnarök Connection Attempt",
+      "name": "Ragnar\u00f6k Connection Attempt",
       "ruleViolated": "Individual Agency",
       "loreDesc": "Charles and Marianne attempt to merge all consciousness in C's World and erase private selves.",
       "systemDesc": "Forced backend unification seeks to remove conflict by removing subject-level variance."
@@ -692,7 +640,7 @@
       "loreDesc": "Visible imperial cruelty increases rebel conversion and weakens compliance."
     },
     {
-      "attacker": "Ragnarök consciousness merge",
+      "attacker": "Ragnar\u00f6k consciousness merge",
       "defender": "Lelouch/C.C. rejection of homogenization",
       "mechanic": "Metaphysical forced unity vs agency-preservation intervention",
       "loreDesc": "Plural agency survives by destroying overwrite infrastructure."
@@ -750,7 +698,7 @@
       "systemDesc": "Information-integrity failure fragments high-centrality rebel graph."
     },
     {
-      "name": "Ragnarök Connection destroyed",
+      "name": "Ragnar\u00f6k Connection destroyed",
       "trigger": "Lelouch and allies confront Charles in Thought Elevator",
       "consequence": "Forced consciousness merge is prevented; individual agency remains in-system.",
       "timelinePosition": "Final Arc",
@@ -797,7 +745,7 @@
   },
   "aiInsights": {
     "casual": "Code Geass looks like a mecha rebellion, but the real engine is control. Lelouch doesn't just win fights; he hacks command itself through Geass, propaganda, and political theater. Every major shift comes from changing who people obey: emperors, symbols, superweapons, or a masked revolutionary. The universe feels unstable because military power, public legitimacy, and supernatural coercion are always competing for the same steering wheel.",
-    "deep": "The universe is a layered authority architecture with three competing stabilization models: imperial hierarchy (Britannia), coercive stasis (Schneizel's Damocles), and sacrificial legitimacy reset (Zero Requiem). Geass acts as a localized consent-bypass exploit that can override individual agency, while Knightmare and sakuradite systems determine hard-force throughput. However, durable governance is decided in the legitimacy layer: symbols, broadcasts, and perceived justice. The decisive mechanic is not raw destruction but control-graph rewiring—who can issue commands, who is trusted to enforce them, and how quickly those trust edges can be collapsed or rebuilt after anomalies like Euphemia's massacre or F.L.E.I.J.A. strikes."
+    "deep": "The universe is a layered authority architecture with three competing stabilization models: imperial hierarchy (Britannia), coercive stasis (Schneizel's Damocles), and sacrificial legitimacy reset (Zero Requiem). Geass acts as a localized consent-bypass exploit that can override individual agency, while Knightmare and sakuradite systems determine hard-force throughput. However, durable governance is decided in the legitimacy layer: symbols, broadcasts, and perceived justice. The decisive mechanic is not raw destruction but control-graph rewiring\u2014who can issue commands, who is trusted to enforce them, and how quickly those trust edges can be collapsed or rebuilt after anomalies like Euphemia's massacre or F.L.E.I.J.A. strikes."
   },
   "animeImageUrl": "https://myanimelist.net/images/anime/1032/135088l.jpg",
   "systemQuestions": [
@@ -840,8 +788,8 @@
   "hero": {
     "systemType": "relational",
     "microHook": "Track control edges before reading motives.",
-    "thesis": "Code Geass is a control-network story: Geass permissions, command chains, propaganda legitimacy, and betrayal edges continuously rewire who…",
+    "thesis": "Code Geass is a control-network story: Geass permissions, command chains, propaganda legitimacy, and betrayal edges continuously rewire who\u2026",
     "primarySystemType": "entity_db"
   },
-  "introductionSummary": "Code Geass plays out as a control-war between an occupying empire, a masked resistance cell, and one teenager who can issue absolute commands — except every order reshapes the political graph and creates new dependency edges he didn't intend. Lelouch's Geass permissions and the Knightmare frame technology continuously rewire who can give orders and who must obey. The node-graph renderer exposes what the anime's political intrigue hinges on: authority isn't seized once, it's maintained under constant renegotiation."
+  "introductionSummary": "Code Geass plays out as a control-war between an occupying empire, a masked resistance cell, and one teenager who can issue absolute commands \u2014 except every order reshapes the political graph and creates new dependency edges he didn't intend. Lelouch's Geass permissions and the Knightmare frame technology continuously rewire who can give orders and who must obey. The node-graph renderer exposes what the anime's political intrigue hinges on: authority isn't seized once, it's maintained under constant renegotiation."
 }
