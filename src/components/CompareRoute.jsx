@@ -1,10 +1,10 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug } from '../data/index.js'
 import SeoHead from './SeoHead'
 import { getClassificationLabel } from '../utils/getClassificationLabel'
 import { SITE_NAME, SITE_URL } from '../utils/seo'
-import { ArrowLeft, Scale, Zap, Users, Shield, GitBranch, ArrowRight } from 'lucide-react'
+import { ArrowLeft, Scale, Zap, Users, Shield, GitBranch, ArrowRight, ArrowUpDown, Share2, Check } from 'lucide-react'
 import './CompareRoute.css'
 
 function getCompareStats(left, right) {
@@ -43,13 +43,127 @@ function getCompareStats(left, right) {
   ]
 }
 
+// Skeleton loaders matching page layout
+function Skeleton({ className = '' }) {
+  return (
+    <div
+      className={`animate-pulse rounded bg-white/[0.04] ${className}`}
+      aria-hidden="true"
+    />
+  )
+}
+
+function SkeletonTableBlock() {
+  const rows = [1, 2, 3, 4]
+  return (
+    <div className="rounded-2xl overflow-hidden animate-compare-slide-up">
+      <div className="flex items-center gap-3 px-5 py-4 bg-black/20 border-b border-white/10">
+        <Skeleton className="w-8 h-8 rounded-lg" />
+        <div className="space-y-1.5">
+          <Skeleton className="h-2.5 w-16" />
+          <Skeleton className="h-1.5 w-10" />
+        </div>
+      </div>
+      <div className="px-5 py-3 space-y-0">
+        {rows.map((i) => (
+          <div key={i} className="flex items-center gap-4 py-3 border-b border-white/[0.04] last:border-0">
+            <Skeleton className="h-2 w-24 shrink-0" />
+            <Skeleton className="h-2 flex-1" />
+            <Skeleton className="h-2 w-20 shrink-0" />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function SkeletonSelectorBlock() {
+  return (
+    <div className="rounded-2xl p-5 animate-compare-slide-up">
+      <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-3">
+          <Skeleton className="h-2 w-20" />
+          <Skeleton className="h-11 w-full rounded-xl" />
+        </div>
+        <div className="space-y-3">
+          <Skeleton className="h-2 w-20" />
+          <Skeleton className="h-11 w-full rounded-xl" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Swap button
+function SwapButton({ onSwap, disabled }) {
+  return (
+    <button
+      onClick={onSwap}
+      disabled={disabled}
+      aria-label="Swap universes"
+      title="Swap universes (S)"
+      className={`flex items-center justify-center w-10 h-10 rounded-xl border transition-all duration-200 cursor-pointer ${
+        disabled
+          ? 'border-white/5 bg-black/20 text-gray-700 cursor-not-allowed'
+          : 'border-white/10 bg-black/40 text-gray-500 hover:text-cyan-400 hover:border-cyan-400/30 hover:bg-cyan-400/10 active:scale-95'
+      }`}
+    >
+      <ArrowUpDown className="w-4 h-4" />
+    </button>
+  )
+}
+
+// Share button
+function ShareButton({ leftId, rightId }) {
+  const [copied, setCopied] = useState(false)
+
+  const handleShare = async () => {
+    const url = `${window.location.origin}/compare?left=${leftId}&right=${rightId}`
+    try {
+      await navigator.clipboard.writeText(url)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Fallback for environments without clipboard API
+      window.history.replaceState({}, '', `/compare?left=${leftId}&right=${rightId}`)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
+
+  return (
+    <button
+      onClick={handleShare}
+      aria-label="Share this comparison"
+      title="Copy comparison link"
+      className={`flex items-center gap-1.5 h-9 px-3 rounded-xl border text-[10px] tracking-[0.08em] uppercase font-bold transition-all duration-200 cursor-pointer ${
+        copied
+          ? 'border-green-400/40 bg-green-400/10 text-green-400'
+          : 'border-white/10 bg-black/40 text-gray-500 hover:text-cyan-400 hover:border-cyan-400/30 hover:bg-cyan-400/10 active:scale-95'
+      }`}
+    >
+      {copied ? (
+        <>
+          <Check className="w-3 h-3" />
+          Copied
+        </>
+      ) : (
+        <>
+          <Share2 className="w-3 h-3" />
+          Share
+        </>
+      )}
+    </button>
+  )
+}
+
 function CompareRow({ label, left, right, index }) {
   const leftVal = String(left ?? '—')
   const rightVal = String(right ?? '—')
   const same = leftVal === rightVal
   return (
     <div
-      className="compare-table-row flex flex-col sm:flex-row sm:items-center"
+      className="compare-table-row flex flex-col sm:flex-row sm:items-center hover:bg-cyan-400/[0.03] transition-colors duration-150 cursor-default"
       style={{ animationDelay: `${index * 40}ms` }}
     >
       <div className="compare-label px-4 py-3 w-full sm:w-40 shrink-0 bg-black/30">{label}</div>
@@ -73,11 +187,28 @@ export default function CompareRoute() {
   const [leftData, setLeftData] = useState(null)
   const [rightData, setRightData] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [dataVisible, setDataVisible] = useState(false)
+  const [focusedSelect, setFocusedSelect] = useState(null) // 'left' | 'right' | null
+  const leftSelectRef = useRef(null)
+  const rightSelectRef = useRef(null)
+
+  // Update page title when universes change (URL deep-linking)
+  useEffect(() => {
+    if (left?.anime && right?.anime) {
+      document.title = `${left.anime} vs ${right.anime} — System Comparison | ${SITE_NAME}`
+    } else if (left?.anime || right?.anime) {
+      const selected = left?.anime || right?.anime
+      document.title = `${selected} — System Comparison | ${SITE_NAME}`
+    } else {
+      document.title = `Universe Comparison | ${SITE_NAME}`
+    }
+  }, [left?.anime, right?.anime])
 
   // Load actual universe core payloads (not just catalog metadata)
   useEffect(() => {
     if (!leftId && !rightId) return
     setLoading(true)
+    setDataVisible(false)
     Promise.all([
       leftId ? loadUniverseBySlug(leftId) : Promise.resolve(null),
       rightId ? loadUniverseBySlug(rightId) : Promise.resolve(null),
@@ -85,12 +216,75 @@ export default function CompareRoute() {
       setLeftData(l)
       setRightData(r)
       setLoading(false)
+      // Trigger entrance animation after data loads
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setDataVisible(true))
+      })
     }).catch(() => {
       setLeftData(UNIVERSE_CATALOG_MAP[leftId] || null)
       setRightData(UNIVERSE_CATALOG_MAP[rightId] || null)
       setLoading(false)
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setDataVisible(true))
+      })
     })
   }, [leftId, rightId])
+
+  // Keyboard navigation for universe selectors
+  const handleSelectKeyDown = useCallback((e, side) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault()
+      const catalog = UNIVERSE_CATALOG
+      const currentId = side === 'left' ? leftId : rightId
+      const currentIndex = catalog.findIndex(u => u.id === currentId)
+      if (currentIndex === -1) return
+      const delta = e.key === 'ArrowDown' ? 1 : -1
+      const nextIndex = (currentIndex + delta + catalog.length) % catalog.length
+      const nextId = catalog[nextIndex].id
+      const params = new URLSearchParams(searchParams)
+      params.set(side, nextId)
+      setSearchParams(params)
+      setFocusedSelect(side)
+    } else if (e.key === 'Enter') {
+      e.preventDefault()
+      // Confirm selection by keeping current value
+      const params = new URLSearchParams(searchParams)
+      setSearchParams(params)
+      setFocusedSelect(null)
+    } else if (e.key === 'Escape') {
+      setFocusedSelect(null)
+    }
+  }, [leftId, rightId, searchParams, setSearchParams])
+
+  // Swap left and right universes
+  const handleSwap = useCallback(() => {
+    const params = new URLSearchParams(searchParams)
+    const currentLeft = params.get('left') || params.get('a') || ''
+    const currentRight = params.get('right') || params.get('b') || ''
+    if (!currentLeft && !currentRight) return
+    if (currentLeft) params.set('right', currentLeft)
+    if (currentRight) params.set('left', currentRight)
+    // Clean up legacy params
+    params.delete('a')
+    params.delete('b')
+    setSearchParams(params)
+  }, [searchParams, setSearchParams])
+
+  // Global keyboard shortcut for swap (S key when no input is focused)
+  useEffect(() => {
+    const handleGlobalKey = (e) => {
+      if (e.key === 's' || e.key === 'S') {
+        const tag = document.activeElement?.tagName
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+        if (leftId || rightId) {
+          e.preventDefault()
+          handleSwap()
+        }
+      }
+    }
+    window.addEventListener('keydown', handleGlobalKey)
+    return () => window.removeEventListener('keydown', handleGlobalKey)
+  }, [leftId, rightId, handleSwap])
 
   // Merge catalog preview data with loaded payload data
   const left = leftData ? { ...UNIVERSE_CATALOG_MAP[leftId], ...leftData } : null
@@ -183,7 +377,7 @@ export default function CompareRoute() {
 
         {/* Universe Selector */}
         <div className="compare-selector-panel rounded-2xl p-5 mb-8 animate-compare-slide-up animate-compare-delay-1">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid gap-4" style={{ gridTemplateColumns: '1fr auto 1fr' }}>
             <div>
               <label className="compare-selector-label mb-3 block">
                 <span className="inline-flex items-center gap-1.5">
@@ -192,13 +386,21 @@ export default function CompareRoute() {
                 </span>
               </label>
               <select
+                ref={leftSelectRef}
                 value={leftId}
                 onChange={(e) => {
                   const params = new URLSearchParams(searchParams)
                   params.set('left', e.target.value)
                   setSearchParams(params)
                 }}
-                className="compare-select w-full h-11 rounded-xl px-3 text-[11px]"
+                onKeyDown={(e) => handleSelectKeyDown(e, 'left')}
+                onFocus={() => setFocusedSelect('left')}
+                onBlur={() => setFocusedSelect(null)}
+                className={`compare-select w-full h-11 rounded-xl px-3 text-[11px] transition-colors duration-200 focus:outline-none ${
+                  focusedSelect === 'left'
+                    ? 'ring-2 ring-cyan-400/30 border-cyan-400/50'
+                    : ''
+                }`}
               >
                 <option value="">— Select —</option>
                 {UNIVERSE_CATALOG.map((u) => (
@@ -206,6 +408,16 @@ export default function CompareRoute() {
                 ))}
               </select>
             </div>
+
+            <div className="flex flex-col gap-2 items-center justify-end pb-0.5">
+              <SwapButton onSwap={handleSwap} disabled={!leftId && !rightId} />
+              {leftId && rightId && (
+                <div className="animate-compare-slide-up">
+                  <ShareButton leftId={leftId} rightId={rightId} />
+                </div>
+              )}
+            </div>
+
             <div>
               <label className="compare-selector-label mb-3 block">
                 <span className="inline-flex items-center gap-1.5">
@@ -214,13 +426,21 @@ export default function CompareRoute() {
                 </span>
               </label>
               <select
+                ref={rightSelectRef}
                 value={rightId}
                 onChange={(e) => {
                   const params = new URLSearchParams(searchParams)
                   params.set('right', e.target.value)
                   setSearchParams(params)
                 }}
-                className="compare-select w-full h-11 rounded-xl px-3 text-[11px]"
+                onKeyDown={(e) => handleSelectKeyDown(e, 'right')}
+                onFocus={() => setFocusedSelect('right')}
+                onBlur={() => setFocusedSelect(null)}
+                className={`compare-select w-full h-11 rounded-xl px-3 text-[11px] transition-colors duration-200 focus:outline-none ${
+                  focusedSelect === 'right'
+                    ? 'ring-2 ring-purple-400/30 border-purple-400/50'
+                    : ''
+                }`}
               >
                 <option value="">— Select —</option>
                 {UNIVERSE_CATALOG.map((u) => (
@@ -228,6 +448,23 @@ export default function CompareRoute() {
                 ))}
               </select>
             </div>
+          </div>
+
+          {/* Keyboard hint */}
+          <div className="mt-3 flex items-center justify-center gap-4">
+            <span className="text-[9px] text-gray-700 flex items-center gap-1">
+              <kbd className="px-1 py-0.5 rounded bg-white/5 border border-white/10 text-gray-600">↑</kbd>
+              <kbd className="px-1 py-0.5 rounded bg-white/5 border border-white/10 text-gray-600">↓</kbd>
+              navigate
+            </span>
+            <span className="text-[9px] text-gray-700 flex items-center gap-1">
+              <kbd className="px-1 py-0.5 rounded bg-white/5 border border-white/10 text-gray-600">Enter</kbd>
+              confirm
+            </span>
+            <span className="text-[9px] text-gray-700 flex items-center gap-1">
+              <kbd className="px-1 py-0.5 rounded bg-white/5 border border-white/10 text-gray-600">S</kbd>
+              swap
+            </span>
           </div>
         </div>
 
@@ -240,7 +477,7 @@ export default function CompareRoute() {
             >
               <div className="min-w-0">
                 <p className="compare-selector-label mb-1.5 text-purple-400/70">{left.anime}</p>
-                <p className="text-[11px] font-semibold text-gray-200 leading-snug line-clamp-2 group-hover:text-white transition-colors">{left.tagline}</p>
+                <p className="text-[11px] font-semibold text-gray-200 leading-snug line-clamp-2 group-hover:text-white transition-colors duration-200">{left.tagline}</p>
               </div>
               <ArrowRight className="w-4 h-4 text-gray-600 shrink-0 ml-3 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-cyan-400" />
             </Link>
@@ -250,62 +487,10 @@ export default function CompareRoute() {
             >
               <div className="min-w-0">
                 <p className="compare-selector-label mb-1.5 text-cyan-400/70">{right.anime}</p>
-                <p className="text-[11px] font-semibold text-gray-200 leading-snug line-clamp-2 group-hover:text-white transition-colors">{right.tagline}</p>
+                <p className="text-[11px] font-semibold text-gray-200 leading-snug line-clamp-2 group-hover:text-white transition-colors duration-200">{right.tagline}</p>
               </div>
               <ArrowRight className="w-4 h-4 text-gray-600 shrink-0 ml-3 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-cyan-400" />
             </Link>
-          </div>
-        )}
-
-        {/* VS Badge */}
-        <VsBadge left={left} right={right} />
-
-        {/* Quick Compare Badges */}
-        <div className="mb-5 animate-compare-slide-up animate-compare-delay-2">
-          <QuickCompareBadges left={left} right={right} />
-        </div>
-
-        {/* Stat Comparison Bars */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden mb-5 animate-compare-slide-up animate-compare-delay-2">
-          <div className="flex items-center gap-2 px-5 py-4 border-b border-white/10 bg-black/20">
-            <TrendingUp className="w-3 h-3 text-cyan-400" />
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-white">Stat Comparison</h2>
-          </div>
-          <div className="p-5 space-y-4">
-            <StatBar left={left?.rules?.length || 0} right={right?.rules?.length || 0} label="Rules" />
-            <StatBar left={left?.factions?.length || 0} right={right?.factions?.length || 0} label="Factions" />
-            <StatBar left={left?.characters?.length || 0} right={right?.characters?.length || 0} label="Characters" />
-            <StatBar left={left?.relationships?.length || 0} right={right?.relationships?.length || 0} label="Relationships" />
-            <StatBar left={left?.causalEvents?.length || 0} right={right?.causalEvents?.length || 0} label="Causal Events" />
-            <StatBar left={left?.anomalies?.length || 0} right={right?.anomalies?.length || 0} label="Anomalies" />
-          </div>
-        </div>
-
-        {/* Character Head-to-Head */}
-        <div className="mb-5 animate-compare-slide-up animate-compare-delay-2">
-          <CharacterHeadToHead left={left} right={right} />
-        </div>
-
-        {/* CounterTree Integration */}
-        {left && right && hasCounterplayData(left) && hasCounterplayData(right) && (
-          <div className="rounded-2xl border border-cyan-400/30 bg-cyan-400/5 overflow-hidden mb-5 animate-compare-slide-up animate-compare-delay-2">
-            <div className="flex items-center gap-2 px-5 py-4 border-b border-cyan-400/30">
-              <GitBranch className="w-3 h-3 text-cyan-400" />
-              <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">Counterplay Analysis</h2>
-            </div>
-            <div className="p-5">
-              <p className="text-[10px] text-gray-400 mb-3">Both universes contain structured counter data. Explore the counters below:</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-[9px] uppercase tracking-wider text-purple-400/60 mb-2">{left.anime} Counters</p>
-                  <CounterTree universe={left} />
-                </div>
-                <div>
-                  <p className="text-[9px] uppercase tracking-wider text-orange-400/60 mb-2">{right.anime} Counters</p>
-                  <CounterTree universe={right} />
-                </div>
-              </div>
-            </div>
           </div>
         )}
 
@@ -317,16 +502,19 @@ export default function CompareRoute() {
 
         {/* Comparison Tables */}
         {loading ? (
-          <div className="compare-loading-grid animate-compare-slide-up animate-compare-delay-3">
-            {[0,1,2].map(i => <div key={i} className="compare-loading-block" />)}
+          <div className="space-y-5">
+            <SkeletonSelectorBlock />
+            <SkeletonTableBlock />
+            <SkeletonTableBlock />
+            <SkeletonTableBlock />
           </div>
         ) : left && right ? (
           <div className="space-y-5">
             {comparisonStats.map(({ category, icon, rows }, catIndex) => (
               <div
                 key={category}
-                className="compare-table-panel rounded-2xl overflow-hidden animate-compare-slide-up"
-                style={{ animationDelay: `${(catIndex + 3) * 80}ms` }}
+                className={`compare-table-panel rounded-2xl overflow-hidden animate-compare-slide-up ${dataVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+                style={{ transition: 'opacity 400ms ease, transform 400ms ease', animationDelay: `${(catIndex + 3) * 80}ms` }}
               >
                 {/* Category header */}
                 <div className="compare-table-category-header flex items-center gap-3 px-5 py-4">
@@ -379,11 +567,31 @@ export default function CompareRoute() {
           </div>
         ) : (
           <div className="compare-empty-state rounded-2xl py-20 text-center animate-compare-slide-up animate-compare-delay-3">
-            <div className="flex items-center justify-center mb-4">
-              <Scale className="w-8 h-8 text-gray-700" />
+            {/* Visual universe grid */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              {UNIVERSE_CATALOG.slice(0, 5).map((u, i) => (
+                <div
+                  key={u.id}
+                  className="flex flex-col items-center gap-1.5 animate-compare-slide-up"
+                  style={{ animationDelay: `${i * 80}ms` }}
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[9px] text-gray-600 uppercase tracking-wider font-bold">
+                    {u.anime.split(' ').map(w => w[0]).join('').slice(0, 2)}
+                  </div>
+                  <span className="text-[8px] text-gray-700 uppercase tracking-wider">{u.anime.split(' ')[0]}</span>
+                </div>
+              ))}
             </div>
-            <p className="text-xs uppercase tracking-widest text-gray-600">Select two universes to compare</p>
-            <p className="text-[10px] text-gray-700 mt-2">Choose from the dropdowns above to see a side-by-side analysis.</p>
+
+            <div className="flex items-center justify-center mb-4">
+              <Scale className="w-10 h-10 text-gray-700" />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-gray-600 mb-2">
+              Select two universes above
+            </p>
+            <p className="text-[10px] text-gray-700 leading-relaxed max-w-xs mx-auto">
+              Use the dropdowns to pick any two universes, then see them compared side-by-side.
+            </p>
           </div>
         )}
 
