@@ -120,9 +120,15 @@
       "_fetchFailed": false,
       "malId": 10138,
       "slug": "thorfinn-karlsefni",
-      "description": "Thorfinn Karlsefni is a  from Vinland Saga.",
+      "description": "fierce warrior seeking a land without war, transformed from a revenge-driven youth into a pacifist explorer",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Askeladd",
+        "King Canute",
+        "Einar",
+        "Thors Snorresson",
+        "Thorkell the Tall"
+      ]
     },
     {
       "name": "Askeladd",
@@ -140,9 +146,13 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/401940.jpg?s=738c36550f7afd3f402a32a5bbef66c8",
       "malId": 13020,
       "slug": "askeladd",
-      "description": "Askeladd is a  from Vinland Saga.",
+      "description": "strategic Viking who killed Thors and serves as an unlikely mentor, driven by complicated loyalties and survival",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni",
+        "King Canute",
+        "Thors Snorresson"
+      ]
     },
     {
       "name": "King Canute",
@@ -161,9 +171,13 @@
       "_fetchFailed": false,
       "malId": 17438,
       "slug": "king-canute",
-      "description": "King Canute is a  from Vinland Saga.",
+      "description": "soft prince who becomes a ruthless king, attempting to bring Christianity and peace to England through any means",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni",
+        "Askeladd",
+        "Thorkell the Tall"
+      ]
     },
     {
       "name": "Thors Snorresson",
@@ -182,9 +196,13 @@
       "_fetchFailed": false,
       "malId": 13021,
       "slug": "thors-snorresson",
-      "description": "Thors Snorresson is a  from Vinland Saga.",
+      "description": "former Viking warrior who abandoned violence for a peaceful farm life, father to Thorfinn",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni",
+        "Askeladd",
+        "Thorkell the Tall"
+      ]
     },
     {
       "name": "Thorkell the Tall",
@@ -203,9 +221,13 @@
       "_fetchFailed": false,
       "malId": 17440,
       "slug": "thorkell-the-tall",
-      "description": "Thorkell the Tall is a  from Vinland Saga.",
+      "description": "massive Viking who loves battle above all else, switching sides opportunistically for the joy of combat",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Thors Snorresson",
+        "King Canute",
+        "Thorfinn Karlsefni"
+      ]
     },
     {
       "name": "Einar",
@@ -223,9 +245,11 @@
       "imageUrl": "https://myanimelist.net/images/characters/16/501347.jpg",
       "malId": 28030,
       "slug": "einar",
-      "description": "Einar is a  from Vinland Saga.",
+      "description": "former slave from England who becomes Thorfinn's close friend, representing the human cost of the Viking age",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni"
+      ]
     }
   ],
   "relationships": [

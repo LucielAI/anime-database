@@ -124,9 +124,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/216895.jpg?s=ccb6539cbfc5462df97d61a48c52af93",
       "malId": 40882,
       "slug": "eren-yeager",
-      "description": "Eren Yeager is a  from Attack on Titan.",
+      "description": "Eren Yeager is a Titan-shifting warmonger and the Architect of the Rumbling who commits global genocide to secure permanent freedom for Paradis Island, from Attack on Titan.",
       "role": "Main",
-      "relationships": []
+      "relationships": ["Mikasa Ackerman", "Armin Arlert", "Reiner Braun", "Zeke Yeager"]
     },
     {
       "name": "Mikasa Ackerman",
@@ -144,9 +144,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/215563.jpg?s=5b0650bb09a7e053afc6bad84ab48947",
       "malId": 40881,
       "slug": "mikasa-ackerman",
-      "description": "Mikasa Ackerman is a  from Attack on Titan.",
+      "description": "Mikasa Ackerman is the Ackerman clan's deadliest warrior, bound to Eren Yeager by an oath of protection that outlasts his descent into omnicide, from Attack on Titan.",
       "role": "Main",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Levi Ackerman", "Armin Arlert"]
     },
     {
       "name": "Armin Arlert",
@@ -164,9 +164,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/220267.jpg?s=afa2751e2201aba1f5179544e787ba1a",
       "malId": 46494,
       "slug": "armin-arlert",
-      "description": "Armin Arlert is a  from Attack on Titan.",
+      "description": "Armin Arlert is the strategic prodigy and seventeenth Commander of the Survey Corps who inherits the Colossal Titan to become humanity's most consequential leader, from Attack on Titan.",
       "role": "Main",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Mikasa Ackerman", "Erwin Smith"]
     },
     {
       "name": "Levi Ackerman",
@@ -185,9 +185,9 @@
       "_fetchFailed": false,
       "malId": 45627,
       "slug": "levi-ackerman",
-      "description": "Levi Ackerman is a  from Attack on Titan.",
+      "description": "Levi Ackerman is the squad captain of the Survey Corps, humanity's strongest soldier renowned for his unmatched combat speed and 3DMG proficiency, from Attack on Titan.",
       "role": "Main",
-      "relationships": []
+      "relationships": ["Erwin Smith", "Hange Zoe", "Zeke Yeager", "Mikasa Ackerman"]
     },
     {
       "name": "Reiner Braun",
@@ -205,9 +205,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/16/206489.jpg?s=e48695a419dc6e71c831d7481a5fc86f",
       "malId": 46484,
       "slug": "reiner-braun",
-      "description": "Reiner Braun is a  from Attack on Titan.",
+      "description": "Reiner Braun is the Armored Titan and deeply fractured Warrior who infiltrated Paradis as a child and suffers permanent dissociative identity disorder from the trauma of his betrayals, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Annie Leonhart", "Zeke Yeager", "Armin Arlert"]
     },
     {
       "name": "Zeke Yeager",
@@ -226,9 +226,9 @@
       "_fetchFailed": false,
       "malId": 142314,
       "slug": "zeke-yeager",
-      "description": "Zeke Yeager is a  from Attack on Titan.",
+      "description": "Zeke Yeager is the Beast Titan and royal-blooded manipulator who engineers a euthanasia plan to slowly extinguish the Eldian race through sterile reproduction, from Attack on Titan.",
       "role": "Main",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Levi Ackerman", "Grisha Yeager", "Reiner Braun"]
     },
     {
       "name": "Erwin Smith",
@@ -246,9 +246,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/559023.jpg?s=148a0689d341e23cae536207d030f3fc",
       "malId": 46496,
       "slug": "erwin-smith",
-      "description": "Erwin Smith is a  from Attack on Titan.",
+      "description": "Erwin Smith is the thirteenth Commander of the Survey Corps who sacrificed his dream of reaching the basement to lead humanity's most consequential suicidal charge, buying the opening for Levi to kill the Beast Titan, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Levi Ackerman", "Hange Zoe", "Armin Arlert"]
     },
     {
       "name": "Annie Leonhart",
@@ -266,9 +266,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/206357.jpg?s=3a853fc7177a3eeaefbecb530d590a4a",
       "malId": 46490,
       "slug": "annie-leonhart",
-      "description": "Annie Leonhart is a  from Attack on Titan.",
+      "description": "Annie Leonhart is the Female Titan and elite hand-to-hand combatant who encased herself in a crystal cocoon for four years to avoid interrogation and protect Marley's secrets, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Reiner Braun", "Eren Yeager", "Bertholdt Hoover"]
     },
     {
       "name": "Ymir Fritz",
@@ -287,9 +287,9 @@
       "_fetchFailed": false,
       "malId": 182601,
       "slug": "ymir-fritz",
-      "description": "Ymir Fritz is a  from Attack on Titan.",
+      "description": "Ymir Fritz is the first Titan and enslaved origin of all Titan powers, trapped for 2,000 years in the Paths dimension until Eren Yeager offered her the first genuine choice she had ever received, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Historia Reiss", "Reiner Braun"]
     },
     {
       "name": "Grisha Yeager",
@@ -307,9 +307,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/206441.jpg?s=9618f66845f0678a8e993d9bd76675c6",
       "malId": 62477,
       "slug": "grisha-yeager",
-      "description": "Grisha Yeager is a  from Attack on Titan.",
+      "description": "Grisha Yeager is the Founding Titan carrier and Eldian Restorationist who stole the Founding Titan from the Reiss family and was coerced by his future son into fulfilling a deterministic timeline of atrocity, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Zeke Yeager", "Historia Reiss"]
     }
   ],
   "relationships": [

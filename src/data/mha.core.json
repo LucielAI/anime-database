@@ -112,7 +112,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/299404.jpg?s=6a448d3702c1d3185ed7ad8f0b8484f0",
       "malId": 117909,
       "slug": "izuku-midoriya",
-      "description": "Izuku Midoriya is a  from My Hero Academia.",
+      "description": "Izuku Midoriya is the ninth wielder of One For All, a Quirk inherited from All Might that lets him channel incredible raw power at the cost of severe bodily damage, from My Hero Academia.",
       "role": "Main",
       "relationships": [
         "Boku no Hero Academia",
@@ -140,7 +140,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/310613.jpg?s=2bb273c38247c38003176367645e6488",
       "malId": 117921,
       "slug": "all-might",
-      "description": "All Might is a  from My Hero Academia.",
+      "description": "All Might is the Symbol of Peace, the world's most powerful hero whose strength has been fading since the fight with All For One left him with permanent injuries, from My Hero Academia.",
       "role": "Main",
       "relationships": [
         "Boku no Hero Academia",
@@ -168,7 +168,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/370136.jpg?s=9a8bbc134d9c1719cacb71c58d863e72",
       "malId": 141358,
       "slug": "all-for-one",
-      "description": "All For One is a  from My Hero Academia.",
+      "description": "All For One is a villain who can steal and bestow Quirks, an ancient and calculating mastermind who has shaped the hero society from the shadows for over a century, from My Hero Academia.",
       "role": "Supporting",
       "relationships": [
         "Boku no Hero Academia",
@@ -196,7 +196,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/272139.jpg?s=ee7d051f5ff04bd4fe6830e0d268cb10",
       "malId": 122103,
       "slug": "tomura-shigaraki",
-      "description": "Tomura Shigaraki is a  from My Hero Academia.",
+      "description": "Tomura Shigaraki is the successor to All For One, a villain born from abuse and driven by a fractured psyche to destroy everything, from My Hero Academia.",
       "role": "Supporting",
       "relationships": [
         "Boku no Hero Academia",
@@ -224,8 +224,14 @@
       "imageUrl": "https://myanimelist.net/images/characters/4/414269.jpg",
       "malId": 141624,
       "slug": "enji-todoroki",
-      "description": "Enji Todoroki is a  from My Hero Academia.",
-      "relationships": [],
+      "description": "Enji Todoroki is the Flame Hero Endeavor, a relentless fighter who uses Prominence Burn to project devastating waves of fire, from My Hero Academia.",
+      "relationships": [
+        "Shouta Aizawa",
+        "Keigo Takami",
+        "Touya Todoroki",
+        "Shoto Todoroki",
+        "Fuyumi Todoroki"
+      ],
       "role": "Supporting"
     },
     {
@@ -243,8 +249,12 @@
       "imageUrl": "https://myanimelist.net/images/characters/10/438645.jpg",
       "malId": 195199,
       "slug": "keigo-takami",
-      "description": "Keigo Takami is a  from My Hero Academia.",
-      "relationships": [],
+      "description": "Keigo Takami is the Wing Hero Hawks, an efficient and pragmatic underground hero with bird-themed abilities who operates in the gray areas between hero and villain, from My Hero Academia.",
+      "relationships": [
+        "Enji Todoroki",
+        "Tomura Shigaraki",
+        "All For One"
+      ],
       "role": "Supporting"
     },
     {
@@ -262,8 +272,12 @@
       "imageUrl": "https://myanimelist.net/images/characters/15/331442.jpg",
       "malId": 132691,
       "slug": "chizome-akaguro",
-      "description": "Chizome Akaguro is a  from My Hero Academia.",
-      "relationships": [],
+      "description": "Chizome Akaguro is Stain, a violent vigilante who believes true heroism requires total sacrifice and kills any hero he deems unworthy with his Bloodcurdle Quirk, from My Hero Academia.",
+      "relationships": [
+        "Izuku Midoriya",
+        "Tomura Shigaraki",
+        "All Might"
+      ],
       "role": "Antagonist"
     },
     {
@@ -281,8 +295,12 @@
       "imageUrl": "https://myanimelist.net/images/characters/16/454752.jpg",
       "malId": 174410,
       "slug": "rikiya-yotsubashi",
-      "description": "Rikiya Yotsubashi is a  from My Hero Academia.",
-      "relationships": [],
+      "description": "Rikiya Yotsubashi is the sixthuser of One For All, a calm strategist who becomes the leader of the Meta Liberation Army, from My Hero Academia.",
+      "relationships": [
+        "Izuku Midoriya",
+        "Tomura Shigaraki",
+        "All For One"
+      ],
       "role": "Supporting"
     },
     {
@@ -300,7 +318,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/301855.jpg?s=30bde8aa7f840805f22ab894a1eca521",
       "malId": 117915,
       "slug": "shouta-aizawa",
-      "description": "Shouta Aizawa is a  from My Hero Academia.",
+      "description": "Shouta Aizawa is the Underground Hero Eraser Head who can temporarily nullify any Quirk by looking at its user, from My Hero Academia.",
       "role": "Supporting",
       "relationships": [
         "Boku no Hero Academia",
@@ -328,8 +346,14 @@
       "imageUrl": "https://myanimelist.net/images/characters/6/454749.jpg",
       "malId": 139262,
       "slug": "touya-todoroki",
-      "description": "Touya Todoroki is a  from My Hero Academia.",
-      "relationships": [],
+      "description": "Touya Todoroki is Dabi, a villain with a Quirk that generates blue flames hotter than his father's but burns his own body, from My Hero Academia.",
+      "relationships": [
+        "Enji Todoroki",
+        "Shoto Todoroki",
+        "Natsuo Todoroki",
+        "Fuyumi Todoroki",
+        "Tomura Shigaraki"
+      ],
       "role": "Antagonist"
     }
   ],

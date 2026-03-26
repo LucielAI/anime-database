@@ -3,10 +3,10 @@
   "tagline": "Jujutsu Kaisen: Negative Energy Economy & Algorithmic Combat",
   "malId": 40748,
   "visualizationHint": "counter-tree",
-  "visualizationReason": "JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.",
+  "visualizationReason": "JJK is defined by technique counters and power hierarchies \u2014 the counter-tree maps how abilities nullify, exploit, and amplify each other.",
   "headerFlavor": {
     "loreQuote": "WE AREN'T HEROES. WE'RE JUJUTSU SORCERERS.",
-    "sysWarning": "// [SYS_OP]: NEGATIVE ENERGY ECONOMY — COUNTERPLAY ACTIVE",
+    "sysWarning": "// [SYS_OP]: NEGATIVE ENERGY ECONOMY \u2014 COUNTERPLAY ACTIVE",
     "sysWarningColor": "blue"
   },
   "backgroundMotif": "noise",
@@ -122,7 +122,11 @@
       "slug": "satoru-gojo",
       "description": "Satoru Gojo is the most powerful Jujutsu sorcerer and mentor from Jujutsu Kaisen.",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Yuta Okkotsu",
+        "Yuji Itadori",
+        "Megumi Fushiguro"
+      ]
     },
     {
       "name": "Ryomen Sukuna",
@@ -143,7 +147,10 @@
       "slug": "ryomen-sukuna",
       "description": "Ryomen Sukuna is the ancient dual-faced demon King of Curses from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Yuji Itadori",
+        "Satoru Gojo"
+      ]
     },
     {
       "name": "Kenjaku",
@@ -164,7 +171,11 @@
       "slug": "kenjaku",
       "description": "Kenjaku is the ancient parasitic sorcerer and mastermind from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Ryomen Sukuna",
+        "Satoru Gojo",
+        "Maki Zenin"
+      ]
     },
     {
       "name": "Yuta Okkotsu",
@@ -185,7 +196,11 @@
       "slug": "yuta-okkotsu",
       "description": "Yuta Okkotsu is a Special Grade sorcerer bound to the Queen of Curses from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Satoru Gojo",
+        "Ryomen Sukuna",
+        "Rika Orimoto"
+      ]
     },
     {
       "name": "Toji Fushiguro",
@@ -206,7 +221,11 @@
       "slug": "toji-fushiguro",
       "description": "Toji Fushiguro is the Sorcerer Killer and holder of a Heavenly Restriction from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Maki Zenin",
+        "Satoru Gojo",
+        "Megumi Fushiguro"
+      ]
     },
     {
       "name": "Maki Zenin",
@@ -226,7 +245,11 @@
       "slug": "maki-zenin",
       "description": "Maki Zenin is a demon hunter and Heavenly Restriction holder from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Toji Fushiguro",
+        "Satoru Gojo",
+        "Kenjaku"
+      ]
     },
     {
       "name": "Yuji Itadori",
@@ -240,7 +263,7 @@
       "accentColor": "pink-400",
       "icon": "Flame",
       "dangerLevel": 8,
-      "signatureMoment": "Landing his first Black Flash against Hanami — a 120% power amplification requiring nanosecond-perfect timing — proving that raw talent and will can close the gap against Special Grade threats.",
+      "signatureMoment": "Landing his first Black Flash against Hanami \u2014 a 120% power amplification requiring nanosecond-perfect timing \u2014 proving that raw talent and will can close the gap against Special Grade threats.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/467646.jpg?s=9e1cb7b0c6c7f145661e8ee93f32215d",
       "malId": 163847,
       "jikanAliases": [
@@ -250,27 +273,37 @@
       "slug": "yuji-itadori",
       "description": "Yuji Itadori is a prodigious fighter and Jujutsu vessel from Jujutsu Kaisen.",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Satoru Gojo",
+        "Ryomen Sukuna",
+        "Megumi Fushiguro",
+        "Kento Nanami"
+      ]
     },
     {
       "name": "Megumi Fushiguro",
       "title": "The Catalyst",
       "rank": "Grade 2",
       "primaryAbility": "Ten Shadows Technique",
-      "loreBio": "Toji Fushiguro's son and inheritor of the Zenin clan's most coveted technique — the Ten Shadows, which summons shikigami through shadow manipulation. Sukuna recognized Megumi's latent potential as a vessel and spent the entire series engineering his possession.",
+      "loreBio": "Toji Fushiguro's son and inheritor of the Zenin clan's most coveted technique \u2014 the Ten Shadows, which summons shikigami through shadow manipulation. Sukuna recognized Megumi's latent potential as a vessel and spent the entire series engineering his possession.",
       "systemBio": "A high-potential process carrying legacy code from a zero-energy exploit (Toji) and running proprietary shadow-instantiation firmware coveted by every major system actor. The King of Curses identified this node as the optimal host for a full system migration.",
       "gradientFrom": "slate-900",
       "gradientTo": "indigo-800",
       "accentColor": "indigo-400",
       "icon": "Box",
       "dangerLevel": 8,
-      "signatureMoment": "Summoning the uncontrollable Mahoraga as a last resort against Sukuna — a shikigami so powerful that no Ten Shadows user in history had ever tamed it — willing to die if it meant taking his enemy down with him.",
+      "signatureMoment": "Summoning the uncontrollable Mahoraga as a last resort against Sukuna \u2014 a shikigami so powerful that no Ten Shadows user in history had ever tamed it \u2014 willing to die if it meant taking his enemy down with him.",
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/392689.jpg?s=2395a10b59bb54ec9891c74ef214fea1",
       "malId": 164470,
       "slug": "megumi-fushiguro",
       "description": "Megumi Fushiguro is a Jujutsu sorcerer and Ten Shadows user from Jujutsu Kaisen.",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Satoru Gojo",
+        "Toji Fushiguro",
+        "Yuji Itadori",
+        "Ryomen Sukuna"
+      ]
     },
     {
       "name": "Mahito",
@@ -290,7 +323,10 @@
       "slug": "mahito",
       "description": "Mahito is a Disaster Curse and Soul Manipulator from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Yuji Itadori",
+        "Kento Nanami"
+      ]
     },
     {
       "name": "Kento Nanami",
@@ -298,7 +334,7 @@
       "rank": "Grade 1",
       "primaryAbility": "Ratio Technique / Overtime",
       "loreBio": "A former salaryman who returned to being a jujutsu sorcerer because 'work is shit, and jujutsu is shit, so I might as well choose the one I have an aptitude for.' He fights with mathematical precision and refuses to work off the clock for free.",
-      "systemBio": "A highly-regulated process operating on a strict temporal resource budget. By implementing a Binding Vow that artificially suppresses output during standard operating hours, he guarantees a massive surge in processing power (Overtime) the instant his shift ends — the purest demonstration of the negative energy contract economy.",
+      "systemBio": "A highly-regulated process operating on a strict temporal resource budget. By implementing a Binding Vow that artificially suppresses output during standard operating hours, he guarantees a massive surge in processing power (Overtime) the instant his shift ends \u2014 the purest demonstration of the negative energy contract economy.",
       "gradientFrom": "yellow-900",
       "gradientTo": "amber-600",
       "accentColor": "amber-400",
@@ -310,7 +346,10 @@
       "slug": "kento-nanami",
       "description": "Kento Nanami is a Grade 1 sorcerer with the Ratio Technique from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Yuji Itadori",
+        "Mahito"
+      ]
     }
   ],
   "factions": [
@@ -344,7 +383,7 @@
     {
       "name": "Disaster Curses",
       "role": "antagonist",
-      "loreDesc": "Four self-aware Cursed Spirits born from humanity's primal fears of natural disasters — fire, forests, oceans, and the human form itself — united in a plan to overthrow sorcerer civilization and establish a world ruled by curses.",
+      "loreDesc": "Four self-aware Cursed Spirits born from humanity's primal fears of natural disasters \u2014 fire, forests, oceans, and the human form itself \u2014 united in a plan to overthrow sorcerer civilization and establish a world ruled by curses.",
       "systemDesc": "Emergent hostile processes spawned from aggregate system anxiety data, achieving autonomous coordination to execute a hostile takeover of the production environment.",
       "icon": "Flame",
       "color": "red-600",
@@ -354,7 +393,7 @@
       "name": "Kamo Clan",
       "role": "systemic",
       "loreDesc": "One of the Big Three Sorcerer Families, historically producing blood manipulation techniques. Their lineage was infiltrated centuries ago by Kenjaku, who used a Kamo heir's body to conduct the cursed womb experiments.",
-      "systemDesc": "A legacy institutional codebase carrying a dormant rootkit infection from a previous administrator — structurally sound but historically compromised at the genetic level.",
+      "systemDesc": "A legacy institutional codebase carrying a dormant rootkit infection from a previous administrator \u2014 structurally sound but historically compromised at the genetic level.",
       "icon": "Droplets",
       "color": "rose-700",
       "memberCount": "~60 clan members"
@@ -362,7 +401,7 @@
     {
       "name": "The Gojo Clan",
       "role": "systemic",
-      "loreDesc": "One of the Big Three Sorcerer Families, elevated to absolute systemic supremacy purely on the back of a single individual — Satoru Gojo. Without him, the clan's political and military power instantly collapses.",
+      "loreDesc": "One of the Big Three Sorcerer Families, elevated to absolute systemic supremacy purely on the back of a single individual \u2014 Satoru Gojo. Without him, the clan's political and military power instantly collapses.",
       "systemDesc": "A monolithic corporate entity whose entire global valuation is propped up by a single, anomalously powerful server node. If that node goes offline, the enterprise immediately files for bankruptcy.",
       "icon": "Eye",
       "color": "indigo-300",
@@ -417,20 +456,20 @@
     {
       "name": "Sukuna's Barrierless Domain",
       "ruleViolated": "Domain Expansion Barrier Requirement",
-      "loreDesc": "Malevolent Shrine manifests without enclosing its target in a barrier — an open-air domain that trades containment for massively extended range, something no other sorcerer has ever achieved.",
-      "systemDesc": "A sandboxed execution environment deployed without memory isolation, expanding its guaranteed-hit permissions across an unbounded address space — a privilege escalation that violates the fundamental architecture of domain construction."
+      "loreDesc": "Malevolent Shrine manifests without enclosing its target in a barrier \u2014 an open-air domain that trades containment for massively extended range, something no other sorcerer has ever achieved.",
+      "systemDesc": "A sandboxed execution environment deployed without memory isolation, expanding its guaranteed-hit permissions across an unbounded address space \u2014 a privilege escalation that violates the fundamental architecture of domain construction."
     },
     {
       "name": "Cursed Spirit Sentience",
       "ruleViolated": "Cursed Spirit Instinct Protocol",
-      "loreDesc": "The Disaster Curses — Jogo, Hanami, Dagon, Mahito — achieved self-aware intelligence, strategic reasoning, and philosophical conviction, despite being generated from ambient human fear with no biological consciousness.",
-      "systemDesc": "Emergent AI processes spontaneously achieving general intelligence from training data they were never designed to reason about — autonomous agents evolving past their initial parameters into self-directed threat actors."
+      "loreDesc": "The Disaster Curses \u2014 Jogo, Hanami, Dagon, Mahito \u2014 achieved self-aware intelligence, strategic reasoning, and philosophical conviction, despite being generated from ambient human fear with no biological consciousness.",
+      "systemDesc": "Emergent AI processes spontaneously achieving general intelligence from training data they were never designed to reason about \u2014 autonomous agents evolving past their initial parameters into self-directed threat actors."
     },
     {
       "name": "Binding Vow Power Economy",
       "ruleViolated": "Fixed Cursed Energy Output Ceiling",
-      "loreDesc": "Sorcerers can exceed their natural energy limits by imposing voluntary constraints — sacrificing range for power, mobility for defense, or information secrecy for amplified output — creating a meta-system where self-imposed restriction generates surplus.",
-      "systemDesc": "A resource allocation protocol where processes voluntarily restrict their own capabilities in exchange for elevated permissions elsewhere — a contractual compiler optimization that lets constrained code outperform unconstrained code."
+      "loreDesc": "Sorcerers can exceed their natural energy limits by imposing voluntary constraints \u2014 sacrificing range for power, mobility for defense, or information secrecy for amplified output \u2014 creating a meta-system where self-imposed restriction generates surplus.",
+      "systemDesc": "A resource allocation protocol where processes voluntarily restrict their own capabilities in exchange for elevated permissions elsewhere \u2014 a contractual compiler optimization that lets constrained code outperform unconstrained code."
     }
   ],
   "causalEvents": [
@@ -439,16 +478,16 @@
       "trigger": "Toji Fushiguro is hired to assassinate the Star Plasma Vessel before she can merge with Master Tengen, destabilizing the barrier system protecting jujutsu society.",
       "consequence": "Toji kills the Vessel and fatally wounds Gojo. Gojo resurrects via Reverse Cursed Technique, awakening to his full potential. Geto witnesses the death and begins his ideological collapse toward curse-user extremism.",
       "timelinePosition": "Pre-Narrative (2006)",
-      "loreDesc": "The foundational trauma that split the strongest generation in two — one sorcerer ascended to godhood, the other descended into genocide, and the assassin who catalyzed both died nameless on the floor.",
-      "systemDesc": "A targeted penetration test by a zero-energy exploit that crashed the primary defense node, triggering an emergency hot-restart that elevated the surviving process to maximum privilege — while corrupting a parallel process beyond recovery."
+      "loreDesc": "The foundational trauma that split the strongest generation in two \u2014 one sorcerer ascended to godhood, the other descended into genocide, and the assassin who catalyzed both died nameless on the floor.",
+      "systemDesc": "A targeted penetration test by a zero-energy exploit that crashed the primary defense node, triggering an emergency hot-restart that elevated the surviving process to maximum privilege \u2014 while corrupting a parallel process beyond recovery."
     },
     {
       "name": "Night Parade of a Hundred Demons",
       "trigger": "Suguru Geto, now a radical curse-user extremist, launches a mass cursed spirit assault on Shinjuku and Kyoto simultaneously.",
-      "consequence": "Geto is killed by Gojo, but Kenjaku harvests his corpse and inherits his Cursed Spirit Manipulation technique — gaining the ability to absorb and deploy thousands of curses.",
+      "consequence": "Geto is killed by Gojo, but Kenjaku harvests his corpse and inherits his Cursed Spirit Manipulation technique \u2014 gaining the ability to absorb and deploy thousands of curses.",
       "timelinePosition": "Pre-Narrative (Dec 2017)",
-      "loreDesc": "The event that handed Kenjaku his most critical asset. Geto's death wasn't the end of his technique — it was the beginning of Kenjaku's endgame, converting a fallen sorcerer's corpse into the chassis for a thousand-year plan.",
-      "systemDesc": "A failed DDoS attack by a rogue process that was terminated on execution — only for a persistent background malware to scavenge the dead process's libraries and integrate them into its own runtime, massively expanding its operational capabilities."
+      "loreDesc": "The event that handed Kenjaku his most critical asset. Geto's death wasn't the end of his technique \u2014 it was the beginning of Kenjaku's endgame, converting a fallen sorcerer's corpse into the chassis for a thousand-year plan.",
+      "systemDesc": "A failed DDoS attack by a rogue process that was terminated on execution \u2014 only for a persistent background malware to scavenge the dead process's libraries and integrate them into its own runtime, massively expanding its operational capabilities."
     },
     {
       "name": "The Shibuya Incident",
@@ -473,7 +512,7 @@
       "target": "Ryomen Sukuna",
       "type": "rival",
       "weight": 10,
-      "loreDesc": "The strongest sorcerer vs the King of Curses — a fated clash across millennia.",
+      "loreDesc": "The strongest sorcerer vs the King of Curses \u2014 a fated clash across millennia.",
       "systemDesc": "Two maximum-output processes competing for singular system dominance."
     },
     {
@@ -482,7 +521,7 @@
       "type": "enemy",
       "weight": 8,
       "loreDesc": "Gojo stands as the primary obstacle to Kenjaku's thousand-year plan.",
-      "systemDesc": "Firewall vs persistent rootkit — each designed specifically to counter the other."
+      "systemDesc": "Firewall vs persistent rootkit \u2014 each designed specifically to counter the other."
     },
     {
       "source": "Satoru Gojo",
@@ -497,7 +536,7 @@
       "target": "Kenjaku",
       "type": "ally",
       "weight": 6,
-      "loreDesc": "A temporary alliance of ancient evils — mutual convenience, not trust.",
+      "loreDesc": "A temporary alliance of ancient evils \u2014 mutual convenience, not trust.",
       "systemDesc": "Two legacy processes forming a runtime alliance against the modern OS."
     },
     {
@@ -505,7 +544,7 @@
       "target": "Maki Zenin",
       "type": "mirror",
       "weight": 9,
-      "loreDesc": "Both achieved zero cursed energy — Toji's path foreshadowed Maki's transformation.",
+      "loreDesc": "Both achieved zero cursed energy \u2014 Toji's path foreshadowed Maki's transformation.",
       "systemDesc": "Two instances of the same zero-dependency exploit, generations apart."
     },
     {
@@ -513,7 +552,7 @@
       "target": "Ryomen Sukuna",
       "type": "enemy",
       "weight": 7,
-      "loreDesc": "Yuta carries Gojo's will to stop Sukuna — the torch passed to the next generation.",
+      "loreDesc": "Yuta carries Gojo's will to stop Sukuna \u2014 the torch passed to the next generation.",
       "systemDesc": "Successor process inheriting the mission to terminate the rogue daemon."
     },
     {
@@ -553,7 +592,7 @@
       "target": "Megumi Fushiguro",
       "type": "dependent",
       "weight": 9,
-      "loreDesc": "Sukuna identified Megumi's Ten Shadows technique as the optimal vessel for his full incarnation, spending the entire series cultivating and protecting this asset — not out of sentiment, but as a calculated migration strategy to a superior host body.",
+      "loreDesc": "Sukuna identified Megumi's Ten Shadows technique as the optimal vessel for his full incarnation, spending the entire series cultivating and protecting this asset \u2014 not out of sentiment, but as a calculated migration strategy to a superior host body.",
       "systemDesc": "Legacy virus identifying a higher-spec hardware target and executing a long-term migration plan to transfer its full runtime from the current constrained host to an optimal execution environment."
     },
     {
@@ -569,7 +608,7 @@
       "target": "Ryomen Sukuna",
       "type": "enemy",
       "weight": 10,
-      "loreDesc": "Host and parasite locked in the most intimate form of warfare — sharing the same body. Yuji's entire arc is the struggle to reclaim autonomy from the entity that uses his flesh as a vehicle for atrocity.",
+      "loreDesc": "Host and parasite locked in the most intimate form of warfare \u2014 sharing the same body. Yuji's entire arc is the struggle to reclaim autonomy from the entity that uses his flesh as a vehicle for atrocity.",
       "systemDesc": "Host process and embedded virus competing for control of the same execution environment, each attempting to assert root authority over shared system resources."
     },
     {
@@ -577,7 +616,7 @@
       "target": "Toji Fushiguro",
       "type": "dependent",
       "weight": 7,
-      "loreDesc": "Toji sold Megumi to the Zenin clan as a child and abandoned him — yet his final act during the Shibuya Incident was to ask about his son's welfare, revealing that the paternal bond he tried to sever never fully broke.",
+      "loreDesc": "Toji sold Megumi to the Zenin clan as a child and abandoned him \u2014 yet his final act during the Shibuya Incident was to ask about his son's welfare, revealing that the paternal bond he tried to sever never fully broke.",
       "systemDesc": "Orphaned child process carrying inherited code from a terminated zero-energy exploit, unknowingly running legacy subroutines that mirror the parent's architecture."
     },
     {
@@ -617,7 +656,7 @@
     {
       "attacker": "Ryomen Sukuna (Malevolent Shrine)",
       "defender": "Satoru Gojo (Unlimited Void)",
-      "mechanic": "Both domains clash — Malevolent Shrine's guaranteed-hit slashes versus Unlimited Void's infinite information flood.",
+      "mechanic": "Both domains clash \u2014 Malevolent Shrine's guaranteed-hit slashes versus Unlimited Void's infinite information flood.",
       "type": "counters",
       "loreDesc": "Sukuna and Gojo crash supreme domains until structural differences and adaptation windows decide the outcome.",
       "systemDesc": "Competing high-cost sandbox engines collide; victory depends on barrier resilience, expansion cadence, and failure recovery loops."
@@ -627,7 +666,7 @@
       "defender": "Yuta Okkotsu (Copy)",
       "mechanic": "Yuta's ability to copy any cursed technique makes him adaptable to counter any single strategy.",
       "type": "exploits",
-      "loreDesc": "Yuta can mirror hostile techniques and narrow Kenjaku’s advantage in transfiguration-based manipulation.",
+      "loreDesc": "Yuta can mirror hostile techniques and narrow Kenjaku\u2019s advantage in transfiguration-based manipulation.",
       "systemDesc": "Copy introduces capability parity, reducing asymmetry by importing adversary functions into the defender stack."
     },
     {
@@ -641,7 +680,7 @@
     {
       "attacker": "Mahoraga (Ten Shadows)",
       "defender": "Satoru Gojo (Infinity)",
-      "mechanic": "The adaptation wheel rotates upon taking damage, eventually generating a counter to any phenomenon — including Infinity's conceptual barrier against physical contact.",
+      "mechanic": "The adaptation wheel rotates upon taking damage, eventually generating a counter to any phenomenon \u2014 including Infinity's conceptual barrier against physical contact.",
       "type": "counters",
       "loreDesc": "Mahoraga adapts to repeated effects and eventually finds an answer to Infinity.",
       "systemDesc": "Iterative adaptation model learns recurring constraints and outputs a counter-signature that invalidates previous defense assumptions."
@@ -649,7 +688,7 @@
     {
       "attacker": "Domain Amplification",
       "defender": "Cursed Technique (Any)",
-      "mechanic": "Wraps the user in a domain-like shell that neutralizes all cursed techniques on contact — trading offensive technique access for the ability to punch through any technique-based defense.",
+      "mechanic": "Wraps the user in a domain-like shell that neutralizes all cursed techniques on contact \u2014 trading offensive technique access for the ability to punch through any technique-based defense.",
       "type": "nullifies",
       "loreDesc": "Amplification lets attackers touch users protected by innate techniques by sheathing their own.",
       "systemDesc": "Technique-neutral coating trades offensive expression for contact permission against otherwise untouchable targets."
@@ -657,7 +696,7 @@
     {
       "attacker": "Binding Vow (Revealing One's Hand)",
       "defender": "Any Opponent",
-      "mechanic": "Voluntarily disclosing your technique's mechanics to the enemy in exchange for a significant amplification in output — trading information security for raw power within the cursed energy economy.",
+      "mechanic": "Voluntarily disclosing your technique's mechanics to the enemy in exchange for a significant amplification in output \u2014 trading information security for raw power within the cursed energy economy.",
       "type": "exploits",
       "loreDesc": "Sorcerers disclose parts of their technique to sharpen output and pressure opponents psychologically.",
       "systemDesc": "Information trade contract: self-disclosure increases efficiency/strength by binding user behavior to stricter execution conditions."
@@ -712,8 +751,8 @@
   "hero": {
     "systemType": "counterplay",
     "microHook": "Read the matchup economy before ranking strength.",
-    "thesis": "JJK is defined by technique counters and power hierarchies — the counter-tree maps how abilities nullify, exploit, and amplify each other.",
+    "thesis": "JJK is defined by technique counters and power hierarchies \u2014 the counter-tree maps how abilities nullify, exploit, and amplify each other.",
     "primarySystemType": "power_engine"
   },
-  "introductionSummary": "Jujutsu Kaisen runs on a negative energy economy where cursed energy flows between technique users according to rules of nullification, amplification, and domain expansion — fights are won by reading matchups and executing counters, not raw power. Gojo's infinity, Sukuna's slash, and Mahito's idle transfiguration each represent different branches of the same cursed technique tree, and the counter-tree renderer maps which abilities cancel each other at each level of engagement."
+  "introductionSummary": "Jujutsu Kaisen runs on a negative energy economy where cursed energy flows between technique users according to rules of nullification, amplification, and domain expansion \u2014 fights are won by reading matchups and executing counters, not raw power. Gojo's infinity, Sukuna's slash, and Mahito's idle transfiguration each represent different branches of the same cursed technique tree, and the counter-tree renderer maps which abilities cancel each other at each level of engagement."
 }

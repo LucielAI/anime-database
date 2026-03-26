@@ -1,6 +1,6 @@
 {
   "anime": "Goblin Slayer",
-  "tagline": "Goblin Slayer — A low-prestige extermination specialist proves that heroism isn't about power levels — it's about purpose.",
+  "tagline": "Goblin Slayer \u2014 A low-prestige extermination specialist proves that heroism isn't about power levels \u2014 it's about purpose.",
   "malId": 37349,
   "themeColors": {
     "primary": "#065f46",
@@ -17,7 +17,7 @@
   "visualizationReason": "Goblin Slayer is driven by dependency edges between frontier villages, guild bureaucracy, faith-casters, and specialist operators; the node graph best shows who supplies protection, who absorbs risk, and how trust links stabilize the system.",
   "headerFlavor": {
     "loreQuote": "He does not let anyone roll the dice.",
-    "sysWarning": "// [SYS_WARN]: FRONTIER THREAT UNDERPRICED — LOCAL FAILURE PROPAGATES TO REGIONAL INSTABILITY",
+    "sysWarning": "// [SYS_WARN]: FRONTIER THREAT UNDERPRICED \u2014 LOCAL FAILURE PROPAGATES TO REGIONAL INSTABILITY",
     "sysWarningColor": "amber"
   },
   "backgroundMotif": "paper",
@@ -113,7 +113,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/523995.jpg?s=377d38330bee0abfd7b0ad909e1b3d71",
       "malId": 148622,
       "slug": "goblin-slayer",
-      "description": "Goblin Slayer is a  from Goblin Slayer.",
+      "description": "Goblin Slayer is a traumatized survivor who dedicates every waking hour to preventing goblin raids from repeating the tragedy of his childhood village in Goblin Slayer.",
       "role": "Main",
       "relationships": [
         "Goblin Slayer",
@@ -125,7 +125,7 @@
     {
       "name": "Priestess",
       "title": "Miracle Support Caster",
-      "rank": "Porcelain → Steel",
+      "rank": "Porcelain \u2192 Steel",
       "dangerLevel": 7,
       "loreBio": "A rookie cleric who survives her first party's annihilation and grows into a decisive tactical partner.",
       "systemBio": "Low-latency support node whose limited miracle slots are allocated to barrier control, rescue timing, and mission continuity.",
@@ -141,7 +141,7 @@
       ],
       "malId": 148623,
       "slug": "priestess",
-      "description": "Priestess is a  from Goblin Slayer.",
+      "description": "Priestess is a rookie cleric who survives her first party's annihilation and grows into a decisive tactical partner alongside Goblin Slayer in Goblin Slayer.",
       "role": "Main",
       "relationships": [
         "Goblin Slayer",
@@ -169,7 +169,7 @@
       ],
       "malId": 148956,
       "slug": "high-elf-archer",
-      "description": "High Elf Archer is a  from Goblin Slayer.",
+      "description": "High Elf Archer is an elf ranger who initially mocks Goblin Slayer's grim methods but later recognizes their tactical necessity in Goblin Slayer.",
       "role": "Main",
       "relationships": [
         "Goblin Slayer",
@@ -193,7 +193,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/524000.jpg?s=25d8009da87fd29f81c1e7ac9fab81b7",
       "malId": 159323,
       "slug": "dwarf-shaman",
-      "description": "Dwarf Shaman is a  from Goblin Slayer.",
+      "description": "Dwarf Shaman is a veteran shaman whose humor masks deep combat experience and battlefield adaptability in Goblin Slayer.",
       "role": "Main",
       "relationships": [
         "Goblin Slayer",
@@ -220,7 +220,7 @@
       ],
       "malId": 159322,
       "slug": "lizard-priest",
-      "description": "Lizard Priest is a  from Goblin Slayer.",
+      "description": "Lizard Priest is a reptilian priest-warrior who blends humor, honor, and brutal practicality in melee goblin extermination engagements in Goblin Slayer.",
       "role": "Main",
       "relationships": [
         "Goblin Slayer",
@@ -247,7 +247,7 @@
       ],
       "malId": 148958,
       "slug": "guild-girl",
-      "description": "Guild Girl is a  from Goblin Slayer.",
+      "description": "Guild Girl is the Adventurer's Guild receptionist who quietly keeps goblin extermination requests visible despite market disinterest in Goblin Slayer.",
       "role": "Supporting",
       "relationships": [
         "Goblin Slayer",
@@ -274,7 +274,7 @@
       ],
       "malId": 154478,
       "slug": "cow-girl",
-      "description": "Cow Girl is a  from Goblin Slayer.",
+      "description": "Cow Girl is Goblin Slayer's childhood friend whose farm serves as an emotional and logistical safe zone after dangerous goblin missions in Goblin Slayer.",
       "role": "Supporting",
       "relationships": [
         "Goblin Slayer",
@@ -300,7 +300,7 @@
       ],
       "malId": 178477,
       "slug": "sword-maiden",
-      "description": "Sword Maiden is a  from Goblin Slayer.",
+      "description": "Sword Maiden is a celebrated former hero still haunted by goblin trauma who seeks Goblin Slayer's help when institutions hesitate in Goblin Slayer.",
       "role": "Supporting",
       "relationships": [
         "Goblin Slayer",
@@ -325,7 +325,7 @@
         "Yaritsukai"
       ],
       "slug": "spearman",
-      "description": "Spearman is a  from Goblin Slayer.",
+      "description": "Spearman is a veteran adventurer whose frontline discipline and confidence cover regions Goblin Slayer cannot personally patrol in Goblin Slayer.",
       "role": "Supporting",
       "relationships": [
         "Goblin Slayer",
@@ -351,7 +351,7 @@
         "Majo"
       ],
       "slug": "witch",
-      "description": "Witch is a  from Goblin Slayer.",
+      "description": "Witch is a composed utility caster who supports frontier veterans with precision spell timing and calm threat assessment in Goblin Slayer.",
       "role": "Supporting",
       "relationships": [
         "Goblin Slayer",
@@ -693,7 +693,7 @@
   "hero": {
     "systemType": "relational",
     "microHook": "Track control edges before reading motives.",
-    "thesis": "Goblin Slayer is driven by dependency edges between frontier villages, guild bureaucracy, faith-casters, and specialist operators; the node…",
+    "thesis": "Goblin Slayer is driven by dependency edges between frontier villages, guild bureaucracy, faith-casters, and specialist operators; the node\u2026",
     "primarySystemType": "entity_db"
   }
 }

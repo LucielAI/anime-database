@@ -113,7 +113,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/492407.jpg?s=4d8e9a01dac6a5d891c3ed434187fba9",
       "malId": 170732,
       "slug": "denji",
-      "description": "Denji is a  from Chainsaw Man.",
+      "description": "hybrid youth who merged with Pochita to become the titular Chainsaw Man, driven by simple dreams and desperate survival",
       "role": "Main",
       "relationships": [
         "Chainsaw Man",
@@ -137,7 +137,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/391655.jpg?s=98a1bd67048600807f26dd709b70b7cc",
       "malId": 174750,
       "slug": "pochita",
-      "description": "Pochita is a  from Chainsaw Man.",
+      "description": "DEVIL-devil who can become any weapon by pulling his own cord, Denji's loyal companion and moral compass",
       "role": "Supporting",
       "relationships": [
         "Chainsaw Man",
@@ -160,7 +160,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/489561.jpg?s=6593bd49704ffb415d3fd9d40e5dc183",
       "malId": 170734,
       "slug": "makima",
-      "description": "Makima is a  from Chainsaw Man.",
+      "description": "manipulative Public Safety Devil Hunter who views relationships as control, targeting Denji for her own agenda",
       "role": "Main",
       "relationships": [
         "Chainsaw Man",
@@ -183,7 +183,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/395003.jpg?s=d0d59f9d3f6d5aa89534c8b16433cf74",
       "malId": 170735,
       "slug": "aki-hayakawa",
-      "description": "Aki Hayakawa is a  from Chainsaw Man.",
+      "description": "revenge-driven Devil Hunter trading his life for a devil contract, caught between humanity and corruption",
       "role": "Main",
       "relationships": [
         "Chainsaw Man",
@@ -206,7 +206,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/7/494969.jpg?s=02622d6ffa487b8d6d7503af4792a106",
       "malId": 170733,
       "slug": "power",
-      "description": "Power is a  from Chainsaw Man.",
+      "description": "blood fiend who forms an unlikely bond with Denji and a cat named Nyako, overcoming her selfish nature",
       "role": "Main",
       "relationships": [
         "Chainsaw Man",
@@ -229,7 +229,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/12/386392.jpg?s=587b426444b95d23293c9b8f1aa38450",
       "malId": 170765,
       "slug": "himeno",
-      "description": "Himeno is a  from Chainsaw Man.",
+      "description": "alcoholic Devil Hunter with a bold personality who saves Denji and makes a deadly contract with Ghost Devil",
       "role": "Supporting",
       "relationships": [
         "Chainsaw Man",
@@ -251,7 +251,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/467961.jpg?s=62b404edd1edcea21a0fb16f230f3916",
       "malId": 174749,
       "slug": "kobeni-higashiyama",
-      "description": "Kobeni Higashiyama is a  from Chainsaw Man.",
+      "description": "timid Devil Hunter thrust into dangerous situations, hiding surprising competence beneath extreme anxiety",
       "role": "Supporting",
       "relationships": [
         "Chainsaw Man",
@@ -274,7 +274,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/488553.jpg?s=90bf9b9117281aaead8dd8ac08cf388f",
       "malId": 174748,
       "slug": "kishibe",
-      "description": "Kishibe is a  from Chainsaw Man.",
+      "description": "veteran Devil Hunter and weapons master who values brutal honesty and loyalty above all else",
       "role": "Supporting",
       "relationships": [
         "Chainsaw Man",
@@ -300,7 +300,7 @@
         "Master"
       ],
       "slug": "santa-claus",
-      "description": "Santa Claus is a  from Chainsaw Man.",
+      "description": "corpse puppet controlled by a Virginyamorti Devil, using corpses as weapons in a twisted revenge scheme",
       "relationships": [],
       "role": "Minor"
     },
@@ -322,7 +322,7 @@
         "Samurai Sword"
       ],
       "slug": "katana-man",
-      "description": "Katana Man is a  from Chainsaw Man.",
+      "description": "demon hybrid warrior with a grudge against Denji, honorable despite his violent path",
       "role": "Supporting",
       "relationships": [
         "Chainsaw Man",

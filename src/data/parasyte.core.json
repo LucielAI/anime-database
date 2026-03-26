@@ -241,7 +241,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/8/277609.jpg?s=f17ff00d22f5eb405e37ad937ae7bd5b",
       "malId": 22147,
       "slug": "muramoto",
-      "description": "Migi-controlled corpse that Shinichi uses as a temporary body after their original host dies. Maintains parasite combat capabilities with human mobility limitations.",
+      "description": "A parasite-controlled infiltrator who takes over the body of a father in Shinichi's class, representing the parasite network's social infiltration capability. Shinichi recognizes behavioral anomalies that reveal the parasite's presence in Parasyte.",
       "faction": "Parasite Infiltrators",
       "abilities": [
         {
@@ -251,7 +251,11 @@
         }
       ],
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Shinichi Izumi",
+        "Migi",
+        "Gotou"
+      ]
     }
   ],
   "relationships": [

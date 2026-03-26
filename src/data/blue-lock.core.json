@@ -246,7 +246,14 @@
         }
       ],
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Bachira Meguru",
+        "Nagi Seishiro",
+        "Chigiri Hyoma",
+        "Reo Mikage",
+        "Rensuke Kunigami",
+        "Shouei Barou"
+      ]
     },
     {
       "name": "Bachira Meguru",
@@ -278,7 +285,12 @@
         }
       ],
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Isagi Yoichi",
+        "Nagi Seishiro",
+        "Chigiri Hyoma",
+        "Reo Mikage"
+      ]
     },
     {
       "name": "Nagi Seishiro",
@@ -310,7 +322,11 @@
         }
       ],
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Isagi Yoichi",
+        "Bachira Meguru",
+        "Reo Mikage"
+      ]
     },
     {
       "name": "Chigiri Hyoma",

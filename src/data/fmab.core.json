@@ -118,7 +118,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/72533.jpg?s=d38cf4e2e5cbb46ddaf2b23345a03eae",
       "malId": 11,
       "slug": "edward-elric",
-      "description": "Edward Elric is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "Edward Elric is the youngest State Alchemist in history, a prodigy who sacrificed his arm and leg in a forbidden transmutation to save his brother Alphonse, from Fullmetal Alchemist: Brotherhood.",
       "role": "Main",
       "relationships": [
         "Fullmetal Alchemist",
@@ -146,7 +146,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/54265.jpg?s=65c1a674adae3d7c5740d5711517285a",
       "malId": 12,
       "slug": "alphonse-elric",
-      "description": "Alphonse Elric is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "Alphonse Elric is Edward's younger brother whose soul is bound to a suit of armor after a catastrophic human transmutation went wrong, from Fullmetal Alchemist: Brotherhood.",
       "role": "Main",
       "relationships": [
         "Fullmetal Alchemist",
@@ -177,7 +177,7 @@
       ],
       "malId": 15542,
       "slug": "father",
-      "description": "Father is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "Father is a homunculus who plot to become a god by draining the power of an entire nation through a nationwide transmutation circle, from Fullmetal Alchemist: Brotherhood.",
       "role": "Supporting",
       "relationships": [
         "Fullmetal Alchemist: Brotherhood",
@@ -199,7 +199,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/510227.jpg?s=a9880198a26475fa0555f4690bab8cd3",
       "malId": 68,
       "slug": "roy-mustang",
-      "description": "Roy Mustang is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "Roy Mustang is the Flame Alchemist, an ambitious State Alchemist who commands fire with precise precision and dreams of becoming Führer to reform Amestris, from Fullmetal Alchemist: Brotherhood.",
       "role": "Supporting",
       "relationships": [
         "Fullmetal Alchemist",
@@ -227,7 +227,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/11/62053.jpg?s=181ba72d4c6ba5605bbfb63f1812f876",
       "malId": 5103,
       "slug": "king-bradley",
-      "description": "King Bradley is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "King Bradley is the Führer President of Amestris, secretly a homunculus with superhuman reflexes and blades concealed in his eyes, from Fullmetal Alchemist: Brotherhood.",
       "role": "Supporting",
       "relationships": [
         "Fullmetal Alchemist",
@@ -251,7 +251,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/31591.jpg?s=0f4cfb335f3a86eede76abc630a3fe9e",
       "malId": 66,
       "slug": "scar",
-      "description": "Scar is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "Scar is an Ishvalan warrior who survived a massacre and now hunts State Alchemists using a destructive alchemy tattooed on his right arm, from Fullmetal Alchemist: Brotherhood.",
       "role": "Supporting",
       "relationships": [
         "Fullmetal Alchemist",
@@ -276,7 +276,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/80676.jpg?s=9ea1723c8b75fa22716cabfd858d2497",
       "malId": 9792,
       "slug": "van-hohenheim",
-      "description": "Van Hohenheim is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "Van Hohenheim is the biological father of Edward and Alphonse, an immortal alchemist who has lived for over 400 years seeking to free the souls trapped in Xerxes, from Fullmetal Alchemist: Brotherhood.",
       "role": "Supporting",
       "relationships": [
         "Fullmetal Alchemist",
@@ -301,7 +301,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/15/62602.jpg?s=c1c34cb6b91640be0fc8a4c4aadc14a1",
       "malId": 3293,
       "slug": "ling-yao",
-      "description": "Ling Yao is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "Ling Yao is the crown prince of Xing who seeks immortality through Father's philosopher's stone, from Fullmetal Alchemist: Brotherhood.",
       "role": "Supporting",
       "relationships": [
         "Fullmetal Alchemist: Brotherhood",
@@ -327,7 +327,7 @@
       ],
       "malId": 15532,
       "slug": "may-chang",
-      "description": "May Chang is a  from Fullmetal Alchemist: Brotherhood.",
+      "description": "May Chang is a talented alkahest user from Xing who accompanies Ling on his quest, from Fullmetal Alchemist: Brotherhood.",
       "role": "Supporting",
       "relationships": [
         "Fullmetal Alchemist: Brotherhood",
