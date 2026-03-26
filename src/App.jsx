@@ -225,7 +225,7 @@ function NewsletterCTAHero({ variant = 'default' }) {
   const [status, setStatus] = useState('idle')
   const [subscriberCount] = useState(() => {
     // Social proof: show a realistic count. In production this would come from Supabase.
-    // Hardcoded for now — replace with live count: fetch('/api/newsletter/count')
+    // Hardcoded for now - replace with live count: fetch('/api/newsletter/count')
     return (() => {
       try {
         const stored = localStorage.getItem('newsletter-subscriber-count')
@@ -276,7 +276,7 @@ function NewsletterCTAHero({ variant = 'default' }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <p className="text-[11px] font-mono tracking-wider text-emerald-300 uppercase">You&apos;re in. New universes drop first.</p>
+        <p className="text-[11px] font-mono tracking-wider text-emerald-300 uppercase">You&apos;re in. Next drop is yours to know first.</p>
       </div>
     )
   }
@@ -308,7 +308,7 @@ function NewsletterCTAHero({ variant = 'default' }) {
       )}
       {status === 'error' && (
         <p className="text-[10px] text-red-400 font-mono tracking-wider px-1">
-          Signup failed — try again or email us directly
+          Signup failed - try again or email us directly
         </p>
       )}
     </div>
@@ -413,7 +413,7 @@ function Home() {
     <div className="min-h-screen bg-[#050508] text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden relative">
       <SeoHead {...seo} structuredData={structuredData} />
 
-      {/* Sticky search bar — appears after scroll */}
+      {/* Sticky search bar - appears after scroll */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#050508]/90 backdrop-blur-md border-b border-white/5 px-4 py-2 flex items-center gap-3 transform -translate-y-full transition-transform duration-300" id="sticky-search-bar">
         <Link to="/" className="shrink-0 text-[10px] font-bold tracking-[0.2em] uppercase text-gray-500 hover:text-white transition-colors hidden sm:block">AAA</Link>
         <button
@@ -502,20 +502,20 @@ function Home() {
         </div>
       </header>
 
-      {/* Spotlight carousel — above the fold, right after hero */}
+      {/* Spotlight carousel - above the fold, right after hero */}
       <section className="max-w-6xl mx-auto px-4 md:px-6 py-10">
         <SpotlightCarousel onSearchOpen={() => setSearchOpen(true)} />
       </section>
 
-      {/* Newsletter strip — secondary CTA, positioned after carousel */}
-      <section className="border-y border-white/5 bg-gradient-to-r from-[#0a0f1e] via-[#0d1220] to-[#0a0f1e]">
+      {/* Newsletter strip - secondary CTA, positioned after carousel */}
+      <section className="border-y border-cyan-400/10 bg-gradient-to-r from-[#080d1a] via-[#0d1220] to-[#080d1a]">
         <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 flex flex-col md:flex-row items-center gap-6">
           <div className="flex-1">
-            <p className="text-[10px] text-cyan-400/80 tracking-[0.2em] uppercase font-bold mb-1">Stay ahead of the archive</p>
-            <h3 className="text-lg font-black text-white uppercase tracking-tight">New universes. First.</h3>
-            <p className="text-xs text-gray-500 mt-1">Get notified when we map a new anime world. No spam.</p>
+            <p className="text-[10px] text-cyan-400/80 tracking-[0.2em] uppercase font-bold mb-1">30 universes mapped. More coming.</p>
+            <h3 className="text-lg font-black text-white uppercase tracking-tight leading-tight">We drop new universes<br className="hidden sm:block" /> before the rest knows.</h3>
+            <p className="text-xs text-gray-500 mt-1.5">2,847 researchers already on the list. No spam.</p>
           </div>
-          <div className="w-full md:w-auto md:min-w-[320px]">
+          <div className="w-full md:w-auto md:min-w-[340px]">
             <NewsletterCTAHero />
           </div>
         </div>
@@ -587,22 +587,40 @@ function Home() {
       </section>
       <div className="max-w-6xl mx-auto px-6"><div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" /></div>
 
-      <section className="max-w-6xl mx-auto px-6 pt-8 pb-7" aria-labelledby="quick-insights-heading">
-        <div className="flex items-center justify-between gap-3 mb-3">
-          <h2 id="quick-insights-heading" className="text-sm text-cyan-300 tracking-[0.2em] uppercase font-bold">Quick Insights</h2>
-          <span className="text-[10px] text-gray-500 uppercase tracking-[0.16em]">Easy to share</span>
+      <section className="max-w-6xl mx-auto px-4 md:px-6 pt-8 pb-7" aria-labelledby="quick-insights-heading">
+        <div className="flex items-center justify-between gap-3 mb-4">
+          <div className="flex items-center gap-2">
+            <TrendingUp className="w-4 h-4 text-amber-400" />
+            <h2 id="quick-insights-heading" className="text-sm text-gray-200 tracking-[0.2em] uppercase font-bold">System Breakdown</h2>
+          </div>
+          <Link to="/insights" className="text-[10px] text-gray-500 uppercase tracking-[0.16em] hover:text-cyan-400 transition-colors">See all →</Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {quickInsights.map((item) => (
-            <Link
-              key={item.id}
-              to={`/universe/${item.id}`}
-              className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 hover:border-cyan-300/40 transition-colors"
-            >
-              <p className="text-[10px] text-cyan-200 uppercase tracking-[0.16em] mb-2">{item.anime}</p>
-              <p className="text-xs text-gray-200 leading-relaxed">“{item.insight}”</p>
-            </Link>
-          ))}
+          {quickInsights.map((item) => {
+            const u = UNIVERSE_CATALOG_MAP[item.id]
+            if (!u) return null
+            return (
+              <Link
+                key={item.id}
+                to={`/universe/${item.id}`}
+                className="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/[0.07] hover:border-cyan-400/30 transition-all overflow-hidden flex"
+              >
+                <div className="shrink-0 w-16 h-full min-h-[80px] relative">
+                  <img
+                    src={u.animeImageUrl}
+                    alt={u.anime}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-r from-[#050508]/80 to-transparent" />
+                </div>
+                <div className="flex-1 p-3 min-w-0">
+                  <p className="text-[10px] text-cyan-200 uppercase tracking-[0.14em] font-bold mb-1.5">{u.anime}</p>
+                  <p className="text-[11px] text-gray-400 leading-relaxed line-clamp-2 group-hover:text-gray-300 transition-colors">"{item.insight}"</p>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </section>
       <div className="max-w-6xl mx-auto px-6"><div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" /></div>
@@ -1099,10 +1117,10 @@ function EntityRoute({ type }) {
   const animeName = preview?.anime || 'Anime Universe'
 
   const entitySeo = {
-    title: `${entityName} — ${animeName} | Anime Architecture Archive`,
+    title: `${entityName} - ${animeName} | Anime Architecture Archive`,
     description: entity?.role || entity?.category || entity?.alignment
       ? `${entityName}: ${entity.role || entity.category || entity.alignment} in ${animeName}. An in-depth system analysis from Anime Architecture Archive.`
-      : `${entityName} — system analysis for ${animeName} from Anime Architecture Archive.`,
+      : `${entityName} - system analysis for ${animeName} from Anime Architecture Archive.`,
     canonicalUrl,
     image: preview?.animeImageUrl || '',
   }
@@ -1122,7 +1140,7 @@ function EntityRoute({ type }) {
     )
   }
 
-  // Defensive bounds check — prevents 404s for stale sitemap URLs with out-of-range indices
+  // Defensive bounds check - prevents 404s for stale sitemap URLs with out-of-range indices
   if (entityIndex < 0 || entityIndex >= entities.length) {
     navigate(`/universe/${normalizedId}`, { replace: true })
     return null
@@ -1234,7 +1252,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      {/* Global search modal — triggered by "/" keyboard shortcut only */}
+      {/* Global search modal - triggered by "/" keyboard shortcut only */}
       <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
       {telemetry.SpeedInsights ? <telemetry.SpeedInsights /> : null}

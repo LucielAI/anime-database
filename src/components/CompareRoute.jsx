@@ -139,14 +139,18 @@ function getComparisonStats(left, right) {
 
 export default function CompareRoute() {
   const [searchParams, setSearchParams] = useSearchParams()
+  // Derive IDs from URL — both searchParams (router) and raw window for SSR safety
   const getParam = (name) => {
+    // Try router first (reactive), then raw URL as fallback
+    const sp = searchParams.get(name)
+    if (sp) return sp
+    // SSR/prerender fallback: read directly from window
     if (typeof window !== 'undefined') {
       try {
-        const v = new URL(window.location.href).searchParams.get(name)
-        if (v) return v
-      } catch {}
+        return new URL(window.location.href).searchParams.get(name) || ''
+      } catch { return '' }
     }
-    return searchParams.get(name) || ''
+    return ''
   }
   const leftId = getParam('left') || getParam('a') || ''
   const rightId = getParam('right') || getParam('b') || ''
@@ -373,14 +377,55 @@ export default function CompareRoute() {
           </div>
         )}
 
-        {/* Empty state */}
+        {/* Empty state — show trending comparisons */}
         {!loading && !left && !right && (
-          <div className="text-center py-20">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 border border-white/10 mb-4">
-              <ArrowUpDown className="w-6 h-6 text-gray-600" />
+          <div className="animate-compare-fade-in">
+            <p className="text-[10px] uppercase tracking-[0.2em] text-gray-600 text-center mb-5">Trending Comparisons</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {[
+                { left: 'one-punch-man', right: 'jjk', label: 'Pure Power vs Power System' },
+                { left: 'aot', right: 'one-piece', label: 'Faction Warfare vs Political Economy' },
+                { left: 'hunter-x-hunter', right: 'naruto', label: 'Nen vs Chakra' },
+                { left: 'solo-leveling', right: 'demon-slayer', label: 'Solo Grind vs Team Hierarchy' },
+                { left: 'dragonballz', right: 'one-punch-man', label: 'Zenkai Boost vs Limiter Removal' },
+                { left: 'death-note', right: 'code-geass', label: 'Mind Control vs Kira Justice' },
+              ].map(({ left, right, label }) => {
+                const leftU = UNIVERSE_CATALOG_MAP[left]
+                const rightU = UNIVERSE_CATALOG_MAP[right]
+                if (!leftU || !rightU) return null
+                return (
+                  <button
+                    key={`${left}-${right}`}
+                    onClick={() => {
+                      const p = new URLSearchParams()
+                      p.set('left', left)
+                      p.set('right', right)
+                      setSearchParams(p)
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    className="group flex flex-col gap-2 p-4 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-cyan-400/30 transition-all text-left"
+                  >
+                    <div className="flex items-center gap-2">
+                      <img src={leftU.animeImageUrl} alt={leftU.anime} className="w-10 h-10 rounded-lg object-cover shrink-0" loading="lazy" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[10px] font-bold text-white truncate">{leftU.anime}</p>
+                        <p className="text-[9px] text-gray-600">{leftU.stats?.characters || 10}+ characters</p>
+                      </div>
+                      <span className="shrink-0 text-[9px] text-gray-700 px-2 py-0.5 rounded bg-white/5 border border-white/10">
+                        vs
+                      </span>
+                      <div className="flex-1 min-w-0 text-right">
+                        <p className="text-[10px] font-bold text-white truncate">{rightU.anime}</p>
+                        <p className="text-[9px] text-gray-600">{rightU.stats?.characters || 10}+ characters</p>
+                      </div>
+                      <img src={rightU.animeImageUrl} alt={rightU.anime} className="w-10 h-10 rounded-lg object-cover shrink-0" loading="lazy" />
+                    </div>
+                    <p className="text-[9px] text-gray-600 group-hover:text-cyan-400/70 transition-colors">{label}</p>
+                  </button>
+                )
+              })}
             </div>
-            <p className="text-[11px] uppercase tracking-widest text-gray-600 mb-1">No universes selected</p>
-            <p className="text-[10px] text-gray-700">Choose two anime above to compare their systems</p>
+            <p className="text-[9px] text-gray-700 text-center mt-5">Or pick any two universes from the dropdowns above</p>
           </div>
         )}
 
