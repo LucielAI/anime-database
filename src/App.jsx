@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate, useParams, Link, useLocation, useSearchPara
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug, warmUniverseBySlug } from './data/index.js'
 import { ExternalLink, ArrowRight, Star, ListFilter, Search, Compass, Route as RouteIcon, LibraryBig, Network, ShieldAlert, Clock3, Landmark, Repeat2, Coins, BookOpen } from 'lucide-react'
 import { getClassificationLabel } from './utils/getClassificationLabel'
-import SeoHead from './components/SeoHead'
+import SeoHead, { HelmetProvider } from './components/SeoHead'
 import {
   buildHomeSeo,
   buildHomeStructuredData,
@@ -970,13 +970,31 @@ function EntityRoute({ type }) {
     return () => { cancelled = true }
   }, [normalizedId, navigate])
 
-  const canonicalUrl = `${window.location.origin}/universe/${normalizedId}/${type}`
+  const canonicalUrl = typeof window !== 'undefined'
+    ? `${window.location.origin}/universe/${normalizedId}/${type}`
+    : `/universe/${normalizedId}/${type}`
+
+  // Derive entity details for dynamic SEO
+  const entities = type === 'character' ? data?.characters : type === 'power' ? data?.powerSystem : data?.factions
+  const entity = entities?.[entityIndex]
+  const entityName = entity?.name || (type.charAt(0).toUpperCase() + type.slice(1))
+  const animeName = preview?.anime || 'Anime Universe'
+
+  const entitySeo = {
+    title: `${entityName} — ${animeName} | Anime Architecture Archive`,
+    description: entity?.role || entity?.category || entity?.alignment
+      ? `${entityName}: ${entity.role || entity.category || entity.alignment} in ${animeName}. An in-depth system analysis from Anime Architecture Archive.`
+      : `${entityName} — system analysis for ${animeName} from Anime Architecture Archive.`,
+    canonicalUrl,
+    image: preview?.animeImageUrl || '',
+  }
+
   if (isLoading || !data || !preview) {
     return (
       <>
         <SeoHead
           title={`Loading ${type.charAt(0).toUpperCase() + type.slice(1)}...`}
-          description={`Loading ${preview?.anime || 'Archive'} ${type} from Anime Architecture Archive`}
+          description={`Loading ${animeName} ${type} from Anime Architecture Archive`}
           canonicalUrl={canonicalUrl}
         />
         <div className="min-h-screen bg-[#050508] text-white font-mono flex items-center justify-center">
@@ -987,18 +1005,20 @@ function EntityRoute({ type }) {
   }
 
   // Defensive bounds check — prevents 404s for stale sitemap URLs with out-of-range indices
-  const entities = type === 'character' ? data.characters : type === 'power' ? data.powerSystem : data.factions
   if (entityIndex < 0 || entityIndex >= entities.length) {
     navigate(`/universe/${normalizedId}`, { replace: true })
     return null
   }
 
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
-      {type === 'character' ? <CharacterPage data={data} preview={preview} charIndex={entityIndex} /> : null}
-      {type === 'power' ? <PowerSystemPage data={data} preview={preview} powerIndex={entityIndex} /> : null}
-      {type === 'faction' ? <FactionPage data={data} preview={preview} factionIndex={entityIndex} /> : null}
-    </Suspense>
+    <>
+      <SeoHead {...entitySeo} />
+      <Suspense fallback={<div className="min-h-screen bg-[#050508]" />}>
+        {type === 'character' ? <CharacterPage data={data} preview={preview} charIndex={entityIndex} /> : null}
+        {type === 'power' ? <PowerSystemPage data={data} preview={preview} powerIndex={entityIndex} /> : null}
+        {type === 'faction' ? <FactionPage data={data} preview={preview} factionIndex={entityIndex} /> : null}
+      </Suspense>
+    </>
   )
 }
 
@@ -1059,7 +1079,7 @@ export default function App() {
   }, [])
 
   return (
-    <>
+    <HelmetProvider>
       <RouteScrollReset />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -1101,6 +1121,6 @@ export default function App() {
 
       {telemetry.SpeedInsights ? <telemetry.SpeedInsights /> : null}
       {telemetry.Analytics ? <telemetry.Analytics /> : null}
-    </>
+    </HelmetProvider>
   )
 }

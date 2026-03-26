@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug } from '../data/index.js'
 import SeoHead from './SeoHead'
 import { getClassificationLabel } from '../utils/getClassificationLabel'
-import { SITE_NAME, SITE_URL } from '../utils/seo'
+import { SITE_NAME, SITE_URL, buildCompareStructuredData } from '../utils/seo'
 import {
   ArrowLeft, Scale, Zap, Users, Shield, GitBranch,
   Copy, Check, Shuffle, X, ChevronDown, Sparkles
