@@ -266,9 +266,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/9/206357.jpg?s=3a853fc7177a3eeaefbecb530d590a4a",
       "malId": 46490,
       "slug": "annie-leonhart",
-      "description": "Annie Leonhart is a  from Attack on Titan.",
+      "description": "Annie Leonhart is the Female Titan and elite hand-to-hand combatant who encased herself in a crystal cocoon for four years to avoid interrogation and protect Marley's secrets, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Reiner Braun", "Eren Yeager", "Bertholdt Hoover"]
     },
     {
       "name": "Ymir Fritz",
@@ -287,9 +287,9 @@
       "_fetchFailed": false,
       "malId": 182601,
       "slug": "ymir-fritz",
-      "description": "Ymir Fritz is a  from Attack on Titan.",
+      "description": "Ymir Fritz is the first Titan and enslaved origin of all Titan powers, trapped for 2,000 years in the Paths dimension until Eren Yeager offered her the first genuine choice she had ever received, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Historia Reiss", "Reiner Braun"]
     },
     {
       "name": "Grisha Yeager",
@@ -307,9 +307,9 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/206441.jpg?s=9618f66845f0678a8e993d9bd76675c6",
       "malId": 62477,
       "slug": "grisha-yeager",
-      "description": "Grisha Yeager is a  from Attack on Titan.",
+      "description": "Grisha Yeager is the Founding Titan carrier and Eldian Restorationist who stole the Founding Titan from the Reiss family and was coerced by his future son into fulfilling a deterministic timeline of atrocity, from Attack on Titan.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Eren Yeager", "Zeke Yeager", "Historia Reiss"]
     }
   ],
   "relationships": [

@@ -18,14 +18,14 @@
   "visualizationReason": "Because the universe's topology is defined by shifting strategic interdependence, profound mirror relationships, and the difficult severing of edges from the base violence economy.",
   "headerFlavor": {
     "loreQuote": "A TRUE WARRIOR DOESN'T NEED A SWORD.",
-    "sysWarning": "// [SYS_STATE]: VIOLENCE LOOP ACTIVE — ESCAPE VECTOR UNRESOLVED",
+    "sysWarning": "// [SYS_STATE]: VIOLENCE LOOP ACTIVE \u2014 ESCAPE VECTOR UNRESOLVED",
     "sysWarningColor": "amber"
   },
   "backgroundMotif": "paper",
   "revealOverlay": "gradient-top",
   "aiInsights": {
     "casual": "Vinland Saga looks like a Viking action story, but it's really about the invisible chains of revenge and the economy of war. Every character is tied to another through bloodshed, debt, or shared trauma. The 'Node Graph' helps visualize how hard it is to actually break free from this relentless cycle and choose peace.",
-    "deep": "Vinland Saga operates as a closed macro-economy of retributive violence, where 'Honor' and 'Revenge' act as algorithmic constraints reinforcing an endless zero-sum conflict loop. The Node Graph visualization highlights the agonizing difficulty of achieving an unhandled exception—true pacifism—because the network inherently punishes any node that attempts to sever its violent edges and exit the execution cycle."
+    "deep": "Vinland Saga operates as a closed macro-economy of retributive violence, where 'Honor' and 'Revenge' act as algorithmic constraints reinforcing an endless zero-sum conflict loop. The Node Graph visualization highlights the agonizing difficulty of achieving an unhandled exception\u2014true pacifism\u2014because the network inherently punishes any node that attempts to sever its violent edges and exit the execution cycle."
   },
   "powerSystem": [
     {
@@ -122,7 +122,13 @@
       "slug": "thorfinn-karlsefni",
       "description": "Thorfinn Karlsefni is a  from Vinland Saga.",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Askeladd",
+        "King Canute",
+        "Einar",
+        "Thors Snorresson",
+        "Thorkell the Tall"
+      ]
     },
     {
       "name": "Askeladd",
@@ -142,7 +148,11 @@
       "slug": "askeladd",
       "description": "Askeladd is a  from Vinland Saga.",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni",
+        "King Canute",
+        "Thors Snorresson"
+      ]
     },
     {
       "name": "King Canute",
@@ -163,7 +173,11 @@
       "slug": "king-canute",
       "description": "King Canute is a  from Vinland Saga.",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni",
+        "Askeladd",
+        "Thorkell the Tall"
+      ]
     },
     {
       "name": "Thors Snorresson",
@@ -184,7 +198,11 @@
       "slug": "thors-snorresson",
       "description": "Thors Snorresson is a  from Vinland Saga.",
       "role": "Main",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni",
+        "Askeladd",
+        "Thorkell the Tall"
+      ]
     },
     {
       "name": "Thorkell the Tall",
@@ -205,7 +223,11 @@
       "slug": "thorkell-the-tall",
       "description": "Thorkell the Tall is a  from Vinland Saga.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Thors Snorresson",
+        "King Canute",
+        "Thorfinn Karlsefni"
+      ]
     },
     {
       "name": "Einar",
@@ -225,7 +247,9 @@
       "slug": "einar",
       "description": "Einar is a  from Vinland Saga.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Thorfinn Karlsefni"
+      ]
     }
   ],
   "relationships": [
@@ -389,7 +413,7 @@
   ],
   "causalEvents": [
     {
-      "name": "The Desertion at Hjörungavágr",
+      "name": "The Desertion at Hj\u00f6rungav\u00e1gr",
       "trigger": "Thors fakes his death during a massive naval battle to escape the Jomsvikings with his family.",
       "consequence": "Creates the first ideological blueprint for the 'True Warrior' anomaly, triggering a delayed assassination correction years later.",
       "timelinePosition": "Pre-Narrative (986 CE)",
@@ -462,8 +486,8 @@
   "hero": {
     "systemType": "relational",
     "microHook": "Track control edges before reading motives.",
-    "thesis": "Because the universe's topology is defined by shifting strategic interdependence, profound mirror relationships, and the difficult severing…",
+    "thesis": "Because the universe's topology is defined by shifting strategic interdependence, profound mirror relationships, and the difficult severing\u2026",
     "primarySystemType": "entity_db"
   },
-  "introductionSummary": "Vinland Saga models a retributive violence economy where slavery, land conquest, and fealty chains structure every relationship — and Thorfinn's arc is a slow, costly process of discovering what it takes to build something that doesn't depend on anyone dying. The node graph captures the dependency network: Ketil's farm, Floki's expansion plans, Canute's divine kingship project, and Thorfinn's revenge circuit all represent different structural solutions to the same problem of how people organize power when they can't compete through raw force alone."
+  "introductionSummary": "Vinland Saga models a retributive violence economy where slavery, land conquest, and fealty chains structure every relationship \u2014 and Thorfinn's arc is a slow, costly process of discovering what it takes to build something that doesn't depend on anyone dying. The node graph captures the dependency network: Ketil's farm, Floki's expansion plans, Canute's divine kingship project, and Thorfinn's revenge circuit all represent different structural solutions to the same problem of how people organize power when they can't compete through raw force alone."
 }

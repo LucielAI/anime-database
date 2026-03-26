@@ -183,7 +183,12 @@
       ],
       "primaryAbility": "Invincible Fighting / Dark Impulse",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Takemichi Hanagaki",
+        "Ken Ryuuguji",
+        "Keisuke Baji",
+        "Tadaomi Hanemiya"
+      ]
     },
     {
       "name": "Ken Ryuuguji",

@@ -285,10 +285,11 @@
       "malId": 118279,
       "primaryAbility": "Summoning and Fortress Control",
       "slug": "perugius-dola",
-      "description": "Perugius Dola is a  from Mushoku Tensei: Jobless Reincarnation.",
+      "description": "Perugius Dola is a Hero-Class summoner who controls a sky fortress and maintains magical authority, acting as an institutional gatekeeper with high symbolic and logistical leverage over anti-Hitogami operations in Mushoku Tensei: Jobless Reincarnation.",
       "role": "Supporting",
       "relationships": [
-        "Mushoku Tensei: Isekai Ittara Honki Dasu"
+        "Orsted",
+        "Rudeus Greyrat"
       ]
     },
     {
@@ -307,8 +308,12 @@
       "primaryAbility": "Immortal Demon Physiology / Armor Synchronization",
       "malId": 118211,
       "slug": "badigadi",
-      "description": "Badigadi is a  from Mushoku Tensei: Jobless Reincarnation.",
-      "relationships": [],
+      "description": "Badigadi is an Immortal Demon King connected to the sentient Fighting God Armor, whose ties and unpredictable loyalties make him a historical wildcard and anomaly delivery platform within the Mushoku Tensei: Jobless Reincarnation universe.",
+      "relationships": [
+        "Hitogami",
+        "Orsted",
+        "Kishirika Kishirisu"
+      ],
       "role": "Supporting"
     }
   ],
