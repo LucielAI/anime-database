@@ -109,7 +109,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/249647.jpg?s=95cecc21f3db10318c68a0863f0132c8",
       "malId": 71,
       "slug": "l-lawliet",
-      "description": "L Lawliet is a  from Death Note.",
+      "description": "L Lawliet is the world's greatest detective, a reclusive genius who solves impossible cases without ever showing his face, from Death Note.",
       "role": "Main",
       "relationships": [
         "Death Note",
@@ -132,7 +132,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/63870.jpg?s=3adaed92c13123a9649ccc0cc6551f7d",
       "malId": 80,
       "slug": "light-yagami",
-      "description": "Light Yagami is a  from Death Note.",
+      "description": "Light Yagami is a brilliant student who discovers a supernatural notebook that kills anyone whose name is written in it, then appoints himself judge of the world, from Death Note.",
       "role": "Main",
       "relationships": [
         "Death Note",
@@ -155,7 +155,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/31498.jpg?s=021fbd3f7ad05577fbbcd8cfb52e402b",
       "malId": 463,
       "slug": "mello",
-      "description": "Mello is a  from Death Note.",
+      "description": "Mello is a mastermind and successor to L who channels his intellect through the criminal underworld, using organized crime and strategic risk escalation to pursue Kira, from Death Note.",
       "role": "Supporting",
       "relationships": [
         "Death Note",
@@ -178,7 +178,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/5/30971.jpg?s=0af596d087b34f6e05942dcae60aebae",
       "malId": 835,
       "slug": "misa-amane",
-      "description": "Misa Amane is a  from Death Note.",
+      "description": "Misa Amane is a model and pop idol who becomes the second Kira after receiving a Death Note, wielding Shinigami Eyes that let her see any human's true name, from Death Note.",
       "role": "Supporting",
       "relationships": [
         "Death Note",
@@ -201,7 +201,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/13/77339.jpg?s=e045ccd8110b534c2668b4e7a02ac22f",
       "malId": 464,
       "slug": "near",
-      "description": "Near is a  from Death Note.",
+      "description": "Near is a child detective and successor to L who investigates Kira from afar using toys, remote cameras, and meticulous data synthesis rather than direct confrontation, from Death Note.",
       "role": "Supporting",
       "relationships": [
         "Death Note",
@@ -247,7 +247,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/59125.jpg?s=e258ccc6e6f6ed00c837b5ae8bced941",
       "malId": 75,
       "slug": "ryuk",
-      "description": "Ryuk is a  from Death Note.",
+      "description": "Ryuk is a Shinigami, a god of death who drops a Death Note into the human world out of boredom and observes the chaos that follows without ever intervening, from Death Note.",
       "role": "Main",
       "relationships": [
         "Death Note",
@@ -270,7 +270,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/14/36951.jpg?s=e7018dcde90b6f70f192eb36b0e2c81b",
       "malId": 1904,
       "slug": "teru-mikami",
-      "description": "Teru Mikami is a  from Death Note.",
+      "description": "Teru Mikami is a fanatical prosecutor who worships Kira as divine justice and becomes the third Kira, acting as Light's automated proxy executioner, from Death Note.",
       "role": "Supporting",
       "relationships": [
         "Death Note",

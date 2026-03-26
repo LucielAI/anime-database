@@ -221,7 +221,12 @@
       ],
       "primaryAbility": "Elite Combat / Vice-Commander Authority",
       "role": "Supporting",
-      "relationships": []
+      "relationships": [
+        "Manjiro Sano",
+        "Takemichi Hanagaki",
+        "Keisuke Baji",
+        "Tadaomi Hanemiya"
+      ]
     },
     {
       "name": "Keisuke Baji",

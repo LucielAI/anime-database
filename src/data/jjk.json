@@ -122,7 +122,7 @@
       "slug": "satoru-gojo",
       "description": "Satoru Gojo is the most powerful Jujutsu sorcerer and mentor from Jujutsu Kaisen.",
       "role": "Main",
-      "relationships": []
+      "relationships": ["Yuta Okkotsu", "Yuji Itadori", "Megumi Fushiguro"]
     },
     {
       "name": "Ryomen Sukuna",
