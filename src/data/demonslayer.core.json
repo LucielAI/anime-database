@@ -89,7 +89,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/6/386735.jpg?s=7327e90f2310ececd18696cd4aa2ff4e",
       "malId": 146156,
       "slug": "tanjiro-kamado",
-      "description": "Tanjiro Kamado is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "determined slate-wielding water breather who hunts demons after his family is slaughtered and his sister Nezuko is turned",
       "role": "Main",
       "relationships": [
         "Kimetsu no Yaiba",
@@ -117,7 +117,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/378254.jpg?s=c3cdc50f2d9f3b30e4453c8ca1f8460f",
       "malId": 146157,
       "slug": "nezuko-kamado",
-      "description": "Nezuko Kamado is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "soft-spoken demon girl who retains human consciousness despite her transformation, fighting to protect those she loves",
       "role": "Main",
       "relationships": [
         "Kimetsu no Yaiba",
@@ -145,7 +145,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/4/384669.jpg?s=c9d7f04d71e6651de82cb1e56f52e8e0",
       "malId": 151156,
       "slug": "muzan-kibutsuji",
-      "description": "Muzan Kibutsuji is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "immortal demon progenitor who views humans as inferior, relentlessly hunting the Tamado and Ufotable's breath styles",
       "role": "Supporting",
       "relationships": [
         "Kimetsu no Yaiba",
@@ -170,7 +170,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/10/423443.jpg?s=2f06005562d13647b1a8280b93db9d54",
       "malId": 151143,
       "slug": "kyojuro-rengoku",
-      "description": "Kyojuro Rengoku is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "flame Hashira with an unwavering moral compass who battles demons with passionate honesty",
       "role": "Supporting",
       "relationships": [
         "Kimetsu no Yaiba",
@@ -197,7 +197,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/423445.jpg?s=a049de02a43de100a4b68b759a95fa41",
       "malId": 146735,
       "slug": "giyu-tomioka",
-      "description": "Giyu Tomioka is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "reserved water Hashira who carries survivor's guilt, master of the water breathing style",
       "role": "Supporting",
       "relationships": [
         "Kimetsu no Yaiba",
@@ -225,7 +225,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/3/386591.jpg?s=3c18dc65ee6cd3a032214d6a6e49ac9e",
       "malId": 146736,
       "slug": "shinobu-kocho",
-      "description": "Shinobu Kocho is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "insect Hashira with a deceptive cheerful demeanor who fights with precision and lethal grace",
       "role": "Supporting",
       "relationships": [
         "Kimetsu no Yaiba",
@@ -252,7 +252,7 @@
       "imageUrl": "https://myanimelist.net/images/characters/2/464775.jpg",
       "malId": 174147,
       "slug": "akaza",
-      "description": "Akaza is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "demon moon with a code of honor who respects strength above all else",
       "relationships": [],
       "role": "Antagonist"
     },
@@ -271,7 +271,7 @@
       "imageUrl": "https://myanimelist.net/images/characters/10/406156.jpg",
       "malId": 174145,
       "slug": "kokushibo",
-      "description": "Kokushibo is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "first upper moon with peerless swordsmanship and devastating blood demon techniques",
       "relationships": [],
       "role": "Antagonist"
     },
@@ -290,7 +290,7 @@
       "imageUrl": "https://myanimelist.net/images/characters/3/465011.jpg",
       "malId": 170152,
       "slug": "douma",
-      "description": "Douma is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "cold, manipulative upper moon who feigns compassion while committing horrors",
       "relationships": [],
       "role": "Antagonist"
     },
@@ -309,7 +309,7 @@
       "imageUrl": "https://cdn.myanimelist.net/images/characters/2/387497.jpg?s=e6703bc6bca651607032e86749bfdc2a",
       "malId": 151150,
       "slug": "kagaya-ubuyashiki",
-      "description": "Kagaya Ubuyashiki is a  from Demon Slayer: Kimetsu no Yaiba.",
+      "description": "terminally ill leader of the Demon Slayer Corps who orchestrates the war against Muzan",
       "role": "Supporting",
       "relationships": [
         "Kimetsu no Yaiba",
