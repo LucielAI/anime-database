@@ -180,14 +180,20 @@ function CompareRow({ label, left, right, index }) {
 
 export default function CompareRoute() {
   const [searchParams, setSearchParams] = useSearchParams()
-  // Use window.location directly — more reliable than useLocation() for
-  // initial URL params on mobile where React Router may not sync in time
-  const getParam = (name) => {
-    if (typeof window !== 'undefined') {
-      const sp = new URLSearchParams(window.location.search)
-      const v = sp.get(name)
-      if (v) return v
+  // Parse URL params from window.location as a stable initial value.
+  // Using URL() constructor is the most reliable cross-browser approach.
+  const getInitialParam = (name) => {
+    try {
+      return new URL(window.location.href).searchParams.get(name) || ''
+    } catch {
+      return ''
     }
+  }
+  const getParam = (name) => {
+    // Primary: use URL().searchParams (most reliable on mobile)
+    const fromUrl = getInitialParam(name)
+    if (fromUrl) return fromUrl
+    // Fallback: useSearchParams (works for programmatic navigation)
     return searchParams.get(name) || ''
   }
   // Support both ?left=slug&right=slug and ?a=slug&b=slug URL formats
