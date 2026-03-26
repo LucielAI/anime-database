@@ -86,7 +86,7 @@
       "_fetchFailed": false,
       "malId": 40,
       "slug": "monkey-d.-luffy",
-      "description": "Monkey D. Luffy is a  from One Piece.",
+      "description": "Monkey D. Luffy is the Straw Hat Emperor and Fourth Yonko whose Gear 5 awakening rewrites the rules of his rubber body, building impossible alliances through pure belief in people, from One Piece.",
       "role": "Main",
       "relationships": [
         "One Piece",
@@ -115,7 +115,7 @@
       "_fetchFailed": false,
       "malId": 3331,
       "slug": "marshall-d.-teach",
-      "description": "Marshall D. Teach is a  from One Piece.",
+      "description": "Marshall D. Teach is Blackbeard, the only person in history to wield two Devil Fruits, who killed his mentor Whitebeard to claim the Yami Yami no Mi and exploit the system's most critical vulnerability, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",
@@ -140,7 +140,7 @@
       "_fetchFailed": false,
       "malId": 727,
       "slug": "red-haired-shanks",
-      "description": "Red-Haired Shanks is a  from One Piece.",
+      "description": "Red-Haired Shanks is a Four Emperors Yonko who abandoned his quest for One Piece to become a stabilizing broker in the New World, using his implicit threat to prevent cascade failures in the broader power network, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",
@@ -169,7 +169,7 @@
       "_fetchFailed": false,
       "malId": 17142,
       "slug": "silvers-rayleigh",
-      "description": "Silvers Rayleigh is a  from One Piece.",
+      "description": "Silvers Rayleigh is the Roger Pirates' First Mate and Dark King who masters all three types of Haki, serving as the historical memory node connecting the Void Century secret to present-day power players, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",
@@ -196,7 +196,7 @@
       "_fetchFailed": false,
       "malId": 61,
       "slug": "nico-robin",
-      "description": "Nico Robin is a  from One Piece.",
+      "description": "Nico Robin is the Straw Hat Crew's Archaeologist and the only person in the world who can read Poneglyphs, making her the cryptographic keystone whose survival threatens the World Government's foundational legitimacy, from One Piece.",
       "role": "Main",
       "relationships": [
         "One Piece",
@@ -225,7 +225,7 @@
       "_fetchFailed": false,
       "malId": 725,
       "slug": "buggy-the-clown",
-      "description": "Buggy the Clown is a  from One Piece.",
+      "description": "Buggy the Clown is the Cross Guild founder and accidental Yonko-level operator whose unexpected rise demonstrates that in complex networks, social proof can route influence entirely decoupled from actual capability, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",
@@ -254,7 +254,7 @@
       "_fetchFailed": false,
       "malId": 2064,
       "slug": "dracule-mihawk",
-      "description": "Dracule Mihawk is a  from One Piece.",
+      "description": "Dracule Mihawk is Hawk-Eyes, the World's Strongest Swordsman and former Warlord who operates as a neutral node whose non-alignment is itself a strategic asset, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",
@@ -282,7 +282,7 @@
       "systemBio": "An institutional memory node — Sengoku's value lies in his institutional knowledge of the Void Century, the Roger era, and the long-term strategic calculations of the World Government. His position bridges the current era's conflicts with the historical data that drives them.",
       "malId": 13018,
       "slug": "sengoku",
-      "description": "Sengoku is a  from One Piece.",
+      "description": "Sengoku is the former Fleet Admiral and Buddha whose institutional memory of the Roger era, the Void Century, and long-term World Government strategy bridges current conflicts with the historical data driving them, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",
@@ -311,7 +311,7 @@
       "_fetchFailed": false,
       "malId": 8064,
       "slug": "monkey-d.-garp",
-      "description": "Monkey D. Garp is a  from One Piece.",
+      "description": "Monkey D. Garp is the Hero of the Marines and legendary Vice Admiral who raised Luffy and Ace as his own grandchildren, creating a structural bridge between the Revolutionary Army, Marines, and the next generation of pirates, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",
@@ -340,7 +340,7 @@
       "_fetchFailed": false,
       "malId": 2751,
       "slug": "whitebeard",
-      "description": "Whitebeard is a  from One Piece.",
+      "description": "Whitebeard is Edward Newgate, the deceased Yonko and strongest man in the world whose death at Marineford triggered the power vacuum that defined the current era, from One Piece.",
       "role": "Supporting",
       "relationships": [
         "One Piece",

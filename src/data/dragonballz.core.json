@@ -156,8 +156,8 @@
       "malId": 246,
       "role": "Main",
       "slug": "goku",
-      "description": "Goku is a Main from Dragon Ball Z.",
-      "relationships": []
+      "description": "Goku is the Saiyan warrior and Ultra Instinct master who fights to find his own limit rather than to win, inspiring everyone around him to become stronger through the pure joy of combat, from Dragon Ball Z.",
+      "relationships": ["Vegeta", "Gohan", "Krillin", "Piccolo", "Frieza", "Majin Buu"]
     },
     {
       "name": "Vegeta",
@@ -176,7 +176,7 @@
       "malId": 913,
       "role": "Main",
       "slug": "vegeta",
-      "description": "Vegeta is a Main from Dragon Ball Z.",
+      "description": "Vegeta is the Prince of all Saiyans and elite warrior whose pride is both his greatest strength and deepest wound, driving him to train harder than anyone to never be surpassed by Goku, from Dragon Ball Z.",
       "relationships": [
         "Dragon Ball GT",
         "Dragon Ball Z",
@@ -205,8 +205,8 @@
       "malId": 3694,
       "role": "Antagonist",
       "slug": "frieza",
-      "description": "Frieza is a Antagonist from Dragon Ball Z.",
-      "relationships": []
+      "description": "Frieza is the Galactic Emperor and former dominant species who genocided the Saiyan race out of fear and has never trained a day in his life, relying purely on biological talent and cruelty to maintain power, from Dragon Ball Z.",
+      "relationships": ["Vegeta", "Goku", "Gohan"]
     },
     {
       "name": "Cell",
@@ -225,7 +225,7 @@
       "malId": 1879,
       "role": "Antagonist",
       "slug": "cell",
-      "description": "Cell is a Antagonist from Dragon Ball Z.",
+      "description": "Cell is the Perfect Bio-Engineered Warrior created by Dr. Gero who incorporates the DNA of Earth's greatest fighters including Goku, Vegeta, and Frieza, achieving Perfect Form by absorbing Android 17 and 18, from Dragon Ball Z.",
       "relationships": [
         "Dragon Ball GT",
         "Dragon Ball Z",
@@ -254,7 +254,7 @@
       "malId": 1893,
       "role": "Antagonist",
       "slug": "majin-buu",
-      "description": "Majin Buu is a Antagonist from Dragon Ball Z.",
+      "description": "Majin Buu is the ancient magical entity of pure destructive potential whose lack of logic, strategy, or upper power bound makes him the system's ultimate chaos factor that cannot be analyzed by ki sensing or power levels, from Dragon Ball Z.",
       "relationships": [
         "Dragon Ball GT",
         "Dragon Ball Z",
@@ -283,8 +283,8 @@
       "malId": 1845,
       "role": "Main",
       "slug": "gohan",
-      "description": "Gohan is a Main from Dragon Ball Z.",
-      "relationships": []
+      "description": "Gohan is the hidden potential Saiyan and scholar whose dormant power surpasses even Goku when pushed to the limit, yet rejects the fighting path in favor of academic life, making him the ultimate swing factor in any crisis, from Dragon Ball Z.",
+      "relationships": ["Goku", "Piccolo", "Cell", "Krillin"]
     },
     {
       "name": "Piccolo",
@@ -303,7 +303,7 @@
       "malId": 914,
       "role": "Main",
       "slug": "piccolo",
-      "description": "Piccolo is a Main from Dragon Ball Z.",
+      "description": "Piccolo is the Namekian Fusion Master who transitioned from villain to Earth's greatest defender through his bond with Gohan, representing the path of disciplined training and mentorship as a consistently effective support fighter, from Dragon Ball Z.",
       "relationships": [
         "Dragon Ball",
         "Dragon Ball GT",
@@ -332,7 +332,7 @@
       "malId": 1925,
       "role": "Main",
       "slug": "trunks",
-      "description": "Trunks is a Main from Dragon Ball Z.",
+      "description": "Trunks is the Future Warrior and hybrid Saiyan who traveled back in time from an android-destroyed alternate timeline to warn the Z Fighters, fundamentally reshaping the entire timeline's power trajectory through a single piece of intelligence, from Dragon Ball Z.",
       "relationships": [
         "Dragon Ball GT",
         "Dragon Ball Z",
@@ -361,8 +361,8 @@
       "malId": 1833,
       "role": "Main",
       "slug": "krillin",
-      "description": "Krillin is a Main from Dragon Ball Z.",
-      "relationships": []
+      "description": "Krillin is the Strongest Human and overachiever who dies more than anyone else in the series yet keeps returning, proving that the ki system has room for human bravery at any tier through the Destructo Disc technique that bypasses power levels entirely, from Dragon Ball Z.",
+      "relationships": ["Goku", "Gohan", "Piccolo", "Frieza"]
     },
     {
       "name": "Broly",
@@ -381,8 +381,8 @@
       "malId": 22865,
       "role": "Antagonist",
       "slug": "broly",
-      "description": "Broly is a Antagonist from Dragon Ball Z.",
-      "relationships": []
+      "description": "Broly is the Legendary Super Saiyan berserker born with such overwhelming power that he was imprisoned on a remote planet, becoming the system's argument that strength without discipline is indistinguishable from pure destruction, from Dragon Ball Z.",
+      "relationships": ["Vegeta", "Goku", "Paragus"]
     }
   ],
   "factions": [

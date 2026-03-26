@@ -98,7 +98,7 @@
       "malId": 17,
       "role": "Main",
       "slug": "naruto-uzumaki",
-      "description": "Naruto Uzumaki is a Main from Naruto.",
+      "description": "Naruto Uzumaki is the Seventh Hokage and jinchuriki of the Nine-Tails who transforms from the village's most hated orphan into its greatest hero through perseverance and an irrational commitment to never giving up on anyone, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
@@ -127,7 +127,7 @@
       "malId": 13,
       "role": "Main",
       "slug": "sasuke-uchiha",
-      "description": "Sasuke Uchiha is a Main from Naruto.",
+      "description": "Sasuke Uchiha is the Last Uchiha and Shadow Hokage who journeys from loyal village heir to apostate avenger to eventual defender, driven by the trauma of Itachi's sacrifice and his own fractured identity, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
@@ -156,7 +156,7 @@
       "malId": 85,
       "role": "Supporting",
       "slug": "kakashi-hatake",
-      "description": "Kakashi Hatake is a Supporting from Naruto.",
+      "description": "Kakashi Hatake is the Sixth Hokage and legendary Copy Ninja who trained three Kage across four generations, bridging institutional trauma and eventual reconciliation through the power of meaningful connections, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
@@ -185,7 +185,7 @@
       "malId": 2007,
       "role": "Supporting",
       "slug": "shikamaru-nara",
-      "description": "Shikamaru Nara is a Supporting from Naruto.",
+      "description": "Shikamaru Nara is the strategic prodigy and Advisor to the Hokage whose lazy exterior conceals the sharpest tactical mind in the shinobi world, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
@@ -214,7 +214,7 @@
       "malId": 2455,
       "role": "Main",
       "slug": "orochimaru",
-      "description": "Orochimaru is a Main from Naruto.",
+      "description": "Orochimaru is the Serpent Sannin and S-rank scientific criminal who rejected the village system's constraints to pursue forbidden jutsu and immortality, operating as the series' most consequential unauthorized researcher, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto: Shippuuden",
@@ -243,7 +243,7 @@
       "malId": 2767,
       "role": "Supporting",
       "slug": "tsunade",
-      "description": "Tsunade is a Supporting from Naruto.",
+      "description": "Tsunade is the Fifth Hokage and Slug Princess, the world's greatest medical ninja who created the battlefield rule protecting medical shinobi and demonstrates that true strength means choosing to protect others over self-preservation, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
@@ -272,7 +272,7 @@
       "malId": 2423,
       "role": "Supporting",
       "slug": "jiraiya",
-      "description": "Jiraiya is a Supporting from Naruto.",
+      "description": "Jiraiya is the Toad Sage Sannin and Spy Master who trained three of the series' most pivotal figures—Nagato, Minato, and Naruto—and whose death became the ultimate teaching moment about what it means to be a shinobi, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
@@ -302,7 +302,7 @@
       "malId": 7571,
       "role": "Supporting",
       "slug": "hiruzen-sarutobi",
-      "description": "Hiruzen Sarutobi is a Supporting from Naruto.",
+      "description": "Hiruzen Sarutobi is the Third Hokage and longest-serving leader of Konoha who struggled to balance institutional moderation against hardliner factions, sacrificing his afterlife to permanently bind Orochimaru's power, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
@@ -330,7 +330,7 @@
       "malId": 14,
       "role": "Main",
       "slug": "itachi-uchiha",
-      "description": "Itachi Uchiha is a Main from Naruto.",
+      "description": "Itachi Uchiha is the Martyr Uchiha who massacred his own clan on Government orders to prevent civil war, lived as a criminal to protect Sasuke, and engineered his own death to trigger his brother's awakening, from Naruto.",
       "relationships": [
         "Naruto",
         "Naruto: Shippuuden",
