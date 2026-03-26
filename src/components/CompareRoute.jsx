@@ -68,29 +68,39 @@ export default function CompareRoute() {
 
   const [leftData, setLeftData] = useState(null)
   const [rightData, setRightData] = useState(null)
-  const [loading, setLoading] = useState(false)
+
+  // Derive loading state from whether we have IDs but no data yet
+  const loading = (leftId || rightId) && !leftData && !rightData
 
   // Load actual universe core payloads (not just catalog metadata)
   useEffect(() => {
     if (!leftId && !rightId) return
-    setLoading(true)
+    let cancelled = false
     Promise.all([
       leftId ? loadUniverseBySlug(leftId) : Promise.resolve(null),
       rightId ? loadUniverseBySlug(rightId) : Promise.resolve(null),
     ]).then(([l, r]) => {
+      if (cancelled) return
       setLeftData(l)
       setRightData(r)
-      setLoading(false)
     }).catch(() => {
+      if (cancelled) return
       setLeftData(UNIVERSE_CATALOG_MAP[leftId] || null)
       setRightData(UNIVERSE_CATALOG_MAP[rightId] || null)
-      setLoading(false)
     })
+    return () => { cancelled = true }
   }, [leftId, rightId])
 
   // Merge catalog preview data with loaded payload data
-  const left = leftData ? { ...UNIVERSE_CATALOG_MAP[leftId], ...leftData } : null
-  const right = rightData ? { ...UNIVERSE_CATALOG_MAP[rightId], ...rightData } : null
+  const left = useMemo(() => {
+    if (!leftData) return null
+    return { ...UNIVERSE_CATALOG_MAP[leftId], ...leftData }
+  }, [leftData, leftId])
+
+  const right = useMemo(() => {
+    if (!rightData) return null
+    return { ...UNIVERSE_CATALOG_MAP[rightId], ...rightData }
+  }, [rightData, rightId])
 
   const comparisonStats = useMemo(() => getCompareStats(left, right), [left, right])
 

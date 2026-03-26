@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function CounterTree({ counterplay = [], characters = [], isRevealing, revealStep }) {
   const [selectedEdge, setSelectedEdge] = useState(null)
@@ -7,28 +7,39 @@ export default function CounterTree({ counterplay = [], characters = [], isRevea
   const clearRef = useRef(null)
 
   // Auto-highlight: select the first counterplay entry on load
-  const triggerPulse = useCallback((delay = 600) => {
-    if (timerRef.current) clearTimeout(timerRef.current)
-    if (clearRef.current) clearTimeout(clearRef.current)
-    timerRef.current = setTimeout(() => {
-      if (!hasInteracted && counterplay.length > 0) {
-        const targetIndex = 0
-        setSelectedEdge(targetIndex)
-        clearRef.current = setTimeout(() => {
-          setSelectedEdge(prev => prev === targetIndex ? null : prev)
-        }, 2000)
-      }
-    }, delay)
-    return () => { clearTimeout(timerRef.current); clearTimeout(clearRef.current) }
-  }, [counterplay, hasInteracted])
+  useEffect(() => {
+    if (!isRevealing) {
+      if (timerRef.current) clearTimeout(timerRef.current)
+      if (clearRef.current) clearTimeout(clearRef.current)
+      timerRef.current = setTimeout(() => {
+        if (!hasInteracted && counterplay.length > 0) {
+          const targetIndex = 0
+          setSelectedEdge(targetIndex)
+          clearRef.current = setTimeout(() => {
+            setSelectedEdge(prev => prev === targetIndex ? null : prev)
+          }, 2000)
+        }
+      }, 600)
+      return () => { clearTimeout(timerRef.current); clearTimeout(clearRef.current) }
+    }
+  }, [isRevealing, counterplay, hasInteracted])
 
   useEffect(() => {
-    if (!isRevealing) return triggerPulse(600)
-  }, [isRevealing, triggerPulse])
-
-  useEffect(() => {
-    if (isRevealing && revealStep === 4) return triggerPulse(0)
-  }, [isRevealing, revealStep, triggerPulse])
+    if (isRevealing && revealStep === 4) {
+      if (timerRef.current) clearTimeout(timerRef.current)
+      if (clearRef.current) clearTimeout(clearRef.current)
+      timerRef.current = setTimeout(() => {
+        if (!hasInteracted && counterplay.length > 0) {
+          const targetIndex = 0
+          setSelectedEdge(targetIndex)
+          clearRef.current = setTimeout(() => {
+            setSelectedEdge(prev => prev === targetIndex ? null : prev)
+          }, 2000)
+        }
+      }, 0)
+      return () => { clearTimeout(timerRef.current); clearTimeout(clearRef.current) }
+    }
+  }, [isRevealing, revealStep, counterplay, hasInteracted])
 
   useEffect(() => {
     return () => { clearTimeout(timerRef.current); clearTimeout(clearRef.current) }
