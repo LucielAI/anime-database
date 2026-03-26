@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug } from '../data/index.js'
 import SeoHead from './SeoHead'
 import { getClassificationLabel } from '../utils/getClassificationLabel'
@@ -180,9 +180,15 @@ function CompareRow({ label, left, right, index }) {
 
 export default function CompareRoute() {
   const [searchParams, setSearchParams] = useSearchParams()
+  // useLocation is more reliable for initial URL params on mobile than useSearchParams alone
+  const location = useLocation()
+  const getParam = (name) => {
+    const sp = new URLSearchParams(location.search)
+    return sp.get(name) || searchParams.get(name) || ''
+  }
   // Support both ?left=slug&right=slug and ?a=slug&b=slug URL formats
-  const leftId = searchParams.get('left') || searchParams.get('a') || ''
-  const rightId = searchParams.get('right') || searchParams.get('b') || ''
+  const leftId = getParam('left') || getParam('a') || ''
+  const rightId = getParam('right') || getParam('b') || ''
 
   const [leftData, setLeftData] = useState(null)
   const [rightData, setRightData] = useState(null)
