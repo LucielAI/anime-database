@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Clock3, Network, Zap, Users, BookOpen, ChevronRight, Share2 } from 'lucide-react'
 import SeoHead from './SeoHead'
-import { SITE_URL, SITE_NAME } from '../utils/seo'
+import { SITE_URL, SITE_NAME, buildInsightStructuredData } from '../utils/seo'
 
 const ICON_MAP = { Network, Zap, Users, BookOpen }
 
@@ -45,36 +45,8 @@ export default function InsightPost() {
   }
 
   const pageUrl = `${SITE_URL}/insights/${slug}`
-  const description = insight.content.find(b => b.type === 'thesis')?.text?.slice(0, 160) || insight.title
-
-  const structuredData = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'ScholarlyArticle',
-      name: insight.title,
-      description,
-      url: pageUrl,
-      about: {
-        '@type': 'Thing',
-        name: insight.universeAnime,
-      },
-      genre: 'System Analysis',
-      keywords: insight.tags?.join(', '),
-      datePublished: '2026-01-01',
-      author: { '@type': 'Organization', name: 'Hashi.Ai' },
-      publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
-      isPartOf: { '@type': 'Blog', name: `${SITE_NAME} Insights`, url: `${SITE_URL}/insights` },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
-        { '@type': 'ListItem', position: 2, name: 'Insights', item: `${SITE_URL}/insights` },
-        { '@type': 'ListItem', position: 3, name: insight.title, item: pageUrl },
-      ],
-    },
-  ]
+  const description = insight.content?.find((b) => b.type === 'thesis')?.text?.slice(0, 160) || insight.title
+  const structuredData = buildInsightStructuredData(insight || null, pageUrl)
 
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono">
