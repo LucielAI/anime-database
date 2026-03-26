@@ -337,6 +337,210 @@ export function buildFactionStructuredData(preview, faction, factionIndex) {
   ]
 }
 
+export function buildCompareStructuredData(left, right, leftId, rightId) {
+  if (!left || !right) return []
+
+  const compareUrl = `${SITE_URL}/compare?left=${leftId}&right=${rightId}`
+  const leftUrl = `${SITE_URL}/universe/${leftId}`
+  const rightUrl = `${SITE_URL}/universe/${rightId}`
+  const description = `Side-by-side system comparison of ${left.anime} and ${right.anime} power mechanics, factions, combat rules, and world logic.`
+
+  return [
+    // WebApplication schema — identifies this page as a comparison tool
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: `${left.anime} vs ${right.anime} — System Comparison`,
+      description,
+      url: compareUrl,
+      applicationCategory: 'ReferenceApplication',
+      operatingSystem: 'Any',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+      },
+      isPartOf: {
+        '@type': 'WebSite',
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+      },
+    },
+    // ItemList — tracks both universes in the comparison
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: `${left.anime} vs ${right.anime} Universe Comparison`,
+      description,
+      numberOfItems: 2,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: `${left.anime} System Analysis`,
+          url: leftUrl,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: `${right.anime} System Analysis`,
+          url: rightUrl,
+        },
+      ],
+    },
+    // Review schema for the left universe
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: `${left.anime} System Review`,
+      description: left.tagline || `System architecture analysis of ${left.anime}.`,
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+        ratingCount: left.stats?.characters || 0,
+      },
+      itemReviewed: {
+        '@type': 'Thing',
+        name: left.anime,
+        description: left.tagline || '',
+        url: leftUrl,
+      },
+      author: { '@type': 'Organization', name: 'Hashi.Ai' },
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
+    },
+    // Review schema for the right universe
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: `${right.anime} System Review`,
+      description: right.tagline || `System architecture analysis of ${right.anime}.`,
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+        ratingCount: right.stats?.characters || 0,
+      },
+      itemReviewed: {
+        '@type': 'Thing',
+        name: right.anime,
+        description: right.tagline || '',
+        url: rightUrl,
+      },
+      author: { '@type': 'Organization', name: 'Hashi.Ai' },
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
+    },
+    // BreadcrumbList
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Compare', item: `${SITE_URL}/compare` },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: `${left.anime} vs ${right.anime}`,
+          item: compareUrl,
+        },
+      ],
+    },
+  ]
+}
+
+export function buildBlogPostStructuredData(post, canonicalUrl) {
+  if (!post) return []
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.description || '',
+      url: canonicalUrl,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { '@type': 'Organization', name: post.author || 'Archive Intelligence' },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/favicon.svg`,
+        },
+      },
+      isPartOf: {
+        '@type': 'Blog',
+        name: `${SITE_NAME} Blog`,
+        url: `${SITE_URL}/blog`,
+      },
+      image: post.coverImage || DEFAULT_OG_IMAGE,
+      keywords: post.keywords || post.tags?.join(', ') || '',
+      inLanguage: 'en',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+        { '@type': 'ListItem', position: 3, name: post.title, item: canonicalUrl },
+      ],
+    },
+  ]
+}
+
+export function buildInsightStructuredData(insight, pageUrl) {
+  if (!insight) return []
+
+  const description =
+    insight.content?.find((b) => b.type === 'thesis')?.text?.slice(0, 160) ||
+    insight.title
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ScholarlyArticle',
+      name: insight.title,
+      description,
+      url: pageUrl,
+      about: {
+        '@type': 'Thing',
+        name: insight.universeAnime || insight.universe,
+      },
+      genre: 'System Analysis',
+      keywords: insight.tags?.join(', ') || '',
+      datePublished: insight.date || '2026-01-01',
+      dateModified: insight.date || '2026-01-01',
+      author: { '@type': 'Organization', name: 'Hashi.Ai' },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+      },
+      isPartOf: {
+        '@type': 'Blog',
+        name: `${SITE_NAME} Insights`,
+        url: `${SITE_URL}/insights`,
+      },
+      inLanguage: 'en',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Insights', item: `${SITE_URL}/insights` },
+        { '@type': 'ListItem', position: 3, name: insight.title, item: pageUrl },
+      ],
+    },
+  ]
+}
+
 export function buildUniverseStructuredData(preview, options = {}) {
   if (!preview) return []
 

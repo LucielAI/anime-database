@@ -4,7 +4,7 @@ import { ArrowRight, Calendar, ChevronLeft } from 'lucide-react'
 import SeoHead from './SeoHead'
 import { UNIVERSE_CATALOG_MAP } from '../data/index.js'
 import { getClassificationLabel } from '../utils/getClassificationLabel'
-import { SITE_URL, SITE_NAME } from '../utils/seo'
+import { SITE_URL, SITE_NAME, buildBlogPostStructuredData } from '../utils/seo'
 
 function formatDate(dateStr) {
   try {
@@ -129,30 +129,7 @@ export default function BlogPost() {
   const seoDescription = post?.description || ''
   const seoKeywords = post?.keywords || ''
 
-  const structuredData = post
-    ? [
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
-          headline: post.title,
-          description: post.description,
-          url: canonicalUrl,
-          datePublished: post.date,
-          author: { '@type': 'Organization', name: post.author || 'Archive Intelligence' },
-          publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
-          isPartOf: { '@type': 'Blog', name: `${SITE_NAME} Blog`, url: `${SITE_URL}/blog` },
-        },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Archive Home', item: `${SITE_URL}/` },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
-            { '@type': 'ListItem', position: 3, name: post.title, item: canonicalUrl },
-          ],
-        },
-      ]
-    : []
+  const structuredData = buildBlogPostStructuredData(post || null, canonicalUrl)
 
   return (
     <div className="min-h-screen bg-[#050508] text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden">
