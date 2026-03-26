@@ -1,12 +1,12 @@
-import { NextResponse } from 'next/server'
+import { next } from '@vercel/edge'
 
-export function middleware(request) {
+export default function middleware(request) {
   const url = new URL(request.url)
 
   // Trailing slash redirect (but preserve root /)
   if (url.pathname.endsWith('/') && url.pathname !== '/') {
     url.pathname = url.pathname.replace(/\/+$/, '')
-    return NextResponse.redirect(url, 308)
+    return Response.redirect(url.toString(), 308)
   }
 
   // Mixed-case /universe/ redirect to lowercase
@@ -15,11 +15,11 @@ export function middleware(request) {
     const lower = universeMatch[1].toLowerCase()
     if (universeMatch[1] !== lower) {
       url.pathname = `/universe/${lower}`
-      return NextResponse.redirect(url, 301)
+      return Response.redirect(url.toString(), 301)
     }
   }
 
-  return NextResponse.next()
+  return next()
 }
 
 export const config = {
