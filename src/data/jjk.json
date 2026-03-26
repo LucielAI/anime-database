@@ -164,7 +164,7 @@
       "slug": "kenjaku",
       "description": "Kenjaku is the ancient parasitic sorcerer and mastermind from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Satoru Gojo", "Ryomen Sukuna", "Rika Orimoto"]
     },
     {
       "name": "Yuta Okkotsu",
@@ -185,7 +185,7 @@
       "slug": "yuta-okkotsu",
       "description": "Yuta Okkotsu is a Special Grade sorcerer bound to the Queen of Curses from Jujutsu Kaisen.",
       "role": "Supporting",
-      "relationships": []
+      "relationships": ["Yuji Itadori", "Satoru Gojo"]
     },
     {
       "name": "Toji Fushiguro",
