@@ -257,6 +257,58 @@ export default function CompareRoute() {
           </div>
         )}
 
+        {/* VS Badge */}
+        <VsBadge left={left} right={right} />
+
+        {/* Quick Compare Badges */}
+        <div className="mb-5 animate-compare-slide-up animate-compare-delay-2">
+          <QuickCompareBadges left={left} right={right} />
+        </div>
+
+        {/* Stat Comparison Bars */}
+        <div className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden mb-5 animate-compare-slide-up animate-compare-delay-2">
+          <div className="flex items-center gap-2 px-5 py-4 border-b border-white/10 bg-black/20">
+            <TrendingUp className="w-3 h-3 text-cyan-400" />
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-white">Stat Comparison</h2>
+          </div>
+          <div className="p-5 space-y-4">
+            <StatBar left={left?.rules?.length || 0} right={right?.rules?.length || 0} label="Rules" />
+            <StatBar left={left?.factions?.length || 0} right={right?.factions?.length || 0} label="Factions" />
+            <StatBar left={left?.characters?.length || 0} right={right?.characters?.length || 0} label="Characters" />
+            <StatBar left={left?.relationships?.length || 0} right={right?.relationships?.length || 0} label="Relationships" />
+            <StatBar left={left?.causalEvents?.length || 0} right={right?.causalEvents?.length || 0} label="Causal Events" />
+            <StatBar left={left?.anomalies?.length || 0} right={right?.anomalies?.length || 0} label="Anomalies" />
+          </div>
+        </div>
+
+        {/* Character Head-to-Head */}
+        <div className="mb-5 animate-compare-slide-up animate-compare-delay-2">
+          <CharacterHeadToHead left={left} right={right} />
+        </div>
+
+        {/* CounterTree Integration */}
+        {left && right && hasCounterplayData(left) && hasCounterplayData(right) && (
+          <div className="rounded-2xl border border-cyan-400/30 bg-cyan-400/5 overflow-hidden mb-5 animate-compare-slide-up animate-compare-delay-2">
+            <div className="flex items-center gap-2 px-5 py-4 border-b border-cyan-400/30">
+              <GitBranch className="w-3 h-3 text-cyan-400" />
+              <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">Counterplay Analysis</h2>
+            </div>
+            <div className="p-5">
+              <p className="text-[10px] text-gray-400 mb-3">Both universes contain structured counter data. Explore the counters below:</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-[9px] uppercase tracking-wider text-purple-400/60 mb-2">{left.anime} Counters</p>
+                  <CounterTree universe={left} />
+                </div>
+                <div>
+                  <p className="text-[9px] uppercase tracking-wider text-orange-400/60 mb-2">{right.anime} Counters</p>
+                  <CounterTree universe={right} />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="compare-divider mb-5 animate-compare-slide-up animate-compare-delay-2" />
 
         <p className="text-[10px] text-gray-600 text-center mb-8 leading-relaxed animate-compare-slide-up animate-compare-delay-2">
