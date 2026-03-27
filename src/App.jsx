@@ -513,7 +513,7 @@ function Home() {
           <div className="flex-1">
             <p className="text-[10px] text-cyan-400/80 tracking-[0.2em] uppercase font-bold mb-1">30 universes mapped. More coming.</p>
             <h3 className="text-lg font-black text-white uppercase tracking-tight leading-tight">We drop new universes<br className="hidden sm:block" /> before the rest knows.</h3>
-            <p className="text-xs text-gray-500 mt-1.5">2,847 researchers already on the list. No spam.</p>
+            <p className="text-xs text-gray-500 mt-1.5">No spam.</p>
           </div>
           <div className="w-full md:w-auto md:min-w-[340px]">
             <NewsletterCTAHero />
