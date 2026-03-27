@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Network, Zap, Clock3, Users, Star, Mail } from 'lucide-react'
 import SeoHead from './SeoHead'
 import { SITE_NAME, SITE_URL } from '../utils/seo'
+import { UNIVERSE_CATALOG } from '../data/catalog'
 
 // CRO: Compact newsletter CTA for About page hero
 function NewsletterCTASlim() {
@@ -64,11 +65,13 @@ function NewsletterCTASlim() {
   )
 }
 
+const totalCharacters = UNIVERSE_CATALOG.reduce((s, a) => s + (a.stats?.characters || 0), 0)
+
 const STATS = [
-  { value: '21', label: 'Universes Mapped' },
-  { value: '161+', label: 'Characters Analyzed' },
+  { value: String(UNIVERSE_CATALOG.length), label: 'Universes Mapped' },
+  { value: String(totalCharacters), label: 'Characters Analyzed' },
   { value: '8', label: 'System Insights' },
-  { value: '3', label: 'Renderer Types' },
+  { value: '4', label: 'Renderer Types' },
 ]
 
 const SYSTEM_TYPES = [

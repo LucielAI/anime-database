@@ -15,6 +15,7 @@ import {
 } from './utils/seo'
 import { sortCatalogUniverses, filterCatalogUniverses, incrementUniverseLocalView, getDiscoveryClusters, getRelatedUniverseSuggestions } from './utils/discovery'
 import { DISCOVERY_CLUSTERS } from './data/discoveryMetadata'
+import { THEMATIC_PAGES } from './config/thematicPages'
 import {
   getHomepageFeaturedUniverses,
   getHomepageRequestCandidates,
@@ -511,9 +512,9 @@ function Home() {
       <section className="border-y border-cyan-400/10 bg-gradient-to-r from-[#080d1a] via-[#0d1220] to-[#080d1a]">
         <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 flex flex-col md:flex-row items-center gap-6">
           <div className="flex-1">
-            <p className="text-[10px] text-cyan-400/80 tracking-[0.2em] uppercase font-bold mb-1">30 universes mapped. More coming.</p>
+            <p className="text-[10px] text-cyan-400/80 tracking-[0.2em] uppercase font-bold mb-1">{UNIVERSE_CATALOG.length} universes mapped. More coming.</p>
             <h3 className="text-lg font-black text-white uppercase tracking-tight leading-tight">We drop new universes<br className="hidden sm:block" /> before the rest knows.</h3>
-            <p className="text-xs text-gray-500 mt-1.5">2,847 researchers already on the list. No spam.</p>
+            <p className="text-xs text-gray-500 mt-1.5">No spam.</p>
           </div>
           <div className="w-full md:w-auto md:min-w-[340px]">
             <NewsletterCTAHero />
@@ -788,7 +789,13 @@ function Home() {
       )}
 
       {/* Newsletter */}
-      <NewsletterCTA />
+      <Suspense fallback={
+        <div className="flex justify-center py-8">
+          <div className="w-5 h-5 border border-cyan-400/30 border-t-cyan-400 rounded-full animate-spin" />
+        </div>
+      }>
+        <NewsletterCTA />
+      </Suspense>
 
       <footer className="pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <div className="max-w-4xl text-center px-6">
@@ -815,6 +822,14 @@ function Home() {
           <a href="/search" className="hover:text-gray-400 transition-colors">Search</a>
           <span className="text-gray-700">·</span>
           <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="hover:text-gray-400 transition-colors">Contact</a>
+        </div>
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] tracking-[0.14em] uppercase">
+          <span className="text-gray-700 w-full text-center mb-1">Browse by System</span>
+          {THEMATIC_PAGES.map((page) => (
+            <Link key={page.slug} to={`/systems/${page.slug}`} className="text-gray-600 hover:text-cyan-400 transition-colors">
+              {page.title}
+            </Link>
+          ))}
         </div>
         <p className="text-[10px] tracking-[0.2em] uppercase text-gray-300">Created by Hashi.Ai</p>
       </footer>

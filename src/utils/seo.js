@@ -2,7 +2,7 @@ import { getClassificationLabel } from './getClassificationLabel.js'
 
 export const SITE_NAME = 'Anime Architecture Archive'
 export const SITE_URL = 'https://animearchive.app'
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/api/og`
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-fallback.png`
 
 function truncate(text, limit = 160) {
   if (!text) return ''
