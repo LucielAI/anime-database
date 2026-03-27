@@ -788,7 +788,13 @@ function Home() {
       )}
 
       {/* Newsletter */}
-      <NewsletterCTA />
+      <Suspense fallback={
+        <div className="flex justify-center py-8">
+          <div className="w-5 h-5 border border-cyan-400/30 border-t-cyan-400 rounded-full animate-spin" />
+        </div>
+      }>
+        <NewsletterCTA />
+      </Suspense>
 
       <footer className="pb-10 flex flex-col items-center gap-4 font-mono relative z-10">
         <div className="max-w-4xl text-center px-6">
