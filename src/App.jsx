@@ -492,7 +492,7 @@ function Home({ onSearchOpen }) {
 
       {/* Spotlight carousel - above the fold, right after hero */}
       <section className="max-w-6xl mx-auto px-4 md:px-6 py-10">
-        <SpotlightCarousel onSearchOpen={onSearchOpen} />
+        <SpotlightCarousel />
       </section>
 
       {/* Newsletter strip - secondary CTA, positioned after carousel */}

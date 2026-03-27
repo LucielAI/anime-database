@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, memo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Zap, Users, Network, Clock3, ShieldAlert } from 'lucide-react'
 import { UNIVERSE_CATALOG } from '../data/index.js'
@@ -22,7 +22,7 @@ const CAROUSEL_IDS = [
   'one-punch-man', 'bleach', 'chainsaw-man', 're-zero', 'mob-psycho-100',
 ]
 
-export default function SpotlightCarousel() {
+const SpotlightCarousel = memo(function SpotlightCarousel() {
   const [index, setIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [touchStart, setTouchStart] = useState(null)
@@ -144,17 +144,17 @@ export default function SpotlightCarousel() {
           )
         })}
 
-        {/* Gradient overlay */}
+        {/* Gradient overlay — reduced opacity so anime artwork shows through */}
         <div
           className="absolute inset-0 z-10 pointer-events-none"
           style={{
-            background: 'linear-gradient(to right, rgba(5,5,8,0.96) 0%, rgba(5,5,8,0.82) 45%, rgba(5,5,8,0.3) 100%)',
+            background: 'linear-gradient(to right, rgba(5,5,8,0.80) 0%, rgba(5,5,8,0.55) 35%, rgba(5,5,8,0.12) 100%)',
           }}
         />
         {/* Mobile gradient */}
         <div
           className="absolute inset-0 z-10 pointer-events-none sm:hidden"
-          style={{ background: 'linear-gradient(to top, rgba(5,5,8,0.98) 0%, rgba(5,5,8,0.5) 50%, rgba(5,5,8,0.1) 100%)' }}
+          style={{ background: 'linear-gradient(to top, rgba(5,5,8,0.85) 0%, rgba(5,5,8,0.35) 50%, rgba(5,5,8,0.04) 100%)' }}
         />
 
         {/* Content */}
@@ -296,4 +296,5 @@ export default function SpotlightCarousel() {
       )}
     </div>
   )
-}
+})
+export default SpotlightCarousel
