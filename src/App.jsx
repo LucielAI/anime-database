@@ -15,6 +15,7 @@ import {
 } from './utils/seo'
 import { sortCatalogUniverses, filterCatalogUniverses, incrementUniverseLocalView, getDiscoveryClusters, getRelatedUniverseSuggestions } from './utils/discovery'
 import { DISCOVERY_CLUSTERS } from './data/discoveryMetadata'
+import { THEMATIC_PAGES } from './config/thematicPages'
 import {
   getHomepageFeaturedUniverses,
   getHomepageRequestCandidates,
@@ -821,6 +822,14 @@ function Home() {
           <a href="/search" className="hover:text-gray-400 transition-colors">Search</a>
           <span className="text-gray-700">·</span>
           <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="hover:text-gray-400 transition-colors">Contact</a>
+        </div>
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] tracking-[0.14em] uppercase">
+          <span className="text-gray-700 w-full text-center mb-1">Browse by System</span>
+          {THEMATIC_PAGES.map((page) => (
+            <Link key={page.slug} to={`/systems/${page.slug}`} className="text-gray-600 hover:text-cyan-400 transition-colors">
+              {page.title}
+            </Link>
+          ))}
         </div>
         <p className="text-[10px] tracking-[0.2em] uppercase text-gray-300">Created by Hashi.Ai</p>
       </footer>
