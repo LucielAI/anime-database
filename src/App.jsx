@@ -316,7 +316,7 @@ function NewsletterCTAHero({ variant = 'default' }) {
   )
 }
 
-function Home() {
+function Home({ onSearchOpen }) {
   const [sortMode, setSortMode] = useState('latest')
   const [deferSecondary, setDeferSecondary] = useState(false)
   const [compareLeftId, setCompareLeftId] = useState(UNIVERSE_CATALOG[0]?.id || '')
@@ -334,7 +334,7 @@ function Home() {
     fetch('/blog-index.json')
       .then((res) => res.ok ? res.json() : null)
       .then((data) => {
-        if (data?.posts) setBlogPosts(data.posts.slice(0, 3))
+        if (data?.posts) setBlogPosts(data.posts.slice(0, 6))
       })
       .catch(() => {})
   }, [])
@@ -376,19 +376,6 @@ function Home() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // "/" keyboard shortcut opens search from anywhere
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    function onKey(e) {
-      if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
-        e.preventDefault()
-        setSearchOpen(true)
-      }
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [])
-
   const featuredUniverses = useMemo(() => getHomepageFeaturedUniverses(UNIVERSE_CATALOG, 3), [])
   const structureGroups = useMemo(() => getSystemStructureGroups(UNIVERSE_CATALOG, 6), [])
   const continuation = useMemo(() => getHomepageContinuation(UNIVERSE_CATALOG), [deferSecondary])
@@ -418,7 +405,7 @@ function Home() {
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#050508]/90 backdrop-blur-md border-b border-white/5 px-4 py-2 flex items-center gap-3 transform -translate-y-full transition-transform duration-300" id="sticky-search-bar">
         <Link to="/" className="shrink-0 text-[10px] font-bold tracking-[0.2em] uppercase text-gray-500 hover:text-white transition-colors hidden sm:block">AAA</Link>
         <button
-          onClick={() => setSearchOpen(true)}
+          onClick={() => onSearchOpen(true)}
           className="flex-1 flex items-center gap-2 max-w-md mx-auto h-9 px-4 rounded-full border border-white/10 hover:border-cyan-400/40 bg-white/5 hover:bg-white/10 text-gray-400 hover:text-cyan-400 transition-all text-[11px]"
         >
           <Search className="w-3.5 h-3.5 shrink-0" />
@@ -441,7 +428,7 @@ function Home() {
           {/* Hero search bar */}
           <div className="max-w-2xl mx-auto">
             <button
-              onClick={() => setSearchOpen(true)}
+              onClick={() => onSearchOpen(true)}
               className="w-full flex items-center gap-3 h-14 px-5 rounded-2xl border border-white/15 bg-white/[0.06] hover:bg-white/[0.10] hover:border-cyan-400/30 text-left transition-all group"
             >
               <Search className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors shrink-0" />
@@ -505,7 +492,7 @@ function Home() {
 
       {/* Spotlight carousel - above the fold, right after hero */}
       <section className="max-w-6xl mx-auto px-4 md:px-6 py-10">
-        <SpotlightCarousel onSearchOpen={() => setSearchOpen(true)} />
+        <SpotlightCarousel onSearchOpen={onSearchOpen} />
       </section>
 
       {/* Newsletter strip - secondary CTA, positioned after carousel */}
@@ -544,7 +531,7 @@ function Home() {
             return (
             <Link
               key={group.key}
-              to="/universes"
+              to={`/systems/${group.key}`}
               className={`group rounded-xl border bg-white/5 p-4 md:p-5 min-h-[132px] transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.01] ${visual.tone}`}
             >
               <div className="flex items-center justify-between gap-2 mb-2">
@@ -1233,7 +1220,7 @@ export default function App() {
     <HelmetProvider>
       <RouteScrollReset />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home onSearchOpen={setSearchOpen} />} />
         <Route path="/universes" element={<UniversesCatalogRoute />} />
         <Route path="/insights" element={<InsightsRoute />} />
         <Route path="/insights/:slug" element={<InsightPost />} />

@@ -1,0 +1,132 @@
+# NAVIGATION & DISCOVERABILITY AUDIT — animearchive.app
+Branch: sprint/2026-03-27-site-audit
+Date: 2026-03-27
+
+====================================================================
+SECTION 1: ALL ROUTES (from App.jsx Routes)
+====================================================================
+
+1.  /                          → Home               [NAV OK — root]
+2.  /universes                 → UniversesCatalog    [NAV OK — header, footer, hero, blog, about, thematic]
+3.  /insights                 → InsightsRoute       [NAV OK — footer, hero, BlogPost footer]
+4.  /insights/:slug           → InsightPost         [NAV OK — from InsightsRoute grid]
+5.  /universe/:id             → UniverseRoute       [NAV OK — everywhere]
+6.  /about                    → About               [NAV OK — footer, BlogIndex, BlogPost, ThematicPage]
+7.  /privacy                  → Privacy             [NAV OK — footer]
+8.  /compare                  → CompareRoute        [NAV OK — hero, About page]
+9.  /universe/:id/character/:charIndex → EntityRoute(type=character) [NAV OK — CharacterPage, FactionPage]
+10. /universe/:id/power/:powerIndex    → EntityRoute(type=power)     [NAV OK — PowerSystemPage]
+11. /universe/:id/faction/:factionIndex → EntityRoute(type=faction)  [NAV OK — FactionPage]
+12. /systems/:slug            → ThematicPage        [ORPHANED — see below]
+13. /blog                     → BlogIndex           [NAV OK — hero, BlogPost footer, ThematicPage]
+14. /blog/:slug              → BlogPost             [NAV OK — BlogIndex cards, Homepage latest-analysis section]
+15. /search                   → SearchResults       [NAV OK — footer, GlobalSearch submit]
+16. *                         → NotFound            [catches unknown routes]
+
+====================================================================
+SECTION 2: ORPHANED ROUTES (no navigation path)
+====================================================================
+
+**ORPHANED: /systems/:slug** (ThematicPage — ALL 6 slugs)
+
+  The entire /systems/:slug route group has ZERO links from any primary
+  navigation element (no header link, no footer link, no homepage section,
+  no catalog link).
+
+  The 6 slugs are:
+    - /systems/relational-systems
+    - /systems/counterplay-systems
+    - /systems/timeline-systems
+    - /systems/control-systems
+    - /systems/closed-loop-systems
+    - /systems/power-economy-systems
+
+  Current ONLY access paths:
+    (a) BlogIndex → hardcoded <Link to="/systems/power-economy-systems">
+        (BlogIndex.jsx line 193 — "Power Economy Systems" CTA button)
+    (b) ThematicPage → "Other system cards" cross-links (each of the 6
+        system pages shows cards for the other 5)
+
+  Practical impact:
+    - power-economy-systems: reachable from BlogIndex + 5 other system pages
+    - All other 5 slugs: ONLY reachable from power-economy-systems (via
+      ThematicPage cross-links) or from each other
+    - No path exists from /home, /universes, /compare, /about, /insights,
+      /blog, /search, or any footer/header to any /systems/:slug page
+
+  All 6 /systems/:slug pages are in public/sitemap.xml and public/llms.txt,
+  so search engines know they exist, but no human-accessible nav links to them.
+
+====================================================================
+SECTION 3: BROKEN LINKS
+====================================================================
+
+**BROKEN: /insights/anime-power-systems-ranked**
+  → Problem: Route renders InsightPost but slug does not exist in
+     src/data/insights-content.js. This is a BLOG post (public/blog/
+     and blog-index.json), not an insight. AI crawlers hitting
+     /insights/anime-power-systems-ranked via llms.txt get a 404.
+  → Correct URL: /blog/anime-power-systems-ranked
+
+**BROKEN: /insights/best-anime-worldbuilding**
+  → Problem: Same as above — a blog post, not an insight.
+  → Correct URL: /blog/best-anime-worldbuilding
+
+**BROKEN: /insights/lore-vs-sys-explained**
+  → Problem: Same as above — a blog post, not an insight.
+  → Correct URL: /blog/lore-vs-sys-explained
+
+  Root cause: scripts/generateLlms.js treats ALL .json files in
+  public/blog/ as "insights" (source: 'insights' hardcoded at line 44),
+  when in fact public/blog/ contains both blog posts AND insight posts.
+  The script should distinguish: files matching the insights-content.js
+  keys → /insights/:slug; others → /blog/:slug.
+  (Note: public/sitemap.xml is CORRECT — it puts these 3 under /blog/)
+
+====================================================================
+SECTION 4: NAVIGATION COVERAGE SUMMARY
+====================================================================
+
+Route                  | Nav Link Count | Notes
+-----------------------|----------------|------
+/                      | ∞ (root)       | Always accessible
+/universes            | 8+             | Footer, hero, catalog, cross-links
+/insights             | 2              | Footer, hero
+/insights/:slug       | 8+             | InsightsRoute grid only
+/universe/:id         | ∞              | Everywhere
+/about                | 5              | Footer (×2), BlogIndex, BlogPost, ThematicPage
+/privacy              | 1              | Footer only
+/compare              | 2              | Hero, About page
+/blog                 | 3              | Hero, BlogPost footer, ThematicPage
+/blog/:slug           | 3+             | BlogIndex cards, Homepage latest-analysis
+/search               | 2              | Footer, GlobalSearch modal submit
+/systems/:slug        | 0              | ORPHANED — only BlogIndex hardcode + self-cross-links
+
+====================================================================
+SECTION 5: ADDITIONAL OBSERVATIONS
+====================================================================
+
+POSITIVE:
+- Entity sub-routes (/universe/:id/character/:charIndex etc.) are well-linked
+  from within universe detail pages (CharacterPage, PowerSystemPage, FactionPage).
+- EntityRoute has a defensive bounds check (entityIndex < 0 || entityIndex >= entities.length)
+  that redirects to /universe/:id — so stale sitemap links for out-of-range indices
+  will not 404, they will redirect gracefully.
+- Homepage "Latest Analysis" section dynamically fetches /blog-index.json and
+  links to /blog/:slug — all 3 blog posts are valid and linked.
+- Footer has good coverage for static pages.
+- The "Explore by World Style" homepage section links to /universes with cluster
+  params — functional, though it bypasses /systems/:slug pages entirely.
+
+POTENTIAL ISSUES (non-broken but worth noting):
+- The /universes?cluster= filter links work correctly but the cluster labels
+  don't correspond to /systems/:slug paths — they're different taxonomy systems.
+- SpotlightCarousel line 208: to={`/compare?left=${current.id}&right=jjk`} —
+  "jjk" is hardcoded as the right comparison universe. This is a valid universe ID
+  and appears intentional (the carousel likely shows JJK as the comparison partner),
+  but worth verifying this is deliberate UX.
+- NotFound.jsx uses window.location.href (not React Router navigate) for the
+  random universe redirect — this causes a full page reload but is functionally correct.
+
+====================================================================
+END OF AUDIT

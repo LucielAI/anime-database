@@ -210,14 +210,14 @@ export default function About() {
       {/* Hero */}
       <header className="relative w-full py-20 px-6 overflow-hidden" style={{ background: 'radial-gradient(ellipse at 50% 0%, #0a1628 0%, #050508 70%)' }}>
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-cyan-400/20 rounded-full bg-cyan-400/5 mb-6">
-            <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-cyan-400/30 rounded-full bg-cyan-400/8 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
             <span className="text-[10px] uppercase tracking-widest text-cyan-400">The Archive is Live</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 leading-none">
             The Anime Intelligence<br />
-            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #22d3ee, #3b82f6)' }}>
+            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #22d3ee, #818cf8)' }}>
               Archive.
             </span>
           </h1>
@@ -237,7 +237,7 @@ export default function About() {
             </Link>
             <Link
               to="/universes"
-              className="flex items-center gap-2 px-6 py-3 bg-cyan-400 hover:bg-cyan-300 text-black text-[11px] font-bold uppercase tracking-widest rounded-lg transition-colors"
+              className="flex items-center gap-2 px-6 py-3 bg-white/8 hover:bg-white/12 border border-white/15 text-[11px] font-bold uppercase tracking-widest rounded-lg transition-colors text-white/80"
             >
               Explore Universes <ArrowRight className="w-3.5 h-3.5" />
             </Link>
@@ -254,11 +254,11 @@ export default function About() {
       </header>
 
       {/* Stats */}
-      <section className="border-y border-white/5 bg-white/[0.02]">
+      <section className="border-y border-white/[0.04]">
         <div className="max-w-4xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {STATS.map(stat => (
             <div key={stat.label}>
-              <div className="text-3xl md:text-4xl font-black text-cyan-300 mb-1">{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-black text-white mb-1">{stat.value}</div>
               <div className="text-[10px] uppercase tracking-widest text-gray-500">{stat.label}</div>
             </div>
           ))}
@@ -268,9 +268,9 @@ export default function About() {
       {/* What is this */}
       <section className="max-w-3xl mx-auto px-6 py-16">
         <h2 className="text-[10px] uppercase tracking-widest text-gray-600 mb-6 text-center">What We Do</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {WHY.map(item => (
-            <div key={item.title} className="p-5 rounded-xl border border-white/10 bg-white/[0.02]">
+            <div key={item.title} className="p-5 rounded-xl border border-white/[0.04] bg-white/[0.02]">
               <h3 className="text-[11px] font-black uppercase text-white mb-2">{item.title}</h3>
               <p className="text-[11px] text-gray-400 leading-relaxed">{item.text}</p>
             </div>
@@ -279,13 +279,13 @@ export default function About() {
       </section>
 
       {/* System Types */}
-      <section className="border-t border-white/5 py-16">
+      <section className="border-t border-white/[0.04] py-16">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-[10px] uppercase tracking-widest text-gray-600 mb-2 text-center">Three Ways Anime Worlds Work</h2>
           <p className="text-xs text-gray-500 text-center mb-10 max-w-lg mx-auto">Not every anime is the same kind of system. We categorize them by how power actually functions.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {SYSTEM_TYPES.map(type => (
-              <div key={type.title} className="p-5 rounded-xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-colors">
+              <div key={type.title} className="p-5 rounded-xl border border-white/[0.04] bg-white/[0.02] hover:border-white/[0.08] transition-colors">
                 <div className="text-gray-400 mb-3">{type.icon}</div>
                 <h3 className="text-[11px] font-black uppercase text-white mb-1">{type.title}</h3>
                 <p className="text-[10px] text-cyan-400 mb-3">{type.tagline}</p>
@@ -298,7 +298,7 @@ export default function About() {
       </section>
 
       {/* How it works */}
-      <section className="border-t border-white/5 py-16">
+      <section className="border-t border-white/[0.04] py-16">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2 className="text-[10px] uppercase tracking-widest text-gray-600 mb-6">How It Works</h2>
           <div className="space-y-6">
@@ -308,7 +308,7 @@ export default function About() {
               { step: '03', title: 'Understand why it matters.', text: 'The system tells you what the story is really about — not just what happens, but how it had to happen.' },
             ].map(item => (
               <div key={item.step} className="flex gap-4 items-start text-left">
-                <div className="shrink-0 w-10 h-10 rounded-full border border-cyan-400/30 bg-cyan-400/5 flex items-center justify-center text-[11px] font-black text-cyan-400">{item.step}</div>
+                <div className="shrink-0 w-10 h-10 rounded-full border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-[11px] font-black text-cyan-400">{item.step}</div>
                 <div>
                   <h3 className="text-[11px] font-bold text-white mb-1">{item.title}</h3>
                   <p className="text-[11px] text-gray-400 leading-relaxed">{item.text}</p>
@@ -320,7 +320,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-white/5 py-16">
+      <section className="border-t border-white/[0.04] py-16">
         <div className="max-w-xl mx-auto px-6 text-center">
           <h2 className="text-xl font-black uppercase tracking-tight mb-3">Ready to see how it works?</h2>
           <p className="text-[11px] text-gray-400 mb-6 leading-relaxed">
@@ -336,7 +336,7 @@ export default function About() {
             </Link>
             <Link
               to="/universes"
-              className="flex items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 text-[11px] uppercase tracking-widest rounded-lg transition-colors"
+              className="flex items-center gap-2 px-6 py-3 border border-white/[0.08] hover:border-white/[0.15] text-[11px] uppercase tracking-widest rounded-lg transition-colors text-gray-400 hover:text-white"
             >
               Browse All Universes <ArrowRight className="w-3.5 h-3.5" />
             </Link>
@@ -345,7 +345,7 @@ export default function About() {
       </section>
 
       {/* Footer nav */}
-      <footer className="border-t border-white/5 py-8 px-6">
+      <footer className="border-t border-white/[0.04] py-8 px-6">
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-4 text-[10px] text-gray-600 uppercase tracking-widest">
           <Link to="/universes">Archive</Link>
           <Link to="/insights">Insights</Link>

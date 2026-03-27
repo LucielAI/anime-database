@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Zap, Users, Network, Clock3, ShieldAlert } from 'lucide-react'
 import { UNIVERSE_CATALOG } from '../data/index.js'
 
@@ -99,6 +99,7 @@ export default function SpotlightCarousel() {
   const current = candidates[index]
   const meta = getSystemMeta(current.visualizationHint)
   const MetaIcon = meta.Icon
+  const navigate = useNavigate()
 
   // Preload adjacent images
   const prevIdx = (index - 1 + count) % count
@@ -108,11 +109,12 @@ export default function SpotlightCarousel() {
     <div className="w-full" ref={trackRef}>
       {/* Main carousel */}
       <div
-        className="relative w-full overflow-hidden rounded-2xl border border-white/10 select-none"
+        className="relative w-full overflow-hidden rounded-2xl border border-white/10 select-none cursor-pointer"
         style={{ minHeight: 'clamp(280px, 45vw, 380px)' }}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
+        onClick={() => navigate(`/universe/${current.id}`)}
         role="region"
         aria-label="Featured anime universe carousel"
         aria-live="polite"
@@ -214,22 +216,22 @@ export default function SpotlightCarousel() {
           </div>
         </div>
 
-        {/* Prev/Next arrows — touch-friendly 48px targets */}
+        {/* Prev/Next arrows — compact on mobile */}
         <button
           onClick={prev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 border border-white/15 text-white/60 hover:text-white flex items-center justify-center transition-all active:scale-90 backdrop-blur-sm"
+          className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 border border-white/15 text-white/60 hover:text-white flex items-center justify-center transition-all active:scale-90 backdrop-blur-sm"
           aria-label="Previous universe"
           tabIndex={0}
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
         <button
           onClick={next}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 border border-white/15 text-white/60 hover:text-white flex items-center justify-center transition-all active:scale-90 backdrop-blur-sm"
+          className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 border border-white/15 text-white/60 hover:text-white flex items-center justify-center transition-all active:scale-90 backdrop-blur-sm"
           aria-label="Next universe"
           tabIndex={0}
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         {/* Dot indicators */}

@@ -1,0 +1,102 @@
+# Technical Audit Findings — animearchive.app
+Branch: sprint/2026-03-27-site-audit
+Date: 2026-03-27
+
+---
+
+## ✅ Build Status
+
+`node node_modules/.bin/vite build` — **PASSES** cleanly (exit 0, 1.74s)
+
+No build errors, no import errors, no missing modules.
+
+---
+
+## HIGH
+
+- [HIGH] api/newsletter.js — Missing Supabase table `archive_newsletter`:
+  The newsletter endpoint POSTs to `/rest/v1/archive_newsletter`, but TOOLS.md
+  Supabase schema only defines `archive_feedback` and `archive_suggestions`.
+  The `archive_newsletter` table is never mentioned in the schema docs and
+  no CREATE TABLE script exists in the repo. This will cause a 500 at runtime
+  on the newsletter signup flow. Needs confirmation: does the Supabase instance
+  have `archive_newsletter` created? If not, either create the table or add
+  graceful error handling that doesn't surface as a raw 500.
+
+- [HIGH] src/components/TabContent.jsx — Dashboard and CommunityPulse lazy routes
+  have NO Suspense boundary wrapping them in App.jsx:
+  - `<NewsletterCTA />` is inside `<TabContent />` which wraps `{activeTab === 'community' && <Suspense fallback={<TabSkeleton />}><CommunityPulse /></Suspense>}`. The Suspense is correctly placed here.
+  - BUT: `<NewsletterCTA />` (lazy) itself appears to be rendered inside TabContent's JSX without a Suspense boundary at the TabContent level for when the lazy import is still loading.
+  - Additionally: `<Dashboard />` is lazy-loaded but appears in App.jsx as its own Suspense (line 1062), so this one is fine.
+  - `<CharacterPage />`, `<PowerSystemPage />`, `<FactionPage />` are lazy-loaded inside routes and have Suspense boundaries. These are fine.
+  - `<CompareRoute />` is not lazy — imported directly. Suspense not needed.
+
+---
+
+## MEDIUM
+
+- [MED] api/sitemap.xml.js — No error handling around `readdirSync`/`readFileSync`:
+  The `getSlugs()`, `getBlogSlugs()`, `getInsightSlugs()`, and `getPayload()` functions
+  call Node.js fs operations. If any data file is missing or unreadable, the entire
+  sitemap generation will throw and the catch block returns a bare 500 with no
+  `requestId` (unlike feedback.js and suggest.js which include `requestId` in all
+  error responses). Also, `getInsightSlugs()` uses fragile regex parsing of
+  `src/data/insights-content.js` rather than importing the data directly — if the
+  file format changes, silently returns [].
+
+- [MED] api/sitemap.xml.js — `BASE_URL` is hardcoded:
+  `const BASE_URL = 'https://animearchive.app'` is hardcoded at the top of the file.
+  Should use `process.env.SITE_URL || 'https://animearchive.app'` for consistency
+  and deploy-time flexibility (e.g. preview deployments).
+
+- [MED] src/components/TabContent.jsx — `<NewsletterCTA />` renders with no loading
+  state inside the TabContent. If the lazy import is still pending when the tab
+  mounts, it will render nothing (fallback={null}) causing a visible content
+  jump. Should be `<Suspense fallback={<SomeSkeletonOrSpinner />}><NewsletterCTA /></Suspense>`
+  at the point where it's rendered, or the fallback should not be null.
+
+- [MED] api/feedback.js + api/suggest.js — Fallback payload inconsistency:
+  Both feedback and suggest endpoints have a retry with a "fallbackPayload" that
+  strips optional fields (note/context for feedback, source for suggest). This
+  fallback silently drops user-provided data on retry. While well-intentioned
+  (partial insert vs total failure), there's no logging to indicate the fallback
+  was triggered. A console.warn or structured log field would help distinguish
+  partial failures from full ones in production monitoring.
+
+---
+
+## LOW
+
+- [LOW] api/universe.js — Uses CommonJS (`module.exports = fn`, `require('fs')`) in a
+  Vercel Node.js API route. This works in Vercel's Node.js runtime but is
+  inconsistent with the rest of the API routes which use ESM (`export default`).
+  Not a runtime bug — just a code style inconsistency worth noting.
+
+- [LOW] api/sitemap.xml.js — Imports `readFileSync` and `existsSync` from `node:fs`
+  but `getPayload()` never actually uses them (it uses the synchronous `readFileSync`
+  imported at the top). The `const fs = require('fs')` was NOT present — sitemap.xml
+  is pure ESM. No unused require issue here. (Note: this was investigated and found clean.)
+
+- [LOW] src/App.jsx — `goatcounter` path sent as `location.pathname` only, without
+  `referrer` or `title` in the beacon. The `trackExternalLink` utility sends more
+  context. For internal page views, the title is passed via `document.title || SITE_NAME`
+  which is fine, but the referrer is omitted. Minor analytics completeness issue.
+
+- [LOW] src/utils/analytics.js — `sendBeacon` uses a hardcoded goatcounter URL:
+  `navigator.sendBeacon(\`https://hashi.goatcounter.com/count?t=...\`)`. This URL is
+  hardcoded in two places (analytics.js and index.html data attribute). If the
+  goatcounter instance URL ever changes, both need updating. Should be sourced
+  from a single constant or `import.meta.env.VITE_GOATCOUNTER_URL`.
+
+---
+
+## Verified Clean ✅
+
+- GoatCounter: script tag in index.html has `defer` and `data-goatcounter-settings='{"no_onload": true}'` — does NOT block render. All `window.goatcounter?.count()` calls are wrapped in null-checks and deferred via `scheduleIdleTask`. ✅
+- Suspense boundaries: All lazy-loaded route components have Suspense wrapping them in App.jsx with styled fallback fallbacks. ✅
+- Supabase integration: Both `feedback.js` and `suggest.js` have comprehensive error classification, proper HTTP status mapping, and input sanitization. ✅
+- No hardcoded localhost URLs anywhere in the codebase. ✅
+- No broken import paths — all relative imports resolve to existing files. ✅
+- TODO/FIXME/XXX comments: None found in production source files. ✅
+- CompareRoute: `const left = ...` and `const right = ...` are correctly declared before all useEffect hooks referencing them. No TDZ risk. ✅
+- `.env` handling: No critical env vars used without fallbacks. `SITE_URL` is hardcoded but consistently so across the codebase. Supabase config check is at runtime. ✅

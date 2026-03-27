@@ -1,0 +1,104 @@
+CONTENT ACCURACY AUDIT — animearchive.app
+Branch: sprint/2026-03-27-site-audit
+Date: 2026-03-27
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GROUND TRUTH (current catalog data)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Universes in catalog:    30 (UNIVERSE_CATALOG.length)
+Characters in data files: 301 (sum of all .core.json + aot.json, jjk.json, hxh.json, vinlandsaga.json, steinsgate.json)
+System Insights:          8 (INSIGHTS array length)
+Renderer types:           4 (affinity-matrix, counter-tree, node-graph, timeline)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUES FOUND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. [About.jsx — STATS SECTION] — Stale hardcoded numbers (3 wrong, 1 correct):
+   - "21 Universes Mapped" → should be "30 Universes Mapped"
+   - "161+ Characters Analyzed" → should be "301 Characters Analyzed"
+   - "3 Renderer Types" → should be "4 Renderer Types"
+   - "8 System Insights" → CORRECT (no change needed)
+   
+   Impact: High — About page is a public-facing canonical reference. The
+   30-vs-21 gap (43% understatement) and 301-vs-161 gap (87% understatement)
+   make the archive look smaller than it is.
+
+2. [App.jsx line 514] — "30 universes mapped" is hardcoded plain text, not
+   dynamically computed. Currently happens to be correct (catalog has exactly
+   30), but will become stale if universes are added without updating this line.
+   Recommendation: use `{UNIVERSE_CATALOG.length} universes mapped` for
+   future-proofing.
+
+3. [App.jsx line 516] — "2,847 researchers already on the list." is a
+   hardcoded stale number with no connection to any live data source.
+   This number cannot be verified and will age poorly. Either remove it
+   or connect it to a dynamic source (e.g., Supabase newsletter table count).
+
+4. [public/blog-index.json] — Only 3 of 11 blog posts are indexed:
+   Listed in blog-index.json:
+     - best-anime-worldbuilding (2026-03-21)
+     - lore-vs-sys-explained (2026-03-21)
+     - anime-power-systems-ranked (2026-03-21)
+   
+   Orphaned (exist as public/blog/*.json but NOT in blog-index.json):
+     - aot-determinism-chaos
+     - chainsawman-devil-economy
+     - death-note-killing-archetype
+     - demonslayer-breathing-economics
+     - hxh-nen-specialization
+     - jjk-cursed-energy-thermodynamics
+     - naruto-chakra-meritocracy
+     - one-piece-power-economy
+   
+   Impact: Medium — The 8 orphaned posts are accessible via direct URL
+   (e.g., /blog/aot-determinism-chaos) but invisible to BlogIndex.jsx,
+   which fetches /blog-index.json and renders only those 3 posts. BlogIndex
+   shows "No posts yet" or only 3 posts depending on fetch result.
+   
+   Note: These orphaned posts DO exist and their universe links all
+   resolve correctly to existing catalog entries (verified: hxh, jjk,
+   steinsgate, aot, fmab, mushokutensei, codegeass, one-piece, naruto,
+   deathnote, demonslayer, chainsawman — all in catalog).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ITEMS CHECKED — NO ISSUES FOUND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ NewsletterCTA.jsx — Text is accurate ("Get notified when new universes
+  drop", "No spam. Just structural intelligence."). API endpoint exists
+  at api/newsletter.js and is wired to Supabase. Functionally correct.
+
+✓ Homepage archive stats bar (App.jsx line 863) — Dynamically computed:
+  `{UNIVERSE_CATALOG.reduce((s, a) => s + (a.stats?.characters || 0), 0)} Characters`
+  ✓ correct as of this audit.
+
+✓ Homepage hero (App.jsx line 514) — "30 universes mapped" is factually
+  correct but hardcoded. See issue #2 above.
+
+✓ Privacy page — Last updated 2026-03-20. No obviously stale content.
+  References GoatCounter, affiliate links, Supabase feedback — all match
+  current infrastructure.
+
+✓ /about page other sections — Mission statement, LORE/SYS mode
+  explanation, creator bio, and "how to use" sections appear current.
+
+✓ BlogPost component — Correctly fetches individual post JSON from
+  /blog/{slug}.json, handles loading/error states, renders content
+  blocks. No hardcoded content issues.
+
+✓ ExploreAnotherUniverse component — Uses getRelatedUniverseSuggestions()
+  dynamically. No hardcoded universe references that could be stale.
+
+✓ Compare suggestions — Dynamically generated, no hardcoded catalog refs.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RECOMMENDATIONS (priority order)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. FIX: About.jsx STATS — update 21→30, 161+→301, 3→4 immediately.
+2. FIX: blog-index.json — add the 8 orphaned posts or decide to unlink
+   their public/blog/*.json files to avoid confusion.
+3. FIX or REMOVE: App.jsx line 516 "2,847 researchers" — connect to
+   live count or delete the line.
+4. CONSIDER: App.jsx line 514 — replace hardcoded "30" with
+   UNIVERSE_CATALOG.length for future-proofing.
