@@ -224,18 +224,16 @@ const STRUCTURE_VISUALS = {
 function NewsletterCTAHero({ variant = 'default' }) {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle')
-  const [subscriberCount] = useState(() => {
-    // Social proof: show a realistic count. In production this would come from Supabase.
-    // Hardcoded for now - replace with live count: fetch('/api/newsletter/count')
-    return (() => {
-      try {
-        const stored = localStorage.getItem('newsletter-subscriber-count')
-        if (stored) return parseInt(stored, 10)
-      } catch {}
-      return null // null = show default
-    })()
-  })
   const lastSubmitTime = useRef(0)
+
+  // Read from localStorage on every render to avoid stale state after submit
+  const subscriberCount = (() => {
+    try {
+      const stored = localStorage.getItem('newsletter-subscriber-count')
+      if (stored) return parseInt(stored, 10)
+    } catch {}
+    return null
+  })()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -511,9 +509,8 @@ function Home({ onSearchOpen }) {
 
       <main id="main-content">
       <section className="max-w-5xl mx-auto px-6 pt-8 pb-2" aria-label="Anime analysis overview">
-        <p className="text-[11px] text-gray-500 leading-relaxed">
-          Anime Architecture Archive helps you compare how different shows handle power, fights, and world rules.
-          Pick a style, jump into a title, and see what makes each world work.
+        <p className="text-[11px] text-gray-400 leading-relaxed">
+          Not plot summaries. Every anime has a system underneath — power rules, faction logic, causal chains. We map what makes each world work, so you understand why the fights mean something.
         </p>
       </section>
       <section id="explore-system-structure" className="max-w-6xl mx-auto px-6 pt-12 pb-10" aria-labelledby="explore-structure-heading">
@@ -807,8 +804,6 @@ function Home({ onSearchOpen }) {
           <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</a>
           <span className="text-gray-700">·</span>
           <a href="/search" className="hover:text-gray-400 transition-colors">Search</a>
-          <span className="text-gray-700">·</span>
-          <a href="https://www.tiktok.com/@hashi.ai" target="_blank" rel="noreferrer" className="hover:text-gray-400 transition-colors">Contact</a>
         </div>
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] tracking-[0.14em] uppercase">
           <span className="text-gray-700 w-full text-center mb-1">Browse by System</span>
