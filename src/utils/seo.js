@@ -190,6 +190,60 @@ export function buildHomeStructuredData(catalog = [], options = {}) {
       license: 'https://creativecommons.org/licenses/by-nc/4.0/',
       isAccessibleForFree: true,
     },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is Anime Architecture Archive?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Anime Architecture Archive is a free online reference for anime fans who want to understand how power systems, character hierarchies, and world rules actually work in their favorite shows. It maps 30 anime universes as structural systems — not summaries, but architectural analyses of how each world functions.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How is this different from a wiki or anime database?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Most anime sites tell you what happens. We explain why it works structurally — what rules govern the world, how power hierarchies form, what makes fights meaningful, and how causality flows. It is system design thinking applied to fictional universes.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is Anime Architecture Archive free to use?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, entirely free. All universe analyses, character mappings, relationship graphs, and comparison tools are open access. There is no paywall or account required.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does the anime comparison tool work?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Pick any two universes from the compare page and see them side-by-side across system type, power mechanics, factions, combat style, and strategic depth. The comparison is structural, not just "who would win" — it maps how each world creates meaningful conflict.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What anime universes are covered?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `Currently covering 30 anime universes including Attack on Titan, Jujutsu Kaisen, One Punch Man, Naruto, Dragon Ball Z, One Piece, Hunter x Hunter, Death Note, Demon Slayer, Solo Leveling, and more. New universes are added regularly.`,
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Who runs Anime Architecture Archive?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Hashi.Ai — an AI-native platform building structural intelligence layers for anime and fictional universes. It is an independent project built and maintained by an anime fan using AI analysis tools.',
+          },
+        },
+      ],
+    },
   ]
 }
 
