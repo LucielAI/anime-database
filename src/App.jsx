@@ -512,7 +512,7 @@ function Home() {
       <section className="border-y border-cyan-400/10 bg-gradient-to-r from-[#080d1a] via-[#0d1220] to-[#080d1a]">
         <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 flex flex-col md:flex-row items-center gap-6">
           <div className="flex-1">
-            <p className="text-[10px] text-cyan-400/80 tracking-[0.2em] uppercase font-bold mb-1">30 universes mapped. More coming.</p>
+            <p className="text-[10px] text-cyan-400/80 tracking-[0.2em] uppercase font-bold mb-1">{UNIVERSE_CATALOG.length} universes mapped. More coming.</p>
             <h3 className="text-lg font-black text-white uppercase tracking-tight leading-tight">We drop new universes<br className="hidden sm:block" /> before the rest knows.</h3>
             <p className="text-xs text-gray-500 mt-1.5">No spam.</p>
           </div>
