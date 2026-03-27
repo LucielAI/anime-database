@@ -7,6 +7,7 @@ import { writeFileSync, readdirSync, readFileSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { UNIVERSE_CATALOG } from '../src/data/catalog.js'
+import { INSIGHTS } from '../src/data/insights-content.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
@@ -41,7 +42,9 @@ function getBlogPosts() {
         .map(f => {
           try {
             const content = JSON.parse(readFileSync(join(PUBLIC_BLOG_DIR, f), 'utf8'))
-            return { slug: content.slug || f.replace(/\.json$/, ''), title: content.title || '', source: 'insights' }
+            const slug = content.slug || f.replace(/\.json$/, '')
+            const source = slug in INSIGHTS ? 'insights' : 'blog'
+            return { slug, title: content.title || '', source }
           } catch {
             return null
           }
