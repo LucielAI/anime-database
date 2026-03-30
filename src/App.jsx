@@ -861,7 +861,7 @@ function UniversesCatalogRoute() {
       <main id="catalog-main" className="max-w-6xl mx-auto">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">Universe Catalog</h1>
-          <Link to="/" className="px-3 py-2 text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white rounded-lg border border-white/10 hover:border-white/20 transition-colors">← Back to Archive</Link>
+          <Link to="/" className="px-3 py-2 text-[10px] tracking-[0.2em] uppercase text-gray-400 hover:text-white rounded-lg border border-white/10 hover:border-white/20 transition-colors">← Browse Catalog</Link>
         </div>
         <p className="text-xs text-gray-300/80 max-w-3xl mb-4">Filter by system type, sort by latest or most viewed, or search to find any universe.</p>
 
@@ -976,7 +976,7 @@ class DashboardErrorBoundary extends React.Component {
           <div className="text-center px-6">
             <p className="text-[10px] tracking-[0.25em] uppercase text-red-400/80 mb-2">Failed to Load</p>
             <p className="text-sm text-gray-400">Something went wrong displaying this universe.</p>
-            <a href="/" className="mt-4 inline-block text-[10px] tracking-[0.2em] uppercase text-cyan-400/60 hover:text-cyan-400 transition-colors">← Return to Archive</a>
+            <a href="/" className="mt-4 inline-block text-[10px] tracking-[0.2em] uppercase text-cyan-400/60 hover:text-cyan-400 transition-colors">← Browse Catalog</a>
           </div>
         </div>
       )
