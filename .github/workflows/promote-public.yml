@@ -1,0 +1,34 @@
+name: Promote to Public
+
+on:
+  push:
+    branches:
+      - Main
+  workflow_dispatch:
+    inputs:
+      TARGET_BRANCH:
+        description: 'Target branch for promotion'
+        required: true
+        default: 'main'
+
+env:
+  TARGET_BRANCH: ${{ github.event.inputs.TARGET_BRANCH || 'main' }}
+
+jobs:
+  promote:
+    name: Promote Private → Public
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout private repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PUBLIC_REPO_SYNC_TOKEN }}
+
+      - name: Run promotion script
+        env:
+          PUBLIC_REPO_SYNC_TOKEN: ${{ secrets.PUBLIC_REPO_SYNC_TOKEN }}
+          TARGET_BRANCH: ${{ env.TARGET_BRANCH }}
+        run: |
+          chmod +x scripts/promote_public.sh
+          scripts/promote_public.sh --dry-run=false --target-branch="$TARGET_BRANCH"

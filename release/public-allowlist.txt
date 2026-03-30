@@ -1,0 +1,33 @@
+#============================================================
+# PUBLIC REPO ALLOWLIST
+#============================================================
+# Only these files/directories are promoted to Animearchive.app
+# Order: most-specific-match wins (directory entries end with /)
+#============================================================
+
+#--- Core app ----------------------------------------------------
+src/
+public/
+index.html
+
+#--- Content ----------------------------------------------------
+content/blog/
+
+#--- Config (public-safe) ---------------------------------------
+package.json
+vite.config.js
+eslint.config.js
+postcss.config.js
+tailwind.config.js
+jsconfig.node.json
+tsconfig.json
+tsconfig.app.json
+
+#--- Static assets & media --------------------------------------
+public/og-fallback.png
+public/favicon.svg
+public/robots.txt
+
+#--- Docs --------------------------------------------------------
+README.md
+CHANGELOG.md

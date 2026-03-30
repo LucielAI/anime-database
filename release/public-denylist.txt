@@ -1,0 +1,66 @@
+#============================================================
+# PUBLIC REPO DENYLIST
+#============================================================
+# These files/directories are NEVER promoted.
+# Patterns are anchored with ^ (start-of-path match).
+#============================================================
+
+#--- Private agent/system files ---------------------------------
+^MEMORY\.md$
+^memory/
+^AGENTS\.md$
+^SOUL\.md$
+^USER\.md$
+^HEARTBEAT\.md$
+^PROJECTS\.md$
+^IDENTITY\.md$
+^CLAUDE\.md$
+^TOOLS\.md$
+^BOOTSTRAP\.md$
+
+#--- Git internals ----------------------------------------------
+^\.git/
+^\.gitignore$
+^\.gitattributes$
+
+#--- Node/build -----------------------------------------------
+^node_modules/
+^\.npm/
+\.log$
+^npm-debug\.log$
+\.env$
+^\.env\.
+^auth-profiles\.json$
+^\.supabase_token$
+^\.goatcounter_token$
+^\.moltbook_token$
+
+#--- CI/CD ------------------------------------------------------
+^\.github/workflows/ci\.yml$
+^\.github/pull_request_template\.md$
+^scripts/
+^docs/
+
+#--- Private collab --------------------------------------------
+^hashi-collab/
+^collaborators\.json$
+^\.sprint$
+^\.sprint\.bak$
+
+#--- Private content -------------------------------------------
+^content/universe/
+^pipeline-cache/
+
+#--- SEO/private pages ------------------------------------------
+^public/universe/
+^public/universes/
+^public/blog/.*\.html$
+^src/sitemap\.xml$
+^src/seo/sitemap\.xml$
+^public/llms\.txt$
+^public/sitemap\.xml$
+
+#--- Vercel/infra (generated at deploy time) ------------------
+^vercel\.json$
+^api/
+^public/_redirects$
