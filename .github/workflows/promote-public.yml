@@ -3,7 +3,7 @@ name: Promote to Public
 on:
   push:
     branches:
-      - Main
+      - main
   workflow_dispatch:
     inputs:
       TARGET_BRANCH:
