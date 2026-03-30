@@ -69,10 +69,6 @@
     {
       "type": "universe-link",
       "slug": "codegeass"
-    },
-    {
-      "type": "inline-newsletter"
     }
-  ],
-  "type": "blog"
+  ]
 }

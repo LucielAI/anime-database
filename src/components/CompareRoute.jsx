@@ -245,8 +245,8 @@ export default function CompareRoute() {
       ? `${left.anime} vs ${right.anime} — System Comparison | ${SITE_NAME}`
       : `Universe Comparison | ${SITE_NAME}`,
     description: left && right
-      ? `Compare ${left.anime} and ${right.anime} side-by-side.`
-      : `Compare anime universe systems side-by-side.`,
+      ? `Side-by-side structural comparison of ${left.anime} and ${right.anime} — power mechanics, combat rules, faction hierarchies, and world logic analyzed together.`
+      : `Pick any two anime universes from the catalog and compare them side-by-side across power systems, combat styles, factions, and strategic depth.`,
     canonicalUrl: `${SITE_URL}/compare?left=${leftId}&right=${rightId}`,
     keywords: 'anime comparison, universe comparison, anime power systems',
   }

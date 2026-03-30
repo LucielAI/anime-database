@@ -26,7 +26,7 @@ function buildUniverseDescription(preview) {
 
 export function buildHomeSeo(catalog = []) {
   const description = truncate(
-    `Explore anime power systems, anime analysis, and anime comparison in one archive. Compare ${catalog.length}+ anime worlds for strategy, combat logic, and worldbuilding structure.`
+    `Anime Architecture Archive maps 30 anime universes as engineered systems — power hierarchies, combat rules, faction logic, and causal structure. Not fan summaries. Structural analyses of how each world actually works.`
   )
 
   return {
@@ -104,7 +104,17 @@ export function buildCatalogStructuredData(catalog = []) {
 }
 
 export function buildUniverseSeo(preview) {
-  if (!preview) return buildHomeSeo()
+  if (!preview) {
+    return {
+      title: `Anime Universe Analysis | ${SITE_NAME}`,
+      description: truncate(
+        `Explore structured analyses of 30 anime universes — power systems, character hierarchies, faction networks, and causal logic mapped as systems. Compare any two worlds side-by-side.`
+      ),
+      canonicalUrl: `${SITE_URL}/universes`,
+      image: DEFAULT_OG_IMAGE,
+      type: 'website',
+    }
+  }
 
   return {
     title: `${preview.anime} System Analysis | ${SITE_NAME}`,
@@ -253,7 +263,7 @@ export function buildCharacterSeo(preview, character, charIndex) {
   const description = truncate(
     character.loreBio
       ? `${character.name} — ${character.title || character.rank || ''}: ${character.loreBio}`
-      : `${character.name} from ${preview.anime}. Structured character analysis and system profile.`
+      : `${character.name}: ${character.role || 'character'} in ${preview.anime}. Ranked within the universe's power hierarchy, faction structure, and combat logic — analyzed as a system component.`
   )
 
   return {
@@ -266,12 +276,12 @@ export function buildCharacterSeo(preview, character, charIndex) {
 }
 
 export function buildPowerSystemSeo(preview, power, powerIndex) {
-  if (!preview || !power) return buildHomeSeo()
+  if (!preview || !power) return buildUniverseSeo(preview)
 
   const description = truncate(
     power.loreDesc
       ? `${power.name} — ${power.subtitle || ''}: ${power.loreDesc}`
-      : `${power.name} power system from ${preview.anime}. Structured mechanics and system analysis.`
+      : `${power.name}: a named power mechanic within ${preview.anime}'s system. Analyzed for combat applications, interaction rules, and structural role in the universe's logic.`
   )
 
   return {
@@ -284,12 +294,12 @@ export function buildPowerSystemSeo(preview, power, powerIndex) {
 }
 
 export function buildFactionSeo(preview, faction, factionIndex) {
-  if (!preview || !faction) return buildHomeSeo()
+  if (!preview || !faction) return buildUniverseSeo(preview)
 
   const description = truncate(
     faction.loreDesc
       ? `${faction.name} (${faction.role}): ${faction.loreDesc}`
-      : `${faction.name} faction from ${preview.anime}. Structural role, members, and system analysis.`
+      : `${faction.name}: a ${faction.role || 'faction'} in ${preview.anime}. Structural role within the universe's power hierarchy, key members mapped, and faction-wide rules and economics analyzed.`
   )
 
   return {

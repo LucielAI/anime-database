@@ -6,18 +6,56 @@
   "keywords": "jjk power system, demon slayer power system, jjk vs demon slayer, anime power systems compared",
   "author": "Anime Architecture Archive",
   "content": [
-    {"type": "paragraph", "text": "You can't talk about JJK without talking about Demon Slayer. Both are modern classics that built their identity around how their combat systems work. Both are about fighting things that regular humans can't touch. But they went in opposite directions, and the divergence is revealing."},
-    {"type": "section-header", "text": "The Core Difference: Cursed Energy vs Breathing"},
-    {"type": "paragraph", "text": "JJK's cursed energy is a negative emotion engine. Curses are born from negative emotion. Jujutsu sorcerers weaponize that same energy. The fundamental tension: the more you use cursed energy, the more you are subject to curses yourself. The system has built-in decay."},
-    {"type": "paragraph", "text": "Demon Slayer's breathing is different. It's not a finite resource with side effects — it's a technique that can be mastered. Tanjiro doesn't become less capable by using water breathing. He becomes more capable by learning new forms. The risk isn't internal degradation. The risk is external: demons who adapt, counter, and evolve."},
-    {"type": "universe-block", "slug": "jjk"},
-    {"type": "universe-block", "slug": "demon-slayer"},
-    {"type": "section-header", "text": "Growth Mechanics"},
-    {"type": "paragraph", "text": "In JJK, growth often comes from loss. Yuji gains cursed energy from Sukuna's presence. Megumi's growth is tied to his willingness to sacrifice shikigami. The system punishes hesitation. You either go all in or you die. That's not a rule in the story — it's baked into the mechanics."},
-    {"type": "paragraph", "text": "In Demon Slayer, growth is mastery. The Hashira aren't stronger because they risked more — they're stronger because they practiced more. The path is clear. The barrier is execution."},
-    {"type": "section-header", "text": "Which System Holds Up Better?"},
-    {"type": "paragraph", "text": "For narrative tension: JJK. The cursed energy system generates conflict internally, not just externally. Every technique costs something. Every win has a price. It creates characters who are compromised by their own power."},
-    {"type": "paragraph", "text": "For consistent action spectacle: Demon Slayer. Breathing forms are visual, varied, and don't create narrative complications. They make every fight a display of craft."},
-    {"type": "inline-newsletter"}
+    {
+      "type": "paragraph",
+      "text": "You can't talk about JJK without talking about Demon Slayer. Both are modern classics that built their identity around how their combat systems work. Both are about fighting things that regular humans can't touch. But they went in opposite directions, and the divergence is revealing."
+    },
+    {
+      "type": "section-header",
+      "text": "The Core Difference: Cursed Energy vs Breathing"
+    },
+    {
+      "type": "paragraph",
+      "text": "JJK's cursed energy is a negative emotion engine. Curses are born from negative emotion. Jujutsu sorcerers weaponize that same energy. The fundamental tension: the more you use cursed energy, the more you are subject to curses yourself. The system has built-in decay."
+    },
+    {
+      "type": "paragraph",
+      "text": "Demon Slayer's breathing is different. It's not a finite resource with side effects — it's a technique that can be mastered. Tanjiro doesn't become less capable by using water breathing. He becomes more capable by learning new forms. The risk isn't internal degradation. The risk is external: demons who adapt, counter, and evolve."
+    },
+    {
+      "type": "universe-block",
+      "slug": "jjk"
+    },
+    {
+      "type": "universe-block",
+      "slug": "demon-slayer"
+    },
+    {
+      "type": "section-header",
+      "text": "Growth Mechanics"
+    },
+    {
+      "type": "paragraph",
+      "text": "In JJK, growth often comes from loss. Yuji gains cursed energy from Sukuna's presence. Megumi's growth is tied to his willingness to sacrifice shikigami. The system punishes hesitation. You either go all in or you die. That's not a rule in the story — it's baked into the mechanics."
+    },
+    {
+      "type": "paragraph",
+      "text": "In Demon Slayer, growth is mastery. The Hashira aren't stronger because they risked more — they're stronger because they practiced more. The path is clear. The barrier is execution."
+    },
+    {
+      "type": "section-header",
+      "text": "Which System Holds Up Better?"
+    },
+    {
+      "type": "paragraph",
+      "text": "For narrative tension: JJK. The cursed energy system generates conflict internally, not just externally. Every technique costs something. Every win has a price. It creates characters who are compromised by their own power."
+    },
+    {
+      "type": "paragraph",
+      "text": "For consistent action spectacle: Demon Slayer. Breathing forms are visual, varied, and don't create narrative complications. They make every fight a display of craft."
+    },
+    {
+      "type": "inline-newsletter"
+    }
   ]
 }

@@ -6,15 +6,44 @@
   "keywords": "solo leveling power system, solo leveling hunter rank, isekai power system, solo leveling analysis",
   "author": "Anime Architecture Archive",
   "content": [
-    {"type": "paragraph", "text": "Solo Leveling is the most successful webtoon in Korean isekai history. That success is usually attributed to power fantasy — Sung Jinwoo gets stronger and wins. But the power fantasy alone doesn't explain why it works structurally. The Hunter system is actually a well-designed game-like economy with scarcity mechanics, ranked progression, and a clear cost structure."},
-    {"type": "section-header", "text": "The Hunter Ranking System"},
-    {"type": "paragraph", "text": "Hunters are ranked E through S, with gate dungeons rated the same way. An E-rank gate requires an E-rank hunter team. An S-rank gate requires S-rank hunters. The matching is non-negotiable — lower-ranked hunters die in higher-tier gates. This creates a closed economic system: your income is determined by your rank, your rank is determined by your ability, and your ability can theoretically be increased by spending money on equipment and training."},
-    {"type": "universe-block", "slug": "solo-leveling"},
-    {"type": "section-header", "text": "The Daily Dungeon Mechanic"},
-    {"type": "paragraph", "text": "Gates appear daily, worldwide, and close after a set time. The dungeons inside are resource extraction zones — monsters drop magic stones, materials, and items that have real economic value. Hunters are essentially contractors for a resource extraction industry. The government doesn't employ them directly — it licenses them, taxes them, and calls them in for national-level threats."},
-    {"type": "paragraph", "text": "Sung Jinwoo's edge isn't just his stats. It's that he has a solo-only dungeon that no one else can access. That's an information and resource monopoly. The system is designed to create scarcity. He creates his own supply."},
-    {"type": "section-header", "text": "Why It's the Best Isekai System"},
-    {"type": "paragraph", "text": "Overlord has world-building depth. Re:Zero has consequence mechanics. Shield Hero has political faction systems. Solo Leveling has economic scarcity — and it takes that scarcity seriously. Every dungeon is a job. Every kill is income. Every rank increase is a raise. Jinwoo isn't just getting stronger. He's moving up in an industry. That grounding is why it works as power fantasy without feeling hollow."},
-    {"type": "inline-newsletter"}
+    {
+      "type": "paragraph",
+      "text": "Solo Leveling is the most successful webtoon in Korean isekai history. That success is usually attributed to power fantasy — Sung Jinwoo gets stronger and wins. But the power fantasy alone doesn't explain why it works structurally. The Hunter system is actually a well-designed game-like economy with scarcity mechanics, ranked progression, and a clear cost structure."
+    },
+    {
+      "type": "section-header",
+      "text": "The Hunter Ranking System"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hunters are ranked E through S, with gate dungeons rated the same way. An E-rank gate requires an E-rank hunter team. An S-rank gate requires S-rank hunters. The matching is non-negotiable — lower-ranked hunters die in higher-tier gates. This creates a closed economic system: your income is determined by your rank, your rank is determined by your ability, and your ability can theoretically be increased by spending money on equipment and training."
+    },
+    {
+      "type": "universe-block",
+      "slug": "solo-leveling"
+    },
+    {
+      "type": "section-header",
+      "text": "The Daily Dungeon Mechanic"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gates appear daily, worldwide, and close after a set time. The dungeons inside are resource extraction zones — monsters drop magic stones, materials, and items that have real economic value. Hunters are essentially contractors for a resource extraction industry. The government doesn't employ them directly — it licenses them, taxes them, and calls them in for national-level threats."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sung Jinwoo's edge isn't just his stats. It's that he has a solo-only dungeon that no one else can access. That's an information and resource monopoly. The system is designed to create scarcity. He creates his own supply."
+    },
+    {
+      "type": "section-header",
+      "text": "Why It's the Best Isekai System"
+    },
+    {
+      "type": "paragraph",
+      "text": "Overlord has world-building depth. Re:Zero has consequence mechanics. Shield Hero has political faction systems. Solo Leveling has economic scarcity — and it takes that scarcity seriously. Every dungeon is a job. Every kill is income. Every rank increase is a raise. Jinwoo isn't just getting stronger. He's moving up in an industry. That grounding is why it works as power fantasy without feeling hollow."
+    },
+    {
+      "type": "inline-newsletter"
+    }
   ]
 }

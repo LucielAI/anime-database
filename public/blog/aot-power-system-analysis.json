@@ -6,16 +6,48 @@
   "keywords": "attack on titan power system, aot worldbuilding, attack on titan analysis, aot titans explained",
   "author": "Anime Architecture Archive",
   "content": [
-    {"type": "paragraph", "text": "Most power system analyses of Attack on Titan focus on Titan types: Founding, Colossal, Warhammer, Attack Titan. They're categorized by size, ability, and royal bloodline. That's the surface. The actual system is deeper and more uncomfortable."},
-    {"type": "section-header", "text": "The 3D Maneuver Gear Problem"},
-    {"type": "paragraph", "text": "The Scouts don't have a power system. They have equipment that leverages physics in a world where physics is partially negotiable. Maneuver gear lets humans fight titans without any supernatural ability. This is unusual — most shonen gives humans a way to match supernatural threats through their own power. AoT gives them leverage. The structural consequence: humans are always outmatched unless they compensate with skill, numbers, or coordination."},
-    {"type": "universe-block", "slug": "aot"},
-    {"type": "section-header", "text": "Titan Inheritance: The Real System"},
-    {"type": "paragraph", "text": "Titan power isn't just genetic — it's territorial and informational. The holder of the Founding Titan can control all Subjects of Ymir, but only if they have royal blood. The holder of the Attack Titan can send memories forward and backward through time, but only within Eldian royal lines. The constraints aren't just physical. They're political."},
-    {"type": "paragraph", "text": "The Marleyan military uses this. They don't give the Warriors the nine titans out of generosity — they give them to Eldian children specifically so the royal bloodline stays controllable. The power system isn't about who hits hardest. It's about who can be trusted with power, and how you prevent them from using it against you."},
-    {"type": "section-header", "text": "Why the Walls Exist"},
-    {"type": "paragraph", "text": "The walls aren't protection. They're containment. King Fritz built them specifically so Eldians inside would believe they were safe from titans outside. The titans inside the walls were always there. The system was designed to produce periodic catastrophe to maintain political control."},
-    {"type": "paragraph", "text": "That's the Attack on Titan power system at its core: titans are a tool of governance. Every faction uses titan power differently. The same abilities produce completely different strategic outcomes depending on who's using them and why. Most anime have power systems that determine who wins fights. AoT has a power structure that determines who gets to fight at all."},
-    {"type": "inline-newsletter"}
+    {
+      "type": "paragraph",
+      "text": "Most power system analyses of Attack on Titan focus on Titan types: Founding, Colossal, Warhammer, Attack Titan. They're categorized by size, ability, and royal bloodline. That's the surface. The actual system is deeper and more uncomfortable."
+    },
+    {
+      "type": "section-header",
+      "text": "The 3D Maneuver Gear Problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Scouts don't have a power system. They have equipment that leverages physics in a world where physics is partially negotiable. Maneuver gear lets humans fight titans without any supernatural ability. This is unusual — most shonen gives humans a way to match supernatural threats through their own power. AoT gives them leverage. The structural consequence: humans are always outmatched unless they compensate with skill, numbers, or coordination."
+    },
+    {
+      "type": "universe-block",
+      "slug": "aot"
+    },
+    {
+      "type": "section-header",
+      "text": "Titan Inheritance: The Real System"
+    },
+    {
+      "type": "paragraph",
+      "text": "Titan power isn't just genetic — it's territorial and informational. The holder of the Founding Titan can control all Subjects of Ymir, but only if they have royal blood. The holder of the Attack Titan can send memories forward and backward through time, but only within Eldian royal lines. The constraints aren't just physical. They're political."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Marleyan military uses this. They don't give the Warriors the nine titans out of generosity — they give them to Eldian children specifically so the royal bloodline stays controllable. The power system isn't about who hits hardest. It's about who can be trusted with power, and how you prevent them from using it against you."
+    },
+    {
+      "type": "section-header",
+      "text": "Why the Walls Exist"
+    },
+    {
+      "type": "paragraph",
+      "text": "The walls aren't protection. They're containment. King Fritz built them specifically so Eldians inside would believe they were safe from titans outside. The titans inside the walls were always there. The system was designed to produce periodic catastrophe to maintain political control."
+    },
+    {
+      "type": "paragraph",
+      "text": "That's the Attack on Titan power system at its core: titans are a tool of governance. Every faction uses titan power differently. The same abilities produce completely different strategic outcomes depending on who's using them and why. Most anime have power systems that determine who wins fights. AoT has a power structure that determines who gets to fight at all."
+    },
+    {
+      "type": "inline-newsletter"
+    }
   ]
 }

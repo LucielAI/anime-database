@@ -41,10 +41,6 @@
     {
       "type": "universe-link",
       "slug": "aot"
-    },
-    {
-      "type": "inline-newsletter"
     }
-  ],
-  "type": "blog"
+  ]
 }

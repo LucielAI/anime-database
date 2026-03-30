@@ -1,57 +1,44 @@
 {
   "posts": [
     {
-      "slug": "death-note-smartest-battle-anime",
-      "title": "Why Death Note Is the Smartest Battle Anime Ever Made",
+      "slug": "jujutsu-kaisen-vs-demon-slayer-power-systems",
+      "title": "Jujutsu Kaisen vs Demon Slayer: Which Power System Holds Up Better?",
       "date": "2026-03-27",
-      "description": "Two people in a room outthinking each other with rules both of them made.",
-      "keywords": "death note power system, light yagami vs L, anime analysis",
-      "author": "Anime Architecture Archive",
-      "type": "blog"
+      "description": "Both series built their worlds around combat. But JJK's cursed energy system has decay mechanics and domain expansions. Demon Slayer has breathing forms and marked warriors. The difference in how they handle power growth tells you everything about how each series thinks about strength.",
+      "keywords": "jjk power system, demon slayer power system, jjk vs demon slayer, anime power systems compared",
+      "author": "Anime Architecture Archive"
     },
     {
       "slug": "solo-leveling-hunter-system",
       "title": "Solo Leveling's Hunter Economy: Why It's the Best Isekai Power System",
       "date": "2026-03-27",
-      "description": "The Hunter ranking structure, gate economy, and daily dungeon mechanics form a supply-demand model.",
-      "keywords": "solo leveling power system, isekai power system, hunter rank",
-      "author": "Anime Architecture Archive",
-      "type": "blog"
+      "description": "Solo Leveling gets dismissed as a power fantasy. That's accurate but incomplete. The actual system — the Hunter ranking structure, the gate economy, the daily dungeon mechanics — is a near-perfect supply-demand model for supernatural power.",
+      "keywords": "solo leveling power system, solo leveling hunter rank, isekai power system, solo leveling analysis",
+      "author": "Anime Architecture Archive"
     },
     {
       "slug": "aot-power-system-analysis",
       "title": "What Makes Attack on TITAN's Power System Different",
       "date": "2026-03-27",
-      "description": "Titans aren't a power system \u2014 they're an ecosystem. AoT's actual system is political economy.",
-      "keywords": "attack on titan power system, aot worldbuilding, aot analysis",
-      "author": "Anime Architecture Archive",
-      "type": "blog"
+      "description": "Titans aren't a power system — they're an ecosystem. Attack on Titan's actual system is political economy: who controls the titans, who benefits from keeping them mysterious, and why the walls exist in the first place.",
+      "keywords": "attack on titan power system, aot worldbuilding, attack on titan analysis, aot titans explained",
+      "author": "Anime Architecture Archive"
     },
     {
-      "slug": "jujutsu-kaisen-vs-demon-slayer-power-systems",
-      "title": "Jujutsu Kaisen vs Demon Slayer: Which Power System Holds Up Better?",
+      "slug": "death-note-smartest-battle-anime",
+      "title": "Why Death Note Is the Smartest Battle Anime Ever Made",
       "date": "2026-03-27",
-      "description": "JJK vs Demon Slayer \u2014 cursed energy with decay vs breathing mechanics.",
-      "keywords": "jjk power system, demon slayer power system, anime comparison",
-      "author": "Anime Architecture Archive",
-      "type": "blog"
+      "description": "No fights. No power-ups. No training arcs. Death Note is two people in a room outthinking each other with rules both of them made. The power system is the notebook itself — and both Light and L become experts in its mechanics before using them offensively.",
+      "keywords": "death note power system, death note analysis, light yagami vs L, death note battle system",
+      "author": "Anime Architecture Archive"
     },
     {
       "slug": "one-piece-power-system-analysis",
       "title": "Why One Piece Has the Best Anime Power System",
       "date": "2026-03-27",
-      "description": "Devil Fruits get all the attention. But the real One Piece power system is the crew economy.",
-      "keywords": "one piece power system, one piece devil fruits, one piece worldbuilding",
-      "author": "Anime Architecture Archive",
-      "type": "blog"
-    },
-    {
-      "slug": "anime-power-systems-ranked",
-      "title": "The Most Complex Anime Power Systems, Ranked by Structure",
-      "date": "2026-03-21",
-      "description": "We ranked anime power systems not by flashiness, but by structural depth. From Nen to cursed energy to titan shifting \u2014 which system is the most architecturally complex?",
-      "keywords": "anime power systems ranked, best anime power systems, most complex anime, nen system, cursed energy",
-      "author": "Archive Intelligence"
+      "description": "Devil Fruits get all the attention. But the real One Piece power system is the crew economy — a faction network where everyone has a role, nothing works in isolation, and ambition is the only renewable resource.",
+      "keywords": "one piece power system, one piece devil fruits, one piece worldbuilding, one piece analysis",
+      "author": "Anime Architecture Archive"
     },
     {
       "slug": "best-anime-worldbuilding",
@@ -68,7 +55,15 @@
       "description": "Every universe in the archive can be read two ways: as a story (LORE) or as an engineered system (SYS). Here's why that matters and how to use it.",
       "keywords": "anime analysis, anime systems thinking, lore mode, system mode, anime worldbuilding analysis",
       "author": "Archive Intelligence"
+    },
+    {
+      "slug": "anime-power-systems-ranked",
+      "title": "The Most Complex Anime Power Systems, Ranked by Structure",
+      "date": "2026-03-21",
+      "description": "We ranked anime power systems not by flashiness, but by structural depth. From Nen to cursed energy to titan shifting — which system is the most architecturally complex?",
+      "keywords": "anime power systems ranked, best anime power systems, most complex anime, nen system, cursed energy",
+      "author": "Archive Intelligence"
     }
   ],
-  "generatedAt": "2026-03-26T17:03:55.085Z"
+  "generatedAt": "2026-03-30T11:02:41.366Z"
 }

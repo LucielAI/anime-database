@@ -6,15 +6,44 @@
   "keywords": "death note power system, death note analysis, light yagami vs L, death note battle system",
   "author": "Anime Architecture Archive",
   "content": [
-    {"type": "paragraph", "text": "Every battle anime has a moment where the protagonist figures out how their power works well enough to use it creatively. Death Note has two protagonists doing that simultaneously, each trying to figure out what the other knows, while knowing the other is trying to figure out what they know. It's a nested epistemic problem disguised as a supernatural thriller."},
-    {"type": "section-header", "text": "The Rule System"},
-    {"type": "paragraph", "text": "The Death Note has explicit rules: write a name, the person dies. But there are dozens of sub-rules about timing, conditions, and limitations. The series spends the first quarter of the story establishing these rules not for the audience's benefit — for Light's. He doesn't just read them. He designs experiments to test the edges. He figures out how to kill without being seen. He learns the system so thoroughly that he can use it as a precision instrument."},
-    {"type": "universe-block", "slug": "deathnote"},
-    {"type": "section-header", "text": "L's Approach: Hypothesis Testing"},
-    {"type": "paragraph", "text": "L doesn't have supernatural abilities. He has a methodology. He starts with a hypothesis — Kira kills through a mechanism that requires knowing the victim's name — and designs tests to confirm or disprove it. He narrows the suspect pool through statistical analysis. He sacrifices pieces to test the board. His power isn't the Death Note. It's Bayesian reasoning under incomplete information."},
-    {"type": "paragraph", "text": "The structural brilliance: L's methodology works. He identifies Light as the prime suspect within the first arc through logic alone. The entire series after that is Light trying to maintain his position while L tries to prove what he already knows. The question isn't who is smarter. It's who runs out of moves first."},
-    {"type": "section-header", "text": "Why It Doesn't Get Old"},
-    {"type": "paragraph", "text": "Most battle anime age because the power scaling breaks the system. Characters get new abilities, the old rules stop applying, and the structural elegance collapses. Death Note's system is static. The Death Note doesn't evolve. What evolves is the characters' understanding of it. The story rewards attention — the more you know about how the system works, the more impressive the moves. Light vs L isn't a fight. It's a proof."},
-    {"type": "inline-newsletter"}
+    {
+      "type": "paragraph",
+      "text": "Every battle anime has a moment where the protagonist figures out how their power works well enough to use it creatively. Death Note has two protagonists doing that simultaneously, each trying to figure out what the other knows, while knowing the other is trying to figure out what they know. It's a nested epistemic problem disguised as a supernatural thriller."
+    },
+    {
+      "type": "section-header",
+      "text": "The Rule System"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Death Note has explicit rules: write a name, the person dies. But there are dozens of sub-rules about timing, conditions, and limitations. The series spends the first quarter of the story establishing these rules not for the audience's benefit — for Light's. He doesn't just read them. He designs experiments to test the edges. He figures out how to kill without being seen. He learns the system so thoroughly that he can use it as a precision instrument."
+    },
+    {
+      "type": "universe-block",
+      "slug": "deathnote"
+    },
+    {
+      "type": "section-header",
+      "text": "L's Approach: Hypothesis Testing"
+    },
+    {
+      "type": "paragraph",
+      "text": "L doesn't have supernatural abilities. He has a methodology. He starts with a hypothesis — Kira kills through a mechanism that requires knowing the victim's name — and designs tests to confirm or disprove it. He narrows the suspect pool through statistical analysis. He sacrifices pieces to test the board. His power isn't the Death Note. It's Bayesian reasoning under incomplete information."
+    },
+    {
+      "type": "paragraph",
+      "text": "The structural brilliance: L's methodology works. He identifies Light as the prime suspect within the first arc through logic alone. The entire series after that is Light trying to maintain his position while L tries to prove what he already knows. The question isn't who is smarter. It's who runs out of moves first."
+    },
+    {
+      "type": "section-header",
+      "text": "Why It Doesn't Get Old"
+    },
+    {
+      "type": "paragraph",
+      "text": "Most battle anime age because the power scaling breaks the system. Characters get new abilities, the old rules stop applying, and the structural elegance collapses. Death Note's system is static. The Death Note doesn't evolve. What evolves is the characters' understanding of it. The story rewards attention — the more you know about how the system works, the more impressive the moves. Light vs L isn't a fight. It's a proof."
+    },
+    {
+      "type": "inline-newsletter"
+    }
   ]
 }

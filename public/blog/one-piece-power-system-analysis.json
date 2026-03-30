@@ -6,16 +6,48 @@
   "keywords": "one piece power system, one piece devil fruits, one piece worldbuilding, one piece analysis",
   "author": "Anime Architecture Archive",
   "content": [
-    {"type": "paragraph", "text": "Most power system analyses start with Devil Fruits. They're flashy, distinct, and easy to rank. But if you actually map how power works in One Piece — who has it, how they use it, and what stops them — Devil Fruits are a distraction from the real system."},
-    {"type": "section-header", "text": "The Actual Power Structure"},
-    {"type": "paragraph", "text": "One Piece runs on three simultaneous power currencies that don't convert into each other: Haki, Devil Fruit abilities, and Combat skill. A Fishman karate master can kill a Logia user who's never trained. A Emperor's right hand can oneshot a superhuman swordsman with CoC-coated attack. These are not balanced by a central rule — they're balanced by context."},
-    {"type": "paragraph", "text": "This is what makes it structurally interesting. Most anime have a single power axis (strength level) with sub-rules. One Piece has three axes that interact in non-linear ways. A crew doesn't need its captain to be the strongest fighter — it needs the right combination of abilities to handle the right situations."},
-    {"type": "universe-block", "slug": "one-piece"},
-    {"type": "section-header", "text": "The Crew Economy"},
-    {"type": "paragraph", "text": "Every significant crew in One Piece is a functional organization with division of labor. The Straw Hats aren't a team — they're a startup with specialized roles. Zoro handles sustained combat. Sanji handles mobile disruption. Nami handles environmental control. Robin handles information. Take any one away and the crew fails in a different way."},
-    {"type": "paragraph", "text": "This is the actual system: not individual power levels, but capability networks. The Marines work the same way — Garp and Sengoku are blunt force, Akainu is surgical, Kizaru is mobile disruption. The system doesn't reward having the strongest individual. It rewards having the right combination."},
-    {"type": "section-header", "text": "What This Means for Storytelling"},
-    {"type": "paragraph", "text": "When every crew member has a non-replaceable role, every fight is a systems problem. Egghead wasn't exciting because of individual battles — it was exciting because the crew had to solve a distributed problem under constraints. Each member was the only one who could handle their part. That's the One Piece power system: not who hits hardest, but who solves what."},
-    {"type": "inline-newsletter"}
+    {
+      "type": "paragraph",
+      "text": "Most power system analyses start with Devil Fruits. They're flashy, distinct, and easy to rank. But if you actually map how power works in One Piece — who has it, how they use it, and what stops them — Devil Fruits are a distraction from the real system."
+    },
+    {
+      "type": "section-header",
+      "text": "The Actual Power Structure"
+    },
+    {
+      "type": "paragraph",
+      "text": "One Piece runs on three simultaneous power currencies that don't convert into each other: Haki, Devil Fruit abilities, and Combat skill. A Fishman karate master can kill a Logia user who's never trained. A Emperor's right hand can oneshot a superhuman swordsman with CoC-coated attack. These are not balanced by a central rule — they're balanced by context."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is what makes it structurally interesting. Most anime have a single power axis (strength level) with sub-rules. One Piece has three axes that interact in non-linear ways. A crew doesn't need its captain to be the strongest fighter — it needs the right combination of abilities to handle the right situations."
+    },
+    {
+      "type": "universe-block",
+      "slug": "one-piece"
+    },
+    {
+      "type": "section-header",
+      "text": "The Crew Economy"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every significant crew in One Piece is a functional organization with division of labor. The Straw Hats aren't a team — they're a startup with specialized roles. Zoro handles sustained combat. Sanji handles mobile disruption. Nami handles environmental control. Robin handles information. Take any one away and the crew fails in a different way."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the actual system: not individual power levels, but capability networks. The Marines work the same way — Garp and Sengoku are blunt force, Akainu is surgical, Kizaru is mobile disruption. The system doesn't reward having the strongest individual. It rewards having the right combination."
+    },
+    {
+      "type": "section-header",
+      "text": "What This Means for Storytelling"
+    },
+    {
+      "type": "paragraph",
+      "text": "When every crew member has a non-replaceable role, every fight is a systems problem. Egghead wasn't exciting because of individual battles — it was exciting because the crew had to solve a distributed problem under constraints. Each member was the only one who could handle their part. That's the One Piece power system: not who hits hardest, but who solves what."
+    },
+    {
+      "type": "inline-newsletter"
+    }
   ]
 }
