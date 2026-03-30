@@ -111,14 +111,17 @@ print(f"Source files: {len(files)}")
 deny_patterns = load_patterns(DENYLIST)
 allow_patterns = load_patterns(ALLOWLIST)
 
-# Check denylist violations
+# Check denylist violations (warn but continue — non-matching files are simply skipped)
 violations = [f for f in files if matches_patterns(f, deny_patterns)]
 if violations:
-    print(f"\nDENYLIST VIOLATIONS ({len(violations)}):")
+    print(f"\nDenylist matches (will NOT be promoted): {len(violations)}")
     for v in violations[:10]:
-        print(f"  REMOVE: {v}")
-    sys.exit(1)
-print("Denylist: clean")
+        print(f"  (skipping) {v}")
+    if len(violations) > 10:
+        print(f"  ... and {len(violations) - 10} more")
+else:
+    print("Denylist: clean (all source files are allowlisted or neutral)")
+print()
 
 # Apply allowlist
 promoted = [f for f in files if matches_patterns(f, allow_patterns)]

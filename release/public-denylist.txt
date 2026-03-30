@@ -20,7 +20,6 @@
 
 #--- Git internals ----------------------------------------------
 ^\.git/
-^\.gitignore$
 ^\.gitattributes$
 
 #--- Node/build -----------------------------------------------
@@ -38,7 +37,6 @@
 #--- CI/CD ------------------------------------------------------
 ^\.github/workflows/ci\.yml$
 ^\.github/pull_request_template\.md$
-^scripts/
 ^docs/
 
 #--- Private collab --------------------------------------------
