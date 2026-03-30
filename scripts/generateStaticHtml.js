@@ -517,24 +517,10 @@ async function generate() {
 
   let pagesGenerated = 0
 
-  // --- /universes (catalog page) ---
-  try {
-    const content = catalogContent(catalog)
-    const html = buildHtml({
-      title: `Browse ${catalog.length} Anime Universe Analyses | ${SITE_NAME}`,
-      description: `Browse ${catalog.length} anime universes mapped as systems — power mechanics, character hierarchies, faction networks, and causal logic. Compare any two side-by-side.`,
-      canonicalUrl: `${SITE_URL}/universes`,
-      ogImage: `${SITE_URL}/og-fallback.png`,
-      content,
-    })
-    const outPath = join(PUBLIC_DIR, 'universes', 'index.html')
-    mkdirSync(dirname(outPath), { recursive: true })
-    writeFileSync(outPath, html)
-    pagesGenerated++
-    console.log(`[static-html] Generated ${outPath}`)
-  } catch (e) {
-    console.error('[static-html] Failed to generate /universes:', e.message)
-  }
+  // NOTE: We do NOT pre-render SPA-only routes (/universes, /about, /compare, /privacy).
+  // Pre-rendering these causes content mismatch on refresh: the static HTML shows briefly,
+  // then React swaps to its own content. Universe pages and blog posts ARE pre-rendered
+  // because they have complex visualizations and are important for SEO.
 
   // --- Universe pages + sub-pages ---
   for (const preview of catalog) {
@@ -701,107 +687,6 @@ async function generate() {
     }
   } catch (e) {
     console.error('[static-html] Failed blog generation:', e.message)
-  }
-
-  // --- SPA routes with static HTML (no JS required to see correct meta) ---
-
-  // /about
-  try {
-    const html = buildHtml({
-      title: `About the Anime Architecture Archive | ${SITE_NAME}`,
-      description: `Anime Architecture Archive maps fictional anime universes as structured systems — analyzing power mechanics, causal logic, and worldbuilding architecture. Created by Hashi.Ai.`,
-      canonicalUrl: `${SITE_URL}/about`,
-      ogImage: `${SITE_URL}/og-fallback.png`,
-      content: `
-  <main class="ssr-container">
-    <div class="ssr-hero">
-      <div class="ssr-hero-eyebrow">About</div>
-      <h1 class="ssr-hero-title">Anime Intelligence</h1>
-      <p class="ssr-hero-desc">Maps fictional anime universes as structured systems — analyzing power mechanics, causal logic, and worldbuilding architecture. Created by Hashi.Ai.</p>
-    </div>
-    <div class="ssr-grid" style="max-width:42rem;margin:0 auto;">
-      <div class="ssr-card" style="max-width:100%;">
-        <div class="ssr-card-name">What is Anime Architecture Archive?</div>
-        <div class="ssr-card-bio">Most anime sites tell you what happens. We explain why it works structurally — what rules govern the world, how power hierarchies form, what makes fights meaningful, and how causality flows. It is system design thinking applied to fictional universes.</div>
-      </div>
-      <div class="ssr-card" style="max-width:100%;">
-        <div class="ssr-card-name">30 Universe Analyses</div>
-        <div class="ssr-card-bio">Each universe is mapped as an engineered system — power mechanics, character hierarchies, faction networks, combat rules, and causal logic. Not fan summaries. Structural analyses of how each world actually works.</div>
-      </div>
-      <div class="ssr-card" style="max-width:100%;">
-        <div class="ssr-card-name">Creator: Hashi.Ai</div>
-        <div class="ssr-card-bio">Built by Danny (Hashi) using AI-native development workflows. Every universe is analyzed by running the actual source material through structured AI analysis — not hand-waved summaries.</div>
-      </div>
-    </div>
-  </main>`,
-    })
-    const outPath = join(PUBLIC_DIR, 'about', 'index.html')
-    mkdirSync(dirname(outPath), { recursive: true })
-    writeFileSync(outPath, html)
-    pagesGenerated++
-    console.log(`[static-html] Generated /about`)
-  } catch (e) {
-    console.error('[static-html] Failed /about:', e.message)
-  }
-
-  // /compare — generic version (no universe pair selected)
-  try {
-    const html = buildHtml({
-      title: `Universe Comparison | ${SITE_NAME}`,
-      description: `Pick any two anime universes from the catalog and compare them side-by-side across power systems, combat styles, factions, and strategic depth.`,
-      canonicalUrl: `${SITE_URL}/compare`,
-      ogImage: `${SITE_URL}/og-fallback.png`,
-      content: `
-  <main class="ssr-container">
-    <div class="ssr-hero">
-      <div class="ssr-hero-eyebrow">Universe Comparison</div>
-      <h1 class="ssr-hero-title">Pick Two Universes</h1>
-      <p class="ssr-hero-desc">Side-by-side structural comparison of any two anime universes — power mechanics, combat rules, faction hierarchies, and world logic analyzed together.</p>
-    </div>
-  </main>`,
-    })
-    const outPath = join(PUBLIC_DIR, 'compare', 'index.html')
-    mkdirSync(dirname(outPath), { recursive: true })
-    writeFileSync(outPath, html)
-    pagesGenerated++
-    console.log(`[static-html] Generated /compare`)
-  } catch (e) {
-    console.error('[static-html] Failed /compare:', e.message)
-  }
-
-  // /privacy
-  try {
-    const html = buildHtml({
-      title: `Privacy Policy | ${SITE_NAME}`,
-      description: `Anime Architecture Archive privacy policy — data collection, cookies, GoatCounter analytics, affiliate links, and Supabase community feedback.`,
-      canonicalUrl: `${SITE_URL}/privacy`,
-      ogImage: `${SITE_URL}/og-fallback.png`,
-      content: `
-  <main class="ssr-container" style="max-width:42rem;">
-    <div class="ssr-hero" style="text-align:left;padding:2rem 0;">
-      <h1 class="ssr-hero-title" style="font-size:2rem;">Privacy Policy</h1>
-    </div>
-    <div class="ssr-card" style="max-width:100%;">
-      <div class="ssr-card-name">Analytics</div>
-      <div class="ssr-card-bio">We use GoatCounter for privacy-respecting analytics. No cookies. No cross-site tracking. Data is publicly visible at analytics.animearchive.app but does not track individuals.</div>
-    </div>
-    <div class="ssr-card" style="max-width:100%;margin-top:1rem;">
-      <div class="ssr-card-name">Community Feedback</div>
-      <div class="ssr-card-bio">Feedback submissions are stored in Supabase and used only to improve the archive. We never sell or share personal data.</div>
-    </div>
-    <div class="ssr-card" style="max-width:100%;margin-top:1rem;">
-      <div class="ssr-card-name">Affiliate Links</div>
-      <div class="ssr-card-bio">Anime Architecture Archive uses affiliate links (Amazon Associates). Purchases through these links may earn a small commission at no cost to you.</div>
-    </div>
-  </main>`,
-    })
-    const outPath = join(PUBLIC_DIR, 'privacy', 'index.html')
-    mkdirSync(dirname(outPath), { recursive: true })
-    writeFileSync(outPath, html)
-    pagesGenerated++
-    console.log(`[static-html] Generated /privacy`)
-  } catch (e) {
-    console.error('[static-html] Failed /privacy:', e.message)
   }
 
   console.log(`[static-html] Done. Generated ${pagesGenerated} static HTML pages.`)

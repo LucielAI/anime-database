@@ -131,8 +131,10 @@ function main() {
   console.log('[postbuild] Copying static SEO HTML files to dist/...');
 
   // Copy all static HTML directories to dist/
-  // Order matters: universe/ first (already done above), then blog/, universes/, about/, compare/, privacy/
-  const staticDirs = ['universe', 'blog', 'universes', 'about', 'compare', 'privacy']
+  // Only universe pages and blog posts are pre-rendered.
+  // SPA-only routes (/universes, /about, /compare, /privacy) are NOT pre-rendered
+  // to avoid content mismatch on refresh.
+  const staticDirs = ['universe', 'blog']
   for (const dir of staticDirs) {
     const src = path.join(PUBLIC_DIR, dir)
     const dst = path.join(DIST_DIR, dir)
