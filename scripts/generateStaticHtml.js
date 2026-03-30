@@ -413,6 +413,75 @@ function catalogContent(catalog) {
   </main>`
 }
 
+function blogIndexContent(posts) {
+  const cards = posts.slice(0, 12).map(post => `
+    <div class="ssr-card">
+      <div class="ssr-card-name" style="font-size:0.8rem;margin-bottom:0.5rem;">${escapeHtml(post.title)}</div>
+      <div class="ssr-card-bio">${escapeHtml(truncate(post.description || '', 120))}</div>
+      <div class="ssr-badge-row" style="margin-top:0.75rem;">
+        <span class="ssr-badge">${escapeHtml(post.date || '')}</span>
+        ${(post.tags || []).slice(0,2).map(t => `<span class="ssr-badge accent">${escapeHtml(t)}</span>`).join('')}
+      </div>
+    </div>`).join('')
+
+  return `
+  <main class="ssr-container">
+    <div class="ssr-hero">
+      <div class="ssr-hero-eyebrow">Analysis Blog</div>
+      <h1 class="ssr-hero-title">Anime System Analyses</h1>
+      <p class="ssr-hero-desc">Deep dives into anime power systems, worldbuilding structure, and universe mechanics. Expert analysis written for fans who love the craft behind the story.</p>
+    </div>
+    <div class="ssr-grid">${cards}</div>
+  </main>`
+}
+
+function renderBlogBlock(block, catalogMap) {
+  switch (block.type) {
+    case 'paragraph':
+      return `<p style="font-size:0.8rem;line-height:1.8;color:#cbd5e1;margin-bottom:1.25rem;max-width:42rem;">${escapeHtml(block.text)}</p>`
+    case 'heading':
+      return `<h2 style="font-size:1.1rem;font-weight:800;uppercase;letter-spacing:0.05em;color:#fff;margin-top:2rem;margin-bottom:0.75rem;">${escapeHtml(block.text)}</h2>`
+    case 'section-header':
+      return `<p style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:#64748b;margin-top:1.5rem;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:0.25rem;">${escapeHtml(block.text)}</p>`
+    case 'universe-block': {
+      const entry = catalogMap[block.slug]
+      if (!entry) return ''
+      return `<div style="border:1px solid rgba(255,255,255,0.08);border-left:3px solid ${entry.themeColors?.primary || '#22d3ee'};border-radius:0.75rem;padding:1rem;margin:1.5rem 0;background:rgba(255,255,255,0.02);">
+        <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:${entry.themeColors?.primary || '#22d3ee'};margin-bottom:0.5rem;">Universe Analysis</p>
+        <p style="font-size:0.9rem;font-weight:700;color:#fff;margin-bottom:0.25rem;">${escapeHtml(entry.anime)}</p>
+        <p style="font-size:0.7rem;color:#64748b;">${escapeHtml(truncate(entry.tagline, 80))}</p>
+      </div>`
+    }
+    default:
+      return ''
+  }
+}
+
+function blogPostContent(post, catalogMap) {
+  const blocks = (post.content || []).map(b => renderBlogBlock(b, catalogMap)).join('\n')
+
+  return `
+  <main class="ssr-container" style="max-width:46rem;">
+    <div class="ssr-hero" style="text-align:left;padding:2rem 0;">
+      <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#64748b;margin-bottom:0.75rem;">
+        ${escapeHtml(post.date || '')} · ${escapeHtml(post.author || 'Anime Architecture Archive')}
+      </p>
+      <h1 style="font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;uppercase;letter-spacing:0.05em;background:linear-gradient(135deg,#22d3ee,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1;margin-bottom:1rem;">
+        ${escapeHtml(post.title)}
+      </h1>
+      <p style="font-size:0.85rem;color:#94a3b8;max-width:36rem;line-height:1.7;margin-bottom:1rem;">
+        ${escapeHtml(post.description || '')}
+      </p>
+      ${(post.tags || []).length > 0 ? `<div class="ssr-badge-row" style="justify-content:flex-start;">
+        ${post.tags.map(t => `<span class="ssr-badge accent">${escapeHtml(t)}</span>`).join('')}
+      </div>` : ''}
+    </div>
+    <div style="margin-top:1rem;">
+      ${blocks}
+    </div>
+  </main>`
+}
+
 // ---------------------------------------------------------------------------
 // Main generation
 // ---------------------------------------------------------------------------
@@ -577,6 +646,61 @@ async function generate() {
         console.error(`[static-html] Failed power ${universeId}/${i}:`, e.message)
       }
     }
+  }
+
+  // --- Blog index + blog posts ---
+  try {
+    const { readdirSync, readFileSync: rf } = await import('fs')
+    const blogFiles = readdirSync(join(PUBLIC_DIR, 'blog')).filter(f => f.endsWith('.json'))
+    const blogPosts = blogFiles.map(f => {
+      try { return JSON.parse(rf(join(PUBLIC_DIR, 'blog', f), 'utf-8')) } catch { return null }
+    }).filter(Boolean)
+
+    // Build catalog map for universe links
+    const catalogMap = {}
+    for (const entry of catalog) catalogMap[entry.id] = entry
+
+    // Blog index page
+    try {
+      const content = blogIndexContent(blogPosts)
+      const html = buildHtml({
+        title: `Anime Analysis Blog — Power Systems, Worldbuilding & More | ${SITE_NAME}`,
+        description: `Deep dives into anime power systems, worldbuilding structure, and universe mechanics. Expert analysis written for fans who love the craft behind the story.`,
+        canonicalUrl: `${SITE_URL}/blog`,
+        ogImage: `${SITE_URL}/og-fallback.png`,
+        content,
+      })
+      const outPath = join(PUBLIC_DIR, 'blog', 'index.html')
+      mkdirSync(dirname(outPath), { recursive: true })
+      writeFileSync(outPath, html)
+      pagesGenerated++
+      console.log(`[static-html] Generated /blog/index`)
+    } catch (e) {
+      console.error('[static-html] Failed /blog:', e.message)
+    }
+
+    // Individual blog post pages
+    for (const post of blogPosts) {
+      try {
+        const slug = post.slug || post.title?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'post'
+        const content = blogPostContent(post, catalogMap)
+        const html = buildHtml({
+          title: `${post.title} | ${SITE_NAME}`,
+          description: post.description || '',
+          canonicalUrl: `${SITE_URL}/blog/${slug}`,
+          ogImage: post.coverImage || `${SITE_URL}/og-fallback.png`,
+          content,
+        })
+        const outPath = join(PUBLIC_DIR, 'blog', slug, 'index.html')
+        mkdirSync(dirname(outPath), { recursive: true })
+        writeFileSync(outPath, html)
+        pagesGenerated++
+      } catch (e) {
+        console.error(`[static-html] Failed blog post ${post.slug}:`, e.message)
+      }
+    }
+  } catch (e) {
+    console.error('[static-html] Failed blog generation:', e.message)
   }
 
   console.log(`[static-html] Done. Generated ${pagesGenerated} static HTML pages.`)
