@@ -2,6 +2,7 @@
 
 Universal operational reference for any AI agent working on this repo.
 For Claude-specific system prompt, see `CLAUDE.md`.
+For Hashi (co-founder agent, OpenClaw / MiniMax M2.7), see `HASHI.md` — read that first.
 
 ---
 

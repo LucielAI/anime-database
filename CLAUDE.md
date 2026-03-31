@@ -1,5 +1,7 @@
 # Anime Architecture Archive — Agent System Prompt
 
+> **Hashi (co-founder agent):** Read `HASHI.md` first, then return here for task routing and critical rules.
+
 Structural intelligence platform treating anime universes as engineered systems.
 Payloads live in `src/data/`. UI renders from JSON only — no universe logic in components.
 
