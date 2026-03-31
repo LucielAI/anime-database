@@ -7,14 +7,32 @@ import os, sys, json, base64, subprocess
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 from subprocess import TimeoutExpired
+import re
 
 #── Config ──────────────────────────────────────────────────────
 TOKEN = os.environ.get("PUBLIC_REPO_SYNC_TOKEN", "")
 SOURCE_REPO = "LucielAI/anime-database"
 TARGET_REPO = "LucielAI/Animearchive.app"
-TARGET_BRANCH = os.environ.get("TARGET_BRANCH", "main")
-DRY_RUN = os.environ.get("DRY_RUN", "true").lower() == "true"
-FORCE_PUSH = os.environ.get("FORCE_PUSH", "false").lower() == "true"
+TARGET_BRANCH = "main"
+DRY_RUN = True
+FORCE_PUSH = False
+
+#── Parse CLI args ───────────────────────────────────────────────
+for arg in sys.argv[1:]:
+    if arg.startswith("--dry-run="):
+        DRY_RUN = arg.split("=")[1].lower() == "true"
+    elif arg == "--dry-run=false":
+        DRY_RUN = False
+    elif arg == "--dry-run=true":
+        DRY_RUN = True
+    elif arg.startswith("--target-branch="):
+        TARGET_BRANCH = arg.split("=")[1]
+    elif arg.startswith("--force="):
+        FORCE_PUSH = arg.split("=")[1].lower() == "true"
+    elif arg == "--force":
+        FORCE_PUSH = True
+    elif arg == "--dry-run":
+        DRY_RUN = True
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
