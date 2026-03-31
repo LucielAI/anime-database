@@ -18,6 +18,7 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 | Homepage architecture/data-contract updates | `playbooks/07-homepage-system-hub.md` |
 | Keyboard shortcuts, Compare route, llms.txt, RSS | `docs/ARCHITECTURE_DECISIONS.md` (ADR-018–021) |
 | Blog hub, homepage blog entry | `docs/ARCHITECTURE_DECISIONS.md` (ADR-022–023) |
+| SPA routing, meta/OG delivery, static HTML (rejected) | `docs/ARCHITECTURE_DECISIONS.md` (ADR-024) |
 | Renderer selection logic | `docs/RENDERER_CONTRACT.md` |
 | Pipeline stages reference | `docs/UNIVERSE_PIPELINE.md` |
 | Repo-native universe build prompt | `docs/MASTER_UNIVERSE_BUILD_PROMPT.md` |
@@ -62,11 +63,41 @@ Payloads live in `src/data/`. UI renders from JSON only — no universe logic in
 
 ---
 
-## CLI Cheatsheet
+## REJECTED APPROACHES — DO NOT REIMPLEMENT
+
+These were tried, broke things, and were deliberately removed. If you find yourself proposing any of these, stop and flag it to the founder instead.
+
+| Approach | Why it was rejected | What to do instead |
+|---|---|---|
+| Pre-rendered static HTML for universe/blog routes (`public/universe/*/index.html`) | Vercel serves the static file first; React hydrates on top → visible flash/content swap on hard refresh. Attempted twice (PRs ~#133–139, then again ~#144–148), broke production both times. | react-helmet-async handles all meta client-side. Dynamic OG images via `api/og-universes.js`. This is the correct architecture. |
+| `/universe/:slug` rewrite in `vercel.json` pointing to a static file | Same root cause as above — breaks SPA routing. | The existing catch-all rewrite in `vercel.json` sends everything to `index.html`. Do not add universe-specific rewrites. |
+| A Vercel serverless function at `api/universe.js` serving pre-rendered HTML | Functionally dead — the HTML it tries to serve doesn't exist. Was removed in this repo's cleanup. | Not needed. SPA + dynamic OG is the correct stack. |
+| Hardcoding universe counts in any string (`"30 anime universes"`, `"Compare 30 anime worlds"`) | Silently drifts as the catalog grows. Was found in `seo.js`, `index.html`, and `SearchResults`. | Use `catalog.length` dynamically, or write copy that doesn't embed the count. |
+
+**The regression guard is active:** `scripts/generateStaticHtml.js` runs at every build and will exit with code 1 if any pre-rendered HTML files are found under SPA-owned routes. Do not remove or bypass this check. See ADR-024.
+
+---
+
+## REQUIRES FOUNDER DECISION — DO NOT PROCEED AUTONOMOUSLY
+
+Changes in these areas must be flagged and confirmed before implementation:
+
+- Any change to `vercel.json` routes or rewrites
+- Any change to `middleware.js`
+- Any change to the CI pipeline (`.github/workflows/ci.yml`)
+- Any new Vercel serverless function in `api/`
+- Any change to how universe data is loaded at runtime (`src/data/index.js`)
+- Any architectural change that affects how meta/OG/SEO tags are delivered
+- Deleting or restructuring `public/` static assets
+- Any database schema change (`supabase/migrations/`)
+
+---
+
+
 
 ```bash
 npm run validate:all                                              # full audit: payloads + catalog + indexing
-npm run validate:indexing                                        # verify all 15 universes are indexed correctly
+npm run validate:indexing                                        # verify all universes are indexed correctly
 npm run validate:payload src/data/<slug>.core.json                 # validate core payload
 npm run validate:payload src/data/<slug>.extended.json -- --extended  # validate extended dataset
 npm run add:universe src/data/<slug>.core.json [slug]              # integrate universe (auto-regenerates sitemap)
