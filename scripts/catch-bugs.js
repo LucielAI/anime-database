@@ -15,7 +15,7 @@
  */
 
 import { spawn, execSync } from 'child_process'
-import { existsSync, readFileSync, readdirSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { join, dirname, basename } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -32,7 +32,7 @@ const api = (path) => {
   try {
     const r = execSync(`curl -s "https://api.github.com${path}" -H "Authorization: Bearer ${TOKEN}" -H "Accept: application/vnd.github.v3+json"`, { encoding: 'utf8' })
     return JSON.parse(r)
-  } catch (e) {
+  } catch {
     return null
   }
 }
@@ -293,7 +293,7 @@ function checkContentQuality(ROOT, changedFiles = []) {
           issues.push(`${slug}/${name}: TEMPLATE description`)
         }
       }
-    } catch (e) {
+    } catch {
       // skip parse errors
     }
   }
@@ -341,16 +341,6 @@ function checkSearchIndex(ROOT) {
     if (!Array.isArray(data) || data.length < 10) return { name: 'Search index', pass: false, detail: `only ${data.length} entries` }
     return { name: 'Search index', pass: true, detail: `${data.length} entries` }
   } catch { return { name: 'Search index', pass: false, detail: 'invalid JSON' } }
-}
-
-function checkPublicFiles(ROOT, changedFiles) {
-  const publicFiles = changedFiles.filter(f => f.startsWith('public/'))
-  const results = []
-  if (publicFiles.some(f => f === 'public/feed.xml')) results.push(checkFeedXml(ROOT))
-  if (publicFiles.some(f => f === 'public/sitemap.xml')) results.push(checkSitemapInsights(ROOT))
-  if (publicFiles.some(f => f === 'public/llms.txt')) results.push(checkLlms(ROOT))
-  if (publicFiles.some(f => f === 'public/search-index.json')) results.push(checkSearchIndex(ROOT))
-  return results
 }
 
 // ─── COMPONENT CHECKS ───────────────────────────────────────────────────
@@ -413,12 +403,13 @@ async function main() {
 
   let changedFiles = []
   let cats = { universeFiles: [], catalogFiles: [], publicFiles: [], components: [], all: [] }
+  let savedBranch = null
 
   if (!branch) {
     log('Running all checks locally (no PR context)')
   } else {
     const { out: cb } = await run('git', ['branch', '--show-current'])
-    const savedBranch = cb.trim() || 'main'
+    savedBranch = cb.trim() || 'main'
 
     await run('git', ['fetch', 'origin', branch])
     const co = await run('git', ['checkout', '-B', branch, `origin/${branch}`])
@@ -506,7 +497,6 @@ async function main() {
   // ── Build summary ──
   const results = allResults.filter(Boolean)
   const failed = results.filter(r => !r.pass)
-  const passed = results.filter(r => r.pass)
 
   const checks = [
     { name: 'Build',      pass: buildOk },
@@ -550,7 +540,7 @@ async function main() {
         { encoding: 'utf8' }
       )
       log('Comment posted to PR')
-    } catch (e) { /* ignore */ }
+    } catch { /* ignore */ }
   } else {
     log('Skipping GitHub comment — no token or PR context')
   }

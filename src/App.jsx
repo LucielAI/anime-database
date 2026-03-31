@@ -221,7 +221,7 @@ const STRUCTURE_VISUALS = {
 }
 
 // CRO: Newsletter CTA Hero - compact inline version for above-fold conversion
-function NewsletterCTAHero({ variant = 'default' }) {
+function NewsletterCTAHero() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle')
   const lastSubmitTime = useRef(0)
@@ -231,7 +231,7 @@ function NewsletterCTAHero({ variant = 'default' }) {
     try {
       const stored = localStorage.getItem('newsletter-subscriber-count')
       if (stored) return parseInt(stored, 10)
-    } catch {}
+    } catch { /* localStorage unavailable */ }
     return null
   })()
 
@@ -256,7 +256,7 @@ function NewsletterCTAHero({ variant = 'default' }) {
         setEmail('')
         // Increment local count for immediate feedback
         const newCount = (subscriberCount || 2847) + 1
-        try { localStorage.setItem('newsletter-subscriber-count', String(newCount)) } catch {}
+        try { localStorage.setItem('newsletter-subscriber-count', String(newCount)) } catch { /* localStorage unavailable */ }
       } else {
         setStatus('error')
       }
@@ -325,7 +325,6 @@ function Home({ onSearchOpen }) {
   })
   const [compareRightId, setCompareRightId] = useState(UNIVERSE_CATALOG[1]?.id || '')
   const [blogPosts, setBlogPosts] = useState([])
-  const [heroSearchFocused, setHeroSearchFocused] = useState(false)
 
   useEffect(() => {
     if (typeof window === 'undefined') return

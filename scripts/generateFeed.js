@@ -4,7 +4,7 @@
  * Run as part of prebuild step.
  */
 import { writeFileSync, readdirSync, readFileSync, existsSync } from 'fs'
-import { join, basename, dirname } from 'path'
+import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))

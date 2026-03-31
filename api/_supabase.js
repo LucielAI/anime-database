@@ -1,4 +1,3 @@
-/* global process */
 
 const SUPABASE_URL_VARS = ['SUPABASE_URL']
 const SUPABASE_PUBLIC_KEY_VARS = [

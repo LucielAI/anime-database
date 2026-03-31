@@ -94,12 +94,13 @@ const SpotlightCarousel = memo(function SpotlightCarousel() {
     return () => window.removeEventListener('keydown', onKey)
   }, [next, prev])
 
+  const navigate = useNavigate()
+
   if (count === 0) return null
 
   const current = candidates[index]
   const meta = getSystemMeta(current.visualizationHint)
   const MetaIcon = meta.Icon
-  const navigate = useNavigate()
 
   // Preload adjacent images
   const prevIdx = (index - 1 + count) % count
@@ -120,7 +121,7 @@ const SpotlightCarousel = memo(function SpotlightCarousel() {
         aria-live="polite"
       >
         {/* Image layers — prev, current, next */}
-        {[prevIdx, index, nextIdx].map((uIdx, layerIdx) => {
+        {[prevIdx, index, nextIdx].map((uIdx) => {
           const u = candidates[uIdx]
           const isActive = uIdx === index
           const offset = (uIdx - index + count) % count

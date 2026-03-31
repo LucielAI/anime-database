@@ -25,8 +25,9 @@ function buildUniverseDescription(preview) {
 }
 
 export function buildHomeSeo(catalog = []) {
+  const count = catalog.length || 30
   const description = truncate(
-    `Anime Architecture Archive maps 30 anime universes as engineered systems — power hierarchies, combat rules, faction logic, and causal structure. Not fan summaries. Structural analyses of how each world actually works.`
+    `Anime Architecture Archive maps ${count} anime universes as engineered systems — power hierarchies, combat rules, faction logic, and causal structure. Not fan summaries. Structural analyses of how each world actually works.`
   )
 
   return {

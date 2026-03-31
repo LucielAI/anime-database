@@ -1,4 +1,3 @@
-/* global process */
 /**
  * generateBlogIndex.js
  * Reads all JSON files from content/blog/, generates:

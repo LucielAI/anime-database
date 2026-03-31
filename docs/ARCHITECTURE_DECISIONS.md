@@ -188,3 +188,24 @@ Decision:
 Homepage renders a "Latest Analysis" section with the 3 most recent blog posts as cards. Each card links to the post URL. A "All posts →" link navigates to `/blog`. Blog data is fetched client-side from `/blog-index.json`.
 Why:
 The blog existed but was undiscoverable — only reachable from thematic page footer links. Homepage section provides a clear, prominent entry point for editorial content.
+
+## ADR-024 — SPA-Only Rendering, No Static HTML Pre-rendering (2026-03-31)
+Decision:
+All app routes are owned exclusively by the React SPA. No pre-rendered static HTML files exist for universe pages, blog posts, or any other app route. Vercel serves `index.html` for all non-asset routes via a catch-all rewrite. Meta tags, OG tags, and structured data are set client-side via `react-helmet-async`. Dynamic OG images are served by `api/og-universes.js` (Vercel edge function).
+
+Why:
+Static HTML pre-rendering was attempted twice (PRs ~#133–#139, then again ~#144–#148). Both times it caused the same production bug: Vercel serves the static HTML file on first request, React hydrates on top of it with different content → visible flash and content mismatch on hard refresh and direct navigation. The fix required a full rollback (PR #159) the first time and a two-commit removal the second time.
+
+The correct mental model: Google and modern crawlers execute JavaScript and will see the fully hydrated page. `react-helmet-async` correctly sets per-route meta tags for all SPA routes. The dynamic OG edge function handles social preview images.
+
+Regression guard:
+`scripts/generateStaticHtml.js` runs at every build. It scans `public/` for any `index.html` files under SPA-owned paths and exits with code 1 if found. This is a hard build-time enforcement of this decision — do not remove or bypass it.
+
+What NOT to do:
+- Do not add `public/universe/*/index.html` files
+- Do not add universe-specific rewrites to `vercel.json`
+- Do not create a serverless function at `api/universe.js` to serve HTML
+- Do not use `generateStaticHtml.js` to generate HTML — its current job is validation only
+
+Tradeoff:
+Non-JS crawlers (rare) and some social previews that don't execute JS will see the fallback meta from `index.html`. This is acceptable — the fallback meta in `index.html` is kept accurate and the dynamic OG edge function handles social cards correctly.

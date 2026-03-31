@@ -35,7 +35,7 @@ const SKIP_TEST = args.includes('--skip-test')
 
 // ─── Guards ────────────────────────────────────────────────────────────────────
 let _stop = false
-const stop = (rc = 0) => { _stop = true; return rc }
+const _STOP_FN = (rc = 0) => { _stop = true; return rc }
 
 // ─── Output ───────────────────────────────────────────────────────────────────
 const out = (obj) => {
@@ -249,8 +249,6 @@ const computeDistribution = (p) => {
 /** Rank universe across strategic dimensions */
 const computeRanking = (p, contentScore) => {
   const overall = contentScore?.overall ?? 5
-  const sysType = p?.visualizationHint ?? ''
-
   // Tier: S >= 8, A >= 6, B >= 4, C < 4
   const tier = overall >= 8 ? 'S' : overall >= 6 ? 'A' : overall >= 4 ? 'B' : 'C'
 
@@ -441,7 +439,7 @@ Examples:
     if (!p?.tagline) seo.push('Missing tagline')
     else { if (p.tagline.length > 100) seo.push('tagline > 100 chars'); if (p.tagline.split(' ').length > 12) seo.push('tagline > 12 words') }
     if (!p?.introductionSummary) seo.push('Missing intro')
-    else if (/[`#*_\[\]]/.test(p.introductionSummary)) seo.push('intro has markdown/bad chars')
+    else if (/[`#*_[\]]/.test(p.introductionSummary)) seo.push('intro has markdown/bad chars')
     if (!p?.animeImageUrl) seo.push('Missing animeImageUrl')
     if (!p?.themeColors?.primary) seo.push('Missing themeColors.primary')
     if (seo.length) { R.setWarn(`SEO: ${seo.join(' | ')}`); exitCode = exitCode === 1 ? 1 : 2 }

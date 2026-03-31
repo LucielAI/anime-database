@@ -54,19 +54,13 @@ Each universe is structured as a dual-mode experience:
 
 Insights Index: https://animearchive.app/insights
 ### Anime Power Systems Ranked | /blog/anime-power-systems-ranked
-### The Most Complex Anime Power Systems, Ranked by Structure | /blog/anime-power-systems-ranked
-### The Determinism Engine in Attack on Titan | /insights/aot-determinism-chaos
+### Aot Power System Analysis | /blog/aot-power-system-analysis
 ### Best Anime Worldbuilding | /blog/best-anime-worldbuilding
-### Best Anime Worldbuilding: 5 Universes Where the World Is the Main Character | /blog/best-anime-worldbuilding
-### Why Devil Contracts Are a Raw Deal | /insights/chainsawman-devil-economy
-### Death Note as a Tool Critique | /insights/death-note-killing-archetype
-### Breathing Forms as Weaponized Poetry | /insights/demonslayer-breathing-economics
-### Why Nen Is the Best Magic System in Anime | /insights/hxh-nen-specialization
-### Cursed Energy as an Inverse Heat Engine | /insights/jjk-cursed-energy-thermodynamics
+### Death Note Smartest Battle Anime | /blog/death-note-smartest-battle-anime
+### Jujutsu Kaisen Vs Demon Slayer Power Systems | /blog/jujutsu-kaisen-vs-demon-slayer-power-systems
 ### Lore Vs Sys Explained | /blog/lore-vs-sys-explained
-### LORE vs SYS Mode: How the Archive Sees Anime Differently | /blog/lore-vs-sys-explained
-### Chakra as a Bureaucratic Resource | /insights/naruto-chakra-meritocracy
-### Why the One Piece World Is Designed Like an Economy | /insights/one-piece-power-economy
+### One Piece Power System Analysis | /blog/one-piece-power-system-analysis
+### Solo Leveling Hunter System | /blog/solo-leveling-hunter-system
 
 ## Entity Pages
 
