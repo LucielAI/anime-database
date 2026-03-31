@@ -6,6 +6,7 @@ Syncs selected files from LucielAI/anime-database to LucielAI/Animearchive.app
 import os, sys, json, base64, subprocess
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
+from subprocess import TimeoutExpired
 
 #── Config ──────────────────────────────────────────────────────
 TOKEN = os.environ.get("PUBLIC_REPO_SYNC_TOKEN", "")
@@ -22,25 +23,41 @@ DENYLIST = os.path.join(REPO_ROOT, "release", "public-denylist.txt")
 
 #── Git helpers ─────────────────────────────────────────────────
 def git_show(path, sha):
-    result = subprocess.run(
-        ["git", "show", f"{sha}:{path}"],
-        capture_output=True, text=True, cwd=REPO_ROOT
-    )
+    try:
+        result = subprocess.run(
+            ["git", "show", f"{sha}:{path}"],
+            capture_output=True, text=True, cwd=REPO_ROOT,
+            timeout=30
+        )
+    except TimeoutExpired:
+        print(f"  TIMEOUT reading {path} — skipping", file=sys.stderr)
+        return None
     if result.returncode != 0:
         return None
     return result.stdout
 
 def git_ls_tree(sha):
-    result = subprocess.run(
-        ["git", "ls-tree", "-r", "--name-only", sha],
-        capture_output=True, text=True, cwd=REPO_ROOT
-    )
+    try:
+        result = subprocess.run(
+            ["git", "ls-tree", "-r", "--name-only", sha],
+            capture_output=True, text=True, cwd=REPO_ROOT,
+            timeout=60
+        )
+    except TimeoutExpired:
+        print(f"TIMEOUT in ls-tree for {sha} — falling back to API", file=sys.stderr)
+        result.returncode = 1
+        result.stdout = ""
     if result.returncode != 0 or not result.stdout.strip():
         # Fallback: git show
-        result = subprocess.run(
-            ["git", "show", "--recursive", "--name-only", sha],
-            capture_output=True, text=True, cwd=REPO_ROOT
-        )
+        try:
+            result = subprocess.run(
+                ["git", "show", "--recursive", "--name-only", sha],
+                capture_output=True, text=True, cwd=REPO_ROOT,
+                timeout=60
+            )
+        except TimeoutExpired:
+            print(f"TIMEOUT in ls-tree fallback for {sha}", file=sys.stderr)
+            return []
         if result.returncode != 0:
             return []
         return [l for l in result.stdout.splitlines() if l and not l.startswith("sha256")]
