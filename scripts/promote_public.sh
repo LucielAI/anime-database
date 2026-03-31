@@ -31,18 +31,22 @@ def git_show_api(path, sha):
     return None
 
 def git_show(path, sha):
-    """Try subprocess first (fastest), fall back to GitHub API."""
+    """Try subprocess first (fastest), fall back to GitHub API on any failure."""
+    # Use bytes mode to avoid UTF-8 decode errors on binary files
     try:
         result = subprocess.run(
             ["git", "show", f"{sha}:{path}"],
-            capture_output=True, text=True, cwd=REPO_ROOT,
+            capture_output=True, cwd=REPO_ROOT,
             timeout=10
         )
     except TimeoutExpired:
         return git_show_api(path, sha)
     if result.returncode != 0:
         return git_show_api(path, sha)
-    return result.stdout
+    try:
+        return result.stdout.decode("utf-8", errors="replace")
+    except Exception:
+        return git_show_api(path, sha)
 
 def git_ls_tree(sha):
     try:
