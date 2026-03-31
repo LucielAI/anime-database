@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { UNIVERSE_CATALOG, UNIVERSE_CATALOG_MAP, loadUniverseBySlug } from '../data/index.js'
 import SeoHead from './SeoHead'
@@ -36,7 +36,7 @@ function ShareButton({ leftId, rightId }) {
       await navigator.clipboard.writeText(url)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-    } catch {}
+    } catch { /* clipboard unavailable */ }
   }
   const handleTwitterShare = () => {
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer,width=600,height=400')
@@ -76,8 +76,7 @@ function UniverseSelector({ id, value, onChange }) {
   )
 }
 
-function CompareRow({ label, left, right, leftAnime, rightAnime, index, leftColor, rightColor }) {
-  const same = String(left ?? '') === String(right ?? '')
+function CompareRow({ label, left, right, leftAnime, rightAnime, leftColor, rightColor }) {
 
   return (
     <>
@@ -183,25 +182,6 @@ export default function CompareRoute() {
     setSearchParams(params)
   }, [searchParams, setSearchParams])
 
-  const handleSelectKeyDown = useCallback((e, side) => {
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      e.preventDefault()
-      const catalog = UNIVERSE_CATALOG
-      const currentId = side === 'left' ? leftId : rightId
-      const currentIndex = catalog.findIndex(u => u.id === currentId)
-      if (currentIndex === -1) return
-      const delta = e.key === 'ArrowDown' ? 1 : -1
-      const nextIndex = (currentIndex + delta + catalog.length) % catalog.length
-      const nextId = catalog[nextIndex].id
-      const params = new URLSearchParams(searchParams)
-      params.set(side, nextId)
-      setSearchParams(params)
-    } else if (e.key === 'Escape') {
-      const ref = side === 'left' ? leftSelectRef : rightSelectRef
-      ref.current?.blur()
-    }
-  }, [leftId, rightId, searchParams, setSearchParams])
-
   const handleGlobalKey = useCallback((e) => {
     const tag = document.activeElement?.tagName
     if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
@@ -213,6 +193,7 @@ export default function CompareRoute() {
 
   useEffect(() => {
     if (!leftId && !rightId) return
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true)
     Promise.all([
       leftId ? loadUniverseBySlug(leftId) : Promise.resolve(null),
