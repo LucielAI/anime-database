@@ -16,7 +16,7 @@
  * Run: node scripts/generateStaticHtml.js
  */
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'fs'
+import { readdirSync, rmSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -48,34 +48,13 @@ const PROTECTED_FILES = new Set([
   'favicon.svg',
 ])
 
-function removeRecursive(dir) {
-  if (!existsSync(dir)) return
-  const entries = readdirSync(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const full = join(dir, entry.name)
-    if (entry.isDirectory()) {
-      removeRecursive(full)
-    } else {
-      rmSync(full)
-    }
-  }
-  rmSync(dir)
-}
-
 function validatePublicDir() {
   let violations = 0
 
   for (const prefix of SPA_OWNED_PREFIXES) {
-    const basePath = join(PUBLIC_DIR, prefix.replace('/', ''))
     const parentDir = join(PUBLIC_DIR, prefix.split('/')[0])
-
     if (!existsSync(parentDir)) continue
 
-    // Check for index.html in this directory
-    const indexPath = join(parentDir, prefix.includes('/') ? prefix.split('/')[1] || '' : '', 'index.html')
-    // More precisely: check if any SPA-owned path has index.html
-
-    // Walk public/ and find any index.html under SPA-owned paths
     const checkDir = join(PUBLIC_DIR, prefix.replace('/', ''))
     if (!existsSync(checkDir)) continue
 

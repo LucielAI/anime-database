@@ -60,8 +60,8 @@ function getInsightSlugs() {
   if (!existsSync(INSIGHT_SRC)) return []
   try {
     const s = readFileSync(INSIGHT_SRC, 'utf8')
-    const keys1 = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
-    const keys2 = [...s.matchAll(/^  "([^"]+)":/gm)].map(m => m[1])
+    const keys1 = [...s.matchAll(/^ {2}'([^']+)':/gm)].map(m => m[1])
+    const keys2 = [...s.matchAll(/^ {2}"([^"]+)":/gm)].map(m => m[1])
     return [...new Set([...keys1, ...keys2])]
   } catch {
     return []

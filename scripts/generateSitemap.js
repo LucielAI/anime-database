@@ -78,11 +78,11 @@ function buildSitemap(slugs) {
   let insightSlugs = []
   try {
     const s = fs.readFileSync(INSIGHT_SRC, 'utf8')
-    const keys1 = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
-    const keys2 = [...s.matchAll(/^  "([^"]+)":/gm)].map(m => m[1])
+    const keys1 = [...s.matchAll(/^ {2}'([^']+)':/gm)].map(m => m[1])
+    const keys2 = [...s.matchAll(/^ {2}"([^"]+)":/gm)].map(m => m[1])
     insightSlugs = [...new Set([...keys1, ...keys2])]
   } catch {
-    insightSlugs = []
+    insightSlugs = [] // insight slugs unavailable — skip
   }
   const insightUrls = insightSlugs.map(slug => ({
     loc: `${BASE_URL}/insights/${slug}`,
@@ -186,8 +186,8 @@ const INSIGHT_SRC = path.join(__dirname, '../src/data/insights-content.js')
 let insightSlugs = []
 try {
   const s = fs.readFileSync(INSIGHT_SRC, 'utf8')
-  const keys1 = [...s.matchAll(/^  '([^']+)':/gm)].map(m => m[1])
-  const keys2 = [...s.matchAll(/^  "([^"]+)":/gm)].map(m => m[1])
+  const keys1 = [...s.matchAll(/^ {2}'([^']+)':/gm)].map(m => m[1])
+  const keys2 = [...s.matchAll(/^ {2}"([^"]+)":/gm)].map(m => m[1])
   insightSlugs = [...new Set([...keys1, ...keys2])]
-} catch {}
+} catch { /* insight slugs unavailable — skip */ }
 console.log(`[sitemap] ${slugs.length} universe(s), ${THEMATIC_SLUGS.length} thematic page(s), ${insightSlugs.length} insight(s), ${blogSlugs.length} blog post(s) → public/sitemap.xml`)

@@ -32,7 +32,7 @@ export default async function handler(req, res) {
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
   const normalizedEmail = typeof email === 'string'
-    ? email.trim().replace(/[\x00-\x1F\x7F]/g, '').toLowerCase()
+    ? email.trim().replace(/[\x00-\x1F\x7F]/g, '').toLowerCase() // eslint-disable-line no-control-regex
     : ''
 
   if (!normalizedEmail || !EMAIL_RE.test(normalizedEmail) || normalizedEmail.length > 254) {
