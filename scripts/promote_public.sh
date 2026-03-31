@@ -22,18 +22,26 @@ ALLOWLIST = os.path.join(REPO_ROOT, "release", "public-allowlist.txt")
 DENYLIST = os.path.join(REPO_ROOT, "release", "public-denylist.txt")
 
 #── Git helpers ─────────────────────────────────────────────────
+def git_show_api(path, sha):
+    """Read file content via GitHub API (no subprocess)."""
+    resp = api("GET", f"/repos/{SOURCE_REPO}/contents/{path}?ref={sha}")
+    if resp.get("encoding") == "base64":
+        import base64 as b64
+        return b64.b64decode(resp["content"]).decode("utf-8", errors="replace")
+    return None
+
 def git_show(path, sha):
+    """Try subprocess first (fastest), fall back to GitHub API."""
     try:
         result = subprocess.run(
             ["git", "show", f"{sha}:{path}"],
             capture_output=True, text=True, cwd=REPO_ROOT,
-            timeout=30
+            timeout=10
         )
     except TimeoutExpired:
-        print(f"  TIMEOUT reading {path} — skipping", file=sys.stderr)
-        return None
+        return git_show_api(path, sha)
     if result.returncode != 0:
-        return None
+        return git_show_api(path, sha)
     return result.stdout
 
 def git_ls_tree(sha):
