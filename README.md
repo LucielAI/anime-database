@@ -119,10 +119,23 @@ Payloads should follow **scope-fit density**: tight universes remain compact, wh
 - Mushoku Tensei: Jobless Reincarnation
 - Naruto
 - One Piece
+- Dragon Ball Z
+- Bleach
+- Mob Psycho 100
+- Tokyo Ghoul
+- Black Clover
+- Re:Zero - Starting Life in Another World
+- Blue Lock
+- Sword Art Online
+- Tokyo Revengers
+- One Punch Man
+- Spy x Family
+- Fire Force
+- Parasyte
 
 ## Tech Stack
 
-- **React 19** + **Vite 7**
+- **React 19** + **Vite 8**
 - **Tailwind CSS 4** (PostCSS, strictly utility classes)
 - **Lucide React** for UI iconography
 - **D3** for force-directed SVG layouts

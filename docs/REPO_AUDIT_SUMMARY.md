@@ -18,11 +18,25 @@
 - Mushoku Tensei: Jobless Reincarnation
 - Naruto
 - One Piece
+- Dragon Ball Z
+- Bleach
+- Mob Psycho 100
+- Tokyo Ghoul
+- Black Clover
+- Re:Zero - Starting Life in Another World
+- Blue Lock
+- Sword Art Online
+- Tokyo Revengers
+- One Punch Man
+- Spy x Family
+- Fire Force
+- Parasyte
 
 ## Current Renderers
 - TimelineExplorer
 - CounterTreeExplorer
 - NodeGraphExplorer
+- AffinityMatrixExplorer
 - StandardCardsExplorer
 
 ## Key UX Layers
